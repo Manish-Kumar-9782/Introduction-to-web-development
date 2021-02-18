@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    min-height: 100vh; /* This min height defines the area of the main section or the main body of the page */
+    background: linear-gradient(to right top , #65dfc9 , #6cdbeb);
+    /* now we need a background on the main block of the page, for that we use background property in this we use 'linear gradient '
+        linear gradient simply add the two colors with a gradient effect*/
+    display: flex;
+    /* for this page we are going to use the flex display system to represent the main page*/
+
+    align-items: center;
+    justify-content: center;
+
+    /* These two properties 'aligh-items' and 'justify-content' both property can be access after defining the display property*/
+}
+
+.glass{
+    /* This is a class which defined by name of glass in which we defines the our section named as glass*/
+
+    background: white;
+    /* defined the glass section background*/
+    min-height: 80vh;
+    /* This defines the height of the glass section 80% of the full size of the display screen*/
+    width: 60%;
+    /* This defines the width of the glass section 60% of the full size of the display screen*/
+    background: linear-gradient(to right bottom , rgba(255,255,255,0.7), rgba(255,255,255,0.1));
+    /*  Here also we defines the gradient color background same as the main section*/
+    border-radius: 2rem;
+    /* border radius makes the round fillits on the corner of the recatangle block*/
+    z-index: 3;
+    /* this z-index defines the order of the overlaping (position in a stack of block in normal direction to the screen )*/
+    backdrop-filter: blur(2rem);
+    /* backdrop-filter: blur(blure amount); , this property make create a blure effect on this section. */
+    display: flex;
+    /* This display feature is flex which defins the content in one dimension */
+
+}
+
+.circle1 , .circle2 {
+
+    background: white;
+    background: linear-gradient(to right bottom ,  rgba(255,255,255, 0.9), rgba(255,255,255,0.1));
+    height: 20rem;
+    width: 20rem;
+        /* we defines the height and width in the form of rem units , we can also defines the height and width in px units*/
+    position: absolute;
+    /* This postition 'property: absolute;' gives us the abitity to move the circles at any position by defining the 
+    left, right , bottom and top attributes */
+    z-index: 2;
+    border-radius: 20rem;
+    /* Here also we use the border radius to make the circle in this there is a little trick 
+        -> we have the equal amount of the height and width as 20rem so we aslo take border-radius: 20rem; to make it circle*/
+}
+
+.circle1{
+
+    top: 5%;
+    right: 15%;
+}
+
+.circle2 {
+
+    bottom: 5%;
+    left: 5%;
+
+}
+
+.dashboard{
+    background:white;
+    background: linear-gradient(to right bottom ,  rgba(224, 113, 191, 0.9), rgba(255,255,255,0.1) );
+    z-index: 4;
+    border-radius: 2rem;
+    backdrop-filter: blur(5rem);
+    flex: 1/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: space-evenly;
+
+}
+
+.user{
+
+    height: 180px;
+    width: auto;
+}
+
+
+.games{
+    flex: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    flex-grow: 10px;
+    
+}
+
+.link{
+    display: flex;
+    height: 30px;
+}
+
+.controller{
+    display: flex;
+    flex-direction: column;
+}
+}
+
+img{
+    size: 50%;
+}
