@@ -2,7 +2,7 @@
 .psection {
     width: 40%;
     margin-left: 25%;
-    background-color: beige;
+    background-color:white;
     
 }
 .psection > p {
@@ -60,3 +60,30 @@ p.hidden {
     border: 10px hidden red;
 }
 
+
+.borderstyle {
+    border-left: 5px solid blue;
+    width: 40%;
+    height: 50px ;
+    margin-left: 25%;;
+    background-color: aquamarine;
+    padding-top: 5px;
+}
+.borderstyle > p {
+    height: 40%;
+}
+
+.border_bottom_style {
+    background-color: rgb(253, 169, 138);
+    border-bottom: 10px ridge rebeccapurple;
+    margin-left: 25%;
+    margin-top: 15px;
+    height: 50px;
+    padding-top: 5px;
+    width: 40%;
+    text-align: center;
+}
+
+.blank {
+    height: 100px;
+}
