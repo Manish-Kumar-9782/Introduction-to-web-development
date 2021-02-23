@@ -1,6 +1,62 @@
 
-p.simple {
-
-    color: blue;
-    border-style: solid;
+.psection {
+    width: 40%;
+    margin-left: 25%;
+    background-color: beige;
+    
 }
+.psection > p {
+        text-align: center;
+        height: 40px;
+        background-color: aqua;
+}
+
+p.solid {
+
+    border: 10px solid blue;
+}
+
+p.dotted {
+    border: 10px dotted red;
+}
+
+p.dashed {
+    border: 10px dashed blue;
+}
+
+p.double {
+    border: 10px double red;
+}
+
+p.groove {
+    background-color: blue;
+    border: 10px groove blue;
+    color: white;
+}
+
+p.ridge {
+    border: 10px ridge red;
+    color: white;
+    background-color: red;
+}
+
+p.inset {
+    border: 10px inset blue;
+    color: white;
+    background-color: blue;
+}
+
+p.outset {
+    border: 10px outset red;
+    color: white;
+    background-color: red;
+}
+
+p.none {
+    border: 10px none blue;
+}
+
+p.hidden {
+    border: 10px hidden red;
+}
+
