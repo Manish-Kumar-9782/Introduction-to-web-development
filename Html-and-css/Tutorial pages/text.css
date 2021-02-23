@@ -1,0 +1,220 @@
+
+
+
+/*_______________________________________h1 Heading section which share the common properties _______________________________________________   */
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+
+/*_______________________________________Paragraph section which share the common properties _______________________________________________   */
+p {
+
+     /* border: it makes the border on the every paragraph section  inside the spacing block.*/
+     border: 3px solid seagreen;
+     /* margin: it provide the some space b/w the objects or section  by making some space outside the section.*/
+     margin-top: 5px;
+     /* Width: This width is used for the paragraph section in which the by defining the width of the paragraph , 
+         the boundry of the p section inside the spacing block will be as defined below.  */
+     width: 30%;
+     
+     /* Padding: this will add some distance b/w the border and the content. */
+     padding: 10px;
+}
+
+.text {
+    
+        /* First of all we need to define some area for the section which using the text class. 
+            for that we need to make a border.*/
+        
+        border: 5px solid black;
+
+        /* now we need to define the color of the text if it is necessary */
+        color: blue;
+        /* color: property is basicly used to define the color of the content inside the section in which this property is called. */
+
+        /* Now we will add some padding to the content to distinct it from the border 
+        Note:-  if you are using text-align property with the padding you won't see the all side effect of the padding property. */
+        padding: 5px;
+
+        /* There is also text alignment option availabel for the text inside the section 
+            In this we will add some text alignment basicly there are six parameters for the text alignment
+            text-align: left|right|center|justify|initial|inherit;  */
+        text-align: center;
+
+        /* Now we see about the text-decoration  property in this we can make the text underline, overline, line-through.
+            text decoration has some sub properties like text-decoration-line, text-decoration-color, text-decoration-style. */
+        text-decoration: none;
+
+}
+
+/*_______________________________________text-decoration section ________________________________________________________   */
+.decoration {
+    display: grid;
+    grid-template-columns: 50% 50%;;
+    border: 5px solid black;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.decoration > p.none {
+    width: 30%;
+    border-color: violet;
+}
+
+
+p.underline {
+    text-decoration: underline;
+}
+
+p.overline {
+    text-decoration: overline;
+}
+p.line-through {
+    text-decoration: line-through;
+}
+
+
+/*_______________________________________text-spacing section ________________________________________________________   */
+.spacing {
+    border: 5px solid black;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.spacing > p {
+   /* line-height: It provides the vertiacl distance b/w the lines. */
+   line-height: 40px;
+}
+
+
+
+/*_______________________________________text-transformation section ________________________________________________________   */
+
+.transform {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 5px solid black;
+    margin-top: 10px;
+    padding: 5px;
+    padding-top: 0px;
+
+}
+.transform > p
+{
+    width: 50%;
+}
+.transform > p.none {
+    width: 30%;
+    border-color: violet;
+}
+
+
+p.uppercase {
+    text-transform: uppercase;
+}
+
+p.lowercase {
+    text-transform: lowercase;
+}
+
+p.capitalize {
+    text-transform: capitalize;
+}
+
+/*_______________________________________text-indent section ________________________________________________________   */
+
+.indent {
+
+    border: 5px solid black;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.p-indent {
+    text-indent: 50px;
+}
+
+/*_______________________________________letter spacing section ________________________________________________________   */
+
+.letter-spacing {
+    border: 5px solid black;
+    margin-top: 10px;
+    padding: 5px
+
+}
+
+.letter-spacing > p {
+    /* letter-spacing: This provide the space b/w the each letter by values as provided.; */
+    letter-spacing: 4px;
+}
+
+/*_______________________________________word spacing section ________________________________________________________   */
+
+.word-spacing {
+    border: 5px solid black;
+    margin-top: 10px;
+    padding: 5px
+
+}
+
+/* Letter Spacing: 'word-spacing'  is the property  which is used to make some space b/w each and every 
+                word of a paragraph */
+.word-spacing > p {
+    word-spacing: 20px;
+}
+
+/*_______________________________________White space section ________________________________________________________   */
+
+.white-space {
+    display: gird;
+    grid-template-columns: 50% 50%;
+    border: 5px solid rgb(0, 0, 0);
+    margin-top: 10px;
+    padding: 5px
+
+}
+p.pre{
+
+    white-space: pre;
+    width: 50%;
+    /* grid-template-columns: 100%; */
+}
+
+p.nowrap{
+
+    white-space:nowrap;
+    width: 50%;
+    /* grid-template-columns: 100%; */
+}
+
+/*_______________________________________word wrap section ________________________________________________________   */
+
+.word-wrap {
+    border: 5px solid black;
+    margin-top: 10px;
+    padding: 5px
+
+}
+
+.word-wrap > p {
+    width: 10%;
+}
+
+p.break-word {
+    word-wrap: break-word;
+}
+
+/*_______________________________________description paragraph section ________________________________________________________   */
+p.description {
+    color: rgb(255, 133, 45);
+    border: 1px none;
+    letter-spacing: normal;
+    word-spacing: normal;
+    width: 40%;
+}
+h5 {
+    color: chocolate;
+
+}
