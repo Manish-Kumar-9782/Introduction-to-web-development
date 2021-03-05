@@ -1,0 +1,103 @@
+/* First we will do the some work on the main body block like padding,
+margin and */
+*{margin: 0; padding: 0; box-sizing: border-box;
+    background: rgb(101, 144, 238); 
+}
+
+/* Now i m going to make some property for the main block in this we will make the
+main block seperating from the body to visulalize clearly  */
+
+/* main: main block contains all the div section in which are header, footer,
+        main_content, box1, box2, box3 and sidebar */
+main {
+    
+    width: 80% ; /* This will set the width as 80% of the body */
+    margin: 50px auto ; /*  margin set 50px for to move in x-direction and auto 
+                            for the y-direction */
+    border: 2px solid gray ; /* we make the border for the main container to make
+                                it distinct from the body. */
+    color: white; /* This will set the text color for every text inside this main block */
+    display: grid ; /* Now this is very important property for this tutorial
+                    * since we need to make the display as the grid for the main
+                        block then we have to make the display as grid.
+                        this will allow as to perform the grid property on the 
+                        block which are inside the main block. */
+
+    grid-template-rows: 60px 100px 400px 60px;
+          /* grid-template-rows: thsi property allows us to create the rows 
+                inside the main block, we have created 4 colums as showing in the
+                property values */
+
+    grid-template-columns: repeat(3,1fr) 250px;
+        /* grid-template-columns: This property allow us to create the rows
+                inside the main block, we have created 4 columns as showing in the
+                property values
+                
+            repeat(N-times , value)  this function allow us to give the single value
+                    by multiple times as we want and create the equally spaced 
+                    rows or columns */
+    
+
+}
+
+/* This is the header section in which we need to make the header in the first 
+row and containing the all the columns for that we will not change the row setting
+because header is already at the first row
+* In this we will change the setting of the grid-column in which we need to set
+this as 1 to last columns for that we will give the value as 1/-1
+
+* 1/ shows for the start column of the container
+* /-1 shows for the end column of the container */
+.header {
+    background-color: #ff4757 ;
+    grid-column: 1/-1;
+
+    }
+
+/* This section contains of the three boxes in which they are adjecent to each 
+other in an continous order so we dont need to give any kind of setting for the
+column and grid but we can give the some  margin and the grid-gap setting  */
+.box1 {background-color: #f377e3 ;
+        grid-gap: 1em;
+        margin: 5px;}
+
+.box2 {background-color: #26885a ;
+        margin: 5px;}
+
+.box3 {
+        background-color: #b32f96; 
+        margin: 5px;}
+
+
+/* Sidebar: sidebar is the section which is placed in the left side of the contianer
+    at the last colums which is also cover the 2 and 3 rows so we need to give some
+    setting for this sidebar in the last column and 2-3 rows.
+    */
+.sidebar { 
+        background-color: #1b1552 ;
+        grid-column: 4/-1; /* this fit the sidebar to the last columns */
+        grid-row: 2/4;      /* This fit the sidebar to the 2,3 rows */
+    }
+
+
+/* This is the main content block in which we presert our website main contents
+    and it is placed in the 3rd row and cover the first three 1-3 columns.
+    if the "main content" block does not comes at the place of 3rd row then we need
+    to set the setting for the row and then we will set the grid-columns setting
+      */
+.main_content { background-color: #ffd447 ;
+                /* In this case if we place all of above the section at their 
+                desired location then the "main content" block will comes at 
+                the 3rd row */
+                grid-column: 1/4; /* This will set the main content at 3rd row 
+                    and covering 1-3 colums and the 4th columns remains for the 
+                    sidebar.
+                     */                 
+}
+
+/* footer: footer is the last section of this page footer covers all the coulmns
+    and placed at the last 4th row. */
+.footer {background-color: #385dc2 ;
+            grid-column: 1/-1; /* footer is already at 4th row so we need to set
+             this for the coulumns which can cover all the columns*/
+            }
