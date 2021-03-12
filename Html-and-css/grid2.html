@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Css grid</title>
+
+        <style>
+
+            div {
+                padding: 10px;
+            }
+
+            .wrapper > div {
+
+                background:  rgb(214, 94, 94);
+                border: outset 2px yellow;
+                border-color: rgb(10, 10, 9);
+
+
+                /* This section of style css will access the each div elements inside the section which inherits the wrapper class: .;
+                    in this we just described the attribute of the each block 
+                    
+                    background: This will add the background color to the section or division: .;
+
+                    bordor: this will add the bordor to the each section: .;
+                            border attribute can take the multiple arguments
+                            first as the outset :- this will set the border outside the section or division: .;
+                            second as the px:- this will decide the thickness of the border
+                            third as the color:- this wil add the color the bordor: .;
+
+                */
+            }
+
+            .wrapper > div:nth-child(odd) {
+                background: rgb(120, 206, 120);
+                /* In this we first defines that all div element inside the section of which inherit the class wrapper, and also we
+                    are accessing the nth odd element 
+                    
+                    by doing this we can make a nice look of row which having the two different color, this we show us a nice look
+                    of the row a we will be able to differentiate b/w rows.
+
+                */
+            }
+
+            .wrapper {
+
+                /*  This is the class name of wrapper in which we discribed the grid layout for the any division or section:
+                    In this wrapper class we only discribed the some parameters as described bellow: .;
+                    
+                    Display: this attribute defines the layout type of grid type any divison or section which inherit the class 
+                    attribute 
+                    
+                    grid template columns: this attribute defines the colums in the single row of the page in this section 
+
+                    grid gap: this defines the gap b/w the two block of the or the two row of the  section.
+ 
+                   
+                */
+
+                display: grid;
+                grid-template-columns: 30%;
+                grid-gap: 10px;
+
+                /*
+                    grid-template-column: nfr
+
+                    we can also use the fraction system to organize the our section to display them in more appropriate way 
+                    in this 'n' show the amount of fraction of the page and 'fr' shows the short form of the fraction: .;
+
+                    example :- 
+                            grid-template-column: 1fr 2fr 3fr;
+
+                    in this example we can also add a function called repeat()
+
+                    example :-
+                            grid-template-column:repeat(x, y);
+
+                            x - it show the how many times you want to repeat the fraction which is defined in y
+
+                            y - it the defination for the fraction of the page
+
+                            example: y can be write as  combination of fraction like '1fr 2fr 3fr' this fraction will applied by x time: .;
+                            
+                            Now suppose that x=2 and y = 1fr 2fr 3fr, then the it will be shown as ' 1fr 2fr 3fr 1fr 2fr 3fr'
+                                   
+                                    */
+
+                /* grid-auto-rows: 100px; */
+
+                    /* THis above line will set the constraint to the height of the any division which is inside the wrapper 
+                        -> This constraints can create the problem when we are adding the more line of text insde the section
+                            they will can go out side the section, and this will not look nice and may be not readable some times.
+                            
+                        -> To over come this problem we need to add a function called minmax(x, y)
+                        
+                        -> where x shows the minimum size of the height of the section and y shows the max height. 
+                        -> if we make y as auto then we can over come the overfill problem , in this situation the section 
+                            automatically increase the height of the section 
+                        -> but be carefull this we also increases the other divisions size in same row.*/
+
+                    
+                grid-auto-rows:minmax(100px , auto);
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="wrapper">
+
+            <div>
+                THis above line will set the constraint to the height of the any division which is inside the wrapper 
+                        -> This constraints can create the problem when we are adding the more line of text insde the section
+                            they will can go out side the section, and this will not look nice and may be not readable some times.
+
+                            > where x shows the minimum size of the height of the section and y shows the max height. 
+                        -> if we make y as auto then we can over come the overfill problem , in this situation the section 
+                            automatically increase the height of the section 
+                        -> but be carefull this we also increases the other divisions size in same row.*/
+            </div>
+            <div>
+                this is one table.
+            </div>
+            <div>
+                this is one table.
+            </div>
+            <div>
+                this is one table.
+            </div>
+            <div>
+                this is one table.
+            </div>
+            <div>
+                this is one table.
+            </div>
+            <div>
+                this is one table.
+            </div>
+        </div>
+
+    </body>
+</html>

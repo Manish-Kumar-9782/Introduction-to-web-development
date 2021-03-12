@@ -1,0 +1,45 @@
+.background_section{
+    display: grid;
+    background-color: blueviolet;
+    }
+
+.background_section > h1 {
+        text-align: center;
+        color: yellowgreen;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(140, 179, 180);
+    grid-gap: 5px;
+    grid-auto-rows: 80px;
+    
+}
+li {
+    display: grid;
+    background-color: rgb(210, 238, 49);
+    text-align: center; 
+    align-items: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+
+    
+}
+.list :nth-child(1){
+    grid-column: 1/span 2;
+    background-color: lightcoral;
+    color: red;
+
+}
+.list :nth-child(6){
+    background-color: lightcoral;
+    grid-column: 1/span 2;
+    color: red;
+}
