@@ -38,3 +38,13 @@ table {border-spacing:20px;}
 /* # Note: you have to disable the border-collapse if it is specified otherwise there will be no effect on the table */
 
 
+/* 6.  Cell that Spans Many Columns */
+/* for that we will make the new table in the html code so we can make the diffenence that how colspan is usefull*/
+.table2 { 
+    border: 2px solid black;
+    margin: 20px;
+    width: 40%;
+}
+/* now we have done the colspan for the table   */
+
+
