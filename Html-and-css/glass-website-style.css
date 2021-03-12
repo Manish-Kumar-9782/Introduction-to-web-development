@@ -82,6 +82,7 @@ main{
     align-content: center;
     text-align: center;
     justify-content: space-evenly;
+    width: 16rem;
 
 }
 
@@ -91,10 +92,19 @@ main{
     width: auto;
 }
 
+.user p {
+    display: flex;
+    background: linear-gradient(to right bottom ,  rgba(149, 136, 206, 0.9), rgba(224, 31, 31, 0.1) );
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: 1.2rem;
+    color: rgba(35, 9, 148, 0.9);
+
+}
+/**/
 
 .games{
-    flex: 3;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,16 +114,85 @@ main{
 }
 
 .link{
+    background: red;
+    background: linear-gradient(to top right , rgba(255,255,255,0.8), rgba(255,255,255,0.1) );
     display: flex;
     height: 30px;
+    margin: 1rem 0rem;
+    padding: 1.2rem 1rem;
+    align-items: center;
+    border-radius: 3rem;
+}
+
+.link h2 {
+
+   padding: 0rem 1rem;
+   font-size: 90%;
 }
 
 .controller{
+    background: linear-gradient(to top right , rgba(159, 46, 224, 0.8), rgba(42, 53, 146, 0.1) );
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    border-radius: 2rem;
+    height: 5rem;
+}
+
+
+.controller img{ 
+    backdrop-filter: blur;
+}
+
+.controller h3{
+    color: white;
+    font-weight: 100;
+}
+
+/*_________________________________________Start of Status________________________________________*/
+
+.status{
+    display: flex;
+    padding: 1rem 1rem;
+    margin: 1rem;
+    background: linear-gradient(to top right , rgba(228, 224, 230, 0.8), rgba(42, 53, 146, 0.1) );
+    border-radius: 2rem;
+    
+}
+
+.status input{
+    border-radius: 2rem;
+    margin: 0rem 2rem; 
+    /* (x y) In this margin property first input is for y-direction and second input is for x-direction */
+}
+
+/*________________________________End of status _________________________________________________*/
+
+
+/*________________________________start of Cards________________________________________________ */
+
+.cards {
     display: flex;
     flex-direction: column;
 }
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: linear-gradient(to top right , rgba(112, 131, 69, 0.8), rgba(42, 53, 146, 0.1) );
+    margin: 1rem 1rem;
+    padding: 1rem 1rem;
+    border-radius: 2rem;
+
 }
 
-img{
-    size: 50%;
+.card :nth-child(3) {
+
+    padding: 2px;
+    margin: 0rem 1rem;
+
 }
+
+
+/*________________________________End of Cards _________________________________________________*/
