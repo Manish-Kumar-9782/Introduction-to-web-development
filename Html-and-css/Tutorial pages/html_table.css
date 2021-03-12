@@ -1,9 +1,25 @@
+/* 1. making the table width */
 table {
     width: 30%;
 }
 /* This will setup the width of the tabel as 30% of th body section  */
 
+
+/* 2. making border and collapse them*/
+
 table , th, td { border: 2px solid black;}
 /* This will make the border on the table element, th and td elememts but the borders are individuals. */
 table , th, td { border-collapse: collapse;}
 /* border-collapse: this make the borders to collapse to each other and make them to merge and give a nice tabel view. */
+
+
+
+
+/*3.  add Cell Padding */
+/* To add cell padding we need to use the padding property. but we will not apply any padding on the table element, insted we need to make the
+padding on the th and td element*/
+th, td {padding: 5px;}
+/* this will add the padding 5px from all sides. */
+
+
+
