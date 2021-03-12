@@ -48,3 +48,13 @@ table {border-spacing:20px;}
 /* now we have done the colspan for the table   */
 
 
+/* 7. Cell that Spans Many Rows */
+/* for that we will make the new table in the html code so we can make the diffenence that how rowspan is usefull */
+
+.table3 { 
+    border: 2px solid black;
+    margin: 20px;
+    width: 40%;
+    border-collapse: collapse;
+}
+/* in the above property we also added border-collapse property to make the borders collapse for the clear look of the table */
