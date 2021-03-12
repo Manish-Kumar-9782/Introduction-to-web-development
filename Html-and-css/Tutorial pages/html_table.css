@@ -1,0 +1,9 @@
+table {
+    width: 30%;
+}
+/* This will setup the width of the tabel as 30% of th body section  */
+
+table , th, td { border: 2px solid black;}
+/* This will make the border on the table element, th and td elememts but the borders are individuals. */
+table , th, td { border-collapse: collapse;}
+/* border-collapse: this make the borders to collapse to each other and make them to merge and give a nice tabel view. */
