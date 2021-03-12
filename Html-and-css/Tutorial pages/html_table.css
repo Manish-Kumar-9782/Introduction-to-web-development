@@ -9,7 +9,7 @@ table {
 
 table , th, td { border: 2px solid black;}
 /* This will make the border on the table element, th and td elememts but the borders are individuals. */
-table , th, td { border-collapse: collapse;}
+table , th, td { border-collapse:separate;} /* To display the border spacing border-collapse is separete */
 /* border-collapse: this make the borders to collapse to each other and make them to merge and give a nice tabel view. */
 
 
@@ -30,5 +30,11 @@ th, td { text-align: left;}
 
 
 
+/* 5. Border spacing */
+/*Border spacing specifies the space between the cells.
+To set the border spacing for a table, use the CSS border-spacing property: */
+table {border-spacing:20px;}
+
+/* # Note: you have to disable the border-collapse if it is specified otherwise there will be no effect on the table */
 
 
