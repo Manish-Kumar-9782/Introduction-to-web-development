@@ -23,3 +23,12 @@ th, td {padding: 5px;}
 
 
 
+/*4. Left-align Heading  */
+/* by default the heading is bold and centered in this to change the align of the Heading we can use the text-align property. */
+th, td { text-align: left;}
+/*  there are some other parameters for the text align like right, end, start ,justify etc. */
+
+
+
+
+
