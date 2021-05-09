@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>html Table</title>
+
+        <style>
+            table.table1 > tr {color: red;
+                            border: 2px solid black;}
+            .table1 { 
+                border: 2px solid black;
+                border-collapse: collapse;
+                
+            }
+            
+            th, td {
+                border: 2px solid black;
+                border-collapse: collapse;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <h2>Table 1 for the colspan uses</h2>
+        <table class="table1">
+
+            <!-- this table is made to illustrate the rowspan effect  -->
+
+            <tr>
+                <th class="name">Name</th>
+                <td>Manish Kumar</td>
+                <td>Rahul kumar</td>
+                <td>Anil Kumar</td>
+
+            </tr>
+
+        
+            
+            <tr>
+                <th>Class</th>            
+                <td>graduate</td>
+                <td>2nd year</td>
+                <td>graduate</td>
+            </tr>
+
+            <tr>
+                <th>Age</th>           
+                <td>25</td>
+                <td>19</td>
+                <td>24</td>
+            </tr>
+
+            <tr>
+                <th rowspan="2">Qualification</th>
+                <td>B.tech</td>            
+                <td>B.Sc</td>
+                <td>B.Sc</td>
+            </tr>
+            <tr>
+                <td>Machine Learning</td>
+                <!-- this extra row will be use to make the extra row in the table which doen fill all the cells 
+                In this case row span is usefull to make them to clear -->
+            </tr>
+
+
+        </table>
+    </body>
+</html>
