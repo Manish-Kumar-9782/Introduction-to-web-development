@@ -1,0 +1,36 @@
+.Styled-List-Section{
+    /* border: 4px ridge rgb(177, 99, 32); */
+    /* border-radius: 15px; */
+    width: 30%;
+    margin: 0;
+    padding: 10px;
+    float: left;
+}
+
+.Styled-List-title{
+    text-align: center;
+    border: 1px solid bisque;
+    padding:8px;
+    color:coral;
+    margin: 0;
+    background-color:bisque;
+    font-weight: bold;
+    /* border-radius: 15px 15px 0px 0px; */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.Styled-List{
+    border: 1px solid coral;
+    margin: 0;
+    background-color:coral;
+    color:aliceblue;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+li{
+    margin: 10px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+/* Styled-List-Section */
