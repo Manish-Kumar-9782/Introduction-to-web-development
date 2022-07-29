@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn about HTML links, we will see that how to use these 
+links and embbed in our pages.
+
+HTML Link: Hyperlinks
+
+HTML links are hyperlinks. You can click on a link and jump another document.
+
+When you move the mouse over a link, the mouse arrow will turn into a little hand.
+
+Note: A link does not have to be text. Alink can be an image or any other HTML
+element.
+
+Syntax:
+    The HTML <a> tag defines a hyperlink. It has the following syntax:
+
+<a href="url"> link text </a>
+-------------------------------------------------------------------------------
+-->
+
+<!--
+----------------------------hea---------------------------------------------------
+-> The most important attribute of the <a> element is the href attribute, which
+    inidcate the link's destination.
+
+-> The link text is the part that will be visible to the reader.
+
+-> clicking on the link, will send the reaer to the specified url address.
+-------------------------------------------------------------------------------
+-->
+
+<!-- Now we will make the html [head, body] elment in which we will 
+learn the  hyperlink in detail.
+
+Here are some point to note: 
+* An unvisited link is underlined and blue (by default)
+* A Visited link is underlined and purple
+* An active link is underlined and red.
+-->
+
+<html>
+
+    <head>
+        <!-- here in this section we will define the title of the page
+        and styles on the defined HTML elements -->
+
+        <style>
+
+            /* Now we will change the link colors, Here:
+            -> An unvisited link will be green with no underline.
+            -> A visited link will be pink with no underline.
+            -> An active link will be yellow and underlined.
+            -> When mouse over a link (a:hover) it will become red and underlined. 
+            
+            */
+            /* Adding a common background for the all links */
+            a{
+                background-color: rgb(246, 243, 241);
+                border: 1px solid brown;
+                border-radius: 5px;
+                padding: 5px 5px;
+                text-align: center;
+                display: table; 
+                /* display: table will all the content as stacked without 
+                over lapping. */
+            }
+
+            a:link{
+                /* Applied to all unvisited link */
+                color:green;
+                /* background-color: transparent; */
+                text-decoration:none; 
+            }
+
+            a:visited{
+                /* Applied to all visited links */
+                color:rgb(0, 205, 181);
+                /* background-color: transparent; */
+                text-decoration: none;
+            }
+
+            a:hover{
+                color: red;
+                /* background-color: transparent; */
+                text-decoration: underline;
+                background-color: rgb(71, 66, 74);
+            }
+
+            a:active{
+                color: yellow;
+                /* background-color: transparent; */
+                text-decoration: underline;
+            }
+
+
+        </style>
+        <!-- Applying the common css for tutorial purpose -->
+        <link rel="stylesheet" href="common.css">
+
+    </head>
+
+    <body>
+
+        <!-- Now first of all we will see the first example of the hyperlink 
+        in this we will -->
+
+        <!-- A bookmark for the last heading in the page -->
+        <a href="#EX8">Example 8</a>
+        
+        <!-- A hyperlink example -->
+        <div id="example1">
+            <h3>HTML Link Example 1</h3>
+            <p>click here to go-to the goole.com</p>
+            <a href="https://www.google.com/">Google.com</a>
+        </div>
+
+        <!----------------------------------------------------------------------->
+        <!-- , By default, the linked page will be displayed in the current
+        browser window. To change this, you must specify another target for the 
+        link 
+    
+        -> The target attribute specifies where to open the linked documents
+        -> The target attribute can have one of the following values.
+
+            * _self: default: opens the document in the same window/tab.
+            * _blank: opens the document in a new window or tab.
+            * _parent: opens the document in the parent frame.
+            * _top: opens the document in the full body of the window.
+    -->
+
+       
+        <!-- target: attribute of hyperlink -->
+
+        <div>
+            <h3>HTML Link Example 2: <span>target</span> attribute</h3>
+            <p>we have a <b>target</b> attribute using <span>target="_blank"</span></p>
+            <a href="https://www.google.com" target="_blank", rel="noreferrer">Google.com</a>
+        
+            <!-- Here in the above hyper link we used target and rel, rel
+            is used to specifes the realtionship b/w the current document and 
+        the linked document. -->
+        </div>
+
+        <!-- Absolute vs Raltive path -->
+        <div>
+            <h3>HTML Link Example 3: Absolute vs Relative path</h3>
+            <p>Link with absolute path: are generally external links</p>
+            <a href="https://www.google.com" target="_self">absolute path: Google.com</a>
+            <br>
+            <p>Link with the relative path: are generally internal link whose
+                document file saved in a relative directory to the currnt html document.
+            </p>
+            <a href="Formatting_texts.html" target="_blank"> HTML Text Fomatting </a>
+            <br>
+            <a href="wall1.png" style="height: 25px; width: 30px; " target="_blank">Witcher wallpaper</a>
+
+        </div>
+
+        <!-- Html link: us an image as a link -->
+        <div>
+            <h3>HTML link example 4: Use an image as a link</h3>
+            <p>Click on the image show below to go-to google home page.</p>
+            <a href="https://www.google.com" target="_blank">
+                <img src="google-128px.ico" alt="Google">
+            </a>
+        </div>
+
+        <!-- Link to an Email Address -->
+        <div>
+            <h3>HTML link example 5: Link an email address</h3>
+            <p>We can link an email address to send an email by using <br>
+                <span>mailto:someonemail@example.com</span> value.</p>
+            <a href="mailto:manishkumar9782@gmail.com">mail me!</a>
+        </div>
+        
+        <!-- Button as link -->
+        <div>
+            <h3>HTML linke example 6: Button as Link</h3>
+            <p>In this section we will use the <span>button</span> as link
+            in which we will use the <span>onclick</span> attribute.</p>
+            <p>It takes the <span>relative or absolute</span> path inside the 
+            <span>document.location</span> value.</p>
+
+            <button onclick="document.location='default.asp'">Click Me!</button>
+
+            <!-- 
+                Note: while using the button element, we need to pass the value
+                document.location = 'script_path' inside the onclick atribute.
+
+                Note: To use an HTML button as a link, you have to add some JavaScript code.
+
+                Java Script allows you to specify what happens at certain events, such
+                as a click of button:.
+             -->
+        </div>
+
+        <!-- Link Titles -->
+        <div>
+            <h3>HTML link example 7: Linke Title</h3>
+            <p>The <span>title</span> attribute specifies extra inforamtion about
+            an element. The information is most shown as a tootip text when the mouse
+            moves over the element.</p>
+            <!-- Adding extra information on hyperlink by using title attribute. -->
+            <a href="https://google.com" title="visit to the google howe page.">Google.com</a>
+        </div>
+
+        <!--HTML Link as A bookmark in a web page. -->
+        <div>
+            <h3 id="EX8">HTML link example 8: BookMark in HTML</h3>
+            <!-- Bookmarks can be very usefull if a web page is very long 
+                
+            -> To Create a bookmark, first create the bookmark, then add a link
+            to it.
+
+            When the link is clicked, the page will scroll down or up to the 
+            location with the bookmark.
+            -->
+            <p>To Create a bookmark, first create the bookmark, then add a link
+                to it.
+                <br>
+                When the link is clicked, the page will scroll down or up to the 
+                location with the bookmark.
+                
+                In this section we have a bookmark id on the heading.
+            </p>
+
+        </div>
+    </body>
+</html>
