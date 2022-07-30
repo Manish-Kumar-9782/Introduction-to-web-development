@@ -14,14 +14,19 @@
                 text-align: center;
                 padding: 0;
                 margin: 0;
-                border-radius: 10px 10px 0px 0px;
+                border-radius: 5px 5px 0px 0px;
+                
             }
             
             .style-list ul{
-                list-style-type: none;
-                border: 2px solid goldenrod;
+                list-style-type:none;
+                /* border: 2px solid goldenrod; */
+                /* border-top: 2px solid brown; */
+                /* border-left:2px solid brown;
+                border-right: 2px solid brown; */
+
                 background-color: goldenrod;
-                border-radius: 0px 0px 10px 10px;
+                border-radius: 5px 5px 5px 5px;
                 color: aliceblue;
                 width: 200px;
                 text-align: center;
@@ -29,6 +34,14 @@
                 margin: 0;
             }
 
+            #Header{
+                font-weight: bold;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+                margin-bottom: 20px;
+                background-color: brown;
+                border-radius: 5px 5px 0px 0px;
+               
+            }   
         </style>
     </head>
 
@@ -36,8 +49,9 @@
         
         <div class="style-list">
 
-            <h2>Styled List</h2>
+            <!-- <h2>Styled List</h2> -->
             <ul>
+                <li id="Header">Styled List</li>
                 <li style="color:aqua">This is item one</li>
                 <li style="color:lightslategray">This is item two</li>
                 <li style="color:lightseagreen">This is item three</li>
