@@ -1,0 +1,141 @@
+<!doctype html>
+
+<!-- 
+	styles: style can be applied in three ways.
+	
+	inline style: defined inside the opening mark of an element.
+	internal style: defined inside the <style> element insdie the <head> element.
+	external style: defined in other css file sheet and linked thourh a link element.
+	
+	
+	in this document we will use inline styles.
+	
+	
+	additional elements: ul, li.
+	
+	ul:(unordered list) used to make a container for the list items.
+	li:(list item) used to make list item.
+	
+	
+	An element can be selected by three way.
+	
+	by element name: for eg. li, head, body, div
+	by element id: #block, #list, #item1
+	by element class: .container, .section
+	
+	
+	syntax of applying the internal style:
+	
+	Item-selection{
+		// properties.
+		
+		// each property should be ended with semicolon.
+		border: 1px solid red;
+		width: 100px;
+	}
+	
+	Item-selection can be done by using any of the above discussed way to selecet an item.
+	
+	
+	child selection:
+	
+	parent child{
+		border: 1px solid red;
+		width: 100px;
+	}
+	
+	for example:
+	
+	div li{
+		border: 1px solid red;
+		width: 100px;
+	}
+	
+-->
+
+
+<html lang="en"> 
+		
+	<head> 
+		<title> HTML Unordered List </title>
+		
+		<style> 
+		
+			body{
+				padding:30px;
+			}
+		
+			#block{
+				border: 2px solid dodgerblue;
+				background-color: dodgerblue;
+				width: fit-content;
+				border-radius: 7px;
+				
+				
+			}
+			
+			#list{
+				border: 2px solid #fce090;
+				background-color:#fce090;
+				width: 100px;
+				margin:10px;
+				list-style-type: none;
+				padding: 10px;
+				border-radius: 2px;
+			}
+			
+			#block li{
+				border: 2px solid #fdedec;
+				background-color: #fdedec;
+				border-radius:5px;
+				margin:5px;
+				text-align: center;
+				/*76448A*/
+				color: #76448A;
+			}
+			
+			
+		
+		</style>
+		
+	</head>
+	
+	
+	<body> 
+	
+		<!-- outer div block -->
+		<div id="block"> 
+			
+			<ul id="list"> 
+			
+				<li id="item1">Item 1</li>
+				<li id="item2">Item 2</li>
+				<li id="item3">Item 3</li>
+				<li id="item4">Item 4</li>
+			
+			</ul>
+			
+		</div>
+		
+		<li>this is item outer block div</li>
+		
+		<div id="block2"> 
+			
+			<ul id="list2"> 
+			
+				<li id="item1">Item 1</li>
+				<li id="item2">Item 2</li>
+				<li id="item3">Item 3</li>
+				<li id="item4">Item 4</li>
+			
+			</ul>
+			
+		
+		</div>
+		
+
+	</body>
+
+
+</html>
+
