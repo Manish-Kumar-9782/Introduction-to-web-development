@@ -1,0 +1,99 @@
+<!doctype html>
+
+<!--
+
+	ordered list:
+	
+	<ol> : (ordered list)
+	<li> : (list item)
+	
+	<dl> : descriptive table
+	<dt> : term
+	<dd> : description
+-->
+
+<html lang="en-US"> 
+	
+	<head> 
+	
+		<title>unordered List with css</title>
+		
+		<style> 
+		
+			/* setting the css properties of ordered list and it's elements. */
+			ol{
+				border:2px solid #ff847c;
+				width: 200px;
+			}
+			
+			ol li{
+				
+				margin: 5px;
+			}
+			
+			/* setting the css properties of descriptive list and it;s elements.*/			
+			
+			dl{
+				border: 2px solid #99b898;
+				width: 200px;
+				padding: 10px;
+			}
+		
+			dl dt{
+				padding: 5px;
+				background-color: #ff4e50;
+				color: white;
+				margin-top: 20px;
+				width: fit-content;
+				margin-left: 5px;
+				border-bottom: none;
+				border-top-left-radius: 3px;
+				border-top-right-radius: 3px;
+				
+			}
+			
+			dl dd{
+				padding: 10px;
+				background-color: #355c7d;
+				color: #a8e6ec;
+				border: 1px solid #355c7d;
+				margin-left: 5px;
+				padding-left:10px;
+				
+			}
+			
+			
+			
+			
+		
+		</style>
+		
+	</head>
+
+	<body> 
+	
+		<h2> ordered list </h2>
+		
+		<ol> 
+			<li> Item 1 </li>
+			<li> Item 2 </li>
+			<li> Item 3 </li>
+			<li> Item 4 </li>
+		</ol>
+		
+		
+		<h2> descriptive list </h2>
+		
+		<dl>
+			
+			<dt>HTML</dt>
+			<dd>&rightarrow; This is an html code in which are learing about the ul and dl list.</dd>
+			
+			<dt>CSS</dt>
+			<dd>&rightarrow; This is css tutorial</dd>
+			
+		</dl>
+		
+	
+	</body>
+</html>
