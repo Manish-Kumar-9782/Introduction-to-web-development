@@ -1,0 +1,13 @@
+table{
+	
+	border: 2px solid dodgerblue;
+	border-collapse:collapse;
+	width: 400px;
+}
+
+th, td{
+	border:1px solid dodgerblue;
+	padding:4px;
+	text-align:center;
+}
+
