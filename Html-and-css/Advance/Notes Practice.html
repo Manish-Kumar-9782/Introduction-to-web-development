@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will make a simple notes structure to make notes.
+-------------------------------------------------------------------------------
+-->
+
+
+<html lang="en">
+   
+    <head>
+        <!-- Unicode Transformation format version-8 -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notes Practice</title>
+
+        <style>
+
+            body{
+                background-color: rgb(241, 241, 252);
+            }
+
+            p{
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+            header h1{
+                background-color: papayawhip;
+                color: #2b6567;
+                margin: 0;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            header p{
+                background-color: floralwhite;
+                margin:0;
+                padding-left: 10px;
+                padding-bottom: 5px;
+            }
+
+
+            header p:first-of-type{
+                padding-top: 20px;
+            }
+
+            .tag::before{
+                content: "<";
+            }
+
+            .tag::after{
+                content: ">";
+            }
+
+
+            .tag{
+                background-color: rgba(234, 149, 118, 0.174);
+                color: coral;
+                font-family: monospace;
+                font-size: large;
+                border-radius: 5px;
+            }
+
+            .tag-inherit{
+                background-color: initial;
+                color: inherit;
+                font-family: inherit;
+                font-size: inherit;
+            }
+
+            span.tag{
+                background-color: #2b65672e;
+                color: #2b6567;
+            }
+
+            div{
+                margin-top: 10px;
+                border: 5px solid;
+                border-color: white;
+                border-radius: 10px;
+                padding-left: 10px;
+                
+            }
+
+            h3{
+                color: rgb(27, 27, 123);
+                text-decoration: underline;
+            }
+
+            h4{
+                background-color:rgba(208, 126, 49, 0.203) ;
+                color: rgb(208, 126, 49);
+                text-decoration: underline;
+                width: fit-content;
+            }
+
+        </style>
+
+    </head>
+    
+    <body>
+
+        <header>
+            <h1>HTML Core Elements and Attributes</h1>
+            <p>In every HTML Document we have four main elements that form the basic structure 
+                of the every HTML Document. these are 
+                <code class="tag">html</code>, 
+                <code class="tag">head</code>, 
+                <code class="tag">title</code>, 
+                <code class="tag">body</code>,
+                <code class="tag">HTML</code>.  
+            </p>
+            
+            
+
+            <p>These four elements should appear in every HTML document to make the HTML 
+                basic structure.</p>
+        </header>
+
+        <div>
+            <h3>The <code class="tag tag-inherit">html</code> Elements</h3>
+            <h4>The <code class="tag tag-inherit">html</code> Elements</h4>
+            <p>The <code class="tag">html</code> element is the containing element for te HTML document. we should add this
+            element just after declaring the document type declaration.</p>
+        </div>
+        
+    </body>
+
+</html>
