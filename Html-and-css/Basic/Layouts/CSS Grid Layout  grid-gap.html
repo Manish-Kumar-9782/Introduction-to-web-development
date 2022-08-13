@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this setcion we will see the gap b/w the grid lines, we will learn that how to
+make some space in b/w the two grid row or columns.
+
+we have three properties to set these gap.
+
+column-gap: it provides the gap in b/w the columns.
+row-gap: it provieds the gap in b/w the rows.
+gap: it can provides the gap in b/w both rows and columns.
+
+In this session we will have three different grid-container.
+-------------------------------------------------------------------------------
+-->
+
+<!-- Now In this example we will make a grid layout model which will contain some 
+row and columns with some elements. -->
+
+<!-- Now we will make a our body of the documents. -->
+
+<html lang="en">
+
+    <head>
+        
+        <title>Grid row col gap </title>
+
+        <style>
+
+            /* First of all we make our container as good looking container. */
+
+            /* we will use the container class to set the common properties. */
+
+            .container{
+
+                /* Now we will put a background-color to the grid-container. */
+                background-color: dodgerblue;
+
+                /* Now we will give some padding to make a internal space b/w items
+                and container border. */
+                padding:10px;
+
+                /* Now we will make three columns of the grid which will  contain
+                auto as values of the size of columns*/
+
+                grid-template-columns: auto auto auto;
+
+                /* Some margin to make space in b/w two container. */
+                margin:20px;
+            }
+
+            /*-----------------------------------------------------------------------*/
+            /*-----------------------------------------------------------------------*/
+
+            /* Now we will make our items as a good looking box itmes. */
+            /* We will select all the div child of the gird-container and
+            we will use the common class container*/
+            .container div{
+                /* here we will apply the padding and text alignment and
+                background-color */
+
+                padding: 20px;
+                background-color: aquamarine;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+
+                /* Now we will give a border which will distinguish each grid-item 
+                to each other.*/
+                border: 2px solid white;
+            }
+
+            /*-----------------------------------------------------------------------*/
+            /*-----------------------------------------------------------------------*/
+
+            /* Now we will define the individual properties for each grid container. */
+
+            /* Setting grid-container1 properties. */
+            #grid-container1{
+                display: grid;
+
+                /* grid-container1 contain the column-gap property */
+                column-gap: 20px ;
+            }
+            
+            /* Setting grid-container2 properties. */
+            #grid-container2{
+                display: grid;
+
+                /* grid-container2 contain the row-gap property */
+                row-gap: 20px;
+            }
+
+            /* Setting grid-container3 properties */
+            #grid-container3{
+                display: grid;
+
+                /* grid-container3 cotain the gap property */
+                gap: 20px;
+                /* gap will seth for both row and column gap. we can give
+                the individual gap size for row and column by using.
+                
+                gap: row-value column-value;
+                */
+            }
+
+        </style>
+
+    </head>
+
+
+    <body>
+
+    <!--  
+        Now here we will make three grid-container which will contain different
+        inidividual gap properties.
+
+        -> column-gap
+        -> row-gap
+        -> gap
+
+        Note: All the immediate child item of the grid-container will be considered
+        as a grid-item.
+    -->
+
+    <!-- grid container1 : a common class for containers-->
+    <h1 style="margin: 0px;">Grid-Container1: column-gap property</h1>
+    <div id="grid-container1" class="container">
+
+        <!-- Now here we will make some grid childs. -->
+        <div class="gird-item">1</div>
+        <div class="gird-item">2</div>
+        <div class="gird-item">3</div>
+        <div class="gird-item">4</div>
+        <div class="gird-item">5</div>
+        <div class="gird-item">6</div>
+        <div class="gird-item">7</div>
+        <div class="gird-item">8</div>
+        <div class="gird-item">9</div>
+        <div class="gird-item">10</div>
+        <div class="gird-item">11</div>
+        <div class="gird-item">12</div>
+
+        <!-- Now we have 10 gird items, their properties are defined inside the 
+        style element which is placed in head element. -->
+
+    </div>
+
+    <!--
+    -------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
+    -->
+
+    <!-- grid container2 -->
+    <h1 style="margin: 0px;">Grid-Container2: row-gap property</h1>
+    <div id="grid-container2" class="container">
+
+        <!-- Now here we will make some grid childs. -->
+
+        <div class="gird-item">1</div>
+        <div class="gird-item">2</div>
+        <div class="gird-item">3</div>
+        <div class="gird-item">4</div>
+        <div class="gird-item">5</div>
+        <div class="gird-item">6</div>
+        <div class="gird-item">7</div>
+        <div class="gird-item">8</div>
+        <div class="gird-item">9</div>
+        <div class="gird-item">10</div>
+        <div class="gird-item">11</div>
+        <div class="gird-item">12</div>
+
+        <!-- Now we have 10 gird items, their properties are defined inside the 
+        style element which is placed in head element. -->
+
+    </div>
+
+    <!--
+    -------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
+    -->
+
+    <!-- grid container3 -->
+    <h1 style="margin: 0px;">Grid-Container3: gap property</h1>
+    <div id="grid-container3" class="container">
+
+        <!-- Now here we will make some grid childs. -->
+
+        <div class="gird-item">1</div>
+        <div class="gird-item">2</div>
+        <div class="gird-item">3</div>
+        <div class="gird-item">4</div>
+        <div class="gird-item">5</div>
+        <div class="gird-item">6</div>
+        <div class="gird-item">7</div>
+        <div class="gird-item">8</div>
+        <div class="gird-item">9</div>
+        <div class="gird-item">10</div>
+        <div class="gird-item">11</div>
+        <div class="gird-item">12</div>
+
+        <!-- Now we have 10 gird items, their properties are defined inside the 
+        style element which is placed in head element. -->
+
+    </div>
+
+    </body>
+
+</html>
+
+<!--
+-------------------------------------------------------------------------------
+Properties used in this section:
+
+Note: In this section we have used a common class 'container' to set the common properties 
+on all containers.
+
+We have two containers: grid-container1, grid-container2, grid-container3.
+
+common properties for container:
+    grid-template-columns: it specifies the size of the columns, and how many columns
+    in a grid layout.
+
+    background-color: to give the bg color of the grid container.
+
+    padding: Some padding to make some space in b/w the grid-container and 
+    gir-items.
+
+
+Since we have defined different gap related property for inidividual container.
+
+for gird-container1 -> column:gap; it make some gap in b/w columns of grid.
+
+for grid-container2 -> row-gap; it make some gap in b/w row of grid.
+
+for grid-container3 -> gap; it contain the value for both row-gap and column gap,
+we can use this property inseted using individual row and column gap property to 
+make even gap around the container-item.
+----------------------------
+For gird items:
+
+padding: To make internal space of the grid-item.
+background-color: To give the different bg for the grid-items.
+font-size: To make grid-items text larger.
+font-weight: To make gird-items text as bold.
+text-align: To align the gird-items at center.
+border: To put the border on each grid-item which will show the effect of 
+gird row and columns.
+-------------------------------------------------------------------------------
+-->

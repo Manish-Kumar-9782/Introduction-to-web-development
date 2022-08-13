@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+in this section we will learn about the flexbox, what is flexbox how to use it,
+
+We will see that Flexbox Layout Module:
+
+Before the flexbox Layout module, there were four layout modes:
+    
+    * Block, for sections in a webpage.
+    * Inline, for text
+    * Table, for two-dimensional table data.
+    * Positioned, for explicit position of an element.
+
+The Flexible Box Layout module, makes it easier to design flexible 
+responsive layout structure without using float or positioning.
+
+Note: To work with the flex layout model, we need to first make a flex container,
+which will contain the elements, and they will act according to the flexible
+screen size.
+
+A Flex Container Properties are:
+
+    * flex-direction
+    * flex-wrap
+    * flex-flow
+    * justify-content
+    * align-items
+    * align-content
+-------------------------------------------------------------------------------
+-->
+
+<!-- Now in this we will make some simple flex container which will contan some
+flex  itmes. -->
+
+<!-- The flex container becomes flexible by setting the display property to flex.  -->
+<html>
+
+    <head>
+        <title>Flex Container</title>
+
+        
+        <style>
+            /* here we will apply the flex property on the flex-container div */
+
+            #flex-container{
+                display: flex;
+                background-color: rgb(37, 144, 218);
+                /* flex-wrap: wrap; */
+                /* We can use the flex wrap property to wrap the content to the nex line. */
+            }
+
+            /* NOw we will make some padding and margin to the each div */
+
+            #flex-container div{
+                flex: 1;
+                padding: 40px;
+                margin: 20px;
+                background-color: white;
+                color: dodgerblue;
+                
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <!-- Here we will define a <div> container as flexbox container 
+            which will have some other items.-->
+
+            <div id="flex-container">
+
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>                
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+            </div>
+
+    </body>
+</html>
+
+<!--  -->

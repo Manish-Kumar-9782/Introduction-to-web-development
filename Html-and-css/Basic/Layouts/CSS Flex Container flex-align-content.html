@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will see the flex-direction property of the flex-container,
+this property will apply only on the flex-container not on the flex-items.
+
+A Flex Container Properties are:
+
+    * flex-direction
+    * flex-wrap
+    * flex-flow
+    * justify-content
+    * align-items
+    * align-content
+
+    flex-align-content: The flex-align-content property is used to align lines.
+
+    justiy-content: <center>|<flex-start>|<flex-end>|<space-around>|<space-between>|stretch
+-------------------------------------------------------------------------------
+-->
+
+<!-- 6.. flex-align-content -->
+
+<!-- Now in this we will make some simple flex container which will contan some
+flex  items. -->
+
+<!-- The flex container becomes flexible by setting the display property to flex.  -->
+<html>
+
+    <head>
+        <title>flex-align-content</title>
+
+        
+        <style>
+            /* here we will apply the flex property on the flex-container div */
+
+            /* A common property for all div */
+
+            div{
+                margin: 0px 10px 40px 10px;
+                font-size: 30px;
+
+            }
+
+
+            h1{
+                text-align: center;
+            }
+
+            h2{
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+            }
+
+            /* -------------------------------------------------------------*/
+            /* -------------------------------------------------------------*/
+             /* flex-align-content as space-between */
+            #flex-container1{
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-between;
+                height: 600px;
+                background-color: rgb(37, 144, 218);
+            }
+
+            /* NOw we will make some padding and margin to the each div */
+            #flex-container1 div{
+                flex: 1;
+                padding: 40px;
+                margin: 20px;
+                background-color: white;
+                color: dodgerblue;
+                max-width: 40px;
+                text-align: center;
+                
+            }
+
+            /* -------------------------------------------------------------*/
+            /* -------------------------------------------------------------*/
+
+            #flex-container2{
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-around;
+                height: 600px;
+                background-color: rgb(37, 144, 218);
+            }
+
+            /* NOw we will make some padding and margin to the each div */
+
+             /* flex-align-content as center */
+            #flex-container2 div{
+                flex: 1;
+                max-width: 40px;
+                width: 40px;
+                text-align: center;
+                padding: 40px;
+                margin: 20px;
+                background-color: white;
+                color: dodgerblue;
+                
+                
+            }
+
+            /* -------------------------------------------------------------*/
+            /* -------------------------------------------------------------*/
+
+             /* flex-align-content as stretch */
+            #flex-container3{
+                display: flex;
+                flex-wrap: wrap;
+                align-content: stretch;
+                height: 600px;
+                background-color: rgb(37, 144, 218);
+            }
+
+             /* NOw we will make some padding and margin to the each div */
+            #flex-container3 div{
+                flex: 1;
+                max-width: 40px;
+                text-align: center;
+                padding: 40px;
+                margin: 20px;
+                background-color: white;
+                color: dodgerblue;
+                
+            }
+
+            /* -------------------------------------------------------------*/
+            /* -------------------------------------------------------------*/
+
+            /* flex-align-content as flex-end */
+            #flex-container4{
+                display: flex;
+                align-items: center;
+                height: 400px;
+                background-color: rgb(37, 144, 218);
+            }
+
+             /* NOw we will make some padding and margin to the each div */
+            #flex-container4 div{
+                flex: 1;
+                text-align: center;
+                padding: 40px;
+                margin: 20px;
+                background-color: white;
+                color: dodgerblue;
+                
+            }
+
+            /* -------------------------------------------------------------*/
+            /* -------------------------------------------------------------*/
+
+            /* flex-align-content as flex-start */
+            #flex-container5{
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                height: 600px;
+                background-color: rgb(37, 144, 218);
+            }
+
+            /* NOw we will make some padding and margin to the each div */
+            #flex-container5 div{
+                flex: 1;
+                text-align: center;
+                padding: 40px;
+                margin: 20px;
+                background-color: white;
+                color: dodgerblue;
+                width:100px;    
+            }
+
+            /* -------------------------------------------------------------*/
+            /* -------------------------------------------------------------*/
+
+             /* flex-align-content as flex-end */
+            #flex-container6{
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-end;
+                height: 600px;
+                background-color: rgb(37, 144, 218);
+            }
+
+            /* NOw we will make some padding and margin to the each div */
+            #flex-container6 div{
+                flex: 1;
+                text-align: center;
+                padding: 40px;
+                margin: 20px;
+                background-color: white;
+                color: dodgerblue;
+                
+            }
+
+            
+        </style>
+    </head>
+
+    <body>
+        
+        <!-- Here we will define a <div> container as flexbox container 
+            which will have some other items.-->
+
+            <h1>flex-align-content</h1>
+
+            <!-- align-content as space-between-->
+            <h2>1. align-content = space-between</h2>
+            <div id="flex-container1">
+
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>                 
+                
+            </div>
+
+            <!--
+            -------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------
+            -->
+            <!-- align-content as space-around -->
+            <h2>2. align-content = space-around</h2>
+            <div id="flex-container2">
+
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>                 
+                
+            </div>
+
+            <!--
+            -------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------
+            -->
+
+            <!-- align-content as stretch-->
+            <h2>3. align-content = stretch</h2>
+            <div id="flex-container3">
+
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>                 
+                
+            </div>
+
+            <!--
+            -------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------
+            -->
+
+            <!-- align-content as center-->
+            <h2>4. align-content = center</h2>
+            <div id="flex-container4">
+
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>                 
+                
+            </div>
+
+            <!--
+            -------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------
+            -->
+
+            <!-- align-content as flex-start-->
+            <h2>5. align-content = flex-start</h2>
+            <div id="flex-container5">
+
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>                 
+                
+            </div>
+
+            <!--
+            -------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------
+            -->
+
+            <!-- align-content as flex-end-->
+            <h2>6. align-content = flex-end</h2>
+            <div id="flex-container6">
+
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>                 
+                
+            </div>
+
+
+
+    </body>
+</html>
+
+<!-- 
+    1. align-content:space-between -> The space-between value displays the flex
+    lines with equal space between them.
+
+    2. align-content:space-around -> The space-around value displays the flex lines 
+    with space before, between, and after them.
+
+    3. align-content:stretch -> The stretch value stretches the flex lines to take 
+    up the remaining space (this is default.)
+
+    4. align-content:center-> The center value displays display the flex lines in
+    the middle of the container.
+
+    5. align-items:flex-start-> The flex-start value displays the flex lines at
+    the start of the container.
+
+    6. align-item:flex-end -> The flex-end value displays the flex lines at the end 
+    of the container.
+
+        
+    To see the effect of these settings we need to give upto 600px height minimum
+    with flex-wrap property as wrap, to better visual demonstrate the align-content
+    property.
+
+    Note: in the baseline example we need to use different font-size to
+        demonstrate that the items gets aligned by the text baseline.
+-->

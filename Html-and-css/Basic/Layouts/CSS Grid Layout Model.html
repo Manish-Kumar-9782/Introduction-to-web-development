@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn about the css grid layout, how it works, how
+it different with flex model etc.
+
+CSS Grid Layout: The CSS Grid Layout Module offers a grid-based layout system,
+with rows and columns, making it easier to design web pages without having to 
+use foates and positioning.
+
+it is a two dimensional layout while flex model only works in one dimension.
+
+A grid layout consists of parent element, with one or more child elements.
+
+
+Grid Container: An HTML element becomes a grid container when its display 
+property is set to grid or inline-grid.
+
+    All direct children (1 level children/immediate) of the grid container 
+    automatically become grid items.
+
+A Grid Layout model contain row and columns.
+
+Grid Columns: The vertical lines of grid items are called grid columns.
+Grid rows: The Horizontal lines of grid items are called gird rows.
+-------------------------------------------------------------------------------
+-->
+
+<!-- Now In this example we will make a grid layout model which will contain some 
+row and columns with some elements. -->
+
+<!-- Now we will make a our body of the documents. -->
+
+<html lang="en">
+
+    <head>
+        
+        <title>Grid Layout Model</title>
+
+        <style>
+
+            /* First of all we make our container as good looking container. */
+
+            #grid-container{
+                /* To make an element we need to set its display type as grid */
+
+                display: grid;
+
+                /* Now we will put a background-color to the grid-container. */
+                background-color: dodgerblue;
+
+                /* Now we will give some padding to make a internal space b/w items
+                and container border. */
+                padding:10px;
+
+                /* Now we will make three columns of the grid which will  contain
+                auto as values of the size of columns*/
+
+                grid-template-columns: auto auto auto;
+
+            }
+
+            /* Now we will make our items as a good looking box itmes. */
+
+            /* We will select all the div child of the gird-container*/
+
+            #grid-container div{
+                /* here we will apply the padding and text alignment and
+                background-color */
+
+                padding: 20px;
+                background-color: aquamarine;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+
+                /* Now we will give a border which will distinguish */
+                border: 2px solid white;
+            }
+
+        </style>
+
+    </head>
+
+
+    <body>
+
+        <!-- Now first we will make a gird container , in which we will place
+        some grid-item.
+    
+        Note: All the immediate child item of the grid-container will be considered
+        as a grid-item.
+    -->
+
+    <!-- grid container -->
+
+    <div id="grid-container">
+
+        <!-- Now here we will make some grid childs. -->
+
+        <div class="gird-item">1</div>
+        <div class="gird-item">2</div>
+        <div class="gird-item">3</div>
+        <div class="gird-item">4</div>
+        <div class="gird-item">5</div>
+        <div class="gird-item">6</div>
+        <div class="gird-item">7</div>
+        <div class="gird-item">8</div>
+        <div class="gird-item">9</div>
+        <div class="gird-item">10</div>
+        <div class="gird-item">11</div>
+        <div class="gird-item">12</div>
+
+        <!-- Now we have 10 gird items, their properties are defined inside the 
+        style element which is placed in head element. -->
+
+    </div>
+
+    </body>
+
+</html>
+
+<!--
+-------------------------------------------------------------------------------
+Properties used in this section:
+
+For grid container:
+
+dispaly: grid; it makes any element as the grid container. Now all the immediate 
+    child element of that container will become the grid-item. which will behave as 
+    the grid-container will say.
+
+grid-template-columns: it specifies the size of the columns, and how many columns
+in a grid layout.
+
+background-color: to give the bg color of the grid container.
+
+padding: Some padding to make some space in b/w the grid-container and 
+gir-items.
+
+----------------------------
+For gird items:
+
+padding: To make internal space of the grid-item.
+background-color: To give the different bg for the grid-items.
+font-size: To make grid-items text larger.
+font-weight: To make gird-items text as bold.
+text-align: To align the gird-items at center.
+border: To put the border on each grid-item which will show the effect of 
+gird row and columns.
+-------------------------------------------------------------------------------
+-->

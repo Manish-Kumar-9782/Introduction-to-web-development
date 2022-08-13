@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn about the flexbox layout and we will learn how
+to use it.
+
+In this section we will make header, navigation bar, sidebar, 
+section and finally we will have footer.
+
+
+CSS Flexbox Layout:
+    Use of flexbox ensures that elements behave predictably when the page
+    layout must accommodate different screen sizes and different display 
+    devices.
+
+
+Note: This section is a simple example to use the flex layout systme other
+secion of flex layout have more detailed discussion. 
+-------------------------------------------------------------------------------
+-->
+
+<html lang="en">
+
+    <head>
+        <title>HTML Flex Layout Intro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Manish Kumar">
+        <meta name="discription" content="An introduction about the css flex layout">
+        
+        <!-- linking other css files. -->
+        <link rel="stylesheet" href="../common.css">
+        <link rel="stylesheet" href="../Notes.css">
+
+        <!-- Applying css style to all the defined elements. -->
+
+        <style>
+
+            /* first we will set the box-sizing */
+            *{
+                box-sizing: border-box;
+                /* box-sizing: The box-sizing property defines the width and height of an element
+                are calculated, should they including padding and borders, or not. 
+                
+                box-sizing: content-box|border-box|initial|inherit;
+
+                border-box: It includes content, padding and borders.
+                */
+            }
+
+            /* 1. header styles */
+            header{
+                text-align: center;
+                margin:20px;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                background-color: cadetblue;
+            }
+
+
+            /* --> flex container property */
+
+            #flex{
+                display: flex;
+                border: 0px;
+                background-color: inherit;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
+
+
+            /* 2. navigation bar styles. */
+            nav{
+                flex: 20%;
+                display: block;
+                background-color:lightgreen;
+                padding: 10px;
+                margin: 20px;
+            }
+
+            nav h4{
+                margin-top: 3px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            nav a{
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                border: 1px solid lightgoldenrodyellow;
+                padding: 4px;
+                margin: 5px;
+                color: rgb(147, 85, 40);
+                border-radius: 3px;
+            }
+
+            /* 3. aside bar styles. */
+
+            aside{
+                background-color:lightgoldenrodyellow;
+                padding: 1px 10px;
+                margin: 4px 20px;
+
+            }
+
+            /* 4. section styles */
+            section{
+                flex:80%;
+                background-color:lightpink;
+                padding: 10px;
+                margin: 20px;
+            }
+
+            /* 5. footer styles. */
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <!-- 1. Header -->
+        <header>
+            <h1>HTML Flex Layout</h1>
+        </header>
+
+        <!-- A div section as a flex container on which we will apply the 
+        flex properties. -->
+        <div id="flex">
+
+            <!-- 2. navigation bar -->
+            <nav>
+                <h4>Navigation bar</h4>
+                <a href="#Header">header</a>
+                <a href="#Nav">navigation</a>
+                <a href="#aside">Sidebar</a>
+                <a href="#section">content</a>
+                <a href="#footer">footer</a>
+            </nav>
+
+            <!-- 5. section -->
+            <section>
+                <p>In this section we have used these elements.</p>
+
+                <ul>
+                    <li><code class="element tag">header</code>: a header tag to
+                    
+                    define the header of the document page.</li>
+
+                    <li><code class="element tag">nav</code>: a navigation bar just below the
+                    the header bar.</li>
+
+                    <li><code class="element tag">aside</code>: a aside or sidebar which may 
+                        contain the other page related links.</li>
+
+                    <li><code class="element tag">section</code>: a setion element which will contain
+                    the documents necessary text infromation.</li>
+
+                    <li><code class="element tag">footer</code>: it is the last element which is lies
+                    below all the elements and contians copyright, author, contact, address etc. type
+                information.</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- 3. side bar. -->
+        <aside>
+            <h4>Elements</h4>
+            <code class="element tag">header</code>
+            <code class="element tag">nav</code>
+            <code class="element tag">aside</code>
+            <code class="element tag">section</code>
+            <code class="element tag">article</code>
+            <code class="element tag">footer</code>
+        </aside>
+
+        <footer>
+            <p>-------------------------End of Page-------------------------</p>
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will see the grid display property and how it effect our 
+css grid layout.
+
+In this we will use: display as grid or inline-grid property to change the 
+dispaly of the grid-layout.
+-------------------------------------------------------------------------------
+-->
+
+<!-- Now In this example we will make a grid layout model which will contain some 
+row and columns with some elements. -->
+
+<!-- Now we will make a our body of the documents. -->
+
+<html lang="en">
+
+    <head>
+        
+        <title>Grid dispaly property</title>
+
+        <style>
+
+            /* First of all we make our container as good looking container. */
+
+            /* we will use the container class to set the common properties. */
+
+            .container{
+
+                /* Now we will put a background-color to the grid-container. */
+                background-color: dodgerblue;
+
+                /* Now we will give some padding to make a internal space b/w items
+                and container border. */
+                padding:10px;
+
+                /* Now we will make three columns of the grid which will  contain
+                auto as values of the size of columns*/
+
+                grid-template-columns: auto auto auto;
+
+                /* Some margin to make space in b/w two container. */
+                margin:20px;
+            }
+
+            /* Now here we will set the grid-container1 display:grid */
+            #grid-container1{
+                /* To make an element we need to set its display type as grid */
+                display: grid;
+            }
+            /* Now here we will set the grid-container1 display:grid */
+            #grid-container2{
+                display: inline-grid;
+            }
+
+            /* Now we will make our items as a good looking box itmes. */
+            /* We will select all the div child of the gird-container and
+            we will use the common class container*/
+            .container div{
+                /* here we will apply the padding and text alignment and
+                background-color */
+
+                padding: 20px;
+                background-color: aquamarine;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+
+                /* Now we will give a border which will distinguish */
+                border: 2px solid white;
+            }
+
+        </style>
+
+    </head>
+
+
+    <body>
+
+    <!--  
+        Now here in body element we will make two grid container.
+        1. display: grid;
+        2. display: inline-grid;
+
+        Note: All the immediate child item of the grid-container will be considered
+        as a grid-item.
+    -->
+
+    <!-- grid container1 : a common class for containers-->
+    <h1 style="margin: 0px;">Grid-Container1</h1>
+    <div id="grid-container1" class="container">
+
+        <!-- Now here we will make some grid childs. -->
+        <div class="gird-item">1</div>
+        <div class="gird-item">2</div>
+        <div class="gird-item">3</div>
+        <div class="gird-item">4</div>
+        <div class="gird-item">5</div>
+        <div class="gird-item">6</div>
+        <div class="gird-item">7</div>
+        <div class="gird-item">8</div>
+        <div class="gird-item">9</div>
+        <div class="gird-item">10</div>
+        <div class="gird-item">11</div>
+        <div class="gird-item">12</div>
+
+        <!-- Now we have 10 gird items, their properties are defined inside the 
+        style element which is placed in head element. -->
+
+    </div>
+
+    <!--
+    -------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
+    -->
+
+    <!-- grid container2 -->
+    <h1 style="margin: 0px;">Grid-Container2</h1>
+    <div id="grid-container2" class="container">
+
+        <!-- Now here we will make some grid childs. -->
+
+        <div class="gird-item">1</div>
+        <div class="gird-item">2</div>
+        <div class="gird-item">3</div>
+        <div class="gird-item">4</div>
+        <div class="gird-item">5</div>
+        <div class="gird-item">6</div>
+        <div class="gird-item">7</div>
+        <div class="gird-item">8</div>
+        <div class="gird-item">9</div>
+        <div class="gird-item">10</div>
+        <div class="gird-item">11</div>
+        <div class="gird-item">12</div>
+
+        <!-- Now we have 10 gird items, their properties are defined inside the 
+        style element which is placed in head element. -->
+
+    </div>
+
+    </body>
+
+</html>
+
+<!--
+-------------------------------------------------------------------------------
+Properties used in this section:
+
+Note: In this section we have used a common class 'container' to set the common properties 
+on both containers.
+
+We have two containers: grid-container1 and grid-container2.
+
+common properties for container:
+    grid-template-columns: it specifies the size of the columns, and how many columns
+    in a grid layout.
+
+    background-color: to give the bg color of the grid container.
+
+    padding: Some padding to make some space in b/w the grid-container and 
+    gir-items.
+
+
+Since we have different display type for both container so we have defined
+their display type inidividually.
+
+for gird-container1 -> display:grid; | by default it is stretchable.
+
+for grid-container2 -> dispaly: inline-grid; by default it is not stretchable
+and only contain the space as defined.
+
+----------------------------
+For gird items:
+
+padding: To make internal space of the grid-item.
+background-color: To give the different bg for the grid-items.
+font-size: To make grid-items text larger.
+font-weight: To make gird-items text as bold.
+text-align: To align the gird-items at center.
+border: To put the border on each grid-item which will show the effect of 
+gird row and columns.
+-------------------------------------------------------------------------------
+-->
