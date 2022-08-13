@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will see the css ::after selector, what is used
+for?, how to use it? 
+
+::after :-- The ::after selector inserts something / do somthing after the
+content of each selected element(s).
+
+We can use the content property to specify the content to insert.
+
+We can use the ::before selector to insert the something before the content.
+-------------------------------------------------------------------------------
+-->
+<!-- Now first of all we will make the html, head and body section. -->
+
+<html lang="en">
+    <head>
+        <title>::after Selector</title>
+
+        <!-- we will apply all the css style internally so we will use style
+        tag -->
+        <style>
+            /* Now here we will define the style using ::after selector.  */
+
+            /* Now suppose that we want to insert some tag after every p element
+            and highligh it using style for that we need to use the ::after on p
+            element. */
+
+            p::after {
+                /* Now this property will apply after every p element. */
+                content: "<|--end--|>";
+
+                /* Now we want to apply some style on the after content. */
+                color:antiquewhite;
+                margin-left: 5px;
+                background-color:saddlebrown;
+                border: 1px solid saddlebrown;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+
+    <!-- Now after this we will make the body of the html page -->
+    <body>
+        
+        <!-- first we will make a div dsection. -->
+
+        <div>
+            <!-- Now in this section we will make the one h1 and few paragraph. -->
+
+            <h1>This is ::after selector First Demo</h1>
+
+            <p>Hi this is the first tutorial and testing of the ::after selector.</p>
+
+            <p>In this section we are using the ::after selector to add some extra 
+                content after every paragraph</p>
+            
+            <p>Each paragraph will contain common ::after content and style.</p>
+        </div>
+
+    </body>
+</html>

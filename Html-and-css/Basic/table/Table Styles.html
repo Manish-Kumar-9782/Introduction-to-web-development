@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<!--Adding Styles to table..
+-------------------------------------------------------------------------------
+In this section we will see that how to apply the styles to a table and on its 
+elements.
+
+In this we will learn:
+
+1. How to apply border by using style
+2. How to collapse the border by using style.
+3. Styling the table border.
+4. Changing the background of the cells color.
+5. Changing the color of table texts.
+-------------------------------------------------------------------------------
+-->
+
+<html>
+
+    <head>
+        <title>Table Styles</title>
+
+        <style>
+            /* Now we will select table, th and td element to apply the border */
+
+            table, th, td{
+                border: 2px solid white;
+                /* border thickness is 1px, type is solid and border color is white. */
+
+                /* Note Since white color won't be visible from white background so we
+                need to change the background of the table.  */
+                background-color: rgb(89, 134, 119);
+
+                /* To Collapse the border   */
+                border-collapse: collapse;
+            }
+
+            /* To change the color of the header cells we select the th
+            element and apply the color property */
+            th{
+                color: bisque;
+            }
+            
+            /* To change the color of the data cells we select the td
+            element and apply the color property. */
+            td{
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+       
+         <table>
+
+            
+            <tr>
+                <!-- creating table headings -->
+                <th>Company</th>
+                <th>Car Model</th>
+                <th>Price</th>
+            </tr>
+
+            <!-- Creating the table row for table data -->
+            <tr>
+                <td>Hyundai</td>
+                <td>Creta</td>
+                <td>10.48 Lakh</td>
+            </tr>
+
+            <tr>
+                <td>Hyundai</td>
+                <td>Grand i10</td>
+                <td>12 lakh</td>
+            </tr>
+
+            <tr>
+                <td>Maruti</td>
+                <td>Alto</td>
+                <td>4 lakh</td>
+            </tr>
+
+            <tr>
+                <td>Maruti</td>
+                <td>Swift</td>
+                <td>4.7 lakh</td>
+            </tr>
+
+            <!-- We have applied all the styles on the head element. -->
+         </table>
+    </body>
+
+</html>

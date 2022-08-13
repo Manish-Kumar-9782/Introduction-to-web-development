@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<!-- Setting the column and row spaning...
+-------------------------------------------------------------------------------
+In this section we will learn about the Table row and col span..
+
+Spaning: HTML tables can have cells that spans over multiplle rows and/or columns.
+
+To make a cell span over multiple columns, we use colsapn and to make
+a cell span over multiple rows.
+-------------------------------------------------------------------------------
+-->
+
+<html>
+
+    <head>
+        <title>Table Colspan and rowspan</title>
+
+        <style>
+           /* Now first we will make the border and collapse them */
+
+           table, th, td{
+            border: 2px solid;
+
+            /* Now we will provide the some space b/w each cell by using
+            border-spacing property. */
+
+            border-spacing: 15px;
+
+            /* Collasping the border. */
+            border-collapse: collapse;
+           }
+
+        /* Making some cell space */
+        th, td{
+            border
+        }
+
+        </style>
+    </head>
+
+    <body>
+       
+        <h1>Setting Table-Cell Spacing</h1>
+      
+         <table>
+
+            
+            <tr>
+                <!-- spanning 1st column over upto 2nd column -->
+                <th colspan="2">col1</th>
+                <!-- 2nd cell is spannid (colspan) -->
+                <th>col2</th>
+            </tr>
+
+            <!-- Creating the table row for table data -->
+            <!-- To set the height of the table column we can selecte any 
+            table row -->
+            <tr>
+                <td rowspan="3">item1</td>
+                <!-- Spannig three row from 1st row -->
+                <td>package1</td>
+                <td>package2</td>
+            </tr>
+
+            <tr>
+                <!-- 1st cell is spanned (rowspan) -->
+                <td>package1</td>
+                <td>package2</td>
+                
+            </tr>
+
+            <tr>
+                <!-- 1st cell is spanned (rowspan)-->
+                <td colspan="2">package1</td>
+                <!-- 3nd cell is spanned (colspan) -->
+            </tr>
+
+            <tr>
+                <td>item2</td>
+                <td>package1</td>
+                <td>package2</td>
+            </tr>
+
+            <!-- We have applied all the styles on the head element. -->
+         </table>
+    </body>
+
+</html>
+
+<!--
+-------------------------------------------------------------------------------
+colspan: The value of colspan attribute represent the number of columns 
+    to span.
+
+rowspan: The value of rowspan attribute represents the number of row to 
+    span.
+-------------------------------------------------------------------------------
+-->

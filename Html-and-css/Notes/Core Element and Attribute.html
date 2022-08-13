@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Core Elements and Attributes</title>
+        <link rel="stylesheet" href="../Basic/common.css">
+        <link rel="stylesheet" href="../Basic/Notes.css">
+
+        <style>
+
+
+            @media print {
+                div{
+                    page-break-after: avoid;
+                }
+
+                
+            }  
+
+            *{
+                box-sizing: border-box;
+            }
+            
+            header h1{
+                margin: 0px;
+                padding: 5px;
+                color: #2b6567;
+            }
+
+            header p{
+                background-color: floralwhite;
+                margin: 0px;
+                padding: 10px;    
+            }
+
+
+            h1{
+                text-align: center;
+                background-color: papayawhip;
+            }
+
+            li{
+                margin-top: 10px;
+            }
+
+            /* A class to apply the highlight on the element*/
+            .hlight{
+                background-color: rgba(250, 156, 122, 0.16);
+                color: rgb(158, 48, 103);
+                font-family:  Arial, sans-serif;
+                
+            }
+
+            code.hlight{
+                font-family: monospace;
+                font-size: large;
+            }
+
+            b.hlight{
+                color: rgb(188, 29, 29);
+                background-color: rgba(249, 83, 83, 0.186);
+            }
+
+            /* A class to apply the highlight marking on the element*/
+            .mark{
+                color: rgb(42, 107, 150);
+                background-color: rgba(113, 146, 235, 0.108);
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+            }
+
+            /*A class to remove the color from the element (no background color)*/
+            .nbg{
+                background-color: initial;
+            }
+
+            h3 code.element.tag{
+                color: inherit;
+                padding: 0px 3px;
+                background-color: inherit;
+                border-color: white;
+                
+            }
+
+            
+            div h3{
+                color:rgb(60, 60, 130);
+                border-color:rgb(60, 60, 130);
+            }
+            div{
+                border-radius: 10px;
+            }
+
+            .tab{
+                border: 0px;
+                margin-left: 35pt;
+            }
+            .tab8{
+                border: 0px;
+                margin-left: 10pt;
+            }
+            
+            table th, td{
+                border: 2px solid rgb(129, 189, 193);
+            }
+
+            .inherit{
+                border-color: inherit;
+                background-color: inherit;
+                color: inherit;
+            }
+
+            .initial{
+                border-color: initial;
+                background-color: initial;
+                color: initial;
+            }
+            
+            .flarge{
+                font-size: large;
+            }
+
+            dl dt{
+                margin-top: 15px;
+            }
+
+            .Note{
+                border: 1px solid rgba(30, 143, 255, 0.15);
+                padding: 15px;
+                margin: 20px;
+                background-color: rgba(30, 143, 255, 0.15);
+            }
+
+        </style>
+
+    </head>
+    
+    <body>
+        <header>
+            <h1>HTML Core Elements and Attributes</h1>
+            <p>In every HTML Document we have four main elements that form the basic structure
+            of the every HTML Document. these are
+            <code class="element tag">html</code>
+            <code class="element tag">head</code>
+            <code class="element tag">title</code>
+            <code class="element tag">body</code>.
+            </p>    
+            <p>These four elements should appear in every HTML document to make the HTML 
+                basic structure.
+            </p>
+        </header>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        <div>
+            <h3>The <code class="element tag">html</code> Element</h3>
+            <p>The <code class="element tag">html</code> element is the containing element for the HTML
+            document. we should add this this element just after declaring the document type declaration.</p>
+
+            <p>Each document should have the opening <code class="element tag">html</code>
+            and closing tag <code class="element tag">/html</code>.</p>
+
+            <p>In b/w the opening tag and closing tag we need to put the <code class="element tag">head</code> and
+            <code class="element tag">body</code> elements.</p>
+
+            <h3>xmlns attribute</h3>
+            <p>if we have a multiple markup language which are using the same tag name for example 
+                <code class="element tag">big</code> <code class="element tag">small</code>
+                <code class="element tag">medium</code> etc. then we need to
+                define to the browser that which tag belongs to which language, in this situation we need to 
+                use the xmlns attribute to specify the markup language.
+            </p>
+            <p><code class=" tag">hmtl xmlns="http://www.w3.org//1999/xhtml"</code></p>
+        
+            <br>
+            <p>Attributes appllicable on the <code class="element tag">html</code> are
+            <code>id, dir, lang, xml:lang</code>.</p>
+        </div>
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+        <div>
+            <h3>The <code class="element tag">head</code> Element</h3>
+            <p>A <code class="element tag">head</code>element contain the various kind of important information
+            about our document, each <code class="element tag">html</code> should contain the 
+            <code class="element tag">title</code>element indicating the title of the document.</p>
+                
+            <ul>
+                <li><code class="element tag">base</code> element to define the base address of the page.</li>
+                <li><code class="element tag">object</code> element is used to include images, JavaScript Object, 
+                flash animation, MP3 Files, QuickTimes movies, and other types of file in a page.</li>
+                <li><code class="element tag">link</code> element is used to link to an external file, such as 
+                stylesheet, JavaScript etc.</li>
+                <li><code class="element tag">style</code> element is used to include the CSS rule inside the 
+                current html document.</li>
+                <li><code class="element tag">script</code> element is used to include the script in the current document.</li>
+                <li><code class="element tag">meta</code> element is used to include the information aobut the document
+                such as keywords and description, which are particularly helpful for search applications like 
+                browsers.</li>
+                
+                <p>The <code class="element tag">head</code> can use these attributes: 
+                <code>id, dir, lang, xml:lang</code></p>
+            </ul>
+            
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+        <div>
+            <h3>The <code class="element tag">title</code> Element</h3>
+            <p>We should specify a <code class="element tag">title</code>for every page
+            by using the <code class="element tag">title</code> element. The use of the
+            <code class="element">can be used in several ways.</code></p>
+
+            <ul>
+                <li>Title at the tab of the browser (at the very top of the browser).</li>
+                <li>As the default name for a bookmark in many browsers.</li>
+                <li>By Search Engines that use its content to help index pages.</li>
+            </ul>
+            <p>By Considering the importance of the above uses, it is important to use a title
+                that really describes the content of our website.
+            </p>
+
+            <p>Title should be short and relative to content of current document.</p>
+
+            <p>The <code class="element tag">title</code> element should contain only the text for the title;
+            it may not contain any other elements.</p>
+
+            <p>The <code class="element tag">title</code> element can have these following attributes: <code>id, dir, lang, xml:lang</code></p>
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        <div>
+            <h3>The <code class="element tag">body</code> Element</h3>
+            <p>The <code class="element tag">body</code> element appears after the
+            <code class="element tag">head</code> element and as we have already seen, it
+            contain the part of the web page that we actually see in the main brower window,
+            which is referred as body content.</p>
+
+            <p>The <code class="element tag">body</code> element contain many attribute along with
+            styling attributes.</p>
+
+            <p>Attributes appllicable on <code class="element tag">body</code> element: <code>
+                background, bgcolor, alink, link, vlink, text
+            </code></p>
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        <div>
+            <h2>Attributes Group</h2>
+            <p>Attributes are placed on the opening tag of an element and provide extra information 
+                about the element that carries them. All attributes consist of <i class="hlight">name</i> and <i class="hlight">value</i>; 
+                the name defines the a property of that element and the value is a vlaue of that property. 
+            </p>
+
+            <p>&rightarrow; For e.g. <code class="hlight">xml:lang</code> attribute describe the 
+            language used within that element.</p>
+
+            <ul>
+                <li><b class="mark">Core Attributes:</b> The <code>class, id</code> and <code>title</code> attributes.</li>
+                <li><b class="mark">Internationalization attributes: </b>The <code>dir, lang</code> and <code>xml:lang</code>
+                attributes.</li>
+                <li><b class="mark">UI events:</b> Attributes associated with events such as 
+                <code>onclick, ondoubleclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown,
+                </code> and <code>onkeyup</code>.</li>
+            </ul>
+            <p class="Note"><b class="hlight">Note:</b><i> Together, the core attriubtes and the internationalization
+                attributes are known as universal attributes.</i></p>
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+        <div>
+            <h2>Core Attributes</h2>
+            <p>The four core attributes that can be used on the majority of <i class="hlight">HTML</i> elements are: 
+            <code class="hlight" style="background-color: initial;"> code, title, class, style</code></p>
+            
+            <!-- The id attribute  -->
+            <hr>
+            <h3>The <i class="nbg">id</i> Attribute</h3>
+            <p>The <code class="hlight">id</code> attribute can be used to uniquely identify any element within a page.
+            we might want to uniquely identify an element so that we can link to that specifc part in the 
+            doucment, or to specify that a CSS style or piece of JavaScript should apply to the
+            content of just that one element within the document.</p>
+
+            <p><b class="mark">syntax: </b>  <span class="tab8"><code class="hlight">id=<i>"string"</i></code></span></p>
+        
+            <h4 class="mark">Rules to apply the id:</h4>
+            <ul>
+                <li><i class="hlight">id</i> name should begin with a letter (A-Z or a-z) and can 
+                then be followed by any number of letters, digits, hypens, underscores, colons, and periods.</li>
+                <li><i class="hlight">id</i> remain unique within that document; no two <code class="mark">id</code> attribute may 
+                    have the same value within one HTML page.</li>
+            </ul>
+            <hr>
+
+            <!-- The class attribute -->
+            <h3>The <i class="nbg">class</i> Attriubte</h3>
+            <p>The <code class="hlight">class</code> attributes is used to specify that an element belongs to a class of elements.</p>
+            <p>For e.g. we might have a document that contains many paragraphs, and a few of those paragaraphs might
+                contain a summary of key points, in which case you could use add a <code class="hlight">class</code>
+                attribute whose value in <code class="hlight">summary</code> to the relevant 
+                <code class="element tag">p</code> elements, to differentiate those paragraphs from the res
+                in the document. 
+            </p>
+            <p><b class="mark">syntax: </b>  <span class="tab8"><code class="hlight">class=<i>"classname"</i></code></span></p>
+            <p><b class="mark">syntax: </b>  <span class="tab8"><code class="hlight">class=<i>"classname1 classname2 classname3 ... classnamen"</i></code></span></p>
+            <p>The value of the <code class="hlight">class</code> attributes amy also be space-separated list of class names.</p>
+
+            <hr>
+            <!-- The title attribute -->
+            <h3>The <i class="nbg">title</i> Attribute</h3>
+            <p>The <code class="hlight">title</code> attribute gives a suggested title for the element. The syntax for the 
+            <code class="hlight">title</code> attribute is follows:</p>
+            <p><span class="tab"><code class="hlight">title=<i>"string"</i></code></span></p>
+            <br>
+            <p>The behaviour of <code class="hlight">title</code> attribute will depend upon the element that carries it, 
+            although it is often displayed as a tooptip or while the element is loading.</p>
+            <p class="Note"><b class="hlight">Note:</b> Not every element that can carray a <code class="hlight">title</code> attribute really 
+                need one, it should only used when required.</p>
+
+            <hr>
+            <!-- The style attribute -->
+            <h3>The <i class="nbg">style</i> Attribute </h3>
+            <p>The <code class="hlight">style</code>attribute allows you to specify CSS rules within the element.</p>
+            
+            <p><b class="mark">syntax: </b>  <span class="tab8">
+                <code class="hlight">style=<i>"property1:value; property2:value; ... propertyn:value;"</i></code>
+            </span></p>
+            
+            <p>Since all the CSS rule can be applied by using the <code class="element tag">style</code> element, so 
+                we should avoid to use the <code class="hlight">style</code> attribute.</p>
+            <p>We also can use the separate style-sheet which can be applied multiple different HTML document at once
+                and also we don't have to repeate the same CSS rules.
+            </p>    
+            
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        <div>
+            <h2>Internationalization</h2>
+
+            <p>There are three internationalization attributes that helps users write page for different languages
+                and character sets, and they ary available to most <span class="hlight">HTML</span> elements.
+            </p>
+
+           <p><b class="mark">Attributes:</b><span class="tab8"><code class="hlight">dir, lang, xml:lang</code></span></p>
+
+            <p class="Note"><b class="hlight">Note:</b><i> The internationalization attributes are sometimes referred to as the i18n 
+                attributes, an odd name that comes from the draft-left-html-i18n specification in which they
+                were first defined.
+            </i></p>
+
+            <hr>
+            <!-- The dir attribute -->
+            <h3>The <i class="nbg">dir</i> attribute</h3>
+            <p>The <code class="mark">dir</code> attribute allows us to indicate to the browser the direction in which
+            the text should flow; left to right or right to left.</p>
+            <p>when we want to indicate the directionality of a whole document, it should be used with 
+                the <code class="element tag">html</code> element rather than the <code class="element tag">body</code> element for two reason.
+                <ul>
+                    <li>&rightarrow; its use on the <code class="element tag">html</code> element has better support in browsers, and it will 
+                    apply to the header elements as well as those in the body.</li>
+                    <li>&rightarrow; The <code class="hlight">dir</code> attribute can also be used on element within the body of the document if we
+                    want to change the direction of a small portion of the document.</li>
+                </ul></p>
+
+            <p>The <code class="hlight">dir</code> attribute can take one of two values, as we can see in the table that follows.</p>
+            
+            <table class="tab">
+                <tr>
+                    <th>Value</th>
+                    <th>Meaning</th>
+                </tr>
+
+                <tr>
+                    <td>ltr</td>
+                    <td>Left to right (the default value)</td>
+                </tr>
+
+                <tr>
+                    <td>rtl</td>
+                    <td>Right to left (for language like Hebrew or Arabic.)</td>
+                </tr>
+            </table>
+
+            
+
+            <!-- The lang Attribute -->
+            <hr>
+            <h3>the <i class="nbg">lang</i> Attribute</h3>
+
+            <p>the <code class="hlight">lang</code> attribute allows us to indicate the main language used in a document.
+            has been replaced in newer version of HTML like <span class="hlight">HTML5</span> or <span class="hlight">XHTML</span>
+            </p>
+
+            <p>As for good practice we should use both <code class="hlight">lang</code> and <code class="hlight">xml:lang</code>
+            attribute on the <code class="element tag">html</code> element inside the current docuement.</p>
+
+            <p>The <code class="hlight">lang</code> attribute was designed to offer language-specific display to users, although
+            it has little effect in the main browsers.</p>
+
+            <p>The read benefits of using the <code class="hlight">lang</code> attribute are with:
+                <dl>
+                    <dt><code class="mark">Search Engine:</code></dt>
+                    <dd>Search engine can tell the user which language the docuement is authored in.</dd>
+
+                    <dt><code class="mark">Screen readers:</code></dt>
+                    <dd>Screen reader might need to pronounce different language in 
+                        differnt ways.</dd>
+
+                    <dt><code class="mark">Applications:</code></dt>
+                    <dd>Applications can alert users when they either do not support that language or it is a different language
+                        than their default language.
+                    </dd>
+
+                    <dt><code class="mark">With <code class="tag">html</code> element:</code></dt>
+                    <dd>When it is used with <code class="element tag">html</code> element the attributes applies to the whole document, 
+                        although it can be used on the other elements, in which case it just applied to the content of those elements.</dd>
+                </dl>
+            </p>
+
+            <p>The value of the <code class="hlight">lang</code> attribute are <span>ISO-689</span> standard two-character language codes.
+            if we want to specify a dialect of the language, we can follow the language code with a dash and a subcode name.
+            </p>
+
+            <p>The table shows some example of language code.</p>
+
+            <table class="tab">
+                <tr>
+                    <th>Value</th>
+                    <th>Meaning</th>
+                </tr>
+
+                <tr>
+                    <td>ar</td>
+                    <td>Arabic</td>
+                </tr>
+
+                <tr>
+                    <td>en</td>
+                    <td>English</td>
+                </tr>
+
+                <tr>
+                    <td>en-us</td>
+                    <td>U.S. English</td>
+                </tr>
+
+                <tr>
+                    <td>zh</td>
+                    <td>Chinese</td>
+                </tr>
+
+                <tr>
+                    <td>hi</td>
+                    <td>Hindi</td>
+                </tr>
+            </table>
+
+            <hr>
+            <!-- The xml:lang attribute -->
+            <h3>The <i class="nbg">xml:lang</i> Attribute</h3>
+            <p>The <code class="hlight">xml:lang</code> attribute is the xHTML replacement for <code class="hlight">lang</code> attribute. 
+                it is an attribute that is available in all language that are writeen in <code class="mark">XML</code>, which is why it prefixed
+            by the characters <code class="hlight">xml:</code>.</p>
+
+            <p>The value of the <code class="hlight">xml:lang</code> attribute should be an <span>ISO-639</span>
+            country code.</p>
+
+            <p>While it has no effect in the main browser, other XML-aware applications and search engines may use
+                this information, and it is good practice to include the <code class="hlight">xml:lang</code>
+                attribute in our docuemnts.
+            </p>
+
+            <p>When used with the <code class="element tag">html</code> element, it applies to the whole document, although
+            it can be used on other elements, in which case it just applies to the content of those elements.</p>
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+        <div>
+            <h2>UI Events</h2>
+            <p>The UI evelnts attributes allow us to associtate an event, such as a keypress or th mouse being moved
+                over an element, with a script.
+            </p>
+
+            <p><code class="mark">Common UI Events:</code></p>
+            <p class="tab"><code class="hlight">onclick, ondoubleclick, onmousedown onmouseup, onmouseover, 
+                onmousemove, onmouseout, onkeypress, onkeydown, onkeyup
+            </code></p>
+
+            <p>The <code class="element tag">body</code> and <code class="element tag">frameset</code> elements also has the 
+            following events for when a page opens or is closed:</p>
+
+            <p class="tab">
+                <code class="hlight">onload</code>,
+                <code class="hlight">onunload</code>
+            </p>
+
+            <p>Some events only for forms:</p>
+            <p class="tab">
+                <code class="hlight">onfocus</code>,
+                <code class="hlight">onblur</code>,
+                <code class="hlight">onsubmit</code>,
+                <code class="hlight">onreset</code>,
+                <code class="hlight">onselect</code>,
+                <code class="hlight">onchange</code>,
+            </p>
+
+        </div>
+
+        <footer>------------------------------------------end of page------------------------------------------</footer>
+    </body>
+</html>

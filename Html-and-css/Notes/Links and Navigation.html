@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+This section contain the Notes structure about the Links and Navigation in HTML
+Web pages.
+
+This section contains a very detailed use of the linkes and Navigation.
+-------------------------------------------------------------------------------
+-->
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Links & Navigation</title>
+
+        <link rel="stylesheet" href="../Basic/common.css">
+        <link rel="stylesheet" href="../Basic/Notes.css">
+        <link rel="stylesheet" href="Notes2.css">
+
+        <style>
+            header p#content{
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            code.html{
+                margin-left: 40px;
+                background-color: #e2f6af;
+                font-size: medium;
+                font-family: 'Courier New', Courier, monospace;
+                color: #800077;
+            }
+
+            var{
+                font-family: 'math';
+                font-size: large;
+                font-weight: bold;
+            }
+
+            kbd{
+                color:#800077;
+                text-decoration: dashed;
+                font-size: large;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <!-- Header of the page -->
+        <header>
+
+            <h1>Links and Navigation</h1>
+
+            <p>In our daily life we have seen many document in desktop or lapton some of them are .docx, .txt which are 
+                simple text file bute if we see the .html file, they are also plain text files but in a structured format.
+                which are used to put some content on the web page.
+            </p>
+
+            <p>Now if we already have the .docx and .txt file then what is the need of the .html file, well the need is that
+                a web page contain the hyperlinks which allows us to travels b/w the pages which are placed on different computer or 
+                network or Databases servers.
+            </p>
+
+            <p><code class="mark">hyperlinks:</code> Links or hyperlinks are the links which allows us to travel, to a different web page,
+            which is placed at different location or different desktop/laptop/databse just by one click.</p>
+
+            <p>This ability of the web page make them different to any kind of the document format file, which is used to share the text 
+                decorated information by using the plain text file.
+            </p>
+
+            <p><code class="mark">Internal Link:</code> when a link is created and contain the it's own relative web page then that link
+            is known as the internal link.</p>
+
+            <p><code class="mark">External Link: </code> When a link is created an contain the external web site web page link then that link
+            is known as the external link.</p>
+
+            <p id="content"><b>This section contains:</b></p>
+            <ul>
+                <li>How to link b/w pages of a site.</li>
+                <li>How to link other site pages.</li>
+                <li>How to link to specific parts of a page in a site.</li>
+            </ul>
+        </header>
+
+
+        <!-- Basic Link and Navigation-->
+
+        <div>
+            <a id="basic_link"></a>
+            <h2>Basic Link</h2>
+
+            <p>A link is specified using the <code class="element tag">a</code> element. Anything between the opeaning 
+                <code class="element tag">a</code> and the closing <code class="element tag">/a</code> becomes the part 
+            of the link that users can click in a browser.</p>
+
+
+            <!-- Link to a other web page -->
+            <h3>Link to a other web page</h3>
+            <p>To link another web page, the opening tag <code class="element tag">a</code> tag must define an attribute
+            called <code class="hlight">herf;</code> the value of the <code class="hlight">href</code>
+            attribute is the name of the file which need to be linked.</p>
+
+            <p><b class="hlight">Note:</b> We can put the <i class="hlight">absolute</i> or <i class="hlight">relative</i> path of the file, if file is 
+            stored in different folder or directory.</p>
+            <code class="html"><code class="tag">a href="Core Element and Attribute.html"</code>Core element and Attribute of HTML<code class="tag">/a</code></code>
+            <p>A link of the web page saved in current page folder. <a href="Core Element and Attribute.html">Core Element and Attribute of HTML</a></p>
+        
+
+            <!-- Link to another website page -->
+            <h3>Link to another website page</h3>
+            <p>To add a link of the other website page we just need to pass the absolute address as the value of <code class="hlight">href</code> of that page which are we going to link.</p>
+            <p><b class="hlight">Note:</b> if we don't pass the current address of the page then browser will give us an error about not found the page.</p>
+            
+            <code class="html"><code class="tag">a href="https://www.google.com"</code>Google Home Page<code class="tag">/a</code></code>
+
+            <p>A link of google home page: <a href="https://www.google.com">Google Home Page</a></p>
+
+
+            <!-- Link as image -->
+            <h3>Link as image</h3>
+            <p>We can make an image as the link of another page to do that we just need to put the image-link in between the 
+                <code class="element tag">a</code> element e.g.
+            </p>
+            
+            <code class="html"><code class="tag">a href="https://www.google.com"</code><code class="tag">img src="google-128px.ico"</code><code class="tag">/a</code></code>
+            <br>
+            <a href="https://www.google.com"><img src="google-128px.ico" alt="google home page" width="64"></a>
+            
+            
+            <!-- Link as image with title -->
+            <h3>Link as image with title</h3>
+            <p>we have seen that how to make an image a link by puttin the image in between the <code class="element tag">a</code> element 
+            but it does not describe the anything about the link to the users.</p>
+            <p>we can add a short description or <code class="hlight">title</code> of the web page which is also benificial for the screen readers.</p>
+            <p>This title will be shown as we put our mouse pointer/cursor on the image it will show the title of the page which will gives 
+                us the initial information about the linked page.
+            </p>
+            <p>To add the <code class="hlight">title</code> of the link which is in the form of the image, we just need to add the
+            <code class="hlight">title</code> attribute inside the opening tag of <code class="element tag">a</code>.</p>
+            <code class="html"><code class="tag">a href="https://www.google.com" title="Google Home page"</code><code class="tag">img src="google-128px.ico"</code><code class="tag">/a</code></code>
+            <br>
+            <a href="https://www.google.com" title="Google Home page"><img src="google-128px.ico" alt="google home page" width="64"></a>
+        
+        
+            <!-- Linking to E-mail Address -->
+            <h3>Linking to E-mail Address</h3>
+            <p>We can convert a link to a mail address and we can send/recieve the mail to/from the given email address.</p>
+            <p>To add the email address we need to pass the email address with prefix <i class="hlight">mailto:</i> as the value of <code class="hlight">href</code> attribute.</p>
+            <code class="html"><code class="tag">a href="mailto:name@example.com"</code>Email-Us<code class="tag">/a</code></code>
+            
+            <a href="mailto:manishkumar9782@gmail.com">Mail Me</a>
+            
+        </div>
+
+        <div>
+            <h2>Creating Bookmark Links with the <code class="element tag">a</code> Element</h2>
+            <p>Now we will see that how to make a link which will take us to a specified part of the current web page. The link which
+                which is linked to a specifc part of the current web page is known as the <i class="hlight">bookmark</i> link.
+            </p>
+
+            <p>A bookmark link has two part <i class="hlight">Source</i> and <i class="hlight">Destination</i> of the link.</p>
+            <p>A bookmark link is very usefull when our page is very long and hard to find the desired content, then in that kind of condition 
+                we can make the bookmark link which will take us to the desired content if the link is defined at right point of destiantion.
+            </p>
+            <h3>Creating a source Anchor with the <code class="nbg">href</code> Attribute</h3>
+            <p>The source anchor is the link which allow us to click on the link and take us to the destination (a specified part of the page) link. 
+                A Source anchor can be in the form of text or image.</p>
+            
+            <p>A source anchor does not contain any file path or link address as the value of the <code class="hlight">href</code> attribute. it only
+            takes the name of the id of the destination link with prefix <i class="hlight">#</i>.</p>
+            <p><b class="mark">Syntax:</b>  <code class="html"><code class="tag">a href="#idname"</code>title<code class="tag">/a</code></code></p>
+            <br>
+            <a href="#basic_link">Baic Link</a>
+            <br>
+            
+            <!-- Creating a destination achor -->
+            <h3>Creating a Destination Anchor with the <code class="nbg">href</code> attribute</h3>
+            <p>After defining the source anchor we need to specify the destination anchor. in this current document we have defined the destination of the 
+                above source at the basic link section, it will take us to the basic link section by clicking on that.</p>
+            
+            <p><b class="mark">Syntax</b> <code class="html"><code class="tag">a id="basic_link"</code><code class="tag">/a</code></code></p>
+            <p>This syntax is placed just above the <i class="hlight">h2</i> of the <i class="hlight">Basic Link</i> section.</p>
+            <p class="Note"><b class="hlight">Note:</b> At the destination anchor we dont need to put content in b/w the <code class="element tag">a</code> tag and neither
+            we need to put the <code class="hlight">href</code> value.</p>
+        </div>
+
+        <div>
+            <h2>The <code class="element tag">a</code> Element's Other Attributes</h2>
+            <p>The <code class="element tag">a</code> element can carry several attributes some of them are used frequently or some of them are used very rarely.
+            So in now we will see rest of the attributes.</p>
+            <p><b class="mark">Attribute:</b>
+                <code class="tab8 hlight">accesskey</code>,
+                <code class="hlight">charset</code>,
+                <code class="hlight">coords</code>,
+                <code class="hlight">href</code>,
+                <code class="hlight">hreflang</code>,
+                <code class="hlight">rel</code>,
+                <code class="hlight">rev</code>,
+                <code class="hlight">shape</code>,
+                <code class="hlight">style</code>,
+                <code class="hlight">tabindex</code>,
+                <code class="hlight">target</code>,
+                <code class="hlight">type</code>
+            </p>
+
+            <!-- The accesskey attribute -->
+            <h3>The <i class="nbg">accesskey</i> Attribute</h3>
+            <p>The <code class="attr">accesskey</code> attribute creates a keyboard shortcut that can be used to 
+            activate a link. </p>
+            <p>This shorcut key can be used to wake on the differnt section of the current page by defining the shortkey 
+                for every bookmark point.</p>
+            <p>We can also visit to a link by defining a shorcut key on that link defination.</p>
+            
+            <p>A Simple example of the <code class="attr">accesskey</code> attribute</p>
+            <code class="html"><code class="tag">a id="#basic_link" accesskey="1"</code><code class="tag">/a</code></code>
+            <a href="#basic_link" accesskey="1"></a>
+            <p>use <kbd class="hlight">alt+1</kbd> to activate the Basic Link bookmark section.</p>
+            
+            <p><b class="hlight">Note:</b> While using the shortcut key we should note that most of the browser use some
+            predefined shortcut, so we should select the shortcut key without overriding the predefined shortcut keys.</p>
+            <p><b class="hlight">Note:</b> Note that the key is case-sensitive so we should use the value by knowning that 
+            here <i class="hlight">A</i> and <i class="hlight">a</i> both will have the different effect if we use them speperately.</p>
+            
+            <!-- The charset attribute -->
+            <h3>The <i class="nbg">charset</i> Attriubte</h3>
+            <p>The <code class="attr">charset</code> attribute indicates the character encoding of the document, the URL points to. It
+            is typically used only when we are linking to a page in a different language taht uses a different character set.</p>
+
+            <p><code class="html"><code class="tag">a href="https://www.amazon.co.jp" charset="ISO-2022-JP"</code>Amazon Japan <code class="tag">/a</code></code></p>
+            
+            <p><b class="hlight">Note:</b> This attribute is useful when linking to forign language sites written in character encodings that 
+                some users might not be able to understand.</p>
+            
+
+            <!-- The coords attributes -->
+            <h3>The <i class="nbg">coords</i> Attributes</h3>
+            <p>The <code class="attr">coords</code> attribute is designed for use on a source anchor when it contain an image. it allows us to create 
+            something known as image map, which defines the different parts of the same image link to different places.</p>
+            <p>The value of the <code class="attr">coords</code> attribute will be a set of <var>x</var> and <var>y</var> coordinates that indicates which 
+            part of the image should follow the link.</p>
+
+            <h3>The <i class="nbg">hreflang</i> Attribute</h3>
+            <p>The <code class="attr">hreflang</code> attribute indicate which language the page we are linking to is written in. It is designed to be used
+            when linking to a page in a different language from the current document, and the value of this attribute is a two-letter 
+            <i><code class="hlight">language code</code></i>.</p>
+
+            <p><code class="html"><code class="tag">a href="https://www.amazon.co.jp" hreflang="JA"</code>Amazon Japan <code class="tag">/a</code></code></p>
+
+
+            <!-- the rel attriubte -->
+            <h3>The <i class="nbg">rel</i> Attribute</h3>
+            <p>The <code class="attr">rel</code> attribute is used on the source anchor to indicate the relationship b/w the current document and the
+            attribute, although it is possible that automated applications could be written to use this information.</p>
+            
+            <h4>The <i>rel</i> Attribute values</h4>
+            <br>
+            <table>
+                <tr>
+                    <th>Value</th>
+                    <th>Description</th>
+                </tr>
+                
+                <tr>
+                    <td>toc (or contents)</td>
+                    <td>A document that is a table of contents for the current document</td>
+                </tr>
+
+                <tr>
+                    <td>index</td>
+                    <td>A document that is an index for the current document.</td>
+                </tr>
+                
+                <tr>
+                    <td>glossary</td>
+                    <td>A document containing a glossary of terms that relate to the current document.</td>
+                </tr>
+                
+                <tr>
+                    <td>copyright</td>
+                    <td>A document containing the copyright statment for the current document.</td>
+                </tr>
+                
+                <tr>
+                    <td>start</td>
+                    <td>A document that is the first in a series of ordered documents, of which this 
+                        one document.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>next</td>
+                    <td>A document that is next in a series of ordered documents, of which this is one document.</td>
+                </tr>
+                
+                <tr>
+                    <td>prev (or previous)</td>
+                    <td>A document that is the prvious in a series of ordered documents, of which this is one document.</td>
+                </tr>
+                
+                <tr>
+                    <td>help</td>
+                    <td>A document that helps users understand or navigate the page and/or site</td>
+                </tr>
+                
+                <tr>
+                    <td>chapter</td>
+                    <td>A document that acts as a section in a collection of documents</td>
+                </tr>
+                
+                <tr>
+                    <td>section</td>
+                    <td>A document that acts as a section in a collection of documents.</td>
+                </tr>
+                
+                <tr>
+                    <td>subsection</td>
+                    <td>A docuement that acts a subsection in a collection of documents.</td>
+                </tr>
+                
+                <tr>
+                    <td>appendix</td>
+                    <td>A document that acts as an appendix in a collection of documents.</td>
+                </tr>
+            </table>
+
+
+            <!-- The rev attribute -->
+            <h3>The <i class="nbg">rev</i> Attribute</h3>
+            <p>The <code class="attr">rev</code> attribute provides the same role as the <code class="attr">rel</code> attributes but is used on the destination 
+            anchor to describe the relation b/w the destination and the source. it is currently not supported by major browsers.</p>
+        
+            <!-- The shape attribute -->
+            <h3>The <i class="nbg">shape</i> Attribute</h3>
+            <p>if we want to create an image map, the <code class="attr">shape</code> attribute can be used to indicate the shape of an area that
+            becomes a clickable hotspot.</p>
+
+            <!-- The tabindex Attribute -->
+            <h3>The <i class="nbg">tabindex</i> Attribute</h3>
+            <p>By pressing the <kbd>tab</kbd> key we can change the focus of the interactive element. here 
+            <code class="attr">tabindex</code> plays an important role to specify that which element will take the focus first or which will take next.</p>
+            <p>The <code class="attr">tabindex</code> attribute allows us to specify the order in which order element will take the focus, when the 
+                <kbd>tab</kbd> key is pressed, the links obtain (or any interactive element) obtain focus.</p>
+            <p>When the user press the <kbd>tab</kbd> key, we may want to set the focus on a specific element (link/form).</p>
+            <p>The value of the <code class="attr">tabindex</code> attributes is a number b/w 0 to 32767.</p>
+
+            <!-- The target attribute -->
+            <h3>The <i class="nbg">target</i> Attribute</h3>
+            <p>The <code class="attr">target</code> attribute is used to specify, that when the user click on a link,
+            where the linked page sould open, by defalut it open in the current tab or window. </p>
+            <p>To open the linked page in other window or tab we need to set the <code class="attr">target</code> value as 
+            <i class="hlight">_blank</i></p>
+
+            <!-- The title attribute -->
+            <h3>The <i class="nbg">title</i> Attribute</h3>
+            <p>The <code class="attr">title</code> attribute works here as we have discussed above while using the image as link.</p>
+            <p>It is used to give an additional information about the page or it can be used by the screen reader.</p>
+
+            <h3>The <i class="nbg">type</i> attribute</h3>
+            <p>The <code class="attr">type</code> attibutes specifies the MIME type of the link. MIME types can be compared to file extensions, 
+            but are more universally accepted across different operating system.</p>
+            <p>For example: an html page would have the MIME type <span class="hlight">text/html</span>
+            , whereas a JPEG image would have the MIME type <span class="hlight">img/jpeg</span>.</p>
+        </div>
+
+    </body>
+
+</html>

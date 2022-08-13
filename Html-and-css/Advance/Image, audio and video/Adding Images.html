@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn <img> tag and its attribute. we will learn to use
+<img> tag and its attributes in practise.
+
+-> The HTML <img> tag is used to embed an image in a web page.
+-> Images are not techinally inserted into a web page/ images are linked to web
+pages. The <img> tag creates a holding space for the referenced images.
+
+-> The <img> tag is empty, it contains attributes only, and does not have a 
+closing tag.
+
+-> The <img> tag has two required attributes:
+
+    * src - Specifies the path to the image.
+    * atr - Specifies an alternate text for the image.
+-------------------------------------------------------------------------------
+-->
+
+<!-- Now first we will make the html, head and body elements. -->
+
+<html>
+    <head>
+        <title>HTML Images</title>
+
+        <!-- here first we will link our common css properties for 
+            tutorial purpose -->
+        <link rel="stylesheet" href="common.css">
+
+        <!-- Additional css properties. -->
+        <style>
+            
+        </style>            
+    </head>
+
+    <body>
+        
+        <!-- Here we will make  -->
+        <div>
+            <h3>1. The src Attribute</h3>
+
+            <!-- The required src attribute specifies the apth (url) to the image. -->
+            <p>The required <span>src</span> attribute specifies the apth (url) to the image.</p>
+            <img src="../../Basic/Images/wall1.png" alt="Witcher Image" width="400px" height="200px">
+        </div>
+
+        <!-- alt attribute -->
+        <div>
+            <h3>2. The alt Attribute</h3>
+            <p>The required <span>alt</span> attribute provides an alternate text for 
+            an image, if the user for some reason cannot view it.</p>
+
+            <!-- If Image is removed from the specified src after a movement then
+            web browser will be unable to load the image and we will see the broken
+            link icon. The broken line icon and alt text are shown if the browser cannot
+            find the image. 
+            -->
+            <img src="../../Basic/Images/wal.jpg" alt="Witcher Image" width="200px" height="150px">
+        </div>
+
+        <!-- Image size width and height -->
+        <div>
+            <h3>3. Image Size-width and Height</h3>
+            <p>Image size is an important factor when we need to put our image in a pariticular
+                limited space, in those kind of sitution we can use <span>style</span> or
+                width and height attribute of the <span>img</span> tag.
+            </p>
+            <!-- Not: style attribute will override the attributes values. -->
+            
+            <img src="../../Basic/Images/wall3.jpg" alt="Witcher Image" width="400px" height="200px">
+            <!-- Note: <img> width and height attribute always defines the width and height in 
+            pixels. -->
+        </div>
+
+        <!-- Image Style -->
+        <div>
+            <h3>4. Image Style</h3>
+            <p>We always use the <span>style</span> attribute to set the width and height and other 
+                properties because they always overrids the <span>width</span> and <span>height</span> attributs values.
+            </p>
+            <img src="../../Basic/google-128px.ico" alt="Google Icon" style="width:64px; height:64px;">
+        </div>
+
+        
+        <!-- Image as Link -->
+        <div>
+            <h3>5.Image as a link</h3>
+            <p>Click on the image show below to go-to google home page.</p>
+            <a href="https://www.google.com" target="_blank">
+                <img src="../../Basic/google-128px.ico" alt="Google">
+            </a>
+        </div>
+
+
+        <!-- Animated Gif -->
+        <div>
+            <h3>6. Animated Gif</h3>
+            <p>HTML allows the animated gif also, we can link them as we do
+                imgaes.
+            </p>
+            <img src="../../Basic/Images/cat dance.gif" alt="Cat Dance Gif" 
+            style="width: 125px; height: 160px;">
+        </div>
+
+
+        <!-- Images floating -->
+        <div>
+            <h3>7. Images Floating</h3>
+            <img src="../../Basic/google-128px.ico" alt="Google" 
+            style="float:left; width:64px; height: 64px;">
+            <p>We can use <span>css float</span> property to let the image
+            float to the right or to the left of a text.</p>
+            <p>Here this image is floated to left of this text content.</p>
+            <br><br>
+            <img src="../../Basic/google-128px.ico" alt="Google" 
+            style="float:right; width:64px; height: 64px;">
+            <p>if We apply a floating property then all the next element of the same block
+                element will be placed to right of it.
+            </p>
+            <p>To change the floating side or clear the floating we need change the
+                floating side or need to use <span>clear</span> property to remove
+                the floating property.
+            </p>
+        </div>
+    </body>
+</html>

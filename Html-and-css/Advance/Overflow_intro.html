@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn about overflow property, what it is used for?
+how to use it?
+
+overflow: The overflow property controls what happens to content that is too
+big to fit into an area.
+
+CSS Overflow: The overflow property spcifies whether to clip the content or to add
+scrollbars when the content of an element is too big to fit the specified area.
+
+overflow property values:
+    -> visible: default. The overflow is not clipped. The content renders outsides
+        the element's box.
+
+    -> hidden: The overflow is clipped, and rest of the content will be invisible.
+
+    -> scroll: The overflow is clipped, and a scrollbar is added to see the rest
+        of the content.
+
+    -> auto: Similar to scroll, but it adds scrollbars only when necessary.
+
+    Note:-> The overflow property only works for block elements with a 
+        specified height or width.
+
+    Note:-> In OS X Lion (on mac), scrollbar are hidden by default and only ahown
+    when being used (even though "overflow:scroll" is set).
+-------------------------------------------------------------------------------
+-->
+
+<!-- Now we will make the html, head and body elements. -->
+
+<html>
+
+    <head>
+        <!-- Now here we will add the title and style -->
+        <title>CSS Overflow Property</title>
+
+        <!-- We will use the internal css style -->
+        <style>
+            /* Now we will apply the style for required element. */
+
+            /* first we need to fix the height and width of the each div elemnet */
+            div{
+                border:2px solid blue;
+                width:400px;
+                height:150px;
+                margin-bottom:200px;
+                /* setting margin to bottom to make space in b/w each dive element. */
+            }
+
+            /* Setting visible property of first div section */
+            #visible{
+                overflow: visible; 
+                /* This property is by default and allow the content to be overflowed. */
+                
+            }
+
+            /* Setting visible property of second div section */
+            #hidden{
+                overflow:hidden;
+                /* This property hide the overflowed content and only shows the
+                clipped content. */
+            }
+
+            /* Setting visible property of third div section */
+            #scroll{
+                overflow:scroll;
+                /* This property add a scrollbar whenver the content is overflowed
+                so content remain inside the container and can be viwed by scrolling. */
+            }
+
+            /* Setting visible property of fourth div section */
+            #auto{
+                overflow:auto;
+                /* This property adds the scrollbar automatically if it is required. */
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- first we will make h1 about the page-->
+        <h1>CSS Overflow Properties</h1>
+
+        <!-- Now we will make the div section for each property with h2 -->
+
+        <h2>Overflow:visible Property</h2>
+        <div id="visible">
+            <p >The next movement in paragraph development is an explanation 
+                of each example and its relevance to the topic sentence. The 
+                explanation should demonstrate the value of the example as 
+                evidence to support the major claim, or focus, in your paragraph.
+     
+                 Continue the pattern of giving examples and explaining them until
+                 all points/examples that the writer deems necessary have been made
+                 and explained. NONE of your examples should be left unexplained. 
+                 You might be able to explain the relationship between the example 
+                 and the topic sentence in the same sentence which introduced the 
+                 example. More often, however, you will need to explain that 
+                 relationship in a separate sentence.</p>
+        </div>
+
+
+        <h2>Overflow:hidden Property</h2>
+        <div id="hidden">
+            <p >The next movement in paragraph development is an explanation 
+                of each example and its relevance to the topic sentence. The 
+                explanation should demonstrate the value of the example as 
+                evidence to support the major claim, or focus, in your paragraph.
+     
+                 Continue the pattern of giving examples and explaining them until
+                 all points/examples that the writer deems necessary have been made
+                 and explained. NONE of your examples should be left unexplained. 
+                 You might be able to explain the relationship between the example 
+                 and the topic sentence in the same sentence which introduced the 
+                 example. More often, however, you will need to explain that 
+                 relationship in a separate sentence.</p>
+        </div>
+
+
+        <h2>Overflow:scroll Property</h2>
+        <div id="scroll">
+            <p >The next movement in paragraph development is an explanation 
+                of each example and its relevance to the topic sentence. The 
+                explanation should demonstrate the value of the example as 
+                evidence to support the major claim, or focus, in your paragraph.
+     
+                 Continue the pattern of giving examples and explaining them until
+                 all points/examples that the writer deems necessary have been made
+                 and explained. NONE of your examples should be left unexplained. 
+                 You might be able to explain the relationship between the example 
+                 and the topic sentence in the same sentence which introduced the 
+                 example. More often, however, you will need to explain that 
+                 relationship in a separate sentence.</p>
+        </div>
+
+
+        <h2>Overflow:auto Property</h2>
+        <div id="auto">
+            <p >The next movement in paragraph development is an explanation 
+                of each example and its relevance to the topic sentence. The 
+                explanation should demonstrate the value of the example as 
+                evidence to support the major claim, or focus, in your paragraph.
+     
+                 Continue the pattern of giving examples and explaining them until
+                 all points/examples that the writer deems necessary have been made
+                 and explained. NONE of your examples should be left unexplained. 
+                 You might be able to explain the relationship between the example 
+                 and the topic sentence in the same sentence which introduced the 
+                 example. More often, however, you will need to explain that 
+                 relationship in a separate sentence.</p>
+        </div>
+
+
+        
+    </body>
+</html>
+

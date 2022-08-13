@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn about the JavaScript HTML DOM Elements which will
+be used to access the internal content of the elements.
+
+Finding HTML Elements.
+
+-> Finding HTML elements by id
+-> Finding HTML elements by tag name
+-> Finding HTML elements by class name
+-> Finding HTML elements css selectors
+-> Finding HTML elements HTML object collections
+-------------------------------------------------------------------------------
+-->
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript HTML DOM Elements</title>
+
+        <link rel="stylesheet" href="../common.css">
+        <link rel="stylesheet" href="../Notes.css">
+
+        <script>
+
+            function getDevById(){
+                var element = document.getElementById("div1");
+                console.log(element);
+                // showing the element infomation on the console log.
+            }
+
+            /*-----------------------------------------------------------*/
+
+            function getByTagName(){
+                var element = document.getElementsByTagName("h2");
+                console.log(element);
+            }
+
+            /*-----------------------------------------------------------*/
+
+            function getByClassName(){
+                var element = document.getElementsByClassName("red");
+                // first change the color of the h2 elemnts.
+
+                // element will contain the list of all the red class elements
+                // Now we will change the color of each h2.
+                for(i=0; i<element.length; i++){
+                    element[i].style.color = "red";
+                }
+                console.log(element);
+            }
+
+            /*-----------------------------------------------------------*/
+            function getByCSS(){
+                var element = document.querySelectorAll("div.changeme");
+                // first change the color of the div elements.
+                // it will give a node list form that we will select 0th item.
+                element[0].style.color = "#e1f5c4";
+                element[0].style.backgroundColor = "#a7226e";
+                
+                console.log(element);
+            }
+
+            /*-----------------------------------------------------------*/
+            function getForm(){
+                var element = document.forms["form1"];
+                // first change the color of the div elements.
+                // it will give a node list form that we will select 0th item.
+                for(let i=0; i<element.length; i++){
+                    console.log(element.elements[i].value)
+                }
+                
+            }
+
+
+        </script>
+
+
+
+    </head>
+
+    <body>
+
+        <div id="div1">
+            <h2  class="red">Finding HTML Element by id</h2>
+            <p>The easiest way to find an HTML element in to DOM, is by using the
+                element id.
+            </p>
+
+            <p>&rightarrow; If the element is found, the method will return the 
+                element as an object (in element.)
+            </p>
+
+            <p>&rightarrow; If the element is not found, element will contain null.</p>
+            <!-- Now we we will  use a button to get the div1 element content by
+            press that button output will be shown-->
+
+            <input type="button" onclick="getDevById()" value="Get Me By Id!">
+            
+        </div>
+
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        <div>
+            <h2>Finding HTML Element by tag Name</h2>
+            <p>If we find the any element by using the tag Name then we will have
+                all the element with that tag Name.
+            </p>
+
+            <p>&rightarrow; In this we will get all the h2 element.</p>
+
+            <!-- Now we we will  use a button to get the all the element defined by
+            the given tagName by press that button output will be shown-->
+
+            <input type="button" onclick="getByTagName()" value="Get all h2!">
+            
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+        <!-- 3. Finding HTML Elements by Class Name -->
+        <div>
+            <h2 class="red">Finding HTML Element by Class Name</h2>
+            <p>If you want to find all HTML elements with same class name, use 
+                <b class="hlight">getElementsByClassName()</b>. 
+            </p>
+
+            <p>&rightarrow; In this we will change the color of each h2 element with class 
+                <strong>"red"</strong>.
+            </p>
+
+            <!-- Now we we will  use a button to get the all element binded to the
+            'red' class, in this we will have all h2 element with 'red' class-->
+
+            <input type="button" onclick="getByClassName()" value="Red h2!">
+            
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+        
+        <!-- 4. Finding HTML Elements by CSS Selectors -->
+        <div class="changeme">
+            <h2>Finding HTML Elements by CSS Selectors</h2>
+            <p>If we want to find all HTML elements that match a specified CSS selector
+                (id class, names,types, attributes, values of attributes, etc), use the
+                <b class="hlight">querySelectorAll()</b> method. 
+            </p>
+
+            <p>&rightarrow; In this we will change the color of each h2 element with class 
+                <strong>"red"</strong>.
+            </p>
+
+            <!-- Now we we will  use a button to get the current div elemnt and change
+            the color and background-color of our elemnt.-->
+
+            <input type="button" onclick="getByCSS()" value="Change Me!">
+            
+        </div>
+
+        <!-- 5. Finding HTML Elements by HTML Object Collections. -->
+
+        <div>
+            <h2>Finding HTML Element by HTML Object Collections.</h2>
+
+            <form action="../get.js" id="form1">
+
+                <label for="FirstName" id="fname">First Name: </label>
+                <input type="text" id="FirstName" name="fname">
+                <br>
+
+                <label for="LastName" id="lname">Last Name: </label>
+                <input type="text" id="LastName"  name="lname">
+                <br>
+
+                <input type="button" onclick="getForm()" value="Get Form!">
+            </form>
+
+            <!-- Note: Since we are not submitting the form so we will not use the 
+            input type as submit.
+        
+            For our purpose we are good to go with button as input type.
+            -->
+            
+        </div>
+
+    </body>
+</html>

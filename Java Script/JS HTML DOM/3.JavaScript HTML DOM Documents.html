@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will make notes about the HTML DOM document object, what is the 
+document object and how to use it with javascript.
+
+This session contains:
+
+1. The HTML DOM Document Object.
+2. Finding HTML Elements
+3. Changing HTML Elements.
+4. Adding and Deleting Elements.
+5. Adding Events Handlers.
+6. Finding HTML Objects.
+-------------------------------------------------------------------------------
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>javascript HTML DOM Document</title>
+        <link rel="stylesheet" href="../common.css">
+        <link rel="stylesheet" href="../Notes.css">
+        
+
+        <style>
+            /* additional setting for the table */
+            
+           
+
+        </style>
+
+    </head>
+
+    <body>
+        
+        <h1>javascript HTML DOM Document</h1>
+
+        <div>
+            <h2>The HTML DOM Document Object</h2>
+
+            <p>The HTML DOM Document Object is the owner of all other objects in your web page.</p>
+            <p>-> The document object represents your web page.</p>
+            <p>-> If you want to access any element in an HTML page, you always start with accessing the 
+                document object.
+            </p>
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        <div>
+            <h2>Finding HTML Elements</h2>
+            
+            <p>We can access HTML elements by using the element method in this we will 
+                discussion about:
+                
+                <ul>
+                    <li><span>document.getElementById</span></li>
+
+                    <li><span>document.getElementByTagName</span></li>
+                    <li><span>document.getElementByClassName</span></li>
+                </ul>
+
+                <dl>
+                    <dt><span>document.getElementById: </span></dt>
+                    <dd>&rightarrow; If we have defined any element with a unique id then we can access 
+                        that element by using <b class="hlight">getElementById</b> method, with this we have a control over the element
+                        which has that unique id.</dd>
+                    <dd>&rightarrow; Note: if we give the two elements same id then the last element will override
+                        the first element with that id.
+                    </dd>
+
+                    <dt><span>document.getElementByTagName:</span></dt>
+                    <dd>&RightArrow; Every element in HTML comes with a tag like <code class="element tag">div</code>,
+                    <code class="element tag">form</code>, <code class="element tag">table</code> etc. 
+                    </dd>
+                    <dd>&RightArrow; if we want to select all the items of that type of element, than we will use
+                        <b class="hlight">getElementByTagName</b> method.</dd>
+                    
+                    <dt><span>document.getElementByClassName:</span></dt>
+                    <dd>&RightArrow; If we have given HTML element some class name then we can access
+                        all the element binded to that class by using <b class="hlight">getElementByClassName</b>
+                        method. 
+                    </dd>
+                </dl>
+            </p>
+        </div>
+        
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        <div>
+            <h2>Changing HTML Elements</h2>
+
+            <p>We can change the value/content/properties of the html element by using the properties of
+                some element properties.</p>
+
+            <p>Here are we have some element properties:  
+                <ul>
+                    <li><span>element.innerHTML</span></li>
+                    <li><span>element.attribute</span></li>
+                    <li><span>element.property</span></li>
+                </ul>
+            </p>
+            
+            <p>we also have a method to set the attribute values.
+                <ul><li><span>element.setAttriubte(attribute, value)</span></li></ul>
+            </p>
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        <div>
+
+            <h2>Adding and Deleting Elements</h2>
+
+            <p>We can add or delete an element by using document object in JavaScript.</p>
+
+            <p>Document object has some method for these operations. 
+
+                <ul>
+                    <li><span>docuemnt.createElement(element)</span></li>
+                    <li><span>document.removeChild(element)</span></li>
+                    <li><span>document.appendChild(element)</span></li>
+                    <li><span>document.replaceChild(element)</span></li>
+                    <li><span>document.write(text)</span></li>
+                </ul>
+            </p>
+
+            <dl>
+                <dt><span>document.createElement: </span></dt>
+                <dd>&rightarrow; In an HTML docuemnt, the <b class="hlight">document.createElement()</b>
+                method creates the HTML element specified by tagName, or an 
+                <b class="hlight">HTMLUnkonwnElement</b> if tagName isn't recognized.</dd>
+
+                <dt><span>document.removeChild: </span></dt>
+                <dd>&rightarrow; In an HTML document, the <b class="hlight">document.removeChild()</b>
+                is used to remove a child of an element from HTML document.</dd>
+
+                <dt><span>document.appendChild: </span></dt>
+                <dd>&rightarrow; In an HTML document, the <b class="hlight">document.appendChild()</b>
+                method is used to add a new element at the last position inside the element.</dd>
+
+                <dt><span>document.replaceChild:</span></dt>
+                <dd>&rightarrow; In an HTML document, the <b class="hlight">document.replaceChild()</b> 
+                    method is used to replace an old element from new one.</dd>
+
+                <dt><span>document.write: </span></dt>
+                <dd>&rightarrow; In an HTML document, the <b class="hlight">document.write()</b>
+                method is used to write some content, element inside the HTML document.</dd>
+                <dd>Note:- we shoud avoid this method to write something after loading the html 
+                    document, it will delete all the existed content and write new content.</dd>
+
+            </dl>
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        <div>
+            <h2>Adding Events Handlers</h2>
+
+            <p>We can make our event handlers by using the other of the HTML element like 
+                <b class="hlight">document.getElementById(id).onclick</b>, we can pass a function
+            which will perform some action after clicking on that element.</p>
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        <div>
+            <h2>Finding HTML Objects</h2>
+
+            <p>The first HTML Level 1 (1998), defined 11 HTML objects, object collections,
+                and properties. These are still valid in HTML5.
+            </p>
+
+            <p>Later, in HTML DOM Level 3, more objects, collection, and properties were added.</p>
+        
+            <table>
+
+                
+
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>DOM</th>
+                </tr>
+
+                <tr>
+                    <td>document.anchor</td>
+                    <td>Return all <code class="element tag">a</code> that have 
+                    a name attribute</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+                    <td>document.applets</td>
+                    <td>Deprecated</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+                    <td>document.baseURI</td>
+                    <td>Returns the absoute base URI of the document</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>document.body</td>
+                    <td>Returns the <code class="element tag">body</code> element</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+                    <td>document.cookie</td>
+                    <td>Returns the document's cookie</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+                    <td>document.doctype</td>
+                    <td>Return the document's doctype</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>document.documentElement</td>
+                    <td>Returns the <code class="element tag">html</code> element.</td>
+                    <td>3</td>
+                </tr>
+                
+                <tr>
+                    <td>document.documentMode</td>
+                    <td>Return the mode used by the browser</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>document.documentURI</td>
+                    <td>Returns the mode used by the browser</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>document.domain</td>
+                    <td>Returns the domain name of the document server.</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+                    <td>document.domConfig</td>
+                    <td>Obsolete</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>document.embeds</td>
+                    <td>Returns all <code class="element tag">form</code> elements</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+                    <td>document.head</td>
+                    <td>Returns the <code class="element tag">head</code> elements.</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>document.images</td>
+                    <td>Returns all <code class="element tag">img</code> elements.</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+                    <td>document.implementation</td>
+                    <td>Return the DOM implementation</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>document.inputEncoding</td>
+                    <td>Returns the document's encoding (character set)</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>document.lastModified</td>
+                    <td>Returns the date and time the document was updated</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>document.links</td>
+                    <td>Returns all <code class="element tag">area</code> and 
+                    <code class="element tag">a</code> elements that have a href
+                attribute</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+                    <td>document.readyState</td>
+                    <td>Returns the (loading) status of the document.</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>document.referrer</td>
+                    <td>Returns the URI of the referrer (the linking document)</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+                    <td>document.scripts</td>
+                    <td>Return all <code class="element tag">script</code> elements.</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>document.StrictErrorChecking</td>
+                    <td>Returns if error checking is enforced</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>document.title</td>
+                    <td>Returns the <code class="element tag">title</code> element.</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+                    <td>document.URL</td>
+                    <td>Returns the complete URL of the document.</td>
+                    <td>1</td>
+                </tr>
+
+
+
+
+            </table>
+        
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        
+    </body>
+</html>

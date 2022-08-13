@@ -9,5 +9,7 @@ th, td{
 	border:1px solid dodgerblue;
 	padding:4px;
 	text-align:center;
+	background-color: dodgerblue;
+	color:white;
 }
 

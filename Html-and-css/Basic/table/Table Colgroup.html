@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<!--Adding Styles to table..
+-------------------------------------------------------------------------------
+In this section we will learn how make a group of column and style them 
+at once.
+
+To make the group of column we need to use <colgroup> and <col> element.
+
+<colgroup>: The <colgroup> element should be used as a container for the
+    column specification. Each group are specifed with a col element.
+
+The span attribute specfies how many columns that gets the style
+
+
+Note: The <colgroup> tag must be a child of a <table> element and should be 
+    placed before any other table elements, like <thead>, <tr>, <td> etc., but
+        after the <caption> element, if present.
+-------------------------------------------------------------------------------
+-->
+
+<html>
+
+    <head>
+        <title>Table Colgroup</title>
+
+        <style>
+            /* Now we will select table, th and td element to apply the border */
+
+            table, th, td{
+                border: 2px solid white;
+                /* border thickness is 1px, type is solid and border color is white. */
+
+                /* Note Since white color won't be visible from white background so we
+                need to change the background of the table.  */
+                background-color: rgb(89, 134, 119);
+
+                /* To Collapse the border   */
+                border-collapse: collapse;
+            }
+
+            /* To change the color of the header cells we select the th
+            element and apply the color property */
+            th{
+                color: bisque;
+            }
+            
+            /* To change the color of the data cells we select the td
+            element and apply the color property. */
+            td{
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+       
+         <table>
+
+            
+            <tr>
+                <!-- creating table headings -->
+                <th>Company</th>
+                <th>Car Model</th>
+                <th>Price</th>
+            </tr>
+
+            <!-- Creating the table row for table data -->
+            <tr>
+                <td>Hyundai</td>
+                <td>Creta</td>
+                <td>10.48 Lakh</td>
+            </tr>
+
+            <tr>
+                <td>Hyundai</td>
+                <td>Grand i10</td>
+                <td>12 lakh</td>
+            </tr>
+
+            <tr>
+                <td>Maruti</td>
+                <td>Alto</td>
+                <td>4 lakh</td>
+            </tr>
+
+            <tr>
+                <td>Maruti</td>
+                <td>Swift</td>
+                <td>4.7 lakh</td>
+            </tr>
+
+            <!-- We have applied all the styles on the head element. -->
+         </table>
+    </body>
+
+</html>

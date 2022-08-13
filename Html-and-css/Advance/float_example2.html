@@ -1,0 +1,179 @@
+<!--
+-------------------------------------------------------------------------------
+In this section we will make a home page by using the the Homepage with the 
+header, footer, left content and main content.
+
+* In this section we will make five section.
+* header
+* footer
+* menu--vertical menu
+* column
+-------------------------------------------------------------------------------
+-->
+
+<!-- documet declaration -->
+<!doctype html>
+
+<html>
+    <head>
+        <title>float example</title>
+        
+        <!-- Now we will implement the styles internals by using the style tag  -->
+
+        <style>
+            /* Here we will define the styles of different class, id and tags. */
+
+            /* A setting for all the tags, class and ids. */
+            
+            * {
+                box-sizing: border-box;
+            }
+
+            /* Setting the header and footer css properties */
+
+            .header, .footer {
+                background-color: grey;
+                color:white;
+                padding:15px;
+            }
+
+            /* Now we will use the float on the unorderd list section */
+
+            .column {
+                float: left;
+                padding:15px;
+            }
+                        
+            /* Now after appling the floating to the column class we need to 
+            clear it so it will not applied to other elements, for that we can
+            use the ::after selector. */
+            .clearfix::after {
+
+                /* ::after selector will allow us to insert and apply css properties
+                after selected element. In this we will clear the floating property
+                after applying it on the clearfix section. */
+
+                content: "";
+                /* content: "", it means we will not insert any thing */
+                clear: both;
+                /* clear: it is used to clear the floating property after applied to
+                the clearfix section. */
+                display: table;
+                /* display: table is used to put the next element just below the 
+                clearfix section not to inline it. */
+            }
+
+            .menu{
+    
+                width: 25%;
+                /* To set the 25% width of whole width of parent section.  */
+            }
+            .content{
+                width: 75%
+                /* To set the 75% width of whole width of parent section. */
+            }
+            
+            /* selecting all ul element whose parent having .menu class  */
+            .menu ul{
+                
+                list-style-type: none;
+                /* Removing the list-style-type which is dot by default */
+
+                border: 2px solid bisque;
+                /* setting the border on the ul block element. */
+                margin: 0;
+                /* removing the margin on each ul element */
+                padding: 0;
+                /* removing the padding on each ul element. */
+            }
+
+            /* selecting all li element whose parent having .menu class */
+            .menu li{
+                padding: 8px;
+                /* setting padding on the each li element*/
+                margin-bottom: 8px;
+                /* Setting margin to bottom side on each li element. */
+                background-color: rgb(52, 143, 143);
+                /* Setting a bg-color on each li element. */
+                color: white;
+                /* Setting content color of each element. */
+            }
+            
+            .menu li:hover{
+                background-color: coral;
+            }
+
+        </style>
+    </head>
+
+    <!-- here we will define the body of the page and it's element. -->
+
+    <body>
+        <!-- first we will definet the header  section-->
+
+        <div class="header">
+            <h1>Header</h1>
+        </div>
+
+        <!-- Now we will define the content -->
+        <!-- This content will contain a nested divs for menu and content. -->
+
+        <div class="clearfix">
+            
+            <!-- A div section for menu items -->
+            <div class="column menu">
+                <!-- Here column and menu are two different class. -->
+
+                <!-- Here we will make a menu using the unorderd list. -->
+
+                <ul>
+                    <li>The Flight</li>
+                    <li>The City</li>
+                    <li>The Island</li>
+                    <li>The Food</li>
+                </ul>
+
+            </div>
+
+            <div class="column content">
+                <!-- Here column and content are two differnt class. -->
+                <!-- Here we will make the content-->
+                <h2>The city</h2>
+                <p>Chania is the capital of the Chania region on the island of Crete. 
+                    The city can be divided in two parts, the old town and the modern 
+                    city.
+                </p>
+                
+                <p>You will learn more about web layout and responsive web pages in a 
+                    later chapter.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Now here we will make a footer -->
+        <div class="footer">
+            <h3>Footer</h3>
+        </div>
+
+    </body>
+</html>
+
+<!--
+-------------------------------------------------------------------------------
+Note:important properites discussion.
+
+clear: The clear property controls the flow next to floated elemnts.
+        
+        * The clear property specifies that should happen with the element that
+        is next to a floating element.
+        * clear properites values: none, left, right, both, initial, inherit.
+        
+    none    -> Default, The element is not pushed below left or right floated element.
+    left    -> The element is pushed below left floated element.
+    right   -> The element is pushed below right floated element.
+    both    -> The element is pushed below both left and right floated elements.
+    initial -> Sets this property to its default.
+    inherit -> Inherits this property from its parent element.
+-------------------------------------------------------------------------------
+-->

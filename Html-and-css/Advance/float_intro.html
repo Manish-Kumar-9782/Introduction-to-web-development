@@ -1,0 +1,68 @@
+<!--
+-------------------------------------------------------------------------------
+In this section we will see learn about the CSS float property:
+
+float: The float property specifes whether an element should float to the
+left, right, ornot at all.
+
+Note: Absolute Positioned elements ignore the float property.
+
+Note: Element next ot the floating element will flow around it. To avoid this,
+use the clear property or the clearfix hack
+
+float values: none, left, right, initial, inherit.
+-------------------------------------------------------------------------------
+-->
+
+<!-- Now we will create a random text and we will use span on initial word.-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- In this section we will use the title and style. -->
+
+        <title>float property</title>
+        <style>
+            span{
+                float: left;
+                /* Here we set the float on for the span. now next element will be 
+                placed to the left of the spanned element. */
+                width: 3.7em;
+                /* width of the spanned element is 3.7 times the original text. */
+                font-size: 400%;
+                /* font size of the spanned text increased by 4 times 400% = 4em*/
+                font-family: algerian, courier;
+                /* Setting the font family of the spanned text */
+                line-height:80%;
+                /* line-height to set the the height of the spanned text with respect
+                to the paragraph or content.*/
+
+                /* all the text lines will be wraped and floating to left after the 
+                spanned line height. */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <p> <span>Sunset</span> is the time of day when our sky meets the outer space solar 
+                winds. There are blue, pink, and purple swirls, spinning and twisting,
+                like clouds of balloons caught in a whirlwind. The sun moves slowly 
+                to hide behind the line of horizon, while the moon races to take its
+                place in prominence atop the night sky. People slow to a crawl, 
+                entranced, fully forgetting the deeds that must still be done. 
+                There is a coolness, a calmness, when the sun does set.
+            </p>
+        </div>
+
+        <div>
+            <p>In the above paragraph first word Sunset is embedded in the
+                span element. The span element has a width that is 3.7 times 
+                the size of the current font. The font-size of the span element
+                is 400% (quite large) and the line-height is 80%. The font of the 
+                letter is the span will be in "Algerian".
+            </p>
+        </div>
+    </body>
+</html>

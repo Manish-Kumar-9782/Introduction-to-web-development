@@ -21,6 +21,7 @@ In this section we will make a simple notes structure to make notes.
             body{
                 background-color: rgb(241, 241, 252);
             }
+            
 
             p{
                 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -45,6 +46,29 @@ In this section we will make a simple notes structure to make notes.
 
             header p:first-of-type{
                 padding-top: 20px;
+            }
+
+            .hlight{
+                color: rgb(158, 48, 103);
+                background-color: rgba(158, 48, 103, 0.17);
+                
+            }
+
+            .mark{
+                color: rgb(42, 107, 150);
+                background-color: rgba(113, 146, 235, 0.108);
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+                
+            }
+
+            ul.points li{
+                margin-bottom: 8px;
+            }
+
+            .Note{
+                background-color: rgba(30, 143, 255, 0.15);
+                padding: 15px;
+                margin: 20px;
             }
 
             .tag::before{
@@ -122,11 +146,56 @@ In this section we will make a simple notes structure to make notes.
 
         <div>
             <h3>The <code class="tag tag-inherit">html</code> Elements</h3>
-            <h4>The <code class="tag tag-inherit">html</code> Elements</h4>
             <p>The <code class="tag">html</code> element is the containing element for te HTML document. we should add this
             element just after declaring the document type declaration.</p>
-        </div>
         
+            <p>Each docuemnt should have the opening tag <code class="tag">html</code> and closing tag 
+            <code class="tag">/html</code></p>
+
+            <p>In b/w the opening tag and closing tag we need to put the <code class="tag">head</code> and <code class="tag">body</code> elements.</p>
+        </div>
+
+
+        <!-- Attribute Group -->
+        <div>
+
+            <h2>Attribute Group</h2>
+            <p>Attribute are placed on the opening tag of an element and provide extra information about
+                the elemnt that carries them. All attributes consist of <i class="hlight">name</i> and <i class="hlight">value;</i>
+                the name define a property of that element and the value is  a value of that property.
+            </p>
+
+            <p>&rightarrow; For e.g <code class="hlight">xml:lang</code> attributes describe the language used within that element.</p>
+
+            <ul class="points">
+                <li><b class="mark">Core Attributes: </b> The <code class="hlight">class</code>, <code class="hlight">id</code> and <code class="hlight">title</code> attributes.</li>
+            
+                <li><b class="mark">Internationalization attributes:</b> the 
+                    <code class="hlight">dir</code>,
+                    <code class="hlight">lang</code> and
+                    <code class="hlight">xml:lang</code> attributes.
+                </li>
+
+                <li><b class="mark">UI Events: </b> Attributes associated with events such as 
+                    <code class="hlight">onclick</code>,
+                    <code class="hlight">ondoubleclick</code>,
+                    <code class="hlight">onmouseclick</code>,
+                    <code class="hlight">onmousedown</code>,
+                    <code class="hlight">onmouseup</code>,
+                    <code class="hlight">onmouseover</code>,
+                    <code class="hlight">onmousemove</code>,
+                    <code class="hlight">onmouseout</code>,
+                    <code class="hlight">onkeypress</code>,
+                    <code class="hlight">onkeydown</code> and
+                    <code class="hlight">onkeyup</code>.
+                </li>
+            </ul>
+
+            <p class="Note"><b class="hlight">Note:</b> Together, the core attributes and the Internationalization attributes are
+                known as universal attributes.</p>
+
+            
+        </div>
     </body>
 
 </html>

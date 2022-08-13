@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn the float and clear property together, we will
+learn that what are float and clear properties about? 
+
+float: The css <<float>> property specifies how an element should float.
+
+clear: The css <<clear>> property specifies what elements can float beside the
+    cleared element and on which side.
+
+
+Application and Property:
+
+    * The float property is used for positioning and formatting content, for 
+        example let an image float left to the text in a container.
+
+The float property can have one of the following values:
+
+    * left - The element floats to the left of its container.
+    * right - The element floats to the right of its container.
+    * none - The element does not float (will be displayed just where it
+    occurs in the text). This is default.
+    * inherit - The element inherits the float value of its parent.
+    
+Example: In its simplest use, the float property can be used to wrap text 
+    around images.
+-------------------------------------------------------------------------------
+-->
+
+<!-- Now we will make an examples for each property float:none; float:left;
+float:right; to clear all thigs.  -->
+
+<html>
+
+    <head>
+        <title>float properties</title>
+
+        <!-- we will use the internal style. -->
+        <style>
+            /* Here we will define styles for each element. */
+
+            /* first we will make the border on each dive element */
+            div{
+                 /*Adding border on each div section  */
+                border: 2px solid blue;
+
+                /* Adding margin on each div secion */
+                margin-bottom: 80px;
+                margin-top: 2px;
+                width:700px;
+            
+            }
+            
+            /* Now we will remove the margin from each h2 element */
+            h2{
+                margin-bottom: 0px;
+            }
+
+            /* Now form here we have a linked section with h2-div, and form
+            here we will apply the floating property on each element. */
+
+            img{
+                /* Resizing the image. */
+                width: 150px;
+                height: 150px;
+            }
+
+            .float_right img{
+                /* In this we will set the next element as float to the
+                img element */
+                float:right;
+                padding-left: 5px;
+                
+            }
+
+            .float_left img{
+                 /* In this we will set the next element as float to the
+                img element */
+                float:left;
+                padding-right:5px;
+            }
+
+            .float_none img{
+                /* by defalult float is set to none. */
+                float:none;
+                /*next element is p which will not float in any direction. */
+                /* Now change will be made in look */
+            }
+
+
+
+        </style>
+    </head>
+
+    <!-- Now need to make the body of the page. -->
+
+    <body>
+        
+        <!-- first heading of tutorial -->
+
+        <h1>Css Layout - float and clear</h1>
+
+        <!-- Now In this body we will make three differnt -->
+
+        <!-- A section for the right floating content. -->
+         <!-- Now first we will set the h2 -->
+        <h2>float:right Property</h2>
+        <div class="float_right">
+           <!-- Now we will have one image and one paragraph -->
+           <img src="pineapple.jpg" alt="pineapple">
+           <p>The next movement in paragraph development is an explanation 
+            of each example and its relevance to the topic sentence. The 
+            explanation should demonstrate the value of the example as 
+            evidence to support the major claim, or focus, in your paragraph.
+ 
+             Continue the pattern of giving examples and explaining them until
+             all points/examples that the writer deems necessary have been made
+             and explained. NONE of your examples should be left unexplained. 
+             You might be able to explain the relationship between the example 
+             and the topic sentence in the same sentence which introduced the 
+             example. More often, however, you will need to explain that 
+             relationship in a separate sentence.</p>
+        </div>
+
+        <!-- A section for the left floating content. -->
+        <h2>flaot:left Property</h2>
+        <div class="float_left">
+            <!-- Now we will have one image and one paragraph -->
+           <img src="pineapple.jpg" alt="pineapple">
+           <p>The next movement in paragraph development is an explanation 
+            of each example and its relevance to the topic sentence. The 
+            explanation should demonstrate the value of the example as 
+            evidence to support the major claim, or focus, in your paragraph.
+ 
+             Continue the pattern of giving examples and explaining them until
+             all points/examples that the writer deems necessary have been made
+             and explained. NONE of your examples should be left unexplained. 
+             You might be able to explain the relationship between the example 
+             and the topic sentence in the same sentence which introduced the 
+             example. More often, however, you will need to explain that 
+             relationship in a separate sentence.</p>
+        </div>
+
+        <!-- A section for the none floating content. -->
+        <h2>float:none Property</h2>
+        <div class="float_none">
+            <!-- Now we will have one image and one paragraph -->
+           <img src="pineapple.jpg" alt="pineapple">
+           <p>The next movement in paragraph development is an explanation 
+            of each example and its relevance to the topic sentence. The 
+            explanation should demonstrate the value of the example as 
+            evidence to support the major claim, or focus, in your paragraph.
+ 
+             Continue the pattern of giving examples and explaining them until
+             all points/examples that the writer deems necessary have been made
+             and explained. NONE of your examples should be left unexplained. 
+             You might be able to explain the relationship between the example 
+             and the topic sentence in the same sentence which introduced the 
+             example. More often, however, you will need to explain that 
+             relationship in a separate sentence.</p>
+        </div>
+
+    </body>
+    
+</html>

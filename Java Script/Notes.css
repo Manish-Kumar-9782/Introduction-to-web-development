@@ -1,0 +1,178 @@
+
+/* Heading properties */
+h1{
+    text-align: center;
+}
+
+
+h4{
+    margin-bottom: 0px;
+    margin-top: 30px;
+    
+}
+
+/* ------------------------------------------------------ */
+
+.element.tag, .element{
+    background-color: rgb(129, 169, 184);
+    border: 1px solid rgb(129, 169, 184);
+    font-size: 1.1em;
+    border-radius: 3px;
+    color: white;
+}
+
+.element.tag.h1 {
+    background-color: lightblue;
+    color: brown;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+}
+
+/* tag element css */
+
+.tag::before{
+    content: "<";
+    background-color:inherit;
+}
+
+.tag::after{
+    content: ">";
+    background-color:inherit;
+}
+
+.tag.h1::before {
+    content: "<";
+    background-color: inherit;
+    color: brown;
+}
+
+.tag.h1::after {
+    content: ">";
+    background-color: inherit;
+    color: brown;
+}
+
+/* Now we will change the font of the for all p element content */
+
+p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+htmlcode{
+    color:black;
+    border: 1px solid;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+htmlcode::before{
+    content:"<";
+    color: purple;
+    font-size: 1.5em;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+htmlcode::after{
+    content:">";
+    color: purple;
+    font-size: 1.5em;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+
+
+
+/* Style for footer also */
+footer{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    background-color: beige;
+    padding: 15px;
+    margin: 15px;
+}
+
+/* a style for body */
+
+body{
+    background-color: lightgray;
+}
+
+div{
+    background-color: white;
+}
+
+table{
+    border: 1px solid red;
+}
+
+/* for strong tag */
+
+strong{
+    color:palevioletred;
+    font-style: italic;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    
+}  
+
+/* for blockquote */
+
+blockquote{
+
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS';
+    color: chocolate;
+}
+
+/* for b with caption class */
+
+b.caption{
+    color: rgb(7, 71, 134);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+b.caption::after{
+    content: " ";
+}
+
+b.hlight{
+    color: rgb(218, 100, 100);
+    background-color: rgb(242, 242, 242);
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+span{
+    color: rgb(144, 70, 94);
+    border-color: rgb(144, 70, 94); 
+}
+
+/* styles for list items. */
+li{
+    margin: 3px;
+}
+
+ /* styles for span inside the list  */
+
+li span{
+    border: none;
+ }
+
+ /* table css styles for notes. */
+
+table tr td:first-child{
+
+    color: #355c7d;
+    font-weight: bold;
+}
+
+table th{
+    color: brown;
+}
+
+table{
+    border-collapse: collapse;
+}
+

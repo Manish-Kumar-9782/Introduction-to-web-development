@@ -1,0 +1,82 @@
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn a simple application of the float property.
+
+* In this section we will make a menu bar using the float property applied
+on the list items.
+-------------------------------------------------------------------------------
+-->
+
+<!doctype html>
+
+<html lang="en">
+    <!-- First we will set the title and style block to set the styles -->
+    <head>
+        <title>float menu</title>
+
+        <style>
+
+            /* first we will set the unorderd list properties. */
+            ul{
+                list-style-type: none;
+                /* Setting list-style-type to none to remove the dot points (circle). */
+                margin: 0;
+                /* To remove the margin in b/w ul list and other container. */
+
+                padding:0;
+                /* To remove the padding from inside the ul list container. */
+
+                background-color: darkcyan;
+                /* To set the background color of the ul block container. */
+                
+                overflow: hidden;
+            }
+
+            li{
+                float:left;
+                /* Setting float to left for all list items. this will arrange
+                all the list items in horizontal line.*/
+                
+            }
+
+            /* Now we will set the properties of each p tag inside the li. */
+            li a {
+                display: inline-block;
+                /* Setting the display type as inline-block. */
+                color: white;
+                /* Setting the color of the text inside the hyperlink */
+                text-align: center;
+                /* Set the text align as center on the inline-block */
+                padding: 14px 16px;
+                /* padding is done to provide the some vertical and horizontal gap b/w links */
+                text-decoration: none;
+                /* text-decoration:none to remove the underline from the hyperlink */
+
+            }
+
+            li a:hover{
+                background-color:rgb(139, 75, 200);
+            }
+            
+
+        </style>
+    </head>
+
+    <!-- Now we will make thd body of the page. -->
+
+    <body>
+        
+        <!-- Now here we will make a unordered list. -->
+
+        <ul>
+            <!-- Now here a real menu contains the  hyperlink but here we will just
+            make the Title of the list.-->
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+    </body>
+
+</html>

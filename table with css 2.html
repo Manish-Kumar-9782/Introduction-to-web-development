@@ -11,19 +11,19 @@ lang: To define the language of content of that element.
 table:
 
 <table>: table element container. (block level)
-<tr>: table row.(block level)
+<tr>: table row.(block level) container of table row element (cells)
 <th>: table header. (inline element)
 <td>: table data. (inline element)
 
 -->
 
-<html lang="en-US" dir="ltr"> 
+<html lang="en-US"> 
 
 	<head> 
 	
 		<title>Table2 With CSS</title>
 		
-		<link rel="stylesheet" href="table.css" type="text/css">
+		<!-- <link rel="stylesheet" href="table.css" type="text/css"> -->
 		
 		<!--
 		
@@ -38,6 +38,30 @@ table:
 		
 			By using link element we have linked external css.
 		-->
+		
+		<style>
+
+				table{
+					
+					border: 2px solid dodgerblue;
+					border-collapse:collapse;
+					width: 400px;
+					
+				}
+
+				th, td{
+					border:1px solid dodgerblue;
+					padding:4px;
+					text-align:center;
+					
+				}
+
+				th{
+					background-color: dodgerblue;
+					color:white;
+				}
+
+		</style>
 		
 	</head>
 	
@@ -85,6 +109,7 @@ table:
 				<td>4.7 lakh</td>
 			
 			</tr>
+			
 			
 			
 

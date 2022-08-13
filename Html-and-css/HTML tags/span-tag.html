@@ -1,0 +1,76 @@
+<!--
+-------------------------------------------------------------------------------
+In thi section we will see <span> tag, why it is used and how to use in our
+    html pages.
+
+<span>: the <span> tag is an inline container used to mark up a part of a 
+    text, or a part of document.
+
+* The <span> tag is easily styled by CSS or manipulated with JavaScript using
+    the class or id attribute.
+
+* The <span> tag is much is like the <div> element, but <dive> is a block-level
+    element and <span> is an inline element.
+
+inline-Element: An inline element does not start a new line. An inline element
+only takes up as much width as necessary.
+-------------------------------------------------------------------------------
+-->
+
+<!-- Now we will make a html page content to show the span. -->
+
+<!doctype html>
+
+<html>
+    <head>
+        <!-- In this section we will define the all the important things 
+        about our page-->
+        <title>span text</title>
+
+        <style>
+            /* In this section we will provide the style properties of the span
+            element to show the effect of the sapn. */
+            
+            /* span1 property which will show the simple use of the span. */
+            .span1{
+                font-family: 'Lucida Sans Regular';
+                color:cadetblue;
+                font-weight: bold;
+            }
+
+            /* span2 property which will show the stylish  highlighted word. */
+            .span2{
+                font-family:'Courier New', Courier, monospace;
+                font-weight:bold;
+                font-size:15px;
+                background-color:coral;
+                color:aliceblue;
+                border-radius:3px;
+                margin: 0px;  
+            }
+
+            /* span2 property which will show the highlight the word. */
+        </style>
+    </head>
+
+    <body>
+        <!-- In this section we will define all the important contant which
+        will be displayed on the browser.  -->
+
+        <!-- First we will make a h1 heading. -->
+        <h1>The span Element</h1>
+        <!-- Now we will make a paragraph and we will use the span on a word
+        or a section of word. -->   
+
+        <p>This is a <span class="span1">span</span> tag tutorial and <span class="span1">span</span> is used to provide the inline
+            styling to the words or paragraph.
+        </p>
+
+        <!-- Another example of span -->
+        <h1>Another span Example</h1>
+
+        <p>This is a <span class="span2">span</span> tag tutorial and <span class="span2">span</span> is used to provide the inline
+            styling to the words or paragraph.
+        </p>
+    </body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<!-- Setting the table row and col size..
+-------------------------------------------------------------------------------
+In this section we will learn table headers, headers can be applied as the 
+table row or table column, we can have multiple headers in a table.
+
+Here we will see some basic use of headers in a table.
+-------------------------------------------------------------------------------
+-->
+
+<!-- Note in this we will see many usage of  table headers so we will
+separate each use by div section with h1 heading.-->
+
+<html>
+
+    <head>
+        <title>Table Headers</title>
+        <link rel="stylesheet" href="common.css">
+        <style>
+           /* Now first we will make the border and collapse them */
+
+           table, th, td{
+            border: 2px solid;
+
+            /* Now we will collapse borders */
+            border-collapse: collapse;
+           }
+
+
+        </style>
+    </head>
+
+    <body>
+       
+       <div>
+
+            <h1>1. Table Header as first row </h1>
+            <table>
+
+                <!-- Now we will set the first column as width 70% -->
+                <tr>
+                    <!-- creating table headings -->
+                    <th>Company</th>
+                    <th>Car Model</th>
+                    <th>Price</th>
+
+                    <!-- Note: We can use the  internal or extenal style
+                    with advance css selectors to set the width-->
+                </tr>
+
+                <!-- Creating the table row for table data -->
+                <!-- To set the height of the table column we can selecte any 
+                table row -->
+                <tr>
+                    <td>Hyundai</td>
+                    <td>Creta</td>
+                    <td>10.48 Lakh</td>
+                </tr>
+
+                <tr>
+                    <td>Hyundai</td>
+                    <td>Grand i10</td>
+                    <td>12 lakh</td>
+                </tr>
+
+                <tr>
+                    <td>Maruti</td>
+                    <td>Alto</td>
+                    <td>4 lakh</td>
+                </tr>
+
+                <tr>
+                    <td>Maruti</td>
+                    <td>Swift</td>
+                    <td>4.7 lakh</td>
+                </tr>
+
+                <!-- We have applied all the styles on the head element. -->
+            </table>
+       </div>
+
+       <!-- ------------------------------------------------------------ -->
+       <!-- ------------------------------------------------------------ -->
+
+       <!-- vertical header -->
+       <div>
+
+        <h1>2. Vertical Header as first column </h1>
+        <!-- To make a Vertical header we need to put the first element
+        in each row as th element. -->
+            <table>
+
+                <!-- Now we will set the first column as width 70% -->
+                <tr>
+                    <!-- creating table headings -->
+                    <th>Company</th>
+                    <td>Hyundai</td>
+                    <td>Hyundai</td>
+                    <td>Maruti</td>
+                    <td>Maruti</td>
+                    <!-- Note: We can use the  internal or extenal style
+                    with advance css selectors to set the width-->
+                </tr>
+
+                <!-- Creating the table row for table data -->
+                <!-- To set the height of the table column we can selecte any 
+                table row -->
+                <tr>
+                    <th>Car Model</th>
+                    <td>Creta</td>
+                    <td>Grand i10</td>
+                    <td>Alto</td>
+                    <td>Swift</td>
+                    
+                </tr>
+
+                <tr>
+                    <th>Price</th>
+                    <td>10.48 Lakh</td>
+                    <td>12 lakh</td>
+                    <td>4 lakh</td>
+                    <td>4.7 lakh</td>
+                </tr>
+
+                <!-- In this table each row contains the a heading and
+                its value -->
+            </table>
+        </div>
+
+        <!-- ------------------------------------------------------------ -->
+        <!-- ------------------------------------------------------------ -->
+        
+        <!-- Aligning the text of the header  -->
+       <div>
+
+        <h1>3. Align Table Headers </h1>
+        <!-- By default the table headers are bold and centered, we can use
+        css text-align property to change the align of the header. -->
+        <table>
+
+            <!-- Now in this we will use text align for each column heading. -->
+            <tr>
+                <!-- To see effect of the text align we need to use
+                some width on each header which  -->
+                <th style="text-align: left; width: 100px;">Company</th>
+                <th style="text-align: center; width: 100px;">Car Model</th>
+                <th style="text-align: right; width: 100px;">Price</th>
+
+                <!-- Note: We can use the  internal or extenal style
+                with advance css selectors to set the width-->
+            </tr>
+
+            <!-- Creating the table row for table data -->
+            <!-- To set the height of the table column we can selecte any 
+            table row -->
+            <tr>
+                <td>Hyundai</td>
+                <td>Creta</td>
+                <td>10.48 Lakh</td>
+            </tr>
+
+            <tr>
+                <td>Hyundai</td>
+                <td>Grand i10</td>
+                <td>12 lakh</td>
+            </tr>
+
+            <tr>
+                <td>Maruti</td>
+                <td>Alto</td>
+                <td>4 lakh</td>
+            </tr>
+
+            <tr>
+                <td>Maruti</td>
+                <td>Swift</td>
+                <td>4.7 lakh</td>
+            </tr>
+
+            <!-- We have applied all the styles on the head element. -->
+        </table>
+        </div>
+
+        <!-- ------------------------------------------------------------ -->
+        <!-- ------------------------------------------------------------ -->
+        
+        <!-- Header for multiple Columns or multiple column sharing common heading.  -->
+       <div>
+
+        <h1>4. Mutiple column heading </h1>
+        <!-- By default each column have its own heading, we can make a heading
+        for multiple column by marging or spaning the header -->
+
+        <!-- In this section we will use the colspan property to merge two column -->
+        <table>
+
+            <!-- Now in this we will use text align for each column heading. -->
+            <tr>
+                <!-- Now we will use the colspan attribute of th element -->
+                <th colspan="2">Name</th>
+                <th>Age</th>
+
+                <!-- Note: We can use the  internal or extenal style
+                with advance css selectors to set the width-->
+            </tr>
+
+            <!-- Creating the table row for table data -->
+            <!-- To set the height of the table column we can selecte any 
+            table row -->
+            <tr>
+                <td>Manish</td>
+                <td>Kumar</td>
+                <td>26</td>
+            </tr>
+
+            <tr>
+                <td>Kunal</td>
+                <td>Singh</td>
+                <td>25</td>
+            </tr>
+
+            <tr>
+                <td>Sagar</td>
+                <td>Soni</td>
+                <td>25</td>
+            </tr>
+
+            <tr>
+                <td>Piyush</td>
+                <td>Gupta</td>
+                <td>26</td>
+            </tr>
+
+            <!-- We have applied all the styles on the head element. -->
+        </table>
+        </div>
+
+        <!-- ------------------------------------------------------------ -->
+        <!-- ------------------------------------------------------------ -->
+        
+        <!-- Adding a caption to the table -->
+       <div>
+
+        <h1>5. Table Caption </h1>
+        <!-- If we want to define the a heading for whole table we can do this
+        by inserting a caption to a table.
+        
+        To add the caption we use <caption> element.
+
+        Note: The <caption> tag should be inserted immediately after the <table> tag.-->
+        <table>
+
+            <caption>---Cars Model & Price---</caption>
+            <tr>
+                <!-- To see effect of the text align we need to use
+                some width on each header which  -->
+                <th>Company</th>
+                <th>Car Model</th>
+                <th>Price</th>
+
+                <!-- Note: We can use the  internal or extenal style
+                with advance css selectors to set the width-->
+            </tr>
+
+            <!-- Creating the table row for table data -->
+            <!-- To set the height of the table column we can selecte any 
+            table row -->
+            <tr>
+                <td>Hyundai</td>
+                <td>Creta</td>
+                <td>10.48 Lakh</td>
+            </tr>
+
+            <tr>
+                <td>Hyundai</td>
+                <td>Grand i10</td>
+                <td>12 lakh</td>
+            </tr>
+
+            <tr>
+                <td>Maruti</td>
+                <td>Alto</td>
+                <td>4 lakh</td>
+            </tr>
+
+            <tr>
+                <td>Maruti</td>
+                <td>Swift</td>
+                <td>4.7 lakh</td>
+            </tr>
+
+            <!-- We have applied all the styles on the head element. -->
+        </table>
+        </div>
+
+    </body>
+
+</html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we have made 5 div-section and each div-section contain
+a table, in this we have.
+
+1. Standard Table with row-headers.
+2. Vertical table with column-headers.
+3. Standard Table with Aliging headers text.
+4. Standard Table with a header with multiple columns. (using colspan attribute.)
+5. Standard with table Caption (Table Heading.)
+
+Note: We have use some inline css property to show the desirable effect.
+-------------------------------------------------------------------------------
+-->

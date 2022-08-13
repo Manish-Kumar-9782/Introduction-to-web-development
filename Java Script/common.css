@@ -1,0 +1,45 @@
+h3{
+               
+    border-bottom: 2px solid cornflowerblue;
+    width:fit-content;
+    background-color: rgb(198, 235, 255);
+    color: rgb(245, 80, 138);
+}
+
+span{
+    border: 1px solid steelblue;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 4px;
+}
+
+div{
+    border: 2px solid gray;
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+dl dt{
+    margin-top: 15px;
+}
+
+dl dd{
+    margin-top: 8px;
+    
+}
+
+dt span{
+    /* border-bottom: 2px solid rgb(144, 70, 94);  */
+    border-left: 4px solid rgb(238, 93, 139);
+    padding-left: 3px;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,td{
+    padding:5px;
+}
+

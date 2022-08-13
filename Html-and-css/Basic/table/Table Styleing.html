@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<!-- Styling the table ...
+-------------------------------------------------------------------------------
+In this section we will style the table with more advance styling property
+and css selectors and make a good looking table.
+
+we will learn:
+1. How to make horizontal Zebra Strip pattern 
+2. How to make Vertical Zebra Strip pattern
+3. Comibnation of horizontal and vertical zebra strip
+4. Hoverable Table (Changing state of cell while cursor is on the cell)
+-------------------------------------------------------------------------------
+-->
+
+<!-- This HTML document will contain 4 section which will be made by 
+div section 
+
+Note: each div  section will contain its id by table number
+-->
+
+<html>
+
+    <head>
+        <title>Styling Table</title>
+        <link rel="stylesheet" href="common.css">
+        <style>
+           /* Now first we will make the border and collapse them */
+        
+           /* Common property for each table */
+            table{
+                margin-left: 30px;
+            }
+
+           table, th, td{
+            border: 0px solid;
+
+            /* Now we will provide the some space b/w each cell by using
+            border-spacing property. */
+
+            border-spacing: 15px;
+
+            /* Collasping the border. */
+            border-collapse: collapse;
+           }
+
+           /* common cell width for each table.*/
+           th{
+            width: 100px;
+           }
+
+
+           /* Now we will apply css only on table1 */
+           /* Applying the Horizontal Zebra Strip Pattern */
+           #table1 tr:nth-child(even){
+                background-color: #D6EEEE;
+           }
+
+           /* Now we will apply css only on table2 */
+           /* Applying the Vertical Zebra Strip Pattern */
+
+           #table2 table, #table2 th, #table2 td{
+            border: 1px solid;
+            border-color: rgb(107, 223, 238);
+           }
+
+           #table2 th:nth-child(even), #table2 td:nth-child(even){
+                background-color: #D6EEEE;
+           }
+
+
+           /* Now we will apply css only on table3 */
+           /* In this we will apply for both Horizontal and Vertical
+           Zebra strip */
+           #table3 tr:nth-child(even){
+            background-color: #D6EEEE;
+           }
+
+           #table3 th:nth-child(even), #table3 td:nth-child(even){
+                background-color: #D6EEEE;
+           }
+
+
+           /* Now we will apply css only on table4 */
+           /* In order to make the row hoverable we need to use tr:hover 
+           selector */
+
+           #table4 table, #table4 th, #table4 td{
+            border: 1px solid;
+           }
+
+
+           #table4 tr:hover{
+                background-color: #D6EEEE;
+                /* To change the row background color while hovering */
+                border: 2px solid;
+                /* To change the border thickness while hovering */
+                border-color: aquamarine;
+                /* To change the border color while hovering */
+                border-style: groove;
+                /* To change the border style while hovering */
+           }
+
+        </style>
+    </head>
+
+    <body>
+       
+        <!-- 1. How to make a Horizontal Zebra Strip 
+        
+            Zebra Strip: if we add background color on every other table row,
+            we will get a nice zebra stripes effects.
+
+            To style every other row element, we need to use :nth-child(even)
+            selector
+        -->
+        <div id="table1">
+            <h1>1.Horizontal Zebra Strip Table</h1>
+            <table>
+
+               <tr>
+                   <th>First Name</th>
+                   <th>Last Name</th>
+                   <th>Savings</th>
+               </tr>
+   
+               <!--  -->
+               <tr>
+                   <td>Peter</td>
+                   <td>Griffin</td>
+                   <td>$100</td>
+               </tr>
+   
+               <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+                <td>$150</td>
+                   
+               </tr>
+   
+               <tr>
+                <td>Joe</td>
+                <td>Swanson</td>
+                <td>$300</td>
+               </tr>
+   
+               <tr>
+                <td>James</td>
+                <td>bond</td>
+                <td>$1000</td>
+               </tr>
+
+               <tr>
+                <td>Jacky</td>
+                <td>dada</td>
+                <td>$1500</td>
+               </tr>
+
+               <tr>
+                <td>Monty</td>
+                <td>Kaka</td>
+                <td>$2000</td>
+               </tr>
+   
+               <!-- We have applied all the styles on the head element. -->
+            </table>
+        </div>
+
+        <!--
+            -------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------
+        -->
+
+        <!-- 2. How to make the Vertical Zebra Strip
+        
+        To make the Vertical Zebra we will selecte all the th:nth-child(even) 
+        and td:nth-child(even) cell from table2 and give a background color.
+        -->
+        <div id="table2">
+            <h1>2.Vertical Zebra Strip Table</h1>
+            <table>
+
+               <tr>
+                   <th>First Name</th>
+                   <th>Last Name</th>
+                   <th>Age</th>
+                   <th>Savings</th>
+               </tr>
+   
+               <!--  -->
+               <tr>
+                   <td>Peter</td>
+                   <td>Griffin</td>
+                   <td>25</td>
+                   <td>$100</td>
+               </tr>
+   
+               <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+                <td>27</td>
+                <td>$150</td>
+                   
+               </tr>
+   
+               <tr>
+                <td>Joe</td>
+                <td>Swanson</td>
+                <td>31</td>
+                <td>$300</td>
+               </tr>
+   
+               <tr>
+                <td>James</td>
+                <td>bond</td>
+                <td>36</td>
+                <td>$1000</td>
+               </tr>
+
+               <tr>
+                <td>Jacky</td>
+                <td>dada</td>
+                <td>42</td>
+                <td>$1500</td>
+               </tr>
+
+               <tr>
+                <td>Monty</td>
+                <td>Kaka</td>
+                <td>53</td>
+                <td>$2000</td>
+               </tr>
+   
+               <!-- We have applied all the styles on the head element. -->
+            </table>
+        </div>
+
+        <!--
+            -------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------
+        -->
+
+        <!-- 3. Horizontal and Vertical mixed strip 
+        
+        To make this Horizontal and Vertical mixed Strip, we need to apply both
+        Horizontal and Vertical zebra strip property on table3.
+        -->
+        <div id="table3">
+            <h1>1.Horizontal + Vertical Zebra Strip Table</h1>
+            <table>
+
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Savings</th>
+                    <th>Earning</th>
+                </tr>
+    
+                <!--  -->
+                <tr>
+                    <td>Peter</td>
+                    <td>Griffin</td>
+                    <td>25</td>
+                    <td>$100</td>
+                    <td>$1000</td>
+                </tr>
+    
+                <tr>
+                 <td>Lois</td>
+                 <td>Griffin</td>
+                 <td>27</td>
+                 <td>$150</td>
+                 <td>$1500</td>
+                    
+                </tr>
+    
+                <tr>
+                 <td>Joe</td>
+                 <td>Swanson</td>
+                 <td>31</td>
+                 <td>$300</td>
+                 <td>$3000</td>
+                </tr>
+    
+                <tr>
+                 <td>James</td>
+                 <td>bond</td>
+                 <td>36</td>
+                 <td>$1000</td>
+                 <td>$10000</td>
+                </tr>
+ 
+                <tr>
+                 <td>Jacky</td>
+                 <td>dada</td>
+                 <td>42</td>
+                 <td>$1500</td>
+                 <td>$15000</td>
+                </tr>
+ 
+                <tr>
+                 <td>Monty</td>
+                 <td>Kaka</td>
+                 <td>53</td>
+                 <td>$2000</td>
+                 <td>$2000</td>
+                </tr>
+   
+               <!-- We have applied all the styles on the head element. -->
+            </table>
+        </div>
+
+
+        <!--
+            -------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------
+        -->
+
+        <!-- 4. Hoverable table 
+        
+            To make a Hoverable table we need to use the :hover selector on
+            each row.
+        -->
+        <div id="table4">
+            <h1>1.Hoverable Table</h1>
+            <table>
+
+               <tr>
+                   <th>First Name</th>
+                   <th>Last Name</th>
+                   <th>Savings</th>
+               </tr>
+   
+               <!--  -->
+               <tr>
+                   <td>Peter</td>
+                   <td>Griffin</td>
+                   <td>$100</td>
+               </tr>
+   
+               <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+                <td>$150</td>
+                   
+               </tr>
+   
+               <tr>
+                <td>Joe</td>
+                <td>Swanson</td>
+                <td>$300</td>
+               </tr>
+   
+               <tr>
+                <td>James</td>
+                <td>bond</td>
+                <td>$1000</td>
+               </tr>
+
+               <tr>
+                <td>Jacky</td>
+                <td>dada</td>
+                <td>$1500</td>
+               </tr>
+
+               <tr>
+                <td>Monty</td>
+                <td>Kaka</td>
+                <td>$2000</td>
+               </tr>
+   
+               <!-- We have applied all the styles on the head element. -->
+            </table>
+        </div>
+    </body>
+
+</html>
+
+<!--
+-------------------------------------------------------------------------------
+colspan: The value of colspan attribute represent the number of columns 
+    to span.
+
+rowspan: The value of rowspan attribute represents the number of row to 
+    span.
+-------------------------------------------------------------------------------
+-->

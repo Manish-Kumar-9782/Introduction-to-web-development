@@ -1,0 +1,122 @@
+<!doctype html>
+
+<!--
+
+	Selection of element for applying css properties.
+	
+	by element name (TagName): p , h2, div, ul,li.
+	by id name: unique name to a particural element.
+	by class name: class name can be applied to multiple elements.
+	
+-->
+
+<!--ordered list:
+
+	<ol>: container to contain the list items <li>
+	<li>: an item to contain content or other items.
+-->
+
+<!--Descriptive list:
+
+	<dl>: contianer to cotain the elements of descriptive list.
+	<dt>: descriptive term, a term which is need to defined in the description.
+	<dd>: descriptive description, information/description about the term.
+-->
+
+<!--
+	adding html entities/symbols
+	
+	&rightarrow;
+
+-->
+
+<html> 
+
+	<head> 
+	
+		<title>Ordered and Descriptive List</title>
+		
+		<style> 
+		
+			/* css properties for only ol list*/
+			ol{
+				border: 5px solid blue;
+				
+			}
+			
+			/* css properties for only dl list*/
+			
+			dl{
+				
+				border: 5px solid brown;
+			}
+			
+			.List{
+				font-family: Georgia, Times, 'Times New Roman', serif;
+				color: purple;
+				padding: 20px;
+			}
+			
+			#desp dt{
+			
+				font-family: 'Trebuchet MS';
+				font-weight:bold;
+				color: dodgerblue;
+					
+			}
+		
+		</style>
+	
+	</head>
+
+	<body> 
+	
+		<!--ordered list.-->
+		
+		<ol id="ordered" class="List"> 
+		
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+			
+		</ol>
+		
+		<!--Descriptive list.-->
+		
+		<dl id="desp" class="List"> 
+			<dt>HTML</dt>
+			<dd>&rightarrow; HTML is a hypertext markup language which is used 
+				to write the web page.</dd>
+				
+			<dt>CSS</dt>
+			<dd>&rightarrow; CSS is Cascading Style Sheet which is used to styling the 
+			web page.</dd>
+			
+			<dt>JavaScript</dt>
+			<dd>&rightarrow; JavaScript is a programming language which is used to 
+			generate dynamic content.</dd>
+		</dl>
+		
+	
+	</body>
+
+</html>
+
+<!--
+
+	In our document, the ways of selecting dt element.
+	
+	dt{
+		// css progress
+	}
+	
+	.List dt{
+		// css progress
+	}
+	
+	#desp dt{
+		// css progress
+	}
+
+-->

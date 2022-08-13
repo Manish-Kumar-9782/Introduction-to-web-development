@@ -1,0 +1,158 @@
+
+code.element.tag{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    /* color: red; */
+}
+
+header h1{
+    margin: 0px;
+    padding: 5px;
+    color: #2b6567;
+
+}
+
+header p, header ul{
+    background-color: floralwhite;
+    margin: 0px;
+    padding: 10px;
+
+}
+
+header ul{
+   padding-left:50px;
+
+}
+
+header p:first-of-type{
+    padding-top: 30px;
+}
+
+
+
+h1{
+    text-align: center;
+    background-color: papayawhip;
+}
+
+li{
+    margin-top: 10px;
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* A class to apply the highlight on the element*/
+.hlight{
+    background-color: rgba(250, 156, 122, 0.16);
+    color: rgb(158, 48, 103);
+    font-family:  Arial, sans-serif;
+    
+}
+
+code.hlight{
+    font-family: monospace;
+    font-size: large;
+}
+
+.attr{
+    background-color: rgba(122, 209, 250, 0.16);
+    color: rgb(7, 157, 191);
+    font-family:  Arial, sans-serif;
+    
+}
+
+code.attr{
+    font-family: monospace;
+    font-size: large;
+}
+
+b.hlight{
+    color: rgb(188, 29, 29);
+    background-color: rgba(249, 83, 83, 0.186);
+}
+
+/* A class to apply the highlight marking on the element*/
+.mark{
+    color: rgb(42, 107, 150);
+    background-color: rgba(113, 146, 235, 0.108);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+}
+
+/*A class to remove the color from the element (no background color)*/
+.nbg{
+    background-color: initial;
+}
+
+h3 code.element.tag{
+    color: inherit;
+    padding: 0px 3px;
+    background-color: inherit;
+    border-color: white;
+    
+}
+
+
+div h3{
+    color:rgb(60, 60, 130);
+    border-color:rgb(60, 60, 130);
+}
+div{
+    border-radius: 10px;
+}
+
+.tab{
+    border: 0px;
+    margin-left: 35pt;
+}
+.tab8{
+    border: 0px;
+    margin-left: 10pt;
+}
+
+table th, td{
+    border: 2px solid rgb(129, 189, 193);
+}
+
+.inherit{
+    border-color: inherit;
+    background-color: inherit;
+    color: inherit;
+}
+
+.initial{
+    border-color: initial;
+    background-color: initial;
+    color: initial;
+}
+
+.flarge{
+    font-size: large;
+}
+
+dl dt{
+    margin-top: 15px;
+}
+
+header p#content{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+code.html{
+    margin-left: 40px;
+    background-color: #e2f6af;
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+    color: #800077;
+}
+
+var{
+    font-family: 'math';
+    font-size: large;
+    font-weight: bold;
+}
+
+kbd{
+    color:#800077;
+    text-decoration: dashed;
+    font-size: large;
+}

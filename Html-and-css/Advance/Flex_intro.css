@@ -1,0 +1,86 @@
+
+/* Now first of all we will make style the Style-Sections  class.*/
+
+.Style-Sections{
+    /* this section contains all the lists, we will use the flex to display layout to show them. */
+    display: flex; /*Now we are use the flex display layout on this section and this layout
+    will be applied on the all item inside this section*/
+
+    /* Here to show the boundry of this section we will use the border. */
+    border: 2px solid burlywood;
+    align-items: center;
+    justify-content: space-between; 
+    /* Justify-content: space-between---> it will place the flexible space
+    b/w the content which will be adjuct according to the web page
+    size. */
+
+    /* justify-content: space-around; */
+    /* we can use the justify-content as space-around which will use place
+    the some flexible space all around the section. */
+    flex-wrap: wrap;
+
+}
+
+/* Now we will apply the common properties for all the lists 'Style-List-Sections'
+ */
+.Styled-List-Section1, .Styled-List-Section2,.Styled-List-Section3,.Styled-List-Section4,
+.Styled-List-Section5, .Styled-List-Section6, .Styled-List-Section7{
+    /* border: 4px ridge rgb(177, 99, 32); */
+    /* border-radius: 15px; */
+    flex-wrap: nowrap;
+    /* margin: 3px; */
+    /* flex-direction: row; */
+    
+    /* width: 30%;  */
+    /* width in percent will help to show the content with equal space 
+    while flex will be in affect. */
+
+    flex-basis: 30%;
+    /* we can use the flex-basis to specify the width of the flex it is more
+    flex and more compatible with flex display. */
+
+    margin-top: 10px;
+    /* This margin-top will add the top margin of each Style-list-section. */
+}
+
+.Styled-List-title1,.Styled-List-title2,.Styled-List-title3,.Styled-List-title4
+.Styled-List-title5,.Styled-List-title6,.Styled-List-title7{
+    text-align: center;
+    border: 1px solid bisque;
+    padding:8px;
+    color:coral;
+    margin: 0;
+    background-color:bisque;
+    font-weight: bold;
+    /* border-radius: 15px 15px 0px 0px; */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.Styled-List1,.Styled-List2,.Styled-List3,.Styled-List4,.Styled-List5,
+.Styled-List6,.Styled-List7{
+    border: 1px solid coral;
+    margin: 0;
+    background-color:coral;
+    color:aliceblue;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+li{
+    margin: 10px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+/* Styled-List-Section */
+
+/* 
+Flex: Properties
+
+--> flex-basis
+--> flex-direction
+--> flex-flow
+--> flex-grow
+--> flex-shrink
+--> flex-wrap
+
+*/

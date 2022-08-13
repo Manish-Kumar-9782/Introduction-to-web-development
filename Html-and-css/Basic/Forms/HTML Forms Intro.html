@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn about the html forms, we will learn how to 
+create a form by using other elements.
+
+HTML Form: An HTML form is used to collect user input. The user input is most 
+often sent to a server for processing.
+
+-> The HTML <form> element is used to create an HTML form for user input.
+
+-> The <form> element is a container for different types of input elements,
+    such as: text fields, checkboxes, radio buttons, submit buttons, etc.
+
+
+In this session we will see these elements.
+
+<form>: To contain the form elements.
+<lable>: To give the label to a user input.
+<input>: A interactive text field to take the input from the user.
+-------------------------------------------------------------------------------
+-->
+
+<!-- Now we will make a simple  form which will take the user normal
+infromation.-->
+
+<html lang="en">
+
+    <head>
+        <title>HTML Forms Intro</title>
+    </head>
+
+    <body>
+        
+        <!-- Now we will make our form element in which we will put label
+        and input element. -->
+
+        <form action="action_page.php">
+
+            <!-- Now here we will we will create the lable and input 
+            alternatively. -->
+
+            <!-- input for first name -->
+            <label for="firstname">First Name: </label>
+            <input type="text" id="firstname" name="firstname">
+            <br>
+            <!-- input for last name -->
+            <label for="lastname">Last Name: </label>
+            <input type="text" id="lastname" name="lastname">
+            <br>
+            <!-- input as submit button -->
+            <input type="submit" value="submit">
+
+        </form>
+    </body>
+</html>
+
+<!--
+-------------------------------------------------------------------------------
+Important point to note.
+
+elements <lable> and <input> are inline elements.
+
+we need to use <br> element to put the next label or input element on the 
+next line.
+-------------------------------------------------------------------------------
+-->
