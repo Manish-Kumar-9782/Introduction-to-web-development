@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<!-- 
+
+    container level property: properties which applies on only container.
+    items level properties: properties which applies only on the container's items.
+ -->
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        /* here container1 is a container  */
+        .container1{
+            /* making our container as a flex container */
+            border: 5px solid brown;
+            padding: 20px;
+        }
+
+        /* here divs are items of container1 */
+        .container1 div{
+            border: 1px solid;
+            /* width: 150px;
+            height: 150px; */
+            margin: 20px;
+            text-align: center;
+            padding: auto;
+        }
+
+
+        /* changing the container1 display type to flex */
+        .container1{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        /* flex works in two direction
+            x-axis-> horizontal
+            y-axis-> vertical
+        */
+
+        .container1 div{
+            min-width: 150px;
+            max-width: 300px;
+            
+        }
+
+        /* ---------------------------------------------------------- */
+        /* styles on container2 */
+
+        /* In flex container we have x and y axis, main axis changes according 
+        to the flex-direction 
+        
+        if flex-direction is row then main axis is x-axis.
+        if flex-direction is column then main axis is y-axis.
+        
+        cross-axis: opposite axis of main aixs is called corss-axis. 
+        
+        */
+        .container2{
+            border: 3px solid dodgerblue;
+            margin-top: 30px;
+            padding: 3px;
+            width: auto;
+            height: 300px;
+        }
+
+        /* making container2 as flex */
+
+
+        /* aligning our content in the center of the container */
+        .container2{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container1">
+        <div>
+            <h1>1</h1>
+        </div>
+
+        <div>
+            <h1>2</h1>
+        </div>
+
+        <div>
+            <h1>3</h1>
+        </div>
+
+        <div>
+            <h1>4</h1>
+        </div>
+
+        <div>
+            <h1>5</h1>
+        </div>
+
+        <div>
+            <h1>6</h1>
+        </div>
+    </div>
+
+    <div class="container2">
+
+        <div>
+            <h2>Container2</h2>
+        </div>
+    </div>
+
+</body>
+</html>

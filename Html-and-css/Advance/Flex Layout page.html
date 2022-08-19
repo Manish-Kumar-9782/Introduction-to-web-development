@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout Example</title>
+
+    <style>
+
+        @media (max-width:700px) {
+            
+            nav{
+                flex-direction:column;
+
+            }
+
+            nav a{
+                width: 200px;
+                text-align: center;
+            }
+
+            aside{
+                padding: 10px;
+                margin: 10px;
+                font-size: large;
+                border: 1px solid;
+            }
+
+            #container1{
+                justify-content: center;
+                flex-direction: column;
+                
+            }
+            #content{
+                /* flex: 100; */
+                border: 1px solid;
+            }
+
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: rgba(147, 184, 208, 0.727);
+        }
+
+        header{
+            background-color: rgb(119, 195, 220);
+            padding: 10px;
+        }
+
+        header h1, header h2{
+            text-align: center;
+        }
+
+        header h2 b.nbg{
+            background-color: inherit;
+        }
+
+        .tag::before{
+            content: "<";
+        }
+
+        .tag::after{
+            content: ">";
+        }
+
+        .tag{
+            background-color: rgba(103, 165, 144, 0.293);
+            color: antiquewhite;
+            padding: 1px 3px;
+            border-radius: 5px;
+        }
+
+        nav{
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: rgba(233, 185, 185, 0.707);
+            color: aliceblue;
+        }
+        
+        nav a{
+            display: block;
+            border: 1px solid;
+            padding: 5px;
+            margin: 5px;
+            color: aliceblue;
+            text-decoration: none;
+            min-width: 100px;
+        }
+
+        aside{
+            display: flex;
+            
+            flex-direction: column;
+            border: 1px solid whitesmoke;
+            text-align: center;
+        }
+        
+        #el_used .tag{
+            
+            display: block;
+            width: auto;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        #content{
+            border: 2px solid inherit;
+            padding-left: 20px;
+        }
+
+        #container1{
+            border: 3px solid inherit;
+            padding: 5px;
+            display: flex;
+        }
+
+        footer{
+            background-color: rgb(171, 193, 193);
+            padding: 10px;
+            text-align: center;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <body>
+
+        <header>
+            <h1>HTML Layout Element</h1>
+            <h2 id="Header"><b class="tag nbg">Header</b></h2>
+            <p>HTML has several semantic elements that define the different parts of a web page.</p>
+            <p>Here we will see some them:
+                <code class="tag">header</code>,
+                <code class="tag">nav</code>,
+                <code class="tag">section</code>,
+                <code class="tag">article</code>,
+                <code class="tag">aside</code>,
+                <code class="tag">footer</code>,
+                <code class="tag">details</code>,
+                <code class="tag">summary</code>.
+
+            </p>
+        </header>
+
+        <nav>
+            <h3>Navigation bar:</h3>
+            <a href="https://www.google.com">Google</a>
+            <a href="#">CSS float property</a>
+            <a href="#">CSS flexbox</a>
+            <a href="#">CSS grid</a>
+        </nav>
+
+        
+        <div id="container1">
+            <aside>
+                <h2>aside bar</h2>
+                <h3>Element used</h3>
+    
+                <div id="el_used">
+                    <code class="tag">header</code>
+                    <code class="tag">nav</code>
+                    <code class="tag">aside</code>
+                    <code class="tag">section</code>
+                    <code class="tag">article</code>
+                    <code class="tag">footer</code>
+                </div>
+    
+            </aside>
+    
+            <section id="content">
+                <section>
+                    <h2>Layout Elements</h2>
+    
+                    <p><code class="tag">header</code>
+                    :- Defines a header for a document or a section</p>
+    
+                    <p><code class="tag">nav</code>
+                    :- Defines a set of navigation links</p>
+    
+                    <p><code class="tag">section</code>
+                    :- Defines a section in a document.</p>
+    
+                    <p><code class="tag">article</code>
+                    :- Defines an independent, self-contained content.</p>
+    
+                    <p><code class="tag">aside</code>
+                    :- Defines content aside from the content (like a sidebar)</p>
+    
+                    <p><code class="tag">footer</code>
+                    :- Defines a footer for a document or section</p>
+    
+                    <p><code class="tag">details</code>
+                    :- Defines additional details that the user can open and close 
+                        on demand.
+                    </p>
+    
+                    <p><code class="element tag">Summary</code>
+                    :- Defines a heading for the <code class="element tag">details</code>
+                    element.</p>
+                </section>
+    
+                <article>
+                    <h2>HTML Layout Techniques</h2>
+    
+                    <p>There are four different Techniques to create multicolumn 
+                        layouts. Each techinque has its pros and cons.
+                    </p>
+    
+                    <ul>
+                        <li>CSS frameword</li>
+                        <li>CSS float property</li>
+                        <li>CSS flexbox</li>
+                        <li>CSS grid</li>
+                    </ul>
+    
+    
+                    <h3>CSS Framework</h3>
+                    <p>We have mulitple css frameword to create fast layout like Bootstrap,
+                        we.css, react etc.
+                    </p>
+    
+                    <h3>CSS Float Layout</h3>
+                    <p>It is common to do entire web layouts using the css <b>float</b> property.
+                        Float is easy to learn, we just need to remember hot the <b>float</b> and 
+                        <b>clear</b> properties work.
+                    </p>
+    
+                    <p>Disadvantage: Floating elements are tied to the document flow,
+                        which may harm the flexibility.
+                    </p>
+    
+    
+                    <h3>CSS Flexbox Layout</h3>
+                    <p>Use of flexbox ensures that elements behae predictably when the page layout
+                        must accommodate different screen sizes and different display devices.
+                    </p>
+    
+                    <h3>CSS Grid Layout</h3>
+                    <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns,
+                        making it easier to design web pages without having to use floats and positioning.
+                    </p>
+                    
+                </article>
+            </section>
+        </div>
+
+
+        <footer>
+            <p>In this section we have seen the basic Layout Technique.</p>
+        </footer>
+
+</body>
+</html>
