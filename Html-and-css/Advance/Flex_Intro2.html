@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex Intro2</title>
+
+        <style>
+
+            *{
+                box-sizing: border-box;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            h1{
+                font-size: 3em;
+                color: antiquewhite;
+            }
+
+            .flex-container1{
+                border: 10px groove goldenrod;
+                display: flex;
+            }
+
+            .flex-container2{
+                border: 10px groove goldenrod;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .box{
+                border: 1px solid dodgerblue;
+                background-color: dodgerblue;
+                width: 150px;
+                height: 150px;
+                margin: 5px;
+            }
+
+            .flex-container2 .box{
+                width: auto;
+            }
+
+            /* making box into a flex-container */
+            .flex-container1 .box{
+                display: flex;
+                /* flex-direction: row */
+                justify-content: center;
+                align-items: center;
+                
+            }
+
+            .flex-container2 .box{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            
+            div.heading{
+                margin-top: 30px;
+                margin-left: 30px;
+            }
+
+            .flex-container3{
+                display: flex;
+                
+                border: 10px groove coral;
+                padding: 5px;
+                margin: 10px;
+                /* flex: 1; */
+            }
+
+            .flex-container3 div{
+                margin: 5px;
+            }
+
+            .flex-container3 .box1{
+                /* flex: 2; */
+                flex-basis: 20%;
+                background-color: dodgerblue;
+            }
+
+            .flex-container3 .box2{
+                flex: 8;
+                background-color: dodgerblue;
+            }
+
+
+        </style>
+
+
+    </head>
+
+    <body>
+        
+        <div class="heading">
+            <p><b>main axis:</b> it works along the flex-direction.</p>
+            <p><b>Justify-content:</b> it works along the main axis.</p>
+            <p><b>align-items:</b> it works along the cross axis (opposite perpendicular). </p>
+            <h2>flex-container 1</h2>
+            <h2>flex-direction: column</h2>
+        </div>
+        <div class="flex-container1">
+
+            <!-- here boxes are flex items -->
+            <div class="box">
+                <h1>1</h1>
+            </div>
+
+            <div class="box">
+                <h1>2</h1>
+            </div>
+
+            <div class="box">
+                <h1>3</h1>
+            </div>
+
+            <div class="box">
+                <h1>4</h1>
+            </div>
+
+            <div class="box">
+                <h1>5</h1>
+            </div>
+
+        </div>
+
+
+
+        <!-- flex-direction : column -->
+        <div class="heading">
+            <h2>flex-container 2</h2>
+            <h2>flex-direction: row</h2>
+        </div>
+        <div class="flex-container2">
+
+            <!-- here boxes are flex items -->
+            <div class="box">
+                <h1>1</h1>
+            </div>
+
+            <div class="box">
+                <h1>2</h1>
+            </div>
+
+            <div class="box">
+                <h1>3</h1>
+            </div>
+
+            <div class="box">
+                <h1>4</h1>
+            </div>
+
+            <div class="box">
+                <h1>5</h1>
+            </div>
+
+        </div>
+
+        <div class="flex-container3">
+            <!-- here boxes are flex items -->
+            <div class="box1">
+                <h1>1</h1>
+            </div>
+
+            <div class="box2">
+                <h1>2</h1>
+            </div>
+        </div>
+
+    </body>
+
+</html>
