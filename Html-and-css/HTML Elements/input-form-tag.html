@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input From tag</title>
+
+    <link rel="stylesheet" href="../../styles/common.css">
+    <link rel="stylesheet" href="../../styles/colors.css">
+    <link rel="stylesheet" href="../../styles/Notes.css">
+    <link rel="stylesheet" href="../../styles/Notes2.css">
+
+    <style>
+        /* Styles for the Pseudo-classess example */
+
+        /* style for the checkbox, selecting the checked input and immediate label */
+        #input-checked1 input:checked + label{
+            color: red;
+            font-size: x-large;
+        }
+
+        #input-checked2 input:checked + label{
+            color: rgb(4, 2, 90);
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        #input-checked3 input:checked + label{
+            color: rgb(2, 110, 19);
+            font-size: x-large;
+            font-style: italic;
+            text-decoration: line-through;
+        }
+
+        htmlcode{
+                display: block;
+                width: fit-content;
+                border: 1px solid;
+                background-color: rgba(4, 110, 75, 0.17);
+                color: rgb(4, 110, 75);
+                padding: 5px;
+                margin-left: 25px;
+                margin-bottom: 10px;
+            }
+
+    </style>
+
+</head>
+<body>
+    
+    <header>
+        <h1>HTML Form <code class="tag">input</code> Element</h1>
+        <p>The <code class="element tag">input</code> HTML element is used to create iteractive controls for web-based forms 
+        in order to accept data from the user; a wide variety of types of input data and control widgets are available, 
+        depending on the device and user agent. The <code class="element tag">input</code> element is one of the most powerful 
+        and complex in all of HTML due to the sheer number of combination of input types and attributes.</p>
+        
+    </header>
+
+    <div>
+        <h2>HTML <code class="tag">input</code> Element types</h2>
+
+        <p>How an <code class="element tag">input</code> works varies considerably depending on the value of its <code class="attr">type</code>
+        attribute, If this attribute is not specified, the default type adopted is text.</p>
+
+        <table>
+
+            <tr>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Basic Examples</th>
+            </tr>
+
+            <tr>
+                <td><a href="input/button.html">input</a></td>
+                <td>A push button with no default behavior displaying the value of the <code class="attr">value</code> attribute, empty by default.</td>
+                <td><input type="button" value="button"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/checkbox.html">checkbox</a></td>
+                <td>A check box allowing single values to be seleccted/deselected.</td>
+                <td><input type="checkbox" value="True"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/color.html">color</a></td>
+                <td>A control for specifying a color; opening a color picker when active in supporting browsers.</td>
+                <td><input type="color" value="black"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="input/date.html">date</a>
+                </td>
+            
+                <td>A control for entering a date (year, month, and day with no time). Opens a date picker or numeric wheels for year
+                    month, day when active in supporting browsers.
+                </td>
+
+                <td><input type="date"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/datetime-local">datetime-local</a></td>
+                <td>A control for entering a date and time, with noe time zone, Opens a date and time, with no time zone,
+                    Opens a date picker or numeric wheels for date-and time-components when acive in supporting browsers.
+                </td>
+                <td><input type="datetime-local"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/email.html">email</a></td>
+                <td>a field for editing an email address. Looks like a <code class="prval">text</code> input, but has validation 
+                parameters and relevant keyboard in supporting browsers and devices with dynamic keyboards.</td>
+                <td><input type="email" placeholder="Email Address"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/file.html">file</a></td>
+                <td>A control that lets the user select a file. Use the <code class="attr">accept</code> attribute to define the 
+                types of the files that the control can select.</td>
+                <td><input type="file" accept=".jpg"></td>
+            </tr>
+            
+            <tr>
+                <td><a href="input/hidden.html">hidden</a></td>
+                <td>A control that is not displayed but hwose value is submitted to the server. There is an example in the next column, 
+                    but it's hidden!</td>
+                <td><input type="hidden"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/image.html">image</a></td>
+                <td>A graphical <code class="prval">submit</code> button. Displays an image defined by the 
+                    <code class="attr">src</code> attribute. The <code class="attr">alt</code> attribute displays if the image 
+                    <code class="attr">src</code> is missing.</td>
+                <td><input type="image" alt="image input"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/month.html">month</a></td>
+                <td>A control for entering a month and year, with no time zone.</td>
+                <td><input type="month"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/number.html">number</a></td>
+                <td>A Control for entering a numbrer. Displays a spinner and adds default validation when supported. 
+                    Displays a numeric keypad in some device with dynamic keyboard.
+                </td>
+                <td><input type="number" min="10" max="100"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/password.html">password</a></td>
+                <td>a Single-line text field whose value is obscured/hidden. Will alert user if site is not secure.</td>
+                <td><input type="password"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/radio.html">radio</a></td>
+                <td>A radio button, allowing a single value to be selected out of multiple choices with the same 
+                    <code class="attr">name</code> value.</td>
+                <td><input type="radio" value="value1" name="value1"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/range.html">range</a></td>
+                <td>A Control for entering a number whose exact value is not important. Displays as a range widget defaulting to 
+                    the middle value. used in conjunction <code class="attr">min</code> and <code class="attr">max</code> to 
+                    define the range of acceptable values.</td>
+                <td><input type="range" min="10" max="100"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/reset.html">reset</a></td>
+                <td>A Button that reset the content of the form to default values.</td>
+                <td><input type="reset" value="reset"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/search.html">search</a></td>
+                <td>A single-line text field for entering search strings. Line-breaks are automaticallly removed from the input value. 
+                    May include a delete icon in supporting browsers that can be used to clear the field. 
+                Displays a search icon instead of enter key on some devices with dynamic kepads.</td>
+                <td><input type="search" placeholder="search"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/submit.html">submit</a></td>
+                <td>A button that submit the form</td>
+                <td><input type="submit" value="submit"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/tel.html">tel</a></td>
+                <td>A control for entering a telephone number. Displays a telephone keypad in some devices with dynamic keypads.</td>
+                <td><input type="tel"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/text.html">text</a></td>
+                <td>The default value. A single-line text field. Line-breaks are automatically removed from the input value.</td>
+                <td><input type="text" placeholder="input text"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/time.html">time</a></td>
+                <td>A control for entering a time value with no time zone.</td>
+                <td><input type="time"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/url.html">url</a></td>
+                <td>A field for entering a URL. Looks like a <code class="attr">text</code> input, but has validation parameters and relevant keyboard in 
+                supporting browsers and devices with dynamic keyboards.</td>
+                <td><input type="url" placeholder="url"></td>
+            </tr>
+
+            <tr>
+                <td><a href="input/week.html">week</a></td>
+                <td>A control for entering a date consisting of a week-year number and a week number with no time zone.</td>
+                <td><input type="week"></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div>
+        <h2>HTML <code class="tag">input</code> Element Attributes</h2>
+        <p>The <code class="element tag">input</code> element is so powerful because of its attributes; the <code class="attr">type</code> attribute, described 
+        with examples above, being the most important. Since every <code class="element tag">input</code> element, regardless of type, is based on the 
+        <span class="hlight">HTMLInputElement</span> interface, they  technically share the exact same set of attributes. However, in reality, most attributes have 
+        an effect on only a spcecific subset of input types. In addition, the way some attributes impact an input depends on the input type, impacting different 
+        input types in different ways.</p>
+
+       <table>
+            <tr>
+                <th>Attribute</th>
+                <th>Type or Types</th>
+                <th>Description</th>
+            </tr>
+
+            <tr>
+                <td><a href="#accept">accept</a></td>
+                <td><code class="prval">file</code></td>
+                <td>Hint for expected file type in file upload controls.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#alt">alt</a></td>
+                <td><code class="prval">image</code></td>
+                <td>alt attribute for the image type. Required for accessibility.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#autocomplete">autocomplete</a></td>
+                <td><code class="prval">checkbox</code>, <code class="prval">radio</code>, and buttons.</td>
+                <td>Hint for form autofill feature.</td>
+            </tr>
+
+            <tr>
+                <td><a href="capture">file</a></td>
+                <td><code class="prval">file</code></td>
+                <td>Media capture input method in file upload controls.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#checked">checked</a></td>
+                <td><code class="prval">checkbox</code>, <code class="prval">radio</code></td>
+                <td>Whether the command or control is checked.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#dirname">dirname</a></td>
+                <td><code class="prval">search</code>, <code class="prval">text</code></td>
+                <td>Name of form field to use for sending the element's directionally in from submission.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#disabled">disabled</a></td>
+                <td>all</td>
+                <td>Whether the form control is disabled.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#form">form</a></td>
+                <td>all</td>
+                <td>Associates the control with a form element.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#formaction">formaction</a></td>
+                <td><code class="prval">image</code>, <code class="prval">submit</code></td>
+                <td>URL to use for form submission.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#formenctype">formenctype</a></td>
+                <td><code class="prval">image</code>, <code class="prval">submit</code></td>
+                <td>Form data set encoding type to use for form submission</td>
+            </tr>
+
+            <tr>
+                <td><a href="#formmethod">formmethod</a></td>
+                <td><code class="prval">image</code>, <code class="prval">submit</code></td>
+                <td>HTTP method to use for form submission.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#formnovalidate">formnovalidate</a></td>
+                <td><code class="prval">image</code>, <code class="prval">submit</code></td>
+                <td>Bypass form control validation for form submission.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#formtarget">formtarget</a></td>
+                <td><code class="prval">image</code>, <code class="prval">submit</code></td>
+                <td>Browsing context for form submission.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#height">height</a></td>
+                <td><code class="prval">image</code></td>
+                <td>Same as height attribute for <code class="element tag">img</code>; vertical dimension.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#list">list</a></td>
+                <td>all except 
+                    <code class="prval">hidden</code>,
+                    <code class="prval">password</code>,
+                    <code class="prval">checkbox</code>,
+                    <code class="prval">radio</code>, and buttons.
+                </td>
+                <td>Value of the id attribute of the <code class="element tag">datalist</code> of autocomplete options.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#max">max</a></td>
+                <td>
+                    <code class="prval">date</code>,
+                    <code class="prval">month</code>,
+                    <code class="prval">week</code>,
+                    <code class="prval">time</code>,
+                    <code class="prval">datetime-local</code>,
+                    <code class="prval">range</code>
+                </td>
+
+                <td>Maximum value</td>
+            </tr>
+
+            <tr>
+                <td><a href="#maxlength">maxlength</a></td>
+                <td>
+                    <code class="prval">text</code>,
+                    <code class="prval">search</code>,
+                    <code class="prval">url</code>,
+                    <code class="prval">tel</code>,
+                    <code class="prval">email</code>,
+                    <code class="prval">password</code>
+                </td>
+                <td>Maximum length (number of characters) of <code class="attr">value</code>.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#min">min</a></td>
+                <td>
+                    <code class="pravl">date</code>,
+                    <code class="pravl">month</code>,
+                    <code class="pravl">week</code>,
+                    <code class="pravl">time</code>,
+                    <code class="pravl">datetime-local</code>,
+                    <code class="pravl">range</code>.
+                </td>
+                <td>Minimum value</td>
+            </tr>
+
+            <tr>
+                <td><a href="#minlength">minlength</a></td>
+                <td>
+                    <code class="prval">text</code>,
+                    <code class="prval">search</code>,
+                    <code class="prval">url</code>,
+                    <code class="prval">tel</code>,
+                    <code class="prval">email</code>,
+                    <code class="prval">password</code>.
+                </td>
+                <td>Minimum length (number of characters of) <code class="attr">value</code></td>
+            </tr>
+
+            <tr>
+                <td><a href="#multiple">multiple</a></td>
+                <td>
+                    <code class="prval">email</code>,
+                    <code class="prval">file</code>
+                </td>
+                <td>Boolean. Whether to allow multiple values</td>
+            </tr>
+
+            <tr>
+                <td><a href="#name">Name</a></td>
+                <td>all</td>
+                <td>Name of the form control. Submitted with the form as part of a name/value pair.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#pattern">pattern</a></td>
+                <td>
+                    <code class="prval">text</code>,
+                    <code class="prval">search</code>,
+                    <code class="prval">url</code>,
+                    <code class="prval">tel</code>,
+                    <code class="prval">email</code>,
+                    <code class="prval">password</code>.
+                </td>
+                <td>Pattern the <code class="attr">value</code> must match to be valid.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#placeholder">placeholder</a></td>
+                <td>
+                    <code class="prval">text</code>,
+                    <code class="prval">search</code>,
+                    <code class="prval">url</code>,
+                    <code class="prval">tel</code>,
+                    <code class="prval">email</code>,
+                    <code class="prval">password</code>,
+                    <code class="prval">number</code>
+                </td>
+                <td>Text that appears in the form control when it has no value set.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#readonly">readonly</a></td>
+                <td>all except 
+                    <code class="prval">hidden</code>,
+                    <code class="prval">range</code>,
+                    <code class="prval">color</code>,
+                    <code class="prval">checkbox</code>,
+                    <code class="prval">radio</code>, and buttons.
+                </td>
+                <td>Bollean. The value is not editable.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#required">required</a></td>
+                <td>all except
+                    <code class="prval">hidden</code>,
+                    <code class="prval">range</code>,
+                    <code class="prval">color</code>, and buttons.
+                </td>
+
+                <td>Boolean. A value is required or must be check for the form to be submittable.</td>
+            </tr>
+
+            <tr>
+                <td><a href="#size">size</a></td>
+                <td>
+                    <code class="prval">text</code>,
+                    <code class="prval">search</code>,
+                    <code class="prval">url</code>,
+                    <code class="prval">tel</code>,
+                    <code class="prval">email</code>,
+                    <code class="prval">password</code>.
+                </td>
+                <td>Size of the control</td>.
+            </tr>
+
+            <tr>
+                <td><a href="#src">src</a></td>
+                <td><code class="prval">image</code></td>
+                <td>Same as <code class="attr">src</code> attribute for <code class="element tag">img</code>;
+                address of image resource</td>
+            </tr>
+
+            <tr>
+                <td><a href="#step">step</a></td>
+                <td>
+                    <code class="prval">date</code>,
+                    <code class="prval">month</code>,
+                    <code class="prval">week</code>,
+                    <code class="prval">time</code>,
+                    <code class="prval">datetime-local</code>,
+                    <code class="prval">range</code>
+                </td>
+                <td>Incremental values that are valid</td>
+            </tr>
+
+            <tr>
+                <td><a href="#type">type</a></td>
+                <td>all</td>
+                <td>Type of form control</td>
+            </tr>
+
+            <tr>
+                <td><a href="#value">value</a></td>
+                <td>all</td>
+                <td>The initial vlue of the control</td>
+            </tr>
+
+            <tr>
+                <td><a href="#width">width</a></td>
+                <td><code class="prval">image</code></td>
+                <td>Same as <code class="attr">width</code> attribute for <code class="element tag">img</code></td>
+            </tr>
+       </table>
+
+       <!--
+       -------------------------------------------------------------------------------
+       -------------------------------------------------------------------------------
+       -->
+    </div>
+
+    <div>
+        <h2>Individual Attributes</h2>
+
+        <dl>
+            <dt><code class="heading attr">accept</code></dt>
+            <dd>
+                Valid for the <code class="type">file</code> input type only, the <code class="attr">accept</code> attribute defines which file types are 
+                selectable in a <code class="type">file</code> upload control.
+            </dd>
+
+            <dt><code class="heading attr">alt</code></dt>
+            <dd>Valid for the <code class="prval">image</code> button only, the <code class="attr">alt</code> attribute provides alternative text for the image, displaying 
+                the value of the attribute if the image <code class="attr">src</code> is missing or otherwise fails to load.</dd>
+
+            <dt><code class="heading attr">autocomplete</code></dt>
+            <dd>The <code class="attr">autocomplete</code> attribute takes as its value as space-separated string that describes what, if any, type of autocomplete 
+                functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more 
+                complex forms of autocomplete can exist.</dd>
+
+            <dd>The <code class="attr">autocomplete</code> attribute is valid on 
+                <code class="type">hidden</code>,
+                <code class="type">text</code>,
+                <code class="type">search</code>,
+                <code class="type">url</code>,
+                <code class="type">tel</code>,
+                <code class="type">email</code>,
+                <code class="type">date</code>,
+                <code class="type">month</code>,
+                <code class="type">week</code>,
+                <code class="type">time</code>,
+                <code class="type">datetime-local</code>,
+                <code class="type">number</code>,
+                <code class="type">range</code>,
+                <code class="type">color</code>, and
+                <code class="type">password</code>. This attribute has no effect on input types that do not return numeric or text data, being valid for all input types except 
+                <code class="type">checkbox</code>, <code class="type">radio</code>, <code class="type">file</code>, or any of the button types. 
+            </dd>
+
+            <dt><code class="heading attr">autofocus</code></dt>
+            <dd>A boolean attribute which, if present, indicate that the input should automatically have focus when the page has finished loading (or when the <code class="element tag">dialog</code> containing the element has been displayed.)</dd>
+
+            <dd class="Note">An element with the autofocus attribute many gain focus before the <span class="hlight">DOMContentLoaded</span> event fired.</dd>
+
+            <dd>No more than one element in the document may have the <code class="attr">autofocus</code> attribute. if pur on more
+            than one element, the first on with the attribute receives focus.</dd>
+
+            <dd>The <code class="attr">autofocus</code> attribute cannot be used on inputs of type <code class="prval">hidden</code>, since hidden inputs cannot be focused.</dd>
+
+            <dd class="Warning">Automatically focusing a form control coan confuse visually-impaired people using screen-reading technology and people with congnitive impairments. 
+                When <code class="attr">autofocus</code> is assigned, screen-readers "teleport" their user to the form control without warning them beforehand.
+            </dd>
+
+            <dd>We should use careful consideration for accessibility when applying the <code class="attr">autofocus</code> attribute. Automatically focusing on a control 
+            can cause the page to scroll on load. The focus can also cause dynamic keyboards to display on some touch devices. While a screen reader will not announce anything 
+            before the label, and the sighted user on a smell device will equally miss the context created by the preceding content.</dd>
+
+            
+            <!-- capture -->
+            <dt><code class="heading attr">capture</code></dt>
+            <dd>It is introduced in the HTML Media Capture specification and valid for the <code class="type">file</code> input type only. the 
+            <code class="attr">capture</code> attribute defines which media--microphone, video or camera--should be used to capture a new file for
+            upload with <code class="type">file</code> upload control in supproting scenarios.</dd>
+
+            <!-- checked -->
+            <dt><code class="heading attr">checked</code></dt>
+            <dd>valid for both <code class="type">radio</code> and <code class="type">checkbox</code> types, <code class="attr">checked</code> is a boolean attribute. if 
+            present on a <code class="type">radio</code>, it indicates that the radio button is the currentyly selected 
+            one in the group of same-named radio buttons. if present on a <code class="type">checkbox</code> type, it indicates that the checkbox is checked by default 
+            (when the page loads). it does not indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not 
+            reflect the change</dd>
+
+            <dd class="Note"> Unlike other input controls a checkboxes and radio buttons value are only included in the submitted data if they are cureently <code class="prval">checked</code>. if 
+            they are, the name and the value(s) of the checked controls are submitted.
+            <br><br>
+            For example: if a checkbox whose <code class="attr">name</code> is <code class="prval">fruit</code> has a <code class="attr">value</code> of <code class="prval">cherry</code>,
+            and the checkbox is checked, the form data submitted will include <code class="hlight">fruit-cherry</code>. if the checkbox isn't active, it isn't listed in the form data at all.
+            The default <code class="attr">value</code> for checkboxes and radio button is <code class="prval">on</code>.
+            </dd>
+
+            <!-- dirname -->
+            <dt><code class="heading attr">dirname</code></dt>
+            <dd>Valid for <code class="type">text</code> and <code class="type">search</code> input types only, the <code class="attr">dirname</code> attribute enables the 
+                submission of the directionality of the element. when included the form control will submit with two name/value pairs: the first being the <code class="hlight">name</code>
+                and <code class="attr">value</code>, the second being the value of the <code class="attr">dirname</code> as the name with the value of <code class="prval">ltr</code> or 
+                <code class="prval">rtl</code> being seet by the browser.</dd> 
+            
+
+            <!-- disabled -->
+            <dt><code class="heading attr">disabled</code></dt>
+            <dd>A Boolean attribute which, if present, indicate that the user should not be able to interact the input. Disabled inputs are typically rendered with a dimmer color or 
+                using some other form of indication that the field is not available for use.
+                <br><br>
+                Specifically, disabled inputs do not receive the <code class="hlight">click</code> event, and disabled inputs are not submitted with the form.
+            </dd>
+
+            <dt><code class="heading attr">form</code></dt>
+            <dd>A string specifying the <code class="element tag">form</code> element with which the input is associated (that is, its form owner). this string's value, if present, 
+                must match the <code class="attr">id</code> of a <code class="element tag">form</code> element in the same document. if this attribute isn't specified, the 
+            <code class="element tag">input</code> element is associated with the nearest containing form, if any.</dd>
+            <dd>The <code class="attr">form</code> attribute lets you place an input anywhere in the document but have it included with a form elsewhere in the document.</dd>
+            <dd class="Note">An input can only be associated with one form.</dd>
+
+            <dt><code class="heading attr">formaction</code></dt>
+            <dd>Valid for the <code class="type">image</code> and <code class="type"> submit</code> input types only. </dd>
+
+            <dt><code class="heading attr">formenctype</code></dt>
+            <dd>Valid for the <code class="type">image</code> and <code class="type"> input types only.</code></dd>
+
+            <dt><code class="heading attr">formmethod</code></dt>
+            <dd>Valid for the <code class="type">image</code> and <code class="type"> input types only.</code></dd>
+
+            <dt><code class="heading attr">fromnovalidate</code></dt>
+            <dd>Valid for the <code class="type">image</code> and <code class="type"> input types only.</code></dd>
+
+            <dt><code class="heading attr">formtarget</code></dt>
+            <dd>Valid for the <code class="type">image</code> and <code class="type"> input types only.</code></dd>
+
+            <dt><code class="heading attr">height</code></dt>
+            <dd>Valid for the <code class="type">image</code> input button only, the <code class="attr">height</code> is the height of the image file to display to represent the 
+            graphical submit button.</dd>
+
+            <dt><code class="heading attr">id</code></dt>
+            <dd>Global attribute valid for all elements, including all the input types, it defines a unique identifier (ID) which must be unique in 
+            the whole document. Its purpose is to identify the element when linking. the value is used as the vlaue of the <code class="element tag">label's</code>
+            <code class="attr">for</code> attribute to link the label with the form control.</dd>
+
+            <dt><code class="heading attr">inputmode</code></dt>
+            <dd>Global value valid for all elements, it provides a hint to browsers as to the types of virtual keyboard configuration to use when this element or its contents. 
+                Values include 
+                <code class="prval">none</code>,
+                <code class="prval">text</code>,
+                <code class="prval">tel</code>,
+                <code class="prval">url</code>,
+                <code class="prval">email</code>,
+                <code class="prval">numeric</code>,
+                <code class="prval">decimal</code>, and
+                <code class="prval">search</code>.
+            </dd>
+
+            <dt><code class="heading attr">list</code></dt>
+            <dd>The value given to the <code class="attr">list</code> attribute should be the <code class="attr">id</code> of a <code class="element tag">datalist</code> element located in 
+            the same document. The <code class="element tag">datalist</code> provides a list of predefined values to suggest to the 
+            user for this input. Any values in the list that are not compatible with <code class="attr">type</code> are not included in the suggested options.
+            The values provided are suggestions, not requirements: users can select from this predefined list or provide a differnt value.</dd>
+
+            <dd>It is valid on 
+                <code class="type">text</code>,
+                <code class="type">search</code>,
+                <code class="type">url</code>,
+                <code class="type">tel</code>,
+                <code class="type">email</code>,
+                <code class="type">date</code>,
+                <code class="type">month</code>,
+                <code class="type">week</code>,
+                <code class="type">time</code>,
+                <code class="type">datetime-local</code>,
+                <code class="type">number</code>,
+                <code class="type">range</code>, and
+                <code class="type">color</code>.
+            </dd>
+
+            <dd>Per the specification, the <code class="attr">list</code> attribute is not supported by the code.
+                <code class="type">hidden</code>,
+                <code class="type">password</code>,
+                <code class="type">checkbox</code>,
+                <code class="type">radio</code>,
+                <code class="type">file</code>, or any of the button types.
+            </dd>
+
+
+            <dt><code class="heading attr">max</code></dt>
+            <dd>Valid for 
+                <code class="type">date</code>,
+                <code class="type">month</code>,
+                <code class="type">week</code>,
+                <code class="type">time</code>,
+                <code class="type">datetime-local</code>,
+                <code class="type">number</code>, and
+                <code class="type">range</code>, it defines the greatest value in the range of permitted values. if the 
+                <code class="attr">value</code> entered into the element exceeds this, the element fails 
+                <span class="hlight">constraint validation.</span> if the value of the <coce class="attr">max</coce> attribute isn't 
+                numbrer, then the element has no maximum value. 
+            </dd>
+
+
+            <dt><code class="heading attr">maxlength</code></dt>
+            <dd>Valid for 
+                <code class="type">text</code>,
+                <code class="type">search</code>,
+                <code class="type">url</code>,
+                <code class="type">tel</code>,
+                <code class="type">email</code>, and
+                <code class="type">password</code>, it defines the maximum number of characters (as UTF-16 units) the user can enter 
+                into the field. This must be an integer value 0 or higher. if no <code class="attr">maxlength</code> is specified, 
+                or an invalid value is specified, the field has no maximum length. This value must also be greater than or
+                equal to the value of <code class="attr">minlength</code>.   
+            </dd>
+
+            <dd>The input will fail <span class="hlight">constraint validation</span> if the length of the text entered into the 
+                field is greater than <code class="attr">maxlength</code> UTF-16 units long. By default, browsers prevent users 
+                from entering more characters than allowed by the <code class="attr">maxlength</code> attribute.</dd>
+            
+            <dt><code class="heading attr">min</code></dt>
+            <dd>Valid for
+                <code class="type">date</code>,
+                <code class="type">month</code>,
+                <code class="type">week</code>,
+                <code class="type">time</code>,
+                <code class="type">datetime-local</code>,
+                <code class="type">number</code>, and
+                <code class="type">range</code>, it defines the most negative value in the range of permitted values. if the 
+                <code class="attr">value</code> entered into the element is less than this, the element fails 
+                <span class="hlight">constranit validation</span>. if the value of the <code class="attr">min</code> attribute isn't a number,
+                then the element has no minimuim value.
+                <br><br>
+                
+                This value must be less than or equal to the value of the <code class="attr">max</code> attribute. if the <code class="attr">min</code>
+                attribute is present but is not specified or is invalid, no min value is applied. if the 
+                <code class="attr">min</code> attribute is valid and non-empty value is less than the minimum allowed by the <ecode class="attr">min</ecode>
+                attribute, constraint validation will prevent from submission.
+            </dd>
+
+            <dd>There is a special case: if the data type is periodic (such as for date or times.) the value of <code class="attr">max</code> may be lower 
+                than the value of <code class="attr">min</code>, which indicates that the range may wrap around.</dd>
+            
+
+            <dt><code class="heading attr">minlength</code></dt>
+            <dd>Valid for 
+                <code class="type">text</code>,
+                <code class="type">search</code>,
+                <code class="type">url</code>,
+                <code class="type">tel</code>,
+                <code class="type">email</code>, and
+                <code class="type">password</code>, it defines the minimum number of characters (as UTF-16 code units) the useer can enter into the entry
+                field. this must be an non-negative integer value samller than or equal to the value specified by <code class="attr">maxlength</code>
+                . if no <code class="attr">minlength</code> is specified, or an invalid value is specified, the input has no minimum length.
+
+                <br><br>
+                The input will fill <span class="hlight">constraint validation</span> if the length of the text ent3ered into the field is fewer than 
+                <code class="attr">minlength</code> UTF-16 code units long, preventing form submission.
+            </dd>
+
+            <dt><code class="heading attr">multiple</code></dt>
+            <dd>The Boolean <code class="attr">multiple</code> attribute, if set, means the user can enter comma separated email address in the 
+            email widget or can choose more than on file with the <code class="type">file</code> input.</dd>
+
+            <dt><code class="heading attr">name</code></dt>
+            <dd>A string specifying a name for the input conrol. This name is submitted along with the contro;s value when the form data is submitted.</dd>
+
+            <dd>Consider the <code class="attr">name</code> a required attribute (even though it's not). if an input has no <code class="attr">name</code>
+            specified, or <code class="attr">name</code> is empty, the input's value is not submitted with the form! (Disabled controls, unchecked radio buttons, 
+            unchecked checkboxes, and reset buttons are also not sent.)
+
+            <br><br>
+            <ul>
+                <h4>Ther are two special case:</h4>
+                <li><code class="attr">_charset_</code>: if used as the name of an <code class="element tag">input</code> element of type 
+                <code class="type">hidden</code>, the input's <code class="attr">value</code> is automaticallly set by the user agent to the character
+                encoding being used to submit the form.</li>
+
+                <li><code class="attr">isindex</code>: For historical reasons, the name <code class="attr">isindex</code> is not allowed.</li>
+            </ul>
+            </dd>
+
+            <dd>The <code class="attr">name</code> attribute creates a nuique behavior for radio buttons.
+            <br><br>Only one radio button in a same-named group of radio buttons can be checked at a time. Selecting any radio button in that group automatically 
+            deselects any currently selected radio button in the same group. The value of that one checked radio button is sent along with the name if the form 
+            is submitted.</dd>
+
+            <dd>When tabbing into a series of same-named group of radio buttons, if one is checked, that one will receive focus. if they aren't grouped together 
+                in source order, if on e of the group is checked, tabbing into the group starts when the first one in the group is encountered, skipping all those
+                that aren't checked. In other words, if one is checked, tabbing skips the unchecked radio buttons in the group. if none are checked, the radio button 
+                group receives focus when the first button in the same name group is reached.
+            </dd>
+
+            <dd>Once one of the radio buttons in a group has focus, using the arrow keys will navigate thorugh all the radio buttons 
+                of the same name, even if the radio buttons are not grouped together in the source order.
+            </dd>
+
+            <dd>When an input element's is given an <code class="attr">name</code>, that name becomes a property of the owning form element's 
+            <span class="hlight">HTMLFormElement.elements </span> property. if we have an input whose <code class="attr">name</code> is set to 
+            <code class="prval">guest</code> and another whose <code class="attr">name</code> is <code class="prval">hat-size</code>, the following code can be used.</dd>
+
+            <div class="codeblock" style="margin-left: 40px;">
+                <p><code class="kword">let</code> form = document.<code class="member">querySelector</code>(<code class="str">"form"</code>);</p>
+                <br>
+                <p><code class="kword">let</code> guestName = form.<code class="member">element.guest</code>;</p>
+                <p><code class="kword">let</code> hatsize = form.<code class="member">elements</code>[<code class="str">"hat-size"</code>];</p>
+            </div>
+
+            <dd>When this code runs, <code class="mark">guestName</code> will be the <span class="hlight">HTMLInputElement</span> for the <code class="prval">guest</code>
+            field, and <code class="mark">hatSize</code> the object for the <code class="prval">hat-size</code> field.</dd>
+
+            <dd class="Warning"> Avoid giving form elements a <code class="prval">name</code> that corresponds to a built-in property of the 
+            form, since we would then ouveride the predefined property or method with this reference to the 
+            corresponding input.</dd>
+
+            <dt><code class="heading attr">pattern</code></dt>
+            <dd>Valid for 
+                <code class="type">text</code>,
+                <code class="type">search</code>,
+                <code class="type">url</code>,
+                <code class="type">tel</code>,
+                <code class="type">email</code>,
+                <code class="type">password</code>, and
+                <code class="type">pattern</code>, attribute defines a regular expression that the input's <code class="attr">value</code> must match in order for the 
+                value to pass <span class="type">constraint validation</span>. it must be a valid JavaScript regular expression, as used by the <code class="hlight">RegExp</code>
+                type. the <code class="hlight">'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, 
+                instead of as ASCII. No forward slashes should be specified around the pattern text.
+            </dd>
+
+            <dd>if the <code class="attr">pattern</code> attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored 
+                completely. if the pattern attribute is valid and non-empty value does not match the pattern, <span class="hlight">constraint validation</span> will prevent form 
+                subission.</dd>
+
+            <dd class="Note">if using the <code class="attr">pattern</code> attribute, iform the suer about the expected format by including explanatory text nearby. we can also include 
+                a <code class="attr">title</code> attribute to explain what the requirments are to match the pattern; most browsers will display this title as a tooltip. The 
+                visible explanation is required for accessibiltiy. The tolltip is an enhancement.</dd>
+
+            
+            <dt><code class="heading attr">placeholder</code></dt>
+            <dd>Valid for 
+                <code class="type">text</code>,
+                <code class="type">search</code>,
+                <code class="type">url</code>,
+                <code class="type">tel</code>,
+                <code class="type">email</code>,
+                <code class="type">password</code>, and
+                <code class="type">number</code>, the
+                <code class="type">placeholder</code> attribute provides a brief hint to the user as to what kind of information is expected in the field. it should be a word or 
+                short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text must <i>must not include carriage returns or line feeds</i>.
+                So for example if a field is expected to capture a user's first name, and its lable is "First Name", a suitale placeholder might be "e.g. Mustafa".
+            </dd>
+
+            <dd class="Note">The <code class="attr">placeholder</code> attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical 
+                issues with our content.</dd>
+
+            
+            <dt><code class="heading attr">readonly</code></dt>
+            <dd>A Boolean attribute which, if present, indicates that the user should not be able to edit the value of the input. The <code class="attr">attribute</code> is supported by the 
+            <code class="type">text</code>,
+            <code class="type">search</code>,
+            <code class="type">url</code>,
+            <code class="type">tel</code>,
+            <code class="type">email</code>,
+            <code class="type">date</code>,
+            <code class="type">month</code>,
+            <code class="type">week</code>,
+            <code class="type">time</code>,
+            <code class="type">datetime-local</code>,
+            <code class="type">number</code>, and
+            <code class="type">password</code> input types.
+            </dd>
+
+            <dt><code class="heading attr">required</code></dt>
+            <dd><code class="attr">required</code> is a boolean which, if present, indicate that the user must specify a value for the input before the owining form can be submitted. The 
+            <code class="attr">required</code> attribute is supported by 
+            <code class="type">text</code>,
+            <code class="type">search</code>,
+            <code class="type">url</code>,
+            <code class="type">tel</code>,
+            <code class="type">email</code>,
+            <code class="type">date</code>,
+            <code class="type">month</code>,
+            <code class="type">week</code>,
+            <code class="type">time</code>,
+            <code class="type">datetime-local</code>,
+            <code class="type">number</code>,
+            <code class="type">password</code>,  
+            <code class="type">checkbox</code>,  
+            <code class="type">radio</code>, and  
+            <code class="type">file</code> inputs.
+            </dd>
+
+            <dt><code class="heading attr">size</code></dt>
+            <dd>Valid for 
+                <code class="attr">email</code>,
+                <code class="attr">password</code>,
+                <code class="attr">tel</code>,
+                <code class="attr">url</code>, and 
+                <code class="attr">text</code>, the
+                <code class="attr">size</code>, attribute specifies how much of the input is shown. Basically creates sam result as setting CSS <code class="prprty">width</code> property
+                with a few specialities. The actual unit of the value dependes on the input type. For <code class="type">password</code> and <code class="type">text</code>, it 
+                is a number of character (of <code class="prval">em</code> units) with a default value of <span class="hlight">20</span>, and for other, it is pixels 
+                (of <code class="prval">px</code> units). CSS <code class="prprty">width</code> takes precedence over the <code class="attr">size</code> attribute.
+            </dd>
+
+            <dt><code class="attr heading">src</code></dt>
+            <dd>Valid for the <code class="type">image</code> input button only, the <code class="attr">src</code> is string specifying the url of the image file to display to represent
+            the graphical submit button.</dd>
+
+            <dt><code class="attr heading">step</code></dt>
+            <dd>Valid for 
+                <code class="type">date</code>,
+                <code class="type">month</code>,
+                <code class="type">week</code>,
+                <code class="type">time</code>,
+                <code class="type">datetime-local</code>,
+                <code class="type">number</code>, and
+                <code class="type">range</code>, the <code class="attr">step</code> attribute is a number that specifies that granularity that the value must adhere to.
+            </dd>
+
+            <dd>
+                <ul>
+                    <b>if not explicitly included:</b>
+                    <li><code class="attr">step</code> defaults to 1 for <code class="type">number</code> and <code class="type">range</code>.</li>
+                    <li>Each date/time input type has a default <code class="attr">step</code> value appropriate for the type.</li>
+                </ul>
+            </dd>
+
+            <dd>The value must be a positive number--integer or float--or the special value <code class="prval">any</code>, which means no stepping in implied, and 
+            any value is allowed (barring other constraint, such as <code class="attr">min</code> and <code class="attr">max</code>).</dd>
+
+            <dd class="Example">if we have <code class="tag mark">input type="number" min="10" step="2"</code>, then any even integer, 10 or greater, is valid.
+            if ommited, <code class="tag mark">input type="number"</code>, any integer iis valid, but floats (like <code class="prval">4.2</code>) are not valid, because 
+            <code class="attr">step</code> defaults to <code class="prval">1</code>. for <code class="prval">4.2</code> to be valid, <code class="attr">step</code> would be have to be set to 
+            <code class="prval">any</code>, 0.1, 0.2, or any the <code class="attr">min</code> value would have had to be a number ending in <code class="prval">.2</code>, such as 
+            <code class="tag mark">input type="number" min="-5.2"</code></dd>
+            
+
+            <dd class="Note">When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in 
+                <span class="hlight">constraint validation</span> and will match the <code class="hlight">:invalid</code> pseudoclass.
+            </dd>
+            
+            <dt><code class="heading attr">tabindex</code></dt>
+            <dd>Global attribute valid for all elements, including all the input types, an integer attribute indicating if the element can take input focus (is focusable), if it should participate 
+                to sequential keyboard navigation. As all input types except for input of type hidden are focusable, this attribute should not be used on form controls, because doing so would require 
+                the management of the focus order for all elements within the document with the risk of harming usability and accessibility if done incorrectly.</dd>
+        
+            
+            <dt><code class="heading attr">title</code></dt>
+            <dd>
+                Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, 
+                but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the <code class="element tag">label</code>
+                element with a <code class="attr">for</code> attribute set to the form control's <code class="attr">id</code> attribute.
+            </dd>
+
+            <dt><code class="heading attr">type</code></dt>
+            <dd>A string specifying the type of control to render. For example, to create a checkbox, a value of <code class="type">checkbox</code> is used. if omitted (or an unknown value is specified), the input 
+            type <code class="type">text</code> is used, creating a plaintext input field.</dd>
+            
+
+            <dt><code class="heading attr">value</code></dt>
+            <dd>The input control's value. Whe specified in the HTML, this is the initial value, and from then on it can be altered or retrieved at any time using JavaScript to access 
+                the respective <span class="hlight">HTMLInputElement</span> object's <code class="attr">value</code> property. The <code class="attr">value</code> attribute
+                is always optional, though should be considered mandatory for <code class="type">checkbox</code>, <code class="type">radio</code>, and <code class="type">hidden</code>.
+            </dd>
+
+            <code class="heading attr">width</code>
+            <dd>Valid for the <code class="type">image</code> input button only, the <code class="attr">width</code> is the width of the image fiel to display to represent the graphical submit button.</dd>
+        </dl>
+    </div>
+    <!--
+    -------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
+    -->
+    <div>
+        <h2>Method on HTML <code class="tag">input</code> Element</h2>
+        <p>The following methods are provided by the <code class="hlight">HTMLInputElement</code> interface which represents <code class="element tag">input</code> elements in the DOM. Also available are those methods specified 
+        by the parent interfaces, <code class="hlight">HTMLElement</code>, <code class="hlight">Element</code>, <code class="hlight">Node</code>, and <code class="hlight">EventTarget</code>.</p>
+
+        <dl>
+            <dt><code class="heading hlight">checkValidity()</code></dt>
+            <dd>Returns <code class="prval">true</code> if the element's value passes validity checks; otherwise, returns <code class="prval">false</code> and fires an <code class="event">invalid</code> at the element.</dd>
+
+            <dt><code class="heading hlight">reprotValidity()</code></dt>
+            <dd>Returns <code class="prval">true</code> if the element's value passes validity checks; otherwise, returns <code class="prval">false</code> and fires an <code class="event">invalid</code> at the element,
+            and (if the event isn't canceled) reports the problem to the user.</dd>
+
+            <dt><code class="heading hlight">select()</code></dt>
+            <dd>Selects the entire content of the <code class="element tag">input</code> element, if the element's content is selectable. For elements with no selectable text content 
+            (such as a visual color picker or calendar date input), this method does nothing.</dd>
+
+            <dt><code class="heading hlight">setCustomValidity()</code></dt>
+            <dd>Sets a custom message to display if the input element's value isn't valid.</dd>
+
+            <dt><code class="heading hlight">setRangeText()</code></dt>
+            <dd>Sets the contents of the specified range of characters in the input element to a given string. A <code class="mark">selectMode</code> parameter is available to allow controlling how 
+            the existing content is affected.</dd>
+
+            <dt><code class="heading hlight">setSelectionRange()</code></dt>
+            <dd>Select the specified range of characters within a textual input element. Does nothing for inputs which aren't presented as text input fields.</dd>
+
+            <dt><code class="heading hlight">stepDown()</code></dt>
+            <dd>Decrements the value of a numeric input by one, by default, or by the specified number of units.</dd>
+
+            <dt><code class="heading hlight">stepUp()</code></dt>
+            <dd>Increments the value of a numeric input by one or by the specified number of units.</dd>
+        </dl>
+    </div>
+
+    <!--
+    -------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
+    -->
+
+    <div>
+        <h2>CSS <code class="tag">input</code> Element</h2>
+        <p>Inputs, being replaced elements, have a few feature not applicable to non form elements. There are css selectros that can specifically target form control based on
+            their UI features, also known as UI pseudo-classes. the input element can also be targeted by type with attribute selectors. There are some properties that are 
+            especially usefual as well.
+        </p>
+
+        <h3>UI pseudo-classes</h3>
+
+        <table>
+            <tr>
+                <th style="width: 120px;">Pseudo-classes</th>
+                <th>Description</th>
+            </tr>
+
+            <tr>
+                <td><code class="prprty">:enabled</code></td>
+                <td>Any currently enabled element that can be activated (selected, clicked on, typed into, etc.) or accept focus and also ahs a disabled state, in which it can't be 
+                    activated or accept focus.</td>
+            </tr>
+
+            <tr>
+                <td><code class="prprty">:disabled</code></td>
+                <td>Any currently disabled element that ahs an enabled state, meaning it other wise could be activated (selected, clicked on, typed into, etc.) or accept focus 
+                    were it not disabled.
+                </td>
+            </tr>
+
+            <tr>
+                <td><code class="prprty">:read-only</code></td>
+                <td>Element no editable by the user.</td>
+            </tr>
+
+            <tr>
+                <td><code class="prprty">:read-write</code></td>
+                <td>Element that is editable by the user.</td>
+            </tr>
+
+            <tr>
+                <td><code class="prprty">:placeholder-shown</code></td>
+                <td>Element that is currently displaying <code class="prval">placeholder text</code>, including <code class="element tag">input</code>
+                and <code class="element tag">textarea</code> elements with the <code class="attr">placeholder</code> attribute present that has, as of yet, no value.</td>
+            </tr>
+
+            <tr>
+                <td><code class="prprty">:default</code></td>
+                <td>form elements that are the default in a group of related elements. Matches <code class="type">checkbox</code> and <code class="type">radio</code> input types that were checked on page load or render.</td>
+            </tr>
+
+            <tr>
+                <td><code class="prprty">:checked</code></td>
+                <td>Matches <code class="type">checkbox</code> and <code class="type">radio</code> input types that are currently checked (and the <code class="element tag">option</code> in a <code class="element tag">select</code>
+                that is currently selected).</td>
+            </tr>
+
+            <tr>
+                <td><code class="prprty">:indeterminate</code></td>
+                <td><code class="type">checkbox</code> elements whose indeterminate property is set to true by JavaScript, <code class="type">radio</code> elements, when all radio buttons with thesame name 
+                value in the form are unchecked, and <code class="element tag">progress</code> elements in an indeterminate state.</td>
+            </tr>
+
+            <tr>
+                <td><code class="prprty">:valid</code></td>
+                <td>Form controls that can have constraint validation applied and are currently valid.</td>
+            </tr>
+
+            <tr>
+                <td><code class="prprty">:invalid</code></td>
+                <td>Form controls that have constraint validation applied and are currently not valid. Matches a form control whose value doesn't match the constraints 
+                    set on it by its attributes, such as 
+                    <code class="attr">required</code>,
+                    <code class="attr">pattern</code>,
+                    <code class="attr">step</code> and
+                    <code class="attr">max</code>.
+                </td>
+            </tr>
+            
+            <tr>
+                <td><code class="prprty">:in-range</code></td>
+                <td>A non-empty input whose current value is within the range limits specified by the <code class="attr">min</code> and <code class="attr">max</code> attributes and the <code class="attr">step.</code></td>
+            </tr>
+
+            <tr>
+                <td><code class="prprty">out-of-range</code></td>
+                <td>A non-emtpy input whose current value is NOT within the range limits specified by the <code class="attr">min</code> and <code class="attr">max</code> attributes 
+                or does not adhere to the <code class="attr">step</code> constraint.</td>
+            </tr>
+
+            <tr>
+                <td><code class="prprty">:required</code></td>
+                <td><code class="element tag">input</code>, <code class="element tag">select</code>, or <code class="element tag">textarea</code> element that has the <code class="attr">required</code>
+                attribute set on it. Only matches lements that can be required. The attribute included on a non-requirable elements will not make for a match.</td>
+            </tr>
+
+            <tr>
+                <td><code class="prprty">:optional</code></td>
+                <td><code class="element tag">input</code>, <code class="element tag">select</code>, or <code class="element tag">textarea</code> element that does NOT have the <code class="attr">required</code>
+                attribute set on it. Does not match elements that can't be required.</td>
+            </tr>
+
+            <tr>
+                <td><code class="prprty">:blank</code></td>
+                <td><code class="element tag">input</code> and <code class="element tag">textarea</code> elements that currently have no value.</td>
+            </tr>
+
+            <tr>
+                <td><code class="prprty">:user-invalid</code></td>
+                <td>Similar to <code class="prprty">:invalid</code>, but is activated on blur. Matches invalid input but only after the ser interaction, such as by focousing on the control, leaving the control, 
+                or attrmpting to submit the form containing the invalid control.</td>
+            </tr>
+        </table>
+    </div>
+
+    <!--
+    -------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
+    -->
+    <div>
+        <h2>Pseudo-classes Example</h2>
+        <p>We can style a checkbox label based on whether the checkbox is checked or not. In this example, we are styling the <code class="prprty">color</code>,
+            and <code class="prprty">font-weight</code> of the <code class="element tag">label</code> that comes immediately after a checked input. We haven't applied 
+            any styles if the <code class="mark">input</code> is not checked.</p>
+        
+        <section id="input-checked1">
+
+            <input type="checkbox" id="check1" name="check1" >
+            <label for="check1">Toothe the checkbox on and off</label>.
+
+        </section>
+        
+        <section id="input-checked2">
+
+            <input type="checkbox" id="check2" name="check2" >
+            <label for="check2">Toothe the checkbox on and off</label>.
+
+        </section>
+        
+        <section id="input-checked3">
+
+            <input type="checkbox" id="check3" name="check3" >
+            <label for="check3">Toothe the checkbox on and off</label>.
+
+        </section>
+
+        <h2>Attribute Selectors</h2>
+        <p>It is possible to target different types of form controls based on their <code class="attr">type</code> using <code class="hlight">attribute selectors</code>.
+        CSS attribute selectors match elements based on either just the presence of a attribute or the value of a given attribute.</p>
+
+        <div class="codeblock">
+            <p class="comment">/* matches a password input */</p>
+            <p class="code">input[type="passowrd"] {} </p>
+
+            <p class="comment">/* matches a form control whose valid values are limited to a range of values. */</p>
+            <p class="code">input[min][max] {}</p>
+
+            <p class="comment">/* matches a form control with a pattern attribute */</p>
+            <p>input[pattern] {}</p>
+        </div>
+
+        <h3>::placeholder</h3>
+
+        <p>by default, the appearance of placeholder text is a translucent or light gary. The <code class="attr">::placeholder</code> pseudo-element is the input's 
+        <code class="hlight">placeholder text</code>. it can be styled with a limited subset of CSS properties.</p>
+
+        <p>Only the subset of CSS properties that apply to the <code class="prprty">::first-line</code> pseudo-element can be used in a rule using <code class="prprty">::placeholder</code> 
+        in its selector.</p>
+
+        <h3>Appearance</h3>
+        <p>The <code class="prprty">appearance</code> proprty enables the displaying of (almost) any element as a platform-native style based on the operating
+        system's theme as well as the removal of any platform-native styling with the <code class="prval">none</code> value.</p>
+
+        <p>We could make a <code class="element tag">div</code> look like a radio button with <code class="prprty">div {appearance: radio;}</code> or a radio 
+        look like a checkbox with <code class="prprty">[type="radion"] {appearance: checkbox;}</code>, but don't do that.</p>
+
+        <p>Setting <code class="prprty">appearance: non</code> removes platform native borders, but not functionality.</p>
+
+        <h3>caret-color</h3>
+        <p>A proprty specific to text entry-related elements in the css <code class="prprty">caret-color</code> proprty, 
+        which lets us set the color used to draw the text input caret.</p>
+
+        <h3>object-position and object-fit</h3>
+        <p>In certain cases (typically involving non-textual inputs and specialized interfaces), the <code class="element tag">input</code>
+        element is a <code class="hlight">replaced element</code>. When it is, the position and size of the element's size and positioning within its frame can be adjust 
+        using the css <code class="prprty">object-position</code> and <code class="prprty">object-fit</code> properties.</p>
+    </div>
+
+    <div>
+        <h2>Additional features</h2>
+        <br>
+        <h3>Labels</h3>
+        <p>Labels are needed to associate assistive text with an <code class="element tag">input</code>. The <code class="element tag">label</code> element provides explanatory information about a form 
+        field that is always appropriate (aside from any lyout concerns you have). it's never a bad idea to use a <code class="element tag">label</code> to explain what should be entered into an 
+        <code class="element tag">input</code> or <code class="element tag">textarea</code>.</p>
+
+        <h3>Associated lables</h3>
+        <p>The semantic pairing of <code class="element tag">input</code> and <code class="element tag">label</code> elements is useful for assistive technologies such as screen 
+        reader. by pairing them using the <code class="element tag">label</code>'s <code class="attr">for</code> attribute, we bond the label to the input in a way that lets 
+        screen reader describe inputs to users precisely.</p>
+
+        <p>It does not suffice to have plain text adjacent to the <code class="element tag">input</code> element. Rather usability and accessibility requires the inclusion of either 
+        implicit or explicit <code class="element tag">label</code>.</p>
+
+        <div class="codeblock">
+            <p class="comment">&lt;!-- inaccessible -- &gt;</p>
+            <htmlcode class="plain"><code class='tag'>p</code>Enter your name: <htmlcode><code class='tag'>input id="name"  type="text"  size="30"</code> </htmlcode> <code class='tag'>/p</code></htmlcode>
+
+            <br>
+            <p class="comment">&lt;!-- implicit label -- &gt;</p>
+            <htmlcode class="plain"><code class='tag'>p</code>&lt;label&gt;Enter your name: <htmlcode><code class='tag'>input id="name"  type="text"  size="30"</code> </htmlcode>&lt;/label&gt;<code class='tag'>/p</code></htmlcode>
+
+            <p class="comment">&lt;!-- explicit label -- &gt;</p>
+            <htmlcode class="plain"><code class='tag'>p</code><htmlcode><code class='tag'>label for="name"</code>Enter your name: <code class='tag'>/label</code> </htmlcode><code class='tag'>/p</code><htmlcode> </htmlcode></htmlcode>
+            <br>
+            <htmlcode class="plain"><code class='tag'>p</code><htmlcode><code class='tag'>input id="name"  type="text"  size="30"</code> </htmlcode> <code class='tag'>/p</code></htmlcode>
+        </div>
+
+        <p>&rightarrow; The first example is inaccessible: no relationship exist between the prompt and the <code class="element tag">input</code> element.</p>
+
+        <p>&rightarrow; In addition to an accessible name, the label provides a larger 'hit' area for mouse and touch screen users to click on or touch. 
+            By pairing a <code class="element tag">label</code> with an <code class="element tag">input</code>, clicking on either one will focus the <code class="element tag">input</code>. if we use 
+            plain text to ('label') our input, this won't happen. Having the prompt part of the acitvation are for the input is helpful for people with motor control conditions.
+        </p>
+
+        <p class="Note">&rightarrow; As web developers, it's important that we never assume that people will know all the things that we know. The diversity of people using the web--and by extension 
+            our wibsite-- practically guarantees that some of our site's visitors will have some variation in thought processes and/or circumstances that leads them to interpret our forms very differently 
+            from us without clear and properly-presented labels.
+        </p>
+
+        <h3>Placeholders are not accessible</h3>
+        <p>The <code class="attr">placeholder</code> attribute lets us specify text that apperas within the <code class="element tag">input</code> element's content area itself when it is empty. The placeholder should never be 
+            required to understand our form. it is not a label, and should not be used as a substitute, because it isn't. The placeholder is used to provide a hint as to what an inputted value should look like, not an explanation or prompt.</p>
+
+        <p>Not only is the placeholder not accessible to screen reader, but once the user enters any text into the form control or if the form control already has a value, the 
+            placeholder disappears. Browsers with automatic page translation featurs may skip over attribute when translating, meaning the <code class="attr">placeholder</code> may not translated.
+        </p>
+
+        <p class="Note">Don't use the <code class="attr">placeholder</code> attribute if we can avoid it. if we need to label an <code class="element tag">input</code> element, use the <code class="element tag">label</code> element.</p>
+
+        <h3>Client-Side validation</h3>
+
+        <p class="Warning">Client-Side validation is useful, but it does not guarantee that the server will receive valid data. if the data must be in a specific format, 
+            always verify it also on the server-side, and return a <code class="hlight">400 HTTP responce</code> if the format is invalid.
+        </p>
+
+        <p>&rightarrow; In addition to using CSS to style inputs based on the <code class="mark">:valid</code> or <code class="mark">:invalid</code> UI states based on the current state of each input, as noted in the 
+            <span class="hlight">UI pseudo-classes</span> section above, the browser provides for client-side validation on (attempted) form submission.
+            On form submission, if there is a form control that fails constraint validation, supporting browsers will display an error message on the first invalid form control; displaying a default message based on the
+            error type, or a message set by us.
+        </p>
+
+        <p>&rightarrow; Some input tyupes and other attributes place limits on what values are valid for a given input. for example: <code class="mark">&lt; input type="number" min="2" max="10" step="2" &gt;</code> means only the number 2,,4,6,8 or 10 are valid.
+        Aeveral errors could occur, including a <code class="hlight">rangeUnderflow</code> if the value is a number between 2 and 10, but not an even integer 
+        (does not match the requirments of the <code class="attr">step</code> attribute) or <code class="hlight">typeMismatch</code> if the value is not a number.</p>
+
+        <h3>Periodic Inputs</h3>
+        <p>for the input types whose domain of possible values is periodic (that is, at the highest possible value, the values wrap back around to the beginning rather tahn ending), it's 
+            possible for the values of the <code class="attr">max</code> and <code class="attr">min</code> properties to be reversed, which indicates that the range of permitted 
+            values starts at <code class="attr">min</code>, wraps around to the lowest possible value, then continues on until <code class="attr">max</code> is reached. This is particularly useful for dates 
+            and times, such as when us want to allow the range to be from 8 AM to 8 PM:
+        </p>
+
+        <htmlcode><code class="tag">input type="time" min="20:00" max="08:00" name="overnight"</code></htmlcode>
+
+        <p>Specific attributes and their values can lead to a specific error <code class="hlight">ValidityState</code>:</p>
+        
+        <table>
+            <caption><b>Validity object errors depend on the <code class="element tag">input</code> attributes and their values:</b></caption>
+            
+            <tr>
+                <th>Attribute</th>
+                <th>Relevant Property</th>
+                <th>Description</th>
+            </tr>
+
+            <tr>
+                <td><code class="attr">max</code></td>
+                <td><code class="prprty">validityState.rangeOverflow</code></td>
+                <td>Occurs when the value is greater than the maximum value as defined by the <code class="attr">max</code> attribute.</td>
+            </tr>
+
+            <tr>
+                <td><code class="attr">maxlength</code></td>
+                <td><code class="prprty">validityState.tooLong</code></td>
+                <td>Occurs when the number of character is greater than the number allowed by the <code class="attr">maxlength property</code></td>
+            </tr>
+
+            <tr>
+                <td><code class="attr">min</code></td>
+                <td><code class="prprty">validityState.rangeUnderflow</code></td>
+                <td>Occurs when the value is less than the minimum value as defined by the <code class="attr">min</code> attribute.</td>
+            </tr>
+
+            <tr>
+                <td><code class="attr">minlength</code></td>
+                <td><code class="prprty">validityState.tooShort</code></td>
+                <td>Occurs when the number of characters is less than the number required by the <code class="attr">minlength</code> property.</td>
+            </tr>
+
+            <tr>
+                <td><code class="attr">pattern</code></td>
+                <td><code class="prprty">validityState.patternMismatch</code></td>
+                <td>occurs when a pattern attribute is included with a valid regular expression and the <code class="attr">value</code> does not match.</td>
+            </tr>
+
+            <tr>
+                <td><code class="attr">required</code></td>
+                <td><code class="prprty">validityState.valueMissing</code></td>
+                <td>Occurs when the <code class="attr">required</code> attribute is present but the value is <code class="prval">null</code> or <code class="type">radio</code> or <code class="type">checkbox</code> is not checked.</td>
+            </tr>
+
+            <tr>
+                <td><code class="attr">step</code></td>
+                <td><code class="prprty">validityState.stepMismatch</code></td>
+                <td>The value doesn't match the step increment. Increment default is 1, os only integers are valie on 
+                    <code class="type">type="number"</code> is step is not included. <code class="type">step="any"</code> will never throw this error.</td>
+            </tr>
+
+            <tr>
+                <td><code class="attr">type</code></td>
+                <td><code class="prprty">validityState.typeMismatch</code></td>
+                <td>Occurs when the value is not of the correct type, for example a email does not contain an 
+                    <code class="prval">@</code> or a url doesn't contain a protocol.
+                </td>
+            </tr>
+            
+        </table>
+
+        <p>if a form control doesn't have the <code class="attr">required</code> attribute, no value, or an empty string, is not invalid. 
+        Even if the above attribute are present, with the exception of required, and empty string will not lead to an error.</p>
+
+        <p>We can set limits on what values we accept, and supporting browsers will natively validate these form values and alert the 
+            user if there is a mistake when the form is submitted.
+        </p>
+
+        <p>In additon to the errors described in the table above, the <code class="prprty">validityState</code> interface contains the
+        <code class="prprty">badInput</code>, <code class="prprty">valid</code>, and <code class="prprty">customError</code> boolean readonly 
+        property. The validity object includes:</p>
+
+        <ul>
+            <li><code class="prprty">validityState.valueMissing</code></li>
+            <li><code class="prprty">validityState.typeMismatch</code></li>
+            <li><code class="prprty">validityState.patternMismatch</code></li>
+            <li><code class="prprty">validityState.tooLong</code></li>
+            <li><code class="prprty">validityState.tooShort</code></li>
+            <li><code class="prprty">validityState.rangeUnderflow</code></li>
+            <li><code class="prprty">validityState.rangeOverflow</code></li>
+            <li><code class="prprty">validityState.stepMismatch</code></li>
+            <li><code class="prprty">validityState.badInput</code></li>
+            <li><code class="prprty">validityState.valid</code></li>
+            <li><code class="prprty">validityState.customError</code></li>
+        </ul>
+
+        <p>for each of these boolean properties, a value of <code class="prval">true</code> indicate that the specified reason validation may have faied is true, 
+            with the exception of the <code class="prprty">valid</code> property, which is <code class="prval">true</code> if the element's value obeys all constraints.</p>
+        
+        <p>If there is an error, supporting browsers will both alert the user and prevent the form from being submitted. A word of caution: if a custom error is set to a truthy
+            value (anything other than the emtpy string or <code class="prval">null</code>), the form will be prvented from beinng submitted. if there is no custom error message,
+            and none of the other properties return true, <code class="prprty">valid</code> will be true, and the form can be submitted.
+        </p>
+    </div>
+
+    <div>
+        <h2>Accessibility Concerns</h2>
+        <h3>Labels</h3>
+        <p>when inluding inputs, it si an accessibility requirement to add labels along side. This is needed so those who use assistive technologies can tell what the input is for.
+            Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increase the area 
+            a user can click or touch to activate the form control. This is especially userful (and even needed) for radio buttons and checkboxes, which are tiny. 
+        </p>
+
+        <h3>Size</h3>
+        <p>Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control 
+            issue and people using non-precise form of input such as stylus or fingers. A minimum interactive size of 44x44 css pixles is recommended.
+        </p>
+    </div>
+</body>
+</html>
+
+
+
