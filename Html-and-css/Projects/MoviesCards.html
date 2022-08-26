@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Card</title>
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+
+        }
+
+        body{
+            background-image: url(587508.png);
+            background-position: center center;
+            background-size:cover;
+            background-repeat: no-repeat;
+            /* width: 100%; */
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .movies-card-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 95%;
+            height: 700px;
+
+            border: 1px solid lightslategray;
+            background-color: rgba(245, 245, 245, 0.29);
+            backdrop-filter: blur(60%);
+            border-radius: 20px;
+        }
+
+        .movie-card{
+            padding: 5px;
+            background-color: red;
+            margin: 10px;
+            height: 400px;
+            width:300px;
+            background-position: center center;
+            background-size: cover;
+            border-radius: 10px;
+            border-color: lightslategray;
+            display: flex;
+            /* align-items: flex-end; */
+            justify-content: flex-end;
+            flex-direction: column;
+            color: whitesmoke;
+            min-width: 300px;
+            transition: min-width 400ms;
+        }
+        
+        .movie-card:active{
+            min-width: 500px;
+        }
+
+        #movie1{
+            background-image: url(movie3.jpg);
+        }
+
+        #movie2{
+            background-image: url(movie1.jpg);
+        }
+        
+        #movie3{
+            background-image: url(movie2.jpg);
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="movies-card-container">
+
+        
+        <div id="movie1" class="movie-card">
+            <h2 class="movie-title">Gabbar</h2>
+            <p class="movie-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita odit blanditiis, ratione iusto reprehenderit iure? Eum, ratione.</p>
+        </div>
+
+        <div id="movie2" class="movie-card">
+            <h2 class="movie-title">War</h2>
+            <p class="movie-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita odit blanditiis, ratione iusto reprehenderit iure? Eum, ratione.</p>
+        </div>
+
+        <div id="movie3" class="movie-card">
+            <h2 class="movie-title">Muje Yaad Nhi Hain</h2>
+            <p class="movie-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita odit blanditiis, ratione iusto reprehenderit iure? Eum, ratione.</p>
+        </div>
+        
+
+
+    </div>
+
+</body>
+</html>
