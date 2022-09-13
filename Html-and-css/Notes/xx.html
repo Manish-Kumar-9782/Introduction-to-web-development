@@ -1,0 +1,4274 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script>
+      (() => {
+        let theme = localStorage.getItem("theme");
+        document.querySelector("html").dataset.theme = theme ? theme : "light";
+      })();
+    </script>
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <link
+      media="print"
+      href="https://www.javascripttutorial.net/wp-content/cache/autoptimize/css/autoptimize_b5360d8fe28af112b0854d10ad4c9c05.css"
+      rel="stylesheet"
+    />
+    <style id="aoatfcss" media="all">
+      html {
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      main {
+        display: block;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+      }
+
+      pre {
+        font-family: monospace, monospace;
+        font-size: 1em;
+      }
+
+      a {
+        background-color: transparent;
+      }
+
+      img {
+        border-style: none;
+      }
+
+      strong {
+        font-weight: bolder;
+      }
+
+      code {
+        font-family: monospace, monospace;
+        font-size: 1em;
+      }
+
+      small {
+        font-size: 80%;
+      }
+
+      button,
+      input,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+
+      button,
+      input {
+        overflow: visible;
+      }
+
+      button {
+        text-transform: none;
+      }
+
+      [type="button"],
+      [type="submit"],
+      button {
+        -webkit-appearance: button;
+      }
+
+      [type="button"]::-moz-focus-inner,
+      [type="submit"]::-moz-focus-inner,
+      button::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+
+      [type="button"]:-moz-focusring,
+      [type="submit"]:-moz-focusring,
+      button:-moz-focusring {
+        outline: 1px dotted ButtonText;
+      }
+
+      textarea {
+        overflow: auto;
+      }
+
+      [type="search"] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+      }
+
+      [type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+
+      .site-header {
+        border-bottom: 1px solid var(--header-border-color);
+      }
+
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--logo-url) no-repeat center center;
+        height: var(--logo-height);
+        width: var(--logo-width);
+      }
+
+      .header-wrapper {
+        position: relative;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      .site-branding {
+        flex-shrink: 0;
+        flex-grow: 0;
+        padding: 0 0.5rem;
+      }
+
+      .site-branding a {
+        display: block;
+        padding: 0.5rem;
+      }
+
+      .site-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .site-navigation a {
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--menu-color);
+        padding: 0.5rem;
+      }
+
+      .site-navigation a:visited {
+        color: var(--menu-color);
+      }
+
+      .menu-toggle {
+        display: block;
+        background: var(--hamburger-icon) no-repeat center center;
+        height: 50px;
+        width: 50px;
+        outline: 0;
+        border: none;
+      }
+
+      .site-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-100%);
+        padding: 0;
+        margin: 0;
+      }
+
+      .site-menu li {
+        list-style: none;
+        border-bottom: solid 1px var(--border-color);
+        padding: 0.5rem 0;
+      }
+
+      .site-menu li:first-child {
+        border-top: solid 1px var(--border-color);
+      }
+
+      .site-menu a {
+        display: block;
+      }
+
+      .sub-menu {
+        display: none;
+      }
+
+      .menu-item-has-children a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .menu-item-has-children > a:after {
+        content: "";
+        -webkit-mask: var(--down-icon);
+        mask: var(--down-icon);
+        mask-size: cover;
+        -webkit-mask-size: cover;
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        background-color: var(--text-color);
+        margin-left: 5px;
+      }
+
+      .menu-item-has-children .sub-menu li {
+        border: none;
+      }
+
+      .menu-item-has-children .sub-menu a {
+        font-size: 0.85rem;
+        margin-left: 1rem;
+        text-transform: none;
+      }
+
+      svg {
+        fill: currentColor;
+      }
+
+      .switch-theme {
+        padding: 0.25rem 1rem;
+        border-radius: 1rem;
+        width: 20px;
+        height: 20px;
+      }
+
+      .switch-theme svg {
+        margin-right: 0.25rem;
+      }
+
+      html .light-mode-icon {
+        display: none;
+      }
+
+      html .dark-mode-icon {
+        display: inline;
+      }
+
+      @media (min-width: 768px) {
+        .menu-item-has-children .sub-menu a {
+          margin-left: 0;
+          font-size: 0.8rem;
+        }
+
+        .menu-toggle {
+          display: none;
+        }
+
+        .site-branding a {
+          padding: 0;
+        }
+
+        .site-menu {
+          opacity: 1;
+          visibility: visible;
+          position: relative;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          transform: translateY(0);
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+        }
+
+        .site-navigation a {
+          padding: 1.25rem 0.75rem;
+        }
+
+        .site-menu li {
+          padding: 0;
+        }
+
+        .sub-menu a {
+          padding: 0.65rem;
+        }
+
+        .menu-item-has-children {
+          position: relative;
+        }
+
+        .site-menu .sub-menu {
+          display: none;
+          background-color: var(--submenu-bg-color);
+          border: solid 1px var(--border-color);
+          border-radius: 0.25rem;
+          min-width: 200px;
+        }
+
+        .site-menu > .menu-item-has-children > a:after {
+          content: "";
+          -webkit-mask: var(--down-icon);
+          mask: var(--down-icon);
+          mask-size: cover;
+          -webkit-mask-size: cover;
+          display: inline-block;
+          height: 1rem;
+          width: 1rem;
+          background-color: var(--text-color);
+        }
+
+        .site-menu > .menu-item {
+          border-bottom: solid 1px transparent;
+        }
+
+        .site-menu > .current-menu-item,
+        .site-menu > .current-menu-parent {
+          border-bottom: solid 1px var(--current-color);
+        }
+
+        .site-menu li:first-child,
+        .site-menu li:last-child {
+          border-top: none;
+        }
+
+        .site-footer-widgets {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .site-footer-sidebar {
+          flex: 1;
+          padding: 1rem;
+        }
+      }
+
+      .entry-content .wp-block-group > div {
+        background-color: var(--body-bg-color);
+        border: solid 1px var(--section-border-color);
+        border-radius: 15px;
+        box-shadow: 0 3px 0 rgba(84, 94, 111, 0.2);
+        padding: 20px;
+        margin: 0;
+        margin-bottom: 30px;
+      }
+
+      .entry-content .wp-block-group > div ul {
+        margin: 0;
+      }
+
+      .entry-content .wp-block-group > div h2 {
+        padding-left: 0;
+        margin: 0;
+        margin-bottom: 10px;
+      }
+
+      .page-header {
+        padding: 0 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .search-form {
+        margin: 1rem 0;
+      }
+
+      ::-webkit-scrollbar {
+        width: 0.5rem;
+        height: 0.5rem;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #b8c0c8;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #708090;
+        border-radius: 10px;
+      }
+
+      .alignright {
+        float: right;
+        margin: 0.5em 0 0.5em 1em;
+      }
+
+      :root {
+        --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        --font-family-code: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo,
+          Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        --body-bg-color: #fff;
+        --text-color: #212529;
+        --primary-color: #f2bb13;
+        --header-bg-color: #fff;
+        --header-border-color: #e7ebed;
+        --heading-color: #374151;
+        --link-color: #00369a;
+        --link-color-hover: #00369a;
+        --title-color: #323232;
+        --footer-bg-color: #f8f9fa;
+        --footer-color: #495057;
+        --footer-link-color: #495057;
+        --footer-link-color-hover: #00369a;
+        --ads-label-color: #666;
+        --down-icon: url("data:image/svg+xml;utf8,");
+        --hamburger-icon: url("data:image/svg+xml;utf8,");
+        --x-icon: url("data:image/svg+xml;utf8,");
+        --current-color: #f9dc5c;
+        --menu-color: #323330;
+        --border-color: #f4f4f4;
+        --hover-background-color: #f4f4f4;
+        --menu-background-color: #fff;
+        --submenu-bg-color: #fff;
+        --toggle-color: #f4f4f4;
+        --code-badge-color: #fff;
+        --button-bg-color: #ffc107;
+        --button-color: #323330;
+        --button-bg-color-hover: #ffc107d3;
+        --button-color-hover: #323330;
+        --button-border-color: #ffc107;
+        --section-border-color: #ddd;
+        --inline-code-bg-color: #f5f5f5;
+        --inline-code-color: #da1039;
+        --input-bg-color: #fff;
+        --input-color: #212529;
+        --input-border-color: #e3e3e3;
+        --input-border-focus-color: #e3e3e3;
+        --image-filter: grayscale(0%);
+        --themeable-image-filter: none;
+        --svg-color: #323330;
+        --page-nav-bg-color: #fff;
+        --mark-bg-color: #fff6ea;
+        --feature-image-bg-color: #ffd040;
+        --feature-image-filter: grayscale(100%);
+        --fancy-list-color: rgba(0, 0, 0, 0.15);
+        --output-bg-color: #f9fafb;
+        --output-border-color: #e7ebed;
+        --post-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        --post-border: none;
+      }
+
+      .wp-block-code {
+        position: relative;
+      }
+
+      .wp-block-image {
+        margin-bottom: 1em;
+      }
+
+      .wp-block-image img {
+        max-width: 100%;
+      }
+
+      .wp-block-image:not(.is-style-rounded) img {
+        border-radius: inherit;
+      }
+
+      .wp-block-image .alignright {
+        display: table;
+      }
+
+      .wp-block-image .alignright {
+        float: right;
+        margin: 0.5em 0 0.5em 1em;
+      }
+
+      .feature-page {
+        display: flex;
+        align-items: flex-start;
+        padding: 0;
+        margin: 0 0 1rem;
+      }
+
+      .feature-page > .feature-image {
+        width: 150px;
+        height: 150px;
+        margin: 0 1rem 0 0;
+        border-radius: 50%;
+        background-color: var(--feature-image-bg-color, "#fff");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .feature-page > .feature-body {
+        flex: 1;
+      }
+
+      .feature-page h3 {
+        margin: 0 0 0.5rem;
+      }
+
+      .feature-cat {
+        background-color: var(--body-bg-color, #fff);
+        border: solid 1px var(--section-border-color, #ddd);
+        border-radius: 0.5rem;
+        box-shadow: 0 3px 0 rgb(84 94 111/20%);
+        padding: 0.5rem 1rem;
+        margin: 0;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .feature-cat-title {
+        font-size: 1rem;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        margin-bottom: 0;
+        text-transform: uppercase;
+      }
+
+      .feature-cat-title a {
+        font-weight: 700;
+        color: var(--heading-color, #333);
+      }
+
+      .feature-cat-title > i.line {
+        width: 1.15em;
+        border-bottom: 1px solid #b55;
+        position: absolute;
+        bottom: -1px;
+      }
+
+      .feature-cat-title div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .feature-cat-title img {
+        margin-right: 0.3rem;
+        filter: var(--themeable-image-filter, "none");
+      }
+
+      .feature-cat .count {
+        font-size: 0.9rem;
+      }
+
+      .feature-cat .feature-list li {
+        margin: 0 0 1rem;
+      }
+
+      .feature-list {
+        list-style: none;
+      }
+
+      .feature-list li:before {
+        content: "";
+        border-color: transparent #ccc;
+        border-style: solid;
+        border-width: 0.3em 0 0.3em 0.35em;
+        display: block;
+        height: 0;
+        width: 0;
+        left: -0.75rem;
+        top: 1.25rem;
+        position: relative;
+        background: 0 0;
+        margin: 0;
+      }
+
+      @media (min-width: 768px) {
+        .feature-cats {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 3rem;
+        }
+      }
+
+      .more-link {
+        height: 1rem;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+      }
+
+      .more-link .btn {
+        font-size: 10px;
+        padding-bottom: 0;
+        border-radius: 2px;
+        border-bottom-width: 2px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: var(--button-bg-color, #e73827);
+        border-color: var(--button-border-color, transparent);
+        padding: 1px 5px;
+        display: inline-block;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+      }
+
+      html {
+        background: var(--body-bg-color);
+        color: var(--text-color);
+        font-size: 1rem;
+      }
+
+      body {
+        font-family: var(--font-family);
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      img {
+        height: auto;
+        max-width: 100%;
+      }
+
+      figure {
+        margin: 1em 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-weight: 400;
+        color: var(--heading-color);
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 1.875rem;
+        margin-bottom: 1.7rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 1.3125rem;
+        margin-bottom: 0.875rem;
+      }
+
+      .screen-reader-text {
+        border: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+        clip-path: inset(50%);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: fixed !important;
+        width: 1px;
+        word-wrap: normal !important;
+        outline-style: dashed;
+        outline-width: 0.125rem;
+        outline-color: var(--text-color);
+      }
+
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: var(--link-color);
+      }
+
+      ul {
+        padding: 0;
+      }
+
+      .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .breadcrumbs {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+      }
+
+      article {
+        padding: 0 0.5rem;
+      }
+
+      aside {
+        padding: 1rem 0.5rem;
+      }
+
+      .site-footer {
+        max-width: 100%;
+      }
+
+      .site-footer-widgets {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .site-footer {
+        padding: 1rem;
+      }
+
+      .site-footer-sidebar {
+        margin-bottom: 1rem;
+      }
+
+      .site-footer {
+        padding: 10px;
+        background-color: var(--footer-bg-color);
+        color: var(--footer-color);
+      }
+
+      .site-footer a {
+        color: var(--footer-link-color);
+      }
+
+      .entry-title {
+        color: var(--title-color);
+        font-weight: 400;
+      }
+
+      .entry-title a {
+        font-size: 1.25rem;
+      }
+
+      .post-excerpt {
+        background-color: var(--body-bg-color);
+        border: solid 1px var(--section-border-color);
+        border-radius: 1rem;
+        box-shadow: 0 3px 0 rgb(84 94 111/20%);
+        padding: 0.5rem 1rem;
+        margin: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      .widget-title {
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 0 0 1rem;
+        margin: 0;
+      }
+
+      .widget_search {
+        margin-bottom: 1.5rem;
+      }
+
+      .widget .menu {
+        margin: 0 0 1.5rem;
+      }
+
+      .ad {
+        text-align: left;
+        margin: 0.5rem 0;
+      }
+
+      p code {
+        font-family: var(--font-family-code);
+        font-size: 0.875rem;
+        font-weight: 400;
+        background-color: var(--inline-code-bg-color);
+        color: var(--inline-code-color);
+        padding: 0.25em 0.5em 0.25em;
+        border-radius: 3px;
+      }
+
+      .wp-block-code code {
+        white-space: pre !important;
+      }
+
+      .ad-300 {
+        width: 300px;
+        height: 280px;
+        overflow: hidden;
+      }
+
+      .ad:before {
+        content: "Advertisements";
+        color: var(--ads-label-color);
+        font-size: 10px;
+        display: block;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .ad-336 {
+        width: 336px;
+        height: 320px;
+        overflow: hidden;
+      }
+
+      code.hljs {
+        padding: 1rem;
+      }
+
+      .search-form {
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .search-form input[type="search"] {
+        border: 1px solid var(--input-border-color);
+        border-radius: 3px;
+        font-size: 1rem;
+        padding: 16px;
+        width: 100%;
+        outline-offset: -2px;
+        outline: 0;
+        background-color: var(--input-bg-color);
+        color: var(--input-color);
+      }
+
+      .search-form input[type="submit"] {
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+
+      .entry-content ul {
+        padding-left: 1rem;
+      }
+
+      .entry-content li {
+        margin: 0 0 0.5rem 1rem;
+      }
+
+      .widget ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      .widget li {
+        list-style-type: none;
+        text-align: left;
+        word-wrap: break-word;
+        font-size: 1rem;
+        padding: 0.25rem 0;
+      }
+
+      .widget li:first-child {
+        padding-top: 0;
+      }
+
+      .widget li a {
+        display: inline-block;
+        padding: 0 0 0.25rem;
+      }
+
+      .entry-content .wp-block-group ul {
+        padding-left: 0;
+        list-style: none;
+      }
+
+      .entry-content .wp-block-group ul > li:before {
+        content: "";
+        border-color: transparent #ccc;
+        border-style: solid;
+        border-width: 0.3em 0 0.3em 0.35em;
+        display: block;
+        height: 0;
+        width: 0;
+        left: -0.75rem;
+        top: 1.25rem;
+        position: relative;
+        background: 0 0;
+        margin: 0;
+      }
+
+      .wp-block-image .alignright {
+        float: right;
+        margin: 0.5em 0 0.5em 1em;
+      }
+
+      @media (min-width: 768px) {
+        body {
+          font-size: 1rem;
+        }
+      }
+
+      @media (min-width: 1140px) {
+        body {
+          font-size: 1rem;
+        }
+
+        .site {
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+        }
+
+        .site-inner {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .site-main {
+          width: 730px;
+        }
+
+        aside {
+          width: 300px;
+          padding: 1rem 0.5rem;
+        }
+
+        .wrap {
+          width: 1050px;
+          margin: 0 auto;
+        }
+
+        .site-header {
+          background: var(--header-bg-color);
+          width: 100%;
+        }
+
+        .header-wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+
+      .wth-title {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+
+      .wth-btn {
+        display: inline-block;
+        border: none;
+        outline: 0;
+        padding: 10px 25px;
+        border-radius: 3px;
+        font-size: 0.9rem;
+      }
+
+      .wth-form-wrapper {
+        margin-bottom: 4rem;
+      }
+
+      .wth-btn-submit {
+        background: var(--button-bg-color);
+        color: var(--button-color);
+        border: solid 1px var(--button-border-color);
+        margin-top: 10px;
+      }
+
+      .wth-btn-cancel {
+        background-color: #fff;
+        border: solid 1px var(--button-bg-color);
+        color: var(--button-bg-color);
+        margin-top: 10px;
+      }
+
+      .wth-message {
+        background-color: var(--input-bg-color);
+        border: 1px solid var(--input-border-color);
+        min-height: 150px;
+        width: 96%;
+        padding: 2%;
+        display: block;
+        border-radius: 5px;
+        outline: 0;
+        color: var(--text-color);
+      }
+
+      .wth-form {
+        display: block;
+        text-align: left;
+      }
+
+      .wth-form.hidden {
+        display: none;
+      }
+
+      .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #282828;
+      }
+
+      .hljs {
+        color: #ebdbb2;
+      }
+
+      .hljs-keyword {
+        color: #fb4934;
+      }
+
+      .hljs-title {
+        color: #83a598;
+      }
+
+      .hljs-meta {
+        color: #fe8019;
+      }
+
+      .hljs-class {
+        color: #8ec07c;
+      }
+
+      .hljs-comment {
+        color: #928374;
+      }
+
+      .hljs-comment {
+        font-style: italic;
+      }
+
+      .hljs-built_in {
+        color: #83a598;
+      }
+
+      .hljs-string {
+        color: #b8bb26;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      media="print"
+      href="https://www.javascripttutorial.net/wp-content/cache/autoptimize/css/autoptimize_1cdf261f81789650362bead9fcc7ef5b.css"
+      onload="this.onload=null;this.media='all';"
+    />
+    <noscript id="aonoscrcss">
+      <link
+        media="all"
+        href="https://www.javascripttutorial.net/wp-content/cache/autoptimize/css/autoptimize_1cdf261f81789650362bead9fcc7ef5b.css"
+        rel="stylesheet"
+      />
+    </noscript>
+    <title>JavaScript Syntax</title>
+    <meta
+      name="description"
+      content="In this tutorial, you will learn about JavaScript syntax including case-sensitivity, identifiers, comments and statements."
+    />
+    <link
+      rel="canonical"
+      href="https://www.javascripttutorial.net/javascript-syntax/"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="JavaScript Syntax" />
+    <meta
+      property="og:description"
+      content="In this tutorial, you will learn about JavaScript syntax including case-sensitivity, identifiers, comments and statements."
+    />
+    <meta
+      property="og:url"
+      content="https://www.javascripttutorial.net/javascript-syntax/"
+    />
+    <meta property="og:site_name" content="JavaScript Tutorial" />
+    <meta
+      property="article:modified_time"
+      content="2022-01-23T01:12:20+00:00"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:label1" content="Est. reading time" />
+    <meta name="twitter:data1" content="3 minutes" />
+    <script type="application/ld+json" class="yoast-schema-graph">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://www.javascripttutorial.net/javascript-syntax/",
+            "url": "https://www.javascripttutorial.net/javascript-syntax/",
+            "name": "JavaScript Syntax",
+            "isPartOf": {
+              "@id": "https://www.javascripttutorial.net/#website"
+            },
+            "datePublished": "2016-08-03T08:58:41+00:00",
+            "dateModified": "2022-01-23T01:12:20+00:00",
+            "description": "In this tutorial, you will learn about JavaScript syntax including case-sensitivity, identifiers, comments and statements.",
+            "breadcrumb": {
+              "@id": "https://www.javascripttutorial.net/javascript-syntax/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": [
+                  "https://www.javascripttutorial.net/javascript-syntax/"
+                ]
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.javascripttutorial.net/javascript-syntax/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.javascripttutorial.net/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "JavaScript Tutorial",
+                "item": "https://www.javascripttutorial.net/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "JavaScript Syntax"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.javascripttutorial.net/#website",
+            "url": "https://www.javascripttutorial.net/",
+            "name": "JavaScript Tutorial",
+            "description": "A comprehensive JavaScript Tutorial",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.javascripttutorial.net/?s={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    </script>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono%3Awght%40400&#038;display=swap&#038;ver=1.0.0"
+        type="text/css"
+        media="all"
+      />
+    </noscript>
+    <link
+      rel="stylesheet"
+      id="ev-google-fonts-css"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono%3Awght%40400&#038;display=swap&#038;ver=1.0.0"
+      type="text/css"
+      media="print"
+      onload="this.onload=null;this.media='all';"
+    />
+    <style id="global-styles-inline-css" type="text/css">
+      body {
+        --wp--preset--color--black: #000000;
+        --wp--preset--color--cyan-bluish-gray: #abb8c3;
+        --wp--preset--color--white: #ffffff;
+        --wp--preset--color--pale-pink: #f78da7;
+        --wp--preset--color--vivid-red: #cf2e2e;
+        --wp--preset--color--luminous-vivid-orange: #ff6900;
+        --wp--preset--color--luminous-vivid-amber: #fcb900;
+        --wp--preset--color--light-green-cyan: #7bdcb5;
+        --wp--preset--color--vivid-green-cyan: #00d084;
+        --wp--preset--color--pale-cyan-blue: #8ed1fc;
+        --wp--preset--color--vivid-cyan-blue: #0693e3;
+        --wp--preset--color--vivid-purple: #9b51e0;
+        --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(
+          135deg,
+          rgba(6, 147, 227, 1) 0%,
+          rgb(155, 81, 224) 100%
+        );
+        --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(
+          135deg,
+          rgb(122, 220, 180) 0%,
+          rgb(0, 208, 130) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(
+          135deg,
+          rgba(252, 185, 0, 1) 0%,
+          rgba(255, 105, 0, 1) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(
+          135deg,
+          rgba(255, 105, 0, 1) 0%,
+          rgb(207, 46, 46) 100%
+        );
+        --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(
+          135deg,
+          rgb(238, 238, 238) 0%,
+          rgb(169, 184, 195) 100%
+        );
+        --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(
+          135deg,
+          rgb(74, 234, 220) 0%,
+          rgb(151, 120, 209) 20%,
+          rgb(207, 42, 186) 40%,
+          rgb(238, 44, 130) 60%,
+          rgb(251, 105, 98) 80%,
+          rgb(254, 248, 76) 100%
+        );
+        --wp--preset--gradient--blush-light-purple: linear-gradient(
+          135deg,
+          rgb(255, 206, 236) 0%,
+          rgb(152, 150, 240) 100%
+        );
+        --wp--preset--gradient--blush-bordeaux: linear-gradient(
+          135deg,
+          rgb(254, 205, 165) 0%,
+          rgb(254, 45, 45) 50%,
+          rgb(107, 0, 62) 100%
+        );
+        --wp--preset--gradient--luminous-dusk: linear-gradient(
+          135deg,
+          rgb(255, 203, 112) 0%,
+          rgb(199, 81, 192) 50%,
+          rgb(65, 88, 208) 100%
+        );
+        --wp--preset--gradient--pale-ocean: linear-gradient(
+          135deg,
+          rgb(255, 245, 203) 0%,
+          rgb(182, 227, 212) 50%,
+          rgb(51, 167, 181) 100%
+        );
+        --wp--preset--gradient--electric-grass: linear-gradient(
+          135deg,
+          rgb(202, 248, 128) 0%,
+          rgb(113, 206, 126) 100%
+        );
+        --wp--preset--gradient--midnight: linear-gradient(
+          135deg,
+          rgb(2, 3, 129) 0%,
+          rgb(40, 116, 252) 100%
+        );
+        --wp--preset--duotone--dark-grayscale: url("#wp-duotone-dark-grayscale");
+        --wp--preset--duotone--grayscale: url("#wp-duotone-grayscale");
+        --wp--preset--duotone--purple-yellow: url("#wp-duotone-purple-yellow");
+        --wp--preset--duotone--blue-red: url("#wp-duotone-blue-red");
+        --wp--preset--duotone--midnight: url("#wp-duotone-midnight");
+        --wp--preset--duotone--magenta-yellow: url("#wp-duotone-magenta-yellow");
+        --wp--preset--duotone--purple-green: url("#wp-duotone-purple-green");
+        --wp--preset--duotone--blue-orange: url("#wp-duotone-blue-orange");
+        --wp--preset--font-size--small: 13px;
+        --wp--preset--font-size--medium: 20px;
+        --wp--preset--font-size--large: 36px;
+        --wp--preset--font-size--x-large: 42px;
+      }
+
+      .has-black-color {
+        color: var(--wp--preset--color--black) !important;
+      }
+
+      .has-cyan-bluish-gray-color {
+        color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+
+      .has-white-color {
+        color: var(--wp--preset--color--white) !important;
+      }
+
+      .has-pale-pink-color {
+        color: var(--wp--preset--color--pale-pink) !important;
+      }
+
+      .has-vivid-red-color {
+        color: var(--wp--preset--color--vivid-red) !important;
+      }
+
+      .has-luminous-vivid-orange-color {
+        color: var(--wp--preset--color--luminous-vivid-orange) !important;
+      }
+
+      .has-luminous-vivid-amber-color {
+        color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+
+      .has-light-green-cyan-color {
+        color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+
+      .has-vivid-green-cyan-color {
+        color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+
+      .has-pale-cyan-blue-color {
+        color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+
+      .has-vivid-cyan-blue-color {
+        color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+
+      .has-vivid-purple-color {
+        color: var(--wp--preset--color--vivid-purple) !important;
+      }
+
+      .has-black-background-color {
+        background-color: var(--wp--preset--color--black) !important;
+      }
+
+      .has-cyan-bluish-gray-background-color {
+        background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+
+      .has-white-background-color {
+        background-color: var(--wp--preset--color--white) !important;
+      }
+
+      .has-pale-pink-background-color {
+        background-color: var(--wp--preset--color--pale-pink) !important;
+      }
+
+      .has-vivid-red-background-color {
+        background-color: var(--wp--preset--color--vivid-red) !important;
+      }
+
+      .has-luminous-vivid-orange-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+
+      .has-luminous-vivid-amber-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-amber
+        ) !important;
+      }
+
+      .has-light-green-cyan-background-color {
+        background-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+
+      .has-vivid-green-cyan-background-color {
+        background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+
+      .has-pale-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+
+      .has-vivid-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+
+      .has-vivid-purple-background-color {
+        background-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+
+      .has-black-border-color {
+        border-color: var(--wp--preset--color--black) !important;
+      }
+
+      .has-cyan-bluish-gray-border-color {
+        border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+
+      .has-white-border-color {
+        border-color: var(--wp--preset--color--white) !important;
+      }
+
+      .has-pale-pink-border-color {
+        border-color: var(--wp--preset--color--pale-pink) !important;
+      }
+
+      .has-vivid-red-border-color {
+        border-color: var(--wp--preset--color--vivid-red) !important;
+      }
+
+      .has-luminous-vivid-orange-border-color {
+        border-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+
+      .has-luminous-vivid-amber-border-color {
+        border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+
+      .has-light-green-cyan-border-color {
+        border-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+
+      .has-vivid-green-cyan-border-color {
+        border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+
+      .has-pale-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+
+      .has-vivid-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+
+      .has-vivid-purple-border-color {
+        border-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+
+      .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+        background: var(
+          --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple
+        ) !important;
+      }
+
+      .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+        background: var(
+          --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan
+        ) !important;
+      }
+
+      .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange
+        ) !important;
+      }
+
+      .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-orange-to-vivid-red
+        ) !important;
+      }
+
+      .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+        background: var(
+          --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray
+        ) !important;
+      }
+
+      .has-cool-to-warm-spectrum-gradient-background {
+        background: var(
+          --wp--preset--gradient--cool-to-warm-spectrum
+        ) !important;
+      }
+
+      .has-blush-light-purple-gradient-background {
+        background: var(--wp--preset--gradient--blush-light-purple) !important;
+      }
+
+      .has-blush-bordeaux-gradient-background {
+        background: var(--wp--preset--gradient--blush-bordeaux) !important;
+      }
+
+      .has-luminous-dusk-gradient-background {
+        background: var(--wp--preset--gradient--luminous-dusk) !important;
+      }
+
+      .has-pale-ocean-gradient-background {
+        background: var(--wp--preset--gradient--pale-ocean) !important;
+      }
+
+      .has-electric-grass-gradient-background {
+        background: var(--wp--preset--gradient--electric-grass) !important;
+      }
+
+      .has-midnight-gradient-background {
+        background: var(--wp--preset--gradient--midnight) !important;
+      }
+
+      .has-small-font-size {
+        font-size: var(--wp--preset--font-size--small) !important;
+      }
+
+      .has-medium-font-size {
+        font-size: var(--wp--preset--font-size--medium) !important;
+      }
+
+      .has-large-font-size {
+        font-size: var(--wp--preset--font-size--large) !important;
+      }
+
+      .has-x-large-font-size {
+        font-size: var(--wp--preset--font-size--x-large) !important;
+      }
+    </style>
+    <link
+      rel="https://api.w.org/"
+      href="https://www.javascripttutorial.net/wp-json/"
+    />
+    <link
+      rel="alternate"
+      type="application/json"
+      href="https://www.javascripttutorial.net/wp-json/wp/v2/pages/101"
+    />
+    <link
+      rel="EditURI"
+      type="application/rsd+xml"
+      title="RSD"
+      href="https://www.javascripttutorial.net/xmlrpc.php?rsd"
+    />
+    <link
+      rel="wlwmanifest"
+      type="application/wlwmanifest+xml"
+      href="https://www.javascripttutorial.net/wp-includes/wlwmanifest.xml"
+    />
+    <meta name="generator" content="WordPress 6.0.1" />
+    <link rel="shortlink" href="https://www.javascripttutorial.net/?p=101" />
+    <link
+      rel="alternate"
+      type="application/json+oembed"
+      href="https://www.javascripttutorial.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.javascripttutorial.net%2Fjavascript-syntax%2F"
+    />
+    <link
+      rel="alternate"
+      type="text/xml+oembed"
+      href="https://www.javascripttutorial.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.javascripttutorial.net%2Fjavascript-syntax%2F&#038;format=xml"
+    />
+    <style>
+      html {
+        --logo-url: url("https://www.javascripttutorial.net/wp-content/uploads/2021/04/javascripttutorial.svg");
+        --logo-width: 154px;
+        --logo-height: 55px;
+        --icon-copy-url: url("https://www.javascripttutorial.net/wp-content/themes/evolution/img/copy-light.svg");
+        --icon-check-url: url("https://www.javascripttutorial.net/wp-content/themes/evolution/img/check-light.svg");
+        --feature-image-bg-color: #fff;
+      }
+
+      html[data-theme="dark"] {
+        --logo-url: url("https://www.javascripttutorial.net/wp-content/uploads/2021/04/javascripttutorial_dark.svg");
+        --logo-width: 154px;
+        --logo-height: 55px;
+      }
+
+      html[data-theme="dark"] {
+        --body-bg-color: #171717;
+        --text-color: #e3e3e3;
+        --primary-color: #4db2ff;
+        --header-bg-color: #171717;
+        --header-border-color: #454545;
+        --heading-color: #e3e3e3;
+        --link-color: #4db2ff;
+        --link-color-hover: #0091ff;
+        --title-color: #e3e3e3;
+        --list-item-color: #e3e3e3;
+        --badge-bg-color: #e3e3e3;
+        --badge-color: #323330;
+        --code-badge-color: #fff;
+        --footer-bg-color: #2e2e2e;
+        --footer-color: #e3e3e3;
+        --footer-link-color: #e3e3e3;
+        --footer-link-color-hover: #c7c7c7;
+        --ads-label-color: #e3e3e3;
+        --down-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+        --hamburger-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>');
+        --x-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="white"  viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>');
+        --current-color: #e3e3e3;
+        --menu-color: #e3e3e3;
+        --border-color: #454545;
+        --hover-background-color: #242424;
+        --menu-background-color: #171717;
+        --submenu-bg-color: #2e2e2e;
+        --toggle-color: #242424;
+        --button-bg-color: #282828;
+        --button-color: #e3e3e3;
+        --button-bg-color-hover: #323330;
+        --button-color-hover: #e3e3e3;
+        --button-border-color: #282828;
+        --section-border-color: #454545;
+        --inline-code-bg-color: #454545;
+        --inline-code-color: #e3e3e3;
+        --input-bg-color: #2e2e2e;
+        --input-color: #e3e3e3;
+        --input-border-color: #e3e3e3;
+        --input-border-focus-color: #4db2ff;
+        --image-filter: grayscale(50%);
+        --themeable-image-filter: invert(1) sepia(0) saturate(1)
+          hue-rotate(0deg);
+        --svg-color: #f4f4f4;
+        --page-nav-bg-color: inherit;
+        --mark-bg-color: #454545;
+        --feature-image-bg-color: #282828;
+        --feature-image-filter: grayscale(50%);
+        --fancy-list-color: #e3e3e3;
+        --output-bg-color: #2e2e2e;
+        --output-border-color: #2e2e2e;
+      }
+    </style>
+    <style media="print">
+      .site-main:before {
+        content: url("https://www.javascripttutorial.net/wp-content/uploads/2021/04/javascripttutorial.svg");
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        max-width: 200px;
+      }
+    </style>
+    <script
+      async
+      src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+    ></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Q3E3XZ7RL7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-Q3E3XZ7RL7");
+    </script>
+    <link
+      rel="icon"
+      href="https://www.javascripttutorial.net/wp-content/uploads/2020/02/favicon-150x150.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="https://www.javascripttutorial.net/wp-content/uploads/2020/02/favicon-300x300.png"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://www.javascripttutorial.net/wp-content/uploads/2020/02/favicon-300x300.png"
+    />
+    <meta
+      name="msapplication-TileImage"
+      content="https://www.javascripttutorial.net/wp-content/uploads/2020/02/favicon-300x300.png"
+    />
+  </head>
+
+  <body
+    class="page-template-default page page-id-101 page-child parent-pageid-14"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 0 0"
+      width="0"
+      height="0"
+      focusable="false"
+      role="none"
+      style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      "
+    >
+      <defs>
+        <filter id="wp-duotone-dark-grayscale">
+          <feColorMatrix
+            color-interpolation-filters="sRGB"
+            type="matrix"
+            values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
+          />
+          <feComponentTransfer color-interpolation-filters="sRGB">
+            <feFuncR type="table" tableValues="0 0.49803921568627" />
+            <feFuncG type="table" tableValues="0 0.49803921568627" />
+            <feFuncB type="table" tableValues="0 0.49803921568627" />
+            <feFuncA type="table" tableValues="1 1" />
+          </feComponentTransfer>
+          <feComposite in2="SourceGraphic" operator="in" />
+        </filter>
+      </defs></svg
+    ><svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 0 0"
+      width="0"
+      height="0"
+      focusable="false"
+      role="none"
+      style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      "
+    >
+      <defs>
+        <filter id="wp-duotone-grayscale">
+          <feColorMatrix
+            color-interpolation-filters="sRGB"
+            type="matrix"
+            values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
+          />
+          <feComponentTransfer color-interpolation-filters="sRGB">
+            <feFuncR type="table" tableValues="0 1" />
+            <feFuncG type="table" tableValues="0 1" />
+            <feFuncB type="table" tableValues="0 1" />
+            <feFuncA type="table" tableValues="1 1" />
+          </feComponentTransfer>
+          <feComposite in2="SourceGraphic" operator="in" />
+        </filter>
+      </defs></svg
+    ><svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 0 0"
+      width="0"
+      height="0"
+      focusable="false"
+      role="none"
+      style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      "
+    >
+      <defs>
+        <filter id="wp-duotone-purple-yellow">
+          <feColorMatrix
+            color-interpolation-filters="sRGB"
+            type="matrix"
+            values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
+          />
+          <feComponentTransfer color-interpolation-filters="sRGB">
+            <feFuncR
+              type="table"
+              tableValues="0.54901960784314 0.98823529411765"
+            />
+            <feFuncG type="table" tableValues="0 1" />
+            <feFuncB
+              type="table"
+              tableValues="0.71764705882353 0.25490196078431"
+            />
+            <feFuncA type="table" tableValues="1 1" />
+          </feComponentTransfer>
+          <feComposite in2="SourceGraphic" operator="in" />
+        </filter>
+      </defs></svg
+    ><svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 0 0"
+      width="0"
+      height="0"
+      focusable="false"
+      role="none"
+      style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      "
+    >
+      <defs>
+        <filter id="wp-duotone-blue-red">
+          <feColorMatrix
+            color-interpolation-filters="sRGB"
+            type="matrix"
+            values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
+          />
+          <feComponentTransfer color-interpolation-filters="sRGB">
+            <feFuncR type="table" tableValues="0 1" />
+            <feFuncG type="table" tableValues="0 0.27843137254902" />
+            <feFuncB
+              type="table"
+              tableValues="0.5921568627451 0.27843137254902"
+            />
+            <feFuncA type="table" tableValues="1 1" />
+          </feComponentTransfer>
+          <feComposite in2="SourceGraphic" operator="in" />
+        </filter>
+      </defs></svg
+    ><svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 0 0"
+      width="0"
+      height="0"
+      focusable="false"
+      role="none"
+      style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      "
+    >
+      <defs>
+        <filter id="wp-duotone-midnight">
+          <feColorMatrix
+            color-interpolation-filters="sRGB"
+            type="matrix"
+            values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
+          />
+          <feComponentTransfer color-interpolation-filters="sRGB">
+            <feFuncR type="table" tableValues="0 0" />
+            <feFuncG type="table" tableValues="0 0.64705882352941" />
+            <feFuncB type="table" tableValues="0 1" />
+            <feFuncA type="table" tableValues="1 1" />
+          </feComponentTransfer>
+          <feComposite in2="SourceGraphic" operator="in" />
+        </filter>
+      </defs></svg
+    ><svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 0 0"
+      width="0"
+      height="0"
+      focusable="false"
+      role="none"
+      style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      "
+    >
+      <defs>
+        <filter id="wp-duotone-magenta-yellow">
+          <feColorMatrix
+            color-interpolation-filters="sRGB"
+            type="matrix"
+            values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
+          />
+          <feComponentTransfer color-interpolation-filters="sRGB">
+            <feFuncR type="table" tableValues="0.78039215686275 1" />
+            <feFuncG type="table" tableValues="0 0.94901960784314" />
+            <feFuncB
+              type="table"
+              tableValues="0.35294117647059 0.47058823529412"
+            />
+            <feFuncA type="table" tableValues="1 1" />
+          </feComponentTransfer>
+          <feComposite in2="SourceGraphic" operator="in" />
+        </filter>
+      </defs></svg
+    ><svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 0 0"
+      width="0"
+      height="0"
+      focusable="false"
+      role="none"
+      style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      "
+    >
+      <defs>
+        <filter id="wp-duotone-purple-green">
+          <feColorMatrix
+            color-interpolation-filters="sRGB"
+            type="matrix"
+            values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
+          />
+          <feComponentTransfer color-interpolation-filters="sRGB">
+            <feFuncR
+              type="table"
+              tableValues="0.65098039215686 0.40392156862745"
+            />
+            <feFuncG type="table" tableValues="0 1" />
+            <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+            <feFuncA type="table" tableValues="1 1" />
+          </feComponentTransfer>
+          <feComposite in2="SourceGraphic" operator="in" />
+        </filter>
+      </defs></svg
+    ><svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 0 0"
+      width="0"
+      height="0"
+      focusable="false"
+      role="none"
+      style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      "
+    >
+      <defs>
+        <filter id="wp-duotone-blue-orange">
+          <feColorMatrix
+            color-interpolation-filters="sRGB"
+            type="matrix"
+            values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "
+          />
+          <feComponentTransfer color-interpolation-filters="sRGB">
+            <feFuncR type="table" tableValues="0.098039215686275 1" />
+            <feFuncG type="table" tableValues="0 0.66274509803922" />
+            <feFuncB
+              type="table"
+              tableValues="0.84705882352941 0.41960784313725"
+            />
+            <feFuncA type="table" tableValues="1 1" />
+          </feComponentTransfer>
+          <feComposite in2="SourceGraphic" operator="in" />
+        </filter>
+      </defs>
+    </svg>
+    <div id="page" class="site">
+      <a class="skip-link screen-reader-text" href="#primary"
+        >Skip to content</a
+      >
+      <header id="masthead" class="site-header">
+        <div class="wrap header-wrapper">
+          <div class="site-branding">
+            <a
+              href="https://www.javascripttutorial.net"
+              rel="home"
+              aria-current="page"
+              class="logo"
+              aria-label="Go to the homepage"
+            >
+            </a>
+          </div>
+          <nav id="site-navigation" class="site-navigation">
+            <ul id="primary-menu" class="site-menu">
+              <li
+                id="menu-item-48"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-page-ancestor menu-item-48"
+              >
+                <a
+                  title="JavaScript Tutorial"
+                  href="https://www.javascripttutorial.net/"
+                  >Home</a
+                >
+              </li>
+              <li
+                id="menu-item-386"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"
+              >
+                <a
+                  title="ES6 Tutorial"
+                  href="https://www.javascripttutorial.net/es6/"
+                  >ES6</a
+                >
+              </li>
+              <li
+                id="menu-item-90146"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-90146"
+              >
+                <a href="#">Advanced</a>
+                <ul class="sub-menu">
+                  <li
+                    id="menu-item-90149"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90149"
+                  >
+                    <a
+                      href="https://www.javascripttutorial.net/javascript-array-methods/"
+                      >JavaScript Array Methods</a
+                    >
+                  </li>
+                  <li
+                    id="menu-item-90148"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90148"
+                  >
+                    <a
+                      title="JavaScript String Methods"
+                      href="https://www.javascripttutorial.net/javascript-string-methods/"
+                      >JavaScript String Methods</a
+                    >
+                  </li>
+                  <li
+                    id="menu-item-90147"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90147"
+                  >
+                    <a
+                      title="Javascript Regex"
+                      href="https://www.javascripttutorial.net/javascript-regex/"
+                      >Regular Expressions</a
+                    >
+                  </li>
+                  <li
+                    id="menu-item-90187"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90187"
+                  >
+                    <a href="https://www.javascripttutorial.net/es-next/"
+                      >ES Next</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li
+                id="menu-item-85213"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85213"
+              >
+                <a
+                  title="JavaScript BOM"
+                  href="https://www.javascripttutorial.net/javascript-bom/"
+                  >JS BOM</a
+                >
+              </li>
+              <li
+                id="menu-item-85214"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85214"
+              >
+                <a
+                  title="JavaScript DOM"
+                  href="https://www.javascripttutorial.net/javascript-dom/"
+                  >JS DOM</a
+                >
+              </li>
+              <li
+                id="menu-item-88081"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88081"
+              >
+                <a
+                  title="Web API"
+                  href="https://www.javascripttutorial.net/web-apis/"
+                  >Web API</a
+                >
+              </li>
+              <li
+                id="menu-item-86319"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86319"
+              >
+                <a
+                  title="JavaScript Snippets"
+                  href="https://www.javascripttutorial.net/snippets/"
+                  >Snippets</a
+                >
+              </li>
+              <li
+                id="menu-item-87506"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87506"
+              >
+                <a
+                  title="TypeScript Tutorial"
+                  href="https://www.typescripttutorial.net/"
+                  >TypeScript</a
+                >
+              </li>
+            </ul>
+            <a aria-label="Change Theme" class="switch-theme">
+              <svg
+                class="dark-mode-icon"
+                role="img"
+                width="1rem"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <title>Dark Mode</title>
+                <path
+                  fill="currentColor"
+                  d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"
+                ></path>
+              </svg>
+              <svg
+                class="light-mode-icon"
+                role="img"
+                width="1rem"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <title>Light Mode</title>
+                <path
+                  fill="currentColor"
+                  d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"
+                ></path>
+              </svg>
+            </a>
+            <button
+              class="menu-toggle"
+              aria-controls="primary-menu"
+              aria-expanded="false"
+              aria-label="Primary Menu"
+            ></button>
+          </nav>
+        </div>
+      </header>
+      <div class="site-inner wrap">
+        <main id="primary" class="site-main">
+          <p class="breadcrumbs">
+            <span
+              ><span
+                ><a href="https://www.javascripttutorial.net/">Home</a> »
+                <span
+                  ><a href="https://www.javascripttutorial.net/"
+                    >JavaScript Tutorial</a
+                  >
+                  »
+                  <span class="breadcrumb_last" aria-current="page"
+                    >JavaScript Syntax</span
+                  ></span
+                ></span
+              ></span
+            >
+          </p>
+          <article
+            id="post-101"
+            class="post-101 page type-page status-publish hentry"
+          >
+            <header class="entry-header">
+              <h1 class="entry-title">JavaScript Syntax</h1>
+            </header>
+            <div class="entry-content">
+              <div class="whitelist">
+                <div class="ad ad-336">
+                  <div id="Ad.Plus-336x280-1">
+                    <script>
+                      window.googletag = window.googletag || { cmd: [] };
+                      googletag.cmd.push(function () {
+                        googletag
+                          .defineSlot(
+                            "/21849154601,22306944310/Ad.Plus-336x280",
+                            [
+                              [336, 280],
+                              [200, 200],
+                              [320, 100],
+                              [240, 133],
+                              [300, 100],
+                              [120, 240],
+                              [180, 150],
+                              [320, 250],
+                              [250, 250],
+                              [300, 250],
+                              [300, 75],
+                            ],
+                            "Ad.Plus-336x280-1"
+                          )
+                          .addService(googletag.pubads())
+                          .setTargeting("site", ["javascripttutorial.net"]);
+                        googletag.enableServices();
+                        googletag.display("Ad.Plus-336x280-1");
+                      });
+                    </script>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <strong>Summary</strong>: in this tutorial, you will learn about
+                JavaScript syntax, including whitespace, statements,
+                identifiers, comments, expressions, and keywords.
+              </p>
+              <h2>Whitespace</h2>
+              <p>
+                Whitespace refers to characters that provide the space between
+                other characters. JavaScript has the following whitespace:
+              </p>
+              <ul>
+                <li>Carriage return</li>
+                <li>Space</li>
+                <li>New Line</li>
+                <li>tab</li>
+              </ul>
+              <p>
+                JavaScript engine ignores whitespace. However, you can use
+                whitespace to format the code to make it easy to read and
+                maintain.
+              </p>
+              <p>The following JavaScript code doesn&#8217;t use whitespace:</p>
+              <pre
+                class="wp-block-code"
+                aria-describedby="shcb-language-1"
+                data-shcb-language-name="JavaScript"
+                data-shcb-language-slug="javascript"
+              ><style>.wp-block-code {
+border: 0;
+padding: 0;
+}
+
+.wp-block-code > div {
+overflow: auto;
+}
+
+.shcb-language {
+border: 0;
+clip: rect(1px, 1px, 1px, 1px);
+-webkit-clip-path: inset(50%);
+clip-path: inset(50%);
+height: 1px;
+margin: -1px;
+overflow: hidden;
+padding: 0;
+position: absolute;
+width: 1px;
+word-wrap: normal;
+word-break: normal;
+}
+
+.hljs {
+box-sizing: border-box;
+}
+
+.hljs.shcb-code-table {
+display: table;
+width: 100%;
+}
+
+.hljs.shcb-code-table > .shcb-loc {
+color: inherit;
+display: table-row;
+width: 100%;
+}
+
+.hljs.shcb-code-table .shcb-loc > span {
+display: table-cell;
+}
+
+.wp-block-code code.hljs:not(.shcb-wrap-lines) {
+white-space: pre;
+}
+
+.wp-block-code code.hljs.shcb-wrap-lines {
+white-space: pre-wrap;
+}
+
+.hljs.shcb-line-numbers {
+border-spacing: 0;
+counter-reset: line;
+}
+
+.hljs.shcb-line-numbers > .shcb-loc {
+counter-increment: line;
+}
+
+.hljs.shcb-line-numbers .shcb-loc > span {
+padding-left: 0.75em;
+}
+
+.hljs.shcb-line-numbers .shcb-loc::before {
+border-right: 1px solid #ddd;
+content: counter(line);
+display: table-cell;
+padding: 0 0.75em;
+text-align: right;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+white-space: nowrap;
+width: 1%;
+}</style><div><code class="hljs language-javascript"><span class="hljs-keyword">let</span> formatted = <span class="hljs-literal">true</span>; <span class="hljs-keyword">if</span> (formatted) {<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The code is easy to read'</span>);}</code></div><small class="shcb-language" id="shcb-language-1"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">JavaScript</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">javascript</span><span class="shcb-language__paren">)</span></small></pre>
+              <p>
+                It&#8217;s is equivalent to the following code that uses
+                whitespace. Hence, this code is much easy to read:
+              </p>
+              <pre
+                class="wp-block-code"
+                aria-describedby="shcb-language-2"
+                data-shcb-language-name="JavaScript"
+                data-shcb-language-slug="javascript"
+              ><div><code class="hljs language-javascript"><span class="hljs-keyword">let</span> formatted = <span class="hljs-literal">true</span>;
+
+<span class="hljs-keyword">if</span> (formatted) {
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The code is easy to read'</span>);
+}</code></div><small class="shcb-language" id="shcb-language-2"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">JavaScript</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">javascript</span><span class="shcb-language__paren">)</span></small></pre>
+              <p>
+                Note that JavaScript bundlers remove all whitespace from
+                JavaScript files and put them into a single file for deployment.
+                By doing this, JavaScript bundlers make the JavaScript code
+                lighter and faster to load in the web browsers.
+              </p>
+              <h2 id="statements">Statements</h2>
+              <p>
+                A statement is a code that declares a variable or instructs the
+                JavaScript engine to do a task. A simple statement is terminated
+                by a semicolon (<code>;</code>).
+              </p>
+              <p>
+                Although the semicolon (<code>;</code>) is optional; you should
+                always use it to terminate a statement. For example, the
+                following
+                <a
+                  href="https://www.javascripttutorial.net/javascript-variables/"
+                  >declares a variable</a
+                >
+                and shows it to the console:
+              </p>
+              <pre
+                class="wp-block-code"
+                aria-describedby="shcb-language-3"
+                data-shcb-language-name="JavaScript"
+                data-shcb-language-slug="javascript"
+              ><div><code class="hljs language-javascript"><span class="hljs-keyword">let</span> message = <span class="hljs-string">"Welcome to JavaScript"</span>;
+<span class="hljs-built_in">console</span>.log(message);</code></div><small class="shcb-language" id="shcb-language-3"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">JavaScript</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">javascript</span><span class="shcb-language__paren">)</span></small></pre>
+              <h3>Blocks</h3>
+              <p>
+                A block is a sequence of zero or more simple statements. A block
+                is delimited by a pair of curly brackets <code>{}</code>. For
+                example:
+              </p>
+              <pre
+                class="wp-block-code"
+                aria-describedby="shcb-language-4"
+                data-shcb-language-name="JavaScript"
+                data-shcb-language-slug="javascript"
+              ><div><code class="hljs language-javascript"><span class="hljs-keyword">if</span> (<span class="hljs-built_in">window</span>.localStorage) {
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The local storage is supported'</span>);
+}</code></div><small class="shcb-language" id="shcb-language-4"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">JavaScript</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">javascript</span><span class="shcb-language__paren">)</span></small></pre>
+              <h2>Identifiers</h2>
+              <p>
+                An identifier is a name you choose for variables, parameters,
+                <a
+                  href="https://www.javascripttutorial.net/javascript-function/"
+                  >functions</a
+                >, classes, etc. An identifier name starts with a letter
+                (<code>a-z</code>, or <code>A-Z</code>), an
+                underscore(<code>_</code>), or a dollar sign (<code>$</code>)
+                and is followed by a sequence of characters including
+                (<code>a-z</code>, <code>A-Z</code>), numbers
+                (<code>0-9</code>), underscores (<code>_</code>), and dollar
+                signs (<code>$</code>).
+              </p>
+              <p>
+                Note that the letter is not limited to the ASCII character and
+                may include extended ASCII or Unicode though not recommended.
+              </p>
+              <p>
+                Identifiers are case-sensitive. For example, the
+                <code>message</code> is different from the <code>Message</code>.
+              </p>
+              <h2 id="comments">Comments</h2>
+              <p>
+                Comments allow you to add notes or hints to JavaScript code.
+                When executing the code, the JavaScript engine ignores the
+                comments.
+              </p>
+              <p>JavaScript supports single-line and block comments.</p>
+              <h3>Single-line comments</h3>
+              <p>
+                A single-line comment starts with two forward-slashes characters
+                (<code>//</code>). A single-line comment makes all the text
+                following the <code>//</code> on the same line into a comment.
+                For example:
+              </p>
+              <pre
+                class="wp-block-code"
+                aria-describedby="shcb-language-5"
+                data-shcb-language-name="JSON / JSON with Comments"
+                data-shcb-language-slug="json"
+              ><div><code class="hljs language-json"><span class="hljs-comment">// this is a single-line comment</span></code></div><small class="shcb-language" id="shcb-language-5"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">JSON / JSON with Comments</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">json</span><span class="shcb-language__paren">)</span></small></pre>
+              <h3>Block comments</h3>
+              <p>
+                A delimited comment begins with a forward slash and asterisk
+                <code>/*</code> and ends with the opposite <code>*/</code> as in
+                the following example:
+              </p>
+              <pre
+                class="wp-block-code"
+                aria-describedby="shcb-language-6"
+                data-shcb-language-name="JSON / JSON with Comments"
+                data-shcb-language-slug="json"
+              ><div><code class="hljs language-json"><span class="hljs-comment">/* This is a block comment
+that can span multiple lines */</span></code></div><small class="shcb-language" id="shcb-language-6"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">JSON / JSON with Comments</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">json</span><span class="shcb-language__paren">)</span></small></pre>
+              <h2>Expressions</h2>
+              <p>
+                An expression is a piece of code that evaluates to a value. For
+                example:
+              </p>
+              <pre
+                class="wp-block-code"
+              ><div><code class="hljs">2 + 1</code></div></pre>
+              <p>The above expression returns three.</p>
+              <h2 id="keywords">Keywords &amp; Reserved words</h2>
+              <p>
+                JavaScript defines a list of reserved keywords that have
+                specific uses. Therefore, you cannot use the reserved keywords
+                as identifiers or property names by rules.
+              </p>
+              <p>
+                The following table shows the JavaScript reserved words defined
+                in ECMA-262:
+              </p>
+              <figure class="wp-block-table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a
+                          href="https://www.javascripttutorial.net/javascript-break/"
+                          ><code>break</code></a
+                        >
+                      </td>
+                      <td><code>case</code></td>
+                      <td><code>catch</code></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a
+                          href="https://www.javascripttutorial.net/javascript-continue/"
+                          ><code>continue</code></a
+                        >
+                      </td>
+                      <td><code>debugger</code></td>
+                      <td><code>default</code></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a
+                          href="https://www.javascripttutorial.net/javascript-if-else/"
+                          ><code>else</code></a
+                        >
+                      </td>
+                      <td><code>export</code></td>
+                      <td>
+                        <code
+                          ><a
+                            href="https://www.javascripttutorial.net/es6/javascript-inheritance/"
+                            >extends</a
+                          ></code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a
+                          href="https://www.javascripttutorial.net/javascript-function/"
+                          ><code>function</code></a
+                        >
+                      </td>
+                      <td>
+                        <code
+                          ><a
+                            href="https://www.javascripttutorial.net/javascript-if/"
+                            >if</a
+                          ></code
+                        >
+                      </td>
+                      <td>
+                        <code
+                          ><a
+                            href="https://www.javascripttutorial.net/nodejs-tutorial/nodejs-es-module/"
+                            >import</a
+                          ></code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>new</code></td>
+                      <td><code>return</code></td>
+                      <td><code>super</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>throw</code></td>
+                      <td><code>try</code></td>
+                      <td><code>null</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>void</code></td>
+                      <td>
+                        <code
+                          ><a
+                            href="https://www.javascripttutorial.net/javascript-while-loop/"
+                            >while</a
+                          ></code
+                        >
+                      </td>
+                      <td><code>with</code></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a
+                          href="https://www.javascripttutorial.net/es6/javascript-class/"
+                          ><code>class</code></a
+                        >
+                      </td>
+                      <td><code>delete</code></td>
+                      <td><code>finally</code></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code
+                          ><a
+                            href="https://www.javascripttutorial.net/javascript-for-loop/"
+                            ><code><code>in</code></code></a
+                          ></code
+                        >
+                      </td>
+                      <td>
+                        <code
+                          ><a
+                            href="https://www.javascripttutorial.net/javascript-switch-case/"
+                            >switch</a
+                          ></code
+                        >
+                      </td>
+                      <td><code>typeof</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>yield</code></td>
+                      <td>
+                        <code
+                          ><a
+                            href="https://www.javascripttutorial.net/es6/javascript-const/"
+                            >const</a
+                          ></code
+                        >
+                      </td>
+                      <td>
+                        <a
+                          href="https://www.javascripttutorial.net/javascript-do-while/"
+                          ><code>do</code></a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code
+                          ><a
+                            href="https://www.javascripttutorial.net/javascript-for-loop/"
+                            >for</a
+                          ></code
+                        >
+                      </td>
+                      <td><code>instanceof</code></td>
+                      <td>
+                        <code
+                          ><a
+                            href="https://www.javascripttutorial.net/javascript-this/"
+                            >this</a
+                          ></code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>var</code></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </figure>
+              <p>
+                In addition to the reserved keywords, ECMA-252 also define a
+                list of future reserved words that cannot be used as identifiers
+                or property names:
+              </p>
+              <figure class="wp-block-table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><code>enum</code></td>
+                      <td><code>implements</code></td>
+                      <td><code>let</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>protected</code></td>
+                      <td><code>private</code></td>
+                      <td><code>public</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>await</code></td>
+                      <td><code>interface</code></td>
+                      <td><code>package</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>implements</code></td>
+                      <td><code>public</code></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </figure>
+              <h2>Summary</h2>
+              <ul>
+                <li>
+                  Use whitespace including cariage return, space, newline, and
+                  tab to format the code. The JavaScript engine ignores the
+                  whiespace.
+                </li>
+                <li>
+                  Use a semicolon (<code>;</code>) to terminate a simple
+                  statement.
+                </li>
+                <li>
+                  Use the curly braces (<code>{}</code>) to form a block that
+                  groups one or more simple statments.
+                </li>
+                <li>
+                  A single-line comment start with <code>//</code> followed by a
+                  text. A block comment begins with <code>/*</code> and ends
+                  with <code>*/</code>. JavaScript engine also ignores the
+                  comments.
+                </li>
+                <li>
+                  Identifers are names that you choose for variables, functions,
+                  classes, etc.
+                </li>
+                <li>
+                  Do not use the reserved keywords and reserved words for
+                  identifers.
+                </li>
+              </ul>
+              <div class="helpful-block-content" data-title="">
+                <header>
+                  <div class="wth-question">Was this tutorial helpful ?</div>
+                  <div class="wth-thumbs">
+                    <button
+                      data-post="101"
+                      data-post-url="https://www.javascripttutorial.net/javascript-syntax/"
+                      data-post-title="JavaScript Syntax"
+                      data-response="1"
+                      class="wth-btn-rounded wth-yes-btn"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-thumbs-up block w-full h-full"
+                      >
+                        <path
+                          d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+                        ></path>
+                      </svg>
+                      <span class="sr-only"> Yes </span>
+                    </button>
+                    <button
+                      data-response="0"
+                      data-post="101"
+                      data-post-url="https://www.javascripttutorial.net/javascript-syntax/"
+                      data-post-title="JavaScript Syntax"
+                      class="wth-btn-rounded wth-no-btn"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"
+                        ></path>
+                      </svg>
+                      <span class="sr-only"> No </span>
+                    </button>
+                  </div>
+                </header>
+                <div class="wth-form hidden">
+                  <div class="wth-form-wrapper">
+                    <div class="wth-title"></div>
+                    <textarea class="wth-message"></textarea
+                    ><input
+                      type="button"
+                      name="wth-submit"
+                      class="wth-btn wth-btn-submit"
+                      id="wth-submit"
+                    />
+                    <input
+                      type="button"
+                      class="wth-btn wth-btn-cancel"
+                      value="Cancel"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="ad ad-336">
+                <div id="Ad.Plus-336x280-2">
+                  <script>
+                    window.googletag = window.googletag || { cmd: [] };
+                    googletag.cmd.push(function () {
+                      googletag
+                        .defineSlot(
+                          "/21849154601,22306944310/Ad.Plus-336x280",
+                          [
+                            [336, 280],
+                            [200, 200],
+                            [320, 100],
+                            [240, 133],
+                            [300, 100],
+                            [120, 240],
+                            [180, 150],
+                            [320, 250],
+                            [250, 250],
+                            [300, 250],
+                            [300, 75],
+                          ],
+                          "Ad.Plus-336x280-2"
+                        )
+                        .addService(googletag.pubads())
+                        .setTargeting("site", ["javascripttutorial.net"]);
+                      googletag.enableServices();
+                      googletag.display("Ad.Plus-336x280-2");
+                    });
+                  </script>
+                </div>
+              </div>
+            </div>
+          </article>
+          <div class="page-nav">
+            <div class="prev-page">
+              <a
+                class="prev-page-anchor"
+                href="https://www.javascripttutorial.net/javascript-hello-world/"
+                title="JavaScript Hello World Example"
+              >
+                <div class="page-nav-arrow">
+                  <noscript
+                    ><img
+                      src="https://www.javascripttutorial.net/wp-content/themes/evolution/img/left.svg"
+                      height="32"
+                      width="32"
+                      class="icon-prev-page"
+                      alt="JavaScript Hello World Example" /></noscript
+                  ><img
+                    src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2032%2032%22%3E%3C/svg%3E"
+                    data-src="https://www.javascripttutorial.net/wp-content/themes/evolution/img/left.svg"
+                    height="32"
+                    width="32"
+                    class="lazyload icon-prev-page"
+                    alt="JavaScript Hello World Example"
+                  />
+                </div>
+                <div class="page-nav-main page-nav-first">
+                  <div class="page-nav-title">Previously</div>
+                  <div class="page-title">JavaScript Hello World Example</div>
+                </div>
+              </a>
+            </div>
+            <div class="next-page">
+              <link
+                rel="prerender"
+                href="https://www.javascripttutorial.net/javascript-variables/"
+              />
+              <a
+                href="https://www.javascripttutorial.net/javascript-variables/"
+                title="JavaScript Variables"
+                class="next-page-anchor"
+              >
+                <div class="page-nav-main page-nav-second">
+                  <div class="page-nav-title">Up Next</div>
+                  <div class="page-title">JavaScript Variables</div>
+                </div>
+                <div class="page-nav-arrow">
+                  <noscript
+                    ><img
+                      src="https://www.javascripttutorial.net/wp-content/themes/evolution/img/right.svg"
+                      height="32"
+                      width="32"
+                      class="icon-next-page"
+                      alt="JavaScript Variables" /></noscript
+                  ><img
+                    src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2032%2032%22%3E%3C/svg%3E"
+                    data-src="https://www.javascripttutorial.net/wp-content/themes/evolution/img/right.svg"
+                    height="32"
+                    width="32"
+                    class="lazyload icon-next-page"
+                    alt="JavaScript Variables"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </main>
+        <aside id="secondary" class="widget-area">
+          <section
+            id="textblockswidget-12"
+            class="widget widget_textblockswidget"
+          >
+            <div class="text-block carbon-ads">
+              <div id="carbon-block"></div>
+              <script>
+                try {
+                  fetch(
+                    new Request(
+                      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+                      { method: "HEAD", mode: "no-cors" }
+                    )
+                  )
+                    .then(function (response) {
+                      return true;
+                    })
+                    .catch(function (e) {
+                      var carbonScript = document.createElement("script");
+                      carbonScript.src =
+                        "//cdn.carbonads.com/carbon.js?serve=CE7IC2QE&placement=wwwjavascripttutorialnet";
+                      carbonScript.id = "_carbonads_js";
+                      document
+                        .getElementById("carbon-block")
+                        .appendChild(carbonScript);
+                    });
+                } catch (error) {
+                  console.log(error);
+                }
+              </script>
+            </div>
+          </section>
+          <section
+            id="textblockswidget-6"
+            class="widget widget_textblockswidget"
+          >
+            <div class="text-block sidebar-top">
+              <div class="ad ad-300">
+                <div id="Ad.Plus-300x250-1">
+                  <script>
+                    window.googletag = window.googletag || { cmd: [] };
+                    googletag.cmd.push(function () {
+                      googletag
+                        .defineSlot(
+                          "/21849154601,22306944310/Ad.Plus-300x250",
+                          [
+                            [300, 250],
+                            [250, 250],
+                            [200, 200],
+                          ],
+                          "Ad.Plus-300x250-1"
+                        )
+                        .addService(googletag.pubads())
+                        .setTargeting("site", ["javascripttutorial.net"]);
+                      googletag.enableServices();
+                      googletag.display("Ad.Plus-300x250-1");
+                    });
+                  </script>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="search-3" class="widget widget_search">
+            <form
+              role="search"
+              method="get"
+              class="search-form"
+              action="https://www.javascripttutorial.net/"
+            >
+              <label>
+                <span class="screen-reader-text">Search for:</span>
+                <input
+                  type="search"
+                  class="search-field"
+                  placeholder="Search &hellip;"
+                  value=""
+                  name="s"
+                />
+              </label>
+              <input type="submit" class="search-submit" value="Search" />
+            </form>
+          </section>
+          <section id="nav_menu-7" class="widget widget_nav_menu">
+            <h2 class="widget-title">Getting Started</h2>
+            <div class="menu-js-getting-started-container">
+              <ul id="menu-js-getting-started" class="menu">
+                <li
+                  id="menu-item-1065"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1065"
+                >
+                  <a
+                    title="What is JavaScript"
+                    href="https://www.javascripttutorial.net/what-is-javascript/"
+                    >What is JavaScript</a
+                  >
+                </li>
+                <li
+                  id="menu-item-84572"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84572"
+                >
+                  <a
+                    href="https://www.javascripttutorial.net/javascript-code-editors/"
+                    >Install a JavaScript Code Editor</a
+                  >
+                </li>
+                <li
+                  id="menu-item-84573"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84573"
+                >
+                  <a
+                    title="Meet the Console Tab of Devtools"
+                    href="https://www.javascripttutorial.net/web-development-tools/"
+                    >Meet the Console Tab of Devtools</a
+                  >
+                </li>
+                <li
+                  id="menu-item-414"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-414"
+                >
+                  <a
+                    title="JavaScript Hello World Example"
+                    href="https://www.javascripttutorial.net/javascript-hello-world/"
+                    >JavaScript Hello World</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="nav_menu-6" class="widget widget_nav_menu">
+            <h2 class="widget-title">JavaScript Fundamentals</h2>
+            <div class="menu-js-javascript-fundamentals-container">
+              <ul id="menu-js-javascript-fundamentals" class="menu">
+                <li
+                  id="menu-item-409"
+                  class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-101 current_page_item menu-item-409"
+                >
+                  <a
+                    title="JavaScript Syntax"
+                    href="https://www.javascripttutorial.net/javascript-syntax/"
+                    aria-current="page"
+                    >Syntax</a
+                  >
+                </li>
+                <li
+                  id="menu-item-410"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-410"
+                >
+                  <a
+                    title="JavaScript Variables"
+                    href="https://www.javascripttutorial.net/javascript-variables/"
+                    >Variables</a
+                  >
+                </li>
+                <li
+                  id="menu-item-411"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-411"
+                >
+                  <a
+                    title="JavaScript Data Types"
+                    href="https://www.javascripttutorial.net/javascript-data-types/"
+                    >Data Types</a
+                  >
+                </li>
+                <li
+                  id="menu-item-84505"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84505"
+                >
+                  <a
+                    title="JavaScript Number"
+                    href="https://www.javascripttutorial.net/javascript-number/"
+                    >Number</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89261"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89261"
+                >
+                  <a
+                    title="JavaScript Numeric Separator"
+                    href="https://www.javascripttutorial.net/es-next/javascript-numeric-separator/"
+                    >Numeric Separator</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89262"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89262"
+                >
+                  <a
+                    title="Octal and Binary Literals"
+                    href="https://www.javascripttutorial.net/es6/octal-and-binary-literals/"
+                    >Octal and Binary Literals</a
+                  >
+                </li>
+                <li
+                  id="menu-item-413"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-413"
+                >
+                  <a
+                    title="JavaScript boolean"
+                    href="https://www.javascripttutorial.net/javascript-boolean/"
+                    >Boolean</a
+                  >
+                </li>
+                <li
+                  id="menu-item-88905"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88905"
+                >
+                  <a
+                    title="JavaScript String"
+                    href="https://www.javascripttutorial.net/javascript-string/"
+                    >String</a
+                  >
+                </li>
+                <li
+                  id="menu-item-88904"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88904"
+                >
+                  <a
+                    title="JavaScript Objects"
+                    href="https://www.javascripttutorial.net/javascript-objects/"
+                    >Object</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89263"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89263"
+                >
+                  <a
+                    title="JavaScript Primitive vs. Reference Values"
+                    href="https://www.javascripttutorial.net/javascript-primitive-vs-reference-values/"
+                    >Primitive vs. Reference Values</a
+                  >
+                </li>
+                <li
+                  id="menu-item-88903"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88903"
+                >
+                  <a
+                    title="JavaScript Arrays"
+                    href="https://www.javascripttutorial.net/javascript-array/"
+                    >Array</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="nav_menu-14" class="widget widget_nav_menu">
+            <h2 class="widget-title">JavaScript Operators</h2>
+            <div class="menu-js-operators-container">
+              <ul id="menu-js-operators" class="menu">
+                <li
+                  id="menu-item-89073"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89073"
+                >
+                  <a
+                    title="JavaScript Arithmetic Operators"
+                    href="https://www.javascripttutorial.net/javascript-arithmetic-operators/"
+                    >Arithmetic Operators</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89264"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89264"
+                >
+                  <a
+                    title="JavaScript Remainder Operator"
+                    href="https://www.javascripttutorial.net/javascript-remainder-operator/"
+                    >Remainder Operator</a
+                  >
+                </li>
+                <li
+                  id="menu-item-84500"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84500"
+                >
+                  <a
+                    title="JavaScript Assignment Operators"
+                    href="https://www.javascripttutorial.net/javascript-assignment-operators/"
+                    >Assignment Operators</a
+                  >
+                </li>
+                <li
+                  id="menu-item-84460"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84460"
+                >
+                  <a
+                    title="JavaScript Unary Operators Explained"
+                    href="https://www.javascripttutorial.net/javascript-unary-operators/"
+                    >Unary Operators</a
+                  >
+                </li>
+                <li
+                  id="menu-item-84462"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84462"
+                >
+                  <a
+                    title="JavaScript Comparison Operators"
+                    href="https://www.javascripttutorial.net/javascript-comparison-operators/"
+                    >Comparison Operators</a
+                  >
+                </li>
+                <li
+                  id="menu-item-84461"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84461"
+                >
+                  <a
+                    title=" JavaScript Logical Operators"
+                    href="https://www.javascripttutorial.net/javascript-logical-operators/"
+                    >Logical Operators</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89265"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89265"
+                >
+                  <a
+                    title="JavaScript Logical Assignment Operators"
+                    href="https://www.javascripttutorial.net/es-next/javascript-logical-assignment-operators/"
+                    >Logical Assignment Operators</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89266"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89266"
+                >
+                  <a
+                    title="JavaScript Nullish Coalescing Operator"
+                    href="https://www.javascripttutorial.net/es-next/javascript-nullish-coalescing-operator/"
+                    >Nullish Coalescing Operator</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89267"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89267"
+                >
+                  <a
+                    title="JavaScript Exponentiation Operator"
+                    href="https://www.javascripttutorial.net/es-next/javascript-exponentiation-operator/"
+                    >Exponentiation Operator</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="nav_menu-3" class="widget widget_nav_menu">
+            <h2 class="widget-title">Control Flow</h2>
+            <div class="menu-js-control-flow-container">
+              <ul id="menu-js-control-flow" class="menu">
+                <li
+                  id="menu-item-88830"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88830"
+                >
+                  <a
+                    title="JavaScript if"
+                    href="https://www.javascripttutorial.net/javascript-if/"
+                    >if</a
+                  >
+                </li>
+                <li
+                  id="menu-item-389"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-389"
+                >
+                  <a
+                    title="JavaScript if else"
+                    href="https://www.javascripttutorial.net/javascript-if-else/"
+                    >if else</a
+                  >
+                </li>
+                <li
+                  id="menu-item-88831"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88831"
+                >
+                  <a
+                    title="JavaScript if else if"
+                    href="https://www.javascripttutorial.net/javascript-if-else-if/"
+                    >if else if</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89268"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89268"
+                >
+                  <a
+                    href="https://www.javascripttutorial.net/javascript-ternary-operator/"
+                    >Ternary Operator (:?)</a
+                  >
+                </li>
+                <li
+                  id="menu-item-390"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-390"
+                >
+                  <a
+                    title="JavaScript switch case"
+                    href="https://www.javascripttutorial.net/javascript-switch-case/"
+                    >switch case</a
+                  >
+                </li>
+                <li
+                  id="menu-item-395"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-395"
+                >
+                  <a
+                    title="JavaScript while Loop"
+                    href="https://www.javascripttutorial.net/javascript-while-loop/"
+                    >while</a
+                  >
+                </li>
+                <li
+                  id="menu-item-391"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-391"
+                >
+                  <a
+                    title="JavaScript do while Loop"
+                    href="https://www.javascripttutorial.net/javascript-do-while/"
+                    >do while</a
+                  >
+                </li>
+                <li
+                  id="menu-item-392"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-392"
+                >
+                  <a
+                    title="JavaScript for Loop"
+                    href="https://www.javascripttutorial.net/javascript-for-loop/"
+                    >for</a
+                  >
+                </li>
+                <li
+                  id="menu-item-393"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-393"
+                >
+                  <a
+                    title="JavaScript break Statement: Control the Execution of Code in a Loop"
+                    href="https://www.javascripttutorial.net/javascript-break/"
+                    >break</a
+                  >
+                </li>
+                <li
+                  id="menu-item-394"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394"
+                >
+                  <a
+                    title="JavaScript continue: Skips the Current Iteration of a Loop"
+                    href="https://www.javascripttutorial.net/javascript-continue/"
+                    >continue</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89096"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89096"
+                >
+                  <a
+                    title="JavaScript Comma Operator"
+                    href="https://www.javascripttutorial.net/javascript-comma-operator/"
+                    >Comma Operator</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section
+            id="textblockswidget-7"
+            class="widget widget_textblockswidget"
+          >
+            <div class="text-block sidebar-middle">
+              <div class="ad ad-300">
+                <div id="Ad.Plus-300x250-2">
+                  <script>
+                    window.googletag = window.googletag || { cmd: [] };
+                    googletag.cmd.push(function () {
+                      googletag
+                        .defineSlot(
+                          "/21849154601,22306944310/Ad.Plus-300x250",
+                          [
+                            [300, 250],
+                            [250, 250],
+                            [200, 200],
+                          ],
+                          "Ad.Plus-300x250-2"
+                        )
+                        .addService(googletag.pubads())
+                        .setTargeting("site", ["javascripttutorial.net"]);
+                      googletag.enableServices();
+                      googletag.display("Ad.Plus-300x250-2");
+                    });
+                  </script>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="nav_menu-5" class="widget widget_nav_menu">
+            <h2 class="widget-title">JavaScript Functions</h2>
+            <div class="menu-js-functions-container">
+              <ul id="menu-js-functions" class="menu">
+                <li
+                  id="menu-item-404"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-404"
+                >
+                  <a
+                    title="JavaScript Function"
+                    href="https://www.javascripttutorial.net/javascript-function/"
+                    >Functions</a
+                  >
+                </li>
+                <li
+                  id="menu-item-86545"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86545"
+                >
+                  <a
+                    title="JavaScript Functions are First-Class Citizens"
+                    href="https://www.javascripttutorial.net/javascript-functions-are-first-class-citizens/"
+                    >Functions are First-Class Citizens</a
+                  >
+                </li>
+                <li
+                  id="menu-item-86546"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86546"
+                >
+                  <a
+                    title="JavaScript Anonymous Functions"
+                    href="https://www.javascripttutorial.net/javascript-anonymous-functions/"
+                    >Anonymous Functions</a
+                  >
+                </li>
+                <li
+                  id="menu-item-88993"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88993"
+                >
+                  <a
+                    title=" JavaScript Pass By Value"
+                    href="https://www.javascripttutorial.net/javascript-pass-by-value/"
+                    >Understanding Pass-By-Value in JavaScript</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89009"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89009"
+                >
+                  <a
+                    title="JavaScript Recursive Function"
+                    href="https://www.javascripttutorial.net/javascript-recursive-function/"
+                    >Recursive Functions</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89269"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89269"
+                >
+                  <a
+                    title="JavaScript Default Parameters"
+                    href="https://www.javascripttutorial.net/es6/javascript-default-parameters/"
+                    >Default Parameters</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="nav_menu-13" class="widget widget_nav_menu">
+            <h2 class="widget-title">JavaScript Objects</h2>
+            <div class="menu-js-objects-container">
+              <ul id="menu-js-objects" class="menu">
+                <li
+                  id="menu-item-89046"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89046"
+                >
+                  <a
+                    title="Object Methods"
+                    href="https://www.javascripttutorial.net/javascript-object-methods/"
+                    >Object Methods</a
+                  >
+                </li>
+                <li
+                  id="menu-item-88198"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88198"
+                >
+                  <a
+                    title="JavaScript Constructor Function"
+                    href="https://www.javascripttutorial.net/javascript-constructor-function/"
+                    >Constructor Functions</a
+                  >
+                </li>
+                <li
+                  id="menu-item-863"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-863"
+                >
+                  <a
+                    title="JavaScript Prototype"
+                    href="https://www.javascripttutorial.net/javascript-prototype/"
+                    >Prototype</a
+                  >
+                </li>
+                <li
+                  id="menu-item-88218"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88218"
+                >
+                  <a
+                    href="https://www.javascripttutorial.net/javascript-constructor-prototype/"
+                    >Constructor/Prototype Pattern</a
+                  >
+                </li>
+                <li
+                  id="menu-item-865"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-865"
+                >
+                  <a
+                    title="JavaScript Prototypal Inheritance"
+                    href="https://www.javascripttutorial.net/javascript-prototypal-inheritance/"
+                    >Prototypal Inheritance</a
+                  >
+                </li>
+                <li
+                  id="menu-item-866"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-866"
+                >
+                  <a
+                    title="JavaScript this Keyword"
+                    href="https://www.javascripttutorial.net/javascript-this/"
+                    >this</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89307"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89307"
+                >
+                  <a
+                    title="JavaScript globalThis"
+                    href="https://www.javascripttutorial.net/es-next/javascript-globalthis/"
+                    >globalThis</a
+                  >
+                </li>
+                <li
+                  id="menu-item-84900"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84900"
+                >
+                  <a
+                    title="JavaScript Object Properties"
+                    href="https://www.javascripttutorial.net/javascript-object-properties/"
+                    >Object Properties</a
+                  >
+                </li>
+                <li
+                  id="menu-item-84829"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84829"
+                >
+                  <a
+                    title="JavaScript for…in Loop"
+                    href="https://www.javascripttutorial.net/javascript-for-in/"
+                    >for…in Loop</a
+                  >
+                </li>
+                <li
+                  id="menu-item-88199"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88199"
+                >
+                  <a
+                    title="A Basic Guide to Enumerable Properties of an Object in JavaScript"
+                    href="https://www.javascripttutorial.net/javascript-enumerable-properties/"
+                    >Enumerable Properties</a
+                  >
+                </li>
+                <li
+                  id="menu-item-88200"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88200"
+                >
+                  <a
+                    title="Understanding Own Properties of an Object in JavaScript"
+                    href="https://www.javascripttutorial.net/javascript-own-properties/"
+                    >Own Properties</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89308"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89308"
+                >
+                  <a
+                    title="JavaScript Object.values()"
+                    href="https://www.javascripttutorial.net/es-next/javascript-object-values/"
+                    >Object.values()</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89309"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89309"
+                >
+                  <a
+                    title="Object.entries()"
+                    href="https://www.javascripttutorial.net/es-next/javascript-object-entries/"
+                    >Object.entries()</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89310"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89310"
+                >
+                  <a
+                    title="JavaScript Object.is()"
+                    href="https://www.javascripttutorial.net/es6/javascript-object-is/"
+                    >Object.is()</a
+                  >
+                </li>
+                <li
+                  id="menu-item-88219"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88219"
+                >
+                  <a
+                    title="JavaScript Factory Functions"
+                    href="https://www.javascripttutorial.net/javascript-factory-functions/"
+                    >Factory Functions</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89311"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89311"
+                >
+                  <a
+                    title="JavaScript Object Destructuring"
+                    href="https://www.javascripttutorial.net/es6/javascript-object-destructuring/"
+                    >Object Destructuring</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89312"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89312"
+                >
+                  <a
+                    title="JavaScript Optional Chaining Operator"
+                    href="https://www.javascripttutorial.net/es-next/javascript-optional-chaining-operator/"
+                    >Optional Chaining Operator</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89313"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89313"
+                >
+                  <a
+                    title="Object Literal Syntax Extensions in ES6"
+                    href="https://www.javascripttutorial.net/es6/object-literal-extensions/"
+                    >Object Literal Syntax Extensions</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="nav_menu-36" class="widget widget_nav_menu">
+            <h2 class="widget-title">Classes</h2>
+            <div class="menu-js-class-container">
+              <ul id="menu-js-class" class="menu">
+                <li
+                  id="menu-item-89362"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89362"
+                >
+                  <a
+                    title="JavaScript Class "
+                    href="https://www.javascripttutorial.net/es6/javascript-class/"
+                    >Class</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89363"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89363"
+                >
+                  <a
+                    href="https://www.javascripttutorial.net/es6/javascript-getters-and-setters/"
+                    >Getters &#038; Setters</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89364"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89364"
+                >
+                  <a
+                    title="JavaScript Class Expressions"
+                    href="https://www.javascripttutorial.net/es6/javascript-class-expressions/"
+                    >Class Expressions</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89365"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89365"
+                >
+                  <a
+                    title="JavaScript Computed Property"
+                    href="https://www.javascripttutorial.net/es6/javascript-computed-property/"
+                    >Computed Properties</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89366"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89366"
+                >
+                  <a
+                    title="JavaScript Inheritance"
+                    href="https://www.javascripttutorial.net/es6/javascript-inheritance/"
+                    >Inheritance</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89367"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89367"
+                >
+                  <a
+                    title="JavaScript new.target Metaproperty"
+                    href="https://www.javascripttutorial.net/es6/javascript-new-target/"
+                    >new.target</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89368"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89368"
+                >
+                  <a
+                    title="JavaScript Static Methods"
+                    href="https://www.javascripttutorial.net/es6/javascript-static-method/"
+                    >Static Methods</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89369"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89369"
+                >
+                  <a
+                    title="JavaScript Static Properties"
+                    href="https://www.javascripttutorial.net/es6/javascript-static-properties/"
+                    >Static Properties</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89370"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89370"
+                >
+                  <a
+                    title="JavaScript Private Fields"
+                    href="https://www.javascripttutorial.net/javascript-private-fields/"
+                    >Private Fields</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89371"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89371"
+                >
+                  <a
+                    title="JavaScript Private Methods"
+                    href="https://www.javascripttutorial.net/javascript-private-methods/"
+                    >Private Methods</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89372"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89372"
+                >
+                  <a
+                    title="JavaScript instanceof"
+                    href="https://www.javascripttutorial.net/javascript-instanceof/"
+                    >instanceof Operator</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="nav_menu-24" class="widget widget_nav_menu">
+            <h2 class="widget-title">Advanced Functions</h2>
+            <div class="menu-js-advanced-functions-container">
+              <ul id="menu-js-advanced-functions" class="menu">
+                <li
+                  id="menu-item-86539"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86539"
+                >
+                  <a
+                    title="JavaScript Function Type"
+                    href="https://www.javascripttutorial.net/javascript-function-type/"
+                    >Function Type</a
+                  >
+                </li>
+                <li
+                  id="menu-item-86542"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86542"
+                >
+                  <a
+                    title="JavaScript call() Method"
+                    href="https://www.javascripttutorial.net/javascript-call/"
+                    >The call() Method</a
+                  >
+                </li>
+                <li
+                  id="menu-item-86541"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86541"
+                >
+                  <a
+                    title="JavaScript apply() method"
+                    href="https://www.javascripttutorial.net/javascript-apply-method/"
+                    >The apply() method</a
+                  >
+                </li>
+                <li
+                  id="menu-item-86540"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86540"
+                >
+                  <a
+                    title="JavaScript bind() Method"
+                    href="https://www.javascripttutorial.net/javascript-bind/"
+                    >The bind() Method</a
+                  >
+                </li>
+                <li
+                  id="menu-item-86544"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86544"
+                >
+                  <a
+                    title="JavaScript Closures"
+                    href="https://www.javascripttutorial.net/javascript-closure/"
+                    >Closures</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89343"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89343"
+                >
+                  <a
+                    title="JavaScript Immediately Invoked Function Expression"
+                    href="https://www.javascripttutorial.net/javascript-immediately-invoked-function-expression-iife/"
+                    >Immediately Invoked Function Expression (IIFE)</a
+                  >
+                </li>
+                <li
+                  id="menu-item-86538"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86538"
+                >
+                  <a
+                    title="Returning Multiple Values from a Function"
+                    href="https://www.javascripttutorial.net/javascript-return-multiple-values/"
+                    >Returning Multiple Values</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89339"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89339"
+                >
+                  <a
+                    title="JavaScript Arrow Functions"
+                    href="https://www.javascripttutorial.net/es6/javascript-arrow-function/"
+                    >Arrow Functions</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89340"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89340"
+                >
+                  <a
+                    title="When You Should Not Use Arrow Functions"
+                    href="https://www.javascripttutorial.net/es6/when-you-should-not-use-arrow-functions/"
+                    >Arrow Functions: Do &#038; Don&#8217;t</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89344"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89344"
+                >
+                  <a
+                    title="JavaScript Rest Parameters"
+                    href="https://www.javascripttutorial.net/es6/javascript-rest-parameters/"
+                    >Rest Parameters</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89342"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89342"
+                >
+                  <a
+                    title="JavaScript Callbacks"
+                    href="https://www.javascripttutorial.net/javascript-callback/"
+                    >Callback</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section
+            id="textblockswidget-13"
+            class="widget widget_textblockswidget"
+          >
+            <div class="text-block sidebar-middle-2">
+              <div class="ad ad-300">
+                <div id="Ad.Plus-300x250-3">
+                  <script>
+                    window.googletag = window.googletag || { cmd: [] };
+                    googletag.cmd.push(function () {
+                      googletag
+                        .defineSlot(
+                          "/21849154601,22306944310/Ad.Plus-300x250",
+                          [
+                            [300, 250],
+                            [250, 250],
+                            [200, 200],
+                          ],
+                          "Ad.Plus-300x250-3"
+                        )
+                        .addService(googletag.pubads())
+                        .setTargeting("site", ["javascripttutorial.net"]);
+                      googletag.enableServices();
+                      googletag.display("Ad.Plus-300x250-3");
+                    });
+                  </script>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="nav_menu-37" class="widget widget_nav_menu">
+            <h2 class="widget-title">Promises &#038; Async/Await</h2>
+            <div class="menu-js-promises-container">
+              <ul id="menu-js-promises" class="menu">
+                <li
+                  id="menu-item-89353"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89353"
+                >
+                  <a
+                    title="JavaScript Promises"
+                    href="https://www.javascripttutorial.net/es6/javascript-promises/"
+                    >Promises</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89354"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89354"
+                >
+                  <a
+                    title="Promise Chaining"
+                    href="https://www.javascripttutorial.net/es6/promise-chaining/"
+                    >Promise Chaining</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89355"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89355"
+                >
+                  <a
+                    title="JavaScript Promise.all()"
+                    href="https://www.javascripttutorial.net/es6/javascript-promise-all/"
+                    >Promise.all()</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89356"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89356"
+                >
+                  <a
+                    title="JavaScript Promise.race()"
+                    href="https://www.javascripttutorial.net/es6/javascript-promise-race/"
+                    >Promise.race()</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89358"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89358"
+                >
+                  <a
+                    title="JavaScript Promise.any"
+                    href="https://www.javascripttutorial.net/es-next/javascript-promise-any/"
+                    >Promise.any()</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89359"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89359"
+                >
+                  <a
+                    title="JavaScript Promise.allSettled"
+                    href="https://www.javascripttutorial.net/es-next/javascript-promise-allsettled/"
+                    >Promise.allSettled()</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89360"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89360"
+                >
+                  <a
+                    title="JavaScript Promise finally()"
+                    href="https://www.javascripttutorial.net/es-next/javascript-promise-finally/"
+                    >Promise.prototype.finally()</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89357"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89357"
+                >
+                  <a
+                    title="Promise Error Handling"
+                    href="https://www.javascripttutorial.net/es6/promise-error-handling/"
+                    >Promise Error Handling</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89361"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89361"
+                >
+                  <a
+                    title="JavaScript async/await"
+                    href="https://www.javascripttutorial.net/es-next/javascript-async-await/"
+                    >async/await</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="nav_menu-38" class="widget widget_nav_menu">
+            <h2 class="widget-title">JavaScript Modules</h2>
+            <div class="menu-js-modules-container">
+              <ul id="menu-js-modules" class="menu">
+                <li
+                  id="menu-item-89382"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89382"
+                >
+                  <a
+                    title="A Comprehensive Look at ES6 Modules"
+                    href="https://www.javascripttutorial.net/es6/es6-modules/"
+                    >Modules</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89383"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89383"
+                >
+                  <a
+                    title="JavaScript Dynamic Import"
+                    href="https://www.javascripttutorial.net/es-next/javascript-import/"
+                    >Dynamic Import</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89384"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89384"
+                >
+                  <a
+                    title="JavaScript Top-level await Modules"
+                    href="https://www.javascripttutorial.net/javascript-top-level-await/"
+                    >Top-level Await Modules</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="nav_menu-39" class="widget widget_nav_menu">
+            <h2 class="widget-title">Javascript Error Handling</h2>
+            <div class="menu-js-error-container">
+              <ul id="menu-js-error" class="menu">
+                <li
+                  id="menu-item-89512"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89512"
+                >
+                  <a
+                    title="JavaScript try…catch"
+                    href="https://www.javascripttutorial.net/javascript-try-catch/"
+                    >try…catch</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89510"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89510"
+                >
+                  <a
+                    title="JavaScript try…catch…finally"
+                    href="https://www.javascripttutorial.net/javascript-try-catch-finally/"
+                    >try…catch…finally</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89509"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89509"
+                >
+                  <a
+                    title="JavaScript Throw Exception"
+                    href="https://www.javascripttutorial.net/javascript-throw-exception/"
+                    >Throw an Exception</a
+                  >
+                </li>
+                <li
+                  id="menu-item-89511"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89511"
+                >
+                  <a
+                    title="Optional catch Binding"
+                    href="https://www.javascripttutorial.net/es-next/optional-catch-binding/"
+                    >Optional catch Binding</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="nav_menu-15" class="widget widget_nav_menu">
+            <h2 class="widget-title">JavaScript Runtime</h2>
+            <div class="menu-js-javascript-runtime-container">
+              <ul id="menu-js-javascript-runtime" class="menu">
+                <li
+                  id="menu-item-84641"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84641"
+                >
+                  <a
+                    title="JavaScript Execution Context"
+                    href="https://www.javascripttutorial.net/javascript-execution-context/"
+                    >Execution Context</a
+                  >
+                </li>
+                <li
+                  id="menu-item-84640"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84640"
+                >
+                  <a
+                    title="JavaScript Call Stack"
+                    href="https://www.javascripttutorial.net/javascript-call-stack/"
+                    >Call Stack</a
+                  >
+                </li>
+                <li
+                  id="menu-item-84639"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84639"
+                >
+                  <a
+                    title="JavaScript Event Loop"
+                    href="https://www.javascripttutorial.net/javascript-event-loop/"
+                    >Event Loop</a
+                  >
+                </li>
+                <li
+                  id="menu-item-86548"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86548"
+                >
+                  <a
+                    title="JavaScript Hoisting"
+                    href="https://www.javascripttutorial.net/javascript-hoisting/"
+                    >Hoisting</a
+                  >
+                </li>
+                <li
+                  id="menu-item-86549"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86549"
+                >
+                  <a
+                    title="JavaScript Variable Scopes"
+                    href="https://www.javascripttutorial.net/javascript-variable-scope/"
+                    >Variable Scopes</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section
+            id="textblockswidget-5"
+            class="widget widget_textblockswidget"
+          >
+            <div class="text-block sidebar-bottom">
+              <div class="ad ad-300">
+                <div id="Ad.Plus-300x250-4">
+                  <script>
+                    window.googletag = window.googletag || { cmd: [] };
+                    googletag.cmd.push(function () {
+                      googletag
+                        .defineSlot(
+                          "/21849154601,22306944310/Ad.Plus-300x250",
+                          [
+                            [300, 250],
+                            [250, 250],
+                            [200, 200],
+                          ],
+                          "Ad.Plus-300x250-4"
+                        )
+                        .addService(googletag.pubads())
+                        .setTargeting("site", ["javascripttutorial.net"]);
+                      googletag.enableServices();
+                      googletag.display("Ad.Plus-300x250-4");
+                    });
+                  </script>
+                </div>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+      <footer id="colophon" class="site-footer">
+        <div class="wrap">
+          <div class="site-footer-widgets">
+            <div class="site-footer-sidebar widget">
+              <h2 class="widget-title">About JavaScript Tutorial</h2>
+              <div class="textwidget">
+                The JavaScript Tutorial website helps you learn JavaScript
+                programming from scratch quickly and effectively.
+              </div>
+            </div>
+            <div class="site-footer-sidebar widget">
+              <h2 class="widget-title">References</h2>
+              <div class="menu-references-container">
+                <ul id="menu-references" class="menu">
+                  <li
+                    id="menu-item-90030"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90030"
+                  >
+                    <a
+                      title="JavaScript Array Methods"
+                      href="https://www.javascripttutorial.net/javascript-array-methods/"
+                      >Array Methods</a
+                    >
+                  </li>
+                  <li
+                    id="menu-item-90029"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90029"
+                  >
+                    <a
+                      title="JavaScript String Methods"
+                      href="https://www.javascripttutorial.net/javascript-string-methods/"
+                      >String Methods</a
+                    >
+                  </li>
+                  <li
+                    id="menu-item-90028"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90028"
+                  >
+                    <a
+                      title="Javascript Regex"
+                      href="https://www.javascripttutorial.net/javascript-regex/"
+                      >Regular Expressions</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <h2 class="widget-title">Latest Tutorials</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.javascripttutorial.net/javascript-dom/javascript-remove-items-from-a-select-conditionally/"
+                    title="Removing Items from a Select Element Conditionally"
+                    >Removing Items from a Select Element Conditionally</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.javascripttutorial.net/javascript-string-methods/javascript-string-repeat/"
+                    title="JavaScript String repeat()"
+                    >JavaScript String repeat()</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.javascripttutorial.net/javascript-string-methods/tolowercase/"
+                    title="JavaScript toLowerCase()"
+                    >JavaScript toLowerCase()</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.javascripttutorial.net/javascript-string-methods/touppercase/"
+                    title="JavaScript toUpperCase()"
+                    >JavaScript toUpperCase()</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.javascripttutorial.net/javascript-regex/replace/"
+                    title="JavaScript Regex Replace"
+                    >JavaScript Regex Replace</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="site-footer-sidebar widget">
+              <h2 class="widget-title">Site Links</h2>
+              <div class="menu-footer-container">
+                <ul id="menu-footer" class="menu">
+                  <li
+                    id="menu-item-88463"
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-88463"
+                  >
+                    <a
+                      title="Donate to JavaScript Tutorial"
+                      href="https://www.javascripttutorial.net/donation/"
+                      >Donation ❤️</a
+                    >
+                  </li>
+                  <li
+                    id="menu-item-30"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"
+                  >
+                    <a
+                      title="Want to know more about us?"
+                      href="https://www.javascripttutorial.net/about/"
+                      >About Us</a
+                    >
+                  </li>
+                  <li
+                    id="menu-item-29"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"
+                  >
+                    <a
+                      title="Do you have any suggestions or feedback? Just contact us"
+                      href="https://www.javascripttutorial.net/contact/"
+                      >Contact Us</a
+                    >
+                  </li>
+                  <li
+                    id="menu-item-28"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"
+                  >
+                    <a
+                      title="Privacy Policy"
+                      href="https://www.javascripttutorial.net/privacy-policy/"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="site-info">
+            <div class="textwidget custom-html-widget">
+              <p>
+                Copyright &copy; 2022 by JavaScript Tutorial Website. All Right
+                Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript">
+      function _dmBootstrap(file) {
+        var _dma = document.createElement("script");
+        _dma.type = "text/javascript";
+        _dma.async = true;
+        _dma.src =
+          ("https:" == document.location.protocol ? "https://" : "http://") +
+          file;
+        (
+          document.getElementsByTagName("head")[0] ||
+          document.getElementsByTagName("body")[0]
+        ).appendChild(_dma);
+      }
+      function _dmFollowup(file) {
+        if (typeof DMAds === "undefined")
+          _dmBootstrap("cdn2.DeveloperMedia.com/a.min.js");
+      }
+      (function () {
+        _dmBootstrap("cdn1.DeveloperMedia.com/a.min.js");
+        setTimeout(_dmFollowup, 2000);
+      })();
+    </script>
+    <noscript>
+      <style>
+        .lazyload {
+          display: none;
+        }
+      </style>
+    </noscript>
+    <script data-noptimize="1">
+      window.lazySizesConfig = window.lazySizesConfig || {};
+      window.lazySizesConfig.loadMode = 1;
+    </script>
+    <script
+      async
+      data-noptimize="1"
+      src="https://www.javascripttutorial.net/wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js"
+    ></script>
+    <script id="adblock-lib-js-extra">
+      var adsOptions = [
+        {
+          selector: ".whitelist",
+          code: '<div class="donation">\r\n<div class="donation-text">If this JavaScript tutorial saves you hours of work, please <span class="highlight">whitelist it in your ad blocker \ud83d\ude2d<\/span> and <\/div>\r\n<div> <a target="_blank" class="donate-button"\r\nhref="https:\/\/www.javascripttutorial.net\/donation\/">Donate Now<\/a><\/div>\r\n<div class="donation-text">to support us \u2764\ufe0f in paying for web hosting and CDN to keep the site running.<\/div>',
+        },
+      ];
+    </script>
+    <script id="wth-frontend-js-extra">
+      var wth_js_lang = {
+        ajax_url:
+          "https:\/\/www.javascripttutorial.net\/wp-admin\/admin-ajax.php",
+        nonce: "8759b9c045",
+        confirm: "Are you sure to delete item?",
+        positive_feedback: null,
+        positive_feedback_option: "feedback_messege",
+        positive_feedback_required: null,
+        negative_feedback: "true",
+        negative_feedback_required: "true",
+        wth_title_nothank: "What was wrong? Please help us to improve",
+        wth_title_yesthank: "Well Done! Please leave your positive feedback.",
+        wth_thank_you: "Thank You for your feedback!",
+        submit_text: "Submit",
+        wth_ga_enable: "",
+        wth_ga_category: "Was This Helpful?",
+        wth_ga_positive: "Positive Reviews",
+        wth_ga_negative: "Negative Reviews",
+        wth_share_ask: "Awesome, share it:",
+        wth_fb_share: "Share",
+        wth_twitter_share: "Tweet",
+      };
+    </script>
+    <script type="text/javascript">
+      function _dmBootstrap(file) {
+        var _dma = document.createElement("script");
+        _dma.type = "text/javascript";
+        _dma.async = true;
+        _dma.src =
+          ("https:" == document.location.protocol ? "https://" : "http://") +
+          file;
+        (
+          document.getElementsByTagName("head")[0] ||
+          document.getElementsByTagName("body")[0]
+        ).appendChild(_dma);
+      }
+      function _dmFollowup(file) {
+        if (typeof DMAds === "undefined")
+          _dmBootstrap("cdn2.DeveloperMedia.com/a.min.js");
+      }
+      (function () {
+        _dmBootstrap("cdn1.DeveloperMedia.com/a.min.js");
+        setTimeout(_dmFollowup, 2000);
+      })();
+    </script>
+    <script
+      defer
+      src="https://www.javascripttutorial.net/wp-content/cache/autoptimize/js/autoptimize_5615ffe14b60a710529c573788b2237d.js"
+    ></script>
+  </body>
+</html>

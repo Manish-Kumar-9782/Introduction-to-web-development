@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn about the layout and the containing block, 
+    in this section we will see that what is a containting block and bow it 
+    works.
+-------------------------------------------------------------------------------
+-->
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Layout and the Containing block</title>
+        <link rel="stylesheet" href="../../styles/common.css">
+        <link rel="stylesheet" href="../../styles/Notes.css">
+        <link rel="stylesheet" href="../../styles/Notes2.css">
+        <link rel="stylesheet" href="../../styles/colors.css">
+
+
+        <script>
+            function box4_fixed(){
+                var element = document.getElementById("box4");
+                element.style = "position: fixed; top:10%;";
+
+                var button = document.getElementById('button');
+                button.onclick = box4_initial;
+                button.innerHTML = "change position to initial";
+            }
+
+            function box4_initial(){
+                var element = document.getElementById("box4");
+                element.style = "position: relative;";
+                var button = document.getElementById('button');
+                button.onclick = box4_fixed;
+                button.innerHTML = "change position to fixed";
+            }
+        </script>
+
+        <style>
+
+            #layout{
+                width: 60%;
+                box-sizing: border-box;
+                padding: 30px;
+                text-align: right;
+                border: 2px solid rgb(188, 157, 188);
+                border-radius: 4px;
+            }
+
+            #margin{
+                border: 2px solid blue;
+                border-radius: 0px;
+                padding: 30px;
+            }
+
+            #border{
+                border: 4px solid brown;
+                padding: 30px;
+            }
+
+            #padding{
+                border: 1px dotted dodgerblue;
+                padding: 30px;
+            }
+
+            #padding, #margin, #border{
+                border-radius: 0px;
+                margin:0px;
+                
+            }
+
+
+            /* Examples elements styles */
+            /* Examples section  */
+            section.container{
+                border: 4px solid rosybrown;
+                padding:10px;
+                margin: 10px;
+                margin-bottom: 30px;
+                width: 400px;
+                height: 200px;
+                background-color: rgba(122, 71, 170, 0.279);
+                border-radius: 0px;
+            }
+
+            /* example div */
+
+            .box{
+                border-radius: 0px;
+                margin: 0px;
+                width:150px;
+                height:70px;
+            }
+
+            /* Example 1 */
+            .container.example1{
+                display: block;
+                background-color: rgba(193, 96, 39, 0.389);
+            }
+
+            #box1{
+                width: 50%;
+                height: 25%;
+                margin: 5%;
+                padding: 5%;
+            }
+
+            /* Example 2 */
+            .container.example2{
+                display: inline;
+
+            }
+            
+            #box2{
+                width: 50%;
+                /* height:30%; */
+                /* Note: a percentage would be 0; */
+                height: 100px;
+                background-color: aquamarine;
+            }
+
+            /* Example 3 */
+
+            #relative-container{
+                position: relative;
+                background-color: wheat;
+                width: 90%;
+                height: 500px;
+            }
+
+            .container.example3{
+                position:absolute;
+                left:30px;
+                top: 25px;
+            }
+
+            #box3{
+                width: 50%;
+                height: 25%;
+                margin: 5%;
+                padding: 5%;
+
+            }
+
+            #relative-container .Note{
+                position: absolute;
+                margin-top: 300px;
+            }
+
+            /* Example 4 */
+
+            .container.example4{
+                position: relative;
+                /* z-index: 0; */
+            }
+
+
+            /* Example 5 */
+            .container.example5{
+
+                transform: rotate(0deg);
+                /* transfrom property may contain the math function. */
+                /* After applying the transform property this section will act as 
+                a containing block for the box5. */
+
+            }
+
+            #box5{
+                position: absolute;
+                left: 80px;
+                top: 30px;
+                width: 50%;
+                height:25%;
+            }
+
+           
+        </style>
+
+    </head>
+    <body>
+
+        <header>
+            <h1>Layout and the containing block</h1>
+            <p>The size and position of an element are often impacted by its <code class="hlight">containing block</code>
+            Most often, the containing block is the content area of an element's nearest block-level parent,
+            but this is not always the case. In this session, we examine the factors that determine an element's conatining block.</p>
+        </header>
+        
+        <div>
+            <p>When a user agent (such as browser) lays out a document, it generates a box for every element. Each box is divided into 
+                four aras.
+            </p>
+
+            <section id="layout">
+                <caption>margin</caption>
+                <div id="margin">
+                    <caption>border</caption>
+                    <div id="border">
+                        <caption>padding</caption>
+                        <div id="padding">
+                            <caption>content</caption>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <ol>
+                <li>Content Area</li>
+                <li>Padding Area</li>
+                <li>Border Area</li>
+                <li>Margin Area</li>
+            </ol>
+
+            <p>If we think that containing block of an element is always the content area of its parent
+                , but taht isn't necessarily true. Now we will try to see the factors that determine what an 
+                element's containing block is.
+            </p>
+
+            <h2>Effect of the containting block</h2>
+            <p>Before learining what determines the containing block of an element, it's useful to know why
+                it matters in the firs place.
+            </p>
+
+            <p>The size and position of an element are often implacted by its containing block.
+                Percentage values that are applied to the 
+                <code class="hlight">width</code>,
+                <code class="hlight">height</code>,
+                <code class="hlight">padding</code>,
+                <code class="hlight">margin</code>, and offset properties oa an absolutely positioned element,
+                (i.e., which has its <code class="mark">position</code> set to <code class="hlight">absolute</code>
+                <code class="hlight">fixed</code>) are computed from the element's containing block. 
+            </p>
+
+            <h2>identifying the containing block</h2>
+            <p>The process for identifying the containing block depends entirely on the value of the element's
+                <code class="mark">position</code> property:
+            </p>
+
+            <ol>
+                <li>if the <code class="mark">position</code> property is
+                <code class="hlight">static</code>,
+                <code class="hlight">relative</code>, or
+                <code class="hlight">sticky</code>, the containing block is formed by the edge of the <i>content box</i> of the nearest parent element 
+                that is either a <span class="hlight">block container</span> (such as an inline-block, block or list-item element) or 
+                <span class="hlight">establishes a formatting context</span> (such as a table container, flex container, grid container,
+                or the block container itself).
+                </li>
+
+                <li>If the <code class="mark">position</code> is <code class="hlight">absolute</code>, the containing block is formed by the edge of the 
+                <i>padding box</i> of the neareset parent element that has <code class="mark">position</code>
+                value other than 
+                <code class="hlight">static</code>,(
+                <code class="hlight">fixed</code>,
+                <code class="hlight">absolute</code>,
+                <code class="hlight">relative</code>, or
+                <code class="hlight">sticky</code>).</li>
+
+                <li>If the <code class="mark">position</code> property is <code class="hlight">fixed</code>, the containing block is established by the 
+                <span class="hlight">viewport</span>(in the case of continuous media) or page are (in the case 
+                of paged media).</li>
+
+                <li>if the <code class="mark">position</code> property is <code class="hlight">absolute</code> or <code class="hlight">fixed</code>, the containing 
+                block may also be formed by the edge of the <i>padding box</i> of the neareset parent element that 
+                has following:
+                <ul>
+                    <li>
+                        A <code class="mark">transfrom</code> or <code class="mark">perspective</code> value other than <code class="hlight">none</code>
+                    </li>    
+
+                    <li>A <code class="mark">will-change</code> value of <code class="hlight">transform</code> or <code class="hlight">perspective</code>.</li>
+
+                    <li>A <code class="mark">filter</code> value other than <code class="hlight">none</code> or a <code class="hlight">will-change</code>
+                    value of <code class="hlight">filter (only works on firefox)</code>.</li>
+
+                    <li>A <code class="mark">contain</code> value of <code class="hlight">paint</code> (e.g. <code class="hlight">contain: paint;</code></li>
+                    <li>A <code class="mark">backdrop-filter</code> other than <code class="hlight">none</code></li>
+                </ul>
+                </li>
+            </ol>
+
+            <p class="Note">The containing block in which the root element <code class="element tag">html</code> resides is a 
+            rectangle called the <span class="hlight">initial containing block.</span> It has the dimensions of the viewport
+            (for continuous media) or the page are (for paged media).</p>
+        </div>
+
+        <div>
+            <h2>Calculating percentage values from the containing block</h2>
+            <p>As noted above, when certain properties are given a percentage value, the computed value depends on the 
+                element's containing block. The properties that work this way are <b>box model properties</b> and <b>offset properties:</b>
+            </p>
+
+            <ol>
+                <li>The <code class="hlight">height</code>
+                <code class="hlight">top</code>, and
+                <code class="hlight">bottom</code> properties compute percentage values from the <code class="hlight">height</code>
+                of the containing block</li>
+
+                <li>The
+                        <code class="hlight">width</code>,
+                        <code class="hlight">left</code>,
+                        <code class="hlight">right</code>, 
+                        <code class="hlight">padding</code>, and 
+                        <code class="hlight">margin</code> properties compute percentage value from the <code class="hlight">width</code> of 
+                        the containing block.
+                </li>
+            </ol>
+        </div>
+
+        
+        <div id="Examples">
+
+            <!-- Example 1 -->
+            <h3>Example 1</h3>
+            <p>In this example, the <code class="element">div#box1</code>'s is statically positioned, so its containing
+            block is <code class="element tag">section</code> because, it's the nearest parent that is a block container.</p>
+            
+            <section class="container example1">
+                <div id="box1" class="box">
+                    <p>example 1</p>
+                </div>
+            </section>
+
+            <!--
+            -------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------
+            -->
+            <br><hr>
+            <!-- Example 2 -->
+            <h3>Example 2</h3>
+            <p>In this example, the <code class="element">div#box2</code>'s containing block is the <code class="element">div#Examples</code> element, because
+            <code class="element tag">section</code> is not a block container (because of <code class="hlight">dispaly: inline;</code>
+            and doesn't establish a formatting context.</p>
+            <section class="container example2">
+                <div id="box2" class="box">
+                    <p>example 2</p>
+                </div>
+            </section>
+
+            <!--
+            -------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------
+            -->
+            
+            <!-- Example 4 -->
+            <br><hr>
+            <h3>Example 3</h3>
+            <p>In this example, the <code class="element">div#box3</code>'s containing block is <code class="element tag">section</code>
+            because the latter's position is absolute. The <code class="mark">div#box3</code>'s percentage values are affected
+            by the <code class="hlight">padding</code> of its containing block, though if the containing block's 
+            <code class="hlight">box-sizing</code> value were <code class="hlight">border-box</code> this would 
+            not be the case.</p>
+            
+            <section id="relative-container">
+                <section class="container example3">
+                    <div id="box3" class="box">
+                        <p>example 3</p>
+                    </div>
+                </section>
+                <p class="Note">here we have used a extra <code class="element">section#relative-container</code> to maintain the 
+                position of the example 3's <code class="element">section</code>, because its <code class="mark">position: absolute;</code>
+                so we had to make a containing block.</p>
+            </section>
+
+            <!--
+            -------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------
+            -->
+            <br><hr>
+            <h3>Exampel 4</h3>
+            <p>In this example, the <code class="element">div#box4</code>'s <code class="mark">position: fixed;</code>, so its containing block is 
+            the initial containing block (on screen, the viewport). Thus, the <code class="element">div#box4</code>'s 
+            dimensions changed based on the size of the browser window.</p>
+            <section class="container example4">
+                <div id="box4" class="box">
+                    <p>example 4</p>
+                </div>
+                <button id="button" onclick="box4_fixed()">change postion to fixed</button>
+            </section>
+            <!--
+            -------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------
+            -->
+            <br><hr>
+            <h3>Example 5</h3>
+            <p>In this example, the <code class="element">div#box5</code>'s <code class="mark">position: absolute;</code>, so its containing block is 
+            <code class="element tag">section</code>, which is the nearest parent with a <code class="mark">transfrom</code> property that isn't 
+            <code class="hlight">none</code>.</p>
+            <section  class="container example5">
+                <div id="box5" class="box">
+                    <p>example 5</p>
+                </div>
+            </section>
+
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DjangoNotes</title>
+
+  <link rel="stylesheet" href="../../Styles/colors.css" />
+  <link rel="stylesheet" href="../../Styles/common.css" />
+  <link rel="stylesheet" href="../../Styles/Notes.css" />
+  <link rel="stylesheet" href="../../Styles/Notes2.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Django Notes</h1>
+    <p>
+      In this section we will see first introduction of the django with the
+      database, in this section we will use the PostgreSQL database. We will
+      see that how to connect our website with database.
+    </p>
+  </header>
+
+  <div>
+    <h2>Important Notes</h2>
+    <ul>
+      <li>
+        To change the css we need to update the css which are located in the
+        static folder which is created by us not by django and make some
+        changes, if we are not seeing the the updated effect in our webpage
+        then we should reload our page by pressing
+        <code class="hlight"><kbd>ctrl+f5</kbd></code> that will update our
+        page.
+      </li>
+
+      <li>
+        If we are using PostgreSQL Database then set the primary
+        <code class="hlight">postgreSQL</code>
+        password which is the default admin. after this we need to create a
+        superuser and a database for our application.
+      </li>
+
+      <li>
+        We can create the new database in postgreSQL by using the SQL command
+        or we can create by using the pgAdmin application.
+      </li>
+
+      <li>
+        Now after creating a database for our project/applicaton we need to
+        link our application with our Django project for that we need to make
+        some changes in the <code class="mark">settings.py</code> file, we
+        need to find the <code class="hlight">DATABASES</code> dict in which
+        we need to add some more entries as the pair of key and values.
+      </li>
+
+      <li>
+        <div class="codeblock">
+          <p class="comment js">Database engine</p>
+          <p>'ENGINE':'django.db.backends.postgresql'</p>
+
+          <p class="comment js">Project name which will use the database</p>
+          <p>'NAME':'&lt;project-name&gt;'</p>
+
+          <p class="comment js">
+            User Name of the user from the postgres database
+          </p>
+          <p>'USER':'&lt;User Name&gt;'</p>
+
+          <p class="comment js">Postgres user password</p>
+          <p>'PASSWORD':'&lt;User Password&gt;'</p>
+
+          <p class="comment js">host machine name</p>
+          <p>'HOST':'&lt;host Name&gt;'</p>
+        </div>
+      </li>
+
+      <li>
+        Now we need to install another dependency to connect our postgres
+        database with our django or python. for that we will use
+        <code class="mark">psycopg2</code> python library which will allow us
+        to execute the sql command from python/django.
+      </li>
+
+      <li>
+        Now we need to create <code class="hlight">Models</code> or
+        <code class="hlight">Classes</code> for our data object which will be
+        used to create the tables in database with the help of
+        <code class="hlight">psycopg2 </code> library.
+      </li>
+
+      <li>
+        Note: <code class="mark">Models/Classes</code> should have the
+        attribute as the instance of filedtype of the SQL Database. The
+        information of the Fieldtype can be obtained from the django
+        documentation website.
+        <a href="https://docs.djangoproject.com/en/4.1/ref/models/fields/#field-types">django fieldtypes.</a>
+      </li>
+
+      <li>
+        Note 2: While creating <code class="mark">Models/Classes</code> we
+        have to inherit a class <code class="mark">models.Model</code> to
+        convert our class into a model objecct.
+      </li>
+
+      <li>
+        Note 3: We must add our application name in
+        <code class="hlight">settings.py</code> file of the project and in
+        that we must add our project applicaton. In
+        <code class="hlight">settings.py</code> file we have a list
+        <code class="mark">INSTALLED_APPS</code> in which we need to add our
+        application config which may follow this format
+        <code class="hlight">&lt;project-name&gt;.apps.&lt;Project-Name&gt;Config</code>
+      </li>
+
+      <li>
+        Now after making the our <code class="mark">Models</code> we need to
+        migrate them by using the django command
+        <code class="hlight">python manage.py makemigrations</code> this
+        command will migrate our <code class="mark">Models</code> into our
+        linked database and it will migrate all the infromation into the
+        migration folder of the project, it will help us to create a new table
+        having some columns which are specified in our models.
+      </li>
+
+      <li>
+        Now to create the table according to the migration information we need
+        to use the command
+        <code class="hlight">python manage.py sqlmigrate &lt;appname&gt; and the migration file number</code>
+        after that we need to push another command
+        <code class="hlight">python manage.py migrate</code>
+        to perform the migration complete.
+      </li>
+    </ul>
+  </div>
+
+  <!-- Admin panel in database -->
+
+  <div>
+    <h2>Admin Panel for superuser</h2>
+    <p>
+      In this we will create a super user by usin the Djanog admin panel and
+      we will use that to control our admin stuff.
+    </p>
+    <ul>
+      <li>
+        To crate a superuser we need to use the following command
+        <code class="hlight">python manage.py createsuperuser</code>, it will
+        ask us username, password email or may be other fields as well, we can
+        edit them later form the admin panel.
+      </li>
+
+      <li>
+        if We want to add Model object from the admin panel then we have to
+        register our <code class="mark">Model Class</code> in
+        <code class="mark">admin.py</code> file after importing our class. we
+        have to register our model by using the following command
+        <code class="hlight">admin.site.register(&lt;ModelName&gt;)</code>.
+      </li>
+    </ul>
+
+    <h3>User Login</h3>
+    <p>To login a user we need to import the <code class="hlight">auth</code> class from which we will verify the user.
+      this class can be imported from <code class="hlight">django.contrib.auth.models</code></p>
+  </div>
+
+  <div>
+    <h2>Store media files in django</h2>
+    <p>
+      There is a specifc way to tell the django that where to look for the
+      media file to load them when they are required, this specificity is done
+      to improve the speed of the website.
+    </p>
+
+    <li>
+      To specifc the media content location we need go in the
+      <code class="hlight">settings.py</code> file and we need to make a
+      variable <code class="mark">MEDIA_ROOT</code> in that we need to specify
+      the location with folder name where our all the media files are located.
+    </li>
+
+    <li>
+      we also need to specify the
+      <code class="hlight">MEDIA_URL</code> variable in that we will specify
+      the relative location of the directory of media folder in which all of
+      the media files are stored.
+    </li>
+
+    <li>
+      Now we need to update the <code class="hlight">urlpatterns</code> list
+      of the <code class="mark">urls.py</code> file of the project, in which
+      we need to mention here as well that where to look all the static media
+      files in the <code class="hlight">urlspatterns</code> list by using the
+      <code class="mark">static</code> method. <br />
+      <br />
+      &rightarrow; For that first we need to import
+      <code class="hlight">settings</code> and
+      <code class="hlight">static</code> by using the following
+      <i>statement</i>
+      <code class="hlight">from django.conf import settings</code> and
+      <code class="hlight">from django.conf.urls.static import static</code>.
+      <br /><br />
+
+      &rightarrow; Now we need to add the result of the following
+      <i>statement</i>
+      <code class="hlight">static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)</code>
+      into the <code class="hlight">urlpatterns</code> list.
+    </li>
+  </div>
+
+  <div>
+    <h2>Account section</h2>
+    <p>
+      In this section we will make Account application and make Login and
+      Registration section from scratch by using all the required
+      configuration for login and registration section.
+    </p>
+
+    <p>
+      First we need to create a new app (account app) in our project by using
+      the following command
+      <code class="hlight">python manage.py startapp accounts</code>, it will
+      create a new app section in our project.
+    </p>
+
+    <p>
+      Now after creating a new app we need to do some configuration first.
+    </p>
+    <ul>
+      <li>
+        add the <code class="hlight">urls.py</code> file in our application
+        directory.
+      </li>
+      <li>
+        import the <code class="hlight">path</code> from
+        <code class="hlight">django.urls</code> and also
+        <code class="hlight">views</code> form
+        <code class="hlight">.</code> and add the views in
+        <code class="mark">urlpatterns</code> list.
+      </li>
+      <li>
+        After adding the views we need to add our
+        <i class="hlight">urls</i> file in our project
+        <code class="hlight">urls.py</code>'s
+        <code class="mark">urlspatterns</code> list by using the
+        <code class="mark">include()</code> function.
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>Deploy Django app on heruko</h2>
+
+    <p>We can Deploy our app in free on the heroku which provide the hosting free and paid service, in this section we
+      will see the free hosting tutorial. To host our app we need to follow some command and make some changes in our
+      Django application. we will see each step in detail.</p>
+
+    <ol>
+      <li>first of all we need to install a <code class="hlight">heruko CLI</code> application and inatall it in our
+        computer, make sure all the virtual env path option are selected.
+      </li>
+      <li>After intalling the <code class="hlight">heruko CLI</code> we should confirm taht it is successfully
+        installed, for that we need to we need to start our terminal or the application in which our terminal is
+        running.</li>
+
+      <li>Now we need to run the following command <code class="cmd">heruko --version</code>, if this command gives the
+        error that means we <code class="hlight">heruko CLI</code> isn't installed successfully try to reinstall it.
+        if we get an <code class="hlight">--version</code> number that means <code class="hlight">heruko</code> is
+        installed successfully</li>
+
+      <li>Now we need to go to our project directory and start our <code class="hlight">virtual env</code> in which our
+        project is working.</li>
+
+      <li>Now we need to installed a new web server <code class="hlight">gunicorn</code> which will allow our
+        application to run by multiple users at a time and it won't crash too soon depends on our hosting dependencies.
+        To install the <code class="hlight">gunicorn</code> follow the command <code
+          class="cmd">pip install gunicorn</code>, it will install the gunicorn in our <code
+          class="hlight">virtual environment</code>.</li>
+
+      <li>Now we need to install another dependency <code class="hlight">django.heruko</code> to work our django
+        application with heruko servers. follow the command <code class="cmd">pip install django-heroku</code>.</li>
+
+      <li>Now we need to install another dependency <code class="hlight">python-decouple</code> by using the following
+        command <code class="cmd">pip install python-decouple</code></li>
+
+      <li>Now we need to add one file named as <code class="mark">procfile</code> to work with the heruko, it contain
+        some configuration data to deploy our project on the heruko machines, create the file and write the first line
+        as <code class="cmd">web: gunicorn &lt;ProjectName&gt;.wsgi</code></li>
+
+      <li>Now we need to tell the heroku that what are the dependencies are required for our project for that we need to
+        tell the heroku,for that we need to put all the dependencies into <code class="hlight">requirements.txt</code>
+        file by using the follwoing command <code class="cmd">pip freeze &gt; requirements.txt</code>.</li>
+
+      <p>Now it's time to make some changes in our project <code class="hlight">settings.py</code> file.</p>
+
+
+      <li>First we need to import some module & classes like: </li>
+      <div class="codeblock">
+        <p>import django_heroku</p>
+        <p>import dj_dataase_url</p>
+        <p>from decouple import config</p>
+      </div>
+
+      <li>Now we need to add a <code class="hlight">whitenoise middleware</code> and the value of the <code
+          class="mark">MIDDLEWARE</code> list
+        should be <code class="cmd">'whitenoise.middleware.WhiteNoiseMiddleware'</code> .</li>
+
+      <li>Now we need to add a variable called <code class="mark">STATICFILES_STORAGE</code> which will be used to
+        handle the static file by using the <code class="hlight">whitenoise</code> middleware, add the following
+        variable and initialize it as specified <code
+          class="cmd">STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'</code></li>
+
+      <li>Now we need to add one seeting for django_heroku as <code class="cmd">django_heroku.settings(locals())</code>.
+      </li>
+    </ol>
+
+
+  </div>
+
+</body>
+
+</html>

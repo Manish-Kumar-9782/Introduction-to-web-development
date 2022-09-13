@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn about the css box-shadow property and we will see 
+that how to use this property.
+
+box-shadow: offset-x offset-y color|blur-radius|spread-radius;
+
+specify a single box-shadow using:
+
+-> two, three or four <length> values
+-> if two values are given, they are interpreted as <offset-x> and <offset-y> 
+    values.
+-> if a third value is given, it is interpreted as a <blur-radius>
+-> if a fourth value is given, it is interpreted as a <spread-radius>
+
+-> Optionally, the 'inset' keyword.
+-> Optionally, a <color> value.
+-------------------------------------------------------------------------------
+-->
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS box-shadow Property</title>
+
+        <link rel="stylesheet" href="../../styles/common.css">
+        <link rel="stylesheet" href="../../styles/Notes.css">
+        <link rel="stylesheet" href="../../styles/Notes2.css">
+        <link rel="stylesheet" href="../../styles/colors.css">
+
+        <style>
+            
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+            <h1>CSS box-shadow Property</h1>
+            <p>The box-shadow CSS property adds shadow effects separeated by commas. A
+                box shadow is described by X and Y offsets relative to the element, blur 
+                and spread radius, and color.</p>
+
+            <p>The <code class="prprty">box-shadow</code> property enables you to cast a drop 
+                shadow from the frame of almost any element. if a <code class="prprty">border-radius</code>
+                is specified on the element with a box shadow, the box shadow takes on the same rounded corners.
+                The z-ordring of multiple box shadow is the same as mulitple <code class="prprty">text-shadow</code>    
+                (the first specified shadow is on top.)
+            </p>
+            <p><span class="mark">Box-shadow generator</span> is an interactive tool allowing us to generate a 
+            <code class="prprty">box-shadow</code>.</p>
+        </header>
+
+        <div>
+            <h2>Syntax</h2>
+            <p>We can specify a single <code class="prprty">box-shadow</code> using:</p>
+            <ul>
+                <li>Two, three, or four <code class="mark">length</code> values</li>
+                <ul>
+                    <li>if only two values are given, they are interpreted as <code class="hlight">offset-x</code>
+                    and <code class="hlight">offset-y</code> values.</li>
+                    
+                    <li>if a third value is given, it is interpreted as a <code class="hlight">blur-radius</code>.</li>
+
+                    <li>if a fourth value is given, it is interpreted as <code class="hlight">spread-radius</code>.</li>
+                </ul>
+
+                <li>Optionally, the <code class="prval">inset</code> keyword.</li>
+                <li>Optionally, a <code class="mark">color</code> value.</li>
+            </ul>
+
+            <p>To specity multiple shadows, provide a comma-separated list of shadows.</p>
+
+            <div class="codeblock">
+                
+                <p class="comment">/* Keyword values */</p>
+                <p><code class="prprty">box-shadow: </code> <code class="prval">none;</code></p>
+                
+                <p class="comment">/* offset-x | offset-y | color */</p>
+                <p><code class="prprty">box-shadow: </code> <code class="prval">60px -16px teal;</code></p>
+
+                <p class="comment">/* offset-x | offset-y | blur-radius | color */</p>
+                <p><code class="prprty">box-shadow: </code> <code class="prval">10px 5px 5px black;</code></p>
+
+                <p class="comment">/* offset-x | offset-y | blur-radius | spread-radius | color */</p>
+                <p><code class="prprty">box-shadow: </code> <code class="prval">2px 2px 2px 1px rgba(0,0,0,0.2);</code></p>
+
+                <p class="comment">/* inset | offset-x | offset-y | color */</p>
+                <p><code class="prprty">box-shadow: </code> <code class="prval">inset 5em 1em gold;</code></p>
+
+                <p class="comment">/* Any number of shadows, separated by commas  */</p>
+                <p><code class="prprty">box-shadow: </code> <code class="prval">3px 3px red, -1em 0 0.4em olive;</code></p>
+                
+                <p class="comment">/* Global values */</p>
+                <p><code class="prprty">box-shadow: </code> <code class="prval">inherit;</code></p>
+                <p><code class="prprty">box-shadow: </code> <code class="prval">initial;</code></p>
+                <p><code class="prprty">box-shadow: </code> <code class="prval">revert;</code></p>
+                <p><code class="prprty">box-shadow: </code> <code class="prval">revert-layer;</code></p>
+                <p><code class="prprty">box-shadow: </code> <code class="prval">unset;</code></p>
+            </div>
+             <!-- here in this div section we need to make example of each defined 
+                    box-shadow in above codeblock -->
+        </div>
+        
+        <!-- Exaplaning the values of box-shadow -->
+        <div>
+            <h2>CSS box-shadow Values</h2>
+
+            <dl>
+                <dt><code class="prval heading">inset</code></dt>
+                <dd>if not specified (default), the shadow is assumed to be a drop shadow (as if the box were raised above the content).
+                    The presence of the <code class="prval">inset</code> keyword changes the shadow to one inside the frome (as if the 
+                    content was debossed inside the box). inset shadows are drawn inside the border (even transparent ones), above the 
+                    background, but below content.
+                </dd>
+
+                <dt><code class="prval heading">offset-x & offset-y</code></dt>
+                <dd>These are two <code class="prval">length</code> values to set the shadow offset. <code class="prval">offset-x</code> specifies 
+                    the horizontal distance. Negative values place the shadow to the left of the element.
+                    <code class="prval">offset-y</code> specifies the vertical distance. Negative values place the shadow above the element. if both 
+                values are <code class="hlight">0</code>, the shadow is placed behind the element (and may generate a blur effect if <code class="prval">blur-radius</code>
+                and/or <code class="prval">spread-radius</code>is set).</dd>
+    
+                <dt><code class="prval heading">blur-radius</code></dt>
+                <dd>This is a third <code class="prval">length</code> value. The larger this value, the bigger the blur, so the shadow becomes bigger and lighter.
+                Negative values are not allowed. if not specified, it will be <code class="hlight">0</code> (the shadow's edge is sharp). The specification does not 
+                include and exact algorithm for hot the blur radius should be calculated.</dd>
+    
+                <dt><code class="prval heading">spread-radius</code></dt>
+                <dd>This is a fourth <code class="prval">length</code> value. Positive values will cause the shadow to expand and grow bigger, negative values will cause
+                the shadow to shrink. if not specified, it will be <code class="hlight">0</code> (the shadow will be the same size as the element.)</dd>
+    
+                <dt><code class="prval heading">color</code></dt>
+                <dd>See <code class="prval">color</code> values for possible keywords and notations. if not specified, it default which can be defined by the it contianer or parent.</dd>
+    
+            </dl>
+            
+            
+            <h3>Interpolation</h3>
+            <p>When animating shadow, such as when multiple shadow values on a box transition to new values on hover, the values are interpolated. <span class="hlight">interpolation</span>
+            determines intermediate values of properties, such as the blur radius, spread radius, and color, as shadows transition. For each shadow in a list of shadow, the 
+            <var class="prval nbg">color</var>,
+            <var class="prval nbg">x</var>,
+            <var class="prval nbg">y</var>,
+            <var class="prval nbg">blur</var> and
+            <var class="prval nbg">spread</var> transition; the color as <code class="prval">color</code>, and the other values as <code class="prval">length</code>s.
+            </p>
+
+            <p>In interpolating multiple shadows between two comma-separated lists of multiple box
+                shadows, the shadows are paired, in order, with interpolation occuring between paired shadow. if the lists of shadows have different lengths, then the shorter list
+                is padded at the end with shadows whose color is <code class="prval">transparent</code>, and <var>x</var>, <var>y</var>, and blur are <code class="hlight">0</code>
+                , with the inset, or lack of inset, being set to match. if, in any pair of shadows, one has <code class="prval">inset</code> set and the other is does not, the entire 
+                shadow list is uninterpolated; the shadows will change to the new values without an animating effect. 
+            </p>
+                        
+        </div>
+    </body>
+
+</html>

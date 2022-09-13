@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+-------------------------------------------------------------------------------
+in this section we will we will learn how to make a progress bar.
+
+required element and css for this 
+
+HTML: basic of div and span element.
+CSS: basic of box model, background, color.
+
+-------------------------------------------------------------------------------
+-->
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Progress bar</title>
+        <link rel="stylesheet" href="common.css">
+
+        <style>
+
+            *{
+                box-sizing: border-box;
+            }
+
+            .meter{
+                border: 5px solid lightslategray;
+                background-color: lightslategray;
+                height: 25px;
+                width: 500px;
+                border-radius: 10px;
+                box-shadow: inset 0 -5px 5px rgba(95, 81, 81, 0.296);
+                position: relative;
+                padding-left: 2px;
+            }
+
+            .progress-bar{
+                background-color: dodgerblue;
+                display: block;
+                height: 100%;
+                position: absolute;
+                left: 1px;
+                border-radius: 5px;
+                width: 25%;
+                transition: width 1000ms;
+                /* transition: width 200ms; */
+            }
+
+            .progress-bar:hover{
+                width: 100%;
+            }
+
+            .candy .progress-bar{
+                background-image: linear-gradient(
+                    -45deg, 
+                    #f28333 25%,
+                    /* transparent 50%, */
+                    transparent 70%, 
+                    #ffffff33 50%,
+                    transparent 0%,
+                    #f28333 50%,
+                    transparent 100%,
+                    transparent);
+                background-size: 10% 100%;
+                background-repeat: repeat-x;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <h1>Progress bar</h1>
+
+        <!-- Progress bar 1 -->
+        <h2>The simple progress bar</h2>
+        <p>In this section we will made a simple progress bar, progress bar itself a span element
+            with <i>progress-bar</i> class and <i>div.meter</i> is the container of the progressbar.
+        </p>
+
+        <div class="meter">
+            <span class="progress-bar"></span>
+        </div>
+        <p>The background of the progress bar span element is set by using the css.</p>
+    
+        <p>&rightarrow; <b>Here the steps to make the progress bar.</b></p>
+        <ol>
+            <li>First of all we need to set the position on the <i>div.meter</i> element as <i>relative</i></li>
+            <li>Now we need to set the some width of the div.meter as the width of progress-bar meter width.</li>
+            <li>Set some background on the <i>div.meter</i> and we can add some more css properties to make other 
+            effects like border-color, border-style, border-width, box-shadow etc.</li>
+            <li>Now we need to set the some css on the progress bar inner element which is span.</li>
+            <li>set <i>span.progress-bar</i> position as absolute.</li>
+            <li>set background color as we want.</li>
+            <li>set left property as 0 or 1 for some padding effect</li>
+            <li>Now we need to set some border radius on the span.progress-bar element</li>
+            <li>Set some pre width for the progress-bar.</li>
+        </ol>
+
+
+        <h2>CandyStriping effect</h2>
+        <p>we can get a cool striped effect by adding another element on top of span.meter element and laying a 
+            repeated css gradient over it. Semantically this is best achieved with a pseudo element.
+        </p>
+
+        <div class="candy meter">
+            <span class="progress-bar"></span>
+        </div>
+    </body>
+
+</html>

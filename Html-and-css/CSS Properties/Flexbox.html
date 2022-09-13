@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Flexbox Layout</title>
+
+        <link rel="stylesheet" href="../../styles/common.css">
+        <link rel="stylesheet" href="../../styles/Notes.css">
+        <link rel="stylesheet" href="../../styles/Notes2.css">
+        <link rel="stylesheet" href="../../styles/colors.css">
+
+        <!-- <base href=""> -->
+
+        <style>
+
+
+        </style>
+
+    </head>
+    
+    <body>
+        
+        <header>
+            <h1>Basic concepts of flexbox</h1>
+            <p>the flexible box module, usually referred to as flexbox, was designed as a 
+                ont-dimensional layout model, and as a method that couyld offer space distribution
+                between items in an interface and powerful alignment capabilities. This argicle gives an 
+                outline of the main features of flexbox, which we will be exploring in more detail in 
+                the rest of these guides.</p>
+
+            <p>When we describe felxbox as being one one dimensional we are describing the fact that flexbox
+                deals with layout in one demension at a time-either as a row or a column. This can be 
+                contrasted with the two-dimensional model of CSS Grid Layout, which controls columns and rows together.
+            </p>
+        </header>
+
+        <div>
+            <h2>The two axes of flexbox</h2>
+
+            <p>When working with flexbox we need to think in terms of two axes, the main axis and the cross axis.
+                The main axis is defined by the <code class="prprty">flex-direction</code> property, and the cross 
+                axis runs perpendicular to it. Everyting we do with flexbox refers back to these 
+                axes, so it we need to be carefull while using them. 
+            </p>
+
+            <h3>The main axis</h3>
+            <p>The main axis is defined by <code class="prprty">flex-direction</code>, which has four possible values:</p>
+            <ul>
+                <li><code class="prval">row</code></li>
+                <li><code class="prval">row-reverse</code></li>
+                <li><code class="prval">column</code></li>
+                <li><code class="prval">column-reverse</code></li>
+            </ul>
+
+            <p>if we select <code class="prval">row</code> or <code class="prval">row-reverse</code>, our main axis will 
+            run along the row <span class="hlight">x-axis</span> in the inline direction.</p>
+            <img src="" alt="Main Axis => Flex-direction: row">
+
+            <p>if we choose <code class="prval">column</code> or <code class="prval">column-reverse</code> and your main axis will 
+                run from the top of the page to the bottom in the block direction.</p>
+            
+            <img src="" alt="Main Axis => Flex-direction:column">
+
+            <h3>The cross axis</h3>
+            <p>The corss axis runs perpendicular to the main axis, therefore if our <code class="prprty">flex-direction</code>
+             (main axis) is set to <code class="prval">row</code> or <code class="prval">row-reverse</code> the cross axis runs down 
+             the columns.</p>
+
+             <img src="" alt="Cross Axis => Flex-direction:row">
+
+             <p>if our main axis is <code class="prval">column</code> or <code class="prval">column-reverse</code> then the cross axis 
+                runs along the rows.</p>
+            
+            <img src="" alt="Cross Axis => Flex-direction: column">
+        </div>
+        
+        <div>
+            <h2>Start and end lines</h2>
+            <p>Another vital area of understanding is how flexbox makes no assumption about the writing mode of 
+                doument. 
+            </p>
+        </div>
+    </body>
+
+</html>

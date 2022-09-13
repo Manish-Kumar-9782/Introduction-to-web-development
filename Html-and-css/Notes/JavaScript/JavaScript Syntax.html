@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Syntax</title>
+
+        <link rel="stylesheet" href="../../../styles/common.css">
+        <link rel="stylesheet" href="../../../styles/colors.css">
+        <link rel="stylesheet" href="../../../styles/Notes.css">
+        <link rel="stylesheet" href="../../../styles/Notes2.css">
+
+
+    </head>
+    <body>
+        
+        <header>
+            <h1>JavaScript Syntax</h1>
+            <p>Every programming follows some rule to process the code, this rule is called syntax, in this section 
+                we will see the basic Syntax in which we will see that what are the rule should be in our mind while 
+                writing a JavaScript code. 
+            </p>
+        </header>
+
+        <div>
+            <h2>Whitespace</h2>
+            <p>Whitespace refers to characters that provide the space b/w other character. (space in b/w the words)
+                JavaScript has the following Whitespace.
+            </p>
+
+            <ul>
+                <li>Carrage return</li>
+                <li>Space</li>
+                <li>New Line</li>
+                <li>tab</li>
+            </ul>
+
+            <p>JavaScript engine ignores whitespace. However, we can use whitespace to format the code the code to make it easy
+                to read and maintain.
+            </p>
+
+            <P>following code doesn't use must whitespace</P>
+            <div class="codeblock">
+                <p class="comment js">code is written in single line.</p>
+                <p class="jscode">var a = 10; var b = 20; var c = a+b; </p>
+            </div>
+
+            <p>This above code can be written in the following format. which is easy to  read.</p>
+            <div class="codeblock">
+                <p class="comment js">A code with formatting by using the whitespaces and new lines.</p>
+                <p>
+                    <p class="jscode">
+                        var a = 10;<br>
+                        var b = 20;<br>
+                        var c = a + b;
+                    </p>
+                </p>
+            </div>
+
+            <p class="Note">JavaScript bundlers remove all whitespace from JavaScript files and put them into as single file for deployment.
+                By doing this, JavaScript bundlers make the JavaScript code lighter and faster to load in the web browsers.
+            </p>
+        </div>
+
+        <div>
+            <h2>Statements</h2>
+            <p>A Statement is a code that declares a variable or instructs the javaScript engine to do a task. A simple statment is terminated by a semicolon <span class="hlight">(;)</span></p>
+            <p>Although the semicolon <span class="hlight">(;)</span> is optinal; we should always use it to terminate a statment.</p>
+            <div class="codeblock">
+                <p class="comment js">below code terminate the statement by using the ';' sign.</p>
+                <p class="jscode">let message = "Hello World!";<br>
+                    console.log(message);
+                </p>
+    
+            </div>
+
+            <h2>blocks</h2>
+            <p>A block is a sequence of zero or more simple statements. A block is delimited by a pair of curly brackets <span class="hlight">{}</span>.</p>
+            <div class="codeblock">
+                <p class="jscode">if (command = 'yes') {
+                    <span class="jscode">   console.log("Access Granted"); </span>
+                    <span class="jscode">   element = document.getElementById("idname");</span>
+                    <span class="jscode">   element.style = "setting some style";</span> 
+                    <span class="jscode">}</span> 
+                    <span class="jscode">else{</span>
+                        <span class="jscode">   console.log("Access Denied");</span> 
+                    <span class="jscode">}</span>
+                </p>
+            </div>
+
+            <h2>Identifiers</h2>
+            <p>An identifier is a name we choose for variables, parameters, functions, classes, etc. An identifier anme starts with a letter
+                (<code class="hlight">a-z</code>, or <code class="hlight">A-Z</code>), an underscore (<code class="hlight">_</code>), or a doller sign 
+                (<code class="hlight">$</code> and is followed by a sequence of characters inclyuding ( <code class="hlight">a-z</code>, <code class="hlight">A-Z</code>), numbers 
+                (<code class="hlight">0-9</code>), underscores (<code class="hlight">_</code>), and doller sign (<code class="hlight">$</code>).
+            </p>
+
+            <p class="Note">The letter is not limited to the ASCII chracter and many include extended ASCII or Unicode thought not recommended. <br>
+                Identifiers are case-sensitive. for example, the <code class="hlight">variable</code> is different from <code class="hlight">Variable</code>.
+            </p>
+        
+        
+            <h2>Comments</h2>
+            <p>Comments allow us to add notes or hints to JavaScript code, When excuting the code, the JavaScript engine ignores the comments.</p>
+            <p>In javaScript we can make single-line and block comments.</p>
+
+            <h3>Single-line comment</h3>
+
+            <p>A Single-line comment starts with two forward-slashes characters <code class="hlight inbrkit">//</code></p>
+            <div class="codeblock"><p class="comment">// this is single line comment</p></div>
+
+            <h3>Block comments</h3>
+            <p>A delimited comment begins with a forward slash and asterisk <code class="hlight">/*</code> and ends with the opposit <code class="hlight">*/</code>
+                as showing in the following example.</p>
+            <div class="codeblock">
+                <p class="comment js">This is a multiline comment which is a block elment <br>
+                    In a block comment we can describe the detail explanation of our statemet or code or program.
+                </p>
+            </div>
+
+            <h2>Expressiong</h2>
+            <p>An Expression a piece of code that evaluates to a value (basically an expression is the group of multiple variable following by some opertators
+                 which do some calculation and returns something)</p>
+                
+            <p><b><code class="mark">Expression:</code></b> 2 + 1</p>
+            <p>Above expression will return 3 after doing some calculation.</p>
+
+        </div>
+
+        <div>
+            <h2>Keywords & Reserved Words</h2>
+
+            <p>JavaScript defines a list of reserved keywords that have specific uses. Therefor, we cannot use the reserved keywords as identifiers or property names by rules.</p>
+            <p>The follwoing table contains all the reserved identifier which are called keywords. These keywords are defined in ECMA-262.</p>
+
+            <table class="expend">
+                <tr><td>break</td>	<td>case</td>	<td>catch</td></tr>
+                <tr><td>continue</td>	<td>debugger</td>	<td>default</td></tr>
+                <tr><td>else</td>	<td>export</td>	<td>extends</td></tr>
+                <tr><td>function</td>	<td>if</td>	<td>import</td></tr>
+                <tr><td>new</td>	<td>return</td>	<td>super</td></tr>
+                <tr><td>throw</td>	<td>try</td>	<td>null</td></tr>
+                <tr><td>void</td>	<td>while</td>	<td>with</td></tr>
+                <tr><td>class</td>	<td>delete</td>	<td>finally</td></tr>
+                <tr><td>in</td>	<td>switch</td>	<td>typeof</td></tr>
+                <tr><td>yield</td>	<td>const</td>	<td>do</td></tr>
+                <tr><td>for</td>	<td>instanceof</td>	<td>this</td></tr>
+                <tr><td>var</td> <td></td> <td></td></tr>
+            </table>
+
+
+            <p>In Addition, in ECMA-252 we have defined some other reserved keywords as showing in the below table,
+                that cannot be used as identifier or property name:
+            </p>
+
+            <table>
+                <tr><td>enum</td>	<td>implements</td>	<td>let</td></tr>
+                <tr><td>protected</td>	<td>private</td>	<td>public</td></tr>
+                <tr><td>await</td>	<td>interface</td>	<td>package</td></tr>
+                <tr><td>implements</td>	<td>public</td>	<td></td></tr>
+            </table>
+
+            <h3>Summary</h3>
+            <summary>
+                <ul>
+                    <li>We use whitespace including cariage return, newline, and tab to format the code. The JavaScript engine ignores the whitespace.</li>
+                    <li>Use a semicolon <code class="hlight inbrkit">:</code> to terminate a simple statement.</li>
+                    <li>use the curly braces <code class="hlight inbrkit">{}</code> to from a block that group one or more simple 
+                    statements.</li>
+                    <li>A single-line comment start with <code class="hlight inbrkit">//</code> followed by a text. A block comment begins with 
+                    <code class="hlight">/*</code>and ends with <code class="hlight">*/</code>. javaScript engine also ignores the comments.</li>
+                    <li>Identifiers are names that we choose for variables, functions, classes, etc.</li>
+                    <li>Do not use the reserved keywords and reserved words for identifiers.</li>
+                </ul>
+            </summary>
+        </div>
+    </body>
+</html>

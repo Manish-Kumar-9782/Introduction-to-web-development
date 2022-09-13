@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn about the HTML Element Transform property which will 
+be used to transorm element.
+
+In this section we will learn about the 2d transform
+
+In 2d Transform we have the following funciton.
+
+-> translate()
+-> rotate()
+-> scaleX()
+-> scaleY()
+-> scale()
+-> skewX()
+-> skewY()
+-> skew()
+-> matrix()
+
+-------------------------------------------------------------------------------
+-->
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Element Transfrom</title>
+        <link rel="stylesheet" href="common.css">
+        <style>
+
+            /* for all div element*/
+           
+
+            /* translate effect when hover the mouse on the element. */
+            
+            /* transform: translate property */
+            #translate:hover{
+                transform: translate(20px, 50px);
+            }
+
+            /* ------------------------------------------------------- */
+
+            /* transform: rotate property */
+            #rotate:hover{
+                transform: rotate(60deg);
+            }
+
+            #rotate-Negative:hover{
+                transform: rotate(-60deg);
+            }
+
+            /* ------------------------------------------------------- */
+
+            /* transform: scale property */
+            #scale-down:hover{
+                transform: scale(0.5, 0.5);
+                /* scale down the width and height at 50%; */
+            }
+
+            #scale-up:hover{
+                transform: scale(1.5, 1.5);
+                /* scale up the width and height at 150% */
+            }
+
+            /* ------------------------------------------------------- */
+
+            /* transform: scaleX property */
+            #scalex-down:hover{
+                transform: scaleX(0.5);
+                /* scale down the width and height at 50%; */
+            }
+
+            #scalex-up:hover{
+                transform: scaleX(1.5);
+                /* scale up the width and height at 150% */
+            }
+
+            /* ------------------------------------------------------- */
+
+            /* transform: scaleY property */
+            #scaley-down:hover{
+                transform: scaleY(0.5);
+                /* scale down the width and height at 50%; */
+            }
+
+            #scaley-up:hover{
+                transform: scaleY(1.5);
+                /* scale up the width and height at 150% */
+            }
+
+            /* ------------------------------------------------------- */
+
+            /* transform: skewX propery */
+
+            #skewX-cw:hover{
+                transform: skewX(-30deg);
+            }
+
+            #skewX-acw:hover{
+                transform: skewX(30deg);
+            }
+            /* ------------------------------------------------------- */
+
+            /* transform: skewY property */
+
+            #skewY-cw:hover{
+                transform: skewY(30deg);
+            }
+
+            #skewY-acw:hover{
+                transform: skewY(-30deg);
+            }
+            /* ------------------------------------------------------- */
+
+            /* transform: skew property */
+            #skew-cw:hover{
+                transform: skew(-30deg, 30deg)
+            }
+
+            #skew-acw:hover{
+                transform: skew(30deg, -30deg)
+            }
+            /* ------------------------------------------------------- */
+
+            /* transform origin. */
+
+            #tf-origin:hover{
+                transform: translate(50px, -50px);
+            }
+
+            #tf-origin2{
+                transform: translate(50px, -50px);
+                transform-origin: -50px, 50px;
+            }
+
+            #tf-origin2:hover{
+                transform: rotate(60deg);
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        
+        <!-- transfom: translate -->
+        <h2>The translate() method</h2>
+        <p>The tranlate() method moves an element from its current position (according to the parameter
+            given for the X-axis and the Y-axis).</p>
+
+        <p>Move the mouse over the element:</p>
+        <div id="translate">
+            <h3>translate</h3>
+            <p>(x:20px, y:50px)</p>
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        <!-- transform:  rotate-->
+        <h2>The rotate() method</h2>
+        <p>The rotate() method rotates an element clockwise or counter-clockwise according to a 
+            given degree.
+        </p>
+        <p>Move the mouse over the element to rotate the element.</p>
+
+        <div id="rotate">
+            <h2>rotate</h2>
+            <p>60deg</p>
+        </div>
+        <p>Using the negative values will rotate the element counter-clockwise.</p>
+
+        <div id="rotate-Negative">
+            <h2>rotate</h2>
+            <p>-60deg</p>
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        <!-- transform: scale() method  -->
+        <h2>The scale() method</h2>
+        <p>The scale() method increases or decreases the size of an element (according to the parameters 
+            given for the width and height).</p>
+
+        <p>Move the mouse over the elements to see the effect.</p>
+
+        <div id="scale-down" style="display: inline-block; 
+        text-align: center;
+        margin-right: 100px;">
+            <h2>scale</h2>
+            <p>scale-down</p>
+        </div>
+
+        <div id="scale-up" style="display: inline-block; text-align: center;">
+            <h2>scale</h2>
+            <p>scale-up</p>
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        <!-- transform: scaleX -->
+        <h2>The scaleX() method</h2>
+        <p>The scaleX() method increases or decreases the width of an element.</p>
+        <p>Move the mouse over the elements to see the effect.</p>
+        <div id="scalex-down" style="display: inline-block; 
+        text-align: center;
+        margin-right: 100px;">
+            <h2>scaleX</h2>
+            <p>scaleX-down</p>
+        </div>
+
+        <div id="scalex-up" style="display: inline-block; text-align: center;">
+            <h2>scaleX</h2>
+            <p>scaleX-up</p>
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        <!-- transform: scaleY -->
+        <h2>The scaleY() method</h2>
+        <p>The scaleY() method increases or decreases the height of an element.</p>
+        <p>Move the mouse over the elements to see the effect.</p>
+        <div id="scaley-down" style="display: inline-block; 
+        text-align: center;
+        margin-right: 100px;">
+            <h2>scaleY</h2>
+            <p>scaleY-down</p>
+        </div>
+
+        <div id="scaley-up" style="display: inline-block; text-align: center;">
+            <h2>scaleY</h2>
+            <p>scaleY-up</p>
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        <!-- transform: skewX -->
+
+        <h2>The skewX() method</h2>
+        <p>The skewX() method skews an element along the X-axis by the given angle.</p>
+        <p>Move the mouse over the element to see the effect</p>
+        <div id="skewX-cw" style="display: inline-block; 
+        text-align: center;
+        margin-right: 100px;">
+            <h2>skewX</h2>
+            <p>skewX-CW</p>
+        </div>
+
+        <div id="skewX-acw" style="display: inline-block; text-align: center;">
+            <h2>skewX</h2>
+            <p>skewX-ACW</p>
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+         <!-- transform: skewY -->
+
+         <h2>The skewY() method</h2>
+         <p>The skewY() method skews an element along the Y-axis by the given angle.</p>
+         <p>Move the mouse over the element to see the effect</p>
+         <div id="skewY-cw" style="display: inline-block; 
+         text-align: center;
+         margin-right: 100px;">
+             <h2>skewY</h2>
+             <p>skewY-CW</p>
+         </div>
+ 
+         <div id="skewY-acw" style="display: inline-block; text-align: center;">
+             <h2>skewY</h2>
+             <p>skewY-ACW</p>
+         </div>
+
+
+         <!--
+         -------------------------------------------------------------------------------
+         -------------------------------------------------------------------------------
+         -->
+
+         <!-- transform: skew -->
+
+         <h2>The skew() method</h2>
+         <p>The skew() method skews an element along the X-axis and Y-axis by the given angle.</p>
+         <p>Move the mouse over the element to see the effect</p>
+         <div id="skew-cw" style="display: inline-block; 
+                                text-align: center;
+                                margin-right: 100px;">
+             <h2>skew</h2>
+             <p>skew-CW</p>
+         </div>
+ 
+         <div id="skew-acw" style="display: inline-block; text-align: center;">
+             <h2>skew</h2>
+             <p>skew-ACW</p>
+         </div>
+
+
+
+         <!-- transform-origin property -->
+         <h2>The transfom-origin property</h2>
+         <p>The transform-origin property allows us to change the position of transformed elements.</p>
+         <p>transform-origin must be used together with the transfrom property.</p>
+         <p>by default the transform origin is the center of the element.</p>
+         <div id="tf-origin" style="display: inline-block; 
+                                text-align: center;
+                                margin-right: 100px;">
+             <h2>tf-origin</h2>
+             <p>change-origin</p>
+         </div>
+ 
+         <div id="tf-origin2" style="display: inline-block; text-align: center;">
+             <h2>tf-origin</h2>
+             <p>rotate</p>
+         </div>
+
+    </body>
+
+</html>

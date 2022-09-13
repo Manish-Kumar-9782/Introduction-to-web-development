@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Intro2</title>
+
+    <style>
+        /* General css properties  */
+        .grid-container{
+                
+                border: 10px groove goldenrod;
+                padding: 5px;
+                margin: 10px;
+            }
+
+            .box{
+                border: 1px solid;
+                margin-left: 0px;
+                width: 100px;
+                height: 100px;
+                padding: auto;
+                text-align: center;
+                margin: 5px;
+                color: whitesmoke;
+                background-color: dodgerblue;
+            }
+
+            .grid-container{
+                display: grid;
+                grid-template-columns: auto auto auto;
+            }
+
+            .grid-spacing{
+                grid-template-columns: 100px 100px 100px;
+                grid-row-gap:100px;
+                grid-column-gap: 150px;
+            }
+
+            .grid-line{
+                /* display: grid; */
+                grid-template-columns: 100px 100px 100px;
+                grid-row-gap:1px;
+
+                /* grid-row-start, grid-row-end */
+                
+
+            }
+            
+            /* .grid-line .box1{
+                background-color: dodgerblue;
+                height: auto;
+                grid-row-start: 1; 
+                grid-row-end: 3;
+            } */
+
+            .grid-line .box1{
+                width: auto;
+                height: auto;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+            
+    </style>
+</head>
+<body>
+    <h1>grid Spacing</h1>
+    <p>Since we are inserting element in rows so we need to define columns.</p>
+    <div class="grid-container grid-spacing">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>2</h1>
+        </div>
+
+        <div class="box">
+            <h1>3</h1>
+        </div>
+
+        <div class="box">
+            <h1>4</h1>
+        </div>
+
+        <div class="box">
+            <h1>5</h1>
+        </div>
+
+        <div class="box">
+            <h1>6</h1>
+        </div>
+    </div>
+
+    <h1>grid line</h1>
+    <p>Since we are inserting elements in columns so we need to specify/define row.</p>
+    <div class="grid-container grid-line">
+
+        <div class="box box1">
+            <h1>1</h1>
+        </div>
+
+        <div class="box box2">
+            <h1>2</h1>
+        </div>
+
+        <div class="box box3">
+            <h1>3</h1>
+        </div>
+
+        <div class="box box4">
+            <h1>4</h1>
+        </div>
+
+        <div class="box box5">
+            <h1>5</h1>
+        </div>
+
+        <div class="box box6">
+            <h1>6</h1>
+        </div>
+    </div>
+</body>
+</html>

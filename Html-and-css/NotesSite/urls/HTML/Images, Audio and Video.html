@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will make web page Notes about the Images, Audio and Video.
+
+In this section we will learn how to add images, animation, audio and video to 
+our web page/site.
+-------------------------------------------------------------------------------
+-->
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Images, Audio and Video</title>
+
+        <link rel="stylesheet" href="../Basic/common.css">
+        <link rel="stylesheet" href="../Basic/Notes.css">
+        <link rel="stylesheet" href="Notes2.css">
+
+        <style>
+
+            
+
+
+            htmlcode{
+                display: block;
+                width: fit-content;
+                border: 1px solid;
+                background-color: rgba(4, 110, 75, 0.17);
+                color: rgb(4, 110, 75);
+                padding: 5px;
+                margin-left: 25px;
+                margin-bottom: 10px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        
+        <header>
+            <h1>Images, Audio and Video</h1>
+            <p>In this section we will learn how to add images, animations, audio and video to our web 
+                page or site. image, audio and video are the other type of content which allow us to share 
+                the data in the visual and audible form. In all them images are used to increase the visual 
+                effect of our web page or site.
+            </p>
+
+            <p>we put an image on the web page by using the <code class="element tag">img</code> which has no
+            closing tag. Images can be in different format, generally we use three kind of image format to put
+        them on the web page. these are (JPEG, GIF, PNG)</p>
+
+            <p>we put the audio and video by using the <code class="element tag">object</code>, 
+                <code class="element tag">param</code>, <code class="element tag">embed</code> elements.</p>
+        </header>
+
+        <!-- Adding Images Using the <img> Element -->
+
+        <div>
+            <h2>Adding Images Using the <code class="tag">img</code> Element</h2>
+            <p>Images are added to a site by using the <code class="element tag">img</code> elmement, which has to 
+                carry at least tow attributes: the <code class="attr">src</code> attribute, indicate the source 
+                of the image, and an <code class="attr">alt</code> attribute, which provide a description of the image.</p>
+
+            <p>For example we will put an image google logo.</p>
+            <htmlcode><code class='tag'>img src="google-128px.ico" alt="Google Home Page" </code> </htmlcode>
+            <img src="google-128px.ico" alt="Google Home Page">
+
+            <p>The <code class="element tag">img</code> element tag can carry all the universal attributes and the UI event
+            attributes. The <code class="element tag">img</code> element can carry the following attributes:</p>
+
+            <p><b class="mark">Attributes:</b> 
+                <code class="hlight">src</code>,
+                <code class="hlight">alt</code>,
+                <code class="hlight">align</code>,
+                <code class="hlight">border</code>,
+                <code class="hlight">height</code>,
+                <code class="hlight">width</code>,
+                <code class="hlight">hspace</code>,
+                <code class="hlight">vspace</code>,
+                <code class="hlight">ismap</code>,
+                <code class="hlight">usemap</code>,
+                <code class="hlight">longdesc</code>,
+                <code class="hlight">name</code>
+            </p>
+
+            <!-- The src attribute -->
+            <h3>The <i class="nbg">src</i> Attributes</h3>
+            <p>The <code class="attr">src</code> attribute tells the borwser where to find the image. The value is a URL.</p>
+
+            <p>We should always maintain our image at our server and should avoid the using the images from different site. 
+                images form different sites may delete or moved from one location to another, in this case we will be able
+            to display the imgae on our page. In best practice we should always store the image on the our server side and 
+            use them instead of external image.</p>
+            
+            
+            <!-- The alt attribute -->
+            <h3>The <i class="nbg">alt</i> Attributes</h3>
+            <p>The <code class="attr">alt</code> attribute must appear on every <code class="element tag">img</code> element and 
+                its value should be a text description of the image.</p>
+
+                <htmlcode><code class='tag'>img src="image_file_path" alt="image description"</code> </htmlcode>
+
+            <p>The image description should be related to the image since:</p>
+            <ul>
+                <li>if the browser cannot dispaly the image, this text alternative will be shown instead.</li>
+                <li>Web users with visual impairments often use software called a screen reader to read a 
+                    page to tem, in which case the alt text descrbes the images they cannot see.
+                </li>
+                <li>While search ensgines are very clever, they cannot yet describe or index the contents of an image; 
+                    therefore, provididng a text alternative helps search engines index your pages and helps visitors 
+                    find your site.
+                </li>
+            </ul>
+
+            <!-- The height and width attributes -->
+            <h3>The <i class="nbg">height</i> and <i class="nbg">width</i> Attributes</h3>
+
+            <p>The <code class="attr">height</code> and <code class="attr">width</code> attributes specify the height and width of the 
+                image, and the values for these attributes are almost always shown in pixles.</p>
+
+            <htmlcode><code class='tag'>img src="google-128px.ico" alt="Google" width="64" height="64"</code> </htmlcode>
+            <img src="google-128px.ico" alt="Google" width="64" height="64">
+
+            <p>we can use other units to set the image <i>width</i> and <i>height</i> for example we can 
+            use the percentage value, it will take the the specified percentage space of the it's parent container.</p>
+
+            <p class="Note"><b class="hlight">Note:</b> if we pass the only one value either <code class="attr">width</code> 
+                or <code class="attr">height</code> it will maintain the aspect ratio other wise it will distort (damage the image quality) 
+                the image.</p>
+        
+            
+            <!-- The align attribute -->
+            <h3>The <i class="nbg">align</i> Attribute (Deprecated)</h3>
+            <p>The <code class="attr">align</code> attribute was created to align an image within the page (or if 
+                the image inside an element, it will align the image within that element.)</p>
+                
+            <htmlcode><code class='tag'>img src="google-128px.ico" alt="Google" align="left"</code></htmlcode>
+
+            <img src="google-128px.ico" width="64" alt="Google" align="left">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nihil non similique ad 
+                accusamus nemo corporis totam. Quo impedit eligendi porro dicta cupiditate nesciunt 
+                tempora, et repellendus doloribus ab, nostrum incidunt non nobis animi odit! Delectus 
+                aperiam, magni consequatur saepe illo rerum? Dolor magni tempore incidunt illo accusantium, 
+                eveniet nemo!</p>
+
+            <htmlcode><code class='tag'>img src="google-128px.ico" alt="Google" align="right"</code></htmlcode>
+
+            <img src="google-128px.ico" width="64" alt="Google" align="right">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nihil non similique ad 
+                accusamus nemo corporis totam. Quo impedit eligendi porro dicta cupiditate nesciunt 
+                tempora, et repellendus doloribus ab, nostrum incidunt non nobis animi odit! Delectus 
+                aperiam, magni consequatur saepe illo rerum? Dolor magni tempore incidunt illo accusantium, 
+                eveniet nemo!</p>
+            
+            
+            <!-- The border attribute -->
+            <h3>The <i class="nbg">border</i> Attribute (Deprecated)</h3>
+            <p>A border is a line that can appear around an image or other element.
+                by default, images do not have borders, so we if want to create some border around
+                the image then we need to set the border by giving the border thickness.
+            </p>
+            <htmlcode><code class='tag'>img src="google-128px.ico" alt="Google" border="2"</code></htmlcode>
+            <img src="google-128px.ico" width="64" alt="Google" border="2">
+            <p>This attribute is Deprecated, we can use the css rules to apply the border.</p>
+            
+            <!-- The  hspace and vspace attributes-->
+            <h3>The <i class="nbg">hspace</i> and <i class="nbg">vspace</i> Attributes (Deprecated)</h3>
+            <p>The <code class="attr">hspace</code> and <code class="attr">vspace</code> attributes can be
+            used to control the amount of white space around an image.</p>
+
+            <htmlcode><code class='tag'>img src="google-128px.ico" alt="Google" hspace="20" vspace="10"</code></htmlcode>
+            <img src="google-128px.ico"  alt="Google" hspace="10" vspace="30" border="2">
+
+            <p>The value is the amount in pixles of white space that should be left around the edge of the image.
+                it is similar to the image having a border around the image that is the same color as the background 
+                of the page. The space effect will be visible to out side the border of the image (if any has).
+            </p>
+            <p>These attributes are alos deprecated and we can use the css rules to make some space around the image.</p>
+            
+
+            <!-- The longgesc attributes -->
+            <h3>The <i class="nbg">longdesc</i>Atrribute</h3>
+            <p>The <code class="attr">longdesc</code> attribute is used to indicate the URL of a document (or part of document)
+            containing a description for the image in more detail.</p>
+            <p>Sometimes images can contain the lot of information in particular graphs and charts. By providing the 
+                long description of the image, not only we helping the search engine to understand inforamtion that they wound not 
+                otherwise be able to process, but we are also helping those users who cannot see the image.
+            </p>
+            <p><b class="hlight">Note:</b> Unfotunately, the <code class="attr">longdesc</code> attribute is not supported by many browsers, so as the
+            alternative we can use a hyperlink with text content <i class="hlight">D</i> in b/w the <code class="element tag">a</code> element.</p>.
+        </div>
+
+
+        <div>
+            <h2>Image Maps</h2>
+            <p>Image maps allows us to add multiple links to the same image, with each
+                link pointing to a different page. They are particularly helpful when thhe image needs to be divided 
+                up in  irregular shapes (such as maps). Each of these clickable areas is known as a <i class="hlight">hotspot.</i>
+            </p>
+
+            <p>Image maps works is based on upon <var>x</var> and <var>y</var> coordinates, measured from the top
+            left-hand corner of the image. These coordinate are used in two ways.</p>
+
+            <ul>
+                <li>To specify where the hotspots are.</li>
+                <li>To work out where the user is clickng on the image.</li>
+            </ul>
+
+            <p>By Comparing the coordinates of the hotspots with the coordinates where the user
+                clicks, the user can be sent to the link specified for that hotspot.
+            </p>
+
+            <p>There are actually tw types of image maps, both of which do the same job. The difference is how they work out,
+                which hotspot you clicked on.
+            </p>
+
+            <ul>
+                <li><b class="mark">Client-side image maps:</b> The web browser works out which part of the image the user 
+                    has clicked on and takes the user to the appropriate page.</li>
+                <li><b class="mark">Server-side image maps:</b> The browser sends the sever the coordinates, saying which part of the image 
+                the user clicked on, and these are processed by a script file on the server that 
+                determines which page the user should be sent to. </li>
+            </ul>
+
+            <!-- Client Side image maps -->
+            <h3>Client-Side Image Maps</h3>
+            <p>Client-Side image maps use <code class="hlight">HTML</code> code to tell the browser how the image will be divided
+            up; then the browser can tell what part o fthe image someone clicks on and can send the user to the appropriate link.</p>
+
+            <p>The are two methods to create a client-side image map:</p>
+            <ul>
+                <li>Using the <code class="element tag">map</code> and <code class="element tag">area</code> elements inside an 
+                    <code class="element tag">img</code> element.</li>
+                
+                <li>Using the <code class="element tag">map</code> element inside the <code class="element tag">object</code> element.</li>
+            </ul>
+
+            <h4>Client-Side Image Maps Using <code class="tag">map</code> and <code class="tag">area</code></h4>
+
+            <ol>
+                <caption>Process to make image map</caption>
+                <li>To Make Client-Side Image map, first of all we will insert our image into our page using the <code class="element tag">img</code>
+                    element.</li>
+                <li>An attribute called <code class="hlight">usemap</code> is then added to the <code class="element tag">img</code> element
+                to indicate that this image need to use the information held in the corresponding <code class="element tag">map</code>
+                element to turn the image into an image map.</li>
+                <li>The <code class="element tag">map</code> element than conatin the information used to tell the browser how to split
+                up the image so that it can send the user to the correct page.</li>
+            
+                <li>The value of the <code class="hlight">usemap</code> attribute begins with a pound or ahs sign, followed by the value of the 
+                    <code class="hlight">name</code>.</li>
+    
+                <li>The <code class="element tag">map</code> element usually follows directly after the <code class="element tag">img</code> element.
+                it needs to carry onlty the <code class="hlight">name</code> attribute to identify itself.</li>
+                <li>The <code class="element tag">map</code> element then contain two or more <code class="element tag">area</code> elements, and it is these
+                <code class="element tag">area</code> elements that actually define the clickable hotspot.</li>
+                <li>The <code class="element tag">area</code> element does this by specifying the shape and the coordinates that define the boundaries
+                of each clickable hotspot.</li>
+            </ol>
+
+            <p>The attributes that the <code class="element tag">area</code> element may have the following attribues:</p>
+            <p><b class="mark">Attributes:</b> 
+                <code class="hlight">acesskey</code>,
+                <code class="hlight">alt</code>,
+                <code class="hlight">shape</code>,
+                <code class="hlight">coords</code>,
+                <code class="hlight">href</code>,
+                <code class="hlight">nohref</code>,
+                <code class="hlight">target</code>,
+                <code class="hlight">tabindex</code>,
+                <code class="hlight">taborder</code>,
+                <code class="hlight">notab</code>
+            </p>
+        </div>
+
+        <!-- The Area element attributes -->
+        <div>
+            <h2>The <code class="element tag">area</code> Element Attributes</h2>
+            
+            <!-- The shape attribute -->
+            <h3>The <i class="nbg">shape</i> Attribute</h3>
+            <p>The <code class="hlight">value</code> of the <code class="attr">shape</code> attribute actually affects 
+                how the browser will  use the coordinates specified in the <code class="attr">coords</code> attribute, and is therefore
+            required. if we don't specify a <code class="attr">shape</code> attribute, the default value in a rectangle.</p>
+            
+            <p><b class="mark">Values of <code>shape</code> attribute:</b> 
+                <code class="hlight">default</code>,
+                <code class="hlight">rectangle or rect</code>,
+                <code class="hlight">polygon or poly</code>,
+                <code class="hlight">circle or circ</code>
+            </p>
+
+            <p class="Note">The value <code class="hlight">default</code> should be used on the last <code class="element tag">area</code>
+                 element if we want to indicate any sections of the image not otherwise indicated by an <code class="element tag">area</code>
+                element that has defined an area.</p>
+
+
+            <!-- The coords attribute -->
+            <h3>The <i class="nbg">coords</i> Attribute</h3>
+            <p>The <code class="attr">coords</code> attribute specifies the area that is the clickable hotspot. The number of coordinates we
+            specify depends on the shape we are creating.</p>
+
+            <ul>
+                <li>A rectangle contains four coordinates. The first two coordinates represent the top left of the 
+                    rectangle, and the second two the bottom right.
+                </li>
+
+                <li>A circle contains three coordinates; the first two are the center of the circle, while the third is the
+                    radius in pixles.
+                </li>
+
+                <li>A polygon contains two coordinates for each point of the polygon. So a triangle would contain six coordinates, a pentagon would 
+                    contain ten, and so on. We don't need to specify the first coordinate again to close the geomatry at the end because the shape 
+                    is automatically closed.</li>
+            </ul>
+
+
+            <!-- The href and nohref attributes -->
+            <h3>The <i class="nbg">href</i> and <i class="nbg">nohref</i> Attributes</h3>
+            <p>The <code class="attr">href</code> attribute works just like the <code class="attr">href</code> attribute for 
+                <code class="element tag">a</code> element; its value is the URL of the page we want to load when the user clicks that part of the image.</p>
+
+            <p>if we don't want part of the image to link anyway; we should use the nohref attribute on that space to indicate that 
+                the area will not take us anywhere. 
+            </p>
+            <p>if we want to use the <code class="attr">nohref</code> then we should give it a value as <i class="hlight">"nohref"</i>.</p>
+            
+            <htmlcode><code class='tag'>area shape="rect" coords="234, 234, 232, 423" nohref="nohref"</code></htmlcode>
+
+
+            <!-- The alt attribute -->
+            <h3>The <i class="nbg">alt</i> Attribute</h3>
+            <p>The <code class="attr">alt</code> attribute specifies a text alternative for that section of the image and works just like the 
+                <code class="attr">alt</code> attributes on the <code class="element tag">img</code> element.</p>
+            
+            <p>It will acutally override the <code class="attr">alt</code> text specified for the image when the user rolls over the area.</p>
+        
+            
+            <!-- The target attribute -->
+            <h3>The <i class="nbg">target</i> Attribute</h3>
+            <p>The <code class="attr">target</code> attribute specifies which frame or window the page should be loaded into.
+            Possible values are same as for the <code class="target">target</code> attribute of the <code class="element tag">a</code> element</p>
+
+
+            <!-- The tabindex Attribute -->
+            <h3>The <i class="nbg">tabindex</i> Attribute</h3>
+            <p>The <code class="attr">tabindex</code> attributes allows us to specify the order in which users can tab through
+            items on a page. The value is a number b/w the 1 and 32,767.</p>
+
+        </div>
+
+
+        <!-- Adding Flash, Video and Audio To web page. -->
+
+    </body>
+</html>

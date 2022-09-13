@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn about the 3d transform css property to apply the 
+some 3d transformation effect on the HTML element.
+
+All the 2d transfrom method with z-axis are applicable in the 3d transform. 
+-------------------------------------------------------------------------------
+-->
+
+<html lang="en">
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Element 3D Transform</title>
+
+        <link rel="stylesheet" href="common.css">
+
+        <style>
+
+            /* rotate3d */
+            #rotate3d:hover{
+                transform: rotate3d(0.8, 1, 1, 120deg);
+                /* 
+                    rotate3d(x,y,z,angle)
+                    x: x-coordinate of the vector denoting the axis of rotation
+                        which could be b/w 0 and 1.
+
+                    y: y-coordinate of the vector denoting the axis of rotation
+                        which could be b/w 0 and 1.
+
+                    z: z-coordinate of the vector denoting the axis of rotation
+                        which could be b/w 0 and 1.
+                    
+                    angle: is an anlge representing the angle of the rotation A positive 
+                        angle denotes a clockwise rotation, a negative angle a 
+                        counter-clockwise one.
+                */
+            }
+
+
+            /* rotateX in cw direction */
+            #rotateX:hover{
+                transform: rotateX(120deg);
+                
+            }
+
+            #rotateY:hover{
+                transform: rotateY(120deg);
+            }
+
+            #rotateZ:hover{
+                transform: rotateZ(120deg);
+            }
+
+
+            /* translate3d method */
+            #translate3d:hover{
+                
+                transform: translate3d(30px, -60px, -120px);
+            }
+
+
+            /* translate in x,y,z  */
+            #translateX:hover{
+                transform: translateX(60px);
+            }
+
+            
+            #translateY:hover{
+                transform: translateY(60px);
+            }
+
+            #translateZ:hover{
+                transform: translateZ(60px);
+                /* if perspective is not set then this effect will be not visible */
+            }
+
+            /* scale3d transformation    */
+            #scale3d:hover{
+                transform: scale3d(0.1, 0.2, 0.3)
+            }
+
+            /* scale in X , Y & Z direction. */
+            #scaleX:hover{
+                transform: scaleX(0.6);
+            }
+
+            
+            #scaleY:hover{
+                transform: scaleY(0.6);
+            }
+
+            #scaleZ:hover{
+                transform: scaleZ(0.6);
+                
+                /* if perspective is not set then this effect will be not visible */
+            }
+            
+
+        </style>
+        
+    </head>
+
+    <body>
+        
+        <h1>CSS 3D Transfrom Methods</h1>
+        
+
+        <h2>The rotate3d(x,y,z,angle) method </h2>
+        <p>The rotate3d method allows us to rotate the element in x,y and z-axis by specified angle</p>
+
+        <div id="rotate3d">
+            <h2>rotate3d</h2>
+            <p>rotate(0.8,1,1,30deg)</p>
+        </div>
+
+
+        <h2>The rotateX, rotateY and rotateZ method</h2>
+        <p>The rotateX, rotateY and rotateZ method allow us to rotate an element along x, y and z-axis
+            respectively.
+        </p>
+
+        <div class="group-inline">
+
+            <div id="rotateX">
+                <h2>rotateX</h2>
+                <p>rotateX(120deg)</p>
+            </div>
+    
+            <div id="rotateY">
+                <h2>rotateY</h2>
+                <p>rotateY(120deg)</p>
+            </div>
+    
+            <div id="rotateZ">
+                <h2>rotateZ</h2>
+                <p>rotateZ(120deg)</p>
+            </div>
+
+        </div>
+
+        <!-- translate3d property -->
+        <h2>The translate3d() property</h2>
+        <p>It is used to translate an element along x, y and z-axis</p>
+
+        <div id="translate3d">
+            <h2>translate3d</h2>
+            <p>translate3d(30px, 60px, 120px)</p>
+        </div>
+
+        <p>Note: here translate in z-axis is not visible we will see that when we will use the 
+            perspective property function.
+        </p>
+
+        <!-- translateX , translateY and translateZ property -->
+
+
+        <h2>The translateX , translateY & translateZ property</h2>
+        <p>Individual translate funciton to translate an element in x, y and z-axis respectively.</p>
+
+        <div class="group-inline">
+
+            <div id="translateX">
+                <h2>translateX</h2>
+                <p>translateX(60px)</p>
+            </div>
+    
+            <div id="translateY">
+                <h2>translateY</h2>
+                <p>translateY(60px)</p>
+            </div>
+    
+            <div id="translateZ">
+                <h2>translateZ</h2>
+                <p>translateZ(60px)</p>
+            </div>
+        </div>
+
+
+        <!-- transform: scale3d  -->
+        <h2>The scale3d method</h2>
+        <p>the scale3d mehtod to scale in x,y & z axis together.</p>
+
+        <div id="scale3d">
+            <h2>scale3d</h2>
+            <p>scale3d(10px 20px 30px)</p>
+        </div>
+
+
+        <!-- transfrom scaleX, scaleY and scaleZ  -->
+
+        <h2>The scaleX, scaleY & scaleZ method</h2>
+        <p>The scaleX, scaleY & scaleZ method are used to scale in x,y & z-axis respectively.</p>
+
+        <div class="group-inline">
+
+            <div id="scaleX">
+                <h2>scaleX</h2>
+                <p>scaleX(60px)</p>
+            </div>
+    
+            <div id="scaleY">
+                <h2>scaleY</h2>
+                <p>scaleY(60px)</p>
+            </div>
+    
+            <div id="scaleZ">
+                <h2>scaleZ</h2>
+                <p>scaleZ(60px)</p>
+            </div>
+        </div>
+
+    </body>
+    
+</html>

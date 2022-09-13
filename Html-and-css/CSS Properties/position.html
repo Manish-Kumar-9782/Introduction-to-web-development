@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn about the position property in css, we will learn 
+how and when to use this position property in our web page.
+-------------------------------------------------------------------------------
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS position property</title>
+        <link rel="stylesheet" href="../../styles/common.css">
+        <link rel="stylesheet" href="../../styles/Notes.css">
+        <link rel="stylesheet" href="../../styles/Notes2.css">
+        <link rel="stylesheet" href="../../styles/colors.css">
+
+        <style>
+
+            .boxes{
+                padding: 10px;
+                border-color: brown;
+                margin-bottom: 30px;
+            }
+
+            .boxes .box{
+                margin-top: 0px;
+                margin-bottom: 0px;
+                width: 64px;
+                height: 64px;
+                border: 5px solid dodgerblue;
+                display: inline-block;
+                background-color: aquamarine;
+            }
+
+            /* Applying the static property on the position, it will have no 
+            effect on the position  of the box since it is the default value.*/
+            .boxes .static{
+                position: static; 
+                /* static is the default value. */
+                border-color: yellowgreen;
+                background-color: rgba(153, 205, 50, 0.359);
+            }
+
+            .boxes .relative{
+                position: relative; 
+                /* relatvie value will be uneffective until we don't give the 
+                any of the directional offset left, right, top or bottom. */
+                border-color: yellowgreen;
+                background-color: rgba(153, 205, 50, 0.359);
+                top: 25px;
+                left: 25px;
+            }
+
+            #abs-container{
+                position: relative;
+            }
+
+            #abs-container #absolute{
+                position: absolute;
+                
+                
+                border-color: yellowgreen;
+                background-color: rgba(153, 205, 50, 0.359);
+                top: 25px;
+                left: 60px;
+                /* z-index: -1; */
+            }
+
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <header>
+            <h1>CSS position Property</h1>
+            <p>The <code class="element">position</code> CSS property sets how an element is positioned in a 
+            document. The 
+            <code class="element">top</code>,
+            <code class="element">right</code>,
+            <code class="element">bottom</code>, and
+            <code class="element">left</code> properties determine the ifnal location of positioned element.
+        </p>
+        </header>
+
+        <div>
+            <h2>position property values</h2>
+            <p>The <code class="mark">position</code> has some local and global values in which local values 
+            are responsible to change the position of the box.</p>
+
+            <p><b class="mark">position local values: </b>
+                <code class="hlight tab8">static</code>,
+                <code class="hlight">relative</code>,
+                <code class="hlight">absolute</code>,
+                <code class="hlight">fixed</code>,
+                <code class="hlight">sticky</code>
+            </p>
+
+            <p><b class="mark">position global values: </b>
+                <code class="hlight tab8">inherit</code>,
+                <code class="hlight">initial</code>,
+                <code class="hlight">revert</code>,
+                <code class="hlight">revert-layer</code>,
+                <code class="hlight">unset</code>,
+            </p>
+
+            <br>
+            <h3>position property Values</h3>
+
+            <dl>
+                <!-- position:static -->
+                <dt><code class="mark">static</code></dt>
+                <dd>The element is position according to the normal flow of the document. The <code class="hlight">top</code>
+                , <code class="hlight">right</code>, <code class="hlight">bottom</code>,  <code class="hlight">left</code> and <code class="hlight">z-index</code>
+                properties have no effect. This is the defalut value.</dd>
+                
+                <dd>Here in the below container we have three boxes and one of them (middle one) have <code class="hlight">yellowgreen</code>
+                color which has <code class="mark">position: static;</code>, but since it is the default it will have no effect
+                after applying and ther will be no effect of the specified value.</dd>
+                <dd><div class="boxes">
+                    <div class="box"></div>
+                    <div class="box static"></div>
+                    <div class="box"></div>
+                    </div>
+                </dd>
+
+                <!-- position: relative -->
+                <dt><code class="mark">relative</code></dt>
+                <dd>The element is positioned according to the normal flow of the document, and then offset relative to itself
+                    based on the value of 
+                    <code class="hlight">top</code>,
+                    <code class="hlight">right</code>,
+                    <code class="hlight">bottom</code>, and
+                    <code class="hlight">left</code>. The offset does not affect the position of any other elements; thus, the space
+                    given for the element in the page layout is the same as if position we static.
+                </dd>
+
+
+                <dd>Here in the below container again we have three boxes and middle one have <code class="hlight">yellowgreen</code>
+                color which has be set to <code class="mark">position: relative;</code>.</dd>
+
+                <dd>The <code class="mark">position</code> property will not be effective until we dont give the directional offest 
+                    <code class="hlight">left</code>,
+                    <code class="hlight">right</code>,
+                    <code class="hlight">top</code>, and
+                    <code class="hlight">bottom</code>. here in this case we have specified the directional offset as 
+                    <code class="hlight">top: 25px;</code> and <code class="hlight">left: 25px;</code>.
+                </dd>
+
+                <dd>After applying the directional offset we can see the effect of the <code class="mark">relative</code> value effect which 
+                    will be not applied in the case of <code class="mark">static</code> value.</dd>
+
+                <dd><div class="boxes">
+                    <div class="box"></div>
+                    <div class="box relative"></div>
+                    <div class="box"></div>
+                    </div>
+                </dd>
+
+                <dd>This value creates a new <span class="hlight">stacking context</span> when the value of <code class="mark">z-index</code>
+                is not 
+                <code class="hlight">auto</code>. its effect on  
+                <code class="hlight">table-*-group</code>, 
+                <code class="hlight">table-row</code>, 
+                <code class="hlight">table-column</code>, 
+                <code class="hlight">table-cell</code>, and 
+                <code class="hlight">table-caption</code> elements is undefined. 
+                </dd>
+
+
+                <!-- position: absolute -->
+                <dt><code class="mark">absolute</code></dt>
+                <dd>The element is removed from the normal document flow, and no space is created for the element in the page layout. it is positioned 
+                    relative to its closest positioned parent, if any; otherwise, it will placed relative to the initial 
+                    <span class="hlight">contianing block</span>. its final position is determined by the value of directional offset 
+                    <code class="hlight">left</code>,
+                    <code class="hlight">right</code>,
+                    <code class="hlight">top</code>, and
+                    <code class="hlight">bottom</code>.
+                </dd>
+
+                <dd><div id="abs-container" class="boxes">
+                    <div class="box"></div>
+                    <div class="box" id="absolute" ></div>
+                    <div class="box"></div>
+                    </div>
+                </dd>
+
+                <dd>This value creates a new <span class="hlight">stacking context</span> when the value of <code class="mark">z-index</code>
+                is not <code class="hlight">auto</code>. The margins of absolute postioned boxes do not <span class="hlight">collapse</span>
+                with other margins.</dd>
+
+                
+
+                <!-- position: fixed -->
+                <dt><code class="mark">fixed</code></dt>
+                <dd>The element is removed from the normal document flow, and no space is created for the element
+                    in the page layout. it is positioned relative to the initial <span class="hlight">containing block</span>
+                    established by the <span class="hlight">viewport</span>, except when one of its parent has <code class="mark">tarnsform</code>,
+                    <code class="mark">perspective</code>, or <code class="mark">filter</code> property set to something other than <code class="hlight">none</code>
+                    or the <code class="mark">will-change</code> property is set to <code class="hlight">transfrom</code>, in which
+                    case that parent behaves as the <b>containing block</b>.
+                </dd>
+
+                <dd>Note that there are bowser inconsistencies with <code class="hlight">perspective</code> and <code class="hlight">filter</code>
+                contributing to <b>containing block</b> formation.</dd>
+
+                <dd>Its final position is determined by the values of 
+                    <code class="hlight">top</code>,
+                    <code class="hlight">right</code>,
+                    <code class="hlight">left</code>, and
+                    <code class="hlight">bottom</code>.
+                </dd>
+
+                <dd><div id="fixed-container" class="boxes">
+                    <div class="box"></div>
+                    <div class="box" id="fixed" ></div>
+                    <div class="box"></div>
+                    </div>
+                </dd>
+
+                <dd>This value always creates a new <span class="hlight">stacking context</span>. In printed document, the element
+                is placed in the same position on every page.</dd>
+
+
+                <!-- position: sticky -->
+                <dt><code class="mark">sticky</code></dt>
+                <dd>The element is positioned according to the normal flow of the document, and then
+                    offset relative to its <i>nearest scrolling parent</i> and <span class="hlight">containing block</span>
+                    (nearest block-level parent), including table-related elements, based on the values of 
+                    <code class="hlight">top</code>,
+                    <code class="hlight">right</code>,
+                    <code class="hlight">bottom</code>, and
+                    <code class="hlight">left</code>. The offset does not affect the position of any other elements.
+                </dd>
+                
+                <dd><div id="sticky-container" class="boxes">
+                    <div class="box"></div>
+                    <div class="box" id="sticky" ></div>
+                    <div class="box"></div>
+                </dd>
+
+                <dd>This value always creates a new <span class="hlight">stacking context</span>. Note that a sticky element
+                "Sticks" to its nearest parent that has "scrolling mechanism" (created when 
+                <code class="mark">overflow</code> is 
+                    <code class="hlight">hidden</code>,
+                    <code class="hlight">scroll</code>,
+                    <code class="hlight">auto</code>, or
+                    <code class="hlight">overlay</code>), even if that parent isn't the nearest actually scrolling parent. 
+                </dd>
+                
+            </dl>
+        </div>
+           
+        
+        <!-- Description -->
+        <div>
+            <h2>Description</h2>
+            <h3>Types of positioning</h3>
+
+            <ul>
+                <li>A <b>positioned element</b> is an elemnet whose <i>computed</i> <code class="mark">position</code>
+                value is either 
+                    <code class="hlight">relative</code>,    
+                    <code class="hlight">absolute</code>,    
+                    <code class="hlight">fixed</code>, or    
+                    <code class="hlight">sticky</code>. (In other words, it's anything except <code class="hlight">static</code>.)    
+                </li>
+
+                <li>A <b>relatively positioned element</b> is an element whose <i>computed</i> <code class="mark">position</code>
+                value is <code class="hlight">relatve</code>. The <code class="hlight">top</code> and <code class="hlight">bottom</code>
+                properties specify the vertical offset from its noraml position; the <code class="hlight">left</code>
+                and <code class="hlight">right</code> propetries specify the horizontal offset.</li>
+
+                <li>An <b>absolutely positioned element</b> is an element whose <i>computed</i> <code class="mark">position</code>
+                value is <code class="hlight">absolute</code> or <code class="hlight">fixed</code>. The 
+                    <code class="hlight">top</code>,
+                    <code class="hlight">right</code>,
+                    <code class="hlight">bottom</code>, and
+                    <code class="hlight">left</code> properties specify offsets from the edges of the element's <span class="hlight">containing block</span>
+                    . (The containing block is the parent relative to which the element is positioned.) if the element has 
+                    margins, they are added to the offset. The element establishes a new <span class="hlight">block formatting context</span>
+                    (BFC) for its contents.
+                </li>
+
+                <li>A <b>stickily positioned elements</b> is an element whose <i>computed</i> <code class="mark">position</code> value is 
+                <code class="hlight">sticky</code>. it's treated as relatively positioned until its <span class="hlight">containing block</span> crosses a specified threshold  
+                (such as setting <code class="hlight">top</code> to value other than auto) within its flow root
+                (or the container it scrolls within), at which point it is treated as "stuck" until meeting the opposite edge of 
+                its <span class="hlight">containing block</span>.</li>
+            </ul>
+
+            <p>Most of the time, absolutely positioned element that have <code class="hlight">height</code> and <code class="hlight">width</code>
+            set to <code class="hlight">auto</code> are sized so as to fit their contents. However, non-replaced, absolutely positioned elements can be made to fill the available vertical space by 
+            specifying both <code class="hlight">top</code> and <code class="hlight">bottom</code> and leaving <code class="hlight">height</code> unspecified 
+            (that is, <code class="gray">auto</code>). They can likewise be made to fill the available horizontal space by specifying both <code class="hlight">left</code>
+            and <code class="hlight">right</code> and leaving<code class="hlight">width</code> as <code class="gray">auto</code>.</p>
+
+            <p>Except for the case just described (of absolutely positioned elements filling the available space):</p>
+
+            <ul>
+                <li>if both <code class="hlight">top</code> and <code class="hlight">bottom</code> are specified (techinically, not <code class="gray">auto</code>), <code class="hlight">top</code>
+                wins.</li>
+
+                <li>if both <code class="hlight">left</code> and <code class="hlight">right</code> are specified, <code class="hlight">left</code> wins when <code class="attr">direction</code> is <code class="gray">ltr</code>
+                (English, horizontal japanese, etc.) and <code class="hlight">right</code> wins when <code class="attr">direction</code> is <code class="gray">rtl</code>
+                (Persian, Arabic, Hebrew, etc.).</li>
+            </ul>
+
+            <h2>Accessibility concerns</h2>
+            <p>ensure that elements positioned with an <code class="gray">absolute</code> or <code class="gray">fixed</code> value do not obscure other content when 
+            the page is zoomed to increase text size.</p>
+
+            <h3>Performance & Accessibility</h3>
+            <p>Scrolling elements containing <code class="gray">fixed</code> or <code class="gray">sticky</code> content can cause performance and accessibility issue. As a user scrolls, the browser must repaint the sticky 
+            or fixed content in a new location. Depending on the content needing to be repainted, the browser performance, and the device,s processing spee, the browser may not be able to manage repaint at 60fps, causing 
+            accessibility concerns for people with sensitivities and jank for everyone. One solutiion is to add <code class="mark">will-change: transform;</code> to the poitioned element to render the lemente in its own layer,
+            imporving repaint speed and therfore improving performance and accessibility.</p>
+        </div>
+    </body>
+
+</html>

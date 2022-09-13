@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn about the css box-sizing property, we will see 
+that how it works and how to use it in our web page.
+-------------------------------------------------------------------------------
+-->
+
+    <html lang="en">
+    <head>
+       
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>css box-sizing Property</title>
+
+        <link rel="stylesheet" href="../../styles/common.css">
+        <link rel="stylesheet" href="../../styles/Notes.css">
+        <link rel="stylesheet" href="../../styles/Notes2.css">
+        <link rel="stylesheet" href="../../styles/colors.css">
+
+
+        <style>
+            
+            span{
+                border: 0px;
+            }
+
+            .parent{
+                border: 5px solid lightcoral;
+                text-align: center;
+                margin: 30px;
+                
+            }
+            .parent code{
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                color: rgb(36, 83, 85);
+            }
+
+            .child{
+                border: 5px solid lightgreen;
+                background-color: rgba(111, 163, 231, 0.553);
+                text-align: center;
+                width: 100%;
+            }
+            
+             .parent.content-box{
+                text-align: left; 
+                /* Reseting the text-align as left to see the effect. */
+                width: 100%;
+                margin: 1px;
+                padding: 0;
+                /* box-sizing: border-box; */
+            }
+
+            .parent.content-box .child{
+                border: 0px;
+                width: 24.5%;
+                display: inline-block;
+                /* box-sizing: border-box; */
+                margin: 0;
+                padding: 0;
+                
+            }
+
+            .parent.border-box{
+                /* To reset the alignment of the boxes */
+                text-align: left;
+            }
+
+            .parent.border-box .child{
+                
+                display: inline-block;
+                width:24%;
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+                margin-inline: 0px;
+                margin-block: 0px;
+            }
+
+            .first{
+
+                border: 5px solid brown;
+                box-sizing: content-box;
+            }
+
+            .second{
+                border: 5px solid brown;
+                box-sizing: border-box;
+
+            }
+
+            .third{
+                border: 5px solid brown;
+                box-sizing: border-box;
+                text-align: left;
+                padding-left: 50px;
+            }
+
+        </style>
+        
+    </head>
+
+    <!-- Introduction to the css box-sizing. -->
+
+    <body>
+        
+        <Header>
+            <h1>CSS box-sizing Property</h1>
+            <p>The <code class="element">box-sizing</code> CSS property sets how the total 
+                <span class="hlight">width</span> and <span class="hlight">height</span> of an 
+            element is calculated.</p>
+        </Header>
+
+        <div>
+            <h2>Default CSS box model</h2>
+            <p>By default in the <span class="mark">CSS box model</span> the <span class="hlight">width</span> and 
+                <span class="hlight">height</span> we assign to an element is applied only to the element's content box.</p>
+
+            <p>if the element has any border or padding, this is then added to the <span class="hlight">width</span> and 
+                <span class="hlight">height</span> to arrive at the size of the box that's rendered on the screen.
+            .</p>
+
+            <p>This means that when we set <span class="hlight">width</span> and <span class="hlight">height</span>, we 
+            have to adjust the value we give to allow for any border or padding that may be added.</p>
+
+            <p><b>For Example:</b> if we have four boxes with <span class="hlight">width: 25%</span>, if any has left or 
+                right padding or a left or right border, they will not by defalut fit on one line
+            within the constraints of the parent container.</p>
+
+            <div class="parent content-box">
+                
+
+                <div class="child">
+                    <h2>Child Container 1</h2>
+                </div>
+                
+                <div class="child" style="padding-right: 50px;">
+                    <h2>Child Container 2</h2>
+                </div>
+
+                <div class="child">
+                    <h2>Child Container 3</h2>
+                </div>
+
+                <div class="child">
+                    <h2>Child Container 4</h2>
+                </div>
+            
+            </div>
+
+            <p>As we can see that, here in the above container our four boxes with equal size does not fit in one line, since one of them
+                contains <code class="hlight">padding</code> so the extra width added to that box while using the 
+                <code class="hlight">box-sizing: content-box;</code>. we will see how to overcome this problem later in this section.
+            </p>
+            <div>
+                <p>The <code class="hlight">box-sizing</code> property can be used to adjust the behaviour of adjusting the box
+                in a line which are having equal width with differnt setting.</p>
+
+                <ul>
+                    <li><code><b class="mark heading">content-box:</b></code> It gives you the default CSS box-sizing behaviour. if we set an element's width to 100pixles, 
+                        then the element's content box will be 100 pixels wide, and the <span class="hlight">width</span> of any border or padding will be added to 
+                        the final rendered width, making the element wider than 100px.</li>
+
+                    <li><code><b class="mark heading">border-box:</b></code> It tells the borwser to account for any border an padding in the
+                    values we specify for an element's <span class="hlight">width</span> and <span class="hlight">height</span>.
+                    if we set an element's width to 100 pixels, that 100 pixels will include any border or padding we added,
+                    and the content box will shrink to absorb that extra <span class="hlight">width</span>. This typically makes it musch
+                    easier to size elements. <code class="mark">box-sizing: border-box</code> is default styling that
+                    browsers use for the 
+                    <code class="element tag">table</code>,
+                    <code class="element tag">select</code>, and
+                    <code class="element tag">button</code> elements, and for
+                    <code class="element tag">input</code> elements whose type is
+                    <code class="hlight">radio</code>,
+                    <code class="hlight">checkbox</code>,
+                    <code class="hlight">reset</code>,
+                    <code class="hlight">button</code>,
+                    <code class="hlight">submit</code>
+                    <code class="hlight">color</code>, or
+                    <code class="hlight">search</code>.
+                </li>
+                </ul>
+
+                <p class="Note"> it is often usefor to set <span class="mark">box-sizing</span> to <code class="hlight">border-box</code>
+                to layout elements. this makes dealing with the sizes of elements much easier, and generally eliminates a number of pitfalls we can stumble
+                on while laying out our content. On the other hand, when using <code class="mark">position: relative</code> or 
+                or <code class="mark">position: absolute</code>, use of <code class="mark">box-sizing: content-box</code> allows the
+                positioning values to be relative to the content, and independent of changes to border and padding sizes, which is sometimes desirable.
+                </p>
+
+                <p><b class="mark">box-sizing values:</b> 
+                    <code class="hlight tab8">border-box</code> and
+                    <code class="hlight">content-box</code>.
+                </p>
+
+                <p><b class="mark">box-sizing global values: </b>
+                    <code class="hlight tab8">inherit</code>,
+                    <code class="hlight">initial</code>,
+                    <code class="hlight">revert</code>,
+                    <code class="hlight">revert-layer</code>,
+                    <code class="hlight">unset</code>
+                </p>
+            </div>
+
+            <div>
+                <h2>Values</h2>
+                <dl>
+                    <dt><code class="mark">content-box</code></dt>
+                    <dd>This is the initial and default value as specified by the css standard. The <code class="hlight">width</code>
+                    and <code class="hlight">height</code> properties include the content, but does not include the padding, border, 
+                    or margin. for example <code class="mark green">.box {width: 350px; border:10px; solid:black;}
+                    renders a box that is 370px wide.
+                    </code></dd>
+                    <dd>Here, the dimensions of the element are calculated as: <i>width = width of the content</i>, and 
+                        <i>height=height of the content. (Border and padding are not included in the calculation.)</i>.
+                    </dd>
+
+                    <dt><code class="mark">border-box</code></dt>
+                    <dd>The <code class="hlight">width</code> and <code class="hlight">height</code> properties includes the content, padding
+                    and border, but do not include the margin. Note that padding and border will be inside the box.</dd>
+                    <dd>For example, <code class="mark green">.box {width: 350px; border:10px; solid:black;}</code> 
+                    renders a box that is 350px wide,
+                    with the area for content being 330px wide. The content box can't be negative and floored to 0, making it impossible
+                    to use <code class="hlight">border-box</code> to make the element disappear.
+                    </dd>
+                    <dd>Here the dimensions of the element are calculated as: <i>width = border + padding + width of the content,</i>
+                    and <i> height = border + padding + height of the content.</i></dd>
+                </dl>
+            </div>
+        </div>
+
+        <div>
+            <h3><code class="mark">box-sizing</code></h3>
+            
+            <p>In this section we have a three parent container with their child box and we have set them
+
+                as <code class="hlight">width: 100%;</code> to see the effect of the <code class="hlight">box-sizing: content-box;</code>
+                property.
+            </p>
+
+            <p>1. In First Parent Container we can see that, after setting the <code class="hlight">width: 100px;</code> it tries to overflow
+            the parent container, since here the content width becomes 100% which does not include the border and padding.</p>
+            
+            <div class="parent">
+                <h1>Parent Container</h1>
+                <p class>
+                <code>margin: 30px;</code>
+                </p>
+                <div class="first child">
+                    <h2>Child Container</h2>
+                    <p>
+                        <code>box-sizing: content-box;</code> <br>
+                        <code>width: 100%;</code><br>
+                        <code>border: 5px solid brown;</code> <br>
+                        <code>text-align: center;</code>
+                    </p>
+                </div>
+            </div>
+
+            <p>2. Now in the second container we have added the border on the child container, but here we have set 
+                a <code class="hlight">box-sizing: border-box;</code> to adjust the additional size of the border
+                thickness in the calculation of the total <code class="hlight">width</code> of the child container 
+                which is 100%.
+            </p>
+            <p>Since here the total widht of the content: <i>total width = width of the content + padding + border thickness</i>
+            child container will fit inside the it's parent container.</p>
+            <div class="parent">
+                <h1>Parent Container</h1>
+                <p class>
+                    <code>margin: 30px;</code>
+                </p>
+                <div class="second child">
+                    <h2>Child Container</h2>
+                    <code>box-sizing: border-box;</code> <br>
+                    <code>width: 100%;</code> <br>
+                    <code>border: 5px solid brown;</code> <br>
+                    <code>text-align: center;</code>
+                </div>
+            </div>
+    
+    
+            <p>3. Now in this section we have added some padding of 50px and changed the <code class="hlight">text-align: left;</code>
+                 to show the effect. in this case we have extra space in the from of padding but, since 
+                we have set <code class="hlight">box-sizing: border-box;</code> it will be considerd as a part of the 
+                content and rendered with 100% <code class="hlight">width</code> of the child container.</p>
+            <div class="parent">
+                <h1>Parent Container</h1>
+                <p class>
+                    <code>margin: 30px;</code>
+                </p>
+                <div class="third child">
+                    <h2>Child Container</h2>
+                    <code>box-sizing: border-box;</code> <br>
+                    <code>width: 100%;</code> <br>
+                    <code>border: 5px solid brown;</code> <br>
+                    <code>text-align: left;</code>
+                </div>
+            </div>
+
+
+            <h3>alinging box with equal length in a line</h3>
+            <p>Now we will align all the boxes (child box) in a line by using the <code class="hlight">box-sizing:border-box;</code>, 
+                We have seen that with <code class="hlight">box-sizing: content-box;</code> boxes does not fit in one line
+            and here we will take each box <code class="hlight">width: 24%;</code> due to some marign related issue.
+            Since margin doesn't count in the <code class="hlight">border-box</code> setting.</p>
+
+            <div class="parent border-box">
+                
+
+                <div class="child">
+                    <h2>Child Container 1</h2>
+                </div>
+                
+                <div class="child" style="padding-right: 50px;">
+                    <h2>Child Container 2</h2>
+                </div>
+
+                <div class="child">
+                    <h2>Child Container 3</h2>
+                </div>
+
+                <div class="child">
+                    <h2>Child Container 4</h2>
+                </div>
+            </div>
+
+            <p>After setting the <code class="hlight">box-sizeing: border-box;</code> we can see that all the boxes fits easily
+            inside the it's parent container.</p>
+        </div>
+        
+
+        
+
+
+    </body>
+</html>

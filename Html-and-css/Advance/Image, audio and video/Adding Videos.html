@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn how to add or embed videos in our web page.
+-------------------------------------------------------------------------------
+-->
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adding Video</title>
+
+        <style>
+            div{
+                border: 2px solid;
+                padding: 20px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Using the simple video element  -->
+        <div>
+            <video src="video2.mp4" width="700" controls>Loading Failed</video>
+        </div>
+        
+        <!-- Using the source element  to give the alternative video if 
+        firt one is faild to load-->
+        <div>
+            <video width="700" controls>
+                
+                <source src="video.avi" type="video/avi"> 
+                <!-- This first source file won't load since video element does not 
+                support the avi format. -->
+                <source src="video.mp4" type="video/mp4">
+                <!-- This second source fiel will load after the first link has been 
+                failed to load. -->
+            <p>Unable to play the video due to unsupported video format.</p>
+            </video>
+       </div>
+
+       
+
+       
+    </body>
+
+</html>

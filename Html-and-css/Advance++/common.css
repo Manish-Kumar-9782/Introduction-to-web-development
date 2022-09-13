@@ -1,0 +1,50 @@
+body{
+    background-color: lightblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    padding-left: 20px;
+}
+
+div{
+    background-color: dodgerblue;
+    color: whitesmoke;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 200ms;  
+    /* here we have added the some transition effect with 200ms which will
+    add some smooth tranform animation. */
+}
+
+
+
+body>h2{
+    margin-top: 50px;
+}
+
+body>h2:first-of-type{
+    margin-top: 20px;
+}
+
+body>h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.group-inline{
+    display: inline-block;
+    width: initial;
+    height: initial;
+    background-color: aliceblue;
+}
+
+.group-inline>div{
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    margin-right:50px;
+}

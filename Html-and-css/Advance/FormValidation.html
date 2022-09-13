@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script src="Validation.js"></script>
+</head>
+
+<body>
+
+
+    <form action="" name="myform">
+
+        <label for="phnumber">Phonenumber</label>
+        <input name="phnumber" type="text" minlength="10" maxlength="10" required><br>
+        <label for="telephone">Telephone</label>
+        <input name="telephone" type="tel" id="phone" name="phone" pattern="[1-9]{3}-[0-9]{3}-[0-9]{4}" required
+            onkeyup="autoformat()"><small>Format:
+            123-456-7890</small><br>
+
+        <label for="number">number</label>
+        <input name="number" type="text" inputmode="numeric" id="phone" name="phone" required onkeyup="autoformat()"
+            autocomplete="off"><br>
+        <input type="submit"><br>
+    </form>
+
+</body>
+
+<script>
+    form = document.forms[0];
+    telephone = form[1];
+    let sep = 0
+    function autoformat() {
+        console.log(this.event)
+        len = telephone.value.length - sep
+        console.log(telephone.value, "\t", telephone.value.length)
+        if (len % (3 + sep * 3) == 0 && sep < 2 && len != 0) {
+            telephone.value += '-'
+            sep++;
+            console.log("sep: ", sep)
+        }
+    }
+
+</script>
+
+</html>

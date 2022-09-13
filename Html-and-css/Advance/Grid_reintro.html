@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid Reintro</title>
+
+        <style>
+
+            *body{
+                box-sizing: border-box;
+                /* margin: 0px; */
+                /* padding: 0px; */
+            }
+
+            body{
+                background-color: lightblue;
+            }    
+
+            .grid-main-container{
+                
+                border: 10px groove goldenrod;
+                padding: 10px;
+            } 
+            
+            .box{
+                background-color: dodgerblue;
+                color: whitesmoke;
+                margin: 2px;
+                text-align: center;
+                padding: auto;
+            }
+
+            /* Applying the grid display layout */
+
+            .grid-main-container{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                /* width: 100vw; */
+                
+            }
+
+            .box1, .box2, .box5{
+                grid-column-start:1;
+                grid-column-end:4 ;
+                /* width: 95vw; */
+                box-sizing: border-box;
+                width: 92vw;
+                /* width: 100%; */
+                
+            }
+            /* .box2{
+                grid-column-start:1;
+                grid-column-end:4 ;
+            } */
+            .box4{
+                grid-column-start: 2;
+                grid-column-end: 4;
+            }
+
+            .sbox{
+                width: 300px;
+                /* width: 100px; */
+                height: 100px;
+                background-color: whitesmoke;
+                color: dodgerblue;
+                margin: 4px;
+                padding: 10px 20px;
+            }
+
+
+            /* applying flex on the navigation bar. */
+            .box2{
+                display: flex;
+                /* flex-wrap: wrap; */
+                /* justify-content: space-around; */
+                /* justify-content: space-between; */
+                /* justify-content: space-evenly;
+                align-items: center;
+                 */
+                 
+
+            }
+
+
+        </style>
+
+    </head>
+    
+    <body>
+        
+            <div class="grid-main-container">
+
+                <div class="box box1">
+                    <h1>header</h1>
+                </div>
+
+                <div class="box box2">
+                    <h1>navbar</h1>
+                    
+                    <div class="sbox">
+                        <h2>1</h2>
+                    </div>
+                    
+                    <div class="sbox">
+                        <h2>2</h2>
+                    </div>
+                    
+                    <div class="sbox">
+                        <h2>3</h2>
+                    </div>
+                    
+                    <!-- <div class="sbox">
+                        <h2>4</h2>
+                    </div>
+                    
+                    <div class="sbox">
+                        <h2>5</h2>
+                    </div>
+                    
+                    <div class="sbox">
+                        <h2>6</h2>
+                    </div> -->
+
+                </div>
+
+                <div class="box box3">
+                    <h1>aside</h1>
+                    <h1>aside</h1>
+                    <h1>aside</h1>
+                    <h1>aside</h1>
+                    <h1>aside</h1>
+                    <h1>aside</h1>
+                    <h1>aside</h1>
+                    <h1>aside</h1>
+                </div>
+
+                <div class="box box4">
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                    <h1>content</h1>
+                </div>
+
+                <div class="box box5">
+                    <h1>footer</h1>
+                </div>
+
+            </div>
+
+    </body>
+
+</html>

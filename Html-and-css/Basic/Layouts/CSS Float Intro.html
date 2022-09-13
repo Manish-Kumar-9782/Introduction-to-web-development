@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn about the float properties basic and we will face
+some basic problem while using the float properties.
+
+In this section we will make the A navigation bar and we will use float to 
+arrange them in a line.
+-------------------------------------------------------------------------------
+-->
+
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Float Intro</title>
+
+        <!-- here we will apply the the css properties to make it good looking -->
+        <style>
+            body{
+                background-color: lightblue;
+            }
+
+            header{
+                background-color: cornflowerblue;
+            }
+
+            /* Now if we apply the float property on the h1 as left it will float
+            to the left side and all the other element will float to the right side. */
+
+            header h1{
+                padding-left: 20px;
+                float:left;
+            }
+            /* Now here we need to apply the another float on the nav element to put them on 
+            the right side of the viewport/display/scrren. */
+
+            header nav{
+                float:right;
+            }
+
+            /* Now here the problem comes, now our header backgroun-color is not visible to make it
+            visible we need to remove the float properties after the header 
+            (by using the ::after pseudo-class.) */
+
+            /* clearing the float property. */
+            header::after{
+                content: ""; /* no content*/
+                /* clear the float by using the clear property. */
+                clear: both; /*clear the both left and right float */
+                /* Now we need to make the display type of the after element as 
+                table to make our background of the header. */
+                display: table; /*or we can use the block*/
+                /* but here table will be fine */
+            }
+
+            /* Now we need to change the looking of the links and need to arrange them in a line. */
+
+            nav ul li>a {
+                /* To remove the under line using  text-decoration as none */
+                text-decoration: none;
+                color: whitesmoke;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+
+            nav ul li{
+                /* To make them in a line using display as inline-block */
+                list-style-type: none;
+
+                /* To arrange the all list items or links we will use display as inline block */
+                display: inline-block;
+
+                /* putting some margin and padding to make some space */
+                margin-left: 15px;
+                padding-top: 15px;
+            }
+
+            nav{
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <!-- Now we will use the header element in which we will put the nav bar container. -->
+
+        <header>
+
+            <!-- In this header we will make our container which will contain the logo and 
+            the nav bar -->
+
+            <div id="container">
+
+                <h1>NavBar</h1>
+
+                <!-- Now we will make the navbar by using the nav element -->
+                    <nav>
+                        <!-- Now in this nava bar we will make a list of links -->
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+            </div>
+
+        </header>
+
+    </body>
+    
+</html>
+
+<!-- Note: all the css properties  are applied in the head element. -->

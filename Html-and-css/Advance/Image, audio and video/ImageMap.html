@@ -1,5 +1,34 @@
 <!DOCTYPE html>
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn how to make image map
 
+Image maps allows us to add multiple links to the same image, with each 
+link pointing to a different page. They are particularly helpful when 
+thhe image needs to be divided up in irregular shapes (such as maps). 
+Each of these clickable areas is known as a hotspot.
+
+Image maps works is based on upon x and y coordinates, measured from the 
+top left-hand corner of the image. These coordinate are used in two ways.
+
+-> To specify where the hotspots are.
+-> To work out where the user is clickng on the image.
+-> By Comparing the coordinates of the hotspots with the coordinates where  
+    the user clicks, the user can be sent to the link specified for that 
+    hotspot.
+
+There are actually tw types of image maps, both of which do the same job. 
+The difference is how they work out, which hotspot you clicked on.
+
+Client-side image maps: The web browser works out which part of the 
+image the user has clicked on and takes the user to the appropriate page.
+
+Server-side image maps: The browser sends the sever the coordinates, 
+saying which part of the image the user clicked on, and these are 
+processed by a script file on the server that determines which page 
+the user should be sent to.
+-------------------------------------------------------------------------------
+-->
 <html lang="en">
 
     <head>
@@ -7,10 +36,46 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Image Map</title>
+
+        <style>
+            img{
+                border: 2px solid;
+                margin: 10%;
+            }
+
+            
+        </style>
+
     </head>
     
     <body>
+
+        <h1>Image Map</h1>
+
+        <p>Click on the different shape to access/visit the associated links.</p>
+
+        <!-- First of all we will add an image and here we will use the 
+            usemap attribute to link the map with our image. -->
+        <img src="Test.png" alt="Image Map" usemap="#Notes_links">
+        <!-- Now we need to make a map with a name which is define in the image
+        element as the value of usemap attribute.-->
+        <map name="Notes_links">
+
+            <!-- Now we need to specifies the areas for the map -->
+            <area shape="rect" coords="20,30,200,165" href="../../Notes/Core Element and Attribute.html" alt="Core Element and attributes">
+        
+            <area shape="circle" coords="350,103,60" href="../../Notes/Images, Audio and Video.html" alt="Image,Audio and Audio">
+
+            <area shape="polygon" coords="180,196,100,335,263,335" href="../../Notes/Head element.html" alt="Head Element">
+        </map>
         
     </body>
-    
+
 </html>
+
+<!-- Note: here the pair of the coords should in x,y pairs 
+
+    rect: it takes top-left and bottom-right corner coords.
+    circle: it takes the center point coords and radius.
+    polygon: it takes the x,y vlaues of each corner/vertex of the polygon.
+-->
