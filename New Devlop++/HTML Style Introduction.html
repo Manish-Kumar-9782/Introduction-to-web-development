@@ -1,0 +1,67 @@
+<!doctype html>
+
+<!--
+	CSS Style: CSS style can be applied in three way.
+		1. inline style.  (style attribute is used.)
+		2. using style element.
+		3. external style.
+	
+	
+-->
+
+<html dir="ltr">
+<!--dir, lang, style, 
+
+	dir: direction of content. (ltr, rtl) by default it is ltr.
+	lang: supported language of our document.
+	
+--> 
+	
+	<head>
+		<title>HTML Attribute Introduction</title>
+		
+		<style> 
+			<!--
+				if an element is selected by using id then prefix
+				the id value by using #.
+			-->
+			#red{
+				color:red;
+				
+			}
+			
+			#yellow{
+				color:yellow;
+			}
+			
+			.block{
+			
+				background-color: lightgray;
+				color:purple;
+			}
+			
+		</style>
+		
+		
+	</head>
+	
+	<!-- Now applying the inline style on the body.-->
+	<body style = "background-color:#c1b2f7;"> 
+		<!--lang, dir, event attribute., globale attribute -->
+		<h1>HTML Attribute Introduction</h1>
+		<h2 title="An entity which is not in physical state.">Virtual</h2>
+	
+		<div > 
+			<!--style="color:blue;"-->
+			<p dir="rtl" >hello, this paragraph follow the text direction from right to left.</p>
+			<p>This is noraml paragraph.</p>
+			
+			<!--id, class, style-->
+			
+			<p id="red" class="block" >This is a red paragraph</p>
+			<p id="yellow" class="larg block">This is a yellow paragraph</p>
+			
+		</div>
+	</body>
+
+</html>
