@@ -1,0 +1,139 @@
+<!doctype html>
+
+<html> 
+
+<!--
+	1. unorderd List.
+	2. ordered List.
+	3. descriptive List.
+	
+	1. uorderd List: <ul> <li>
+		when our list item does not follow a sequence.
+			* item1 
+			* item2
+			* item3
+		
+	2. ordered List: <ol> <li>
+		when our list item has a sequence.
+			1. item1
+			2. item2 
+			3. item3
+			
+	3. descriptive list: <dl> <dt> <dd>
+	
+			* descrptive term 1:
+				description1
+				
+			* descrptive term 2:
+				description2
+				
+			* descrptive term 3:
+				description3
+-->
+
+	<head> 
+		<title>Introduction To List</title>
+		
+		<!--	
+			Now we will use the internal styling to set some style on list1 id.
+		-->
+		
+		<style> 
+		
+			.ListStyle{
+			
+				/* applying the border */
+				border: 1px solid red;
+				
+				/* setting the width of list*/
+				width: 200px;
+				
+				/*aligning list text at center*/
+				text-align: center;
+				
+				/*removing the dot*/
+				list-style-type: none;
+				
+				/* resetting the width*/
+				width: fit-content;
+				
+				/* Resetting the padding.*/
+				padding: 10px;
+				
+				/*Changing the background color*/
+				background-color: #3577a1;
+				
+				/*changing the border color separately.*/
+				border-color: #3577a1;
+				
+				/*changing the text color*/
+				color: whitesmoke;
+				
+				/*rounding the borders corners.*/
+				border-radius: 5px;
+				
+			}
+			
+			.red{
+				background-color: red;
+				margin-left: 50px;
+			}
+			
+			.green{
+				background-color:green;
+				margin-left: 200px;
+			}
+			
+			.blue{
+			
+					background-color:blue;
+					margin-left: 350px;
+				}
+				
+			.inline{
+				display: inline-block;
+				margin: 50px;
+			}
+		
+		</style>
+		
+		
+	</head>
+	
+	<body> 
+	
+		<h1>Introduction to List </h1>
+		
+	
+		
+		<ul class="ListStyle red inline"> 
+		
+			<li>This is item 1</li>
+			<li>This is item 2</li>
+			<li>This is item 3</li>
+			<li>This is item 4</li>
+			
+		</ul>
+		
+		<ul class="ListStyle green inline"> 
+		
+			<li>This is item 1</li>
+			<li>This is item 2</li>
+			<li>This is item 3</li>
+			<li>This is item 4</li>
+			
+		</ul>
+		
+		<ul class="ListStyle blue inline"> 
+		
+			<li>This is item 1</li>
+			<li>This is item 2</li>
+			<li>This is item 3</li>
+			<li>This is item 4</li>
+			
+		</ul>
+
+	</body>
+
+
+</html>
