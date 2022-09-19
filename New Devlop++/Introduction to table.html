@@ -1,0 +1,160 @@
+<!doctype html>
+
+<html> 
+
+<!--
+	<table>: table element is used to make table. inside table each cell is made by using the 
+	<td> or <th> element.
+	
+	<th>: tabler header. (cell element)
+	<td>: table data. (cell element)
+	<tr>: table row. (row of cell elements.)
+	
+	<tbody>: table body -> <tr>, <td>
+	<thead>: table head. -> <th>
+	
+-->
+
+	<head> 
+		<title>Introduction To Table</title>
+		
+		<!--	
+			
+		-->
+		
+		<style> 
+		
+			#htable{
+				border-collapse: collapse;
+				
+				<!--Note: here note that border-collapse is a container level property it means
+					it will show no effect if applied on childrens.
+					-->
+			}
+
+
+			table, th, td{
+				border:1px solid;
+				}
+			
+		
+		</style>
+		
+		
+	</head>
+	
+	<body> 
+	
+		<h1>Introduction to Table </h1>
+		
+		
+		<h3>Horizontal table</h3>
+		<!-- 1. create a table element-->
+		<table id="htable" border="1px">
+
+			<!-- 2. make <thead> and <tbody> (not necessary)-->
+			<thead> 
+				<!-- 3. make a <tr> for <th> cell elements.-->
+				<tr> 
+					<th>Name</th>
+					<th>Age</th>
+					<th>Height</th>
+					<th>BloodGroup</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+
+				<!--4. Now make table row with <td> cell element. -->
+				<tr>
+					<td>Ravi</td>
+					<td>21</td>
+					<td>5.4</td>
+					<td>A+</td>
+				</tr>
+				
+				<tr>
+					<td>Jigyasa</td>
+					<td>18</td>
+					<td>5.4</td>
+					<td>B+</td>
+				</tr>
+				
+				<tr>
+					<td>Abhishek</td>
+					<td>19</td>
+					<td>5.6</td>
+					<td>AB+</td>
+				</tr>
+				
+				<tr>
+					<td>Varsha</td>
+					<td>21</td>
+					<td>5.5</td>
+					<td>A-</td>
+				</tr>
+		
+		
+			</tbody>
+			
+		</table>
+		
+		
+		<!-- Now we will make the vertical table -->
+		<h3>Vertical table</h3> 
+		
+		<table id="vtable">
+
+			<!-- 2. make <thead> and <tbody> (not necessary)-->
+			
+				<!-- 3. make a <tr> for <th> cell elements.-->
+				
+			
+			<tbody>
+				
+		
+				<tr> 
+					<th>Name</th>
+					<td>Ravi</td>
+					<td>Jigyasa</td>
+					<td>Abhishek</td>
+					<td>Varsha</td>
+				</tr>
+				
+				
+				
+				<tr>
+					<th>Age</th>
+					<td>21</td>
+					<td>18</td>
+					<td>19</td>
+					<td>21</td>
+				</tr>
+				
+				<tr>
+					<th>Height</th>
+					<td>5.5</td>
+					<td>5.4</td>
+					<td>5.6</td>
+					<td>5.3</td>
+				
+				</tr>
+			
+				
+				<tr>
+					<th>BloodGroup</th>
+					<td>AB+</td>
+					<td>A-</td>
+					<td>A+</td>
+					<td>B+</td>
+				</tr>
+		
+		
+			</tbody>
+			
+		</table>
+
+	</body>
+
+
+</html>
