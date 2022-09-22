@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+    in this section we will learn about the float property which is used to 
+    stablish the layout of the page.
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float Property</title>
+
+    <style>
+        /* Now we will first make the border of the main div.*/
+
+        .float_right,
+        .float_left {
+            border: 2px solid;
+            padding: 10px;
+            /*to set the padding on main div*/
+            font-size: 2em;
+            /*to set the font size */
+            width: 800px;
+            /*shriking the width of the div*/
+
+            margin: 10px;
+        }
+
+        /* to show relation in b/w the parent and child use this order.
+           parent -> child */
+
+        /* applying the float property only on the image which lives inside the
+        float_right div.*/
+        .float_right img {
+            float: right;
+            /*making the float property on the image container.*/
+            /*this will set the position of the image in right side of its
+            parent container.*/
+        }
+
+        .float_left img {
+            float: left;
+            margin-right: 20px;
+            /*this will set the position of the image in left side of its
+            parent container.*/
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>float:right Property</h2>
+
+    <!-- main div -->
+    <div class="float_right">
+        <!-- Now we will have one image and one paragraph -->
+        <!-- adding an image/ to add an image we need to use <img> non-closing 
+        element.
+            
+        it contains the two main attributes:
+        src: it is an attribute which contain the address of the file. address can be 
+            a absolute address or an relative address.
+
+            absolute online address: "https://www.shutterstock.com/image-vector/illustration-famous-indian-monument-landmark-600w-2006464889.jpg"
+            relative local address: pineapple.jpg
+        -->
+
+        <img src="pineapple.jpg" alt="pineapple image">
+
+        <p>The next movement in paragraph development is an explanation
+            of each example and its relevance to the topic sentence. The
+            explanation should demonstrate the value of the example as
+            evidence to support the major claim, or focus, in your paragraph.
+
+            Continue the pattern of giving examples and explaining them until
+            all points/examples that the writer deems necessary have been made
+            and explained. NONE of your examples should be left unexplained.
+            You might be able to explain the relationship between the example
+            and the topic sentence in the same sentence which introduced the
+            example. More often, however, you will need to explain that
+            relationship in a separate sentence.</p>
+    </div>
+
+
+    <div class="float_left">
+        <!-- Now we will have one image and one paragraph -->
+        <!-- adding an image/ to add an image we need to use <img> non-closing 
+        element.
+            
+        it contains the two main attributes:
+        src: it is an attribute which contain the address of the file. address can be 
+            a absolute address or an relative address.
+
+            absolute online address: "https://www.shutterstock.com/image-vector/illustration-famous-indian-monument-landmark-600w-2006464889.jpg"
+            relative local address: pineapple.jpg
+
+        alt: alternative text for our image container if in the case image is failed to
+        load on the page.
+        -->
+
+        <img src="pineapple.jpg" alt="pineapple image">
+
+        <p>The next movement in paragraph development is an explanation
+            of each example and its relevance to the topic sentence. The
+            explanation should demonstrate the value of the example as
+            evidence to support the major claim, or focus, in your paragraph.
+
+            Continue the pattern of giving examples and explaining them until
+            all points/examples that the writer deems necessary have been made
+            and explained. NONE of your examples should be left unexplained.
+            You might be able to explain the relationship between the example
+            and the topic sentence in the same sentence which introduced the
+            example. More often, however, you will need to explain that
+            relationship in a separate sentence.</p>
+    </div>
+
+</body>
+
+</html>
