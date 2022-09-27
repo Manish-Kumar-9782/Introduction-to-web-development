@@ -1,0 +1,107 @@
+<!doctype html>
+
+
+<!--
+
+	1. Internal style: internal is used when we want to apply the a single or multiple styles on multiple
+		elements, without using the external style sheet.
+		
+	first we need to selecte an element to apply the style:
+	
+		parent child: -> left most element must pe parent for the right element.
+		
+		
+		we can selecte an element by:
+		
+		1. tagName: if tagName selected then the defined property will be applied on the all the tag with that name.
+		2. id: since id is unique, style will be applied only on that perticular element.
+		3. class: since class can be shared, hence property will be shared, with all the elements who share the that perticular 
+			same class.
+		
+
+-->
+
+<html> 
+
+	<head> 
+	
+		<title>Internal styling </title>
+		
+		<style> 
+		
+		/* this is css comment style*/
+		
+		/* Note: we are using tagName to selecte the element, in this case 
+		all the element with that selection scope and name.*/
+		
+			div h1{
+			/* This means we are applyin the property on the h1 
+				element which lives in div element.*/
+				
+				border: 2px solid red;
+				width: fit-content;
+				
+			}
+			
+			div p b{
+				color:blue;
+			}
+			
+			div{
+			
+				background-color: #a8e6ce;
+				padding: 5px;
+				margin: 5px;
+				color: #474747;
+			}
+				
+		</style>
+		
+	</head>
+	
+	<body>
+
+		<h1>This is heading h1 outer a div container</h1>
+
+
+		<div> 
+		<!-- here div is parent element for h1-->
+			
+			<h1>Internal style test.</h1>
+			<!-- h1 is the child of div element.-->
+		
+		</div>
+		
+		
+		<div> 
+		<!-- here div is parent element for h1-->
+			
+			<h1>This is second div heading.</h1>
+			<!-- h1 is the child of div element.-->
+		
+		</div>
+		
+		
+		<div> 
+		
+			<div> <p>Hello my name is kushal and i am 18 years old student , 
+			which is learning web development in tech innovation.</p> </div>
+			
+			
+			<div> <p> <b>HTML:</b> HTML is a hypertext markup language which is used to 
+			design our document in a formatted manner, in which each element has it's own meaning.
+			</p>  </div>
+			
+		
+		</div>
+		
+		
+		<div style="background-color: lightgray;"> <div> <p> <b>HTML:</b> HTML is a hypertext markup language which is used to 
+			design our document in a formatted manner, in which each element has it's own meaning.
+			</p>  </div> </div>
+		
+		
+
+	</body>
+
+</html>
