@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Exercise</title>
+
+    <style>
+        .header,
+        .footer {
+            background-color: lightskyblue;
+        }
+
+        .content {
+            background-color: lightgray;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0px;
+        }
+
+
+        /*setting the header */
+
+        .header .nav h1 {
+            float: left;
+            padding-left: 20px;
+
+        }
+
+        .header .nav ul {
+            float: right;
+
+        }
+
+        .nav ul li {
+            float: left;
+            margin-right: 25px;
+            margin-top: 21.44px;
+            margin-bottom: 21.44px;
+        }
+
+        .header {
+            overflow: auto;
+            clear: both;
+        }
+
+        /* footer styles*/
+
+        .footer div {
+            float: left;
+            padding-left: 20px;
+            margin: 10px 10px;
+        }
+
+        .footer {
+            clear: both;
+            overflow: auto;
+            text-align: center;
+        }
+
+        /* content style*/
+
+        .content {
+            padding: 20px;
+            height: 550px;
+        }
+
+        .sidebar {
+            float: left;
+            background-color: whitesmoke;
+            margin-right: 20px;
+            height: 550px;
+        }
+
+        .sidebar ul li {
+            background-color: darkslategray;
+            padding: 40px 20px;
+            margin: 10px 0px;
+            color: whitesmoke;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+
+            <div class="nav">
+                <h1>Float</h1>
+
+                <ul>
+                    <li>Home</li>
+                    <li>Contact</li>
+                    <li>About</li>
+                    <li>Cart</li>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div class="content">
+
+            <div class="sidebar">
+
+                <ul>
+                    <li>Profile</li>
+                    <li>Dashboard</li>
+                    <li>Settings</li>
+                    <li>Contact</li>
+                    <li>Info</li>
+                </ul>
+
+            </div>
+
+            <div class="article">
+                <h3>Input Element</h3>
+                <p>The input HTML element is used to create iteractive controls for web-based forms in order to accept
+                    data from the user; a wide variety of types of input data and control widgets are available,
+                    depending on the device and user agent. The input element is one of the most powerful and complex in
+                    all of HTML due to the sheer number of combination of input types and attributes.</p>
+
+
+                <h3>Input Element Attribute</h3>
+                <p>The input element is so powerful because of its attributes; the type attribute, described with
+                    examples above, being the most important. Since every input element, regardless of type, is based on
+                    the HTMLInputElement interface, they technically share the exact same set of attributes. However, in
+                    reality, most attributes have an effect on only a spcecific subset of input types. In addition, the
+                    way some attributes impact an input depends on the input type, impacting different input types in
+                    different ways.</p>
+
+
+                <h3>autocomplete</h3>
+                <p>The autocomplete attribute takes as its value as space-separated string that describes what, if any,
+                    type of autocomplete functionality the input should provide. A typical implementation of
+                    autocomplete recalls previous values entered in the same input field, but more complex forms of
+                    autocomplete can exist.</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer">
+
+            <div class="languages">
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+
+            <div class="company">
+                <address>
+                    company: techInnovation@123 <br>
+                    name: Tech techInnovation <br>
+                    contact: 1236547890 <br>
+                </address>
+            </div>
+
+            <div class="projects">
+
+                <ul>
+                    <li>Image Viewer</li>
+                    <li>Password Manager</li>
+                    <li>Track Your Time</li>
+                    <li>Facial Detection</li>
+                    <li>Library Management</li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
