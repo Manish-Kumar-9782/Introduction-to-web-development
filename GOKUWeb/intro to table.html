@@ -1,0 +1,157 @@
+<!doctype html>
+
+<!--
+	
+	<table>: it is container level element
+	
+	<thead>, <tbody>:
+	
+	<thead>: a contianer of horizontal heading.
+	<tbody>: a container of cell element (data element).
+	
+	<tr> : a row element. we have to put all the <th> and <td> element inside the <tr>
+	
+	<th> and <td> element.
+
+-->
+
+<html> 
+
+	<head> 
+	
+		<title>Table Introduction</title>
+		
+		<style> 
+		
+			tr{
+				background-color: lightblue;
+			}
+			
+			td,th{
+				border: 2px solid lightblue;
+				padding: 10px 20px;
+				font-size: 1.5rem;
+			}
+			
+			table{
+				border-collapse: collapse;
+				border-spacing: 20px;
+				margin-bottom: 20px;
+			}
+			
+			table thead th{
+			
+				background-color: #355c7d;
+				border-color: #355c7d;
+				color: lightblue;
+			}
+		
+		</style>
+	
+	</head>
+	
+	<body> 
+	
+		<!-- table -->
+		
+		<table> 
+		
+			<thead> 
+			
+				<tr>
+					
+					<th>Name</th>
+					<th>Age</th>
+					<th>Height</th>
+					<th>BloodGroup</th>
+				
+				</tr>
+				
+			
+			</thead>
+			
+			<tbody> 
+			
+				<tr>
+				
+					<td>Kushal</td>
+					<td>20</td>
+					<td>5.6</td>
+					<td>AB+</td>
+				
+				</tr>
+				
+				<tr>
+				
+					<td>Ravi 1</td>
+					<td>19</td>
+					<td>5.7</td>
+					<td>A+</td>
+				
+				</tr>
+				
+				<tr>
+				
+					<td>Ravi 2</td>
+					<td>21</td>
+					<td>5.5</td>
+					<td>B+</td>
+				
+				</tr>
+				
+				<tr>
+				
+					<td>Manish</td>
+					<td>22</td>
+					<td>5.7</td>
+					<td>A-</td>
+				
+				</tr>
+				
+			</tbody>
+		
+		</table>
+		
+		
+		<table> 
+		
+			<tr> 
+				<th>Name</th>
+				<td>Kushal</td>
+				<td>Ravi 1</td>
+				<td>Ravi 2</td>
+				<td>Manish</td>
+			</tr>
+			
+			<tr> 
+				<th>Height</th>
+				<td>5.6</td>
+				<td>5.5</td>
+				<td>5.7</td>
+				<td>5.6</td>
+			</tr>
+			
+			<tr> 
+				<th>Age</th>
+				<td>20</td>
+				<td>21</td>
+				<td>22</td>
+				<td>23</td>
+			</tr>
+			
+			<tr> 
+				<th>BloodGroup</th>
+				<td>AB+</td>
+				<td>B+</td>
+				<td>A+</td>
+				<td>A-</td>
+			</tr>
+			
+			
+			
+		
+		</table>
+	
+	</body>
+
+</html>
