@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<!-- 
+    In this section we will use the css float property, in which we will learn how to use this property
+
+    float: it has left and right;
+
+    if left: it will be placed left of the viewport and the current parent container.
+    if right: it will be placed right of the viewport and the current parent container.
+
+    Note: to clear the effect of the float we need to use the clear property.
+    clear: left, right, both;
+ -->
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Layout Intro</title>
+
+
+    <style>
+        #container1,
+        #container2 {
+            border: 1px solid;
+            margin: 10px;
+            font-size: 1.4rem;
+
+
+        }
+
+        /*now we will set the float property to left on the img*/
+        #container1 img {
+            width: 200px;
+            float: left;
+        }
+
+        #container2 img {
+            width: 200px;
+            float: right;
+        }
+
+        #menu {
+            border: 1px solid;
+            margin: 10px;
+            padding: 20px;
+            overflow: auto;
+        }
+
+        #menu h1 {
+            float: left;
+            margin-right: 40px;
+        }
+
+        /*to remove the list-style-type we need to set it to none on ul*/
+        #menu ul {
+            list-style-type: none;
+            padding: 21.44px;
+        }
+
+        #menu li {
+            float: left;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Float left side</h1>
+    <div id="container1">
+        <img src="pineapple.jpg" alt="pineapple image">
+        <!-- here img is a void element.
+            src: source location of the img file.
+            alt: alternative text for the image file, this will be displayed on image if 
+                    our image is failed to load.
+        -->
+
+        <p>The next movement in paragraph development is an explanation
+            of each example and its relevance to the topic sentence. The
+            explanation should demonstrate the value of the example as
+            evidence to support the major claim, or focus, in your paragraph.
+
+            Continue the pattern of giving examples and explaining them until
+            all points/examples that the writer deems necessary have been made
+            and explained. NONE of your examples should be left unexplained.
+            You might be able to explain the relationship between the example
+            and the topic sentence in the same sentence which introduced the
+            example. More often, however, you will need to explain that
+            relationship in a separate sentence.
+
+            Continue the pattern of giving examples and explaining them until
+            all points/examples that the writer deems necessary have been made
+            and explained. NONE of your examples should be left unexplained.
+            You might be able to explain the relationship between the example
+            and the topic sentence in the same sentence which introduced the
+            example. More often, however, you will need to explain that
+            relationship in a separate sentence.
+
+        </p>
+    </div>
+
+
+    <!-- float right -->
+    <h1>Float right side</h1>
+    <div id="container2">
+        <img src="pineapple.jpg" alt="pineapple image">
+        <!-- here img is a void element.
+            src: source location of the img file.
+            alt: alternative text for the image file, this will be displayed on image if 
+                    our image is failed to load.
+        -->
+
+        <p>The next movement in paragraph development is an explanation
+            of each example and its relevance to the topic sentence. The
+            explanation should demonstrate the value of the example as
+            evidence to support the major claim, or focus, in your paragraph.
+
+            Continue the pattern of giving examples and explaining them until
+            all points/examples that the writer deems necessary have been made
+            and explained. NONE of your examples should be left unexplained.
+            You might be able to explain the relationship between the example
+            and the topic sentence in the same sentence which introduced the
+            example. More often, however, you will need to explain that
+            relationship in a separate sentence.
+
+            Continue the pattern of giving examples and explaining them until
+            all points/examples that the writer deems necessary have been made
+            and explained. NONE of your examples should be left unexplained.
+            You might be able to explain the relationship between the example
+            and the topic sentence in the same sentence which introduced the
+            example. More often, however, you will need to explain that
+            relationship in a separate sentence.
+
+        </p>
+    </div>
+
+    <div id="menu">
+
+        <h1>Float</h1>
+
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+            <li>item5</li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
