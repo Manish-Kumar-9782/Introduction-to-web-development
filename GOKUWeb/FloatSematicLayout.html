@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+    Semantic Elements:
+    <header>, <footer>, <section>, <article>, <nav>, <aside>, <detail>, <summary>, <address>
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Semantic Layout</title>
+
+    <style>
+        header,
+        footer,
+        aside,
+        .content {
+            border: 2px solid;
+            margin: 5px;
+        }
+
+        aside {
+            float: left;
+            height: 400px;
+            margin-right: 30px;
+        }
+
+        .midContainer {
+            border: 2px solid green;
+            padding: 5px;
+            overflow: auto;
+            height: 450px;
+        }
+
+        header h1 {
+            float: left;
+            margin: 20px;
+        }
+
+        header nav {
+            float: right;
+            margin: 20px;
+        }
+
+        header {
+            overflow: auto;
+        }
+
+        header nav ul {
+            list-style-type: none;
+        }
+
+        header nav ul li {
+            float: left;
+            margin-left: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- usuallay all the navigation links of header are placed inside the nav bar. -->
+
+        <h1>Header</h1>
+
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>CONTACT</li>
+                <li>HELP</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="midContainer">
+
+        <aside>
+            <h1>Aside bar</h1>
+        </aside>
+
+        <div class="content">
+
+            <section>
+                <h1>Section 1</h1>
+                <article>article 1</article>
+                <article>article 2</article>
+                <article>article 3</article>
+            </section>
+
+            <section>
+                <h1>Section 2</h1>
+                <article>article 1</article>
+                <article>article 2</article>
+                <article>article 3</article>
+            </section>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <!-- usually all the contact information are placed inside the footer -->
+        <h1>Footer</h1>
+
+    </footer>
+</body>
+
+</html>
