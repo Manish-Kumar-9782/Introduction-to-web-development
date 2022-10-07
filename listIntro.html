@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>List Intro</title>
+
+    <style>
+        ol {
+            border: 1px solid;
+            list-style-type: none;
+            /*list-style-type to change the list dots or numbers.
+            here we are removing the dots and number */
+
+            /*Now we need to remove the space external left space for that we need
+            to remove the left padding.*/
+            padding: 20px;
+
+            /*Now we need to remove extra width of the ol container*/
+            width: fit-content;
+
+            /*Note: here fit-content adjust the minimum width of the container. */
+
+            /*setting the background-color of the ol list*/
+            background-color: dodgerblue;
+
+            /*Changing the font color by using the color property*/
+            color: whitesmoke;
+
+            /* if we want to make some curve on the corners of the container then 
+            we can use the border-radius property*/
+            border-radius: 15px;
+        }
+
+        ul {
+            border: 1px solid;
+            list-style-type: none;
+            /*list-style-type to change the list dots or numbers.
+            here we are removing the dots and number */
+
+            /*Now we need to remove the space external left space for that we need
+            to remove the left padding.*/
+            padding: 20px;
+
+            /*Now we need to remove extra width of the ul container*/
+            width: fit-content;
+            /*Note: here fit-content adjust the minimum width of the container. */
+
+            /*setting the background-color of the ul list*/
+            background-color: dodgerblue;
+
+            /*Changing the font color by using the color property*/
+            color: whitesmoke;
+
+            /* if we want to make some curve on the corners of the container then 
+            we can use the border-radius property*/
+            border-radius: 15px;
+        }
+
+        /* Now we will make some space in b/w the each list item by using the margin
+        property*/
+
+        li {
+            margin: 10px 0px;
+            font-size: 1.3rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- we can make three types of list.
+        
+        1. unordered list ( <ul> <li>)
+        2. ordered list (<ol> <li> )
+        3. descriptive list (<dl> <dt> <dd>)
+    
+    -->
+
+    <!-- first we will make the <ul> element -->
+    <h1>unordered list</h1>
+    <ul>
+        <!-- now we need to make n number of <li> element -->
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+    </ul>
+
+    <h1>ordered list</h1>
+    <ol>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+    </ol>
+
+    <!-- (<dl> <dt> <dd>) -->
+    <h1>descriptive list</h1>
+    <dl>
+
+        <dt>HTML</dt>
+        <dd>HTML is a hyper markup language, it is a common language to send a document in b/w
+            the two or more than two computer through internet.
+        </dd>
+
+
+        <dt>CSS</dt>
+        <dd>CSS is a cascading style sheet, this is used to style a html document, it can change an
+            element position, height, width, page layout, effect, etc.
+        </dd>
+
+    </dl>
+</body>
+
+</html>
