@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+        flex container: display, justify-content, align-items.
+
+        flex items: flex, justify-self, align-self.
+
+        justify, align.
+
+        x-axis, y-axis
+
+        current-axis, cross-axis.
+
+        current-axis: justify property.
+        cross-axis: align property.
+
+        we can set axis by using the flex-direction property on the flex container.
+
+        flex property always applicable only for immediate children.
+     -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout Intro</title>
+
+    <style>
+        .container1 {
+            border: 1px solid;
+            padding: 10px;
+
+            /*Setting the display flex property */
+            display: flex;
+        }
+
+        .box {
+            background-color: dodgerblue;
+            color: whitesmoke;
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+        }
+
+        .x-axis {
+            display: flex;
+            justify-content: center;
+            /*current working axis*/
+            align-items: center;
+            /**/
+        }
+
+
+        .container2 {
+            border: 1px solid;
+            padding: 10px;
+            margin-top: 20px;
+            display: flex;
+            /*by default flex is working on the x-axis*/
+            flex-direction: column;
+            /*we have changed the flex direction from x to y axis*/
+
+        }
+
+        .y-axis {
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            /*left , right, start, end , flex-start, flex-end, center , 
+            space-between, space-around, space-evenly*/
+        }
+
+
+        .container3 {
+            border: 1px solid;
+            padding: 10px;
+            margin-top: 20px;
+            display: flex;
+            /*by default flex is working on the x-axis*/
+            flex-direction: column;
+            /*we have changed the flex direction from x to y axis*/
+        }
+
+        .container3 .box {
+            width: auto;
+            display: flex;
+        }
+
+        .right {
+            justify-content: right;
+        }
+
+        .left {
+            justify-content: left;
+        }
+
+        .end {
+            align-items: flex-end;
+        }
+
+        .start {
+            align-items: flex-start;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container1">
+
+        <div class="box x-axis">
+            <h1>1</h1>
+        </div>
+        <div class="box x-axis">
+            <h1>2</h1>
+        </div>
+        <div class="box x-axis">
+            <h1>3</h1>
+        </div>
+        <div class="box x-axis">
+            <h1>4</h1>
+        </div>
+
+    </div>
+
+    <div class="container2">
+
+        <div class="box y-axis">
+            <h1>1</h1>
+        </div>
+        <div class="box y-axis">
+            <h1>2</h1>
+        </div>
+        <div class="box y-axis">
+            <h1>3</h1>
+        </div>
+        <div class="box y-axis">
+            <h1>4</h1>
+        </div>
+
+    </div>
+
+
+    <div class="container3">
+
+        <div class="box left">
+            <h1>left</h1>
+        </div>
+        <div class="box right">
+            <h1>right</h1>
+        </div>
+        <div class="box end">
+            <h1>end</h1>
+        </div>
+        <div class="box start">
+            <h1>start</h1>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
