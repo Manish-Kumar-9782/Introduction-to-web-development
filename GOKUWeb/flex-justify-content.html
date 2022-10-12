@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+    flex:
+        justify-content: space-between;
+        justify-content: space-around;
+        justify-content: space-evenly;
+
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Justify Content</title>
+
+    <style>
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 120px;
+            background-color: dodgerblue;
+            margin: 10px;
+            color: whitesmoke;
+        }
+
+        .between,
+        .around,
+        .evenly {
+            border: 1px solid;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .between {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .around {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .evenly {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>space-between</h2>
+    <div class="between">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>2</h1>
+        </div>
+
+    </div>
+
+
+    <h2>space-around</h2>
+    <div class="around">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>2</h1>
+        </div>
+
+    </div>
+
+    <h2>space-evenly</h2>
+    <div class="evenly">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>2</h1>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

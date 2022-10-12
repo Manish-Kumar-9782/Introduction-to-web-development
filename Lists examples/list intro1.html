@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- 
+	styles: style can be applied in three ways.
+	
+	inline style: defined inside the opening mark of an element.
+	internal style: defined inside the <style> element inside the <head> element.
+	external style: defined in other css file sheet and linked through a link element.
+	
+	
+	in this document we will use inline styles.
+	
+	
+	additional elements: ul, li.
+	
+	ul:(unordered list) used to make a container for the list items.
+	li:(list item) used to make list item.
+	
+	
+	An element can be selected by three way.
+	
+	by element name: for eg. li, head, body, div
+	by element id: #block, #list, #item1
+	by element class: .container, .section
+	
+	
+	syntax of applying the internal style:
+	
+	Item-selection{
+		// properties.
+		
+		// each property should be ended with semicolon.
+		border: 1px solid red;
+		width: 100px;
+	}
+	
+	Item-selection can be done by using any of the above discussed way to selecet an item.
+	
+	
+	child selection:
+	
+	parent child{
+		border: 1px solid red;
+		width: 100px;
+	}
+	
+	for example:
+	
+	div li{
+		border: 1px solid red;
+		width: 100px;
+	}
+	
+-->
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>List Intro 1</title>
+</head>
+
+<!-- we can make three types of list.
+        
+        1. unordered list ( <ul> <li>)
+        2. ordered list (<ol> <li> )
+        3. descriptive list (<dl> <dt> <dd>)
+    
+    -->
+
+<body>
+
+	<!-- ordered list and unordered list are written in same way. -->
+
+	<ul>
+		<li>This is item number 1</li>
+		<li>This is item number 2</li>
+		<li>This is item number 3</li>
+		<li>This is item number 4</li>
+		<li>This is item number 5</li>
+		<li>This is item number 6</li>
+	</ul>
+
+
+	<ol>
+		<li>This is item number 1</li>
+		<li>This is item number 2</li>
+		<li>This is item number 3</li>
+		<li>This is item number 4</li>
+		<li>This is item number 5</li>
+		<li>This is item number 6</li>
+	</ol>
+
+</body>
+
+</html>

@@ -4,8 +4,8 @@
 	styles: style can be applied in three ways.
 	
 	inline style: defined inside the opening mark of an element.
-	internal style: defined inside the <style> element insdie the <head> element.
-	external style: defined in other css file sheet and linked thourh a link element.
+	internal style: defined inside the <style> element inside the <head> element.
+	external style: defined in other css file sheet and linked through a link element.
 	
 	
 	in this document we will use inline styles.
@@ -54,87 +54,96 @@
 -->
 
 
-<html lang="en"> 
-		
-	<head> 
-		<title> HTML Unordered List </title>
-		
-		<style> 
-		
-			body{
-				padding:30px;
-			}
-		
-			#block{
-				border: 2px solid dodgerblue;
-				background-color: dodgerblue;
-				width: fit-content;
-				border-radius: 7px;
-				
-				
-			}
-			
-			#list{
-				border: 2px solid #fce090;
-				background-color:#fce090;
-				width: 100px;
-				margin:10px;
-				list-style-type: none;
-				padding: 10px;
-				border-radius: 2px;
-			}
-			
-			#block li{
-				border: 2px solid #fdedec;
-				background-color: #fdedec;
-				border-radius:5px;
-				margin:5px;
-				text-align: center;
-				color: #76448A;
-			}
-			
-			
-		
-		</style>
-		
-	</head>
-	
-	
-	<body> 
-	
-		<!-- outer div block -->
-		<div id="block"> 
-			
-			<ul id="list"> 
-			
-				<li id="item1">Item 1</li>
-				<li id="item2">Item 2</li>
-				<li id="item3">Item 3</li>
-				<li id="item4">Item 4</li>
-			
-			</ul>
-			
-		</div>
-		
-		<li>this is item outer block div</li>
-		
-		<div id="block2"> 
-			
-			<ul id="list2"> 
-			
-				<li id="item1">Item 1</li>
-				<li id="item2">Item 2</li>
-				<li id="item3">Item 3</li>
-				<li id="item4">Item 4</li>
-			
-			</ul>
-			
-		
-		</div>
-		
+<html lang="en">
 
-	</body>
+<head>
+	<title> HTML Unordered List </title>
+
+	<style>
+		body {
+			padding: 30px;
+		}
+
+		#block {
+			border: 2px solid dodgerblue;
+			background-color: dodgerblue;
+			width: fit-content;
+			border-radius: 7px;
+
+
+		}
+
+		#list {
+			border: 2px solid #fce090;
+			background-color: #fce090;
+			width: 100px;
+			margin: 10px;
+			list-style-type: none;
+			padding: 10px;
+			border-radius: 2px;
+		}
+
+		#block li {
+			border: 2px solid #fdedec;
+			background-color: #fdedec;
+			border-radius: 5px;
+			margin: 5px;
+			text-align: center;
+			color: #76448A;
+		}
+	</style>
+
+</head>
+
+
+<body>
+
+	<!-- outer div block -->
+	<div id="block">
+
+		<ul id="list">
+
+			<li id="item1">Item 1</li>
+			<li id="item2">Item 2</li>
+			<li id="item3">Item 3</li>
+			<li id="item4">Item 4</li>
+
+		</ul>
+
+	</div>
+
+	<li>this is item outer block div</li>
+
+	<!--
+	-------------------------------------------------------------------------------
+	-------------------------------------------------------------------------------
+	-->
+
+	<div id="block2">
+
+		<!--
+		-------------------------------------------------------------------------------
+		ul: unordered list:
+		ul -> li
+
+		li : list item
+		-------------------------------------------------------------------------------
+		-->
+		<ul id="list2">
+
+			<li id="item1">Item 1</li>
+			<li id="item2">Item 2</li>
+			<li id="item3">Item 3</li>
+			<li id="item4">Item 4</li>
+
+		</ul>
+	</div>
+
+
+
+
+
+</body>
 
 
 </html>
-

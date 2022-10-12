@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn about the float properties basic and we will face
+some basic problem while using the float properties.
+
+In this section we will make the A navigation bar and we will use float to 
+arrange them in a line.
+-------------------------------------------------------------------------------
+-->
+
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Float Intro</title>
+
+        <!-- here we will apply the the css properties to make it good looking -->
+        <style>
+		
+			*{
+				box-sizing: border-box;
+				margin: 0px;
+				padding: 0px;
+				}
+            
+			header{
+			
+				background-color: lightblue;
+			}
+			
+			header h1 {
+				float: left;
+			}
+			
+			header nav{
+			
+				float: right;
+				margin-right: 20px;
+			}
+			
+			nav ul{
+				list-style-type:none;
+			}
+			
+			header{
+				overflow:auto;
+			}
+			
+			nav ul li{
+				float:left;
+				padding-right: 10px
+			}
+			
+			header::after{
+				content: "";
+				clear:both;
+			}
+			
+			
+			
+			#container{
+				border: 2px solid green;
+				overflow: auto;
+				
+			}
+			
+			
+			nav ul{
+				clear: left;
+				margin: 0px;
+				
+			}
+			
+			h1,nav{
+				margin: 0px;
+				padding: 20px;
+			}
+			
+			nav{
+				margin: 0.7rem;
+			}
+			
+        </style>
+    </head>
+
+    <body>
+        
+        <!-- Now we will use the header element in which we will put the nav bar container. -->
+
+        <header>
+
+            <!-- In this header we will make our container which will contain the logo and 
+            the nav bar -->
+
+            <div id="container">
+
+                <h1>NavBar</h1>
+
+                <!-- Now we will make the navbar by using the nav element -->
+                    <nav>
+                        <!-- Now in this nava bar we will make a list of links -->
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+            </div>
+
+        </header>
+
+    </body>
+    
+</html>
+
+<!-- Note: all the css properties  are applied in the head element. -->

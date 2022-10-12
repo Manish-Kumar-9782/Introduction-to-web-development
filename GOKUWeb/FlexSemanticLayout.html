@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+    Semantic Elements:
+    <header>, <footer>, <section>, <article>, <nav>, <aside>, <detail>, <summary>, <address>
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Semantic Layout</title>
+
+    <style>
+        header,
+        aside,
+        .content,
+        footer {
+            border: 2px solid;
+            margin-top: 3px;
+        }
+
+        header {
+            /*first we will make the header element display as flex*/
+            display: flex;
+            /*Now we need to set the justify content as space-between*/
+            justify-content: space-between;
+        }
+
+        header nav ul {
+            /*by default ul has display type block, we need to change that as flex*/
+            display: flex;
+            /*now we need to remove the dots of the ul list*/
+            list-style-type: none;
+        }
+
+        header nav ul li {
+            /*making some margin in b/w the each list item*/
+            margin-right: 10px;
+        }
+
+        div.midContainer {
+            display: flex;
+        }
+
+        div.midContainer aside {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+
+        div.midContainer .content {
+            flex: 5;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- usually all the navigation links of header are placed inside the nav bar. -->
+
+        <h1>Header</h1>
+
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>CONTACT</li>
+                <li>HELP</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="midContainer">
+
+        <aside>
+            <h1>Aside bar</h1>
+
+            <p>item 1</p>
+            <p>item 2</p>
+            <p>item 3</p>
+            <p>item 4</p>
+            <p>item 5</p>
+            <p>item 6</p>
+            <p>item 7</p>
+        </aside>
+
+        <div class="content">
+
+            <section>
+                <h1>Section 1</h1>
+                <article>article 1</article>
+                <article>article 2</article>
+                <article>article 3</article>
+            </section>
+
+            <section>
+                <h1>Section 2</h1>
+                <article>article 1</article>
+                <article>article 2</article>
+                <article>article 3</article>
+            </section>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <!-- usually all the contact information are placed inside the footer -->
+        <h1>Footer</h1>
+
+    </footer>
+</body>
+
+</html>

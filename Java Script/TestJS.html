@@ -7,7 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test JavaScript</title>
 
-    <script src="objects.js">
+    <script>
+
+        function printf(str, property, padend = 12) {
+            console.log(str.padEnd(padend, " "), property);
+        }
+
+        class Student {
+            #Attitude;
+
+            constructor(name, age, height, attitude) {
+                this.name = name;
+                this.age = age;
+                this.height = height;
+                this.#Attitude = attitude;
+            }
+
+            display() {
+                printf("Name", this.name);
+                printf("Age", this.age);
+                printf("Height", this.height);
+                printf("Attitude", this.#Attitude);
+
+            }
+        };
+
+        let st = new Student("manish", 26, 5.6, "Positive");
+
+
+
     </script>
 </head>
 
