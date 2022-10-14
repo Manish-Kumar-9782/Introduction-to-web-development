@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+    flex: it works only in two direction x-axis and y-axis
+
+    by default it is set to x-axis.
+
+    justify-content: left, right, center, space-between, space-around, space-evenly, start, end, 
+    align-items: space-between, space-around, space-evenly, start-flex, start-end;
+
+    justify-content: always works in flex-direction, by default flex direction is x-axis.
+    align-items: always applied on the cross axis. (e.g if current working axis is x-axis then 
+                cross axis will be y.)
+
+    flex property always applied on the immediate children. not on the grand or nesting children.
+
+    flex-container: a container on which we are applying the display: flex;
+
+    flex-items: immediate items contained in the flex-container
+
+    Note: if an element is flex-item then it can be a flex-container also or vise-versa.
+
+    Default Values:
+
+        flex-direction: row;
+        justify-content: left/start;
+        align-items: flex-start;
+
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Intro 1</title>
+
+    <style>
+        .container {
+            border: 1px solid;
+            margin: 10px;
+            display: flex;
+            /*by default flex-direction is row -> x-axis.*/
+
+        }
+
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
+        .js-left {
+            justify-content: left;
+        }
+
+        .js-right {
+            justify-content: right;
+        }
+
+        .js-center {
+            justify-content: center;
+        }
+
+        .between {
+            justify-content: space-between;
+        }
+
+        .around {
+            justify-content: space-around;
+        }
+
+        .evenly {
+            justify-content: space-evenly;
+        }
+
+        .items,
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid;
+            width: 100px;
+            height: 100px;
+            margin: 4px;
+            background-color: dodgerblue;
+            color: whitesmoke;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>justify-content: left</h3>
+    <div class="container">
+
+        <div class="items">
+            <h1>1</h1>
+        </div>
+
+        <div class="items">
+            <h1>2</h1>
+        </div>
+
+        <div class="items">
+            <h1>3</h1>
+        </div>
+
+        <div class="items">
+            <h1>4</h1>
+        </div>
+
+    </div>
+
+    <h3>justify-content: right</h3>
+    <div class="container js-right">
+
+        <div class="items">
+            <h1>1</h1>
+        </div>
+
+        <div class="items">
+            <h1>2</h1>
+        </div>
+
+        <div class="items">
+            <h1>3</h1>
+        </div>
+
+        <div class="items">
+            <h1>4</h1>
+        </div>
+
+    </div>
+
+
+    <h3>justify-content: center</h3>
+    <div class="container js-center">
+
+        <div class="items">
+            <h1>1</h1>
+        </div>
+
+        <div class="items">
+            <h1>2</h1>
+        </div>
+
+        <div class="items">
+            <h1>3</h1>
+        </div>
+
+        <div class="items">
+            <h1>4</h1>
+        </div>
+
+    </div>
+
+    <h3>justify-content: left reverse</h3>
+    <div class="container reverse js-left">
+
+        <div class="items">
+            <h1>1</h1>
+        </div>
+
+        <div class="items">
+            <h1>2</h1>
+        </div>
+
+        <div class="items">
+            <h1>3</h1>
+        </div>
+
+        <div class="items">
+            <h1>4</h1>
+        </div>
+
+    </div>
+
+
+    <h3>justify-content: center reverse</h3>
+    <div class="container reverse js-center">
+
+        <div class="items">
+            <h1>1</h1>
+        </div>
+
+        <div class="items">
+            <h1>2</h1>
+        </div>
+
+        <div class="items">
+            <h1>3</h1>
+        </div>
+
+        <div class="items">
+            <h1>4</h1>
+        </div>
+
+    </div>
+
+    <h3>justify-content: right reverse</h3>
+    <div class="container reverse js-right">
+
+        <div class="items">
+            <h1>1</h1>
+        </div>
+
+        <div class="items">
+            <h1>2</h1>
+        </div>
+
+        <div class="items">
+            <h1>3</h1>
+        </div>
+
+        <div class="items">
+            <h1>4</h1>
+        </div>
+
+    </div>
+
+
+    <!-- 
+        From here we will work on the space-between, space-around, space-evenly
+     -->
+    <h3>justify-content: space-between</h3>
+    <div class="container between">
+
+        <div class="item1 box">
+            <h1>1</h1>
+        </div>
+
+        <div class="item2 box">
+            <h1>2</h1>
+        </div>
+
+        <div class="item3 box">
+            <h1>3</h1>
+        </div>
+
+    </div>
+
+    <h3>justify-content: space-around</h3>
+    <div class="container around">
+
+        <div class="item1 box">
+            <h1>1</h1>
+        </div>
+
+        <div class="item2 box">
+            <h1>2</h1>
+        </div>
+
+        <div class="item3 box">
+            <h1>3</h1>
+        </div>
+
+    </div>
+
+    <h3>justify-content: space-evenly</h3>
+    <div class="container evenly">
+
+        <div class="item1 box">
+            <h1>1</h1>
+        </div>
+
+        <div class="item2 box">
+            <h1>2</h1>
+        </div>
+
+        <div class="item3 box">
+            <h1>3</h1>
+        </div>
+
+    </div>
+
+
+    <div class="menu-container">
+
+        <h1>Flex Menu</h1>
+
+        <div class="menu-items">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Help</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
