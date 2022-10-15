@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HouseCard</title>
+
+    <style>
+        .f-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mainContainer {
+            background-color: lightblue;
+            width: 800px;
+            height: 700px;
+        }
+
+        .card {
+            background-color: white;
+            width: 350px;
+            height: 540px;
+            border-radius: 20px;
+            overflow: hidden;
+            color: rgb(88, 95, 102);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #image img {
+            width: 350px;
+
+        }
+
+        #info {
+            border-bottom: 1px groove lightgray;
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+
+        #info * {
+            margin: 0px;
+            margin-top: 5px;
+        }
+
+        .cover {
+            background-color: darkolivegreen;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+
+        #bhk {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 20px;
+            border-bottom: 1px groove lightgray;
+        }
+
+        #Person {
+            display: flex;
+            align-items: center;
+
+        }
+
+        #Person * {
+            margin-right: 20px;
+        }
+
+        #contact {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body class="f-center">
+
+    <div class="mainContainer f-center">
+
+
+        <div class="card">
+
+            <!-- first image -->
+
+            <div id="image">
+                <img src="house image.jpg" alt="house image">
+            </div>
+
+            <div id="info">
+                <h3>Haunted House: 10y Old</h3>
+
+                <h2>Sell Price: 1,20,99,999 only</h2>
+
+                <h4>Bhooto ki Ghati</h4>
+            </div>
+
+            <div id="bhk">
+                <h3>3 Bedroom</h3>
+                <h3>2 Bathroom</h3>
+            </div>
+
+            <div id="contact">
+                <h4>Retailer</h4>
+                <div id="Person">
+
+                    <div class="cover"></div>
+
+                    <p>+91-9874563210</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
