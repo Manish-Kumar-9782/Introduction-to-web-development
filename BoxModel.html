@@ -1,28 +1,34 @@
 <!doctype html>
 
-<html> 
+<html>
 
-	<!-- This is a boxmodel session in which we will learn that, every element contain three parts.
+<!-- This is a BoxModel session in which we will learn that, every element contain three parts.
 	
 		1. padding: padding is the internal space b/w content and border. 
 		2. border: it is highlighted border b/w padding region and margin region.
 		3. margin: it is outer space around the border of the element.
+
+		padding & margin , border-width: 
+			all: single value;
+			top-bottom , left-right: two values without comma with a white space.
+			all different: top right bottom left
 	-->
-	
-	<head> 
-		<title>BoxModel</title>
-		
 
-		<style>
-			h1{
+<head>
+	<title>BoxModel</title>
 
-				border: 40px solid dodgerblue;
-			}
-		</style>
-	</head>
-	
-	<body> 
-		<h1 style="padding:40px; border:40px solid dodgerblue; margin:20px;"> This is BoxModel</h1>
-	</body>
+
+	<style>
+		h1 {
+
+			border: 40px solid dodgerblue;
+
+		}
+	</style>
+</head>
+
+<body>
+	<h1 style="padding:60px; border:40px solid dodgerblue; margin:20px 60px;"> This is BoxModel</h1>
+</body>
 
 </html>

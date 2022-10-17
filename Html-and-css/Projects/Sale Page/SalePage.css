@@ -1,0 +1,123 @@
+:root {
+    --icon-color: rgb(124, 135, 147);
+    --text-color: rgb(150, 154, 159);
+    --main-bg-cl: rgb(34, 40, 46);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ============================ */
+/* common classes */
+body {
+    background-color: var(--main-bg-cl)
+}
+
+.border {
+    border: 1px solid lightslategray;
+}
+
+.svg-icon {
+    width: 30px;
+    color: var(--icon-color);
+}
+
+.user-pfi {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ============================ */
+/* id individual sections */
+
+#user-section-header {
+    height: 40px;
+    padding: 0px;
+    border: 1px solid;
+}
+
+#user-section-menu ul {
+    list-style-type: none;
+    color: var(--text-color);
+}
+
+#user-section-menu ul li {
+    margin-right: 30px;
+}
+
+#profile {
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+#user-profile-menu * {
+    margin: 0px;
+    height: 30px;
+}
+
+#deposit {
+    background-color: dodgerblue;
+    color: whitesmoke;
+    border: 1px solid dodgerblue;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+
+/* ============================ */
+/* flex properties */
+
+.flex {
+    display: flex;
+}
+
+.flex-c {
+    display: flex;
+    flex-direction: column;
+}
+
+.al-center {
+    align-items: center;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.fi-center {
+    justify-content: center;
+    align-items: center;
+}
+
+/* justify-content: space-between */
+.jc-sp-bw {
+    justify-content: space-between;
+}
+
+/* ============================ */
+#container {
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+#logo {
+    margin-bottom: 40px;
+    width: 50px;
+    color: dodgerblue;
+}
+
+#section-tabs div {
+    margin-bottom: 40px;
+}
+
+#section-panel {
+    border: 1px solid lightslategray;
+    flex: 1;
+}
+
+#right-section {
+    border: 1px solid lightslategray;
+    flex: 20;
+}
