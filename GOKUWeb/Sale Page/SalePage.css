@@ -1,0 +1,161 @@
+:root {
+    --main-bg-color: rgb(43, 43, 57);
+    --icon-color: rgb(141, 141, 147);
+    --text-color: rgb(208, 208, 231);
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+}
+
+/* Common Properties */
+/* ================================= */
+.svg-icon {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--icon-color);
+}
+
+.pfi-img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.down-bdr {
+    border-bottom: 1px solid lightslategray;
+    padding-bottom: 10px;
+}
+
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* flex properties */
+/* ================================= */
+
+.flex {
+    display: flex;
+}
+
+.flex-c {
+    display: flex;
+    flex-direction: column;
+}
+
+.it-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.al-center {
+    align-items: center;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.js-sp-bw {
+    justify-content: space-between;
+}
+
+/* ================================= */
+
+.card {
+    border: 3px solid dodgerblue;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.card-header * {
+    margin-left: 10px;
+}
+
+
+
+span.bg-hlight {
+    background-color: rgba(65, 65, 130, 0.549);
+    padding: 5px;
+    border-radius: 5px;
+    color: rgb(127, 251, 127);
+}
+
+/* ================================= */
+
+
+/* ================================= */
+/* Individual id Properties */
+/* ================================= */
+#logo {
+    width: 50px;
+    color: dodgerblue;
+    margin-bottom: 40px;
+}
+
+#section-panel {
+    border: 1px solid lightslategray;
+    flex: 1;
+}
+
+#right-container {
+    border: 1px solid lightslategray;
+    flex: 20;
+}
+
+#theader {
+    height: 30px;
+    margin-top: 10px;
+}
+
+#theader * {
+    height: 30px;
+}
+
+#theader-left {
+    list-style-type: none;
+}
+
+#theader-left li {
+    margin-right: 30px;
+}
+
+#section-tabs * {
+    margin-bottom: 30px;
+}
+
+#bt-deposit {
+    background-color: dodgerblue;
+    border: 1px solid dodgerblue;
+    border-radius: 5px;
+    color: whitesmoke;
+    margin-right: 40px;
+
+}
+
+#search-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#search-box * {
+    margin: 0px;
+}
+
+#users {
+    margin-left: 10px;
+    margin-top: 10px;
+    flex: 1;
+    padding-right: 30px;
+    border-right: 1px solid lightslategray;
+}
+
+#user-data {
+    flex: 4;
+}
+
+/* ================================= */
