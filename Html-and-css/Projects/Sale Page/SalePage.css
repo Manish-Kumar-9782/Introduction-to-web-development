@@ -2,6 +2,7 @@
     --icon-color: rgb(124, 135, 147);
     --text-color: rgb(150, 154, 159);
     --main-bg-cl: rgb(34, 40, 46);
+    --card-bg-color: rgba(31, 32, 34, 0.725);
 }
 
 * {
@@ -28,6 +29,62 @@ body {
     height: 30px;
     object-fit: cover;
     border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* margin and padding 0. */
+.mp-zero * {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+    color: var(--text-color);
+}
+
+ul li {
+    margin-right: 30px;
+}
+
+/* ============================ */
+
+/* card properties */
+/* ============================ */
+.card {
+    border: 1px solid dodgerblue;
+    margin: 20px;
+    padding: 0px 20px;
+    border-radius: 10px;
+    background-color: var(--card-bg-color);
+}
+
+.card-top {
+    border-bottom: 1px solid lightslategray;
+    margin-bottom: 5px;
+}
+
+.hlight {
+    background-color: rgba(84, 93, 102, 0.358);
+    padding: 3px 5px;
+    border-radius: 5px;
+    color: rgb(64, 167, 52);
+}
+
+/* margin left : ml
+paddin left : pl
+width: w- */
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.p-10 {
+    padding: 10px;
 }
 
 /* ============================ */
@@ -37,15 +94,6 @@ body {
     height: 40px;
     padding: 0px;
     border: 1px solid;
-}
-
-#user-section-menu ul {
-    list-style-type: none;
-    color: var(--text-color);
-}
-
-#user-section-menu ul li {
-    margin-right: 30px;
 }
 
 #profile {
@@ -64,6 +112,50 @@ body {
     border: 1px solid dodgerblue;
     border-radius: 5px;
     margin-right: 40px;
+}
+
+#users-container {
+    color: var(--text-color);
+}
+
+#search-box * {
+    margin: 0px;
+}
+
+#search-box {
+    margin-top: 10px;
+}
+
+#search-box input {
+    padding: 10px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+
+#users {
+    padding: 20px;
+    border: 1px solid lightslategray;
+    flex: 1;
+}
+
+#user-data {
+    flex: 4;
+    border: 1px solid lightslategray;
+}
+
+#user-profile-right-section {
+    font-size: 1.8rem;
+}
+
+#user-profile-right-section img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+}
+
+#user-dashboard-tabs {
+    border-bottom: 1px solid lightslategray;
+    margin-bottom: 3px;
 }
 
 /* ============================ */
