@@ -133,6 +133,7 @@ input {
 /* ================================= */
 
 .card {
+    margin-bottom: 10px;
     border: 1px solid var(--border-color);
     border-radius: 20px;
     padding: 0px 10px;
