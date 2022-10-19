@@ -1,8 +1,9 @@
 :root {
-    --icon-color: rgb(124, 135, 147);
-    --text-color: rgb(150, 154, 159);
-    --main-bg-cl: rgb(34, 40, 46);
+    --icon-color: rgb(141, 141, 147);
+    --text-color: rgb(208, 208, 231);
+    --main-bg-cl: rgb(43, 43, 57);
     --card-bg-color: rgba(31, 32, 34, 0.725);
+    --border-color: rgba(119, 136, 153, 0.256);
 }
 
 * {
@@ -16,12 +17,24 @@ body {
 }
 
 .border {
-    border: 1px solid lightslategray;
+    border: 1px solid var(--border-color);
 }
 
 .svg-icon {
     width: 30px;
     color: var(--icon-color);
+}
+
+.cl-ex {
+    color: rgb(255, 133, 40);
+}
+
+.cl-card {
+    color: rgb(51, 100, 204);
+}
+
+.cl-arow {
+    color: rgb(17, 189, 17);
 }
 
 .user-pfi {
@@ -52,7 +65,7 @@ ul li {
 /* card properties */
 /* ============================ */
 .card {
-    border: 1px solid dodgerblue;
+    border: 1px solid var(--border-color);
     margin: 20px;
     padding: 0px 20px;
     border-radius: 10px;
@@ -60,7 +73,7 @@ ul li {
 }
 
 .card-top {
-    border-bottom: 1px solid lightslategray;
+    border-bottom: 1px solid var(--border-color);
     margin-bottom: 5px;
 }
 
@@ -87,13 +100,17 @@ width: w- */
     padding: 10px;
 }
 
+.m-0 {
+    margin: 0px;
+}
+
 /* ============================ */
 /* id individual sections */
 
 #user-section-header {
     height: 40px;
     padding: 0px;
-    border: 1px solid;
+    border-bottom: 1px solid var(--border-color);
 }
 
 #profile {
@@ -120,6 +137,7 @@ width: w- */
 
 #search-box * {
     margin: 0px;
+    font-size: larger;
 }
 
 #search-box {
@@ -128,19 +146,21 @@ width: w- */
 
 #search-box input {
     padding: 10px;
-    border: 1px solid whitesmoke;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
+    outline: unset;
+    background-color: var(--main-bg-cl);
+    width: 250px;
 }
 
 #users {
     padding: 20px;
-    border: 1px solid lightslategray;
+    border-right: 1px solid var(--border-color);
     flex: 1;
 }
 
 #user-data {
     flex: 4;
-    border: 1px solid lightslategray;
 }
 
 #user-profile-right-section {
@@ -154,7 +174,7 @@ width: w- */
 }
 
 #user-dashboard-tabs {
-    border-bottom: 1px solid lightslategray;
+    border-bottom: 1px solid var(--border-color);
     margin-bottom: 3px;
 }
 
@@ -205,11 +225,19 @@ width: w- */
 }
 
 #section-panel {
-    border: 1px solid lightslategray;
+    border-right: 1px solid var(--border-color);
     flex: 1;
 }
 
 #right-section {
-    border: 1px solid lightslategray;
     flex: 20;
+}
+
+#user-data-table table :is(th, td) {
+    padding: 10px 50px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#user-data-table {
+    margin: 20px;
 }
