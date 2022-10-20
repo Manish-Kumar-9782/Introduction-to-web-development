@@ -87,3 +87,17 @@ for (let i = 0; i < 5; i++) {
     userCards.appendChild(cardContainer);
 }
 
+
+function random(start, end, n) {
+
+    let nums = [];
+
+    for (let i = 0; i < n; i++) {
+
+        let rn1 = Math.floor(Math.random() * 10 + start);
+        let rn2 = Math.floor(Math.random() * 10 + end);
+        nums.push(Math.abs(rn2 - rn1));
+    }
+
+    return nums
+}

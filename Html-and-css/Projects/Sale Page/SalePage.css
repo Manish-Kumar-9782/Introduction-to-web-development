@@ -234,7 +234,7 @@ width: w- */
 }
 
 #user-data-table table :is(th, td) {
-    padding: 10px 50px;
+    padding: 10px 45px;
     border-bottom: 1px solid var(--border-color);
 }
 
