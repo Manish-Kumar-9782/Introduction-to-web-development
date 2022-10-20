@@ -58,6 +58,18 @@ pb: padding bottom*/
     border-radius: 50%;
 }
 
+.ex-mark-cl {
+    color: rgb(255, 115, 40);
+}
+
+.card-cl {
+    color: rgb(47, 47, 255);
+}
+
+.ar-cl {
+    color: rgb(67, 204, 67);
+}
+
 /* ================================= */
 
 
@@ -71,7 +83,6 @@ pb: padding bottom*/
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--icon-color);
 }
 
 .pfi-img {
@@ -248,7 +259,7 @@ span.bg-hlight {
 
 #user-data-table table td,
 #user-data-table table th {
-    padding: 20px 60px;
+    padding: 20px 55px;
     border-bottom: 1px solid var(--border-color);
 }
 

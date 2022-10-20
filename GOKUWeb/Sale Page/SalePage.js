@@ -12,6 +12,7 @@ let names = ["kushal", "Ravi 1", "Ravi 2", "abhishek", "varsha"];
 let img = "witcher-silver.jpg";
 
 let dept = ["Design", "IT", "Mechanical", "Developer", "Management"]
+let dept_colors = ["#FFF9B0", "#D58BDD", "#B73E3E", "#EEF1FF", "#47B5FF"]
 
 let amount = [];
 
@@ -76,7 +77,11 @@ for (let i = 0; i < 5; i++) {
 
     // 4. make dept and amount element
     let dept = document.createElement("p");
-    dept.innerText = users[i].userDepartment;
+    let dept_span = document.createElement("span");
+    dept_span.innerText = users[i].userDepartment;
+    dept_span.setAttribute("class", "bg-hlight")
+    dept_span.setAttribute("style", `color:${dept_colors[i]};`)
+    dept.appendChild(dept_span);
 
     let amount = document.createElement("p");
     amount.innerText = "$" + users[i].userAmount;
