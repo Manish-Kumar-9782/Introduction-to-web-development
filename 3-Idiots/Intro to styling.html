@@ -1,5 +1,4 @@
-<p>Hello, this is html first introduction class, in which we have learned about, what is html
-		elements? content, importance of head element and body element.</p> <!doctype html>
+<!doctype html>
 
 <html> 
 
@@ -24,6 +23,19 @@
 	
 	
 	global attribute: id, style, class, title
+	
+	
+	internal styling: it is defined inside the <style> element which is placed inside the head element.
+	
+		To apply the style on an element, first we need to select that element by using the varaious kind of selectors.
+		
+		simple: TagName, id, class;
+		
+		TagName: it selects all the element with that TagName; 
+		id: it selects only a single element with the given unique id. (name is prefixed with #)
+		class: it selects multiple element which can be similar or differnt type of element. (name is prefixed with .)
+		
+	
 	-->
 
 	<head> 
@@ -34,28 +46,52 @@
 		
 		Selecting element by simple method.
 		
-		by element tagName, by using id, by using class.
+		by element tagName, by using id, by using class. 
 		
 		-->
 		
 		<style> 
 		
+			/* Now applying the text color on p element. */
+			p{
+			
+				color:#461f6b;
+				font-size: 1.3rem;
+			}
+			
+			
+			#p-one{
+			
+				color:red;
+				
+			}
+			
+			.orange{
+				color: orange;
+			}
+			
+			.box{
+				width: 500px;
+				height: 200px;
+				background-color:#3268e6;
+			}
+			
 			
 			
 		</style>
 		
 	</head>
 	
-	<body lang="en-us" dir="ltr" style="background-color:lightblue;"> 
+	<body lang="en-us" dir="ltr" style="background-color:lightgray;"> 
 	
 		<h1>Introduction to the div and p element</h1>
 		<p>Hello, this is html first introduction class, in which we have learned about, what is html
 		elements? content, importance of head element and body element.</p> 
 		
-		<div dir="rtl"> 
+		<div dir="rtl" class="box orange"> 
 		
 			<h2> Div element </h2>
-			<p> This is a div elment which is used as a container for other container, elements, items content etc.</p>
+			<p id="p-one"> This is a div elment which is used as a container for other container, elements, items content etc.</p>
 			<p> Div element is the mostly used element as by container in most of the web-sites.</p>
 		
 		</div>
