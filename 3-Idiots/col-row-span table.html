@@ -1,0 +1,144 @@
+<!doctype html>
+
+
+
+<!--
+
+	table: table main-container
+		
+		thead: all column heading row-container
+		
+			tr: a row for heading.
+			
+				th: th elment for each column heading.
+		
+		tbody: all column values row are placed inside the tbody
+
+			tr: a row for each column vlaues.
+			
+				td: td elemet for each column and row value.
+				
+				
+	TABLE: <table> <thead> <tbody> <tr> <th> <td> <caption>
+	
+	
+	border: first we apply/define boreder, border will be applied individually to each element
+	border -> table, tr, th.
+
+-->
+
+
+<html>
+
+
+<head>
+
+    <title>Intro to Table</title>
+
+
+    <style>
+        table {
+
+            border: 1px solid red;
+            border-collapse: collapse;
+
+            /*
+					if border-collapse: separate;
+					
+					then we can use border-spacing, to define the equal amout of space in b/w the 
+					table cell elements.
+				*/
+
+
+        }
+
+        td {
+
+            border: 1px solid green;
+        }
+
+        th {
+
+            border: 1px solid blue;
+        }
+
+        td,
+        th {
+            padding: 5px 10px;
+        }
+
+
+        table caption {
+
+            margin-bottom: 5px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<!-- IN this section we will learn to use the attribute of colspan and 
+        rowspan to merge row or columns in a table.
+
+        rowspan: to merge n number of rows.
+        colspan: to merge n number of columns.
+-->
+
+<body>
+
+    <h1>Introduction to Table</h1>
+
+    <table>
+        <caption>Student Registernion Record</caption>
+        <thead>
+
+            <tr>
+
+                <th colspan="2">Name</th>
+                <th rowspan="2">Age</th>
+                <th rowspan="2">Height</th>
+                <th rowspan="2">Blood Group</th>
+
+            </tr>
+
+            <tr>
+                <th>First Name</th>
+                <th>Second Name</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Sachin</td>
+                <td>Choudhary</td>
+                <td>18</td>
+                <td>5.6</td>
+                <td>B+</td>
+            </tr>
+
+            <tr>
+                <td>Kurshad</td>
+                <td>Khan</td>
+                <td>21</td>
+                <td>5.7</td>
+                <td>B-</td>
+            </tr>
+
+            <tr>
+                <td>Bhanu</td>
+                <td>Saini</td>
+                <td>18</td>
+                <td>5.6</td>
+                <td>AB+</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+
+</body>
+
+</html>
