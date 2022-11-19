@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Introduction</title>
+
+    <style>
+        .flex-row {
+            /*To make a any element as flex container we 
+            will use 'display:flex;' on that element */
+            display: flex;
+            border: 2px solid red;
+            flex-wrap: wrap;
+
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+            border: 10px groove green;
+        }
+
+        .box {
+            box-sizing: border-box;
+            padding: 30px;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            color: whitesmoke;
+            background-color: dodgerblue;
+            margin: 3px;
+        }
+
+        .full-width {
+            width: auto;
+            height: auto;
+        }
+
+        /*Justify content values.*/
+        .f-jc-right {
+            justify-content: right;
+        }
+
+        .f-jc-left {
+            justify-content: left;
+        }
+
+        .f-jc-center {
+            justify-content: center;
+        }
+
+        .f-jc-flex-start {
+            justify-content: flex-start;
+        }
+
+        .f-jc-flex-end {
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+
+<!-- 
+        flex: it is a display layout, which is used to place items in row or column order, 
+        Since it is flexible, hence by default width and hight of the element will be flexible.
+        
+        all the item will be arranged in either row or column.
+
+        by default: row, wrap on decreasing width of the screen size.
+
+        flex: this property always applied on the container, and the container is called flex-container.
+
+        All the immediate children (direct children) all are called flex-item. all the flex properties will 
+        be applicable on only the flex-item.
+
+        Note: there are two kinds of flex-properties:
+
+        container-level property: properties which are only applied on the flex-container.
+        flex-item-level property: properties which only applicable on the flex-items.
+
+        Working: 
+
+        -> row can be called as x-axis.
+        -> column can be called as y-axis.
+
+
+        main-axis: it is the axis in which direction our flex-direction is set. (by default row or x-axis)
+        cross-axis: it is the opposite of the main-axis. (by default column or y-axis)
+
+
+        justify-content: it follow the main-axis.
+        align-item : it follow the cross-axis.
+     -->
+
+
+<body>
+
+    <div class="flex-row">
+
+        <div>
+            <h1 class="box">1</h1>
+        </div>
+
+        <div>
+            <h1 class="box">2</h1>
+        </div>
+
+        <div>
+            <h1 class="box">3</h1>
+        </div>
+
+        <div>
+            <h1 class="box">4</h1>
+        </div>
+
+        <div>
+            <h1 class="box">5</h1>
+        </div>
+
+        <div>
+            <h1 class="box">6</h1>
+        </div>
+
+        <div>
+            <h1 class="box">7</h1>
+        </div>
+
+        <div>
+            <h1 class="box">8</h1>
+        </div>
+
+        <div>
+            <h1 class="box">9</h1>
+        </div>
+
+        <div>
+            <h1 class="box">10</h1>
+        </div>
+
+    </div>
+
+
+    <!-- flex direction as column -->
+    <div class="flex-column">
+
+        <div>
+            <h1 class="box">1</h1>
+        </div>
+
+        <div>
+            <h1 class="box">2</h1>
+        </div>
+
+        <div>
+            <h1 class="box">3</h1>
+        </div>
+    </div>
+
+
+    <!-- justify-content: left, right, center, flex-start, flex-end -->
+
+    <h3>justify-content: left</h3>
+    <div class="flex-row f-jc-left">
+        <div class="box">left</div>
+    </div>
+
+    <h3>justify-content: right</h3>
+    <div class="flex-row f-jc-right">
+        <div class="box">right</div>
+    </div>
+
+    <h3>justify-content: center</h3>
+    <div class="flex-row f-jc-center">
+        <div class="box">center</div>
+    </div>
+
+    <h3>justify-content: flex-start</h3>
+    <div class="flex-row f-jc-flex-start">
+        <div class="box">flex-start</div>
+    </div>
+
+    <h3>justify-content: flex-end</h3>
+    <div class="flex-row f-jc-flex-end">
+        <div class="box">flex-end</div>
+    </div>
+
+
+
+
+</body>
+
+
+
+</html>
