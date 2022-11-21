@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex intro 2</title>
+
+    <style>
+        .flex-row {
+            /*To make a any element as flex container we 
+            will use 'display:flex;' on that element */
+            display: flex;
+            border: 2px solid red;
+            flex-wrap: wrap;
+
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+            border: 10px groove green;
+        }
+
+        .box {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 200px;
+            height: 100px;
+            color: whitesmoke;
+            background-color: dodgerblue;
+            margin: 3px;
+        }
+
+        .container1 {
+            width: 600px;
+            height: 600px;
+        }
+
+        .f-jc-flex-start {
+            justify-content: flex-start;
+        }
+
+        .f-jc-flex-end {
+            justify-content: flex-end;
+        }
+
+        .f-jc-center {
+            justify-content: center;
+        }
+
+        .f-al-flex-start {
+            align-items: flex-start;
+        }
+
+        .f-al-flex-end {
+            align-items: flex-end;
+        }
+
+        .f-al-center {
+            align-items: center;
+        }
+
+        .block {
+            margin: 100px 0px;
+            border: 5px solid darksalmon;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="flex-column container1 f-jc-flex-start   f-al-flex-end">
+        <div class="box" style="justify-self: flex-start; align-self:flex-start;">flex-column <br>
+            container1 <br> f-jc-flex-end <br> f-al-flex-end</div>
+
+        <div class="box" style="justify-self: flex-start; align-self:center;">flex-column <br>
+            container1 <br> f-jc-flex-end <br> f-al-flex-end</div>
+
+        <div class="box">flex-column <br>
+            container1 <br> f-jc-flex-end <br> f-al-flex-end</div>
+
+        <div class="box" style="justify-self: center; align-self:center;">flex-column <br>
+            container1 <br> f-jc-flex-end <br> f-al-flex-end</div>
+
+        <div class="box">flex-column <br>
+            container1 <br> f-jc-flex-end <br> f-al-flex-end</div>
+
+        <div class="box">flex-column <br>
+            container1 <br> f-jc-flex-end <br> f-al-flex-end</div>
+
+    </div>
+
+
+    <div id="control" class="box"></div>
+
+    <div id="block1" class="block">
+
+        <h1>justify-content: space-between;</h1>
+        <div class="flex-row" style="justify-content: space-between;">
+            <div class="box">justify-content: left</div>
+            <div class="box">justify-content: right</div>
+        </div>
+
+        <h1>justify-content: space-between;</h1>
+        <div class="flex-row" style="justify-content: space-between;">
+            <div class="box">justify-content: left</div>
+            <div class="box">justify-content: right</div>
+            <div class="box">justify-content: right</div>
+        </div>
+
+        <h1>justify-content: space-between;</h1>
+        <div class="flex-row" style="justify-content: space-between;">
+            <div class="box">justify-content: left</div>
+            <div class="box">justify-content: right</div>
+            <div class="box">justify-content: right</div>
+            <div class="box">justify-content: right</div>
+        </div>
+    </div>
+
+    <div class="block">
+
+        <h1>justify-content: space-around;</h1>
+        <div class="flex-row" style="justify-content: space-around;">
+            <div class="box">justify-content: left</div>
+            <div class="box">justify-content: right</div>
+        </div>
+
+        <h1>justify-content: space-around;</h1>
+        <div class="flex-row" style="justify-content: space-around;">
+            <div class="box">justify-content: left</div>
+            <div class="box">justify-content: right</div>
+            <div class="box">justify-content: right</div>
+        </div>
+
+        <h1>justify-content: space-around;</h1>
+        <div class="flex-row" style="justify-content: space-around;">
+            <div class="box">justify-content: left</div>
+            <div class="box">justify-content: right</div>
+            <div class="box">justify-content: right</div>
+            <div class="box">justify-content: right</div>
+        </div>
+    </div>
+
+
+    <div class="block">
+
+        <h1>justify-content: space-evenly;</h1>
+        <div class="flex-row" style="justify-content: space-evenly;">
+            <div class="box">justify-content: left</div>
+            <div class="box">justify-content: right</div>
+        </div>
+
+        <h1>justify-content: space-evenly;</h1>
+        <div class="flex-row" style="justify-content: space-evenly;">
+            <div class="box">justify-content: left</div>
+            <div class="box">justify-content: right</div>
+            <div class="box">justify-content: right</div>
+        </div>
+
+        <h1>justify-content: space-evenly;</h1>
+        <div class="flex-row" style="justify-content: space-evenly;">
+            <div class="box">justify-content: left</div>
+            <div class="box">justify-content: right</div>
+            <div class="box">justify-content: right</div>
+            <div class="box">justify-content: right</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
