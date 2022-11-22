@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haunted House</title>
+
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .non-bullet {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .non-bullet li {
+            padding-left: 0px;
+        }
+
+        #outer-container {
+            width: 700px;
+            height: 700px;
+            background-color: lightblue;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .card {
+            border: 1px solid white;
+            width: 350px;
+            height: 550px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card-img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+
+
+        .card-detail {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: lightslategray;
+        }
+
+        .text-medium {
+            font-size: 1.2rem;
+        }
+
+        .text-large {
+            font-size: 1.4rem;
+        }
+
+        .text-vlarge {
+            font-size: 1.7rem;
+        }
+
+        .p-2 {
+            padding: 1.2rem;
+        }
+
+        .border-down {
+            border-bottom: 1px solid #767575;
+        }
+
+        .flex-row {
+            display: flex;
+        }
+
+        .f-al-center {
+            align-items: center;
+        }
+
+        .f-jc-space-between {
+            justify-content: space-between;
+        }
+
+        .px-2 {
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+        }
+
+        .circle-32 {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: dodgerblue;
+        }
+
+        /*
+
+        card-detail-h1
+
+        card-detail-h2
+
+        card-detail-h3
+
+        m-5, 
+        
+        */
+    </style>
+</head>
+
+<body>
+
+
+    <div id="outer-container">
+
+        <div class="card">
+
+            <img src="house image.jpg" alt="House image" class="card-img">
+
+            <div class="details p-2 border-down">
+                <span class="card-detail text-large">Haunted House: 10y Old</span> <br>
+                <span class="card-detail text-vlarge">Sell Price: 1,20,99,999 only</span> <br>
+                <span class="card-detail text-medium">Bhooto ki Ghati</span> <br>
+            </div>
+
+            <div class="border-down p-2">
+                <ul class="non-bullet flex-row f-al-center f-jc-space-between card-detail text-medium">
+                    <li>3 Bedroom</li>
+                    <li>2 Bathroom</li>
+                </ul>
+            </div>
+
+            <div class="px-2">
+
+                <p><b class="card-detail">Retailer</b></p>
+
+                <div class="flex-row f-al-center">
+                    <div class="circle-32">
+
+                    </div>
+                    <span class="px-2"> +91-9875642315</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
