@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Semantic Layout</title>
+
+    <style>
+        header {
+            background-color: #3b57a3;
+            color: white;
+        }
+
+        nav {
+            background-color: rgb(240, 145, 51);
+            color: rgb(114, 10, 114);
+        }
+
+        .p-3 {
+            padding-left: 1.4rem;
+        }
+
+        .px-3 {
+            padding: 0px 1.4rem;
+        }
+
+        .tcenter {
+            text-align: center;
+        }
+
+        .flex-row {
+            display: flex;
+
+        }
+
+        .f-al-center {
+            align-items: center;
+        }
+
+        ul.flex-row {
+            list-style-type: none;
+            padding-left: 0px;
+            margin-left: 0px;
+        }
+
+        .my-0 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .py-2 {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        ul.flex-row li {
+            margin-right: 1.4rem;
+            border: 2px solid white;
+            padding: 3px;
+            border-radius: 5px;
+        }
+
+        #aside {
+            flex: 1;
+            background-color: #3b57a3;
+            color: white;
+        }
+
+        #aside-list {
+            list-style-type: none;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        #aside-list li {
+            border: 2px solid white;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        #main-section {
+            flex: 9;
+        }
+    </style>
+</head>
+
+<!-- 
+        Sematic layout: header,nav,section,article,aside,footer,details,summary
+     -->
+
+<body>
+
+    <header class="p-3 ">
+        <h1 class="tcenter">HTML Sematic Layout Elements</h1>
+
+        <h3 class="tcenter">Header</h3>
+
+        <p>HTML has several semantic elements that define the different parts of a web page.</p>
+
+        <ul class="flex-row my-0 py-2">
+            <li>header</li>
+            <li>nav</li>
+            <li>section</li>
+            <li>article</li>
+            <li>aside</li>
+            <li>footer</li>
+            <li>details</li>
+            <li>summary</li>
+        </ul>
+    </header>
+
+    <!-- navigation bar  -->
+    <nav class="flex-row f-al-center">
+        <h2 class="px-3">Meri WebSite</h2>
+        <ul class="flex-row px-3">
+            <li><a href="http://www.google.com">Google</a></li>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://twitter.com/i/flow/login">Twitter</a></li>
+            <li><a href="https://www.instagram.com/accounts/login">Instagram</a></li>
+        </ul>
+    </nav>
+
+    <!-- Now we need to make a flex container in which we will put aside and our main section element.
+        
+        for flex container we can use div, section  or other block level element.
+    -->
+
+    <section class="flex-row">
+
+        <!-- 1. aside bar -->
+        <aside id="aside" class="tcenter">
+            <h2>Aside Bar</h2>
+            <h3>Used Element</h3>
+
+            <ul id="aside-list">
+                <li>header</li>
+                <li>nav</li>
+                <li>section</li>
+                <li>article</li>
+                <li>aside</li>
+                <li>footer</li>
+            </ul>
+        </aside>
+
+
+        <!-- 2. main section container -->
+        <section id="main-section" class="p-3">
+            <p><b>header</b> :- Defines a header for a document or a section</p>
+
+            <p><b>nav</b> :- Defines a set of navigation links</p>
+
+            <p><b>section</b> :- Defines a section in a document.</p>
+
+            <p><b>article</b> :- Defines an independent, self-contained content.</p>
+
+            <p><b>aside</b> :- Defines content aside from the content (like a sidebar)</p>
+
+            <p><b>footer</b> :- Defines a footer for a document or section</p>
+
+            <p><b>details</b> :- Defines additional details that the user can open and close on demand.</p>
+
+            <p><b>Summary</b> :- Defines a heading for the details element.</p>
+
+            <article>
+                <h3>CSS Framework</h3>
+                <p>We have mulitple css frameword to create fast layout like Bootstrap,
+                    we.css, react etc.
+                </p>
+
+                <h3>CSS Float Layout</h3>
+                <p>It is common to do entire web layouts using the css <b>float</b> property.
+                    Float is easy to learn, we just need to remember hot the <b>float</b> and
+                    <b>clear</b> properties work.
+                </p>
+
+                <p>Disadvantage: Floating elements are tied to the document flow,
+                    which may harm the flexibility.
+                </p>
+
+
+                <h3>CSS Flexbox Layout</h3>
+                <p>Use of flexbox ensures that elements behae predictably when the page layout
+                    must accommodate different screen sizes and different display devices.
+                </p>
+
+                <h3>CSS Grid Layout</h3>
+                <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns,
+                    making it easier to design web pages without having to use floats and positioning.
+                </p>
+            </article>
+        </section>
+
+
+    </section>
+
+</body>
+
+</html>
