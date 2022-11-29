@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images and Links</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <!-- 
+
+        Images: To apply the image we need to use <img> element. we need to specify two attributes for img element.
+
+        src: source location for the image.
+        alt: it is the alternative text for the image, if image unable to load on the page.
+     -->
+
+    <img src="house image.jpg" alt="house image" width="40%">
+
+    <!-- 
+        Link: To make a link we need to use anchor element <a> inline element.
+        
+            To make a line we need to specify at least one attribute which is href.
+            href: it is the it contains the hyperlink address for other page or a request..
+
+            content of the link will be displayed os the name of the link.
+     -->
+    <br><br>
+
+    <a href="https://www.google.com/">Google</a>
+
+    <!-- 
+        Link with image.
+
+        To Attach a link with an image we need to put image inside the anchor element content.
+      -->
+    <br><br>
+    <a href="https://www.google.com/"><img src="google-logo.png" alt="Google Home page" width="5%"></a>
+
+    <!-- 
+
+        Link with bootstrap icon 
+
+     -->
+
+    <br><br>
+    <a href="https://www.google.com/"><i class="bi bi-google"></i></a>
+    <a href="https://www.google.com/"><i class="bi bi-house"></i></a>
+
+
+    <!-- Link with button -->
+
+    <br><br>
+
+    <button type="button"><a href="https://www.google.com/">Google <i class="bi bi-house"></i></a></button>
+</body>
+
+</html>
