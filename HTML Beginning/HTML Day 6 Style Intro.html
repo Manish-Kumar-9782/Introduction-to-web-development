@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+    <title>Styling Intro</title>
+
+    <!-- 
+		
+		Now we will use the internal styling by using the <style> element.
+		
+		To define styles for any element we need to follow this syntax.
+		
+		select-element {
+			
+			After selecting the element we need to make a block by using the curly bracket. {}
+			
+			Now inside this we each styling follow a pair of Style_name: Style_value separated by ':'
+			Note: after each style we need to put semi-colon.
+			
+			Style1 : style_value;
+			Style2 : style_value;
+			Style3 : style_value; 
+			
+		}
+		
+		Note: if style_name or style_value is not match then it will not show the effect of that style and
+		after all the below styles.
+		
+		Basic Element Selector: TagName, className, IdName
+		
+		TagName: it is the name of the element. 
+		
+				Note: if we use the TagName to select an element for styling, then it will select all the 
+					element associated with that TagName if any other relation is not defined.
+		
+		-->
+
+</head>
+
+<body>
+
+
+
+    <h2>Box Model 1</h2>
+    <h2>Box Model 2</h2>
+    <h2>Box Model 3</h2>
+
+    <!--
+		
+			BoxModel: it is the model which applied on all the flow element, either it is a block element
+				or a inline element it is contains the three basic properties or any flow element.
+				
+			Basic Properties: content, padding, border, margin.
+			
+			content: it is the inner most part of the element which can be a text or other html element.
+			
+			padding: it is the space in b/w the content and border, it does not contain any color, background color 
+				will be applied on the padding space.
+				
+			border: it is the border of the element or we can say the boundary limit of any border.
+			
+			margin: it is the space in b/w the border and other element (outer element), it is the outer space 
+				from the element. it is generally applied to maintain the space b/w the elements.
+	
+			
+			Styling syntax defined in the <style> element.
+			
+			
+			Inline Styling: we apply the styles on individual element by using the 'style' attribute.
+			
+			global attribute: id (#idName), class (.className), 
+			
+
+			attributeName = "Attribute Value"
+		-->
+
+    <h2 id="MyElement" style="background-color:lightgreen; 
+        border: 10px solid rgb(255, 0, 0);
+    ">Ye Mera h2</h2>
+
+</body>
+
+</html>

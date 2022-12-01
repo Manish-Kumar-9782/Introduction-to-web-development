@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html>
+<!-- 
+        Now in this section we will see how to use internal styling.
+
+        1. To define internal styling we need to make <style> element inside the <head> element.
+        
+        2. Now inside this as content we write the css rules (css styles.)
+
+        3. first we select the element with any kind of selector, then we make a block {} in which we
+            define the css properties in "PropertyName:value;" pairs.
+
+        Basic Selector: As basic selector we use TagName, id and class to select any element.
+
+            TagName: if we TagName selector, all the element associated with that TagName will be selected.
+                if any kind of filter or advance selector is applied.
+
+            id: if we use id to select element, it will select only a single element with that id, in each page 
+                id must be unique.
+
+            class: if we use class to select element, it can be applied on any kind of flow element, we can apply 
+                this class on multiple element which can be different in types.
+    -->
+
+<head>
+
+    <title>Styling Intro</title>
+
+    <style>
+        h2 {
+            border: 5px solid red;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #MyElement2 {
+            background-color: peru;
+            border: 20px solid dodgerblue;
+            margin: 50px 0px;
+        }
+
+        .border-rounded {
+            border-radius: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+    <h2 class="border-rounded">Box Model 1</h2>
+    <h2>Box Model 2</h2>
+    <h2 id="MyElement2" class="border-rounded">Box Model 3</h2>
+
+    <!--
+		
+			BoxModel: it is the model which applied on all the flow element, either it is a block element
+				or a inline element it is contains the three basic properties or any flow element.
+				
+			Basic Properties: content, padding, border, margin.
+			
+			content: it is the inner most part of the element which can be a text or other html element.
+			
+			padding: it is the space in b/w the content and border, it does not contain any color, background color 
+				will be applied on the padding space.
+				
+			border: it is the border of the element or we can say the boundary limit of any border.
+			
+			margin: it is the space in b/w the border and other element (outer element), it is the outer space 
+				from the element. it is generally applied to maintain the space b/w the elements.
+	
+			
+			Styling syntax defined in the <style> element.
+			
+			
+			Inline Styling: we apply the styles on individual element by using the 'style' attribute.
+			
+			global attribute: id (#idName), class (.className), 
+			
+
+			attributeName = "Attribute Value"
+		-->
+
+    <h2 id="MyElement" style="background-color:lightgreen; 
+        border: 10px solid rgb(66, 16, 128);
+    ">Ye Mera h2</h2>
+
+</body>
+
+</html>
