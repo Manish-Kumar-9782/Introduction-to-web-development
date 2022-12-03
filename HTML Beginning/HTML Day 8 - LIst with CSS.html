@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS with List</title>
+
+    <style>
+        /* First of all we will make border on list container */
+        ul {
+            /*border: 1px solid red;*/
+            /* Now we will set the width of the list container
+            
+                Option 1: we can define a fixed value: numeric value with units px
+                Option 2: we can define adjustable value: fit-content
+            */
+            width: 200px;
+
+            /* we can make space in b/w the border and content of ul by using padding*/
+            padding: 10px;
+
+            /* We can use list-style-type  property to change the type of the 'list-item-ticks' */
+            list-style-type: none;
+
+            /* To align text at center we can use text-align property*/
+            text-align: center;
+
+            /* To change the font-family, font-type we can use font-family property */
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            background-color: #0D4C92;
+            color: #CFF5E7;
+
+            border-radius: 10px;
+        }
+
+        /*
+            Point: if we put border on list items also then we can have extra border with additional effect.
+        
+            To select list item for common properties we can use parent child selector.
+
+            Note: if we are using the parent child selector then there must be single space with 
+                no extra character in b/w the parent and child 'name' (TagName, idName, ClassName)
+        */
+
+        ul li {
+            padding: 10px 0px;
+            border-bottom: 1px solid rgba(211, 211, 211, 0.173);
+        }
+
+        ul li:first-of-type {
+            border-top: 1px solid rgba(211, 211, 211, 0.178);
+        }
+
+        ul li:hover {
+            background-color: rgba(52, 52, 52, 0.199);
+            cursor: pointer;
+        }
+
+
+        #mystudent2 {
+            background-image: url("gradient-background1.jpg");
+            /*
+            background-position: center; -> To set the bg-image at center
+            background-size: cover; -> to adjust the full image on the current container size.
+            */
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div>
+
+        <h1>MyStudent</h1>
+
+        <ul id="mystudent1">
+            <li>Mahesh Chaudhary</li>
+            <li>Manish Sain</li>
+            <li>Bhanu Saini</li>
+            <li>Lokesh Chaudhary</li>
+            <li>Sachin Chaudhary</li>
+            <li>Kurshid Khan</li>
+        </ul>
+
+
+
+        <ul id="mystudent2">
+            <li>Mahesh Chaudhary</li>
+            <li>Manish Sain</li>
+            <li>Bhanu Saini</li>
+            <li>Lokesh Chaudhary</li>
+            <li>Sachin Chaudhary</li>
+            <li>Kurshid Khan</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
