@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+
+    Table: To make a table first we make a table container whose display type is 'table'.
+
+        This this we make table body with <tbody> and table head with <thead>
+
+        thead: it contains all the heading cell-element inside a table row (<tr>)
+
+        tbody: it contains all the table data cell-element of each row (<tr>)
+
+        row-element: <tr>
+        cell-element: <th> (heading) <td> (data)
+            
+     
+ -->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Col-Row span</title>
+
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table>
+        <thead>
+
+            <tr>
+                <th colspan="2">Name</th>
+                <th rowspan="2">Age</th>
+                <th rowspan="2">Height</th>
+                <th rowspan="2">Blood Group</th>
+            </tr>
+
+            <tr>
+                <th>First</th>
+                <th>Last</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Sachin</td>
+                <td>Chaudhary</td>
+                <td>18</td>
+                <td>5.6</td>
+                <td>B+</td>
+            </tr>
+
+            <tr>
+                <td>Kushad</td>
+                <td>Khan</td>
+                <td>19</td>
+                <td>5.4</td>
+                <td>B-</td>
+            </tr>
+
+            <tr>
+                <td>Bhanu</td>
+                <td>Saini</td>
+                <td>21</td>
+                <td>5.8</td>
+                <td>o-</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

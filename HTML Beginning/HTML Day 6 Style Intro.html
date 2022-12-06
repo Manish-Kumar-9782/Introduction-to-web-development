@@ -4,9 +4,10 @@
 
 <head>
 
-    <title>Styling Intro</title>
+	<title>Styling Intro</title>
 
-    <!-- 
+
+	<!-- 
 		
 		Now we will use the internal styling by using the <style> element.
 		
@@ -37,17 +38,79 @@
 		
 		-->
 
+	<!-- internal styling  
+	
+	-->
+	<style>
+		h1 {
+			border: 20px solid blue;
+			background-color: purple;
+
+			color: rgb(227, 227, 227);
+			/* to apply color on text*/
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			text-align: center;
+
+		}
+
+		div {
+			/* border: border-width border-type border-color*/
+			border: 10px solid orangered;
+			/*
+			
+				padding: all;
+				padding: top-bottom left-right;
+				padding: top right bottom left;
+
+				margin and border-width both follow this syntax .
+			*/
+			margin: 20px;
+			padding: 20px;
+		}
+
+		h2 {
+			border: 10px solid green;
+		}
+
+		#el1 {
+			text-align: left;
+			/*end right*/
+		}
+
+		#el3 {
+			text-align: right;
+			/*start left */
+		}
+
+		#js-left {
+			text-align: end;
+			font-size: 30px;
+			color: brown;
+			font-weight: 700;
+			text-decoration: underline;
+		}
+	</style>
+
 </head>
 
 <body>
 
 
 
-    <h2>Box Model 1</h2>
-    <h2>Box Model 2</h2>
-    <h2>Box Model 3</h2>
+	<h2 style="border: 10px solid red;">Box Model 1</h2>
+	<h2>Box Model 2</h2>
+	<h2>Box Model 3</h2>
 
-    <!--
+	<p>This is a p element</p>
+
+	<div>
+		<h1 id="el1">This div</h1>
+		<h1 id="el2">This div</h1>
+		<h1 id="el3">This div</h1>
+		<p id="js-left">This is again a p element</p>
+	</div>
+
+	<!--
 		
 			BoxModel: it is the model which applied on all the flow element, either it is a block element
 				or a inline element it is contains the three basic properties or any flow element.
@@ -76,9 +139,8 @@
 			attributeName = "Attribute Value"
 		-->
 
-    <h2 id="MyElement" style="background-color:lightgreen; 
-        border: 10px solid rgb(255, 0, 0);
-    ">Ye Mera h2</h2>
+
+	<h2>This is last h2 element of the page.</h2>
 
 </body>
 
