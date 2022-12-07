@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Intro 2</title>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid;
+            /*To set the vertical alignment of the text inside the block we can use 
+            vertical-align property.*/
+
+            vertical-align: text-top;
+
+            background-color: lightskyblue;
+
+            padding: 10px;
+            border-collapse: collapse;
+        }
+
+        table {
+            height: 400px;
+
+            width: 100%;
+            /* Here we are taking the width by using the percent unit,
+            in this it will calculate the percent value with it parent width. */
+            text-align: left;
+        }
+
+        #table1 th,
+        #table2 th {
+
+            background-color: rgb(245, 73, 73);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: azure;
+            border-color: black;
+            font-weight: bolder;
+
+        }
+
+
+        #table2 {
+            margin-top: 20px;
+        }
+
+        #table2 td:nth-of-type(even) {
+            background-color: aliceblue;
+
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <h1>Vertical Table</h1>
+
+    <table id="table1">
+
+        <tbody>
+            <tr>
+                <th>Title</th>
+                <td>HTML Tutorial</td>
+                <td>HTML Advance</td>
+                <td>Java Script</td>
+                <td>CSS Basic</td>
+                <td>CSS Advance</td>
+                <td>JavaScript Advance</td>
+            </tr>
+            <tr>
+                <th>Author</th>
+                <td>Manish</td>
+                <td>Sachin</td>
+                <td>Gotam</td>
+                <td>Aasif</td>
+                <td>Mohit</td>
+                <td>Sagar</td>
+            </tr>
+            <tr>
+                <th>Subject</th>
+                <td>HTML Tutorial</td>
+                <td>HTML Advance</td>
+                <td>Java Script</td>
+                <td>CSS Basic</td>
+                <td>CSS Advance</td>
+                <td>JavaScript Advance</td>
+            </tr>
+            <tr>
+                <th>Pages</th>
+                <td>140</td>
+                <td>60</td>
+                <td>200</td>
+                <td>180</td>
+                <td>160</td>
+                <td>170</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>90</td>
+                <td>160</td>
+                <td>150</td>
+                <td>120</td>
+                <td>100</td>
+                <td>160</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+
+
+
+
+    <table id="table2">
+
+        <tbody>
+            <tr>
+                <th>Title</th>
+                <td>HTML Tutorial</td>
+                <td>HTML Advance</td>
+                <td>Java Script</td>
+                <td>CSS Basic</td>
+                <td>CSS Advance</td>
+                <td>JavaScript Advance</td>
+            </tr>
+            <tr>
+                <th>Author</th>
+                <td>Manish</td>
+                <td>Sachin</td>
+                <td>Gotam</td>
+                <td>Aasif</td>
+                <td>Mohit</td>
+                <td>Sagar</td>
+            </tr>
+            <tr>
+                <th>Subject</th>
+                <td>HTML Tutorial</td>
+                <td>HTML Advance</td>
+                <td>Java Script</td>
+                <td>CSS Basic</td>
+                <td>CSS Advance</td>
+                <td>JavaScript Advance</td>
+            </tr>
+            <tr>
+                <th>Pages</th>
+                <td>140</td>
+                <td>60</td>
+                <td>200</td>
+                <td>180</td>
+                <td>160</td>
+                <td>170</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>90</td>
+                <td>160</td>
+                <td>150</td>
+                <td>120</td>
+                <td>100</td>
+                <td>160</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>
