@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Layout</title>
+
+    <style>
+        header,
+        nav,
+        section,
+        article,
+        footer,
+        aside {
+            border: 1px solid;
+            margin: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Header</h1>
+    </header>
+
+    <nav>
+        <h3>Navigation Bar: </h3>
+        <ul>
+            <li><a href="#">Google</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+    </nav>
+
+    <!-- Now we will make a section this will contain a sidebar and another main section. -->
+
+    <section>
+        <aside>
+            <h2>Aside bar</h2>
+            <ul>
+                <li>header</li>
+                <li>nav</li>
+                <li>aside</li>
+                <li>section</li>
+                <li>article</li>
+                <li>footer</li>
+            </ul>
+        </aside>
+
+        <section>
+            <h2>Layout Elements</h2>
+
+            <p><b>header: </b> Defines a header for a document or a section</p>
+            <p><b>nav: </b>Define a set of navigation links</p>
+            <p><b>section: </b>Defines a section in a document</p>
+            <p><b>article: </b>Defines an independent, self-contained content.</p>
+            <p><b>aside: </b>Defines content aside from the content (like a sidebar)</p>
+            <p><b>footer: </b>Defines a footer for a document or section</p>
+            <p><b>details: </b>Defines additional details that the user can open and close on demand.</p>
+            <p><b>summary: </b>Defines a heading for the details element.</p>
+        </section>
+
+
+        <article>
+            <h1>HTML Layout Technique</h1>
+
+            <p>There are four different Techniques to create multicolumn layouts. Each techinque has its pros and cons.
+            </p>
+
+            <ul>
+                <li>CSS Framework</li>
+                <li>CSS float property</li>
+                <li>CSS flexbox</li>
+                <li>CSS grid</li>
+            </ul>
+
+            <h3>CSS Framework</h3>
+            <p>We have mulitple css frameword to create fast layout like Bootstrap, we.css, react etc.</p>
+
+            <h3>CSS Float Layout</h3>
+            <p>
+                It is common to do entire web layouts using the css float property. Float is easy to learn, we just need
+                to
+                remember hot the float and clear properties work.
+                Disadvantage: Floating elements are tied to the document flow, which may harm the flexibility.
+            </p>
+
+            <h3>CSS Flexbox Layout</h3>
+            <p>
+                Use of flexbox ensures that elements behae predictably when the page layout must accommodate different
+                screen sizes and different display devices.
+            </p>
+
+            <h3>CSS Grid Layout</h3>
+            <p>
+                The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to
+                design web pages without having to use floats and positioning.
+            </p>
+
+        </article>
+    </section>
+
+    <footer>
+        <h3>I am footer</h3>
+    </footer>
+</body>
+
+</html>
