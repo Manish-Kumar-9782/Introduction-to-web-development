@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will learn about the quotation and citation tags, what are
+these tags and how to use them in our web pages.
+
+In this section we will see:
+-> <blockquote>
+-> <q>
+-> <abbr>
+-> <address>
+-> <cite>
+-> <bdo>
+
+Quotation: A quotation is the repetition of a sentence, phrase, or passage from
+speech or text that someone has said or written.
+
+Citation: A citation is a reference to a source. More precisely, a citation is 
+an abbreviated alphanumeric expression embedded in the body of an intellectual
+work that denote an entry in the bibliographic reference section of the work
+for the purpose of acknowledging the relevance of the works of others to the 
+topic odf discussion at the spot where the citation appears.
+-------------------------------------------------------------------------------
+-->
+<html>
+
+<head>
+    <title>Quotation & Citation</title>
+
+    <!-- In this section we will use the style of the Quotation. -->
+    <style>
+        q {
+            font-style: italic;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>HTML blockquote for quotations</h3>
+    <!-- blockquote: it specifies a section that is quoted from another section.
+            browsers usually indent <blockquote> elements. -->
+    <!-- blockquote has a single attribute cite -->
+    <!-- cite: it specifies the source of the quotation. -->
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 50 years, WWF has been protecting the future of nature.
+        The world's leading conservation organization, WWF works in
+        100 countries and is supported by 1.2 million members in the
+        United States and close to 5 million globally.
+    </blockquote>
+
+    <!---------------------------------------------------------------->
+
+    <h3>HTML q-tag for short quotations</h3>
+    <!-- q: it define a short quotations. browsers normally insert quotation
+        marks around the quotation -->
+    <p>WWF's goal is to: <q>Build a future where people live in harmony with
+            nature.</q></p>
+
+    <!---------------------------------------------------------------->
+
+    <h3>HTML abbr-tag for abbreviations</h3>
+    <!-- abbr: it defines an abbreviation or an acronym, like "HTML", "CSS",
+        "Mr.", "Dr.", "ASAP", "ATM" etc. -->
+
+    <!-- Note: Marking abbreviations can five useful information to browsers,
+        translation systems and search-engines. -->
+
+    <!-- Note: Use the global attribute to show the description for the 
+            abbreviation/acronym when you over the element. -->
+    <p>The <abbr title="World Health Organization"> WHO</abbr> was founded
+        in 1984.</p>
+
+    <!---------------------------------------------------------------->
+    <h3>HTML address-tag for contact information</h3>
+    <!-- address: It defines the contact information for the author/owner
+        of a document or an article. -->
+
+    <!-- The contact information can be email address, url, physical address,
+        phone number, social media handle, etc. -->
+
+    <!-- The text in the <address> element usually renders in italic, and
+            browsers will add a line break before and after the <address> element.-->
+
+    <address>
+        Written by Manish Kumar: <br>
+        Visit us at: https://github.com/Manish-Kumar-9782 <br>
+        manishkumar9782@gamail.com <br>
+        Tech Innovation <br>
+        Jaipur
+    </address>
+
+    <!---------------------------------------------------------------->
+
+    <h3>HTML cite-tag for work Title</h3>
+    <!-- cite: it defines the title of a creative work (e.g a book, a poem,
+            a song, a movie, a painting, a sculpture, etc.) -->
+
+    <!--Note: The text in the <cite> element usually renders in italic.-->
+
+    <p><cite title="Painting">The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+    <!---------------------------------------------------------------->
+
+    <h3>HTML bdo-tag for Bi-directional Override.</h3>
+    <!-- bdo: it stands for bi-directional overide. -->
+    <!-- it is used to override the current text direction: -->
+    <p>bdo is used to override the text direction:</p>
+    <bdo dir="rtl">This text will be written from right to left.</bdo>
+</body>
+
+</html>
