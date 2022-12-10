@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Layout</title>
+
+    <style>
+        header,
+        footer,
+        nav,
+        aside,
+        section,
+        article {
+            border: 1px solid;
+            margin: 5px;
+        }
+    </style>
+
+</head>
+
+<!-- In this section we will learn about the meaningful element which may used to 
+define our page layout and these element are called semantic element.
+
+Semantic Elements: <header> <footer> <nav> <aside> <section> <article> <details> 
+    <summary> <address> 
+
+By Name convention rule: 
+<header>: if we want to make our web page head part then we can use <header> element to put all the 
+    top element inside the <header> element.
+
+<footer>: if we want to make our web page bottom part then we can use <footer> element to put all the 
+    bottom information related element inside the the <footer> element.
+
+<nav>: it should contains all the links and use should use <nav> element to make our navigation bar.
+
+<aside>: this element is generally placed left or right side of the screen if enough large. and this 
+    generally contains all the page bookmarks or tabs, content sections, ads or etc.
+
+<section>: This element should use to make a content section in which we put our main meaningful content.
+        in which we can put multiple sub-sections or multiple article.
+
+        Note: we can put <article> element inside the  <section> but we should not put any <section> inside
+            the <article> element.
+            
+            because any section is a category which is large enough to hold multiple sections or multiple article.
+            whereas article are unique and should contain unique content inside them.
+
+<details>: This elements may be used to hold detailed information about any article or any other kind of
+        information.
+
+<summary>: This elements may be used to hold the short summary of any article or any other kind of information.
+
+<address>: This element is used to show address and contact information about a person, location, compony etc.
+-->
+
+<body>
+
+    <header>
+        <h1>This is header</h1>
+    </header>
+
+    <nav>
+        <h1>Navigation Bar</h1>
+        <ul>
+            <li>Google</li>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+        </ul>
+    </nav>
+
+
+    <section>
+
+        <!-- aside bar -->
+        <aside>
+            <h2>aside bar</h2>
+            <h3>Element used</h3>
+            <ul>
+                <li>header</li>
+                <li>nav</li>
+                <li>aside</li>
+                <li>section</li>
+                <li>article</li>
+                <li>footer</li>
+            </ul>
+        </aside>
+
+        <section>
+
+            <section>
+                <h2>Layout Element</h2>
+
+                <p><b>header: </b>Defines a header for a document or section.</p>
+                <p><b>nav: </b>Defines a set of navigation links</p>
+                <p><b>section: </b>Defines a section in document.</p>
+                <p><b>article: </b>Defines an independent, self-contained content.</p>
+                <p><b>aside: </b>Defines content aside from the content (like a sidebar)</p>
+                <p><b>footer: </b>Defines a footer for a document or section.</p>
+                <p><b>details: </b>Defines additional details that the user can open and close on demand.</p>
+                <p><b>summary: </b>Defines a heading for the details element.</p>
+            </section>
+
+            <article>
+                <h2>HTML Layout Technique</h2>
+
+                <ul>
+                    <li>framework</li>
+                    <li>float property</li>
+                    <li>flexbox</li>
+                    <li>grid</li>
+                </ul>
+
+                <h3>CSS Framework</h3>
+                <p>We have mulitple css frameword to create fast layout like Bootstrap, we.css, react etc.</p>
+
+                <h3>CSS Float Layout</h3>
+                <p>
+                    It is common to do entire web layouts using the css float property. Float is easy to learn, we just
+                    need
+                    to remember hot the float and clear properties work.
+                    Disadvantage: Floating elements are tied to the document flow, which may harm the flexibility.
+                </p>
+
+                <h3>CSS Flexbox Layout</h3>
+                <p>
+                    Use of flexbox ensures that elements behae predictably when the page layout must accommodate
+                    different
+                    screen sizes and different display devices.
+                </p>
+
+                <h3>CSS Grid Layout</h3>
+                <p>
+                    The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it
+                    easier to
+                    design web pages without having to use floats and positioning.
+                </p>
+            </article>
+        </section>
+    </section>
+
+
+    <footer>
+        <h2>I am footer</h2>
+    </footer>
+
+</body>
+
+
+
+</html>
