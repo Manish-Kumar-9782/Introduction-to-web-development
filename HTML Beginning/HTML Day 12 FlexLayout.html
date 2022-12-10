@@ -1,156 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <style>
-        /* Now first we will make our #mydiv element flex-container
+      /* Now first we will make our #mydiv element flex-container
         for that we need to change it's display type.*/
 
-        #mydiv {
-            display: flex;
-            border: 1px solid red;
+      #mydiv {
+        display: flex;
+        border: 1px solid red;
+      }
 
-        }
+      .flex-row {
+        display: flex;
+        border: 2px solid blue;
+        padding: 4px;
+        margin: 4px;
+      }
 
-        .flex-row {
-            display: flex;
-            border: 2px solid blue;
-            padding: 4px;
-            margin: 4px;
-        }
+      .flex-col {
+        display: flex;
+        flex-direction: column;
+        padding: 4px;
+        height: 600px;
+        width: 200px;
+        border: 2px solid red;
+        margin: 4px;
+      }
 
-        .flex-col {
-            display: flex;
-            flex-direction: column;
-            padding: 4px;
-            height: 600px;
-            width: 200px;
-            border: 2px solid red;
-            margin: 4px;
-        }
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: dodgerblue;
+        text-align: center;
+        vertical-align: center;
+        padding: auto;
+        color: whitesmoke;
+        margin: 3px;
+      }
 
-        .box {
-            width: 150px;
-            height: 150px;
-            background-color: dodgerblue;
-            text-align: center;
-            vertical-align: center;
-            padding: auto;
-            color: whitesmoke;
-            margin: 3px;
-        }
+      /*justify-content left*/
+      .jc-left {
+        justify-content: left;
+      }
 
-        /*justify-content left*/
-        .jc-left {
-            justify-content: left;
-        }
+      /*justify-content right*/
+      .jc-right {
+        justify-content: right;
+      }
 
-        /*justify-content right*/
-        .jc-right {
-            justify-content: right;
-        }
+      /*justify-content center*/
+      .jc-center {
+        justify-content: center;
+      }
 
-        /*justify-content center*/
-        .jc-center {
-            justify-content: center;
-        }
+      /*justify-content f-start*/
+      .jc-f-start {
+        justify-content: flex-start;
+      }
 
-        /*justify-content f-start*/
-        .jc-f-start {
-            justify-content: flex-start;
-        }
-
-        /*justify-content f-end*/
-        .jc-f-end {
-            justify-content: flex-end;
-        }
+      /*justify-content f-end*/
+      .jc-f-end {
+        justify-content: flex-end;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- first of all we will make a flex- container by using the div element. -->
 
     <div id="mydiv">
+      <!-- here h1 is become the flex-item of #mydiv flex-container -->
+      <h1>Flex-container</h1>
 
-        <!-- here h1 is become the flex-item of #mydiv flex-container -->
-        <h1>Flex-container</h1>
-
-        <h1>Flex-item 1</h1>
-        <h1>Flex-item 2</h1>
-
+      <h1>Flex-item 1</h1>
+      <h1>Flex-item 2</h1>
     </div>
 
     <h3>Flex-container row direction with box.</h3>
 
     <div class="flex-row">
-        <!-- flex-items. -->
-        <div class="box">
-            <h1>1</h1>
-        </div>
-        <div class="box">
-            <h1>2</h1>
-        </div>
-        <div class="box">
-            <h1>3</h1>
-        </div>
-        <div class="box">
-            <h1>4</h1>
-        </div>
+      <!-- flex-items. -->
+      <div class="box">
+        <h1>1</h1>
+      </div>
+      <div class="box">
+        <h1>2</h1>
+      </div>
+      <div class="box">
+        <h1>3</h1>
+      </div>
+      <div class="box">
+        <h1>4</h1>
+      </div>
     </div>
 
     <h3>Flex-container with row direction justify-content: left;</h3>
     <div class="flex-row jc-left">
-        <!-- flex-items. -->
-        <div class="box">
-            <h1>1</h1>
-        </div>
+      <!-- flex-items. -->
+      <div class="box">
+        <h1>1</h1>
+      </div>
     </div>
 
     <h3>Flex-container with row direction justify-content: right;</h3>
     <div class="flex-row jc-right">
-        <!-- flex-items. -->
-        <div class="box">
-            <h1>1</h1>
-        </div>
+      <!-- flex-items. -->
+      <div class="box">
+        <h1>1</h1>
+      </div>
     </div>
 
     <h3>Flex-container with row direction justify-content: center;</h3>
     <div class="flex-row jc-center">
-        <!-- flex-items. -->
-        <div class="box">
-            <h1>1</h1>
-        </div>
+      <!-- flex-items. -->
+      <div class="box">
+        <h1>1</h1>
+      </div>
     </div>
 
-
-    <h3>Flex-row container with three child item which are also flex-container in column direction.</h3>
+    <h3>
+      Flex-row container with three child item which are also flex-container in
+      column direction.
+    </h3>
     <div class="flex-row">
-
-        <div class="flex-col jc-f-start">
-            <div class="box">
-                <h1>1</h1>
-            </div>
+      <div class="flex-col jc-f-start">
+        <div class="box">
+          <h1>1</h1>
         </div>
+      </div>
 
-        <div class="flex-col jc-center">
-            <div class="box">
-                <h1>1</h1>
-            </div>
+      <div class="flex-col jc-center">
+        <div class="box">
+          <h1>1</h1>
         </div>
+      </div>
 
-        <div class="flex-col jc-f-end">
-            <div class="box">
-                <h1>1</h1>
-            </div>
+      <div class="flex-col jc-f-end">
+        <div class="box">
+          <h1>1</h1>
         </div>
-
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
