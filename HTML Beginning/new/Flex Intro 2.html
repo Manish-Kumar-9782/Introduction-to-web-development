@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Layout Intro</title>
+
+    <style>
+        /* 
+            flex-row will be applied on the flex-container
+        */
+
+        .flex-row {
+            display: flex;
+            border: 3px solid red;
+            margin: 15px;
+        }
+
+        /* flex-item will be applied on the items which are placed inside the flex-container.
+        these items should be immediately children to get the effect of flex-row property.
+      */
+
+        .flex-item {
+            width: 150px;
+            height: 150px;
+            background-color: dodgerblue;
+            text-align: center;
+            color: whitesmoke;
+            margin: 4px;
+        }
+
+        /* Justify content properties classes */
+
+        /* jc-left*/
+        .jc-left {
+            justify-content: left;
+        }
+
+        /* jc-right*/
+        .jc-right {
+            justify-content: right;
+        }
+
+        /* jc-center*/
+        .jc-center {
+            justify-content: center;
+        }
+
+        /* jc-flex-start*/
+        .jc-flex-start {
+            justify-content: flex-start;
+        }
+
+        /* jc-flex-end*/
+        .jc-flex-end {
+            justify-content: flex-end;
+        }
+
+        /* Now we will make three more classes for space-between, space-around, space-evenly  */
+
+        .jc-between {
+            justify-content: space-between;
+        }
+
+        .jc-around {
+            justify-content: space-around;
+        }
+
+        .jc-evenly {
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <h1 style="text-align: center; margin-bottom: 50px;">justify-content properties</h1>
+
+    <!-- =============================================================================================== -->
+    <!-- =============================================================================================== -->
+    <div style="background-color: lightblue;">
+        <h2>justify-content: space-between</h2>
+        <!-- flex-container -->
+        <div class="flex-row jc-between">
+            <!-- flex-item 1 -->
+            <div class="flex-item">
+                <h1>1</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>2</h1>
+            </div>
+        </div>
+
+        <!-- flex-container -->
+        <div class="flex-row jc-between">
+            <!-- flex-item 1 -->
+            <div class="flex-item">
+                <h1>1</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>2</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>3</h1>
+            </div>
+        </div>
+
+        <!-- flex-container -->
+        <div class="flex-row jc-between">
+            <!-- flex-item 1 -->
+            <div class="flex-item">
+                <h1>1</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>2</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>3</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>4</h1>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- =============================================================================================== -->
+    <!-- =============================================================================================== -->
+
+    <div style="background-color: lightcoral;">
+        <h2>justify-content: space-around</h2>
+        <!-- flex-container -->
+        <div class="flex-row jc-around">
+            <!-- flex-item 1 -->
+            <div class="flex-item">
+                <h1>1</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>2</h1>
+            </div>
+        </div>
+
+        <!-- flex-container -->
+        <div class="flex-row jc-around">
+            <!-- flex-item 1 -->
+            <div class="flex-item">
+                <h1>1</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>2</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>3</h1>
+            </div>
+        </div>
+
+        <!-- flex-container -->
+        <div class="flex-row jc-around">
+            <!-- flex-item 1 -->
+            <div class="flex-item">
+                <h1>1</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>2</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>3</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>4</h1>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- =============================================================================================== -->
+    <!-- =============================================================================================== -->
+
+    <div style="background-color: lightseagreen;">
+        <h2>justify-content: space-around</h2>
+        <!-- flex-container -->
+        <div class="flex-row jc-evenly">
+            <!-- flex-item 1 -->
+            <div class="flex-item">
+                <h1>1</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>2</h1>
+            </div>
+        </div>
+
+        <!-- flex-container -->
+        <div class="flex-row jc-evenly">
+            <!-- flex-item 1 -->
+            <div class="flex-item">
+                <h1>1</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>2</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>3</h1>
+            </div>
+        </div>
+
+        <!-- flex-container -->
+        <div class="flex-row jc-evenly">
+            <!-- flex-item 1 -->
+            <div class="flex-item">
+                <h1>1</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>2</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>3</h1>
+            </div>
+
+            <!-- flex-item 2 -->
+            <div class="flex-item">
+                <h1>4</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =============================================================================================== -->
+    <!-- =============================================================================================== -->
+</body>
+
+</html>
