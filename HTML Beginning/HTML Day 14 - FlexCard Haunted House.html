@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haunted House</title>
+
+    <style>
+        .flex-row {
+            display: flex;
+        }
+
+        .jc-between {
+            justify-content: space-between;
+        }
+
+        .jc-center {
+            justify-content: center;
+        }
+
+        .al-center {
+            align-items: center;
+        }
+
+        .card {
+            width: 550px;
+            height: fit-content;
+            background-image: url("hounted\ house.jpg");
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .width-100 {
+            width: 100%;
+        }
+
+        .text-light {
+            color: rgba(245, 245, 245, 0.692);
+        }
+
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .px-3 {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .py-1 {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .py-4 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid;
+        }
+
+        .border-top {
+            border-top: 1px solid;
+        }
+
+        .border-light {
+            border-color: rgba(245, 245, 245, 0.3);
+        }
+
+        .circle-48 {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+
+        .fs-small {
+            font-size: medium;
+        }
+
+        .fs-medium {
+            font-size: large;
+        }
+
+        .fs-medium-x {
+            font-size: x-large;
+        }
+
+        .fs-large {
+            font-size: xx-large;
+        }
+
+        div>p {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            margin: 3px 0px;
+        }
+    </style>
+
+</head>
+
+<body class="flex-row jc-center al-center py-4">
+
+    <div class="flex-row">
+
+        <div class="card">
+            <div class="card-img">
+                <img src="hounted house.jpg" class="width-100" alt="Bhooto ki Ghati">
+            </div>
+
+            <!-- card general details -->
+            <div class="card-gn-details text-light px-3 py-4 border-light">
+
+                <span class="fs-medium"><b>DETACHED HOUSE - 25Y OLD</b></span><br>
+                <span class="fs-large">Amount: 15Cr. Rupees Only</span><br>
+                <span class="fs-small">Bhoot bangla, town 420, street 007</span>
+
+
+            </div>
+
+            <!-- card-bhk-details -->
+            <div class="card-bhk-details px-3 py-4 text-light border-bottom border-top border-light fs-medium-x">
+
+                <div class="flex-row jc-between">
+                    <p>15 Bedroom</p>
+                    <p>5 Bathroom</p>
+                </div>
+
+                <div class="flex-row jc-between">
+                    <p>1 Large Hall</p>
+                    <p>2 Swimming Pool</p>
+                </div>
+
+                <div class="flex-row jc-between">
+                    <p>1 Longe</p>
+                    <p>2 Beach Front</p>
+                </div>
+
+            </div>
+
+            <div class="card-retailor broder-top  border-light text-light px-3 py-4 fs-medium-x">
+                <span><b>Retailer</b></span>
+
+                <div class="flex-row  al-center">
+                    <img src="witcher-silver.jpg" class="circle-48" alt="Gerlat of Rivia">
+                    <div class="px-3">
+                        <i>Geralt of Revia</i><br>
+                        <i>+91 9856745123</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
