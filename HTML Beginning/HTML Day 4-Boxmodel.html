@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html> 
+<html>
 
-	<head> 
-	
-		<title>BoxModel</title>
-		
-		<!-- 
+<head>
+
+	<title>BoxModel</title>
+
+	<!-- 
 		
 		Now we will use the internal styling by using the <style> element.
 		
@@ -36,18 +36,17 @@
 					element associated with that TagName if any other relation is not defined.
 		
 		-->
-		
-		<style> 
-		
-			h2{
-				/*To apply the border we will use the border short-hand properties.
+
+	<style>
+		h2 {
+			/*To apply the border we will use the border short-hand properties.
 				
 					border: border-width border-type border-color;
 				*/
-				
-				border: 50px solid dodgerblue;
-				
-				/*
+
+			border: 50px solid dodgerblue;
+
+			/*
 					To apply the padding we can use the padding short-hand property.
 					
 					we can apply padding in three format.
@@ -56,11 +55,11 @@
 					padding: top-bottom left-right;
 					padding: top right bottom left;
 				*/
-				
-				padding: 50px;
-				
-				
-				/*
+
+			padding: 50px;
+
+
+			/*
 					To apply the margin we can use the margin short-hand property.
 					
 					we can apply margin in three format.
@@ -69,70 +68,67 @@
 					margin: top-bottom left-right;
 					margin: top right bottom left;
 				*/
-				
-				margin: 50px;
-				
-				
-				/* Now we will see two additional properties background, color*/
-				
-				background-color: orange;
-				
-				/*To apply the text color we simply use color propety.*/
-				
-				color: purple;
-			}
-			
-			
-			.sm-box{
-			
-				width: 100px;
-				height: 200px;
-				margin: 20px;
-				padding: 10px;
-				
-			}
-			
-			
-			
-		</style>
-		
-	</head>
-	
-	<body> 
-	
-	
-	
-		<h2>Box Model 1</h2>
-		<h2>Box Model 2</h2>
-		<h2>Box Model 3</h2>
-		
-		<!--
+
+			margin: 50px;
+
+
+			/* Now we will see two additional properties background, color*/
+
+			background-color: orange;
+
+			/*To apply the text color we simply use color property.*/
+
+			color: purple;
+		}
+
+
+		.sm-box {
+
+			width: 100px;
+			height: 200px;
+			margin: 20px;
+			padding: 10px;
+
+		}
+	</style>
+
+</head>
+
+<body>
+
+
+
+	<h2>Box Model 1</h2>
+	<h2>Box Model 2</h2>
+	<h2>Box Model 3</h2>
+
+	<!--
 		
 			BoxModel: it is the model which applied on all the flow element, either it is a block element
-				or a inline elment it is contains the three basic properties or any flow element.
+				or a inline element it is contains the three basic properties or any flow element.
 				
 			Basic Properties: content, padding, border, margin.
 			
-			content: it is the inner most part of the elment which can be a text or other html elment.
+			content: it is the inner most part of the element which can be a text or other html element.
 			
 			padding: it is the space in b/w the content and border, it does not contain any color, background color 
-				will be applid on the padding space.
+				will be applied on the padding space.
 				
-			border: it is the border of the element or we can say the boundry limit of any border.
+			border: it is the border of the element or we can say the boundary limit of any border.
 			
 			margin: it is the space in b/w the border and other element (outer element), it is the outer space 
-				from the element. it is generally applid to maintain the space b/w the elements.
+				from the element. it is generally applied to maintain the space b/w the elements.
 	
 			
 			Styling syntax defined in the <style> element.
 			
 			
-			Inline Styleing: we apply the styles on individual element by using the 'style' attribute.
+			Inline Styling: we apply the styles on individual element by using the 'style' attribute.
 			
 		-->
-		
-		<h2 id="MyElement" class="">Ye Mera h2</h2>
-	
-	</body>
+
+	<h2 id="MyElement" class="" style="">Ye Mera h2</h2>
+
+</body>
 
 </html>

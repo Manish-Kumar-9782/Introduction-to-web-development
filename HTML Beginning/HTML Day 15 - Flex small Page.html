@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Small Page</title>
+
+    <style>
+        /*  header bg color: #3474e6
+            content bg color: rgb(46, 71, 214) 
+        */
+
+        /* Importing a google font to make it look better. */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        * {
+            font-family: poppins, "sans-serif";
+        }
+
+        nav {
+            background-color: #3474e6;
+            padding: 3px 10px;
+            color: whitesmoke;
+
+        }
+
+        #title {
+            font-size: 4rem;
+        }
+
+        .mid-container p {
+            font-size: 1.4rem;
+        }
+
+        .mid-container {
+            background-color: rgb(46, 71, 214);
+            color: whitesmoke;
+            padding: 5px 10px;
+        }
+
+        .flex-row {
+            display: flex;
+        }
+
+        ul.flex-row {
+            list-style-type: none;
+            min-width: 25%;
+            padding: 0px;
+
+        }
+
+        ul.flex-row li {
+            margin: 0px 3px;
+        }
+
+        .jc-between {
+            justify-content: space-between;
+        }
+
+        .jc-around {
+            justify-content: space-around;
+        }
+
+        .al-center {
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="flex-row jc-between al-center">
+        <h1>DHOOM 2</h1>
+
+        <ul class="flex-row jc-around">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <div class="flex-row mid-container">
+        <div id="left-part">
+
+            <h2 id="title">DHOOM 2: Untold Money Heist</h2>
+
+            <p>Dhoom 2 (trans. Blast 2) is a 2006 Indian Hindi-language action thriller film directed by Sanjay Gadhvi
+                and written by Vijay Krishna Acharya, based on a story by producer Aditya Chopra, who backed the film at
+                an estimated budget of ₹350 million under the banner Yash Raj Films. The film stars Hrithik Roshan,
+                Abhishek Bachchan, Aishwarya Rai, Bipasha Basu and Uday Chopra. Dhoom 2 was shot primarily in India,
+                Durban and Rio de Janeiro, becoming the first major Hindi film to be shot in Brazil. It is a sequel to
+                the 2004 film Dhoom and is the second installment in the Dhoom series. Abhishek Bachchan and Uday Chopra
+                reprise their roles as buddy cops Jai Dixit and Ali Khan, respectively. Yash Raj Films also partenered
+                with Pepe Jeans and Coca-Cola for the film's promotional tie-ups.
+
+            </p>
+        </div>
+
+        <div><img src="grid.svg" alt="grid img"></div>
+    </div>
+
+</body>
+
+</html>
