@@ -1,0 +1,105 @@
+<!doctype html> 
+
+
+<html> 
+	
+	<head> 
+		<title>Introduction to styling.</title>
+	</head>
+	
+	<!-- 
+		styling: inline, internal, external.
+		
+		inline styling: we use 'style' attribute inside the opening tag of element.
+			and defines the required css styles.
+			
+			css style rule: "styleName: styleValue;"
+
+		internal styling: we use <style> element to define the internal style.
+			in this first we need to select an element.
+			
+			element-selector{
+				// styles.
+			}
+		
+		external styling: we use .css external file and link it with our html document by using the 
+			<link> element inside the <head> element.
+			
+		
+		Now first we will work on the inline styling by using the inline styling. 'style' attribute.
+		
+	-->
+	
+	<body> 
+	
+		<h1>Div & P Element</h1>
+		
+		<p>it is a <b>container</b> like element which is generally used to contain mulitple 
+		different kind of element together, it is used to make a group of elment.
+		
+		all the element which is contianed by div element are called children of 
+		div or div's items.</p>
+	
+	
+		<div> 
+			
+			<h2>Inside div element</h2>
+			<p>div element is generally used to contain multiple elments and make a group of elements,
+			Now this element can be placed any where in a block container. a div element can also take 
+			multiple div element and can be nested at any level.</p>
+		
+		</div>
+		
+		
+		<h3>Unordered List</h3>
+		<!-- applying the inline style by using 'style'
+
+			border: border-width border-type border-color;
+			
+			ul -> border with 10px solid and red color.
+			
+			Note: if we change the padding of ul and ol element then our dots or number will be 
+			displaced, and if padding become zero then dots or numbers will be out of border.
+			since they are not part of list item by default.
+			
+			if we want to place dots or numbers inside the list and make part of list item,
+			then we need to use list-style-postition: inside; (default outside);
+		-->
+		<ul style="border: 10px solid red; 
+		padding: 15px;
+		list-style-position: inside;
+		width: 200px;">
+		
+			<li>This is item 1</li>
+			<li>This is item 2</li>
+			<li>This is item 3</li>
+			<li>This is item 4 200px width specified for this ul container</li>
+			<li>This is item 5</li>
+			<li>This is item 6</li>
+		
+		</ul>
+		
+		<!-- ol -> border with 20px solid with blue color;
+	
+			To remove the dots or number we use the property list-style-type:none;
+			
+			property -> width: to set the width of an element. (not inline);
+			property -> height: to set the height of an element.
+		-->
+		<h3>Ordered List</h3>
+		<ol style="border: 20px solid blue; padding: 10px;
+			list-style-type: none;
+			width: fit-content"> 
+		
+			<li>This is item 1</li>
+			<li>This is item 2</li>
+			<li>This is item 3</li>
+			<li>This is item 4 Fit content property is used.</li>
+			<li>This is item 5</li>
+			<li>This is item 6</li>
+		</ol>
+	
+	
+	</body>
+
+</html>
