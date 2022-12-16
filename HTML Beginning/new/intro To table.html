@@ -1,0 +1,121 @@
+<!doctype html> 
+
+<html> 
+
+	<head> 
+		
+		<title>Introduction To Table</title>
+		
+		
+		<!-- In this we will select the table and its child element
+			by using the TagName
+			
+			To define css style inside head (internal styling) we need to make a <style> element.
+			-->
+			
+			<style> 
+			
+				table{
+					border: 1px solid;
+				}
+					
+				th{
+					border: 1px solid;
+				}
+					
+				td{
+					border: 1px solid;
+				}
+						
+			</style>
+			
+	
+	</head>
+	
+	<body>
+	
+		<!-- <table> : container for table
+
+			<table> element contains two more other elements <thead> , <tbody>
+			
+			<thead> : in this we put table column names, by using the <th> element which is cell element.
+			<tbody> : in this we put table data by using the <td> elements which is cell element.
+			
+			cell element: <th> <td>
+			
+			since each table contains row to hold the table data which is made by <tr> element.
+			(table row element)
+			
+			<table>:
+				
+				<thead> : 
+					<tr> : <th>
+				
+				<tbody> :
+					<tr> : <td>
+		-->
+		
+		<!-- first we will make a table container. -->
+		<table> 
+		
+		<!-- This table container will contains two more container <thead> and <tbody> -->
+		
+		<!-- Now we will make table head <thead> element. -->
+			<thead> 
+			
+				<!-- In this table head firt we will make row in which we will put
+					all the column heading element. 
+					
+					columns: Name, Age, Height, BloodGroup
+					-->
+			
+				<tr> 
+				<!-- columns: Name, Age, Height, BloodGroup
+					Now we will make four column by using four <th> element.-->
+					
+					<th>Name</th>
+					<th>Age</th>
+					<th>Height</th>
+					<th>BloodGroup</th>
+				</tr>
+			</thead>
+			
+			
+			<!-- Now we will make a table body <tbody> element. -->
+			<tbody> 
+			
+				<!-- Now we will make some table enteries by using the table 
+				row and table data element. -->
+				
+				<tr> 
+					<td>Sushma</td>
+					<td>21</td>
+					<td>5.6</td>
+					<td>O+</td>
+				
+				</tr>
+				
+				<tr> 
+					<td>Manish</td>
+					<td>27</td>
+					<td>5.6</td>
+					<td>O-</td>
+				
+				</tr>
+				
+				
+				<tr> 
+					<td>Kushal</td>
+					<td>17</td>
+					<td>5.5</td>
+					<td>A+</td>
+				
+				</tr>
+			
+			</tbody>
+
+		
+		</table>
+	</body>
+
+</html>
