@@ -1,0 +1,18 @@
+Database:  LibManagement
+
+	Users: (table name)
+	
+		id/pk, first_name, middle_name, last_name, gmail, Reg_Date, Modify_date, password
+		
+		is_super, is_active, last_active, permission_level, permissions, Type
+		
+		permission code: r,r+,w,w+,c,d, 
+		
+		
+	Books: id/pk, title, author, subject, pages, price, red_date, modify_date, last_issued_to (forigen key (id/pk)), last_issue_date.
+		Copies, department.
+	
+	
+	Entries: 
+			
+			id/pk, issue_dateTime, user (id/pk), status, due, fine, valid_up_to

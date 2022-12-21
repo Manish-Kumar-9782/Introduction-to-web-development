@@ -1,0 +1,8 @@
+Database:  LibManagement
+
+	Users: (table name)
+	
+		id/pk, first_name, middle_name, last_name, gmail, Reg_Date, Modify_date, password
+		
+		is_super, is_active, last_active, permission_level, permissions, extra_permission
+		
