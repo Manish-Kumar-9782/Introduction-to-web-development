@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Web Page 1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        body {
+            background-color: #282A3A;
+            color: whitesmoke;
+            font-family: poppins, sans-serif;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .flex-row {
+            display: flex;
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fs-medium {
+            font-size: large;
+        }
+
+        .fs-large {
+            font-size: x-large;
+        }
+
+        .fs-xlarge {
+            font-size: xx-large;
+        }
+
+        .jc-between {
+            justify-content: space-between;
+        }
+
+        .jc-center {
+            justify-content: center;
+        }
+
+        .jc-around {
+            justify-content: space-around;
+        }
+
+        .jc-around-20 {
+            width: 20vw;
+            min-width: 20vw;
+            max-width: 30vw;
+            justify-content: space-around;
+        }
+
+        .al-center {
+            align-items: center;
+        }
+
+        /* margin in x direction with 4*5 = 20px  */
+        .mx-4 {
+            --margin-factor: 4;
+            margin-left: calc(var(--margin-factor)*5px);
+            margin-right: calc(var(--margin-factor)*5px);
+        }
+
+        .mx-2 {
+            --margin-factor: 2;
+            margin-left: calc(var(--margin-factor)*5px);
+            margin-right: calc(var(--margin-factor)*5px);
+        }
+
+        .mx-1 {
+            --margin-factor: 1;
+            margin-left: calc(var(--margin-factor)*5px);
+            margin-right: calc(var(--margin-factor)*5px);
+        }
+
+        #p-tabs {
+            flex: 1;
+            border: 1px solid;
+            min-height: 100px;
+        }
+
+        #p-cards {
+            flex: 9;
+            border: 1px solid;
+            min-height: 100px;
+        }
+
+        #p-comments {
+            flex: 4;
+            border: 1px solid;
+            min-height: 100px;
+        }
+
+
+
+        /* Now we will make the project card class to set some project card properties:
+
+            width: it will have limited size of width;
+            height: it will also have height so it will not expand.
+            border-radius: we will give some border-radius to make rounded corner of project-card container's 
+        */
+
+        .project-card {
+            width: 250px;
+            height: fit-content;
+            background-color: rgba(173, 216, 230, 0.566);
+            border-color: rgb(104, 96, 96);
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        /* Now we will make a progress bar with progress class 
+            For this we will use the ::after pseudo element 
+        */
+
+
+        div.progress::after {
+            content: "";
+            display: block;
+            width: var(--progress);
+            height: 10px;
+            background-color: dodgerblue;
+        }
+
+        .roundx-40 {
+            height: 40px;
+            width: fit-content;
+            padding: 0px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top header part -->
+
+    <header>
+        <!-- Out container for containing left and right section. -->
+        <div class="flex-row jc-between mx-4">
+
+            <!-- left section of header
+                
+                flex-row: to make flex-container.
+                al-center: if flex-container, then align them on cross axis  (y-axis) 
+                jc-around-20: if flex-container, then it will set the container size as 20vw of viewport.
+                    then it will apply the justify-content:space-around; 
+            -->
+            <div class="flex-row al-center jc-around-20">
+                <!-- 1. menu bar, text, search input -->
+                <div><i class="bi bi-list"></i></div>
+                <p>Portfolio</p>
+                <input type="search" name="search" id="search" placeholder="Search">
+            </div>
+
+            <!-- right section of header -->
+            <div class="flex-row al-center jc-around-20">
+                <!-- theme mode icon, + icon, notify icon, v-bar, user logo, user Name -->
+                <div><i class="bi bi-moon"></i></div>
+                <div><i class="bi bi-plus-lg"></i></div>
+                <div><i class="bi bi-bell-fill"></i></div>
+                <div><i class="bi bi-person-circle"></i></div>
+                <div>User name</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- bottom flex container with three different container.
+    it will contain sidebar (p-tabs), cards-block (p-cards), comment section (p-comments) -->
+    <div id="content" class="flex-row">
+
+        <div id="p-tabs" class="mx-4 fs-xlarge flex-col al-center">
+            <div><i class="bi bi-house-door-fill"></i></div>
+            <div><i class="bi bi-pie-chart-fill"></i></div>
+            <div><i class="bi bi-calendar2-fill"></i></div>
+            <div><i class="bi bi-gear-fill"></i></div>
+        </div>
+
+        <div id="p-cards" class="mx-4">
+
+            <div id="p-card-header" class="flex-row jc-between al-center">
+                <p><b>Projects</b></p>
+                <p><b>December,19</b></p>
+            </div>
+
+            <!-- Next section -->
+            <div class="flex-row al-center jc-between">
+                <div class="flex-row jc-around-20">
+                    <p>
+                        <b>45</b><br>
+                        In Progress
+                    </p>
+                    <p>
+                        <b>36</b><br>
+                        Upcoming
+                    </p>
+                    <p>
+                        <b>45</b><br>
+                        Total Project
+                    </p>
+                </div>
+
+                <div>
+                    <button class="fs-large"><i class="bi bi-list-ul"></i></button>
+                    <button class="fs-large"><i class="bi bi-grid-fill"></i></button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="p-comments" class="mx-4">
+
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

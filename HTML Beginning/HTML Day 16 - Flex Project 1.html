@@ -99,6 +99,11 @@
             border: 1px solid;
         }
 
+        /* a container for our main content. */
+        #content {
+            height: 650px;
+        }
+
         #content>div {
             margin: 10px;
         }
@@ -141,6 +146,24 @@
             align-items: center;
             border-radius: 20px;
             background-color: lightcoral;
+        }
+
+        .user-img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+
+        .msg-card {
+            border: 1px solid;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #client-message-block {
+            overflow: auto;
+            height: 550px;
         }
     </style>
 </head>
@@ -189,7 +212,7 @@
             fs-xlarge: it will se the font-size to the xx-large
 
          -->
-        <div id="p-tabs" class="flex-col jc-around fs-xlarge">
+        <div id="p-tabs" class="flex-col jc-around fs-xlarge al-center">
             <div><i class="bi bi-house-door-fill"></i></div>
             <div><i class="bi bi-pie-chart-fill"></i></div>
             <div><i class="bi bi-calendar2-fill"></i></div>
@@ -233,39 +256,41 @@
 
             </div>
 
-            <div class="project-card">
+            <div class="project-card-container mx-2">
+                <div class="project-card">
 
-                <div class="project-card-header flex-row jc-between al-center">
-                    <p>August 25, 2022</p>
-                    <div><i class="bi bi-three-dots-vertical"></i></div>
-                </div>
-
-                <div class="project-card-content text-center ">
-
-                    <p>
-                        <span style="color:red;">Web Development</span><br>
-                        Prototype
-                    </p>
-
-                </div>
-
-                <div class="project-card-progress">
-
-                    <div class="progress" style="--progress: 50%">Progress</div>
-
-                </div>
-
-                <hr>
-
-                <div class="project-card-footer flex-row jc-between mx-1 al-center">
-                    <div class="fs-xlarge flex-row">
-                        <div><i class="bi bi-person-circle mx-1"></i></div>
-                        <div><i class="bi bi-person-circle mx-1"></i></div>
-                        <div><i class="bi bi-plus-circle-fill mx-1"></i></div>
+                    <div class="project-card-header flex-row jc-between al-center">
+                        <p>August 25, 2022</p>
+                        <div><i class="bi bi-three-dots-vertical"></i></div>
                     </div>
-                    <p class="roundx-40">3 Days Left</p>
-                </div>
 
+                    <div class="project-card-content text-center ">
+
+                        <p>
+                            <span style="color:red;">Web Development</span><br>
+                            Prototype
+                        </p>
+
+                    </div>
+
+                    <div class="project-card-progress">
+
+                        <div class="progress" style="--progress: 50%">Progress</div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="project-card-footer flex-row jc-between mx-1 al-center">
+                        <div class="fs-xlarge flex-row">
+                            <div><i class="bi bi-person-circle mx-1"></i></div>
+                            <div><i class="bi bi-person-circle mx-1"></i></div>
+                            <div><i class="bi bi-plus-circle-fill mx-1"></i></div>
+                        </div>
+                        <p class="roundx-40">3 Days Left</p>
+                    </div>
+
+                </div>
             </div>
 
         </div>
@@ -273,6 +298,147 @@
         <!-- it will contain comments of different users. -->
         <div id="p-comments">
             <h3>Client Message</h3>
+
+            <!-- we will make a client-message-block in which all the client message will be displayed
+            
+                -> in this block we will have card-message container for each message.
+                -> each msg-card block will contain three parts.
+                    -> msg-card-header : for header info (user logo, name, date other)
+                    -> msg-card-content: for main message content.
+                    -> msg-card-footer : for message card footer details like, date, time, like, comment etc.
+            -->
+            <div id="client-message-block">
+                <div class="msg-card">
+                    <div class="msg-card-header flex-row jc-between al-center mx-2">
+                        <!-- In this we will have to main child item 
+                            1. user logo with name, 2. start button for favorite/BookMark-->
+
+                        <div class="flex-row al-center">
+                            <img src="witcher-silver.jpg" class="user-img" alt="user-logo">
+                            <p class="mx-2">Geralt Of Rivia</p>
+                        </div>
+                        <div class="fs-large">
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                    <div class="msg-card-content">
+                        <p>Witcher geralt of rivia is monster killer which is a mutant made with a powerful magic
+                            and very brutal training, in that training only 2 or 3 of 100 survives.</p>
+                    </div>
+                    <div class="msg-card-footer flex-row jc-between al-center">
+                        <div>
+                            <i class="bi bi-hand-thumbs-up-fill mx-1"></i>
+                            <i class="bi bi-chat-left mx-1"></i>
+                        </div>
+                        <p>Aug, 25</p>
+                    </div>
+                </div>
+
+                <div class="msg-card">
+                    <div class="msg-card-header flex-row jc-between al-center mx-2">
+                        <!-- In this we will have to main child item 
+                            1. user logo with name, 2. start button for favorite/BookMark-->
+
+                        <div class="flex-row al-center">
+                            <img src="ciri.webp" class="user-img" alt="user-logo">
+                            <p class="mx-2">Cirilla Fiona</p>
+                        </div>
+                        <div class="fs-large">
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                    <div class="msg-card-content">
+                        <p>Hatred and vengeance blinded me ... But I shall stand before them in humility. I shall
+                            remember the expression in their eyes. I hope the memory of those eyes will stop me making a
+                            similar mistake.</p>
+                    </div>
+                    <div class="msg-card-footer flex-row jc-between al-center">
+                        <div>
+                            <i class="bi bi-hand-thumbs-up-fill mx-1"></i>
+                            <i class="bi bi-chat-left mx-1"></i>
+                        </div>
+                        <p>Aug, 25</p>
+                    </div>
+                </div>
+
+                <div class="msg-card">
+                    <div class="msg-card-header flex-row jc-between al-center mx-2">
+                        <!-- In this we will have to main child item 
+                            1. user logo with name, 2. start button for favorite/BookMark-->
+
+                        <div class="flex-row al-center">
+                            <img src="witcher-silver.jpg" class="user-img" alt="user-logo">
+                            <p class="mx-2">Geralt Of Rivia</p>
+                        </div>
+                        <div class="fs-large">
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                    <div class="msg-card-content">
+                        <p>Witcher geralt of rivia is monster killer which is a mutant made with a powerful magic
+                            and very brutal training, in that training only 2 or 3 of 100 survives.</p>
+                    </div>
+                    <div class="msg-card-footer flex-row jc-between al-center">
+                        <div>
+                            <i class="bi bi-hand-thumbs-up-fill mx-1"></i>
+                            <i class="bi bi-chat-left mx-1"></i>
+                        </div>
+                        <p>Aug, 25</p>
+                    </div>
+                </div>
+
+                <div class="msg-card">
+                    <div class="msg-card-header flex-row jc-between al-center mx-2">
+                        <!-- In this we will have to main child item 
+                            1. user logo with name, 2. start button for favorite/BookMark-->
+
+                        <div class="flex-row al-center">
+                            <img src="witcher-silver.jpg" class="user-img" alt="user-logo">
+                            <p class="mx-2">Geralt Of Rivia</p>
+                        </div>
+                        <div class="fs-large">
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                    <div class="msg-card-content">
+                        <p>Witcher geralt of rivia is monster killer which is a mutant made with a powerful magic
+                            and very brutal training, in that training only 2 or 3 of 100 survives.</p>
+                    </div>
+                    <div class="msg-card-footer flex-row jc-between al-center">
+                        <div>
+                            <i class="bi bi-hand-thumbs-up-fill mx-1"></i>
+                            <i class="bi bi-chat-left mx-1"></i>
+                        </div>
+                        <p>Aug, 25</p>
+                    </div>
+                </div>
+
+                <div class="msg-card">
+                    <div class="msg-card-header flex-row jc-between al-center mx-2">
+                        <!-- In this we will have to main child item 
+                            1. user logo with name, 2. start button for favorite/BookMark-->
+
+                        <div class="flex-row al-center">
+                            <img src="witcher-silver.jpg" class="user-img" alt="user-logo">
+                            <p class="mx-2">Geralt Of Rivia</p>
+                        </div>
+                        <div class="fs-large">
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                    <div class="msg-card-content">
+                        <p>Witcher geralt of rivia is monster killer which is a mutant made with a powerful magic
+                            and very brutal training, in that training only 2 or 3 of 100 survives.</p>
+                    </div>
+                    <div class="msg-card-footer flex-row jc-between al-center">
+                        <div>
+                            <i class="bi bi-hand-thumbs-up-fill mx-1"></i>
+                            <i class="bi bi-chat-left mx-1"></i>
+                        </div>
+                        <p>Aug, 25</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
