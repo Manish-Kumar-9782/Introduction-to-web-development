@@ -15,16 +15,38 @@
 			
 			<style> 
 			
-				table{
+				/* table,td,th  selecting table, th and td element at once for 
+				common property block.*/
+				
+				table, td, th{
 					border: 1px solid;
-				}
 					
-				th{
-					border: 1px solid;
 				}
-					
+				
+				#table1{
+					margin: 10px;
+					padding: 10px;
+					border-color: red; 
+					background-color: lightblue;
+					font-family: sans-serif;
+					border-spacing: 5px 10px;
+				}
+				
 				td{
-					border: 1px solid;
+					text-align: center;
+					padding: 10px;
+				}
+				
+				th{
+					background-color: dodgerblue;
+					border-color: white;
+					color: white;
+				}
+						
+				/* Now we will make our table2 with border-collapse. */
+				
+				#table2{
+					border-collapse: collapse;
 				}
 						
 			</style>
@@ -56,7 +78,7 @@
 		-->
 		
 		<!-- first we will make a table container. -->
-		<table> 
+		<table id="table1"> 
 		
 		<!-- This table container will contains two more container <thead> and <tbody> -->
 		
@@ -116,6 +138,84 @@
 
 		
 		</table>
+	
+		
+			<table id="table2"> 
+		
+		<!-- This table container will contains two more container <thead> and <tbody> -->
+		
+		<!-- Now we will make table head <thead> element. -->
+			<thead> 
+			
+				<!-- In this table head firt we will make row in which we will put
+					all the column heading element. 
+					
+					columns: Name, Age, Height, BloodGroup
+					-->
+			
+				<tr> 
+				<!-- columns: Name, Age, Height, BloodGroup
+					Now we will make four column by using four <th> element.-->
+					
+					<th>Name</th>
+					<th>Age</th>
+					<th>Height</th>
+					<th>BloodGroup</th>
+				</tr>
+			</thead>
+			
+			
+			<!-- Now we will make a table body <tbody> element. -->
+			<tbody> 
+			
+				<!-- Now we will make some table enteries by using the table 
+				row and table data element. -->
+				
+				<tr> 
+					<td>Sushma</td>
+					<td>21</td>
+					<td>5.6</td>
+					<td>O+</td>
+				
+				</tr>
+				
+				<tr> 
+					<td>Manish</td>
+					<td>27</td>
+					<td>5.6</td>
+					<td>O-</td>
+				
+				</tr>
+				
+				
+				<tr> 
+					<td>Kushal</td>
+					<td>17</td>
+					<td>5.5</td>
+					<td>A+</td>
+				
+				</tr>
+			
+			</tbody>
+
+		
+		</table>
+	
+	
 	</body>
+
+	<!-- 
+		Other Some Table Related CSS Properties.
+		
+		1. border-spacing.
+		2. text-align (td, th)
+		3. vertical-align(td, th)
+		4. padding (td, th)
+		5. border-collapse
+		6. border: (table, th, td)
+		7. background-color: (table, td, th)
+		8. font-family, font-size, font-weight
+
+	-->
 
 </html>
