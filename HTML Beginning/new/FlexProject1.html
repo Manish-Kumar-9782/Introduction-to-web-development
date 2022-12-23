@@ -53,10 +53,43 @@
             justify-content: space-around;
         }
 
+        .jc-around-10 {
+            --width: 10%;
+            width: var(--width);
+            min-width: var(--width);
+            max-width: calc(var(--width) + 10%);
+            justify-content: space-around;
+        }
+
         .jc-around-20 {
-            width: 20%;
-            min-width: 20%;
-            max-width: 30%;
+            --width: 20%;
+            width: var(--width);
+            min-width: var(--width);
+            max-width: calc(var(--width) + 10%);
+            justify-content: space-around;
+        }
+
+        .jc-around-30 {
+            --width: 30%;
+            width: var(--width);
+            min-width: var(--width);
+            max-width: calc(var(--width) + 10%);
+            justify-content: space-around;
+        }
+
+        .jc-around-40 {
+            --width: 40%;
+            width: var(--width);
+            min-width: var(--width);
+            max-width: calc(var(--width) + 10%);
+            justify-content: space-around;
+        }
+
+        .jc-around-50 {
+            --width: 50%;
+            width: var(--width);
+            min-width: var(--width);
+            max-width: calc(var(--width) + 10%);
             justify-content: space-around;
         }
 
@@ -169,12 +202,14 @@
 <body>
 
     <header class="flex-row al-center jc-between fs-large">
+        <!-- header left part -->
         <div class="flex-row al-center jc-around-20">
             <div><i class="bi bi-list"></i></div>
             <p>Portfolio</p>
-            <input type="search">
+            <input type="search" placeholder="Search">
         </div>
 
+        <!-- header right part -->
         <div class="flex-row jc-around-20">
             <div><i class="bi bi-moon-fill"></i></div>
             <div><i class="bi bi-plus-circle"></i></div>
@@ -188,10 +223,52 @@
     <!-- content -->
     <div id="content" class="flex-row">
         <!-- p-tabs -->
-        <div id="p-tabs"></div>
+        <div id="p-tabs" class="fs-xlarge flex-col al-center jc-around">
+            <div><i class="bi bi-house-door-fill"></i></div>
+            <div><i class="bi bi-pie-chart-fill"></i></div>
+            <div><i class="bi bi-calendar-fill"></i></div>
+            <div><i class="bi bi-gear-fill"></i></div>
+        </div>
 
         <!-- p-cards -->
-        <div id="p-cards"></div>
+        <div id="p-cards">
+
+            <!-- header section 1 -->
+            <div class="flex-row jc-between fs-large">
+                <!-- header section left part -->
+                <p><b>Projects</b></p>
+                <!-- header section right part -->
+                <p>August, 25</p>
+            </div>
+
+            <!-- summary section 2 -->
+            <div class="flex-row jc-between">
+                <!-- summary section left part -->
+                <div class="flex-row jc-around-40">
+                    <p>
+                        <b>45</b><br>
+                        In Progress
+                    </p>
+
+                    <p>
+                        <b>65</b><br>
+                        Upcoming
+                    </p>
+
+                    <p>
+                        <b>78</b><br>
+                        Total Project
+                    </p>
+
+                </div>
+
+                <!-- summary section right part -->
+                <div class="flex-row fs-xlarge jc-around-10">
+                    <div><i class="bi bi-list-ul"></i></div>
+                    <div><i class="bi bi-grid-fill"></i></div>
+                </div>
+            </div>
+        </div>
 
         <!-- p-comments -->
         <div id="p-comments"></div>

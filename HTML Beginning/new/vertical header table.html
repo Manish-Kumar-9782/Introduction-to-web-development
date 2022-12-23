@@ -1,0 +1,76 @@
+<!doctype html>
+
+
+<html>
+
+	<head>
+		<title>Vertical Table</title>
+		
+		<style>
+
+			table, td, th{
+				border: 1px solid;
+			}
+			table{
+				width: 700px;
+				height: 500px;
+			}
+			
+			th{
+				vertical-align: top;
+			}
+		
+		</style>
+		
+	</head>
+
+	<body>
+		<!-- Since in this table we are making vertical headers so 
+				in this number of rows will be decided by number of heading.
+				
+				and first element of each row will be <th> element so in this we don't 
+				need <thead> element .-->
+				
+		<h1> Vertical Headers Table</h1>
+		<table>
+			<tbody>
+				<tr> 
+					<th>Title</th>
+					<td>HTML Tutorial</td>
+					<td>CSS Basic</td>
+					<td>Java Script</td>
+				</tr>
+
+				<tr> 
+					<th>Author</th>
+					<td>Gotam</td>
+					<td>Suraj</td>
+					<td>Narendra</td>
+				</tr>
+				
+				<tr> 
+					<th>Subject</th>
+					<td>HTML</td>
+					<td>CSS</td>
+					<td>JavaScript</td>
+				</tr>
+				
+				<tr> 
+					<th>Pages</th>
+					<td>120</td>
+					<td>180</td>
+					<td>150</td>
+				</tr>
+				
+				<tr> 
+					<th>Price</th>
+					<td>35</td>
+					<td>56</td>
+					<td>78</td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</body>
+
+</html>
