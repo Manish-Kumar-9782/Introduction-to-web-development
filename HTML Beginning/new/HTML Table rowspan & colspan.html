@@ -1,0 +1,94 @@
+<!doctype html>
+
+<!-- In this section we will see rowspan and colspan attribute of <td> and <th> element. 
+	
+	rowspan: it extands the cell size accroding to the given number of rows accouting their 
+		respective height.
+		
+	colspan: it extands the cell size according to the given number of cols accounting their
+		respective width.
+
+-->
+
+<html>
+
+	<head>
+		<title>HTML Table RowSpan & ColSpan</title>		
+		
+		<style> 
+			
+			table,th,td{
+				border: 1px solid;
+			}
+		
+			table{
+				border-collapse: collapse;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h1>Table RowSpan and ColSpan </h1>
+		
+		<table> 
+		
+			<thead> 
+			
+				<tr> 
+					<th colspan="2">Name</th>
+					<th rowspan="2">Age</th>
+					<th rowspan="2">Height</th>
+					<th rowspan="2">Blood Group</th>
+				</tr>
+				
+				<tr> 
+					<th>First Name</th>
+					<th>Last Name</th>
+					
+				</tr>
+			
+			</thead>
+			
+			
+			<tbody> 
+				
+				<tr> 
+					<td>Sachin</td>
+					<td>Chaudhary</td>
+					<td>18</td>
+					<td>5.5</td>
+					<td>B+</td>
+				</tr>
+				
+				<tr> 
+					<td>Kurshad</td>
+					<td>Khan</td>
+					<td>19</td>
+					<td>5.7</td>
+					<td>B-</td>
+				</tr>
+				
+				<tr> 
+					<td>Bhanu</td>
+					<td>Saini</td>
+					<td>17</td>
+					<td>5.6</td>
+					<td>B-</td>
+				</tr>
+				
+				<tr> 
+					<td>Manish</td>
+					<td>Kumar</td>
+					<td>27</td>
+					<td>5.6</td>
+					<td>O-</td>
+				</tr>
+			
+			</tbody>
+		
+		</table>
+
+	</body>
+
+</html>

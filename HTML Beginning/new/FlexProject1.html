@@ -20,6 +20,10 @@
             text-align: center;
         }
 
+        .width-100 {
+            width: 100%;
+        }
+
         .flex-row {
             display: flex;
         }
@@ -116,6 +120,24 @@
             margin-right: calc(var(--margin-factor)*5px);
         }
 
+        .px-4 {
+            --padding-factor: 4;
+            padding-left: calc(var(--padding-factor)*5px);
+            padding-right: calc(var(--padding-factor)*5px);
+        }
+
+        .px-2 {
+            --padding-factor: 2;
+            padding-left: calc(var(--padding-factor)*5px);
+            padding-right: calc(var(--padding-factor)*5px);
+        }
+
+        .px-1 {
+            --padding-factor: 1;
+            padding-left: calc(var(--padding-factor)*5px);
+            padding-right: calc(var(--padding-factor)*5px);
+        }
+
         #p-tabs {
             flex: 0.7;
         }
@@ -146,10 +168,14 @@
             border-radius: we will give some border-radius to make rounded corner of project-card container's 
         */
 
+        #p-card-container {
+            padding: 15px;
+        }
+
         .project-card {
             width: 250px;
             height: fit-content;
-            background-color: rgba(173, 216, 230, 0.566);
+            background-color: rgba(185, 173, 230, 0.203);
             border-color: rgb(104, 96, 96);
             border-radius: 15px;
             padding: 10px;
@@ -169,14 +195,24 @@
         }
 
         .roundx-40 {
-            height: 40px;
+            height: 35px;
             width: fit-content;
             padding: 0px 10px;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 20px;
-            background-color: lightcoral;
+            background-color: rgba(240, 128, 128, 0.418);
+        }
+
+        .my-0 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .mx-0 {
+            margin-left: 0px;
+            margin-right: 0px;
         }
 
         .user-img {
@@ -195,6 +231,12 @@
         #client-message-block {
             overflow: auto;
             height: 550px;
+        }
+
+        .opacity-50 {
+            opacity: 50%;
+            border-width: 1px solid blue;
+            background-color: blue;
         }
     </style>
 </head>
@@ -268,11 +310,50 @@
                     <div><i class="bi bi-grid-fill"></i></div>
                 </div>
             </div>
+
+            <!-- ------------------------------------------------------------------ -->
+
+            <div id="p-card-container">
+
+                <!-- project card 1 -->
+                <div class="project-card">
+                    <!-- project card header -->
+                    <div class="flex-row jc-between al-center">
+                        <p>December 24, 2022</p>
+                        <div><i class="bi bi-three-dots-vertical"></i></div>
+                    </div>
+
+                    <!-- project card content part -->
+                    <p class="text-center my-0">
+                        Web Development <br>
+                        Prototype <br>
+                    </p>
+
+                    <!-- project card Progress bar -->
+                    <div>
+                        <label for="card-1">Progress</label><br>
+                        <progress class="width-100" id="card-1" value="30" min="0" max="100"></progress>
+                    </div>
+                    <hr class="opacity-50">
+                    <!-- project card footer -->
+                    <div class="flex-row jc-between al-center">
+                        <div class="flex-row fs-xlarge jc-around-50">
+                            <div><i class="bi bi-person-circle"></i></div>
+                            <div><i class="bi bi-person-circle"></i></div>
+                            <div><i class="bi bi-plus-circle-fill"></i></div>
+                        </div>
+                        <p class="roundx-40 my-0">4 Days Left</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- p-comments -->
-        <div id="p-comments"></div>
+        <div id="p-comments">
+        </div>
     </div>
+
+
 
 </body>
 
