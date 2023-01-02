@@ -1,0 +1,185 @@
+<!doctype html>
+
+<!--
+	
+	Additional Styles:
+	
+		width: <table> , <td> , <th>
+		height: <table> , <td> , <th>
+		padding: <td> , <th> , <table>
+		border-space : 
+			Note: it will be only applicable if 'border-collapse:separate;'
+		text-align
+		border-collapse : to collapse the borders of <table>, <td>, <th> elements.
+		vertical-align.
+		
+		
+	<caption>: Element to make a caption for out table.
+
+  -->
+
+<html> 
+
+	<head> 
+	
+		<title>Rivision of Tables</title>
+		
+		<style> 
+		
+			table{
+				border: 5px solid red;
+			}
+			
+			th{
+				border: 3px solid blue;
+				padding: 20px;
+			}
+			
+			td{
+				border: 3px solid green;
+				color: #2f3f4f;
+				
+				height: 70px;
+			}
+			
+			.caption1{
+				font-size: 1.4rem;
+				color: #2f3f4f;
+				}
+			
+		
+			#table1{
+				border-spacing: 10px;
+				width: 100%;			
+			}
+			
+			#table1 td{
+				vertical-align: top;
+			}
+			
+			
+			#table2{
+				border-collapse: collapse;
+			}
+			
+			
+		</style>
+	</head>
+	
+	<body> 
+		
+		<!-- table 1 -->
+		<table id="table1"> 
+			<caption class="caption1">Student Data</caption>
+		
+			<thead> 
+				<tr>
+					<th>Name</th>
+					<th>Age</th>
+					<th>Height</th>
+					<th>BloodGroup</th>
+				</tr>
+			</thead>
+			
+			
+			<tbody> 
+				
+				<tr> 
+					<td>Kuldeep</td>
+					<td>20</td>
+					<td>5.6</td>
+					<td>B+</td>
+				</tr>
+			
+				<tr> 
+					<td>Lokesh</td>
+					<td>22</td>
+					<td>5.7</td>
+					<td>A+</td>
+				</tr>
+			
+				<tr> 
+					<td>Lokendra</td>
+					<td>20</td>
+					<td>5.8</td>
+					<td>AB+</td>
+				</tr>
+			
+				<tr> 
+					<td>Keshav</td>
+					<td>20</td>
+					<td>5.6</td>
+					<td>B+</td>
+				</tr>
+			
+				<tr> 
+					<td>Pankaj</td>
+					<td>21</td>
+					<td>5.7</td>
+					<td>O-</td>
+				</tr>
+			
+			</tbody>
+		
+		</table>
+		
+		<hr>
+		
+		<!-- table 2 -->
+		<table id="table2"> 
+			<caption class="caption1">Student Data</caption>
+		
+			<thead> 
+				<tr>
+					<th>Name</th>
+					<th>Age</th>
+					<th>Height</th>
+					<th>BloodGroup</th>
+				</tr>
+			</thead>
+			
+			
+			<tbody> 
+				
+				<tr> 
+					<td>Kuldeep</td>
+					<td>20</td>
+					<td>5.6</td>
+					<td>B+</td>
+				</tr>
+			
+				<tr> 
+					<td>Lokesh</td>
+					<td>22</td>
+					<td>5.7</td>
+					<td>A+</td>
+				</tr>
+			
+				<tr> 
+					<td>Lokendra</td>
+					<td>20</td>
+					<td>5.8</td>
+					<td>AB+</td>
+				</tr>
+			
+				<tr> 
+					<td>Keshav</td>
+					<td>20</td>
+					<td>5.6</td>
+					<td>B+</td>
+				</tr>
+			
+				<tr> 
+					<td>Pankaj</td>
+					<td>21</td>
+					<td>5.7</td>
+					<td>O-</td>
+				</tr>
+			
+			</tbody>
+		
+		</table>
+	
+	</body>
+
+</html>
