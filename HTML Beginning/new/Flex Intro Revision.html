@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Intro Revision</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: dodgerblue;
+            color: whitesmoke;
+            text-align: center;
+            padding: 25px;
+            margin: 10px;
+        }
+
+        .flex-container {
+            display: flex;
+            border: 3px solid coral;
+            /* by default justify-content: flex-start||left*/
+            margin: 10px;
+        }
+
+        .jc-left {
+            justify-content: flex-start;
+        }
+
+        .jc-center {
+            justify-content: center;
+        }
+
+        .jc-right {
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- this div will be converted to flex container -->
+    <h1>Flex-container: justify-content: left</h1>
+    <div class="flex-container jc-left">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+        <div class="box">
+            <h1>3</h1>
+        </div>
+    </div>
+
+
+    <h1>Flex-container: justify-content: center</h1>
+    <div class="flex-container jc-center">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+        <div class="box">
+            <h1>3</h1>
+        </div>
+    </div>
+
+
+    <h1>Flex-container: justify-content: right</h1>
+    <div class="flex-container jc-right">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+        <div class="box">
+            <h1>3</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>
