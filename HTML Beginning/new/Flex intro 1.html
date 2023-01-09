@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .flex-container {
+            border: 5px solid red;
+            display: flex;
+            margin: 10px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: dodgerblue;
+            text-align: center;
+            padding: 25px;
+            margin: 10px;
+        }
+
+        /* Now we will make different classes for different
+            justify-content values.
+        */
+
+        .flex-column {
+            flex-direction: column;
+            height: 400px;
+        }
+
+        .jc-left {
+            justify-content: flex-start;
+        }
+
+        .jc-right {
+            justify-content: flex-end;
+        }
+
+        .jc-center {
+            justify-content: center;
+        }
+
+        .jc-between {
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- this is the flex container which is containing the display as flex. -->
+    <h2>Flex-Container</h2>
+    <div class="flex-container">
+
+        <!--  these boxes are called flex-items -->
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+        <div class="box">
+            <h1>3</h1>
+        </div>
+
+    </div>
+
+
+    <!-- flex-container justified as left/flex-start by default. -->
+    <h2>Flex-container justified: flex-start/left</h2>
+    <div class="flex-container">
+
+        <!--  these boxes are called flex-items -->
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+    </div>
+
+    <h2>Flex-container justified: flex-end/right</h2>
+    <div class="flex-container jc-right">
+
+        <!--  these boxes are called flex-items -->
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+    </div>
+
+    <h2>Flex-container justified: center</h2>
+    <div class="flex-container jc-center">
+
+        <!--  these boxes are called flex-items -->
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+    </div>
+
+    <h2>Flex-container justified: center</h2>
+    <div class="flex-container jc-between">
+
+        <!--  these boxes are called flex-items -->
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>2</h1>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
