@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Semantic Layout</title>
+
+    <style>
+        header {
+            background-color: #0081C9;
+            color: whitesmoke;
+            padding: 15px;
+        }
+
+        nav {
+            background-color: #EAC7C7;
+            color: #0009;
+        }
+
+        .flex-row {
+            display: flex;
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .al-center {
+            align-items: center;
+        }
+
+        ul.flex-row {
+            list-style-type: none;
+        }
+
+        ul.flex-row li {
+            padding: 3px 10px;
+        }
+
+        ul.flex-col {
+            align-items: center;
+            list-style-type: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        ul.flex-col li {
+            border: 1px solid lightgrey;
+            padding: 10px;
+            width: 100%;
+            margin: 5px;
+            background-color: lightcyan;
+
+            border-radius: 4px;
+        }
+
+        ul.flex-col li:hover {
+            background-color: rgba(224, 255, 255, 0.307);
+            cursor: pointer;
+        }
+
+        .nav-link {
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .nav-heading {
+            font-size: 2.0rem;
+            margin: 3px 15px;
+        }
+
+
+
+        .text-center {
+            text-align: center;
+        }
+
+        .nav-link li:hover {
+            color: rgb(43, 26, 26);
+            cursor: pointer;
+            border-bottom: 3px solid rgb(43, 26, 26);
+        }
+
+        #sidebar {
+            background-color: #5BC0F8;
+            width: 15%;
+        }
+
+        #main-section {
+            background-color: #86E5FF;
+            width: 85%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- top section of the web page. -->
+    <header>
+        <h1 class="text-center">HTML Semantic Layout Element</h1>
+        <p class="text-center"><b>Header</b></p>
+
+        <p>header
+            HTML has several semantic elements that define the different parts of a web page.
+        </p>
+        <p> Here we will see some them: header, nav, section, article, aside, footer, details, summary.</p>
+    </header>
+
+    <nav class="flex-row al-center">
+        <h2 class="nav-heading">Navigation Bar: </h2>
+        <ul class="flex-row nav-link">
+            <li>Google</li>
+            <li>Facebook</li>
+            <li>Whatsapp</li>
+            <li>Youtube</li>
+            <li>Instagram</li>
+        </ul>
+    </nav>
+
+    <!-- to contain the aside bar and the main section -->
+    <section class="flex-row">
+        <!-- aside bar -->
+        <aside id="sidebar">
+
+            <h1 class="text-center">Aside bar</h1>
+
+            <h2 class="text-center">Elements Used</h2>
+
+            <ul class="flex-col">
+
+                <li>header</li>
+                <li>nav</li>
+                <li>aside</li>
+                <li>section</li>
+                <li>article</li>
+                <li>footer</li>
+
+            </ul>
+
+        </aside>
+
+        <!-- main section container -->
+        <section id="main-section">
+            <h1>Main Section</h1>
+        </section>
+    </section>
+
+
+
+</body>
+
+</html>

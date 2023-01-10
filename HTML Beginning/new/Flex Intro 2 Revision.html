@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Intro Revision</title>
+    <style>
+        .box {
+            width: 60px;
+            height: 60px;
+            background-color: dodgerblue;
+            color: whitesmoke;
+            text-align: center;
+            padding: 25px;
+            margin: 10px;
+        }
+
+        .flex-container {
+            display: flex;
+            border: 3px solid coral;
+            /* by default justify-content: flex-start||left*/
+            margin: 10px;
+        }
+
+        .w-200 {
+            width: 200px;
+        }
+
+        .h-400 {
+            height: 400px;
+        }
+
+        .jc-left {
+            justify-content: flex-start;
+        }
+
+        .jc-center {
+            justify-content: center;
+        }
+
+        .jc-right {
+            justify-content: flex-end;
+        }
+
+        .jc-between {
+            justify-content: space-between;
+        }
+
+        .jc-around {
+            justify-content: space-around;
+        }
+
+        .jc-evenly {
+            justify-content: space-evenly;
+        }
+
+        .al-start {
+            align-items: flex-start;
+        }
+
+        .al-end {
+            align-items: flex-end;
+        }
+
+        .al-center {
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- this div will be converted to flex container -->
+    <h1>Flex-container: justify-content: space-between</h1>
+    <div class="flex-container jc-between">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+        <div class="box">
+            <h1>3</h1>
+        </div>
+    </div>
+
+
+    <h1>Flex-container: justify-content: space-around</h1>
+    <div class="flex-container jc-around">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+        <div class="box">
+            <h1>3</h1>
+        </div>
+    </div>
+
+
+    <h1>Flex-container: justify-content: space-evenly</h1>
+    <div class="flex-container jc-evenly">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+        <div class="box">
+            <h1>3</h1>
+        </div>
+    </div>
+
+
+    <div class="flex-container">
+        <div class="flex-container w-200 h-400 al-start">
+            <div class="box">
+                <h1>1</h1>
+            </div>
+        </div>
+        <div class="flex-container  w-200 h-400 al-center">
+            <div class="box">
+                <h1>1</h1>
+            </div>
+        </div>
+        <div class="flex-container  w-200 h-400 al-end">
+            <div class="box">
+                <h1>1</h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
