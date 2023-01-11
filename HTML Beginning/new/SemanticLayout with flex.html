@@ -5,149 +5,127 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex Semantic Layout</title>
-
-    <style>
-        header {
-            background-color: #0081C9;
-            color: whitesmoke;
-            padding: 15px;
-        }
-
-        nav {
-            background-color: #EAC7C7;
-            color: #0009;
-        }
-
-        .flex-row {
-            display: flex;
-        }
-
-        .flex-col {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .al-center {
-            align-items: center;
-        }
-
-        ul.flex-row {
-            list-style-type: none;
-        }
-
-        ul.flex-row li {
-            padding: 3px 10px;
-        }
-
-        ul.flex-col {
-            align-items: center;
-            list-style-type: none;
-            text-align: center;
-            padding: 20px;
-        }
-
-        ul.flex-col li {
-            border: 1px solid lightgrey;
-            padding: 10px;
-            width: 100%;
-            margin: 5px;
-            background-color: lightcyan;
-
-            border-radius: 4px;
-        }
-
-        ul.flex-col li:hover {
-            background-color: rgba(224, 255, 255, 0.307);
-            cursor: pointer;
-        }
-
-        .nav-link {
-            font-size: large;
-            font-weight: bold;
-        }
-
-        .nav-heading {
-            font-size: 2.0rem;
-            margin: 3px 15px;
-        }
-
-
-
-        .text-center {
-            text-align: center;
-        }
-
-        .nav-link li:hover {
-            color: rgb(43, 26, 26);
-            cursor: pointer;
-            border-bottom: 3px solid rgb(43, 26, 26);
-        }
-
-        #sidebar {
-            background-color: #5BC0F8;
-            width: 15%;
-        }
-
-        #main-section {
-            background-color: #86E5FF;
-            width: 85%;
-        }
-    </style>
+    <title>Semantic Layout flex</title>
+    <link rel="stylesheet" href="css/SemanticCss.css">
 </head>
 
 <body>
-    <!-- top section of the web page. -->
+    <!-- first of all we will make, header section. -->
     <header>
-        <h1 class="text-center">HTML Semantic Layout Element</h1>
-        <p class="text-center"><b>Header</b></p>
+        <!-- <h1>&lt;header&gt;</h1>
+            we will use ::after and ::before pseudo element to make < or > sign
+        -->
+        <h1 class="text-center">HTML Semantic Layout Elements</h1>
+        <h1 class="text-center"><code class="element" style="font-size: xx-large;">header</code></h1>
 
         <p>header
-            HTML has several semantic elements that define the different parts of a web page.
+            HTML has several semantic elements that define the different parts of a web page.</p>
+        <p>Here we will see some them:
+            <code class="element hlight">header</code>
+            <code class="element hlight">nav</code>
+            <code class="element hlight">section</code>
+            <code class="element hlight">article</code>
+            <code class="element hlight">aside</code>
+            <code class="element hlight">footer</code>
+            <code class="element hlight">details</code>
+            <code class="element hlight">summary</code>
         </p>
-        <p> Here we will see some them: header, nav, section, article, aside, footer, details, summary.</p>
     </header>
 
     <nav class="flex-row al-center">
-        <h2 class="nav-heading">Navigation Bar: </h2>
-        <ul class="flex-row nav-link">
+        <h1>Navigation Bar:</h1>
+        <ul class="flex-row flex-gap-4 navlink">
             <li>Google</li>
             <li>Facebook</li>
-            <li>Whatsapp</li>
-            <li>Youtube</li>
             <li>Instagram</li>
+            <li>Linkedin</li>
+            <li>YouTube</li>
         </ul>
     </nav>
 
-    <!-- to contain the aside bar and the main section -->
+    <!-- Now we will make section to contain the aside and another main section -->
+    <!-- container section -->
     <section class="flex-row">
-        <!-- aside bar -->
+
         <aside id="sidebar">
-
-            <h1 class="text-center">Aside bar</h1>
-
-            <h2 class="text-center">Elements Used</h2>
+            <h1 class="text-center">Aside Bar</h1>
+            <h2 class="text-center">Element Used</h2>
 
             <ul class="flex-col">
-
-                <li>header</li>
-                <li>nav</li>
-                <li>aside</li>
-                <li>section</li>
-                <li>article</li>
-                <li>footer</li>
-
+                <li><code class="element">header</code></li>
+                <li><code class="element">nav</code></li>
+                <li><code class="element">aside</code></li>
+                <li><code class="element">section</code></li>
+                <li><code class="element">article</code></li>
+                <li><code class="element">footer</code></li>
             </ul>
-
         </aside>
 
-        <!-- main section container -->
         <section id="main-section">
-            <h1>Main Section</h1>
+
+            <section>
+                <h1>Layout Elements</h1>
+                <p><code class="element">header</code> :- Defines a header for a document or a section</p>
+
+                <p><code class="element">nav</code> :- Defines a set of navigation links</p>
+
+                <p><code class="element">section</code> :- Defines a section in a document.</p>
+
+                <p><code class="element">article</code> :- Defines an independent, self-contained content.</p>
+
+                <p><code class="element">aside</code> :- Defines content aside from the content (like a sidebar)</p>
+
+                <p><code class="element">footer</code> :- Defines a footer for a document or section</p>
+
+                <p><code class="element">details</code> :- Defines additional details that the user can open and close
+                    on demand.</p>
+
+            </section>
+
+            <article>
+                <h1>HTML Layout Techniques</h1>
+                <p>There are four different Techniques to create multicolumn layouts. Each techinque has its pros and
+                    cons.</p>
+
+                <ul>
+                    <li>CSS frameword</li>
+                    <li>CSS float property</li>
+                    <li>CSS flexbox</li>
+                    <li>CSS grid</li>
+                    <li>CSS Framework</li>
+                </ul>
+                <p>We have mulitple css frameword to create fast layout like Bootstrap, we.css, react etc.</p>
+
+                <h2>CSS Float Layout</h2>
+                <p>
+                    It is common to do entire web layouts using the css float property. Float is easy to learn, we just
+                    need
+                    to remember hot the float and clear properties work.
+                    Disadvantage: Floating elements are tied to the document flow, which may harm the flexibility.
+                </p>
+
+                <h2>CSS Flexbox Layout</h2>
+                <p>
+                    Use of flexbox ensures that elements behae predictably when the page layout must accommodate
+                    different
+                    screen sizes and different display devices.
+                </p>
+
+                <h2>CSS Grid Layout</h2>
+                <p>
+                    The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it
+                    easier to
+                    design web pages without having to use floats and positioning
+                </p>.
+
+            </article>
+
         </section>
     </section>
 
-
+    <footer>
+        <h3 class="text-center">I am Footer...!</h3>
+    </footer>
 
 </body>
 

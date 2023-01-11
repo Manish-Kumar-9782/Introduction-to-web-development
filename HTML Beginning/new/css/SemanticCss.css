@@ -1,0 +1,113 @@
+.text-center {
+    text-align: center;
+}
+
+/* Now we will use code element to show the element angular brackets. */
+code.element {
+    font-size: large;
+}
+
+code.element::before {
+    content: "<";
+}
+
+code.element::after {
+    content: ">";
+}
+
+header {
+    background-color: #0081C9;
+    color: #fff;
+    padding: 15px;
+}
+
+nav {
+    background-color: #FF7B54;
+    padding-left: 15px;
+    color: whitesmoke;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.hlight {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-gap-4 {
+    gap: 20px;
+}
+
+/* to set all the flex items vertical center we are making al-center class */
+.al-center {
+    align-items: center;
+}
+
+/* an ul which having flex-row class will not required the list-style type  */
+ul.flex-row {
+    list-style-type: none;
+}
+
+ul.flex-col {
+    list-style-type: none;
+    padding: 20px;
+}
+
+ul.flex-col li {
+    border: 1px solid rgb(233, 230, 230);
+    text-align: center;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* A class for nav bar links */
+
+.navlink {
+    font-size: larger;
+}
+
+/* sidebar will have 15% of its viewport or parent container size */
+#sidebar {
+    background-color: #5BC0F8;
+    flex: 2;
+}
+
+#main-section {
+    background-color: #86E5FF;
+    flex: 8;
+    padding-left: 30px;
+}
+
+footer {
+    background-color: #0081C9;
+}
+
+footer * {
+    margin: 0px;
+    padding: 30px;
+}
+
+ul.flex-row li:hover {
+    cursor: pointer;
+    color: #1312115f;
+    border-bottom: 3px solid white;
+}
+
+ul.flex-col li:hover {
+    cursor: pointer;
+    background-color: rgba(20, 18, 18, 0.216);
+    border-color: rgba(20, 18, 18, 0.216);
+}
