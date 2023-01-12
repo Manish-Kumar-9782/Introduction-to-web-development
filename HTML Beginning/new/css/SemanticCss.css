@@ -100,6 +100,9 @@ footer * {
     padding: 30px;
 }
 
+/* flex-hovering effect for li
+items */
+
 ul.flex-row li:hover {
     cursor: pointer;
     color: #1312115f;
