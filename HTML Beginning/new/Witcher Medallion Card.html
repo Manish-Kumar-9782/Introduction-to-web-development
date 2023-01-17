@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
+
+        :root {
+            --text-color: lightgray;
+            --red: rgba(255, 51, 0, 0.5);
+            --black: rgba(0, 0, 0, 0.50);
+            --orange: rgba(252, 105, 0, 0.5);
+            --pink: rgba(252, 0, 193, 0.5);
+            --purple: rgba(252, 0, 92, 0.5);
+            --gradient-one: linear-gradient(0deg, var(--black) 30%, var(--red), var(--orange), transparent),
+                linear-gradient(175deg, transparent 10%, var(--purple) 15% 20%, var(--orange) 40%, var(--pink) 70%, transparent),
+                linear-gradient(180deg, transparent 10%, var(--red), var(--orange), var(--black));
+
+            --gradient-two: linear-gradient(0deg, var(--black), var(--red), var(--orange)),
+                linear-gradient(180deg, var(--black) 10%, var(--red), var(--orange), var(--black));
+        }
+
+        .gradient-effect-1 {
+            background-image: var(--gradient-one)
+        }
+
+        .gradient-effect-2 {
+            background-image: var(--gradient-two);
+        }
+
+        body {
+            font-family: 'Roboto', 'Roboto Slab', serif, sans-serif;
+        }
+
+        .flex-row {
+            display: flex;
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .jc-end {
+            justify-content: flex-end;
+        }
+
+        .jc-center {
+            justify-content: center;
+        }
+
+        .al-center {
+            align-items: center;
+        }
+
+        .mb-1 {
+            margin-bottom: 5px;
+        }
+
+        .m-1 {
+            margin: 5px;
+        }
+
+        .p-1 {
+            padding: 5px;
+        }
+
+        .card {
+            width: 400px;
+            height: 600px;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./Medalian.jpg);
+            color: var(--text-color);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card .card-title {
+            font-size: 2rem;
+        }
+
+        .card-body {
+            padding: 10px;
+            backdrop-filter: blur(2px);
+            --webkit-mask-image: linear-gradient(0deg, transparent 10%);
+        }
+
+
+        ul.flex-row {
+            list-style-type: none;
+            column-gap: 40px;
+        }
+
+        .style-type-image {
+            list-style-image: url("https://static.wikia.nocookie.net/witcher/images/7/76/Tw2_icon_vigor.png/revision/latest/scale-to-width-down/48?cb=20110606151754");
+        }
+
+        #other-content {
+            visibility: hidden;
+            height: 0px;
+            transition: height 0.5s ease-in-out;
+        }
+
+        .card-body:hover #other-content {
+            visibility: visible;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="flex-row jc-center">
+
+        <div class="card flex-col jc-end">
+
+            <div class="card-body gradient-effect-1">
+                <div id="content">
+                    <h3 class="card-title">Witcher Medallion</h3>
+                    <div class="card-description">
+                        The Witchers' medallion is a silver symbol of the witchers' profession. It is sensitive to
+                        magic,
+                        vibrating and tugging on its chain when spells are being cast or magical beings, like genies,
+                        are
+                        present. This magic medallion shaped like a wolf's head is given to every young witcher
+                        candidate
+                        who
+                        has passed the Trial of the Grasses.
+                    </div>
+                </div>
+
+                <div id="other-content">
+                    <h4>Medallion Powers</h4>
+                    <ul class="style-type-image">
+                        <li>Detection of the Magic.</li>
+                        <li>Vibrate on Detection of Monster.</li>
+                        <li>Vibrate if found the place of Power.</li>
+                    </ul>
+                    <h5 class="mb-1">Witcher Magic Powers</h5>
+                    <ul class="flex-row m-1 p-1">
+                        <li><img alt="Tw2 sign aard.png"
+                                src="https://static.wikia.nocookie.net/witcher/images/2/2a/Tw2_sign_aard.png/revision/latest/scale-to-width-down/32?cb=20110531001324"
+                                decoding="async" loading="lazy" width="32" height="30"
+                                data-image-name="Tw2 sign aard.png" data-image-key="Tw2_sign_aard.png"
+                                data-src="https://static.wikia.nocookie.net/witcher/images/2/2a/Tw2_sign_aard.png/revision/latest/scale-to-width-down/32?cb=20110531001324"
+                                class=" lazyloaded"></li>
+
+                        <li><img alt="Tw2 sign igni.png"
+                                src="https://static.wikia.nocookie.net/witcher/images/c/cd/Tw2_sign_igni.png/revision/latest/scale-to-width-down/32?cb=20110531152737"
+                                decoding="async" loading="lazy" width="32" height="32"
+                                data-image-name="Tw2 sign igni.png" data-image-key="Tw2_sign_igni.png"
+                                data-src="https://static.wikia.nocookie.net/witcher/images/c/cd/Tw2_sign_igni.png/revision/latest/scale-to-width-down/32?cb=20110531152737"
+                                class=" lazyloaded"></li>
+
+                        <li><img alt="Tw2 sign yrden.png"
+                                src="https://static.wikia.nocookie.net/witcher/images/8/81/Tw2_sign_yrden.png/revision/latest/scale-to-width-down/32?cb=20110601151247"
+                                decoding="async" loading="lazy" width="32" height="32"
+                                data-image-name="Tw2 sign yrden.png" data-image-key="Tw2_sign_yrden.png"
+                                data-src="https://static.wikia.nocookie.net/witcher/images/8/81/Tw2_sign_yrden.png/revision/latest/scale-to-width-down/32?cb=20110601151247"
+                                class=" lazyloaded"></li>
+
+                        <li><img alt="Tw2 sign quen.png"
+                                src="https://static.wikia.nocookie.net/witcher/images/e/e1/Tw2_sign_quen.png/revision/latest/scale-to-width-down/32?cb=20110601151222"
+                                decoding="async" loading="lazy" width="32" height="32"
+                                data-image-name="Tw2 sign quen.png" data-image-key="Tw2_sign_quen.png"
+                                data-src="https://static.wikia.nocookie.net/witcher/images/e/e1/Tw2_sign_quen.png/revision/latest/scale-to-width-down/32?cb=20110601151222"
+                                class=" lazyloaded"></li>
+
+                        <li><img alt="Tw2 sign axii.png"
+                                src="https://static.wikia.nocookie.net/witcher/images/8/81/Tw2_sign_axii.png/revision/latest/scale-to-width-down/32?cb=20110601151151"
+                                decoding="async" loading="lazy" width="32" height="32"
+                                data-image-name="Tw2 sign axii.png" data-image-key="Tw2_sign_axii.png"
+                                data-src="https://static.wikia.nocookie.net/witcher/images/8/81/Tw2_sign_axii.png/revision/latest/scale-to-width-down/32?cb=20110601151151"
+                                class=" lazyloaded"></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+<!-- <img alt="Vigor"
+    src="https://static.wikia.nocookie.net/witcher/images/7/76/Tw2_icon_vigor.png/revision/latest/scale-to-width-down/48?cb=20110606151754"
+    decoding="async" loading="lazy" width="48" height="48" data-image-name="Tw2 icon vigor.png"
+    data-image-key="Tw2_icon_vigor.png"
+    data-src="https://static.wikia.nocookie.net/witcher/images/7/76/Tw2_icon_vigor.png/revision/latest/scale-to-width-down/48?cb=20110606151754"
+    class=" lazyloaded"> -->
+
+</html>
