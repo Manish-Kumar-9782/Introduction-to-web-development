@@ -11,26 +11,34 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
 
         :root {
-            --text-color: lightgray;
-            --red: rgba(255, 51, 0, 0.5);
-            --black: rgba(0, 0, 0, 0.50);
-            --orange: rgba(252, 105, 0, 0.5);
-            --pink: rgba(252, 0, 193, 0.5);
-            --purple: rgba(252, 0, 92, 0.5);
+            --text-color: #abf1ff;
+            --text-color: white;
+            --red: rgb(5 12 82 / 35%);
+            --black: rgb(63 2 2 / 46%);
+            --orange: rgb(37 29 66 / 49%);
+            --pink: rgb(66 0 50 / 67%);
+            --purple: rgb(82 1 30 / 46%);
             --gradient-one: linear-gradient(0deg, var(--black) 30%, var(--red), var(--orange), transparent),
                 linear-gradient(175deg, transparent 10%, var(--purple) 15% 20%, var(--orange) 40%, var(--pink) 70%, transparent),
                 linear-gradient(180deg, transparent 10%, var(--red), var(--orange), var(--black));
 
             --gradient-two: linear-gradient(0deg, var(--black), var(--red), var(--orange)),
                 linear-gradient(180deg, var(--black) 10%, var(--red), var(--orange), var(--black));
+
+            --mask-gradient: linear-gradient(0deg, var(--black) 60%, transparent);
         }
 
         .gradient-effect-1 {
-            background-image: var(--gradient-one)
+            background-image: var(--gradient-one);
+            -webkit-mask-image: linear-gradient(0deg, black 90%, transparent);
+            mask-image: linear-gradient(0deg, black 90%, transparent);
+            mix-blend-mode: hard-light;
         }
 
         .gradient-effect-2 {
             background-image: var(--gradient-two);
+            -webkit-mask-image: linear-gradient(0deg, dark 90%, transparent);
+            mask-image: linear-gradient(0deg, dark 90%, transparent);
         }
 
         body {
@@ -88,7 +96,7 @@
         .card-body {
             padding: 10px;
             backdrop-filter: blur(2px);
-            --webkit-mask-image: linear-gradient(0deg, transparent 10%);
+
         }
 
 
@@ -98,6 +106,7 @@
         }
 
         .style-type-image {
+
             list-style-image: url("https://static.wikia.nocookie.net/witcher/images/7/76/Tw2_icon_vigor.png/revision/latest/scale-to-width-down/48?cb=20110606151754");
         }
 
@@ -110,6 +119,11 @@
         .card-body:hover #other-content {
             visibility: visible;
             height: 300px;
+        }
+
+        .img-icon {
+            width: 20px;
+            height: 20px;
         }
     </style>
 </head>

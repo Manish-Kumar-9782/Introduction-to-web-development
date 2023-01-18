@@ -20,11 +20,28 @@
             height: fit-content;
             padding-bottom: 10px;
             width: 400px;
+            height: 300px;
         }
 
         .block {
             border: 1px solid black;
             width: 100%;
+        }
+
+        .img {
+            width: 100%;
+            object-fit: cover;
+            -webkit-mask-image: linear-gradient(0deg, black 70%, transparent);
+            mask-image: linear-gradient(0deg, black 70%, transparent);
+        }
+
+
+        .gradient {
+            --gradient-1: linear-gradient(0deg, rgb(47, 0, 255), rgb(0, 255, 136));
+            --gradient-2: linear-gradient(0deg, rgb(255, 0, 162), rgb(95, 140, 22));
+            --gradient-3: radial-gradient(0deg, rgb(127, 13, 57), rgb(30, 54, 33) 70%, transparent);
+
+            background-image: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
         }
     </style>
 </head>
@@ -33,21 +50,7 @@
 
     <div class="container jc-center">
 
-        <div class="card">
-
-
-            <div class="block">
-                <h1>Data 1</h1>
-            </div>
-            <div class="block">
-                <h1>Data 2</h1>
-            </div>
-            <div class="block">
-                <h1>Data 3</h1>
-            </div>
-            <div class="block">
-                <h1>Data 4</h1>
-            </div>
+        <div class="card gradient">
 
         </div>
 
