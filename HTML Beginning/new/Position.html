@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Intro</title>
+    <style>
+        .w-600 {
+            width: 600px;
+            height: 600px;
+        }
+
+        .w-500 {
+            width: 500px;
+            height: 500px;
+        }
+
+        .w-400 {
+            width: 400px;
+            height: 400px;
+        }
+
+        .w-300 {
+            width: 300px;
+            height: 300px;
+        }
+
+        .container {
+            border: 10px solid purple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px;
+            margin: 50px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            border: 5px solid blue;
+            background-color: lightblue;
+            position: relative;
+            top: 0%;
+            left: 0%;
+            margin: 5px;
+        }
+
+        .green {
+            border: 5px solid green;
+            background-color: rgb(117, 228, 156);
+
+        }
+
+        .color-1 {
+            border: 5px solid rgb(96, 128, 0);
+            background-color: rgb(96, 128, 0, .5);
+            position: relative;
+        }
+
+        .color-2 {
+            border: 5px solid rgb(128, 58, 0);
+            background-color: rgb(128, 58, 0, .5);
+            position: relative;
+        }
+
+        .color-3 {
+            border: 5px solid rgb(34, 0, 128);
+            background-color: rgb(34, 0, 128, .5);
+            position: relative;
+        }
+
+        .color-4 {
+            border: 5px solid rgb(111, 0, 128);
+            background-color: rgb(111, 0, 128, .5);
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .relative {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container color-1">
+        <div class="container color-2">
+            <div class="container color-3">
+                <div class="container color-4">
+                    <div class="box"></div>
+                    <div class="green box absolute"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
