@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Revision</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            height: 500px;
+            width: 500px;
+            border: 10px solid purple;
+        }
+
+        .flex-row {
+            display: flex;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 5px solid blue;
+            background-color: lightblue;
+
+        }
+
+        .green {
+            border-color: green;
+            background-color: lightgreen;
+        }
+
+        .relative {
+            position: relative;
+            left: 400px;
+        }
+
+        .absolute {
+            position: absolute;
+
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 96px;
+            left: 214px;
+            z-index: 2;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <div class="container flex-row">
+        <div class="box green absolute"></div>
+    </div>
+
+</body>
+
+</html>
