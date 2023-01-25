@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- In this section we will make a image card slider in which we will have multiple option
+to slide the image card.
+
+// required section.
+
+position - property
+transform property;
+
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+
+    <!-- linking the style css sheet. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 1. first we will make the Outer and inner container. -->
+
+    <div id="outer-container">
+
+        <div id="inner-container">
+
+            <button id="left-button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="prev arrow-icon" width="56.898" height="91"
+                    viewBox="0 0 56.898 91">
+                    <path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(0 91) rotate(-90)" />
+                </svg>
+            </button>
+
+            <!-- Now here in b/w the both the button there will be the image slider box -->
+
+            <div id="image-container">
+
+                <div class="slide active">
+                    <h1>1</h1>
+                </div>
+
+                <div class="slide">
+                    <h1>2</h1>
+                </div>
+
+                <div class="slide">
+                    <h1>3</h1>
+                </div>
+
+                <div class="slide">
+                    <h1>4</h1>
+                </div>
+
+                <div class="slide">
+                    <h1>5</h1>
+                </div>
+
+                <div class="slide">
+                    <h1>6</h1>
+                </div>
+
+                <div class="slide">
+                    <h1>7</h1>
+                </div>
+
+            </div>
+
+            <button id="right-button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="next arrow-icon" width="56.898" height="91"
+                    viewBox="0 0 56.898 91">
+                    <path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(56.898) rotate(90)" />
+                </svg>
+            </button>
+
+            <div id="active-bar-container">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- attaching the js script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

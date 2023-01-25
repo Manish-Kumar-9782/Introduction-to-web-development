@@ -1,0 +1,141 @@
+/* first we will reset all things. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Now we will put the inner-container at the center place. */
+
+#outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    height: 99%;
+    background-color: whitesmoke;
+}
+
+#inner-container {
+    position: relative;
+    background-color: lightblue;
+    width: 1000px;
+    height: 600px;
+}
+
+.arrow-icon {
+    width: 90px;
+    height: 90px;
+    color: lightcoral;
+    fill: lightcoral;
+    stroke: coral;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 2rem;
+}
+
+
+
+/* first we will set the position, size, for the button. */
+button {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: 0px solid;
+    z-index: 10;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* Now we will put the prev and next button position. 
+prev is will be at left 0% and next will be at 100%*/
+#right-button {
+    left: 100%;
+    transform: translate(-100%, -50%);
+}
+
+/* Now here we will put the image-container properties
+first we will put all the image at the center. */
+
+#image-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    font-size: 10rem;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border: 3px solid red;
+    z-index: 0;
+    /* transition: left 0.4s ease-in-out; */
+    transition-property: left, opacity;
+    transition-duration: 0.4s, 0.5s;
+    transition-timing-function: ease-in-out, ease-out;
+}
+
+.slide h1 {
+    padding-left: 400px;
+}
+
+/* an image element which has .active class will
+be moved to front of the  */
+.active {
+    left: 0;
+}
+
+/* an image element which has not .active class
+will be dis-appear with fade-out effect. */
+div.slide:not(.active) {
+    opacity: 0%;
+}
+
+/* active-bar properties, it will show that how many images we have and 
+and which number of image is active.*/
+
+#active-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 6%;
+    z-index: 2;
+    height: 20px;
+    width: 100%;
+    background-color: lightpink;
+}
+
+.bar {
+    align-self: center;
+    height: 5px;
+    width: 30px;
+    border-radius: 10px;
+    background-color: beige;
+    margin: 0 5px;
+    transition: background-color 0.6s;
+
+}
+
+.active-bar {
+    background-color: coral;
+}

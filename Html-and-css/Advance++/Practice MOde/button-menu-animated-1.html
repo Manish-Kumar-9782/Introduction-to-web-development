@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+-------------------------------------------------------------------------------
+In this section we will make a simple animated button transition in and out
+effect for this we should know the basics of position properties. 
+
+Required Properties:
+1. position
+2. transition
+3. transform
+-------------------------------------------------------------------------------
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale= 1.0">
+    <title>Button Menu Animation 1</title>
+
+    <style>
+        /*first we need to set the box size for container*/
+        .container {
+            position: relative;
+            /*position relative will help to set the absolute positive for 
+            each item relative to the .container*/
+            border: 1px solid #111a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .items {
+            display: flex;
+            justify-content: center;
+        }
+
+        .item {
+            display: flex;
+            position: initial;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            border: 1px solid dodgerblue;
+            border-radius: 50%;
+            margin: 10px;
+            background-color: rgba(30, 143, 255, 0.652);
+            font-weight: bolder;
+            font-size: larger;
+            color: white;
+        }
+
+        button {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- first we will make a container whose position will be relative -->
+
+    <div class="container">
+        <div class="items">
+            <div class="item">
+                <p>1</p>
+            </div>
+            <div class="item">
+                <p>2</p>
+            </div>
+            <div class="item">
+                <p>3</p>
+            </div>
+            <div class="item">
+                <p>4</p>
+            </div>
+            <div class="item">
+                <p>5</p>
+            </div>
+            <div class="item">
+                <p>6</p>
+            </div>
+            <div class="item">
+                <p>7</p>
+            </div>
+            <div class="item">
+                <p>8</p>
+            </div>
+        </div>
+        <button id="bt">Press</button>
+    </div>
+    <script src="AnimeJS.js"></script>
+    <script src="button-menu-animated-1.js"></script>
+</body>
+
+</html>

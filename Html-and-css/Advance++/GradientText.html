@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- 
+    In this section we will learn how to apply the gradient color on text by using the css properties.
+ -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gradient-text {
+            background-image: linear-gradient(45deg, rgb(159, 0, 117), rgb(72, 0, 135));
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="gradient-text">Hello World..!</h1>
+
+</body>
+
+</html>

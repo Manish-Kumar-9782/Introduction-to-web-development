@@ -1,0 +1,99 @@
+:root {
+    --main-bg-cl: rgb(34, 58, 66);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.menu-item {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border: 4px solid lightblue;
+    background-color: var(--main-bg-cl);
+    border-radius: 50%;
+    left: 40px;
+    transform-origin: 210px;
+    transform: rotate(calc(360deg/8 * var(--i))) translateX(-50%);
+    color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --delay: calc(0.1s *calc(var(--i)));
+    transition-property: transform, left;
+    transition-duration: var(--delay);
+    transition-delay: var(--delay), 0.1s;
+    transition-timing-function: ease-in-out;
+    z-index: -1;
+}
+
+#handler.active {
+    background-color: red;
+}
+
+#container.active .menu-item {
+    left: 50%;
+    transition-property: left, transform;
+    /* transition: left, transfo 0.2s ease-in-out; */
+    /* transform-origin: 0px; */
+    transition-delay: var(--delay), 0.1s;
+    transition-duration: var(--delay);
+    transform: rotate(0deg) translateX(-50%);
+}
+
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.round {
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+/* ids properties */
+/* =============================== */
+#container {
+    background-color: var(--main-bg-cl);
+    width: 500px;
+    height: 500px;
+    position: relative;
+    z-index: 0;
+}
+
+
+#handler {
+    width: 100px;
+    height: 100px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: lightblue;
+    overflow: hidden;
+    position: absolute;
+    z-index: 100;
+}
+
+
+#handler-button {
+    background-color: transparent;
+    border: 0px solid transparent;
+    color: var(--main-bg-cl);
+    width: 80px;
+    height: 80px;
+    background-color: var(--main-bg-cl);
+}
+
+/* =============================== */

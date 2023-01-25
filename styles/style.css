@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
+
+:root {
+    --user-img-size: 48px;
+    --icon-color-1: lightgray;
+    --bg-color-1: #151728;
+    --col-gap-factor: 10px;
+    --gap-factor: 10px;
+    --text-light: white;
+    --text-dark: black;
+    --text-gray: gray;
+    --text-light-dim: #ccc;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.text-light {
+    color: var(--text-light);
+}
+
+.text-light-dim {
+    color: var(--text-light-dim);
+}
+
+.text-dark {
+    color: var(--text-dark);
+}
+
+.text-gray {
+    color: var(--text-gray);
+}
+
+.icon {
+    width: var(--icon-size-1);
+    height: var(--icon-size-1);
+    color: var(--icon-color-1);
+}
+
+body {
+    font-family: 'Roboto', 'Roboto Slab', serif, sans-serif;
+    background-color: var(--bg-color-1);
+}
+
+ul.flex-row {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+
+
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+.user-img {
+    width: var(--user-img-size);
+    height: var(--user-img-size);
+    border-radius: 50%;
+}
+
+.border {
+    border: 1px solid lightgray;
+}
+
+.fs-small {
+    font-size: medium;
+}
+
+.fs-medium {
+    font-size: large;
+}
+
+.fs-large {
+    font-size: x-large;
+}
+
+.fs-xlarge {
+    font-size: xx-large;
+}
+
+.jc-between {
+    justify-content: space-between;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-around {
+    justify-content: space-around;
+}
+
+.jc-around-20 {
+    width: 20vw;
+    min-width: 20vw;
+    max-width: 30vw;
+    justify-content: space-around;
+}
+
+.al-center {
+    align-items: center;
+}
+
+/* margin in x direction with 4*5 = 20px  */
+.mx-4 {
+    --mx-factor: 4;
+    margin-left: calc(var(--mx-factor)*5px);
+    margin-right: calc(var(--mx-factor)*5px);
+}
+
+.mx-2 {
+    --mx-factor: 2;
+    margin-left: calc(var(--mx-factor)*5px);
+    margin-right: calc(var(--mx-factor)*5px);
+}
+
+.mx-1 {
+    --mx-factor: 1;
+    margin-left: calc(var(--mx-factor)*5px);
+    margin-right: calc(var(--mx-factor)*5px);
+}
+
+.my-4 {
+    --my-factor: 4;
+    margin-top: calc(var(--my-factor)*5px);
+    margin-bottom: calc(var(--my-factor)*5px);
+}
+
+.my-2 {
+    --my-factor: 2;
+    margin-top: calc(var(--my-factor)*5px);
+    margin-bottom: calc(var(--my-factor)*5px);
+}
+
+.my-1 {
+    --my-factor: 1;
+    margin-top: calc(var(--my-factor)*5px);
+    margin-bottom: calc(var(--my-factor)*5px);
+}
+
+.px-4 {
+    --px-factor: 4;
+    padding-left: calc(var(--px-factor)*5px);
+    padding-right: calc(var(--px-factor)*5px);
+}
+
+.px-2 {
+    --px-factor: 2;
+    padding-left: calc(var(--px-factor)*5px);
+    padding-right: calc(var(--px-factor)*5px);
+}
+
+.px-1 {
+    --px-factor: 1;
+    padding-left: calc(var(--px-factor)*5px);
+    padding-right: calc(var(--px-factor)*5px);
+}
+
+.py-4 {
+    --py-factor: 4;
+    padding-top: calc(var(--py-factor)*5px);
+    padding-bottom: calc(var(--py-factor)*5px);
+}
+
+.py-3 {
+    --py-factor: 3;
+    padding-top: calc(var(--py-factor)*5px);
+    padding-bottom: calc(var(--py-factor)*5px);
+}
+
+.py-2 {
+    --py-factor: 2;
+    padding-top: calc(var(--py-factor)*5px);
+    padding-bottom: calc(var(--py-factor)*5px);
+}
+
+.py-1 {
+    --py-factor: 1;
+    padding-top: calc(var(--py-factor)*5px);
+    padding-bottom: calc(var(--py-factor)*5px);
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.text-white {
+    color: white;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.vh-80 {
+    height: 80vh;
+}
+
+.vh-90 {
+    height: 90vh;
+}
+
+.scrolled {
+    overflow: auto;
+}
+
+.col-gap-1 {
+    --factor: var(--col-gap-factor);
+    column-gap: calc(var(--factor)*1);
+}
+
+.col-gap-2 {
+    --factor: var(--col-gap-factor);
+    column-gap: calc(var(--factor)*2);
+}
+
+.col-gap-3 {
+    --factor: var(--col-gap-factor);
+    column-gap: calc(var(--factor)*3);
+}
+
+.col-gap-4 {
+    --factor: var(--col-gap-factor);
+    column-gap: calc(var(--factor)*4);
+}
+
+.col-gap-5 {
+    --factor: var(--col-gap-factor);
+    column-gap: calc(var(--factor)*5);
+}
+
+.gap-1 {
+    --factor: var(--gap-factor);
+    gap: calc(var(--factor)*1);
+}
+
+.gap-2 {
+    --factor: var(--gap-factor);
+    gap: calc(var(--factor)*2);
+}
+
+.gap-3 {
+    --factor: var(--gap-factor);
+    gap: calc(var(--factor)*3);
+}
+
+.gap-4 {
+    --factor: var(--gap-factor);
+    gap: calc(var(--factor)*4);
+}
+
+.gap-5 {
+    --factor: var(--gap-factor);
+    gap: calc(var(--factor)*5);
+}
+
+/* ================================================= */
+/* Navigation bar styles */
+
+.nav-bar {}
+
+ul.nav-bar li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+ul.nav-bar li:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    /* border-radius: 5px; */
+}
+
+
+/* ================================================= */
+
+/* ================================================= */
+/* DropDown Menu */
+
+.dropdown-menu {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px;
+}
+
+span.dropdown-menu--title {
+    display: block;
+    /* padding: 5px 10px; */
+}
+
+.dropdown-menu>.dropdown-menu--title+.dropdown-menu--list {
+    display: none;
+}
+
+
+ul.dropdown-menu--list {
+    --height: 100px;
+    position: absolute;
+    height: var(--height);
+    left: 0px;
+    top: calc(100%);
+    width: 200px;
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(33, 13, 67);
+    row-gap: 10px;
+
+    height: 0px;
+    width: 0px;
+
+}
+
+
+.dropdown-menu>.dropdown-menu--title:hover+.dropdown-menu--list,
+.dropdown-menu:hover>.dropdown-menu--list {
+    display: block;
+    height: auto;
+    width: 200px;
+}
+
+/* ================================================= */

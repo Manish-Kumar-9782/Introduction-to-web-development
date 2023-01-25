@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+-------------------------------------------------------------------------------
+In this section we will make tabs with only with the css , there we will not use 
+any js code.
+-------------------------------------------------------------------------------
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tabs</title>
+
+    <style>
+        /*first we will set the body background*/
+        body {
+            background-color: #ccc;
+        }
+
+        /* Now we will set some margin for the tabs container*/
+        #tabs {
+            margin: 40px;
+            display: flex;
+            /*display type should be flex for each tab */
+            flex-wrap: wrap;
+            max-width: 600px;
+        }
+
+        /*Now we will set background color for each tab */
+        /*Now to make the all tabs in one rwo we need to change the order 
+        for label as 0, and order:1; for each .tab element.*/
+        #tabs .tab {
+            background-color: whitesmoke;
+            /*margin-bottom for each tab*/
+            margin-bottom: 20px;
+            padding: 10px;
+            order: 1;
+            /*this will force the label in one row*/
+            display: none;
+            /*by default each tab will be  display:none; except which
+            is selected.*/
+        }
+
+        /*setting the visibility for radio button as none
+        since we don't need that radio circle*/
+        #tabs input[type="radio"] {
+            display: none;
+        }
+
+        /* Now we need to set some background, size for the label*/
+        #tabs label {
+            background-color: #fffa;
+            padding: 20px 15px;
+
+        }
+
+        /*Now we need to apply some setting on the selected tab*/
+
+        #tabs input[type="radio"]:checked+label+.tab {
+            /*if a radio button is checked select the next consecutive
+            label element and second consecutive  .tab element*/
+            display: block;
+        }
+
+        #tabs input[type="radio"]:checked+label {
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- first we will make a container for the tabs. 
+    
+    Note: all the input element "name" attribute should have same value, this
+    will allow us to select only single radio element at once.
+    -->
+
+    <div id="tabs">
+
+        <!-- Now in this tab we need to make three consecutive element input -> label -> div.paragraph -->
+
+        <!-- tab one -->
+        <input type="radio" id="one" name="mytab" checked="checked">
+        <label for="one">One</label>
+        <div class="tab">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias et corporis ex fuga sequi dolor mollitia
+                nulla quo, ea voluptate ipsa eum exercitationem, perspiciatis consectetur numquam expedita, illum ut
+                animi sapiente rerum architecto? Itaque quo sed neque pariatur vero hic beatae, praesentium minus fugit
+                quia magnam quasi eius laudantium id.</p>
+        </div>
+
+        <!-- tab two -->
+        <input type="radio" id="two" name="mytab">
+        <label for="two">Two</label>
+        <div class="tab">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias et corporis ex fuga sequi dolor mollitia
+                nulla quo, ea voluptate ipsa eum exercitationem, perspiciatis consectetur numquam expedita, illum ut
+                animi sapiente rerum architecto? Itaque quo sed neque pariatur vero hic beatae, praesentium minus fugit
+                quia magnam quasi eius laudantium id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                quia ea aliquam reprehenderit deleniti cum suscipit, nemo totam delectus culpa!</p>
+        </div>
+
+        <!-- tab three -->
+        <input type="radio" id="three" name="mytab">
+        <label for="three">Three</label>
+        <div class="tab">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias et corporis ex fuga sequi dolor mollitia
+                nulla quo, ea voluptate ipsa eum exercitationem, perspiciatis consectetur numquam expedita, illum ut
+                animi sapiente rerum architecto? Itaque quo sed neque pariatur vero hic beatae, praesentium minus fugit
+                quia magnam quasi eius laudantium id. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Necessitatibus laudantium quidem odio nemo aliquam libero iure molestias vero accusantium doloremque.
+                Ipsum quos dolorem facilis necessitatibus tenetur accusamus itaque aliquam, architecto, totam
+                voluptatibus dicta, voluptatum sequi quis cumque illo dolore. Repellat.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

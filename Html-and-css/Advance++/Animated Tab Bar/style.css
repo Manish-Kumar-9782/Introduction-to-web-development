@@ -1,0 +1,132 @@
+/* First we will set the box-sizing and some variable setting */
+html {
+    box-sizing: border-box;
+    --bgColorMenu: #1d1d27;
+    --duration: .7s;
+    /* animation duration for each menu button stroke animation. */
+}
+
+html,
+*::after,
+*::before {
+    margin: 0;
+    box-sizing: inherit;
+}
+
+/* Now we will put our menu bar at the center of the body and will
+apply some some background. */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* setting the full height up to the screen */
+    background-color: #ffb457;
+}
+
+/* properties to set the icon fit on the button  */
+
+.icon {
+    width: 2.6em;
+    height: 2.6em;
+    fill: transparent;
+    /* making the icon as transparent. */
+    stroke: white;
+    /* setting the stroke color as white */
+    stroke-width: 1pt;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 400;
+}
+
+/* Properties for menu-item container which has the menu class*/
+
+.menu {
+    display: flex;
+    position: relative;
+    padding: 0 40px;
+    justify-content: center;
+    background-color: var(--bgColorMenu);
+}
+
+/* Properties For menu-item class which is applied on the button. */
+.menu-item {
+    all: unset;
+    /* removing the all predefined properties for this button and 
+    for svg icon also. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    z-index: 100;
+    padding: 10px 15px 0 15px;
+    border-radius: 50%;
+    will-change: transform;
+    position: relative;
+    /* Since we will make this container also as the positioned layout 
+    container for its ::before element */
+    transition: transform 0.6s;
+}
+
+/* Now we will add the ::before element which will be in effective when
+the element is active. */
+
+.menu-item::before {
+    content: "";
+    z-index: -1;
+    /* Note that to work z-index properly element should be positioned. */
+    /* it will have no content but it will have some width and height*/
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rebeccapurple;
+    border-radius: 50%;
+    position: absolute;
+    /* absolute position relative to its container, */
+    transform: scale(0);
+    /* initially the menu-item::before element will be at zero scale. */
+    transition: transform 0.3s;
+}
+
+/* A property for an active menu item */
+
+.menu-item.active {
+    transform: translate3d(0, -.8em, 0);
+
+}
+
+/* A property for an menu-item::before element which also has the active
+class */
+.menu-item.active::before {
+    transform: scale(1);
+    background-color: coral;
+}
+
+/* Now we will apply some property on the menu-border */
+
+.menu-border {
+    /* first we will set it's position as absolute and set left as 0 */
+    position: absolute;
+    left: 0;
+    width: 8.9em;
+    height: 2.0em;
+    clip-path: url(#menu);
+    background-color: var(--bgColorMenu);
+    bottom: 99%;
+    transition: transform 0.7s;
+}
+
+/* Now we will also apply some animation effect on the svg strokes  */
+/* we need to select a menu-item which is active. */
+.menu-item.active .icon {
+    animation-name: strok;
+    animation-duration: 1.5s;
+    animation-direction: reverse;
+}
+
+@keyframes strok {
+
+    100% {
+        stroke-dashoffset: 400;
+    }
+}

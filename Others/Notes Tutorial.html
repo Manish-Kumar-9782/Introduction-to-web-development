@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<!--
+-------------------------------------------------------------------------------
+In this session we will make some notes by using css properties with span element.
+
+By Tag Name: span
+By id Name: hlight
+By class Name: redbox
+
+
+<meta> open element. internal infromation cotain . 
+
+charset: ASCII, ANSI, Unicode, UTF-8 
+
+UTF-8: Unicode Transformation format 8.
+-------------------------------------------------------------------------------
+-->
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notes Tutorial</title>
+
+        <style>
+
+                body{
+                    background-color: lightgrey;
+                }
+
+                h1{
+                    text-align: center;
+                }
+
+                h2{
+                    border-bottom: 2px solid #003b46;
+                    border-left: 2px solid #003b46;
+                    width: fit-content;
+                    color: #003b46;
+                }
+
+                div{
+                    border: 2px solid gray;
+                    background-color: aliceblue;
+                    margin: 10px;
+                    padding-left: 15px;
+                }
+
+
+                span.tag::before{
+                    content: " <";
+                }
+
+                span.tag::after{
+                    content: "> ";
+                }
+
+                span.tag{
+                    background-color: lightcoral;
+                    color: azure;
+                    font-family: sans-serif;
+                    border-radius: 4px;
+                }
+
+                span.header{
+                    background-color: rgb(233, 124, 247);
+                    color: rgb(73, 60, 168);
+                    font-family:'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    border-radius: 4px;
+                }
+
+                span{
+                    background-color: rgb(67, 83, 141);
+                    color: azure;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    border-radius: 4px;
+                }
+
+
+
+        </style>
+
+
+    </head>
+
+    <body>
+
+        <h1>Note Tutorial</h1>
+
+        <div>
+            <h2>The HTML title Element</h2>
+
+            <p>The <span class="tag">title</span> element defines the title of the document. The title must
+                be text-only, adn it shown in the browser's title bar or in the page's
+                tab.
+            </p>
+        </div>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+
+        <div>
+            <h2>The HTML style Element</h2>
+            <p>The <span class="tag">style</span> element is used to define style information for a single 
+                <span>HTML</span> page.
+            </p>
+        </div>
+
+        <span id="light" >This is test of span with light and tag</span>
+
+        <span class="header">This is header</span>
+
+        <span class="tag">html</span>
+        <span class="header">This is html class</span>
+       
+    </body>
+
+</html>

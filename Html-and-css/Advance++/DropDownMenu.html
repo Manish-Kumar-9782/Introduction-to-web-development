@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<!-- 
+    In this section we will make a dropdown menu. To make a dropdown menu we will use the following 
+    css properties.
+
+    position:absolute;
+    position:relative;
+    left, right, top, bottom, inset.
+ -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-color: white;
+            height: 100vh;
+        }
+
+        /* to make the dropdown menu in effect we need make the menu-container
+        as the containing block by placing the position: relative; on it.
+        
+        after using the position: relative on the .menu-container we need to use position: absolute; 
+        on both the .menu-button and .menu-list element.
+        */
+        .menu-container {
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+
+        .menu-button {
+            height: 40px;
+            min-width: 80px;
+            font-size: 17px;
+            width: auto;
+            padding: 10px;
+            position: absolute;
+            z-index: 2;
+
+            border: 0px;
+            background-color: var(--bg-color-1);
+            color: white;
+        }
+
+        .menu-button:hover {
+            background-color: rgb(41, 46, 75);
+            color: white;
+        }
+
+        ul.menu-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu-list {
+            position: absolute;
+            box-sizing: border-box;
+            background-color: var(--bg-color-1);
+            border: 1px solid var(--bg-color-1);
+            color: whitesmoke;
+            overflow: hidden;
+            z-index: 1;
+            top: 40px;
+            opacity: 0;
+            height: 0;
+            width: 0;
+            box-shadow: 3px 3px 5px 2px #151728a3;
+            will-change: height;
+            transition: height 0.4s ease-in-out,
+                opacity 0s ease-in-out,
+                width 0.4s ease-in-out;
+        }
+
+        .menu-list li {
+            box-sizing: border-box;
+            height: 40px;
+            margin: 5px 0px;
+            padding: 10px 5px;
+        }
+
+        .menu-list li:hover {
+            background-color: rgba(245, 245, 245, 0.078);
+            color: whitesmoke;
+            box-shadow: 1px 1px 6px 1px rgba(255, 255, 255, 0.415);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid rgb(255, 255, 255, .5);
+            cursor: pointer;
+        }
+
+        /*
+        Now we want to display the menu list when we hover over the menu button.
+        */
+
+        .menu-button:hover+.menu-list,
+        .menu-list:hover {
+            height: auto;
+            opacity: 1;
+            width: 200px;
+            transition: height 0.4s ease-in-out,
+                opacity 0.5s ease-in-out,
+                width 0.4s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- first of all we will make the container in which our menu button or 
+        intractable element will be contained, and also we wil put the drop down menu
+        list by using the ul list container. -->
+
+    <div class="flex-row al-center jc-center">
+
+        <!-- Now we will make the MenuContainer -->
+
+        <div class="menu-container border">
+
+            <button type="button" class="menu-button">
+                Menu
+            </button>
+
+            <ul class="menu-list">
+                <li>Google</li>
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>Twitter</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+
+</html>

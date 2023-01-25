@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Slide</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <button id="left">&lt;</button>
+        <div id="container">
+
+            <script>
+                let content = "";
+                for (let i = 0; i < 10; i++) {
+
+                    content += `<div class="card">
+                        <h1>Card-${i}</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate non sequi temporibus officiis
+                            veniam,
+                            ad repellat odit, cumque cum, soluta optio. Sunt error accusantium tempora repellendus, reiciendis
+                            fugiat consequuntur omnis voluptatibus, maiores ratione quasi quidem distinctio. Aperiam sunt fugiat
+                            quae suscipit dolores reiciendis velit ad, sit quisquam maiores totam, quia explicabo voluptatem,
+                            optio
+                            odio ipsa illo veniam eum repudiandae eos? Quis incidunt, ipsa blanditiis, fugit voluptates qui
+                            molestiae veritatis dicta voluptatibus sapiente ullam quod esse aut repudiandae illum praesentium
+                            facilis iure earum totam itaque consequatur omnis! Et voluptatibus a iusto maxime adipisci in rem
+                            delectus voluptate officia harum. Nemo, sunt.</p>
+                    </div>\n`
+                }
+
+                document.write(content);
+            </script>
+        </div>
+
+        <button id="right">&gt;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

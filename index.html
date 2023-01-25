@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Designing</title>
+    <link rel="stylesheet" href="./styles/colors.css">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <style>
+        header {
+            background-color: var(--lazurite-blue);
+        }
+
+        nav {
+            background-color: var(--rich-black);
+        }
+
+        .logo img {
+            width: 62px;
+            height: 62px;
+        }
+
+        .dropdown-menu--list {
+            background-color: var(--lazurite-blue) !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="flex-row al-center jc-between px-4 text-light">
+        <div class="logo flex-row al-center col-gap-3 py-2">
+            <img src="./images/logo.png" alt="logo" class="logo-img">
+            <h1 class="title">VIRST Learning</h1>
+        </div>
+
+        <ul class="flex-row al-center col-gap-3 nav-bar">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </header>
+
+    <nav class="flex-row al-center px-4 col-gap-3 text-light py-1">
+        <h2>Topic</h2>
+        <ul class="nav-bar flex-row al-center col-gap-3 dropdowns">
+
+        </ul>
+    </nav>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Card</title>
+
+    <style>
+        .f-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            border: 2px solid;
+            width: 600px;
+            height: 600px;
+            background-color: rgb(75, 132, 206);
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #details h1,
+        #details p {
+            margin: 0px;
+            padding-left: 15px;
+        }
+
+        #retailer p,
+        #retailer .block {
+            margin-top: 5px;
+            padding-left: 15px;
+        }
+
+
+
+        #sections {
+            display: flex;
+            padding: 0px 15px;
+            justify-content: space-between;
+        }
+
+        #sections p {
+            margin: 0px;
+            margin-top: 5px;
+        }
+
+        .circle {
+            width: 48px;
+            height: 48px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+
+        }
+
+        .block {
+            display: flex;
+            margin-bottom: 5px;
+        }
+
+        .card {
+            width: 350px;
+            height: 450px;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: white;
+        }
+    </style>
+
+</head>
+
+<body class="f-center">
+
+
+    <div class="container f-center">
+
+        <div class="card">
+
+            <img src="../Images/house image.jpg" alt="house image">
+
+            <div id="details">
+
+                <p>Detached House. 5Y OLD</p>
+                <h1>$750,000</h1>
+                <p>742 Evergreen Street</p>
+
+            </div>
+
+            <div id="sections">
+                <p>3 Bedroom</p>
+                <p>2 Bathroom</p>
+            </div>
+
+            <div id="retailer">
+                <P>Retailer</P>
+                <div class="block">
+                    <img src="../Images/witcher-silver.jpg" alt="user" class="circle">
+                    <p>+1-9876543215</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

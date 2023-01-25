@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html> 
+
+	<!-- This is a boxmodel session in which we will learn that, every element contain three parts.
+	
+		1. padding: padding is the internal space b/w content and border. 
+		2. border: it is highlighted border b/w padding region and margin region.
+		3. margin: it is outer space around the border of the element.
+		
+		
+		In this section we will also learn about <div> and <ul> element.
+		
+		<div>: it is a block level cotainer which can contain all the element which are used in <body> element.
+		
+		<ul>: (unordered list) genreally it used to cotain the list item.
+		<li>:(list item) it a list item element which is used to contain content of the list.
+	-->
+	
+	<head> 
+		<title>BoxModel2</title>
+		
+		<style> 
+			
+			li{
+			color:blue;
+			}
+			
+			/*This is comment*/
+			
+			
+			#elements{
+				border:5px solid;
+				margin:20px;
+				padding:0px;
+				color:green;
+			}
+			
+			#elements li{
+				color:red;
+			}
+			
+			#elements h3{
+				margin:0px
+			}
+		
+		</style>
+		
+	</head>
+	
+	<body> 
+		<h1 style="padding:40px;border:40px solid dodgerblue;margin:20px;"> This is BoxModel2</h1>
+		
+		<div style="border:40px solid;"> 
+		
+			<h2>BoxModel characteristics</h2>
+			
+			<p>This is a box model representation, in which we see about the border, margin, padding properties.</p>
+			
+			<ul>
+				<li>Padding: padding is the internal space b/w content and border. </li>
+				<li>border: it is highlighted border b/w padding region and margin region. </li>
+				<li>margin: it is outer space around the border of the element. </li>
+				<li>ul: (unordered list) genreally it used to cotain the list item. </li>
+				<li>li:(list item) it a list item element which is used to contain content of the list. </li>
+			</ul>
+			
+		</div>
+		
+		
+		<div id="elements"> 
+		
+			<h3>Used Elements</h3>
+			<ul> 
+				Inside ul
+				<li>div element</li>
+				<li>p element</li>
+				<li>ul element</li>
+				<li>li element</li>
+			</ul>
+		
+		</div>
+		
+	</body>
+
+</html>

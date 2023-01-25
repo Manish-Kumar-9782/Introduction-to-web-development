@@ -1,4 +1,4 @@
-:root{
+:root {
     --aqua-lake: #2f9599;
     --ruby-dust: #e8175d;
 
@@ -16,12 +16,12 @@
 
     /* Hazy Greys */
     --modern-ivary: #f4ebdb;
-    --tranqulity: #8e9b97;
+    --tranquility: #8e9b97;
     --juniper-berries: #537072;
     --dads-coupe: #2c4a52;
 
     /* Exotic & Hight impact */
-    --trapeed_darkness: #0f1f38;
+    --trapped_darkness: #0f1f38;
     --cedar-plank: #8e7970;
     --pumping-spice: #f55449;
     --lazurite-blue: #1b4b5a;
@@ -29,12 +29,12 @@
 
     /* with low mid alpha*/
 
-    --moder-ivary-low :#f4ebdb5e;
-    
+    --moder-ivary-low: #f4ebdb5e;
+
 
     /* with 20% transparancy */
     --ruby-dust-transparent: #e8175d33;
-    --nirvana-jewel-transparent:#66a5ad33;
+    --nirvana-jewel-transparent: #66a5ad33;
     --water-music-transparent: #6eb5c033;
     --dads-coupe-transparent: #2c4a5233;
     --trapeed_darkness-transparent: #0f1f3833;
@@ -47,7 +47,7 @@
 
 
 
-.green{
+.green {
     color: rgb(15, 96, 15);
     background-color: rgba(0, 128, 0, 0.215);
     font-family: inherit;
@@ -57,7 +57,7 @@
     padding-top: 0px;
 }
 
-.gray{
+.gray {
     color: darkslategray;
     background-color: rgba(47, 79, 79, 0.195);
     /* font-family: inherit; */

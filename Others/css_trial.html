@@ -1,0 +1,164 @@
+<!DOCTYPE html> 
+
+<!-- // document declaration -->
+
+<!-- <html>  </html> -->
+
+<!--this is comment-->
+
+<html lang="en">
+
+    <head>
+
+        <title> Hello World </title>
+
+        <style>
+
+            body{
+                background-color: rgb(241, 241, 252);
+            }
+
+            div{
+                border: 4px solid #fff;
+                border-radius: 5px;
+                padding: 10px;
+                margin-top: 15px;
+            }
+
+            p{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            #header h1{
+                text-align: center;
+                background-color: rgba(248, 162, 130, 0.332);
+                padding: 5px;
+                color: rgb(80, 39, 137);
+                margin: 0px;
+            }
+
+            #header p{
+                background-color: floralwhite;
+                margin: 0px;
+                padding: 10px;
+            }
+
+            code{
+                font-size:large;
+            }
+
+            .tag::after{
+                content: ">";
+            }
+
+            .tag::before{
+                content: "<";
+            }
+
+            .tag{
+            
+                color: rgb(171, 95, 68);
+                background-color: rgba(171, 95, 68 , 0.16);
+                padding: 0px 2px;
+                border-radius: 3px;
+            }
+
+            .inherit{
+                background-color: inherit;
+                color: inherit;
+                font-family: inherit;
+                font-size: inherit;
+                
+            }
+
+            h2{
+                color: rgb(213, 107, 41);
+                
+            }
+
+            h3{
+                color: cornflowerblue;
+                border-bottom: 2px solid;
+                padding-bottom: 1px;
+                width: fit-content;
+                
+            }
+
+            /* for attributes */
+            .attr{
+                color: rgb(7, 157, 191);
+                background-color: rgba(7, 157, 191, 0.17);
+            }
+
+            /* for propertye */
+            .pro{}
+
+            /* for pvalue */
+            .pvalue{
+                color: rgb(158, 48, 103);
+                background-color: rgba(158, 48, 103, 0.17);
+            }
+
+            .mark{
+                color: rgb(154, 75, 49);
+                background-color: rgba(154, 75, 49, 0.17);
+            }
+
+            .Note::before{
+                content: "Note: ";
+                color: rgb(64, 111, 159);
+            }
+
+            .Note{
+                background-color: rgba(64, 111, 159, 0.20);
+                line-height: 1.4em;
+                padding: 10px;
+                border: 1px solid rgba(19, 84, 149, 0.30);
+                border-left: 4px solid rgb(19, 84, 149);
+                border-radius: 4px;
+            }
+
+        </style>
+    
+    </head>
+
+    <body>
+        
+        <header id="header">
+            <h1>HTML Core Element and Attributes</h1>
+
+            <p>In every HTML Document we have four main elements that form the 
+                basic structure of the every HTML Document. 
+                <code class="tag">hmtl</code>, 
+                <code class="tag">head</code>,
+                <code class="tag">title</code>,
+                <code class="tag">body</code>. 
+            </p>
+        </header>
+
+        <div>
+            <h3>The <code class="tag inherit">hmtl</code> Element</h3>
+            <p>The <code class="tag">html</code> element is the containing element for the HTML document. 
+                we should add this this element just after declaring the document 
+                type declaration.</p>
+
+
+            <ul>
+                <li><b class="mark">Core Attriubte:</b> The 
+                    <code class="attr">class</code>,
+                    <code class="attr">id</code>, and
+                    <code class="attr">title</code> attributes.
+                </li>
+            </ul>
+
+            <p class="Note">Together, the core attriubtes and the internationalization 
+                attributes are known as universal attributes.</p>
+        </div>
+
+
+
+       
+        
+    </body>
+
+</html>
