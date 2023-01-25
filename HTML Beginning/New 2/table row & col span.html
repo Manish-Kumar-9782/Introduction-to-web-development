@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Table Row & Col Span</title>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid rgb(119, 133, 138);
+            border-collapse: collapse;
+            height: 40px;
+        }
+
+        th {
+            background-color: #567189;
+            color: #f5f5f5d4;
+        }
+
+        td {
+            color: #05101a;
+        }
+
+        table {
+            background-color: #949ea7;
+            width: 50%;
+            border: 5px solid #567189;
+            text-align: center;
+
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        td:hover {
+            background-color: #456a8b;
+            cursor: pointer;
+        }
+
+        th:hover {
+            background-color: #113a60;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Name</th>
+                <th rowspan="2">Age</th>
+                <th rowspan="2">height</th>
+                <th rowspan="2">BloodGroup</th>
+            </tr>
+
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>Sachin</td>
+                <td>Chaudhary</td>
+                <td>18</td>
+                <td>5.6</td>
+                <td>B+</td>
+            </tr>
+
+            <tr>
+                <td>Karan</td>
+                <td>Singh</td>
+                <td>18</td>
+                <td>5.6</td>
+                <td>O-</td>
+            </tr>
+
+            <tr>
+                <td>Jitendra</td>
+                <td>Singh</td>
+                <td>26</td>
+                <td>5.8</td>
+                <td>AB+</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>
