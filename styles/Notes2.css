@@ -397,6 +397,8 @@ summary {
     background-color: #93C6E7;
     color: #1e5376;
     padding-left: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
 }
 
 .dl-sky dd {
