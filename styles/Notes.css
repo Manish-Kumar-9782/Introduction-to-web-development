@@ -1,16 +1,18 @@
-body{
+body {
     margin: 20px;
 
 }
 
-.element.tag, .element{
+
+.element.tag,
+.element {
     box-sizing: border-box;
     height: fit-content;
     background-color: rgb(251 196 148 / 20%);
     border: 1px solid rgb(251 196 148 / 20%);
     border-radius: 5px;
     color: #d06c41d9;
-    
+
 }
 
 .element.tag.h1 {
@@ -20,22 +22,30 @@ body{
     border-radius: 5px;
 }
 
-.element, .tag{
+.element {
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
     padding-left: 3px;
     padding-bottom: 0px;
     font-size: 1.0em;
 }
 
-.tag::before{
-    content: "<";
-    background-color:none;
+p .tag {
+    font-family: monospace;
+    font-size: 1.27em;
 }
 
-.tag::after{
+:is(h1, h2, h3, h4, h5, h6) .tag {
+    font-size: 1.37em;
+}
+
+.tag::before {
+    content: "<";
+    background-color: none;
+}
+
+.tag::after {
     content: ">";
-    background-color:none;
+    background-color: none;
 }
 
 .tag.h1::before {
@@ -52,29 +62,29 @@ body{
 
 /* Now we will change the font of the for all p element content */
 
-p{
+p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.4rem;
 }
 
-htmlcode{
-    color:black;
+htmlcode {
+    color: black;
     border: 1px solid;
     font-family: Georgia, Times, 'Times New Roman', serif;
 }
 
-htmlcode.plain{
-    color:teal;
+htmlcode.plain {
+    color: teal;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border: 0px solid;
 
 }
 
-htmlcode.plain *{
-    color:teal;
+htmlcode.plain * {
+    color: teal;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border: 0px solid;
-    
+
 }
 
 /* htmlcode::before{
@@ -95,29 +105,31 @@ htmlcode::after{
 
 /*heading properties.*/
 
-h4{
+h4 {
     margin-bottom: 0px;
     margin-top: 30px;
-    
+
 }
 
-div h2, div h2 code.element.tag{
-    color:chocolate
+div h2,
+div h2 code.element.tag {
+    color: chocolate
 }
-div h2 code.element.tag{
+
+div h2 code.element.tag {
     background-color: wheat;
     border: 1px solid wheat;
     border-radius: 6px;
 }
 
-h3 code.element.tag.h1{
-    color:inherit;
+h3 code.element.tag.h1 {
+    color: inherit;
     background-color: inherit;
     border-color: inherit;
 }
 
 /* Style for footer also */
-footer{
+footer {
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: large;
@@ -128,23 +140,24 @@ footer{
 
 /* a style for body */
 
-body{
+body {
     background-color: rgb(241, 241, 252);
 }
 
-div{
+div {
     background-color: rgb(241, 241, 252);
-    border:5px solid white;
-    padding-left:10px;
-    padding-right:10px;
+    border: 5px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-table{
+table {
     border: 1px solid;
     border-collapse: collapse;
 }
 
-table th,td{
+table th,
+td {
     border: 1px solid;
     padding: 5px;
 }

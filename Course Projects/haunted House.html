@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haunted House On Sale</title>
+
+    <style>
+        /* Importing a google font to make it look better. */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        /* applying poppins font family to all */
+        * {
+            font-family: poppins, "sans-serif";
+            font-size: large;
+        }
+
+        .text-light {
+            color: rgba(245, 245, 245, 0.75);
+        }
+
+        .flex-row {
+            display: flex;
+        }
+
+        .jc-between {
+            justify-content: space-between;
+        }
+
+        .jc-around {
+            justify-content: space-around;
+        }
+
+        /* aligning flex-item at center on cross axis  */
+        .al-center {
+            align-items: center;
+        }
+
+        /* justifying flex-item at center on main axis */
+        .jc-center {
+            justify-content: center;
+        }
+
+        .card {
+            width: 500px;
+            min-height: 600px;
+            background-image: url("../hounted house.jpg");
+            border-radius: 25px;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+        }
+
+        /* factor 1 = 5px */
+
+        .px-3 {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .py-3 {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .my-3 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .border-bottom {
+            border-bottom: 2px ridge;
+        }
+
+        .group>* {
+            margin: 0px;
+        }
+
+        .circle-48 {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body class="flex-row jc-center al-center">
+
+    <div class="card text-light">
+        <div class="card-img">
+            <img src="../hounted house.jpg" alt="Bhoot Bangla">
+        </div>
+
+        <div class="card-gn-details px-3 border-bottom">
+            <p>
+                <span><b>DETACHED HOUSE: 125Y OLD</b></span> <br>
+                <span>Amount: 15Cr./-</span> <br>
+                <span>Bhoot Bangla, Town 420, Street 007</span>
+            </p>
+
+        </div>
+
+        <div class="card-bhk-details border-bottom py-3">
+
+            <div class="flex-row jc-between px-3 group">
+                <p>15 Bedroom </p>
+                <p>2 Bathroom</p>
+            </div>
+
+            <div class="flex-row jc-between px-3 group">
+                <p>1 Large Hall</p>
+                <p>2 Swimming Pool</p>
+            </div>
+
+            <div class="flex-row jc-between px-3 group">
+                <p>1 Longe</p>
+                <p>2 Beach Front</p>
+            </div>
+
+        </div>
+
+        <div class="card-retailer group px-3 py-3">
+            <p><b>Retailer</b></p>
+            <div class="flex-row al-center">
+                <img class="circle-48" src="../witcher-silver.jpg" alt="The Geralt">
+                <div class="group px-3">
+                    <p>Geralt Of Rivia</p>
+                    <p>+91 9874563218</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

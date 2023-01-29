@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Web Page 1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        body {
+            background-color: #282A3A;
+            color: whitesmoke;
+            font-family: poppins, sans-serif;
+            margin: 0px;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #d8ade62b 50%, transparent);
+            width: 100%;
+
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .flex-row {
+            display: flex;
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fs-medium {
+            font-size: large;
+        }
+
+        .fs-large {
+            font-size: x-large;
+        }
+
+        .fs-xlarge {
+            font-size: xx-large;
+        }
+
+        .jc-between {
+            justify-content: space-between;
+        }
+
+        .jc-center {
+            justify-content: center;
+        }
+
+        .jc-around {
+            justify-content: space-around;
+        }
+
+        .jc-around-20 {
+            width: 20vw;
+            min-width: 20vw;
+            max-width: 30vw;
+            justify-content: space-around;
+        }
+
+        .al-center {
+            align-items: center;
+        }
+
+        /* margin in x direction with 4*5 = 20px  */
+        .mx-4 {
+            --margin-factor: 4;
+            margin-left: calc(var(--margin-factor)*5px);
+            margin-right: calc(var(--margin-factor)*5px);
+        }
+
+        .mx-2 {
+            --margin-factor: 2;
+            margin-left: calc(var(--margin-factor)*5px);
+            margin-right: calc(var(--margin-factor)*5px);
+        }
+
+        .mx-1 {
+            --margin-factor: 1;
+            margin-left: calc(var(--margin-factor)*5px);
+            margin-right: calc(var(--margin-factor)*5px);
+        }
+
+        .my-4 {
+            --margin-factor: 4;
+            margin-top: calc(var(--margin-factor)*5px);
+            margin-bottom: calc(var(--margin-factor)*5px);
+        }
+
+        .my-2 {
+            --margin-factor: 2;
+            margin-top: calc(var(--margin-factor)*5px);
+            margin-bottom: calc(var(--margin-factor)*5px);
+        }
+
+        .my-1 {
+            --margin-factor: 1;
+            margin-top: calc(var(--margin-factor)*5px);
+            margin-bottom: calc(var(--margin-factor)*5px);
+        }
+
+        #p-tabs {
+            flex: 1;
+            border-radius: 15px;
+            background-color: #259bfb43;
+
+        }
+
+        #p-tabs>div:nth-child(1) {
+            background-color: rgba(240, 128, 128, 0.527);
+            border-radius: 50%;
+        }
+
+        #p-tabs>div {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #p-tabs>div:hover {
+            background-color: rgba(240, 128, 128, 0.527);
+            border-radius: 50%;
+        }
+
+        #p-cards {
+            flex: 9;
+            border-radius: 15px;
+            background-color: #3a4f7a77;
+        }
+
+        #p-comments {
+            flex: 4;
+            border-radius: 15px;
+            background-color: #3a4f7a77;
+        }
+
+        /* a container for our main content. */
+        #content {
+            height: 650px;
+        }
+
+        #content>div {
+            margin: 10px;
+        }
+
+        /* Now we will make the project card class to set some project card properties:
+
+            width: it will have limited size of width;
+            height: it will also have height so it will not expand.
+            border-radius: we will give some border-radius to make rounded corner of project-card container's 
+        */
+
+        .project-card {
+            width: 250px;
+            height: fit-content;
+            background-color: #90746e3b;
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        /* Now we will make a progress bar with progress class 
+            For this we will use the ::after pseudo element 
+        */
+
+        .project-card-container {
+            height: 75%;
+            overflow-y: auto;
+            flex-wrap: wrap;
+        }
+
+        div.progress::after {
+            content: "";
+            display: block;
+            width: var(--progress);
+            height: 10px;
+            background-color: dodgerblue;
+        }
+
+        .roundx-40 {
+            height: 40px;
+            width: fit-content;
+            padding: 0px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            background-color: lightcoral;
+        }
+
+        .user-img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+
+        .msg-card {
+            background-color: #7cb3be2e;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+
+        }
+
+        #client-message-block {
+            overflow: auto;
+            height: 550px;
+        }
+
+        .msg-card-footer {
+            height: 20px;
+        }
+
+        .msg-card-content::before {
+            content: "";
+            display: block;
+            border-top: 1px solid;
+            width: 100%;
+            margin-top: 5px;
+            opacity: 15%;
+        }
+
+        .msg-card-content::after {
+            content: "";
+            display: block;
+            border-bottom: 1px solid;
+            width: 100%;
+            margin-bottom: 5px;
+            opacity: 15%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top header part -->
+
+    <header>
+        <!-- Out container for containing left and right section. -->
+        <div class="flex-row jc-between mx-4">
+
+            <!-- left section of header
+                
+                flex-row: to make flex-container.
+                al-center: if flex-container, then align them on cross axis  (y-axis) 
+                jc-around-20: if flex-container, then it will set the container size as 20vw of viewport.
+                    then it will apply the justify-content:space-around; 
+            -->
+            <div class="flex-row al-center jc-around-20">
+                <!-- 1. menu bar, text, search input -->
+                <div><i class="bi bi-list"></i></div>
+                <p>Portfolio</p>
+                <input type="search" name="search" id="search" placeholder="Search">
+            </div>
+
+            <!-- right section of header -->
+            <div class="flex-row al-center jc-around-20">
+                <!-- theme mode icon, + icon, notify icon, v-bar, user logo, user Name -->
+                <div><i class="bi bi-moon"></i></div>
+                <div><i class="bi bi-plus-lg"></i></div>
+                <div><i class="bi bi-bell-fill"></i></div>
+                <div><i class="bi bi-person-circle"></i></div>
+                <div>User name</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- bottom flex container with three different container. -->
+    <div id="content" class="flex-row mx-4">
+
+        <!-- first container will be our tab container. -->
+
+        <!-- 
+            flex-col: it will set the display as flex and flex-direction to column.
+            fs-xlarge: it will se the font-size to the xx-large
+
+         -->
+        <div id="p-tabs" class="flex-col jc-around fs-xlarge al-center">
+            <div><i class="bi bi-house-door-fill"></i></div>
+            <div><i class="bi bi-pie-chart-fill"></i></div>
+            <div><i class="bi bi-calendar2-fill"></i></div>
+            <div><i class="bi bi-gear-fill"></i></div>
+        </div>
+
+        <!-- it will contain our portfolio cards with additional information. -->
+        <div id="p-cards">
+
+            <!-- p card to heading with title and date. -->
+            <div class="flex-row jc-between mx-4">
+                <h3>Projects</h3>
+                <h4>August, 25</h4>
+            </div>
+
+            <!-- 
+            flex-row: it will place all element into a row. (only immediate children)
+            jc-between: it will make equal space in between all elements  (only immediate children)
+            -->
+            <div class="flex-row jc-between al-center">
+
+                <div class="flex-row jc-around-20 mx-4 jc-between">
+                    <p>
+                        <b>45</b><br>
+                        In Progress
+                    </p>
+                    <p>
+                        <b>26</b><br>
+                        Upcoming
+                    </p>
+                    <p>
+                        <b>67</b><br>
+                        Total Projects
+                    </p>
+                </div>
+
+                <div class="mx-4">
+                    <button class="fs-large"><i class="bi bi-list-ul"></i></button>
+                    <button class="fs-large"><i class="bi bi-grid-fill"></i></button>
+                </div>
+
+            </div>
+
+            <div class="project-card-container flex-row mx-2">
+
+                <!-- card 1 -->
+                <div class="project-card mx-1 my-1">
+
+                    <div class="project-card-header flex-row jc-between al-center">
+                        <p>August 25, 2022</p>
+                        <div><i class="bi bi-three-dots-vertical"></i></div>
+                    </div>
+
+                    <div class="project-card-content text-center ">
+
+                        <p>
+                            <span style="color:red;">Web Development</span><br>
+                            Prototype
+                        </p>
+
+                    </div>
+
+                    <div class="project-card-progress">
+
+                        <div class="progress" style="--progress: 50%">Progress</div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="project-card-footer flex-row jc-between mx-1 al-center">
+                        <div class="fs-xlarge flex-row">
+                            <div><i class="bi bi-person-circle mx-1"></i></div>
+                            <div><i class="bi bi-person-circle mx-1"></i></div>
+                            <div><i class="bi bi-plus-circle-fill mx-1"></i></div>
+                        </div>
+                        <p class="roundx-40">3 Days Left</p>
+                    </div>
+
+                </div>
+
+
+                <!-- card 2 -->
+                <div class="project-card mx-1 my-1">
+
+                    <div class="project-card-header flex-row jc-between al-center">
+                        <p>August 25, 2022</p>
+                        <div><i class="bi bi-three-dots-vertical"></i></div>
+                    </div>
+
+                    <div class="project-card-content text-center ">
+
+                        <p>
+                            <span style="color:red;">Web Development</span><br>
+                            Prototype
+                        </p>
+
+                    </div>
+
+                    <div class="project-card-progress">
+
+                        <div class="progress" style="--progress: 50%">Progress</div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="project-card-footer flex-row jc-between mx-1 al-center">
+                        <div class="fs-xlarge flex-row">
+                            <div><i class="bi bi-person-circle mx-1"></i></div>
+                            <div><i class="bi bi-person-circle mx-1"></i></div>
+                            <div><i class="bi bi-plus-circle-fill mx-1"></i></div>
+                        </div>
+                        <p class="roundx-40">3 Days Left</p>
+                    </div>
+
+                </div>
+
+
+                <!-- card 3 -->
+                <div class="project-card mx-1 my-1">
+
+                    <div class="project-card-header flex-row jc-between al-center">
+                        <p>August 25, 2022</p>
+                        <div><i class="bi bi-three-dots-vertical"></i></div>
+                    </div>
+
+                    <div class="project-card-content text-center ">
+
+                        <p>
+                            <span style="color:red;">Web Development</span><br>
+                            Prototype
+                        </p>
+
+                    </div>
+
+                    <div class="project-card-progress">
+
+                        <div class="progress" style="--progress: 50%">Progress</div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="project-card-footer flex-row jc-between mx-1 al-center">
+                        <div class="fs-xlarge flex-row">
+                            <div><i class="bi bi-person-circle mx-1"></i></div>
+                            <div><i class="bi bi-person-circle mx-1"></i></div>
+                            <div><i class="bi bi-plus-circle-fill mx-1"></i></div>
+                        </div>
+                        <p class="roundx-40">3 Days Left</p>
+                    </div>
+
+                </div>
+
+
+                <!-- card 4 -->
+                <div class="project-card mx-1 my-1">
+
+                    <div class="project-card-header flex-row jc-between al-center">
+                        <p>August 25, 2022</p>
+                        <div><i class="bi bi-three-dots-vertical"></i></div>
+                    </div>
+
+                    <div class="project-card-content text-center ">
+
+                        <p>
+                            <span style="color:red;">Web Development</span><br>
+                            Prototype
+                        </p>
+
+                    </div>
+
+                    <div class="project-card-progress">
+
+                        <div class="progress" style="--progress: 50%">Progress</div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="project-card-footer flex-row jc-between mx-1 al-center">
+                        <div class="fs-xlarge flex-row">
+                            <div><i class="bi bi-person-circle mx-1"></i></div>
+                            <div><i class="bi bi-person-circle mx-1"></i></div>
+                            <div><i class="bi bi-plus-circle-fill mx-1"></i></div>
+                        </div>
+                        <p class="roundx-40">3 Days Left</p>
+                    </div>
+
+                </div>
+
+
+                <!-- card 5 -->
+                <div class="project-card mx-1 my-1">
+
+                    <div class="project-card-header flex-row jc-between al-center">
+                        <p>August 25, 2022</p>
+                        <div><i class="bi bi-three-dots-vertical"></i></div>
+                    </div>
+
+                    <div class="project-card-content text-center ">
+
+                        <p>
+                            <span style="color:red;">Web Development</span><br>
+                            Prototype
+                        </p>
+
+                    </div>
+
+                    <div class="project-card-progress">
+
+                        <div class="progress" style="--progress: 50%">Progress</div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="project-card-footer flex-row jc-between mx-1 al-center">
+                        <div class="fs-xlarge flex-row">
+                            <div><i class="bi bi-person-circle mx-1"></i></div>
+                            <div><i class="bi bi-person-circle mx-1"></i></div>
+                            <div><i class="bi bi-plus-circle-fill mx-1"></i></div>
+                        </div>
+                        <p class="roundx-40">3 Days Left</p>
+                    </div>
+
+                </div>
+
+
+                <!-- card 6 -->
+                <div class="project-card mx-1 my-1">
+
+                    <div class="project-card-header flex-row jc-between al-center">
+                        <p>August 25, 2022</p>
+                        <div><i class="bi bi-three-dots-vertical"></i></div>
+                    </div>
+
+                    <div class="project-card-content text-center ">
+
+                        <p>
+                            <span style="color:red;">Web Development</span><br>
+                            Prototype
+                        </p>
+
+                    </div>
+
+                    <div class="project-card-progress">
+
+                        <div class="progress" style="--progress: 50%">Progress</div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="project-card-footer flex-row jc-between mx-1 al-center">
+                        <div class="fs-xlarge flex-row">
+                            <div><i class="bi bi-person-circle mx-1"></i></div>
+                            <div><i class="bi bi-person-circle mx-1"></i></div>
+                            <div><i class="bi bi-plus-circle-fill mx-1"></i></div>
+                        </div>
+                        <p class="roundx-40">3 Days Left</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- it will contain comments of different users. -->
+        <div id="p-comments">
+            <h3 class="mx-4">Client Message</h3>
+
+            <!-- we will make a client-message-block in which all the client message will be displayed
+            
+                -> in this block we will have card-message container for each message.
+                -> each msg-card block will contain three parts.
+                    -> msg-card-header : for header info (user logo, name, date other)
+                    -> msg-card-content: for main message content.
+                    -> msg-card-footer : for message card footer details like, date, time, like, comment etc.
+            -->
+            <div id="client-message-block">
+                <div class="msg-card">
+                    <div class="msg-card-header flex-row jc-between al-center mx-2">
+                        <!-- In this we will have to main child item 
+                            1. user logo with name, 2. start button for favorite/BookMark-->
+
+                        <div class="flex-row al-center">
+                            <img src="witcher-silver.jpg" class="user-img" alt="user-logo">
+                            <p class="mx-2">Geralt Of Rivia</p>
+                        </div>
+                        <div class="fs-large">
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+
+                    <div class="msg-card-content">
+                        <p>Witcher geralt of rivia is monster killer which is a mutant made with a powerful magic
+                            and very brutal training, in that training only 2 or 3 of 100 survives.</p>
+                    </div>
+
+                    <div class="msg-card-footer flex-row jc-between al-center">
+                        <div>
+                            <i class="bi bi-hand-thumbs-up-fill mx-1"></i>
+                            <i class="bi bi-chat-left mx-1"></i>
+                        </div>
+                        <p>Aug, 25</p>
+                    </div>
+                </div>
+
+                <div class="msg-card">
+                    <div class="msg-card-header flex-row jc-between al-center mx-2">
+                        <!-- In this we will have to main child item 
+                            1. user logo with name, 2. start button for favorite/BookMark-->
+
+                        <div class="flex-row al-center">
+                            <img src="ciri.webp" class="user-img" alt="user-logo">
+                            <p class="mx-2">Cirilla Fiona</p>
+                        </div>
+                        <div class="fs-large">
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+
+                    <div class="msg-card-content">
+                        <p>Hatred and vengeance blinded me ... But I shall stand before them in humility. I shall
+                            remember the expression in their eyes. I hope the memory of those eyes will stop me making a
+                            similar mistake.</p>
+                    </div>
+                    <div class="msg-card-footer flex-row jc-between al-center">
+                        <div>
+                            <i class="bi bi-hand-thumbs-up-fill mx-1"></i>
+                            <i class="bi bi-chat-left mx-1"></i>
+                        </div>
+                        <p>Aug, 25</p>
+                    </div>
+                </div>
+
+                <div class="msg-card">
+                    <div class="msg-card-header flex-row jc-between al-center mx-2">
+                        <!-- In this we will have to main child item 
+                            1. user logo with name, 2. start button for favorite/BookMark-->
+
+                        <div class="flex-row al-center">
+                            <img src="witcher-silver.jpg" class="user-img" alt="user-logo">
+                            <p class="mx-2">Geralt Of Rivia</p>
+                        </div>
+                        <div class="fs-large">
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                    <div class="msg-card-content">
+                        <p>Witcher geralt of rivia is monster killer which is a mutant made with a powerful magic
+                            and very brutal training, in that training only 2 or 3 of 100 survives.</p>
+                    </div>
+                    <div class="msg-card-footer flex-row jc-between al-center">
+                        <div>
+                            <i class="bi bi-hand-thumbs-up-fill mx-1"></i>
+                            <i class="bi bi-chat-left mx-1"></i>
+                        </div>
+                        <p>Aug, 25</p>
+                    </div>
+                </div>
+
+                <div class="msg-card">
+                    <div class="msg-card-header flex-row jc-between al-center mx-2">
+                        <!-- In this we will have to main child item 
+                            1. user logo with name, 2. start button for favorite/BookMark-->
+
+                        <div class="flex-row al-center">
+                            <img src="witcher-silver.jpg" class="user-img" alt="user-logo">
+                            <p class="mx-2">Geralt Of Rivia</p>
+                        </div>
+                        <div class="fs-large">
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                    <div class="msg-card-content">
+                        <p>Witcher geralt of rivia is monster killer which is a mutant made with a powerful magic
+                            and very brutal training, in that training only 2 or 3 of 100 survives.</p>
+                    </div>
+                    <div class="msg-card-footer flex-row jc-between al-center">
+                        <div>
+                            <i class="bi bi-hand-thumbs-up-fill mx-1"></i>
+                            <i class="bi bi-chat-left mx-1"></i>
+                        </div>
+                        <p>Aug, 25</p>
+                    </div>
+                </div>
+
+                <div class="msg-card">
+                    <div class="msg-card-header flex-row jc-between al-center mx-2">
+                        <!-- In this we will have to main child item 
+                            1. user logo with name, 2. start button for favorite/BookMark-->
+
+                        <div class="flex-row al-center">
+                            <img src="witcher-silver.jpg" class="user-img" alt="user-logo">
+                            <p class="mx-2">Geralt Of Rivia</p>
+                        </div>
+                        <div class="fs-large">
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                    <div class="msg-card-content">
+                        <p>Witcher geralt of rivia is monster killer which is a mutant made with a powerful magic
+                            and very brutal training, in that training only 2 or 3 of 100 survives.</p>
+                    </div>
+                    <div class="msg-card-footer flex-row jc-between al-center">
+                        <div>
+                            <i class="bi bi-hand-thumbs-up-fill mx-1"></i>
+                            <i class="bi bi-chat-left mx-1"></i>
+                        </div>
+                        <p>Aug, 25</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox Practice X</title>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Poppins', 'sans-sarif';
+            background-color: lightblue;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            color: whitesmoke;
+            background-color: #3474e6;
+            align-items: center;
+            padding: 0px 10px;
+        }
+
+        #header h1 {
+            margin: 10px;
+        }
+
+        #header ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        #header ul li {
+            margin-right: 20px;
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        img {
+            width: 400px;
+            margin-right: 40px;
+        }
+
+        #mid-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(46, 71, 214);
+            color: whitesmoke;
+            padding: 20px;
+        }
+
+        #mid-container .content {
+            flex: 3;
+        }
+
+        #heading {
+            font-size: 5.6rem;
+            margin: 0px;
+        }
+
+
+        #mid-container .image {
+            flex: 2;
+        }
+
+        #footer {
+            display: flex;
+            margin-top: 10px;
+            justify-content: space-evenly;
+        }
+
+        .card {
+            background-color: rgb(46, 71, 214);
+            color: whitesmoke;
+            margin: 15px;
+            max-width: 450px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+    -------------------------------------------------------------------------------
+    first we will make three main container
+    -------------------------------------------------------------------------------
+    -->
+
+    <div id="header">
+        <h1>FlexBox</h1>
+
+        <ul>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+        </ul>
+    </div>
+
+    <!--
+    -------------------------------------------------------------------------------
+    mid container will contain svg image, and some description about the page.
+    -------------------------------------------------------------------------------
+    -->
+    <div id="mid-container">
+
+        <div class="cotnent">
+
+            <h1 id="heading">FlexBox Practice</h1>
+            <p>This is a simple practice web page about the flexbox and its property in this practice course we will
+                learn how to use the flexbox container and its how to control its items.</p>
+
+        </div>
+
+        <div class="image">
+            <!-- img is a void element,  -->
+            <img src="grid.svg" alt="gird boxes">
+        </div>
+
+    </div>
+
+    <div id="footer">
+
+        <div class="card">
+            <h2>Tricky Position</h2>
+            <p>Flexbox usually solves tricy problems including how to Position or dynamically resize elements on a page.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Responsive Design</h2>
+            <p>Flexbox makes building a website layout (and making it responsive) much, much easier.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Alignment & Space</h2>
+            <p>A more efficient way to lay out, align and distribute space among items in a container.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

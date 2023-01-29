@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameCard</title>
+
+    <style>
+         /* Resetting the box-sizing  */
+
+         *{
+            box-sizing: border-box;
+         }
+
+         body{
+            background-image: url(WitcherWall.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         }
+
+         .card-container{
+            width: 90%;
+            height: 700px;
+            border: 1px solid lightslategray;
+            background-color: rgba(245, 245, 245, 0.242);
+            border-radius: 10px;
+            backdrop-filter: blur(60%);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+         .card{
+            width: 350px;
+            height: 450px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            transition: width 300ms;
+            display: flex;
+            padding: 5px;
+            margin: 5px;
+         }
+
+         .card .content{
+            align-self: flex-end;
+            /* margin-bottom: 30%; */
+            color: whitesmoke;
+         }
+
+
+         .card:active{
+            width: 550px;
+
+         }
+        
+
+        #wall1{
+            background-image: url(WitcherWall.jpg);
+        }
+
+        #wall2{
+            background-image: url(548302.jpg);
+        }
+
+        #wall3{
+            background-image: url(witcher-ciri.jpg);
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div id="card-container" class="card-container">
+
+        <div id="wall1" class="card">  
+           <div  class="content">
+            <h2>The Witcher3: Wild Hunt</h2>
+            <p>
+                The Witcher3 is a multiplayer online batter alrena by Valve. The game is sequel to Defense of the Ancients,
+                which was a community-created for Blizzard Entertainment's Warcraft 3.
+            </p>
+           </div>
+        </div>
+
+
+        <div id="wall2" class="card">  
+            <div  class="content">
+             <h2>The Witcher3: Wild Hunt</h2>
+             <p>
+                 The Witcher3 is a multiplayer online batter alrena by Valve. The game is sequel to Defense of the Ancients,
+                 which was a community-created for Blizzard Entertainment's Warcraft 3.
+             </p>
+            </div>
+         </div>
+
+         <div id="wall3" class="card"  onclick="toggle_card()">  
+            <div  class="content">
+             <h2 id="card-title">The Witcher3: Wild Hunt</h2>
+             <p id="card-description">
+                 The Witcher3 is a multiplayer online batter alrena by Valve. The game is sequel to Defense of the Ancients,
+                 which was a community-created for Blizzard Entertainment's Warcraft 3.
+             </p>
+            </div>
+         </div>
+
+    </div>
+
+</body>
+
+        <script>
+
+            // first get all cards 
+
+            let card_titles = ["Dota2", "The Witcher3", "RDR 2"]
+
+
+            let card_container = document.getElementById("card-container")
+
+            for(let i=0; i<card_titles.length; i++){
+
+                card = card_container[0]
+                card.getElementsByClassName("content")[0]
+            }
+
+            function toggle_card(){
+                console.log("Card Selected")
+
+                
+            }
+
+           
+        </script>
+</html>

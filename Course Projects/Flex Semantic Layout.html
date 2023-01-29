@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+
+    semantic element
+
+    <header> : top
+    <nav> : navigation bar (links)
+    <aside>: side bar;
+    <section>: article, blog,  charts.
+    <article>: unique blog, description.
+    <summary>:  summary of the content or section or article.
+    <detailed>: detailed blog, article on a single content.
+    <footer>:  bottom
+
+
+    other elements:
+        code: inline element to show the computer codes.
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout Page</title>
+
+    <style>
+        /*Pseudo element ::after, ::before*/
+
+        .tag::before {
+            content: "<";
+        }
+
+        .tag::after {
+            content: ">";
+        }
+
+        .tag {
+            font-size: larger;
+            padding: 2px;
+            border-radius: 5px;
+        }
+
+        .tag-cl1 {
+            background-color: rgba(89, 249, 244, 0.219);
+            color: rgb(89, 249, 244);
+        }
+
+        header {
+            background-color: #1746A2;
+            padding: 10px;
+            color: whitesmoke;
+        }
+
+        header h1,
+        header h3 {
+            text-align: center;
+        }
+
+        .trans {
+            background-color: inherit;
+        }
+
+        /* nav bar properties*/
+
+        .flex {
+            display: flex;
+        }
+
+        .al-center {
+            /*using the align-items: center to put all the flex item center on y-axis*/
+            align-items: center;
+        }
+
+        nav {
+            background-color: #ff741dbd;
+            padding-left: 10px;
+        }
+
+        nav * {
+            /* her '*' means selecting all child element form nav*/
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: whitesmoke;
+            font-weight: bold;
+            text-decoration: none;
+            border: 3px solid whitesmoke;
+            padding: 4px;
+            border-radius: 5px;
+        }
+
+        nav h3 {
+            color: #1746A2;
+        }
+
+        /*mid container section*/
+
+        aside {
+            background-color: #5F9DF7;
+            flex: 1;
+            text-align: center;
+        }
+
+        section {
+            background-color: #FFF7E9;
+            flex: 5;
+        }
+
+        section.content {
+            padding-left: 20px;
+        }
+
+        aside h3,
+        aside h4 {
+            color: whitesmoke;
+        }
+
+        aside ul {
+            border: 1px solid whitesmoke;
+            padding: 10px;
+            list-style-type: none;
+            margin: 10px;
+        }
+
+        aside ul li {
+            background-color: coral;
+            margin: 10px 0px;
+            padding: 20px 0px;
+            border-radius: 5px;
+        }
+
+        /*footer color*/
+
+        footer {
+            background-color: #1746A2;
+            color: whitesmoke;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>HTML Layout Element</h1>
+
+        <!-- <h3>&lt;Header&gt;</h3> -->
+
+        <h3><code class="tag tag-cl1 trans">header</code></h3>
+
+        <p>HTML has several semantic elements that
+            define the different parts of a web page.</p>
+
+        <p>Here we will see some them:
+
+            <code class="tag tag-cl1">header</code>,
+            <code class="tag tag-cl1">nav</code>,
+            <code class="tag tag-cl1">section</code>,
+            <code class="tag tag-cl1">article</code>,
+            <code class="tag tag-cl1">aside</code>,
+            <code class="tag tag-cl1">footer</code>,
+            <code class="tag tag-cl1">details</code>,
+            <code class="tag tag-cl1">summary</code>.
+
+        </p>
+    </header>
+
+    <!--
+    -------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
+    -->
+
+    <nav class="flex al-center">
+        <h3>Navigation Bar: </h3>
+        <a href="https://www.google.com">google</a>
+        <a href="#">CSS Flaot Proeprty</a>
+        <a href="#">CSS Flexbox</a>
+        <a href="#">CSS grid</a>
+        <!-- <a href="https://www.google.com/search?q=color+template&rlz=1C1FHFK_enIN972IN972&oq=colo+temp&aqs=chrome.2.69i57j0i10i131i433j0i10l5j69i65.3679j0j7&sourceid=chrome&ie=UTF-8#imgrc=17fKlTWBJ4IOIM">Other</a> -->
+    </nav>
+    <!--
+    -------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
+    -->
+
+    <div class="container flex">
+        <aside>
+            <h3>aside bar</h3>
+            <h4>Element Used</h4>
+
+            <ul>
+                <li><code class="tag">header</code></li>
+                <li><code class="tag">nav</code></li>
+                <li><code class="tag">aside</code></li>
+                <li><code class="tag">section</code></li>
+                <li><code class="tag">article</code></li>
+                <li><code class="tag">footer</code></li>
+            </ul>
+        </aside>
+
+        <!--
+        -------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------
+        -->
+        <section class="content">
+
+            <section>
+                <h2>Layout Elements</h2>
+
+                <p><code class="tag">header</code>
+                    :- Defines a header for a document or a section</p>
+
+                <p><code class="tag">nav</code>
+                    :- Defines a set of navigation links</p>
+
+                <p><code class="tag">section</code>
+                    :- Defines a section in a document.</p>
+
+                <p><code class="tag">article</code>
+                    :- Defines an independent, self-contained content.</p>
+
+                <p><code class="tag">aside</code>
+                    :- Defines content aside from the content (like a sidebar)</p>
+
+                <p><code class="tag">footer</code>
+                    :- Defines a footer for a document or section</p>
+
+                <p><code class="tag">details</code>
+                    :- Defines additional details that the user can open and close
+                    on demand.
+                </p>
+            </section>
+
+
+            <article>
+                <h2>HTML Layout Techniques</h2>
+
+                <p>There are four different Techniques to create multicolumn
+                    layouts. Each techinque has its pros and cons.
+                </p>
+
+                <ul>
+                    <li>CSS frameword</li>
+                    <li>CSS float property</li>
+                    <li>CSS flexbox</li>
+                    <li>CSS grid</li>
+                </ul>
+
+
+                <h3>CSS Framework</h3>
+                <p>We have mulitple css frameword to create fast layout like Bootstrap,
+                    we.css, react etc.
+                </p>
+
+                <h3>CSS Float Layout</h3>
+                <p>It is common to do entire web layouts using the css <b>float</b> property.
+                    Float is easy to learn, we just need to remember hot the <b>float</b> and
+                    <b>clear</b> properties work.
+                </p>
+
+                <p>Disadvantage: Floating elements are tied to the document flow,
+                    which may harm the flexibility.
+                </p>
+
+
+                <h3>CSS Flexbox Layout</h3>
+                <p>Use of flexbox ensures that elements behae predictably when the page layout
+                    must accommodate different screen sizes and different display devices.
+                </p>
+
+                <h3>CSS Grid Layout</h3>
+                <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns,
+                    making it easier to design web pages without having to use floats and positioning.
+                </p>
+            </article>
+        </section>
+    </div>
+
+
+    <footer>
+        <p>In this section we have seen the basic Layout Technique.</p>
+    </footer>
+
+</body>
+
+</html>

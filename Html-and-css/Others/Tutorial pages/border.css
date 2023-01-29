@@ -1,0 +1,89 @@
+
+.psection {
+    width: 40%;
+    margin-left: 25%;
+    background-color:white;
+    
+}
+.psection > p {
+        text-align: center;
+        height: 40px;
+        background-color: aqua;
+}
+
+p.solid {
+
+    border: 10px solid blue;
+}
+
+p.dotted {
+    border: 10px dotted red;
+}
+
+p.dashed {
+    border: 10px dashed blue;
+}
+
+p.double {
+    border: 10px double red;
+}
+
+p.groove {
+    background-color: blue;
+    border: 10px groove blue;
+    color: white;
+}
+
+p.ridge {
+    border: 10px ridge red;
+    color: white;
+    background-color: red;
+}
+
+p.inset {
+    border: 10px inset blue;
+    color: white;
+    background-color: blue;
+}
+
+p.outset {
+    border: 10px outset red;
+    color: white;
+    background-color: red;
+}
+
+p.none {
+    border: 10px none blue;
+}
+
+p.hidden {
+    border: 10px hidden red;
+}
+
+
+.borderstyle {
+    border-left: 5px solid blue;
+    width: 40%;
+    height: 50px ;
+    margin-left: 25%;;
+    background-color: aquamarine;
+    padding-top: 5px;
+}
+.borderstyle > p {
+    height: 40%;
+}
+
+.border_bottom_style {
+    background-color: rgb(253, 169, 138);
+    border-bottom: 10px ridge rebeccapurple;
+    margin-left: 25%;
+    margin-top: 15px;
+    height: 50px;
+    padding-top: 5px;
+    width: 40%;
+    text-align: center;
+}
+
+.blank {
+    height: 100px;
+}

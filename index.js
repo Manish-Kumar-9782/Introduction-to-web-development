@@ -4,6 +4,7 @@
 const dropDownLists = [...document.getElementsByClassName("dropdown-menu--list")]
 
 const navBar = document.querySelector(".nav-bar.dropdowns");
+const iframe = document.getElementById("iframe");
 
 class List {
 
@@ -19,7 +20,17 @@ class List {
         const li = document.createElement("li");
         li.textContent = content;
         this.list.appendChild(li);
+        return li;
+    }
 
+    addLinkItem(linkTitle, linkAddress) {
+        const li = document.createElement("li");
+        const anchor = document.createElement("a");
+        anchor.href = linkAddress;
+        anchor.textContent = linkTitle
+        li.appendChild(anchor)
+        this.list.appendChild(li);
+        return li;
     }
 }
 
@@ -43,15 +54,25 @@ class DropdownMenu {
         this.Menu.appendChild(itemList)
     }
 
+
 }
 
 const menu = {
     "CSS Properties": {
-        "padding": "#",
-        "padding2": "#",
-        "padding3": "#",
-        "padding5": "#"
+        "Position": "./Html-and-css/CSS Properties/position.html",
+        "Box Shadow": "./Html-and-css/CSS Properties/box-shadow.html",
+        "Box Sizing": "./Html-and-css/CSS Properties/box-sizing.html",
+    },
+
+    "HTML Elements": {
+        "Input Element": "./Html-and-css/HTML Elements/input-form-tag.html",
+        "Core Attributes": "./Html-and-css/Notes/Core Element and Attribute.html",
+        "Head Element": "./Html-and-css/Notes/Head element.html",
+        "HTML Attributes": "./Html-and-css/Notes/HTML Attributes.html",
+        "Images, Audio & Video": "./Html-and-css/Notes/Images, Audio and Video.html",
+        "Links & Navigation": "./Html-and-css/Notes/Links and Navigation.html",
     }
+
 }
 
 
@@ -62,7 +83,10 @@ Object.keys(menu).forEach(item => {
     let dropdownMenuList = new List(dropdownMenu.Menu);
 
     Object.keys(menu[item]).forEach(listItem => {
-        dropdownMenuList.addItem(listItem)
+        dropdownMenuList.addItem(listItem).onclick = function () {
+            iframe.src = menu[item][listItem];
+        }
+        // console.log("list item add: ", dropdownMenuList.addItem(listItem));
     })
 
 })

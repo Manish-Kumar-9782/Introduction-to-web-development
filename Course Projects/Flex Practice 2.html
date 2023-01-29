@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox practice</title>
+
+    <style>
+
+        /* flex on navbaer */
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            /* font-size: 40px; */
+        }
+
+        #navbar{
+            background-color: #e2e8e4;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #006c84;
+        }
+
+        .links{
+            display: flex;
+            
+        }
+
+        .links h3>a{
+            margin-left: 15px;
+            color: #006c84;
+            text-decoration: none;
+            
+        }
+
+
+        #header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #006c84;
+            color: whitesmoke;
+        }
+
+        .description{
+            padding-left: 30px;
+            font-size: 1.5rem;
+        }
+
+        .description h1{
+            font-size: 6rem;
+            
+        }
+        .container img{
+            width: 400px;
+        }
+        
+        #section{
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+        .box{
+            /* background-color: rgb(43, 85, 201); */
+            background-color: #6eb5c0;
+            color: whitesmoke;
+            padding: 10px;
+            /* border: 1; */
+            border-radius: 10px;
+            width: 200px;
+            margin: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <nav id="navbar">
+
+        <div class="logo">
+            <h1>Flexbox</h1>
+        </div>
+
+        <div class="links">
+            <h3><a href="http://www.google.com">Google</a></h3>
+            <h3><a href="#">About</a></h3>
+            <h3><a href="#">Contact</a></h3>
+            <h3><a href="Flex Layout.html">Flex Layout</a></h3>
+        </div>
+    </nav>
+
+
+    <!-- ------------------------------------------------------------- -->
+
+    <header id="header" class="container">
+
+        <div class="description">
+            <h1>Flexbox Pracitce</h1>
+            <p>This is a simple practice web page about the flexbox and 
+                its property in this practice course we will learn how 
+                to use the flexbox container and its how to control its 
+                items.
+            </p>
+        </div>
+
+        <img src="grid.svg" alt="grid svg image">
+
+    </header>
+<!-- ------------------------------------------------------------- -->
+
+    <div id="section">
+
+        <div class="box">
+            <h1>Tricky Position</h1>
+            <p>Flexbox usually solves tricy problems including how to Position or dynamically resize elements on a page.</p>
+        </div>
+
+        <div class="box">
+            <h1>Responsive Design</h1>
+            <p>Flexbox makes building a website layout (and making it responsive) much, much easier.</p>
+        </div>
+
+        <div class="box">
+            <h1>Alignment & Space</h1>
+            <p>A more efficient way to lay out, align and distribute space among items in a container.</p>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Project</title>
+    <link rel="stylesheet" href="../../styles/colors.css">
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        header {
+            background-color: var(--azure-green-blue);
+            padding: var(--page-padding) 10px;
+        }
+
+        .tab-bar {
+            flex: 1;
+            background-color: var(--lazurite-blue);
+        }
+
+        .tab-bar ul.tab-list li {
+            width: var(--icon-size-3);
+            height: var(--icon-size-3);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .tab-bar ul.tab-list li:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+
+        }
+
+        .main-content {
+            flex: 6.5;
+        }
+
+        .comment-side {
+            flex: 2.5;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header class="container text-light flex-row jc-between">
+
+        <div class="flex-row al-center col-gap-1">
+            <i class="bi bi-list"></i>
+            <span>Portfolio</span>
+            <input type="text" placeholder="">
+        </div>
+
+        <div class="flex-row al-center col-gap-2">
+
+            <i class="bi bi-moon-fill"></i>
+            <i class="bi bi-plus-lg"></i>
+            <i class="bi bi-bell-fill"></i>
+            <i class="bi bi-person-circle"></i>
+            <span>User Name</span>
+
+        </div>
+
+    </header>
+
+    <section class="content flex-row">
+
+        <aside class="tab-bar border vh-90">
+            <ul class="flex-col jc-around text-light fs-xlarge border al-center h-100 tab-list">
+                <li><i class="bi bi-house-door-fill"></i></li>
+                <li><i class="bi bi-pie-chart-fill"></i></li>
+                <li><i class="bi bi-calendar2-fill"></i></li>
+                <li><i class="bi bi-gear-fill"></i></li>
+            </ul>
+        </aside>
+
+        <section class="main-content border">
+
+            
+
+        </section>
+
+        <aside class="comment-side border">
+
+        </aside>
+    </section>
+
+</body>
+
+</html>

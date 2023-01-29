@@ -1,0 +1,243 @@
+:root {
+    --icon-color: rgb(141, 141, 147);
+    --text-color: rgb(208, 208, 231);
+    --main-bg-cl: rgb(43, 43, 57);
+    --card-bg-color: rgba(31, 32, 34, 0.725);
+    --border-color: rgba(119, 136, 153, 0.256);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ============================ */
+/* common classes */
+body {
+    background-color: var(--main-bg-cl)
+}
+
+.border {
+    border: 1px solid var(--border-color);
+}
+
+.svg-icon {
+    width: 30px;
+    color: var(--icon-color);
+}
+
+.cl-ex {
+    color: rgb(255, 133, 40);
+}
+
+.cl-card {
+    color: rgb(51, 100, 204);
+}
+
+.cl-arow {
+    color: rgb(17, 189, 17);
+}
+
+.user-pfi {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* margin and padding 0. */
+.mp-zero * {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+    color: var(--text-color);
+}
+
+ul li {
+    margin-right: 30px;
+}
+
+/* ============================ */
+
+/* card properties */
+/* ============================ */
+.card {
+    border: 1px solid var(--border-color);
+    margin: 20px;
+    padding: 0px 20px;
+    border-radius: 10px;
+    background-color: var(--card-bg-color);
+}
+
+.card-top {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 5px;
+}
+
+.hlight {
+    background-color: rgba(84, 93, 102, 0.358);
+    padding: 3px 5px;
+    border-radius: 5px;
+    color: rgb(64, 167, 52);
+}
+
+/* margin left : ml
+paddin left : pl
+width: w- */
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.m-0 {
+    margin: 0px;
+}
+
+/* ============================ */
+/* id individual sections */
+
+#user-section-header {
+    height: 40px;
+    padding: 0px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#profile {
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+#user-profile-menu * {
+    margin: 0px;
+    height: 30px;
+}
+
+#deposit {
+    background-color: dodgerblue;
+    color: whitesmoke;
+    border: 1px solid dodgerblue;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+
+#users-container {
+    color: var(--text-color);
+}
+
+#search-box * {
+    margin: 0px;
+    font-size: larger;
+}
+
+#search-box {
+    margin-top: 10px;
+}
+
+#search-box input {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    outline: unset;
+    background-color: var(--main-bg-cl);
+    width: 250px;
+}
+
+#users {
+    padding: 20px;
+    border-right: 1px solid var(--border-color);
+    flex: 1;
+}
+
+#user-data {
+    flex: 4;
+}
+
+#user-profile-right-section {
+    font-size: 1.8rem;
+}
+
+#user-profile-right-section img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+}
+
+#user-dashboard-tabs {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 3px;
+}
+
+/* ============================ */
+/* flex properties */
+
+.flex {
+    display: flex;
+}
+
+.flex-c {
+    display: flex;
+    flex-direction: column;
+}
+
+.al-center {
+    align-items: center;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.fi-center {
+    justify-content: center;
+    align-items: center;
+}
+
+/* justify-content: space-between */
+.jc-sp-bw {
+    justify-content: space-between;
+}
+
+/* ============================ */
+#container {
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+#logo {
+    margin-bottom: 40px;
+    width: 50px;
+    color: dodgerblue;
+}
+
+#section-tabs div {
+    margin-bottom: 40px;
+}
+
+#section-panel {
+    border-right: 1px solid var(--border-color);
+    flex: 1;
+}
+
+#right-section {
+    flex: 20;
+}
+
+#user-data-table table :is(th, td) {
+    padding: 10px 45px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#user-data-table {
+    margin: 20px;
+}

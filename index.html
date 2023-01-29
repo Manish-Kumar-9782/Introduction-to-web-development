@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="./styles/style.css">
 
     <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
         header {
             background-color: var(--lazurite-blue);
         }
@@ -25,6 +30,20 @@
 
         .dropdown-menu--list {
             background-color: var(--lazurite-blue) !important;
+        }
+
+        .dropdown-menu--list a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            margin: 20px 100px;
+        }
+
+        .frame-section {
+            width: 100%;
+            height: 100%;
         }
     </style>
 
@@ -51,6 +70,11 @@
 
         </ul>
     </nav>
+
+    <section class="container vh-90">
+        <iframe id="iframe" class="frame-section" src="./Html-and-css/CSS Properties/position.html"
+            frameborder="0"></iframe>
+    </section>
 
     <script src="./index.js"></script>
 </body>

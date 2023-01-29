@@ -19,7 +19,7 @@ The HTML <head> element:
     Metadata typically define the document title, character set, styles, and 
     other meta information.
 
-In this sectioon we will see.
+In this section we will see.
 
 1. <title> element: it define the title of the document.
 2. <style> element: it define the style information for the current document.
@@ -35,295 +35,616 @@ In this sectioon we will see.
 
 <html>
 
-    <head>
+<head>
 
-        <!-- 1. title: we are using the <title> tag to give the document a title.  -->
-        <title>Head Elements</title>
+    <!-- 1. title: we are using the <title> tag to give the document a title.  -->
+    <title>Head Elements</title>
 
-        <!--2. style: Now we will give some style infromation for current document page. -->
-        <style>
-
-            /* first we will apply a simple style for html tags name. */
-
-            /* We are applying styling property for the code element which is sharing multiple
-            classes like element tag h1 */
+    <base href="../../">
 
 
-            .element.tag, .element{
-                background-color: rgb(129, 169, 184);
-                border: 1px solid rgb(129, 169, 184);
-                font-size: 1.1em;
-                border-radius: 3px;
-                color: white;
-                padding: 0px 3px;
-            }
 
-            .element.tag.h1 {
-                background-color: lightblue;
-                color: brown;
-                border: 1px solid lightblue;
-                border-radius: 5px;
-            }
-
-            
-
-            .tag::before{
-                content: "<";
-                background-color:none;
-            }
-
-            .tag::after{
-                content: ">";
-                background-color:none;
-            }
-
-            .tag.h1::before {
-                content: "<";
-                background-color: none;
-                color: brown;
-            }
-
-            .tag.h1::after {
-                content: ">";
-                background-color: none;
-                color: brown;
-            }
-
-            /* Now we will change the font of the for all p element content */
-
-            p{
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            }
-            
-            htmlcode{
-                color:black;
-                border: 1px solid;
-                font-family: Georgia, Times, 'Times New Roman', serif;
-            }
-
-            htmlcode::before{
-                content:"<";
-                color: purple;
-                font-size: 1.5em;
-                font-family: Georgia, Times, 'Times New Roman', serif;
-                
-            }
-
-            htmlcode::after{
-                content:">";
-                color: purple;
-                font-size: 1.5em;
-                font-family: Georgia, Times, 'Times New Roman', serif;
-                
-            }
+    <!-- 3. link: Now we will link a css style sheet to this document. -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/Notes.css">
+    <link rel="stylesheet" href="styles/Notes2.css">
+    <link rel="stylesheet" href="highlight/styles/base16/circus.min.css">
 
 
-            h4{
-                margin-bottom: 0px;
-                margin-top: 30px;
-                
-            }
+    <!-- 4. meta: Now we will define all the meta tags. -->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="html,head,element">
+    <meta name="description" content="html head elements, metadata of document, a basic description of 
+        title, link, meta, script etc elements.">
+    <meta name="author" content="Manish Kumar">
+    <!-- <meta http-equiv="refresh" content="60"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="highlight/highlight.min.js"></script>
+    <style>
+        pre code.hljs {
+            font-size: 1rem;
+        }
+    </style>
+</head>
 
+<body>
 
-            /* Style for footer also */
-            footer{
-                text-align: center;
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                font-size: large;
-                background-color: beige;
-                padding: 15px;
-                margin: 15px;
-            }
+    <header>
+        <h1>The <code class="tag">head</code> Elements</h1>
 
-            /* a style for body */
+        <p class="doc-content content">
+            The <code class="tag hlight">head</code> HTML element contains
+            machine-readable information
+            <span class="hlight">metadata</span> about the docuemnt, like its
+            <i class="mark">title</i>,
+            <i class="mark">scripts</i> and
+            <i class="mark">style sheets</i>,
+        </p>
 
-            body{
-                background-color: lightgray;
-            }
-            div{
-                background-color: white;
-                border-radius: 10px;
-            }
+        <p class="doc-content">
+            <b class="mark">Note:</b>
+            Hello <code class="tag hlight">head</code> hodls information for machine
+            processing, not human-readability.
+            For human-visible information, like top-level headings and listed authors.
+        </p>
 
-        </style>
+        <pre class="content">
+<code> &lt;!DOCTYPE html&gt;
+    &lt;html lang="en-us"&gt;
+        &lt;head&gt;
+            &lt;meta charset = "UTF-8"/&gt;
+            &lt;meta name="viewport" content="width=device-width"/&gt;
+            &lt;title&gt;Document title&lt;/title&gt;
+        &lt;/head&gt;
+    &lt;/html&gt;</code>
+        </pre>
+    </header>
 
-
-        <!-- 3. link: Now we will link a css style sheet to this document. -->
-        <link rel="stylesheet" href="../Basic/common.css">
-        <link rel="stylesheet" href="../Basic/Notes.css">
-
-        <!-- 4. meta: Now we will define all the meta tags. -->
-        <meta charset="UTF-8">
-        <meta name="keywords" content="html,head,element">
-        <meta name="description" content="html head elements">
-        <meta name="author" content="Manish Kumar">
-        <!-- <meta http-equiv="refresh" content="60"> -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    </head>
-
-    <body>
-        
-        <h1 style="text-align: center; color: brown;">HTML &lt;head&gt; Elements</h1>
-
-        <!--
+    <!--
         -------------------------------------------------------------------------------
         -------------------------------------------------------------------------------
         -->
 
-        <!-- 1. HTML <title> element -->
-        <div>
-            <h3>1. The HTML <code class="element tag h1">title</code> Element</h3>
-            
-            <p>The <code class="element tag">title</code> element defines the title of the document.
-            The title must be text-only, and it is shown in the browser's title bar or in the 
+
+    <!-- 1. HTML <title> element -->
+    <div>
+        <h3>1. The HTML <code class="tag">title</code> Element</h3>
+
+        <p>The <code class="hlight tag">title</code> element defines the title of the
+            document.
+            The title must be text-only, and it is shown in the browser's title bar or in
+            the
             page's tab.</p>
 
-            <p> the <code class="element tag">title</code> element is reuired in HTML documents!</p>
-            
-            <p>The contents of a page title is very important for search engine optimization
-                (SEO)! The page title is used by search engine algorithms to decide the 
-                order when listing pages in search result.
-            </p>
+        <p> The <code class="hlight tag">title</code> element is refired in HTML
+            documents!</p>
+        <pre><code>&lt;tittle&gt;Introduction to the head element &lt;/title&gt;</code></pre>
 
-            <p> The <code class="element tag">title</code> element:</p>
+        <h4 class="heading-4">Page title and SEO</h4>
 
-            <ul>
-                <li>defines a title in the browser toolbar</li>
-                <li>provides a title for the page when it is added to favorites.</li>
-                <li>dispalys a title for the apge in search engine-result</li>
+        <p>
+            The contents of a page title can have significant implications for search
+            engine optimization (SEO). In
+            general, a longer, descriptive title performs better than short or generic
+            titles. The content of the title
+            is one of the components used by search engine algorithms to decide the order
+            in which to list pages in
+            search results. Also, the title is the initial "hook" by which you grab the
+            attention of readers glancing at
+            the search results page.
+        </p>
 
-            </ul>
+        <p> The <code class="hlight tag">title</code> element:</p>
 
-            <p>So, Try to make the title as accurate and meanuingful as possingle.</p>
-            
-        </div>
+        <ul>
+            <li>defines a title in the browser toolbar</li>
+            <li>provides a title for the page when it is added to favorites.</li>
+            <li>displays a title for the page in search engine-result</li>
 
-        <!--
+        </ul>
+
+        <p>So, Try to make the title as accurate and meaningful as possible.</p>
+
+        <h4 class="heading-4">A few guidelines and tips for composing good titles:</h4>
+        <ul>
+            <li>Avoid one or two words titles. use a descriptive phrase, or a
+                term-definition
+                pairing for glossary or reference-style pages.
+            </li>
+
+            <li>Search engines typically display about the first 55-60 characters of a
+                page title. Text beyond tath may
+                be lost, so try not to have titties longers than that. if you must use a
+                longer title, make sure the
+                important parts come earlier and that nothing critical is in the part of
+                the tile that is likely to be
+                dropped.</li>
+            <li>don't use <i class="hlight">keyword blobs</i>. if your title is just a
+                lsit of words, algorithms often
+                reduce your page's
+                position in the search result</li>
+
+            <li>try to make sure your titles ar as unique as possible within your own
+                site. Duplicate or near duplicate
+                titles can contribute to inaccurate search result.</li>
+        </ul>
+
+        <h4 class="heading-4">Accessibility concerns</h4>
+
+        <p>it is important to provide an accurate and concise title to describe the page's
+            purpose.</p>
+        <p>A common navigation technique for users of assistive technology is to read the
+            page title and infer the
+            content the page contains.This is because navigating into a page to determine
+            tis content can be a
+            time-consuming and potentially confusing process. Titles should be unique to
+            every page of a website,
+            ideally surfacing the primary purpose of the page first, followed by the anme
+            of the website. Following this
+            pattern will help ensure that the primary purpose of the page is announced by
+            a screen reader first. This
+            provides a far better experience than having to listen to the name of a
+            website before the unique page
+            title, for every page a user navigates to in the same website.</p>
+    </div>
+
+    <!--
         -------------------------------------------------------------------------------
         -------------------------------------------------------------------------------
         -->
-        <!-- 2. HTML <style> element -->
-        <div>
+    <!-- 2. HTML <style> element -->
+    <div>
 
-            <h3>2. The HTML <code class="element tag h1">style</code> Element</h3>
+        <h3>2. The HTML <code class="tag">style</code> Element</h3>
 
-            <p>The <code class="element tag">style</code> element is used to define style 
-            information for a single HTML page.</p>
+        <p>The <code class="tag hlight">style</code> HTML element contains style
+            information for a decument, or part of
+            a document. it contains CSS, which is applied to the contents of the documents
+            containing the <code class="tag hlight">style</code> element.</p>
 
-        </div>
+        <pre><code>&lt;style&gt;
+    p {
+        color: #26b72b;
+        }
 
-        <!--
+    body {
+        background-color: rgb(241, 241, 252);
+    }
+
+    div {
+        background-color: rgb(241, 241, 252);
+        border: 5px solid white;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+&lt;/style&gt;</code></pre>
+
+        <p>The <code class="tag hlight">style</code> element must be included inside the
+            <code class="tag hlight">head</code> of the document. in general, it is betten
+            to put you styles in external
+            stylesheets and apply them using <code class="hlight tag">link</code>
+            elements.
+        </p>
+
+        <p>if we include multiple <code class="hlight tag">style</code> and <code
+                class="hlight tag">link</code>
+            elements in our documents, they will be applied to the DOM in the order they
+            are included in the documents
+            make sure we incude them in the correct order, to avoid unexpected cascade
+            issues.
+        </p>
+
+        <p>in the same manner as <code class="hlight tag">link</code> elements, <code
+                class="hlight tag">style</code>
+            element can include <code class="mark">media</code> attribute that contain
+            <span class="attr">media
+                queries</span>, allowing us to selectively apply internal stylesheets to
+            our document depending on media
+            features such as viewport width.
+        </p>
+
+        <h4 class="heading-4">Attributes</h4>
+        <dl class="dl-sky">
+            <dt>media</dt>
+            <dd>This attribute defines which media the style should be applied to. its
+                value is a media query, which
+                defaults to all if the attribute is missing.</dd>
+
+            <dt>nonce <i class="hlight">(security purpose)</i></dt>
+            <dd>A cryptographic nonce (number used once) used to allow inline styles in a
+                <i class="hlight">style-src
+                    Content-Security-Policy</i>
+            </dd>
+
+            <dt>title</dt>
+            <dd>This attribute specifies <i class="hlight">alternative style sheet</i>
+                sets.</dd>
+
+            <dt>blocking <i class="hlight">(security purpose)</i></dt>
+            <dd>This attribute explicitly indicates that certain operations should be
+                blocked on he fetching of critical
+                sub-resources, where <code class="mark">@import</code>-ed stylesheets are
+                generally considered as
+                critical sub-resources, whereas <code class="prprty">background-image</code> and
+                fonts are not.</dd>
+        </dl>
+    </div>
+
+    <!--
         -------------------------------------------------------------------------------
         -------------------------------------------------------------------------------
         -->
-        <!-- 3. HTML <link> element -->
-        <div>
-            <h3>3. The HTML <code class="element tag h1">link</code> Element</h3>
+    <!-- 3. HTML <link> element -->
+    <div>
+        <h3>3. The HTML <code class="tag">link</code> Element</h3>
 
-            <p>The <code class="element tag">link</code> element defines the relationship b/w 
+        <p>The <code class="tag hlight">link</code> element defines the relationship b/w
             the current document and an external resource.</p>
 
-            <p>The <code class="element tag">link</code>tag is most often used to link to external
-            style sheets.</p>
-        </div>
+        <p>The <code class="tag hlight">link</code>tag is most often used to link to
+            external
+            style sheets, but is alos used to establish site icons (both <span
+                class="mark">favicon</span> style icons
+            and icons for the home screen and apps on mobile devices.</p>
 
-        <!--
+        <p>To link an external stylesheet, we would include a <code class="hlight tag">link</code>
+            element inside our
+            document's <code class="hlight tag">head</code> element. like this...</p>
+        <pre><code>&lt;link rel='stylesheet' href='./mystyles/examples/style1.css'&gt;</code></pre>
+
+        <p>This simple example provides the path to the stylesheet inside an <code
+                class="attr">href</code> attribute,
+            and a <code class="attr">rel</code> attribute with a value of stylesheet. the
+            <code class="attr">rel</code>
+            stands for <i class="hlight">relationship</i>, and is one of the key features
+            of the <code class="hlight tag">link</code> element- the value denotes how the
+            item being linked to is related to the
+            containing document.
+        </p>
+
+        <h4 class="heading-4">Attributes</h4>
+
+        <dl class="dl-sky">
+
+            <dt>as</dt>
+            <dd>This attribute is only used when <code class="attr">rel="preload"</code>
+                or <code class="attr">rel="prefetch"</code> has been set on the <code
+                    class="hlight tag">link</code> element.
+                it specifies the type of content being loaded by the <code
+                    class="hlight tag">link</code>, which is
+                necessary for request matching, application of correct <i class="hlight">content
+                    security policy</i>,
+                and setting of correct <i class="hlight">Accept</i> request header.</dd>
+
+            <dt>crossorigin</dt>
+            <dd>This <i class="hlight">enumerated</i> attribute indicates whether <i
+                    class="hlight">CORS</i> must
+                be used when fetching the resources.
+
+                <dl class="item-box">
+                    <dt>anonymous</dt>
+                    <dd>A cross-origin request is performed, but no credential is sent
+                        (i.e. no cookie, X.509
+                        certificate, or HTTP Basic authentication.) if the server does not
+                        give credentials to the
+                        origin site (by not setting the <i
+                            class="hlight">Access-Control-Allow-Origin</i> HTTP header)
+                        the resources will be tainted and its usage restricted.</dd>
+
+                    <dt>use-credentials</dt>
+                    <dd>A cross-origin request is performed along with a credential sent
+                        (i.e a cookie, certificate,
+                        and/or HTTP Basic authentication is performed). if the server dows
+                        not give credentials to the
+                        origin site (through <i class="hlight">Access-Control-Allow-Credentials</i>
+                        HTTP
+                        header), the
+                        resource will be tainted and its usages restricted. <br>
+
+                        if the attribute is not present, the resource is fetched without a
+                        <i class="hlight">CORS</i>
+                        request (i.e without sending the <code class="hlight">Origin</code> HTTP
+                        header), preventing its
+                        non-tainted usage. if invalid, it is handled as if the enumerated
+                        keyword anonymous was used.
+                    </dd>
+
+                    <dt>hreflang</dt>
+                    <dd>This attribute indicates the language of the linked resources. it
+                        is purely advisory. use this
+                        attribute only if the <code class="attr">href</code> attribute is
+                        present.</dd>
+                </dl>
+
+            </dd>
+
+            <dt>integrity (<i class="hlight">Subresource integrity</i>)</dt>
+            <dd>Contains inline metadata - a base64-encoded cryptographic has of the
+                resource (file) we're telling the
+                browser to fetch. The browser can use this to verify that the fetched
+                resources has been delivered free
+                of unexpected manipulation.</dd>
+
+            <dt>media</dt>
+            <dd>This attribute specifies the media that the linked resources applies to.
+                its value must be a media type
+                / <i class="hlight">media query</i>. This attribute is mainly useful when
+                linking to external
+                stylesheets-- it allows the user agent to pick the best adapted one for
+                the device it runs on.</dd>
+
+            <dt>prefetch (<i class="hlight">HTTPS Based</i>)</dt>
+            <dd>Identifies a resource that might be required by the next navigation and
+                that the user agent should
+                retrieve it. This allows the suer agent to respond faster when the
+                resources is requested in the future.
+            </dd>
+
+            <dt>rel</dt>
+            <dd>This attribute names a relationship of the linked document to the current
+                document. The attribute must
+                be space-separated list of <i class="hlight">link style values.</i>
+
+                <table class="item-box my-4">
+                    <caption>Some of the <code class="attr">rel</code> attribute values.
+                    </caption>
+                    <tbody>
+                        <tr>
+                            <th>alternative</th>
+                            <td>Alternative representations of the current document.</td>
+                        </tr>
+
+                        <tr>
+                            <th>author</th>
+                            <td>Author of the current document or article.</td>
+                        </tr>
+
+                        <tr>
+                            <th>canonical</th>
+                            <td>Preferred URL for the current document.</td>
+                        </tr>
+
+                        <tr>
+                            <th>help</th>
+                            <td>Link to context-sensitive help.</td>
+                        </tr>
+
+                        <tr>
+                            <th>icon</th>
+                            <td>An icon representing the current document.</td>
+                        </tr>
+
+                        <tr>
+                            <th>license</th>
+                            <td>Indicates that the main content of the current document is
+                                covered by the copyright
+                                license described by the referenced document.</td>
+
+                        </tr>
+
+                        <tr>
+                            <th>manifest</th>
+                            <td>Web app manifest</td>
+                        </tr>
+
+                        <tr>
+                            <th>next</th>
+                            <td>Indicates that the current document is a part of a series
+                                and that the next document in
+                                the series is the referenced document.</td>
+                        </tr>
+
+                        <tr>
+                            <th>preload</th>
+                            <td>Specifies that the user agent must preemptively fetch and
+                                cache the target resource for
+                                current navigation accourding to the potential destination
+                                given by <code class="attr">as</code> attribute (and the
+                                priority associated with the corresponding
+                                destination).</td>
+                        </tr>
+
+                        <tr>
+                            <th>prev</th>
+                            <td>Indicates that the current documents is a part of a series
+                                and that the previous
+                                document in the series is the referenced document.</td>
+                        </tr>
+
+                        <tr>
+                            <th>search</th>
+                            <td>Gives a link to resource that can be used to search
+                                through the current document and its
+                                related pages.</td>
+                        </tr>
+
+                        <tr>
+                            <th>stylesheet</th>
+                            <td>Imports a style sheet.</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+            </dd>
+
+            <dt>title</dt>
+            <dd>The <code class="attr">title</code> has special semantics on the <code
+                    class="hlight tag">link</code>
+                element. When used on a <code class="hlight tag">link rel="stylesheet"</code> it
+                defines a <i class="hlight">default or an alternative stylesheet.</i></dd>
+
+            <dt>type</dt>
+            <dd>This attribute is used to define the type of the content linked to. the
+                value of the attribute should be
+                <code class="hlight">MIME</code> type such as <i class="hlight">text/html</i>, <i
+                    class="hlight">text/css</i>, and so on. The common use of this attribute is to
+                define the type of style sheet being referenced ( such as <i
+                    class="hlight">text/css</i> ), but given that CSS is the only stylesheet
+                language used on the web, not only is it possible to omit the omitted the type
+                attribute, but is actually now recommended practice. it also used on <code
+                    class="hlight">link rel="preload"</code> link types, to make sure the browser
+                only downloads file types that is supports.
+            </dd>
+
+            <dt>blocking</dt>
+            <dd>This attribute explicitly indicates that certain operations should be blocked on the
+                fetching of an external resource. The operations that are to blocked must be a
+                space-separated list of blocking attributes listed below.
+
+                <dl class="item-box">
+                    <dt>render</dt>
+                    <dd>The rendering of content on the screen in blocked.</dd>
+                </dl>
+            </dd>
+
+        </dl>
+
+    </div>
+
+    <!--
         -------------------------------------------------------------------------------
         -------------------------------------------------------------------------------
         -->
 
-        <!-- 4. HTML <meta> element -->
-        <div>
-            <h3>4. The HTML <code class="element tag h1">meta</code> Element</h3>
+    <!-- 4. HTML <meta> element -->
+    <div>
+        <h3>4. The HTML <code class="tag">meta</code> Element</h3>
 
-            <p>The <code class="element tag">meta</code> element is typically used to specify
+        <p>The <code class="hlight tag">meta</code> HTML element represents <i
+                class="hlight">metadata</i> that cannot be represented by other HTML meta-related
+            elements, like
+            <code class="mark tag">base</code>,
+            <code class="mark tag">link</code>,
+            <code class="mark tag">script</code>,
+            <code class="mark tag">style</code> or
+            <code class="mark tag">title</code>,
+        </p>
+
+        <p>The <code class="hlight tag">meta</code> element is typically used to specify
             the character set, page description, keywords, autor of the document, and
             viewport settngs.</p>
 
-            <p>The metadata will not be displayed on the paage, but are used by browsers
-                (how to disply content and reload page), by search engines (keywords), 
-                and other web services.
+        <p>The metadata will not be displayed on the paage, but are used by browsers
+            (how to disply content and reload page), by search engines (keywords),
+            and other web services.
+        </p>
+
+        <p>The type of metadata provided by the <code class="hlight tag">meta</code> element can be
+            one of the following.</p>
+
+        <ul>
+            <li>if the <code class="attr">name</code> attribute is set, the <code
+                    class="hlight tag">meta</code> element provides <i class="hlight">document-level
+                    metadata</i>, applying to the whole page.</li>
+
+            <li>if the <code class="attr">http-equiv</code> attribute is set, the <code
+                    class="hlight tag">meta</code> element is a <i class="hlight">pragma
+                    directive</i>, providing information equivalent to what can be given by a
+                similarly-named HTTP header.</li>
+
+            <li>if the <code class="attr">charset</code> attribute is set, the <code
+                    class="hlight tag">meta</code> element is a <i class="hlight">character
+                    declaration,</i>, giving the character encoding in which the document is
+                encoded.</li>
+
+            <li>if the <code class="attr">itemprop</code> attribute is set, the <code
+                    class="hlight tag">meta</code> element provide a <i class="hlight">user-defined
+                    metadata.</i></li>
+        </ul>
+
+        <h4 class="heading-4">Attributes</h4>
+
+        <p class="Note">The attribute <code class="attr">name</code> has a specific meaning for the
+            <code class="hlight tag">meta</code> element, and the <code class="attr">itemprop</code>
+            attribute must not be set on the same <code class="hlight tag">meta</code> element that
+            has any existing
+            <code class="attr">name</code>,
+            <code class="attr">http-equiv</code> or
+            <code class="attr">charset</code> attributes.
+        </p>
+
+        <dl class="dl-sky">
+
+            <dt>charset</dt>
+            <dd>This attribute declares the document's character encoding.if the attribute is
+                present, its value must be an ASCII case-insensitive match for the string <i
+                    class="hlight">utf-8</i> because UTF-8 is the only encoding for HTML5 documents.
+                <code class="hlight tag">meta</code> elements which declare a character encoding
+                must be located entirely within the first 1024 bytes of the document.
+            </dd>
+
+        </dl>
+
+        <div>
+            <h2>Setting The ViewPort</h2>
+
+            <p>The Viewport is the user's visible area of a web page. it varies with the
+                device-it
+                will be smaller on a mobile phone than on a computer screen.
             </p>
 
-            <h4>* Define the character set.</h4>
-            <htmlcode>meta charset="UTF-8"</htmlcode>
+            <htmlcode>meta name="viewport" content="width=device=width, initial-scale=1.0"
+            </htmlcode>
 
-            <h4>* Define keywords for search engines.</h4>
-            <htmlcode>meta name="keywords" content="HTML, CSS, JavaScript"</htmlcode>
-
-            <h4>* Define a description of your web page.</h4>
-            <htmlcode>meta name="description" content="Free web Tutorials"</htmlcode>
-
-            <h4>* Define the autor of a page.</h4>
-            <htmlcode>meta name="author" content="Manish Kumar"</htmlcode>
-
-            <h4>* Refresh document in every 30 seconds</h4>
-            <htmlcode>meta http-equiv="refresh" content="30"</htmlcode>
-
-            <h4>* Setting the view port to make our web page look good on all screen.</h4>
-            <htmlcode>meta name="viewport" content="width=device=width, initial-scale=1.0"</htmlcode>
-
-
-            <div>
-                <h2>Setting The ViewPort</h2>
-
-                <p>The Viewport is the user's visible area of a web page. it varies with the device-it
-                    will be smaller on a mobile phone than on a computer screen.
-                </p>
-
-                <htmlcode>meta name="viewport" content="width=device=width, initial-scale=1.0"</htmlcode>
-
-                <p>You should include the following <code class="element tag">meta</code> element in alll your
+            <p>You should include the following <code class="element tag">meta</code>
+                element in alll your
                 web pages.</p>
 
-                <p>This gives the browser instructions on how to control the page's dimensions
-                    and scaling.
-                </p>
+            <p>This gives the browser instructions on how to control the page's dimensions
+                and scaling.
+            </p>
 
-                <p>The <code class="element">width=device-width</code> parts sets the width of the page
-                to follow the screen-width of the device (which will vary depending on the device).</p>
+            <p>The <code class="element">width=device-width</code> parts sets the width of
+                the page
+                to follow the screen-width of the device (which will vary depending on the
+                device).</p>
 
-                <p>The <code class="element">initial-scale=1.0</code> part sets initial zoom level when the page 
-                    is first loaded by the browser.</p>
+            <p>The <code class="element">initial-scale=1.0</code> part sets initial zoom
+                level when the page
+                is first loaded by the browser.</p>
 
-            </div>
         </div>
+    </div>
 
-        <!--
+    <!--
         -------------------------------------------------------------------------------
         -------------------------------------------------------------------------------
         -->
 
-        <!-- 5. The HTML <script> Element -->
-        <div>
-            <h3>5. The HTML <code class="element tag h1">script</code> Element</h3>
-            <p>The <code class="element tag">script</code> element is used to define client-side
+    <!-- 5. The HTML <script> Element -->
+    <div>
+        <h3>5. The HTML <code class="element tag h1">script</code> Element</h3>
+        <p>The <code class="element tag">script</code> element is used to define
+            client-side
             JavaScripts.</p>
 
-        </div>
+    </div>
 
-        <!--
+    <!--
         -------------------------------------------------------------------------------
         -------------------------------------------------------------------------------
         -->
 
 
-        <!-- 6. The HTML <base> Element -->
-        <div>
-            <h3>6. The HTML <code class="element tag h1">base</code>Element.</h3>
+    <!-- 6. The HTML <base> Element -->
+    <div>
+        <h3>6. The HTML <code class="element tag h1">base</code>Element.</h3>
 
-            <p>The <code class="element tag">base</code> element specifies the base url
+        <p>The <code class="element tag">base</code> element specifies the base url
             and/or target for all relative URLs in a page.</p>
 
-            <p>The <code class="element tag">base</code> tag must have either an herf or
+        <p>The <code class="element tag">base</code> tag must have either an herf or
             target attribute present, or both.</p>
 
-            <p>The can only be one single <code class="element tag">base</code> element
+        <p>The can only be one single <code class="element tag">base</code> element
             in a document.</p>
-        </div>
+    </div>
 
-        <footer>-------------------------End of the Page-------------------------</footer>
-    </body>
+    <footer>-------------------------End of the Page-------------------------</footer>
+    <script>hljs.highlightAll()</script>
+</body>
 
 </html>

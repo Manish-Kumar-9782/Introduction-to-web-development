@@ -10,12 +10,16 @@
     --text-dark: black;
     --text-gray: gray;
     --text-light-dim: #ccc;
+    --icon-size-1: 20px;
+    --icon-size-2: 38px;
+    --icon-size-3: 64px;
+    --page-padding: 20px;
 }
 
-* {
+/* * {
     margin: 0px;
     padding: 0px;
-}
+} */
 
 .text-light {
     color: var(--text-light);
@@ -63,6 +67,11 @@ ul.flex-row {
 .flex-col {
     display: flex;
     flex-direction: column;
+}
+
+ul.flex-col {
+    list-style-type: none;
+    padding: 10px;
 }
 
 .text-center {
@@ -221,6 +230,11 @@ ul.flex-row {
 .w-25 {
     width: 25%;
 }
+
+
+
+
+
 
 .h-100 {
     height: 100%;

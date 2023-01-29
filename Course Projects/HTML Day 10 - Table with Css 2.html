@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+
+    Table: To make a table first we make a table container whose display type is 'table'.
+
+        This this we make table body with <tbody> and table head with <thead>
+
+        thead: it contains all the heading cell-element inside a table row (<tr>)
+
+        tbody: it contains all the table data cell-element of each row (<tr>)
+
+        row-element: <tr>
+        cell-element: <th> (heading) <td> (data)
+            
+     
+ -->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table With CSS 2</title>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid;
+        }
+
+        #table1,
+        #table2 {
+            border-collapse: collapse;
+        }
+
+        #table1 th {
+            background-color: red;
+            color: blanchedalmond;
+            border-color: lightcoral;
+        }
+
+
+
+        #table1 td {
+            background-color: lightskyblue;
+            border-color: lightblue;
+            padding: 5px 10px;
+        }
+
+        #table2 th {
+            background-color: red;
+            color: blanchedalmond;
+            border-color: lightcoral;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        #table2 td {
+            background-color: lightskyblue;
+            border-color: lightblue;
+            padding: 5px 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #table2 td:nth-of-type(odd) {
+            background-color: white;
+        }
+
+        #table1 tr:nth-of-type(even) td {
+            background-color: white;
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+
+    Table: To make a table first we make a table container whose display type is 'table'.
+
+        This this we make table body with <tbody> and table head with <thead>
+
+        thead: it contains all the heading cell-element inside a table row (<tr>)
+
+        tbody: it contains all the table data cell-element of each row (<tr>)
+
+        row-element: <tr>
+        cell-element: <th> (heading) <td> (data)
+            
+     
+ -->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table With CSS 2</title>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid;
+        }
+
+        #table1,
+        #table2 {
+            border-collapse: collapse;
+        }
+
+        #table1 th {
+            background-color: red;
+            color: blanchedalmond;
+            border-color: lightcoral;
+        }
+
+
+
+        #table1 td {
+            background-color: lightskyblue;
+            border-color: lightblue;
+            padding: 5px 10px;
+        }
+
+        #table2 th {
+            background-color: red;
+            color: blanchedalmond;
+            border-color: lightcoral;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        #table2 td {
+            background-color: lightskyblue;
+            border-color: lightblue;
+            padding: 5px 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #table2 td:nth-of-type(odd) {
+            background-color: white;
+        }
+
+        #table1 tr:nth-of-type(even) td {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Table 1: Horizontal heading</h2>
+
+    <!-- Now we will make a table with <table> element -->
+    <table id="table1">
+        <!-- Inside the table first we will make <thead> and <tbody> element. -->
+        <thead>
+            <!-- Inside thead first we will make a row with <tr> element and inside 
+                this row we will put all the first row (heading row) cell element.-->
+
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Subject</th>
+                <th>Pages</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <!-- Now here we will make n number of <tr> element for each entry. -->
+
+            <tr>
+                <td>HTML Tutorial</td>
+                <td>Manish Sain</td>
+                <td>HTML Introduction</td>
+                <td>150</td>
+                <td>60</td>
+            </tr>
+
+            <tr>
+                <td>HTML Tutorial</td>
+                <td>Sachin</td>
+                <td>HTML Adavnce</td>
+                <td>160</td>
+                <td>85</td>
+            </tr>
+
+            <tr>
+                <td>CSS Tutorial</td>
+                <td>Bhanu saini</td>
+                <td>CSS Introduction</td>
+                <td>180</td>
+                <td>110</td>
+            </tr>
+
+            <tr>
+                <td>Java Script Tutorial</td>
+                <td>Lokesh</td>
+                <td>Java Script Introduction</td>
+                <td>210</td>
+                <td>130</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+    <h2>Table 2: Vertical heading</h2>
+    <!-- Now we will make Vertical heading table
+    
+        -> in this we will not have any thead, because all the heading element will be placed in different 
+            rows.
+        -> In this we will only have limited number of row, which will be equal heading columns.
+        -> Same column data will be placed in horizontal direction.
+        -> We have to maintain the each row, so we can add/remove/update the content.
+        -> Each new heading will be specified in next row.
+    -->
+
+    <table id="table2">
+
+        <tbody>
+            <tr>
+                <th>Title</th>
+                <td>HTML Tutorial</td>
+                <td>HTML Tutorial</td>
+                <td>CSS Tutorial </td>
+                <td>Java Script Tutorial</td>
+            </tr>
+            <tr>
+                <th>Author</th>
+                <td>Manish</td>
+                <td>Sachin</td>
+                <td>Bhanu </td>
+                <td>Lokesh</td>
+            </tr>
+            <tr>
+                <th>Subject</th>
+                <td>HTML Introduction</td>
+                <td>HTML Introduction</td>
+                <td>CSS Introduction</td>
+                <td>JavaScirpt Introduction</td>
+            </tr>
+            <tr>
+                <th>Pages</th>
+                <td>120</td>
+                <td>160</td>
+                <td>180 </td>
+                <td>170</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>50</td>
+                <td>90</td>
+                <td>120</td>
+                <td>130</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
+
+<body>
+
+    <h2>Table 1: Horizontal heading</h2>
+
+    <!-- Now we will make a table with <table> element -->
+    <table id="table1">
+        <!-- Inside the table first we will make <thead> and <tbody> element. -->
+        <thead>
+            <!-- Inside thead first we will make a row with <tr> element and inside 
+                this row we will put all the first row (heading row) cell element.-->
+
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Subject</th>
+                <th>Pages</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <!-- Now here we will make n number of <tr> element for each entry. -->
+
+            <tr>
+                <td>HTML Tutorial</td>
+                <td>Manish Sain</td>
+                <td>HTML Introduction</td>
+                <td>150</td>
+                <td>60</td>
+            </tr>
+
+            <tr>
+                <td>HTML Tutorial</td>
+                <td>Sachin</td>
+                <td>HTML Adavnce</td>
+                <td>160</td>
+                <td>85</td>
+            </tr>
+
+            <tr>
+                <td>CSS Tutorial</td>
+                <td>Bhanu saini</td>
+                <td>CSS Introduction</td>
+                <td>180</td>
+                <td>110</td>
+            </tr>
+
+            <tr>
+                <td>Java Script Tutorial</td>
+                <td>Lokesh</td>
+                <td>Java Script Introduction</td>
+                <td>210</td>
+                <td>130</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+    <h2>Table 2: Vertical heading</h2>
+    <!-- Now we will make Vertical heading table
+    
+        -> in this we will not have any thead, because all the heading element will be placed in different 
+            rows.
+        -> In this we will only have limited number of row, which will be equal heading columns.
+        -> Same column data will be placed in horizontal direction.
+        -> We have to maintain the each row, so we can add/remove/update the content.
+        -> Each new heading will be specified in next row.
+    -->
+
+    <table id="table2">
+
+        <tbody>
+            <tr>
+                <th>Title</th>
+                <td>HTML Tutorial</td>
+                <td>HTML Tutorial</td>
+                <td>CSS Tutorial </td>
+                <td>Java Script Tutorial</td>
+            </tr>
+            <tr>
+                <th>Author</th>
+                <td>Manish</td>
+                <td>Sachin</td>
+                <td>Bhanu </td>
+                <td>Lokesh</td>
+            </tr>
+            <tr>
+                <th>Subject</th>
+                <td>HTML Introduction</td>
+                <td>HTML Introduction</td>
+                <td>CSS Introduction</td>
+                <td>JavaScirpt Introduction</td>
+            </tr>
+            <tr>
+                <th>Pages</th>
+                <td>120</td>
+                <td>160</td>
+                <td>180 </td>
+                <td>170</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>50</td>
+                <td>90</td>
+                <td>120</td>
+                <td>130</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
