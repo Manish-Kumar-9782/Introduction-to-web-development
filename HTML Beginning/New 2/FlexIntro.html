@@ -8,30 +8,160 @@
     <title>Flex Intro</title>
 
     <style>
-        .flex-container {
+        .container {
+            width: 600px;
+            height: auto;
+            padding: 10px;
+            border: 5px solid goldenrod;
+
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: dodgerblue;
+            color: white;
+            padding: auto;
+            margin: 5px;
             display: flex;
-            border: 5px solid gold;
-            width: 700px;
-            height: 700px;
             justify-content: center;
+            align-items: center;
+
+        }
+
+        .box h1 {
+
+            margin: auto;
+        }
+
+        .flex-row {
+            /*Flex row will apply display:flex on the element. it will make the 
+           element as flex container.*/
+            display: flex;
+
+            /*
+                As we apply display:flex, flex-direction set to row (x-axis), main-axis will also
+                set on x-axis, cross-axis will set on (column) y-axis.
+
+                Justify-content: this property will work the main-axis.
+                align-items: this property will work the cross-axis.
+                align-content: this property will work the cross-axis.
+            */
+        }
+
+        .jc-left {
+            justify-content: left;
+        }
+
+        .jc-right {
+            justify-content: right;
+        }
+
+        .jc-flex-start {
+            justify-content: flex-start;
+        }
+
+        .jc-flex-end {
+            justify-content: flex-end;
+        }
+
+        .jc-center {
+            justify-content: center;
+        }
+
+        .al-start {
             align-items: flex-start;
         }
 
-        .flex-item {
-            background-color: dodgerblue;
-            color: white;
-            width: 100px;
-            height: 100px;
+        .al-end {
+            align-items: flex-end;
+        }
+
+        .al-center {
+            align-items: center;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="flex-container">
+    <h1>justify-content: left</h1>
+    <div class="container flex-row jc-left">
 
-        <div class="flex-item">
-            Hello
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+    </div>
+
+    <h1>justify-content: right</h1>
+    <div class="container flex-row jc-right">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+    </div>
+
+    <h1>justify-content: center</h1>
+    <div class="container flex-row jc-center">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+    </div>
+
+    <h1>justify-content: flex-start</h1>
+    <div class="container flex-row jc-flex-start">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+    </div>
+
+    <h1>justify-content: flex-end</h1>
+    <div class="container flex-row jc-flex-end">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>1</h1>
         </div>
     </div>
 
