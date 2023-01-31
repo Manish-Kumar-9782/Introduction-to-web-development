@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haunted House On Sale</title>
 
+    <link rel="stylesheet" href="../../styles/tailwind-css.css">
+
     <style>
         /* Importing a google font to make it look better. */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
@@ -15,6 +17,15 @@
         * {
             font-family: poppins, "sans-serif";
             font-size: large;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* background-color: black; */
+            padding: 40px;
         }
 
         .text-light {
@@ -44,15 +55,22 @@
         }
 
         .card {
-            width: 500px;
+            width: 450px;
             min-height: 600px;
-            background-image: url("../hounted house.jpg");
-            border-radius: 25px;
+            background-image: url("haunted house.jpg");
+            border-radius: 8px;
             overflow: hidden;
+            /* box-shadow: 2px 2px 10px 10px lightgray; */
+            box-shadow: 2px 2px 18px 6px #17262f;
+
         }
 
         .card-img img {
             width: 100%;
+            height: 300px;
+            object-fit: cover;
+
+            -webkit-mask-image: linear-gradient(to bottom, black 0%, black 35%, black 50%, black 65%, hsla(0, 0%, 0%, 0.608) 85%, transparent 100%);
         }
 
         /* factor 1 = 5px */
@@ -73,7 +91,7 @@
         }
 
         .border-bottom {
-            border-bottom: 2px ridge;
+            border-bottom: 2px ridge rgba(211, 211, 211, 0.196);
         }
 
         .group>* {
@@ -92,44 +110,46 @@
 
     <div class="card text-light">
         <div class="card-img">
-            <img src="../hounted house.jpg" alt="Bhoot Bangla">
+            <img src="haunted house.jpg" alt="Bhoot Bangla">
         </div>
 
-        <div class="card-gn-details px-3 border-bottom">
+        <div class="card-gn-details p-4 border-bottom">
             <p>
-                <span><b>DETACHED HOUSE: 125Y OLD</b></span> <br>
-                <span>Amount: 15Cr./-</span> <br>
-                <span>Bhoot Bangla, Town 420, Street 007</span>
+                <span class="text-gray-500">DETACHED HOUSE: 125Y OLD</span> <br>
+                <span class="text-3xl text-gray-300">&#8360;: 15Cr. ONLY</span> <br>
+                <span class="text-sm text-gray-400">Bhoot Bangla, Town 420, Street 007</span>
             </p>
 
         </div>
 
-        <div class="card-bhk-details border-bottom py-3">
+        <div class="card-bhk-details border-bottom p-4 text-gray-500">
 
-            <div class="flex-row jc-between px-3 group">
+            <div class="flex-row jc-between group">
                 <p>15 Bedroom </p>
                 <p>2 Bathroom</p>
             </div>
 
-            <div class="flex-row jc-between px-3 group">
+            <div class="flex-row jc-between group">
                 <p>1 Large Hall</p>
                 <p>2 Swimming Pool</p>
             </div>
 
-            <div class="flex-row jc-between px-3 group">
+            <div class="flex-row jc-between group">
                 <p>1 Longe</p>
                 <p>2 Beach Front</p>
             </div>
 
         </div>
 
-        <div class="card-retailer group px-3 py-3">
-            <p><b>Retailer</b></p>
+        <div class="card-retailer group p-4 text-gray-500">
+            <p class="uppercase">Retailer</p>
             <div class="flex-row al-center">
-                <img class="circle-48" src="../witcher-silver.jpg" alt="The Geralt">
+                <img class="circle-48" src="./haunted house profile.jpg" alt="The Guardian">
                 <div class="group px-3">
-                    <p>Geralt Of Rivia</p>
-                    <p>+91 9874563218</p>
+                    <p>
+                        <span class="text-gray-400">Guardian Of House</span> <br>
+                        +91 9874563218
+                    </p>
                 </div>
             </div>
         </div>

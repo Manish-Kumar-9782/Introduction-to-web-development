@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haunted House</title>
+    <link rel="stylesheet" href="../../styles/tailwind-css.css">
+    <link rel="stylesheet" href="Card.css">
+
+    <style>
+        .card {
+            --dark: #1f2731;
+            --light: #8fa5a8;
+            --light-2: #354650;
+            --dark-2: #374952;
+            background-image: linear-gradient(0deg, var(--dark), var(--light)), linear-gradient(45deg, var(--dark), var(--light)), linear-gradient(125deg, var(--light-2), var(--dark-2)), linear-gradient(132deg, var(--light-2), var(--dark-2));
+
+        }
+
+        .img img {
+            -webkit-mask-image: linear-gradient(to bottom, black 0%, black 35%, black 50%, black 65%, hsla(0, 0%, 0%, 0.608) 85%, transparent 100%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <!-- section 1 -->
+            <div class="img">
+                <img class="w-100" src="hauntedhouse.jpg" alt="Bhooto ki Ghaati">
+            </div>
+
+            <!-- section 2 -->
+            <div class="general-detail border-bottom blur-backface px-3">
+                <p>
+                    <b class="text-base text-gray-500">DETACHED HOUSE - 300 YEARS OLD</b> <br>
+                    <span class="text-3xl text-gray-300">&#8360;: 30Cr Only</span><br>
+                    <span class="text-sm text-gray-400">Bhoot Bangla, town 420, street 007</span>
+                </p>
+            </div>
+
+            <!-- section 3 -->
+            <div class="house-detail border-bottom px-3 blur-backface text-gray-400">
+                <ul class="p-0" type="none">
+                    <li class="flex-row jc-between"><span>15-Bedroom</span> <span>5-Bathroom</span>
+                    </li>
+                    <li class="flex-row jc-between"><span>1-Large hall</span> <span>2-Swimming
+                            Pool</span></li>
+                    <li class="flex-row jc-between"><span>1-Longe</span> <span>2-Beach Front</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- section 4 -->
+            <div class="seller-detail blur-backface px-3 text-gray-400">
+                <span class="uppercase text-sm">Retailer</span><br>
+                <div>
+
+                    <div class="flex-row f-gap-2 al-center">
+                        <img class="circle wh-48" src="ciri.webp" alt="Cirila Princess">
+                        <div>
+                            <b class="text-gray-500">Retailer Name</b> <br>
+                            <span>7894561236</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

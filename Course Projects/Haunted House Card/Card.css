@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    font-family: 'Roboto', sans-serif;
+    width: 400px;
+    height: fit-content;
+    background-image: url("hauntedhouse.jpg");
+    /* color: rgba(245, 245, 245, 0.58);    */
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 10px 10px 30px 1px #000000c9;
+}
+
+.w-100 {
+    /* this will set the element width 100% upto
+    its parent. */
+    width: 100%;
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgba(243, 238, 238, 0.381);
+}
+
+.my-3 {
+    /* 1: 5px, 4: 20px */
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.px-3 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.p-0 {
+    padding: 0px;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.jc-between {
+    justify-content: space-between;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.wh-48 {
+    width: 48px;
+    height: 48px;
+}
+
+.f-gap-2 {
+    gap: 20px;
+}
+
+img {
+    background: linear-gradient(to bottom,
+            #f7f7f787,
+            #1d1d1d5e);
+    backdrop-filter: blur(1px);
+    background-color: #ffffff12;
+}
+
+.img {
+    backdrop-filter: blur(1px);
+    background-color: #ffffff12;
+}
+
+.blur-backface {
+    backdrop-filter: blur(1px);
+    background-color: #ffffff12;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.blur-backface * {
+    margin: 0px;
+}
+
+.fs-xlarge {
+    font-size: xx-large;
+}
+
+.al-center {
+    align-items: center;
+}

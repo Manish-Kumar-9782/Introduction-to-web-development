@@ -71,6 +71,27 @@ const menu = {
         "HTML Attributes": "./Html-and-css/Notes/HTML Attributes.html",
         "Images, Audio & Video": "./Html-and-css/Notes/Images, Audio and Video.html",
         "Links & Navigation": "./Html-and-css/Notes/Links and Navigation.html",
+    },
+    "Projects": {
+        "Project 1": "./Course Projects/HTML Day 8 - LIst with CSS.html",
+        "Project 2": "./Course Projects/HTML Day 10 - Table with Css 1.html",
+        "Project 3": "./Course Projects/HTML Day 10 - Table with Css 2.html",
+        "Project 4": "./Course Projects/HTML Day 10 - Table Extra 1.html",
+        "Project 5": "./Course Projects/HTML Day 10- Table Extra 2.html",
+        "Project 6": "./Course Projects/card-layout1.html",
+        "Project 7": "./Course Projects/Haunted House Card/HauntedHouseCard.html",
+        "Project 8": "./Course Projects/HouseCard.html",
+        "Project 9": "./Course Projects/Haunted House 2/haunted House 2.html",
+        "Project 10": "./Course Projects/Flex Semantic Layout.html",
+        "Project 11": "./Course Projects/Flex Practice 2.html",
+        "Project 12": "./Course Projects/FlexBoxPractice1.html",
+        "Project 13": "./Course Projects/HTML Day 16 - Flex Project 1.html",
+        "Project 14": "./Course Projects/menu side bar/index.html",
+        "Project 15": "./Course Projects/Game Cards/GameCard.html",
+        "Project 16": "./Course Projects/Sale Page/SalePage.html",
+        "Project 17": "./Course Projects/Social Platform/index.html",
+        "Project 18": "./Course Projects/Witcher Medallion Card.html",
+
     }
 
 }

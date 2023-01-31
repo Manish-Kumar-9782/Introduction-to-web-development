@@ -1,98 +1,97 @@
 @import url(colors.css);
 
-code.element.tag {
+code.element.tag{
     padding-top: 0px;
     padding-bottom: 0px;
     /* color: red; */
 }
 
-header h1 {
+header h1{
     margin: 0px;
     padding: 5px;
     color: #2b6567;
 
 }
 
-header :is(p, ul, .content) {
+header p, header ul{
     background-color: floralwhite;
     margin: 0px;
     padding: 10px;
 
 }
 
-header ul {
-    padding-left: 50px;
+header ul{
+   padding-left:50px;
 
 }
 
-header p:first-of-type {
+header p:first-of-type{
     padding-top: 30px;
 }
 
 
 
-h1 {
+h1{
     text-align: center;
     background-color: papayawhip;
 }
 
-li,
-dd {
+li,dd{
     margin-top: 10px;
     font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.4em;
 }
 
 /* A class to apply the highlight on the element*/
-.hlight {
+.hlight{
     background-color: rgba(250, 156, 122, 0.16);
     color: rgb(158, 48, 103);
-    font-family: Arial, sans-serif;
-
+    font-family:  Arial, sans-serif;
+    
 }
 
-code.hlight {
+code.hlight{
     font-family: monospace;
-    font-size: 1.2em;
+    font-size: large;
 }
 
-.attr {
+.attr{
     background-color: rgba(122, 209, 250, 0.16);
     color: rgb(7, 157, 191);
-    font-family: Arial, sans-serif;
-
+    font-family:  Arial, sans-serif;
+    
 }
 
 /* css property content styles */
-.prprty {
+.prprty{
     color: #2b6567;
     background-color: rgba(43, 101, 103, 0.162);
 }
 
 /* css property value content styles. */
-.prval {
+.prval{
     color: rgb(47 72 115);
     background-color: rgba(38, 100, 63, 0.17);
 }
 
-code:is(.attr, .prprty, .prval) {
+code.attr, code.prprty, code.prval{
     font-family: monospace;
-    font-size: 1.2em;
+    font-size: 1.0rem;
 }
 
-b.hlight {
+b.hlight{
     color: rgb(188, 29, 29);
     background-color: rgba(249, 83, 83, 0.186);
 }
 
 /* A class to apply the highlight marking on the element*/
-.mark {
+.mark{
     color: rgb(42, 107, 150);
     background-color: rgba(113, 146, 235, 0.108);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
 }
 
-.heading {
+.heading{
     padding-left: 5px;
     border-left: 4px solid #800077b0;
     /* font-family: 'Courier New', Courier, monospace;
@@ -101,7 +100,7 @@ b.hlight {
 
 }
 
-.type {
+.type{
     color: var(--lazurite-blue);
     background-color: var(--lazurite-blue-transparent);
     font-weight: bold;
@@ -109,79 +108,73 @@ b.hlight {
 }
 
 /*A class to remove the color from the element (no background color)*/
-.nbg {
+.nbg{
     background-color: inherit;
 }
 
-h3 code.element.tag {
+h3 code.element.tag{
     color: inherit;
     padding: 0px 3px;
     background-color: inherit;
 }
 
-code {
+code{
     padding: 0px 5px;
     border-radius: 4px;
 }
 
-div h3 {
+div h3{
     margin-top: 50px;
     color: #006c84;
     background-color: inherit;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     border-color: inherit;
 }
-
-div {
+div{
     border-radius: 10px;
 }
 
-.tab {
+.tab{
     border: 0px;
     margin-left: 35pt;
 }
-
-.tab8 {
+.tab8{
     border: 0px;
     margin-left: 10pt;
 }
 
-table th,
-td {
+table th, td{
     border: 2px solid rgb(129, 189, 193);
 }
 
-th,
-td {
-    line-height: 1.5em;
-}
-
-.inherit {
+th, td{
+    line-height: 1.5em;}
+.inherit{
     border-color: inherit;
     background-color: inherit;
     color: inherit;
 }
 
-.initial {
+.initial{
     border-color: initial;
     background-color: initial;
     color: initial;
 }
 
-.flarge {
+.flarge{
     font-size: large;
 }
 
-/* dl dt {
+dl dt{
     margin-top: 50px;
-} */
+}
 
-header p#content {
+header p#content{
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
-code.html {
+code.html{
     margin-left: 40px;
     background-color: #e2f6af;
     font-size: medium;
@@ -191,7 +184,7 @@ code.html {
 
 
 /* A code block to show the html or css codes. */
-div.codeblock {
+div.codeblock{
 
     font-family: monospace;
     /* font-size: large; */
@@ -204,37 +197,36 @@ div.codeblock {
     border: 1px solid white;
 }
 
-div.codeblock .prprty,
-div.codeblock .prval {
+div.codeblock .prprty, div.codeblock .prval{
     background-color: inherit;
 }
 
 /* codeblock comment paragraph */
-div.codeblock p.comment {
+div.codeblock p.comment{
     margin: 1px;
     padding: 1px;
     color: rgb(71, 126, 177);
 }
 
-div.codeblock p {
+div.codeblock p{
     margin-top: 1px;
 }
 
-var {
+var{
     font-family: 'math';
     font-size: large;
     font-weight: bold;
 }
 
-kbd {
-    color: #800077;
+kbd{
+    color:#800077;
     text-decoration: dashed;
     font-size: large;
 }
 
 /* A setting for Note section */
 
-.Note::before {
+.Note::before{
     content: "Note: ";
     font-size: large;
     font-weight: bold;
@@ -242,20 +234,20 @@ kbd {
 
 }
 
-.Note {
-
+.Note{
+    
     border: 1px solid rgba(113, 156, 194, 0.514);
     border-left: 5px solid rgba(71, 16, 148, 0.674);
-    background-color: #4a9ea12b;
+    background-color: #4a9ea12b;  
     border-radius: 5px;
     padding: 15px;
     line-height: 1.4;
-    font-family: sans-serif;
-    margin: 30px 40px;
+    font-family:sans-serif;
+    margin: 30px 40px; 
 }
 
 /* A setting for the warning section. */
-.Warning::before {
+.Warning::before{
     content: "Warning: ";
     font-size: large;
     font-weight: bold;
@@ -263,21 +255,21 @@ kbd {
 
 }
 
-.Warning {
-
+.Warning{
+    
     border: 1px solid rgba(128, 43, 42, 0.514);
     border-left: 5px solid rgb(116, 0, 0);
-    background-color: #e300005d;
+    background-color: #e300005d;  
     border-radius: 5px;
     padding: 15px;
     line-height: 1.4;
-    font-family: sans-serif;
-    margin: 30px 40px;
+    font-family:sans-serif;
+    margin: 30px 40px; 
 }
 
 /* A setting for the example */
 
-.Example::before {
+.Example::before{
     content: "For example: ";
     font-size: large;
     font-weight: bold;
@@ -285,44 +277,42 @@ kbd {
 
 }
 
-.Example {
-
+.Example{
+    
     border: 1px solid rgba(38, 78, 137, 0.514);
     border-left: 5px solid rgb(17, 0, 101);
-    background-color: #009be333;
+    background-color: #009be333;  
     border-radius: 5px;
     padding: 15px;
     line-height: 1.4;
-    font-family: sans-serif;
-    margin: 30px 40px;
+    font-family:sans-serif;
+    margin: 30px 40px; 
 }
-
 /* javaScript code style */
 
-.kword {
+.kword{
     color: var(--ruby-dust);
     font-size: 1rem;
     font-weight: bold;
 
 }
 
-.str {
+.str{
     color: rgb(2, 118, 8);
     font-size: 0.9rem;
     font-weight: bold;
 }
 
-.member {
+.member{
     color: rgb(0, 95, 146);
     font-size: 0.9rem;
     font-weight: bold;
 }
 
-.js::after {
+.js::after{
     content: '*/';
 }
-
-.js::before {
+.js::before{
     content: "/*";
 }
 
@@ -330,43 +320,42 @@ kbd {
     white-space: pre-line;
 } */
 
-.jscode {
+.jscode{
     color: #2b6567;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
     font-weight: bold;
     /* border: 1px solid; */
-
+    
 }
 
-span.jscode {
+span.jscode{
     border: 0px;
     background-color: inherit;
     white-space: pre;
 }
 
-span.jscode::before {
+span.jscode::before{
     content: "\A";
     /* \A is to create a new line */
 }
 
-.inbrkit::after {
+.inbrkit::after{
     content: ")";
     color: initial;
     background-color: initial;
 }
 
-.inbrkit::before {
+.inbrkit::before{
     content: "(";
     color: initial;
     background-color: unset;
 }
-
 /* ---------------------- */
 
 /* A table which expend and cover all the width of the container.  */
 
-table.expend {
+table.expend{
     text-align: center;
     width: 80%;
     margin: 0% 10%;
@@ -375,63 +364,7 @@ table.expend {
 
 /* summary  */
 
-summary {
+summary{
     background-color: #006c8433;
 
 }
-
-.heading-4 {
-    color: #800077;
-}
-
-/* ========================================================= */
-/* Themes for descriptive list*/
-
-.dl-sky {
-    background-color: #d5effe;
-    padding: 10px;
-
-}
-
-.dl-sky dt {
-    background-color: #93C6E7;
-    color: #1e5376;
-    padding-left: 10px;
-    font-size: 1.1em;
-    font-weight: 600;
-}
-
-.dl-sky dd {
-    background-color: #B9F3FC;
-    margin: 0px;
-    padding: 5px;
-    padding-left: 40px;
-    margin-bottom: 40px;
-
-}
-
-dl.item-box dt {
-    width: fit-content;
-    padding: 3px 5px;
-    margin: 0px;
-    background-color: #E1D7C6;
-    /* color: #d6d8d9; */
-}
-
-dl.item-box dd {
-    margin: 0px;
-    padding-left: 20px;
-    background-color: #E5E0FF;
-    margin-bottom: 40px;
-}
-
-table.item-box th {
-    background-color: #E1D7C6;
-    color: #1e5376;
-}
-
-table.item-box td {
-    background-color: #E5E0FF;
-}
-
-/* ========================================================= */
