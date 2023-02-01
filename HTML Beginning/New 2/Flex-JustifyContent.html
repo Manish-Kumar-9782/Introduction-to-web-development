@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Justify Content</title>
+
+    <style>
+        .container {
+            height: auto;
+            padding: 10px;
+            border: 5px solid goldenrod;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: dodgerblue;
+            color: white;
+            padding: auto;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .box h1 {
+
+            margin: auto;
+        }
+
+        .flex-row {
+            /*Flex row will apply display:flex on the element. it will make the 
+           element as flex container.*/
+            display: flex;
+
+            /*
+                As we apply display:flex, flex-direction set to row (x-axis), main-axis will also
+                set on x-axis, cross-axis will set on (column) y-axis.
+
+                Justify-content: this property will work the main-axis.
+                align-items: this property will work the cross-axis.
+                align-content: this property will work the cross-axis.
+            */
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .jc-left {
+            justify-content: left;
+        }
+
+        .jc-right {
+            justify-content: right;
+        }
+
+        .jc-flex-start {
+            justify-content: flex-start;
+        }
+
+        .jc-flex-end {
+            justify-content: flex-end;
+        }
+
+        .jc-center {
+            justify-content: center;
+        }
+
+        .al-start {
+            align-items: flex-start;
+        }
+
+        .al-end {
+            align-items: flex-end;
+        }
+
+        .al-center {
+            align-items: center;
+        }
+
+        .jc-between {
+            justify-content: space-between;
+        }
+
+        .jc-around {
+            justify-content: space-around;
+        }
+
+        .jc-evenly {
+            justify-content: space-evenly;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Flex: justify-content: space-between</h1>
+    <div class="container flex-row jc-between">
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+    </div>
+
+    <div class="container flex-row jc-between">
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+        <div class="box">
+            <h1>3</h1>
+        </div>
+    </div>
+
+    <div class="container flex-row jc-between">
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+        <div class="box">
+            <h1>3</h1>
+        </div>
+        <div class="box">
+            <h1>4</h1>
+        </div>
+    </div>
+
+    <hr>
+    <hr>
+    <hr>
+
+    <h1>Flex: justify-content: space-around</h1>
+    <div class="container flex-row jc-around">
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+    </div>
+
+    <div class="container flex-row jc-around">
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+        <div class="box">
+            <h1>3</h1>
+        </div>
+    </div>
+
+    <div class="container flex-row jc-around">
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+        <div class="box">
+            <h1>3</h1>
+        </div>
+        <div class="box">
+            <h1>4</h1>
+        </div>
+    </div>
+
+    <hr>
+    <hr>
+    <hr>
+    <h1>Flex: justify-content: space-evenly</h1>
+    <div class="container flex-row jc-evenly">
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+    </div>
+
+    <div class="container flex-row jc-evenly">
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+        <div class="box">
+            <h1>3</h1>
+        </div>
+    </div>
+
+    <div class="container flex-row jc-evenly">
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+        <div class="box">
+            <h1>3</h1>
+        </div>
+        <div class="box">
+            <h1>4</h1>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

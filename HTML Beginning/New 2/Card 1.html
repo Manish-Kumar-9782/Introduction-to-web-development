@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Card</title>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <style>
+        .flex-row {
+            /*Flex row will apply display:flex on the element. it will make the 
+           element as flex container.*/
+            display: flex;
+
+            /*
+                As we apply display:flex, flex-direction set to row (x-axis), main-axis will also
+                set on x-axis, cross-axis will set on (column) y-axis.
+
+                Justify-content: this property will work the main-axis.
+                align-items: this property will work the cross-axis.
+                align-content: this property will work the cross-axis.
+            */
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .jc-left {
+            justify-content: left;
+        }
+
+        .jc-right {
+            justify-content: right;
+        }
+
+        .jc-flex-start {
+            justify-content: flex-start;
+        }
+
+        .jc-flex-end {
+            justify-content: flex-end;
+        }
+
+        .jc-center {
+            justify-content: center;
+        }
+
+        .al-start {
+            align-items: flex-start;
+        }
+
+        .al-end {
+            align-items: flex-end;
+        }
+
+        .al-center {
+            align-items: center;
+        }
+
+        .jc-between {
+            justify-content: space-between;
+        }
+
+        .jc-around {
+            justify-content: space-around;
+        }
+
+        .jc-evenly {
+            justify-content: space-evenly;
+        }
+
+        .project-card {
+            width: 300px;
+            border: 1px solid lightgray;
+            background-color: lightgreen;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        i.bi {
+            font-size: 2rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            color: darkgreen;
+        }
+
+        .hlight-dim {
+            background-color: #4b8b6c5e;
+            color: #165418;
+            padding: 6px 10px;
+            margin: 0px;
+            border-radius: 10px;
+        }
+
+        .user-img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+        }
+
+        .gap-1 {
+            column-gap: 10px;
+        }
+    </style>
+
+</head>
+
+<body class="flex-row al-center jc-center">
+
+    <div class="project-card">
+
+        <div class="project-card-header flex-row al-center jc-between">
+            <p>Feb, 01-02-2023</p>
+            <i class="bi bi-three-dots"></i>
+        </div>
+
+        <div class="project-card-content text-center">
+            <p><span class="title">Web Designing</span>
+                <br>
+                In Progress
+            </p>
+        </div>
+        <div class="project-card-progress">
+            <label for="prog-bar" class="flex-row jc-between">
+                <span>Progress</span>
+                <span>70%</span>
+            </label>
+            <progress id="prog-bar" max="100" value="70" style="width:100%"></progress>
+            <hr style="border: 1px solid white; background-color:white">
+        </div>
+        <div class="project-card-footer flex-row al-center jc-between">
+            <div class="flex-row al-center gap-1">
+                <img class="user-img" src="./img1.png" alt="avatar">
+                <img class="user-img" src="./img2.png" alt="avatar">
+                <i class="bi bi-plus-circle" style="color:cadetblue;"></i>
+            </div>
+
+            <div>
+                <p class="hlight-dim">20 Days Left</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
