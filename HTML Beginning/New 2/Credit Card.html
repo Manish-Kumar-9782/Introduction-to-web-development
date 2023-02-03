@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=PT+Serif&family=Play&family=Roboto&display=swap');
+
+        .card-container {
+            font-family: 'DM Sans', 'Roboto', 'Play', 'PT Seri', sans-serif;
+        }
+
+        .fs-large {
+            font-size: large;
+        }
+
+        .fs-xlarge {
+            font-size: x-large;
+        }
+
+        .text-light {
+            color: white;
+        }
+
+        .text-bold {
+            font-weight: 700;
+        }
+
+        .px-4 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .flex-row {
+            display: flex;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .jc-between {
+            justify-content: space-between;
+        }
+
+        .jc-center {
+            justify-content: center;
+        }
+
+        .al-center {
+            align-items: center;
+        }
+
+        .card-block {
+            width: 380px;
+            height: 250px;
+            border: 2px solid black;
+            border-radius: 12px;
+            margin: 20px;
+        }
+
+        .card-front-side {
+            background-image: url(./gradient2.jpg);
+            background-size: cover;
+            background-position: bottom;
+        }
+
+        .card-chip {
+            background-image: url(./GoldenChip.jpg);
+            width: 85px;
+            height: 55px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+
+        .card-number {
+            font-size: 1.9rem;
+            font-family: 'Play', sans-serif;
+        }
+
+        .text-family-play {
+            font-family: 'Play', sans-serif;
+        }
+
+        .card-number p {
+            margin: 0px;
+            margin-top: 5px;
+            margin-bottom: 3px;
+        }
+
+        .card-holder {
+            font-family: "Play", sans-serif;
+            word-spacing: 7px;
+            letter-spacing: 1px;
+        }
+
+        .m-0 {
+            margin: 0px;
+        }
+
+        .my-3 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body class="flex-row jc-center">
+
+    <div class="card-container text-family-play">
+        <div class="card-front-side card-block text-light px-4">
+            <header class="text-bold flex-row al-center jc-between fs-large my-3">
+                <p class="m-0">CARD TYPE</p>
+                <P class="m-0">BANK NAME</P>
+            </header>
+
+            <div class="card-chip"></div>
+
+            <div class="card-number">
+                <p class="flex-row jc-between">
+                    <span>1234</span>
+                    <span>5678</span>
+                    <span>9087</span>
+                    <span>3980</span>
+                </p>
+            </div>
+
+            <div class="flex-row al-center jc-between text-family-play">
+
+                <span style="align-self: flex-start;">2023</span>
+
+
+                <div class="flex-row al-center">
+                    <span>
+                        VALID <br>
+                        THRU
+                    </span>
+
+                    <i class="bi bi-caret-right-fill"></i>
+                    <span>06/2028</span>
+                </div>
+            </div>
+
+            <p class="card-holder">KULDEEP SINGH CHOUHAN</p>
+        </div>
+        <div class="card-back-side card-block"></div>
+    </div>
+
+</body>
+
+</html>
