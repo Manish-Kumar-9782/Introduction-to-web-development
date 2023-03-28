@@ -6,10 +6,12 @@
 		<title>Intro to Box Modal</title>
 		
 		<style>
-		
+			/* here we are selecting element as tagName */
 			h2{
 				border: 10px solid red;
 				padding: 5px;
+				height: 200px;
+				width: 200px;
 			}
 			
 			p{
@@ -17,8 +19,37 @@
 				border: 1px solid green;
 				padding: 5px;
 			}
+			
+			/*to select id,  we have to add prefix #, like #mydiv1, # denots id.*/
+			#mydiv1{
+				
+				border: 4px dotted green;
+				margin: 10px;
+			}
+			
+			
 		
+			#mydiv2{
+				border: 4px dashed blue;
+				padding: 30px
+			}
+			
+			/*to select class, we have to add prefix ., like .first-class, . denots class. */
+			.first-class{
+				background-color: #97c4e6;
+				font-family: sans-serif;
+			}
+			
+			.margin-top{
+				margin: 30px 0px 0px 0px;
+			}
+			
+			.red{
+				color: red;
+			}
 		</style>
+		
+		<!-- css styling by using id has more priority than css styling with classes. -->
 	</head>
 	
 	<body>
@@ -26,15 +57,21 @@
 		<!-- id, class, tagName -->
 		<h1>Box Modal with Style element</h1>
 		
-		<div>
-			<h2>This is Intro to heading.</h2>
+		<div id="mydiv1" class="first-class margin-top">
+			<h2 class="red">This is Intro to heading.</h2>
 			
 			<p>In this section we are going to select differnt element with help of the tagName.</p>
 		</div>
 		
 		
-		<div>
-			<h2>This is another h2 heading.</h2>
+		<div id="mydiv2" class="first-class margin-top">
+			<h2 class="red">This is another h2 heading.</h2>
+			
+			<p>In this section we are going to select differnt element with help of the tagName.</p>
+		</div>
+		
+		<div id="mydiv3" class="first-class">
+			<h2 class="red">This is another h2 heading.</h2>
 			
 			<p>In this section we are going to select differnt element with help of the tagName.</p>
 		</div>
