@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- 
+    border-spacing:
+        border-collapse: separate;
+
+        table: 
+        1. border-spacing:
+        2. padding on table, th, td 
+        3. text-align
+        4. vertical-align
+        5. width, height,
+
+
+        background-color: we can apply bg on <tr> element.
+ -->
+
+<head>
+    <title>Table Intro</title>
+
+    <style>
+        table {
+            border: 1px solid rgb(27, 27, 58);
+            border-collapse: collapse;
+
+        }
+
+        /* Note: border-collapse is table element property. it is a parent level property. */
+
+        th {
+            border: 1px solid rgb(27, 27, 58);
+            width: 150px;
+            min-width: 100px;
+
+        }
+
+        td {
+            border: 1px solid rgb(27, 27, 58);
+            height: 100px;
+            vertical-align: bottom;
+            /* vertical-align property will align text in vertical direction.*/
+            /* text-align property will align text in horizontal direction.*/
+            padding: 4px;
+        }
+
+        tr th {
+            background-color: rgb(27, 27, 58);
+            color: white;
+            padding: 5px 10px;
+        }
+
+        tr td {
+            background-color: lightgray;
+            color: rgb(9, 9, 20);
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Height</th>
+                <th>BloodGroup</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Staish</td>
+                <td>21</td>
+                <td>5.7</td>
+                <td>AB+</td>
+            </tr>
+
+            <tr>
+                <td>Chandan</td>
+                <td>20</td>
+                <td>5.5</td>
+                <td>B+</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
