@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Ro and column span</title>
+    <style>
+        /* selecting multiple element by using comma separated selection.
+        in this we are selecting table, th and td element. */
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 4px 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Name</th>
+                <th rowspan="2">Age</th>
+                <th rowspan="2">Height</th>
+                <th rowspan="2">BloodGroup</th>
+            </tr>
+
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Satis</td>
+                <td>Sahu</td>
+                <td>21</td>
+                <td>5.6</td>
+                <td>AB+</td>
+            </tr>
+
+            <tr>
+                <td>Karan</td>
+                <td>Singh</td>
+                <td>20</td>
+                <td>5.7</td>
+                <td>A+</td>
+            </tr>
+
+            <tr>
+                <td>Kuldeep</td>
+                <td>Singh</td>
+                <td>20</td>
+                <td>5.6</td>
+                <td>B+</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
