@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Intro</title>
+
+    <style>
+        .border {
+            border: 2px solid black;
+        }
+
+        /* d-flex : display flex */
+        .d-flex {
+            display: flex;
+            /*by default flex-direction will be on row (x-axis)*/
+        }
+
+        .justify-left {
+            justify-content: left;
+        }
+
+        .justify-right {
+            justify-content: right;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-flex-start {
+            justify-content: flex-start;
+        }
+
+        .justify-flex-end {
+            justify-content: flex-end;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-around {
+            justify-content: space-around;
+        }
+
+        .justify-evenly {
+            justify-content: space-evenly;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: dodgerblue;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- display: flex will make this div as flex container 
+    
+        cross axis:
+
+        main axis: 
+    -->
+
+    <!-- 
+        justify content: main-axis
+        align-items: cross-axis
+    
+    -->
+    <h1>Justify Content</h1>
+    <div class="border d-flex">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>2</h1>
+        </div>
+
+        <div class="box">
+            <h1>3</h1>
+        </div>
+
+        <div class="box">
+            <h1>4</h1>
+        </div>
+
+    </div>
+
+    <!-- Note: by default Justify-Content is on Left -->
+    <h2>Justify Content: Left</h2>
+    <div class="border d-flex justify-left">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+    </div>
+
+    <!-- Flex and its related properties only applicable on the immediate children of
+    flex-container -->
+    <h2>Justify Content: Center</h2>
+    <div class="border d-flex justify-center">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+    </div>
+
+
+    <h2>Justify Content: right</h2>
+    <div class="border d-flex justify-right">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+    </div>
+
+
+
+    <h2>Justify Content: flex-start</h2>
+    <div class="border d-flex justify-flex-start">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+    </div>
+
+
+
+    <h2>Justify Content: flex-end</h2>
+    <div class="border d-flex justify-flex-end">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+    </div>
+
+    <h2>Justify Content: space-between</h2>
+    <div class="border d-flex justify-between">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>2</h1>
+        </div>
+
+        <div class="box">
+            <h1>3</h1>
+        </div>
+
+        <div class="box">
+            <h1>4</h1>
+        </div>
+    </div>
+
+    <h2>Justify Content: space-around</h2>
+    <div class="border d-flex justify-around">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>2</h1>
+        </div>
+
+        <div class="box">
+            <h1>3</h1>
+        </div>
+
+        <div class="box">
+            <h1>4</h1>
+        </div>
+    </div>
+
+    <h2>Justify Content: space-evenly</h2>
+    <div class="border d-flex justify-evenly">
+
+        <div class="box">
+            <h1>1</h1>
+        </div>
+
+        <div class="box">
+            <h1>2</h1>
+        </div>
+
+        <div class="box">
+            <h1>3</h1>
+        </div>
+
+        <div class="box">
+            <h1>4</h1>
+        </div>
+    </div>
+</body>
+
+</html>
