@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+
+    <style>
+        /* Nav bar background */
+        .bg-nav {
+            background-color: #77889954;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgb(21, 21, 46);
+        }
+
+        .text-green {
+            color: #04AA6D;
+            font-family: cursive;
+        }
+
+        .round-bg {
+            background-color: #04AA6D;
+            color: whitesmoke;
+            border-radius: 20px;
+            height: 40px;
+            width: 100px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        /*flex as row*/
+        .flex-row {
+            display: flex;
+        }
+
+        .gap {
+            column-gap: 40px;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-flex-start {
+            justify-content: flex-start;
+        }
+
+        .justify-flex-end {
+            justify-content: flex-end;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-around {
+            justify-content: space-around;
+        }
+
+        .justify-evenly {
+            justify-content: space-evenly;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .sup {
+            vertical-align: top;
+        }
+
+        .xx-large {
+            font-size: 50px;
+        }
+
+        .large {
+            font-size: 30px;
+        }
+
+        .big-font {
+            font-size: large;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .border {
+            border: 1px solid #333;
+        }
+
+        .w-50 {
+            width: 50%;
+        }
+
+        .mx-1 {
+            margin: 0px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="bg-nav">
+            <div class="flex-row justify-between mx-1">
+
+                <div class="left-section flex-row w-50 gap big-font align-center">
+
+                    <div class="text-center text-green">
+                        <span class="xx-large">W</span><span class="sup large">3</span> <br>
+                        <span class="big-font">School</span>
+                    </div>
+
+                    <a href="#">Tutorial</a>
+                    <a href="#">Reference</a>
+                    <a href="#">Exercise</a>
+                    <a href="#">BootCamp</a>
+                </div>
+
+                <div class="flex-row right-section big-font gap align-center">
+                    <a class="round-bg" href="#">SignUp</a>
+                    <a href="#">Login</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+</body>
+
+</html>
