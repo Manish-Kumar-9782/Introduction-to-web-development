@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Intro</title>
+
+    <style>
+        #mytable {
+            border: 1px solid red;
+            background-color: beige;
+        }
+
+        .mytable {
+            font-size: larger;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .border {
+            border: 1px solid red;
+        }
+
+        th {
+            border: 1px solid blue;
+        }
+
+        td {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+
+<!-- 
+    <table>: main container
+        <thead>: column heading <tr>, <th>
+        <tbody>: table data for each column <tr> <td> <th>
+
+        cell element: <th> <td>
+ -->
+
+<body>
+
+    <h1 class="border">Table Intro</h1>
+
+    <table id="mytable" class="mytable">
+        <thead>
+            <!-- first of all we need to make a row for each column cell element heading for each column. -->
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Height</th>
+                <th>BloodGroup</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dinesh</td>
+                <td>21</td>
+                <td>5.8</td>
+                <td>AB+</td>
+            </tr>
+
+            <tr>
+                <td>Karan</td>
+                <td>20</td>
+                <td>5.7</td>
+                <td>B+</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
