@@ -29,8 +29,7 @@
             border: 1px solid blue;
             /* padding: 5px 10px 15px 20px; */
             width: 100px;
-            text-align: left;
-            height: 300px;
+
         }
 
         tr th {
@@ -58,32 +57,43 @@
 
     <h1 class="border">Table Intro</h1>
 
-    <table id="mytable" class="mytable">
-        <thead>
-            <!-- first of all we need to make a row for each column cell element heading for each column. -->
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Height</th>
-                <th>BloodGroup</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Dinesh</td>
-                <td>21</td>
-                <td>5.8</td>
-                <td>AB+</td>
-            </tr>
+    <div
+        style="display: flex; justify-content:center; border:1px solid black; height: 600px; align-items:center;">
+        <table id="mytable" class="mytable">
+            <thead>
+                <!-- first of all we need to make a row for each column cell element heading for each column. -->
+                <tr>
+                    <th colspan="2">Name</th>
+                    <th rowspan="2">Age</th>
+                    <th rowspan="2">Height</th>
+                    <th rowspan="2">BloodGroup</th>
+                </tr>
 
-            <tr>
-                <td>Karan</td>
-                <td>20</td>
-                <td>5.7</td>
-                <td>B+</td>
-            </tr>
-        </tbody>
-    </table>
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dinesh</td>
+                    <td>Kumnawat</td>
+                    <td>21</td>
+                    <td>5.8</td>
+                    <td>AB+</td>
+                </tr>
+
+                <tr>
+                    <td>Karan</td>
+                    <td>Singh</td>
+                    <td>20</td>
+                    <td>5.7</td>
+                    <td>B+</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 </body>
 

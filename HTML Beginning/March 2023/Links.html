@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Center</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        a {
+            color: lightslategray;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: whitesmoke;
+        }
+
+        a:visited {
+            color: lightskyblue;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        p {
+            font-size: large;
+        }
+
+        .m-0 {
+            margin: 0px;
+        }
+
+        .p-0 {
+            padding: 0px;
+        }
+
+        .p-1 {
+            padding: 10px;
+        }
+
+        .p-2 {
+            padding: 20px;
+        }
+
+        .p-3 {
+            padding: 30px;
+        }
+
+        .border {
+            border: 2px solid black;
+        }
+
+        /* d-flex : display flex */
+        .d-flex {
+            display: flex;
+            /*by default flex-direction will be on row (x-axis)*/
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .justify-left {
+            justify-content: left;
+        }
+
+        .justify-right {
+            justify-content: right;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-flex-start {
+            justify-content: flex-start;
+        }
+
+        .justify-flex-end {
+            justify-content: flex-end;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-around {
+            justify-content: space-around;
+        }
+
+        .justify-evenly {
+            justify-content: space-evenly;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        /* =============================== */
+        .header,
+        .footer {
+            background-color: #2A2F4F;
+            color: whitesmoke;
+            padding: 10px;
+        }
+
+
+
+        .navbar {
+            background-color: #917FB3;
+            margin: 0px;
+            padding: 10px;
+        }
+
+        .aside-bar {
+            padding: 10px;
+            background-color: #E5BEEC;
+            width: 15%;
+        }
+
+        .main-content {
+            padding: 10px;
+            background-color: #FDE2F3;
+            width: 85%;
+        }
+
+        .gap {
+            gap: 20px;
+        }
+
+        ul.d-flex {
+            list-style-type: none;
+        }
+
+        ul.d-flex.flex-column {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+            row-gap: 30px;
+        }
+
+        ul.d-flex.flex-column li {
+            border: 1px solid whitesmoke;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: larger;
+        }
+
+        ul.d-flex.flex-column li:hover {
+            background-color: #2a2f4f85;
+            cursor: pointer;
+            color: whitesmoke;
+        }
+
+        /* Article Elements styling. */
+        .article {
+            border: 2px solid lightslategray;
+            width: 350px;
+            border-radius: 10px;
+            background-color: #BFCCB5;
+        }
+    </style>
+</head>
+
+<body class="center">
+
+    <header class="header">
+        <nav class="d-flex justify-between">
+            <h1>Links With Anchor Tag</h1>
+
+            <ul class="d-flex gap p-1">
+                <li><a href="../FlexIntro New.pdf" target="_blank" download>Flex Pdf</a></li>
+                <li><a href="box modal.html">Box Model</a></li>
+                <li><a href="./FlexCard.html">Flex New Card</a></li>
+                <li><a href="./navBar.html">Navigation Bar</a></li>
+                <li><a href="./Table extra.html">Table Extra</a></li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+
+</html>
