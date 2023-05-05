@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Flex House Card</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+        .full-height {
+            height: 100vh;
+            border: 10px solid;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-family: Roboto, sans-serif;
+        }
+
+
+        .d-flex {
+            display: flex;
+        }
+
+        .card {
+            width: 300px;
+            /* border: 1px solid black; */
+            border-radius: 10px;
+            overflow: hidden;
+            /* background-color: #efefef; */
+            box-shadow: 1px 1px 10px 2px;
+        }
+
+        .img-fit {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .text-large {
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .text-medium {
+            font-weight: 600;
+            font-size: 0.6rem;
+        }
+
+        .text-xlarge {
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .img-avatar {
+            height: 64px;
+            width: 64px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+        }
+
+        .house-details {
+            border-top: 1px solid #a0a0a0;
+            border-bottom: 1px solid #a0a0a0;
+        }
+
+        .house-description {
+            line-height: 1.3rem;
+        }
+
+        .gap {
+            gap: 20px;
+        }
+
+        .py-3 {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .px-2 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        /* d-flex : display flex */
+        .d-flex {
+            display: flex;
+            /*by default flex-direction will be on row (x-axis)*/
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .justify-left {
+            justify-content: left;
+        }
+
+        .justify-right {
+            justify-content: right;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-flex-start {
+            justify-content: flex-start;
+        }
+
+        .justify-flex-end {
+            justify-content: flex-end;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-around {
+            justify-content: space-around;
+        }
+
+        .justify-evenly {
+            justify-content: space-evenly;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .text-gray-700 {
+            color: #4a5568;
+        }
+
+        .text-gray-900 {
+            color: #1a202c;
+        }
+
+        .text-gray-600 {
+            color: #718096
+        }
+    </style>
+</head>
+
+<body class="full-height">
+
+    <div class="card-container">
+
+        <div class="card">
+            <!-- 1. image of the house -->
+            <div style="height: 170px">
+                <img class="img-fit"
+                     src="./house image 2.jpg"
+                     alt="House image">
+            </div>
+
+            <div class="house-description px-2 py-3">
+                <span class="text-large text-gray-700">HOUSE ON SELL: 12Y OLD</span> <br>
+                <span class="text-xlarge text-gray-900">PRICE: 123,456,7000 &#8377; ONLY</span> <br>
+                <span class="text-medium text-gray-600">232 STREET BELL TOWN</span> <br>
+            </div>
+
+            <div class="house-details px-2 py-3">
+                <div class="d-flex justify-between">
+                    <span>3 Bedroom</span>
+                    <span>2 Bathroom</span>
+                </div>
+            </div>
+
+            <div class="house-retailer px-2 py-3">
+                <span>RETAILER:</span> <br>
+                <div class="d-flex gap">
+                    <img src="./wc.jpg"
+                         alt="avatar img"
+                         class="img-avatar">
+
+                    <p>
+                        <span class="text-medium">Witcher : Geralt Of Rivia</span> <br>
+                        <span>+91 6234235678</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
