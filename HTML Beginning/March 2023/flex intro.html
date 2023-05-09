@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
     <title>Flex Intro</title>
 
     <style>
@@ -16,9 +18,8 @@
             height: 500px;
         }
 
-        .flex {
+        .d-flex {
             display: flex;
-            flex-direction: column;
         }
 
         .box {
@@ -26,6 +27,16 @@
             width: 100px;
             background-color: dodgerblue;
             margin: 10px;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 150px;
         }
     </style>
 </head>
@@ -38,7 +49,7 @@
 
         main axis: 
     -->
-    <div class="flex border size">
+    <div class="d-flex border size">
 
         <div class="box">
             <h1>1</h1>
@@ -56,6 +67,17 @@
             <h1>4</h1>
         </div>
 
+    </div>
+
+
+    <div class="d-flex">
+        <div class="box1 border">
+            Hello
+        </div>
+
+        <div class="box2 border">
+            bye
+        </div>
     </div>
 
 </body>
