@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Table rowspan colspan</title>
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+            /* border-spacing: 40px 10px; */
+            /*border spacing: it will be applicable only if border-collapse in set to collapse.*/
+            /*
+                we can apply padding as normal. but margin is not allowed.
+                height and width are also applicable of cell elements.
+            */
+        }
+    </style>
+</head>
+
+<!-- rowspan: extend the size of cell element in vertical direction defined by n number of rows.
+    colspan:  extend the size of cell element in horizontal direction defined by n number of cols.
+-->
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Name</th>
+                <th rowspan="2">Age</th>
+                <th rowspan="2">Height</th>
+                <th rowspan="2">BloodGroup</th>
+            </tr>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sachin</td>
+                <td>Chaudhary</td>
+                <td>21</td>
+                <td>5.6</td>
+                <td>AB-</td>
+            </tr>
+            <tr>
+                <td>Bhau</td>
+                <td>saini</td>
+                <td>19</td>
+                <td>5.4</td>
+                <td>B-</td>
+            </tr>
+            <tr>
+                <td>Lokesh</td>
+                <td>Jaat</td>
+                <td>22</td>
+                <td>5.7</td>
+                <td>A+</td>
+            </tr>
+            <tr>
+                <td>Kuldeep</td>
+                <td>Singh</td>
+                <td>20</td>
+                <td>5.5</td>
+                <td>AB+</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
