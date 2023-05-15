@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>List Card</title>
+
+    <style>
+        .list-card {
+            width: 300px;
+            padding: 10px;
+            color: whitesmoke;
+            border-radius: 4px;
+            background-image: url(./bg-gas.jpg);
+            background-position: center;
+            background-size: cover;
+            box-shadow: 23px 30px 5px 2px lightslategrey;
+        }
+
+        .list-card-title {
+            font-size: 2rem;
+            margin: 0px;
+            font-weight: 800;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #ffadf8a6;
+        }
+
+        .underbar {
+            width: 100px;
+            text-align: left;
+            margin: 0px;
+            margin-top: 5px;
+            border: 4px solid black;
+            border-color: #fdc4ff6e;
+        }
+
+        .list {
+            list-style-type: none;
+            padding: 0px;
+        }
+
+        .list-item {
+            padding: 8px 6px;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            margin: 3px 0px;
+        }
+
+        .list-item:hover {
+            background-color: rgba(119, 136, 153, 0.333);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="list-card">
+
+        <p class="list-card-title">
+            My Task List
+        </p>
+        <hr class="underbar">
+        <ul class="list">
+            <li class="list-item">Need to study for loop i c Language</li>
+            <li class="list-item">Complete function types</li>
+            <li class="list-item">What is if statement</li>
+            <li class="list-item">Read all Css Properties</li>
+            <li class="list-item">learn Html with css</li>
+            <li class="list-item">Become familiar with javaScript</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
