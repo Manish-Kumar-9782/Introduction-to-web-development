@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+
+<html> 
+
+	<!-- html comment 
+	
+		border: single; -> to all direction
+		border: first second; -> first top-bottom, second left-right,
+		border: top right bottom left;  -> clockwise.
+		
+		same pattern/order border width, padding.
+		
+		ovrriding: style-attribute>id > class> tagName
+	-->
+
+	<head> 
+		<title>Internal Styling</title>
+		
+		<style> 
+		
+			/* css element selector: id, class, tagName */
+			
+			/*
+				selector {
+					property: value;
+				}
+			*/
+			
+			/* Element selection by tagName */
+			
+			
+			
+			div{
+				border: 4px solid green;
+				margin: 10px;
+			}
+			
+			/* Element selection by id name  
+			Note: we use # as perfix before id name.*/
+			
+			#secondDiv{
+				background-color: dodgerblue;
+				color: white;
+			}
+			
+			#firstDiv{
+					border-color: blue;
+			}
+			
+			/* Element selection by class name
+				Note: we use . as prefix before class name.
+			*/
+			
+			.font-1{
+				font-family: cursive;
+			}
+			
+		</style>
+		
+	</head>
+	
+	<body>
+		<h1 style="border: 10px solid black;">HTML Introduction Part 2</h1>
+		
+		<h2 style="border: 10px solid red;">Intro to div or p element</h2>
+		
+		<div id="firstDiv"> 
+			<h3 class="font-1">RBI looks to ease KYC pain</h3>
+			<p>Have you walked out of a bank branch saddled with an insurance policy that you had 
+			no plans of getting? Or have you been worried your account will be frozen if you missed 
+			‘updating KYC’? The RBI has now come out with guidelines to improve customer service and 
+			make banking hassle-free.</p>
+		</div>
+		
+		<div id="secondDiv"> 
+			<h3 class="font-1">Meet the cricketer who scored first ODI century for India,</h3>
+			<p>In today's era, it is not a big deal to score a century in international cricket and 
+			most of the batsmen are successful in scoring more than one century in their career. But 
+			hitting a ton was not easy in earlier times. India played its first ODI in 1974 against 
+			England but India got its first ODI century after 9 years in 1983.</p>
+		</div>
+	</body>
+
+</html>
