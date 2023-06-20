@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Styling</title>
+
+    <!-- 
+        1. Selecting multiple element for a common styling rule, block. 
+        2. Selecting an child element
+            Select Parent Element -> Child Element
+     -->
+
+    <style>
+        th,
+        td,
+        table {
+            border: 1px solid black;
+        }
+
+        .cell-ok {
+            background-color: lightgreen;
+        }
+
+        .cell-danger {
+            background-color: lightcoral;
+        }
+
+        .cell-info {
+            background-color: lightseagreen;
+        }
+
+        .table-heading {
+            background-color: rgb(29, 29, 45);
+            color: lightgrey;
+        }
+
+        .table-data {
+            background-color: lightgray;
+        }
+
+        table td.cell-ok {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead class="table-heading">
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Subject</th>
+                <th>Pages</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody class="table-data">
+            <tr>
+                <td class="cell-ok">HTML Tutorial</td>
+                <td>Manish Saini</td>
+                <td>HTML Introdution</td>
+                <td>150</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <td>HTML Advance</td>
+                <td>Sachin</td>
+                <td class="cell-info">Master HTML</td>
+                <td>566</td>
+                <td class="cell-danger">536</td>
+            </tr>
+            <tr>
+                <td>CSS Tutorial</td>
+                <td>Bhanu</td>
+                <td>Css Introduction</td>
+                <td>452</td>
+                <td>362</td>
+            </tr>
+            <tr>
+                <td>javaScript</td>
+                <td>Lokesh</td>
+                <td class="cell-ok">Java Script Introduction</td>
+                <td>785</td>
+                <td>541</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
