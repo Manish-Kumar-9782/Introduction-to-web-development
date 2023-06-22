@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Flex Header</title>
+
+    <style>
+        .flex {
+            display: flex;
+        }
+
+        ul.flex {
+            list-style-type: none;
+            padding: 5px;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .gap {
+            gap: 20px;
+        }
+
+        .jc-between {
+            justify-content: space-between;
+        }
+
+        .border {
+            border: 4px solid black;
+        }
+
+        .border-red {
+            border-color: red;
+        }
+
+        .border-green {
+            border-color: green;
+        }
+
+        .fs-1 {
+            font-size: x-large;
+        }
+
+        .fs-2 {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="border flex jc-between align-center">
+        <div>
+            <ul class="flex gap align-center">
+                <li class="fs-2">HTML</li>
+                <li class="fs-1">Flex Box</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="flex gap align-center">
+                <li>Google</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Flex Layout</li>
+            </ul>
+        </div>
+    </header>
+
+</body>
+
+</html>
