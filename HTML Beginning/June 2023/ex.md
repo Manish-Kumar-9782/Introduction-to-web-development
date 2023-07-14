@@ -1,9 +1,21 @@
-- C/C++
-  - Embedded System
-  - Robotics
-  - operating System
-  - Drivers
-  - IOT
-  - database designing
-  - arthitecture of system
-  - fast memory management system designing
+-
+- Flex Container
+  - display: flex
+  - flex-direction : default row (main-axis)
+  - justify-content (main-axis)
+  - align-item (cross-axis)
+  - align-content (cross-axis)
+  - gap
+- Flex Item
+  - justify-self
+  - align-self
+
+* align Properties:
+  - left
+  - right
+  - flex-start
+  - flex-end
+  - center
+  - space-between
+  - space-around
+  - space-evenly

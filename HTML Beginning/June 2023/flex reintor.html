@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Flex Reintro</title>
+
+    <style>
+        .flex {
+            display: flex;
+        }
+
+        .fancy-border {
+            border: 10px groove goldenrod;
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+
+
+        .justify-content {
+            justify-content: space-between;
+        }
+
+        .align-items {
+            align-items: flex-start;
+        }
+
+        .gap {
+            gap: 20px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: darkturquoise;
+            padding: 40px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="flex gap fancy-border justify-content">
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+        <div class="box">
+            <h1>3</h1>
+        </div>
+        <div class="box">
+            <h1>4</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>
