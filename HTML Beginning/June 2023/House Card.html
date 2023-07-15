@@ -7,7 +7,61 @@
           content="width=device-width, initial-scale=1.0">
     <title>House Card</title>
 
+
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+
+    <style>
+        .fw-700 {
+            font-weight: 700;
+        }
+
+        .fw-600 {
+            font-weight: 600;
+        }
+
+        .fs-small {
+            font-size: .8rem;
+        }
+
+        .fs-large {
+            font-size: 1.5rem;
+        }
+
+        .text-gray-700 {
+            color: #4a5568;
+        }
+
+        .text-gray-600 {
+            color: #718096;
+        }
+
+        .m-0 {
+            margin: 0px;
+        }
+
+        .mx-1 {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .my-2 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+
+        .px-1 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .py-2 {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
         body {
             height: 100vh;
             margin: 0px;
@@ -27,20 +81,29 @@
             justify-content: center;
         }
 
+        .jc-between {
+            justify-content: space-between;
+        }
+
         .align-center {
             align-items: center;
         }
 
+        .gap-1 {
+            gap: 15px;
+        }
+
         .card {
+            font-family: 'Roboto', sans-serif;
             width: 350px;
-            height: 450px;
-            border: 1px solid black;
+            box-shadow: 2px 2px 10px 1px;
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         .card-image {
             width: 100%;
-            height: 40%;
-
+            height: 180px;
         }
 
         .card-image img {
@@ -48,6 +111,29 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
+        }
+
+        .card-details {
+            line-height: 1.9rem;
+        }
+
+        .user-avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .user-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .card-footer {
+
+            background-color: rgba(173, 216, 230, 0.203);
         }
     </style>
 </head>
@@ -60,9 +146,34 @@
             <img src="../../../Images/house image 2.jpg"
                  alt="">
         </div>
-        <div class="card-details"></div>
-        <div class="card-description"></div>
-        <div class="card-footer"></div>
+
+        <div class="card-details mx-1 my-2">
+            <span class="text-gray-700 fw-700">HAUNTED HOUSE: 10Y OLD</span> <br>
+            <span class="fs-large">₨:1,20,99,999 ONLY</span> <br>
+            <span class="text-gray-600 fs-small fw-600">420 Bhooto ki Ghati</span>
+        </div>
+
+        <hr class="m-0">
+
+        <div class="d-flex jc-between card-description mx-1 my-2">
+            <div> <span class="fw-700">3</span> <span class="text-gray-600">Bedroom</span></div>
+            <div> <span class="fw-700">2</span> <span class="text-gray-600">Bathroom</span></div>
+        </div>
+
+        <hr class="m-0">
+        <div class="card-footer px-1 py-2">
+            <span>RETAILER</span> <br>
+            <div class="d-flex gap-1 align-center">
+                <div class="user-avatar">
+                    <img src="../../Course Projects/yenifer.jpg"
+                         alt="user-avatar">
+                </div>
+                <div class="contact">
+                    <span class="fw-600 text-gray-600">+97-8976575423</span> <br>
+                    <span>Yennefer of Vengerberg</span>
+                </div>
+            </div>
+        </div>
 
     </div>
 
