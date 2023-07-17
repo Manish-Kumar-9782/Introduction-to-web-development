@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>HTML List Card</title>
+
+    <style>
+        body {
+            margin: 0px;
+            height: 100vh;
+        }
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .color-orange {
+            background-color: #ee7168;
+        }
+
+        .list-container {
+            width: 600px;
+            border-radius: 30px;
+            padding: 40px 20px;
+            background-color: #ee716864;
+            color: white;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+
+        .gap-2 {
+            gap: 20px;
+        }
+
+
+        .heading-box {
+            height: 160px;
+            background-color: #ee7168;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px 3px #ee7168;
+        }
+
+        .list-heading {
+
+            font-size: 3rem;
+
+        }
+
+        .list-item {
+            font-size: 1.3rem;
+
+            text-align: center;
+            padding: 8px;
+            border-radius: 20px;
+            background-color: #ee7168;
+        }
+
+        .list {
+            list-style-position: inside;
+            margin: 40px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body class="flex-center">
+
+    <div class="list-container">
+
+        <div class="heading-box flex-center">
+            <h1 class="list-heading">The Order of Operations</h1>
+        </div>
+
+        <ol class="list d-flex flex-column gap-2">
+            <li class="list-item">Parenthesis</li>
+            <li class="list-item">Exponents</li>
+            <li class="list-item">Multiplication</li>
+            <li class="list-item">Division</li>
+            <li class="list-item">Addition</li>
+            <li class="list-item">Subtract</li>
+        </ol>
+    </div>
+
+</body>
+
+</html>
