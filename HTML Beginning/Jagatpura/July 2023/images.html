@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+    // multiple section for common properties.
+    selector1, selector2{
+        property1: value1;
+        property2: value2;
+        property3: value3;
+    }
+
+    // parent child, 
+
+     selector1 selector2{
+        property1: value1;
+        property2: value2;
+        property3: value3;
+    }
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+
+
+    <style>
+        .img-container {
+            width: 600px;
+            height: 600px;
+            border: 10px groove goldenrod;
+            overflow: hidden;
+        }
+
+        .img-container img {
+            width: 100%;
+        }
+
+        .img-container img.fill-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- direct img -->
+
+    <img src="./548302.jpg"
+         alt="witcher medalian image"
+         width="500px"
+         height="600px">
+
+    <img src="./548302.jpg"
+         alt="witcher medalian image"
+         width="500px">
+
+
+    <div class="img-container">
+        <img src="./548302.jpg"
+             alt="witcher medalian image">
+    </div>
+
+    <div class="img-container">
+        <img src="./548302.jpg"
+             alt="witcher medalian image"
+             class="fill-img">
+    </div>
+</body>
+
+</html>
