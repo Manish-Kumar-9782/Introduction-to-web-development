@@ -39,6 +39,23 @@
             gap: 30px;
         }
 
+        .p-2 {
+            padding: 20px;
+        }
+
+        .p-1 {
+            padding: 10px;
+        }
+
+        .my-1 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .my-2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
 
         header {
             border: 1px solid black;
@@ -48,12 +65,20 @@
 
         section.container {
             height: 90vh;
-            border: 1px solid goldenrod;
+            margin: 10px;
+        }
+
+        .rounded {
+            border-radius: 10px;
         }
 
         .navigation {
             flex: 1;
             border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
         }
 
         .project-cards {
@@ -64,6 +89,17 @@
         .message-box {
             flex: 2;
             border: 1px solid black;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            font-size: xx-large;
+            border: 1px solid black;
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -91,9 +127,48 @@
     </header>
 
     <section class="container d-flex gap-2">
-        <aside class="navigation"></aside>
-        <section class="project-cards"></section>
-        <aside class="message-box"></aside>
+        <aside class="navigation rounded">
+            <div class="box"><i class="bi bi-house-door-fill"></i></div>
+            <div class="box"><i class="bi bi-pie-chart-fill"></i></div>
+            <div class="box"><i class="bi bi-calendar-event-fill"></i></div>
+            <div class="box"><i class="bi bi-gear-fill"></i></div>
+        </aside>
+
+        <section class="project-cards rounded p-1">
+            <div class="project-cards-header d-flex jc-between">
+                <b>Projects</b>
+                <b>August,25</b>
+            </div>
+
+            <div class="project-cards-statistics d-flex al-center jc-between my-2">
+                <div class="d-flex gap-2">
+                    <span>
+                        45 <br>
+                        In Progress
+                    </span>
+
+                    <span>
+                        45 <br>
+                        In Progress
+                    </span>
+
+                    <span>
+                        45 <br>
+                        In Progress
+                    </span>
+                </div>
+
+                <div class="d-flex">
+                    <i class="bi bi-list-task"></i>
+                    <i class="bi bi-grid-fill"></i>
+                </div>
+            </div>
+
+            <div class="project-cards-container">
+
+            </div>
+        </section>
+        <aside class="message-box rounded"></aside>
     </section>
 
 </body>
