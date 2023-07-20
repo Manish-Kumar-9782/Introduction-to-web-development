@@ -39,6 +39,63 @@
             gap: 30px;
         }
 
+        .fw-700 {
+            font-weight: 700;
+        }
+
+        .fw-600 {
+            font-weight: 600;
+        }
+
+        .fs-small {
+            font-size: .8rem;
+        }
+
+        .fs-large {
+            font-size: 1.5rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-gray-700 {
+            color: #4a5568;
+        }
+
+        .text-gray-600 {
+            color: #718096;
+        }
+
+        .m-0 {
+            margin: 0px;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        .mx-1 {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .my-2 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+
+        .px-1 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .py-2 {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
         .p-2 {
             padding: 20px;
         }
@@ -100,6 +157,26 @@
             font-size: xx-large;
             border: 1px solid black;
             border-radius: 50%;
+        }
+
+        .project-cards-container {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .card {
+            width: 300px;
+            height: auto;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px 3px rgba(32, 32, 45, 0.342);
+        }
+
+        .btn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 15px;
         }
     </style>
 </head>
@@ -165,7 +242,37 @@
             </div>
 
             <div class="project-cards-container">
+                <div class="card">
 
+                    <div class="card-header d-flex jc-between">
+                        <span class="fw-600">25 August, 2020</span>
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="title text-center my-2">
+                            <span class="fs-large fw-600">Web Designing</span> <br>
+                            <span class="fw-600">Prototype</span>
+                        </div>
+
+                        <div class="progress">
+                            Progress <br>
+                            <progress max="100"
+                                      value="70"
+                                      class="w-100"></progress>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="card-footer d-flex jc-between al-center">
+                        <div class="f-left fs-large d-flex gap-1">
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-plus-circle"></i>
+                        </div>
+                        <span class="f-right btn">x days left</span>
+                    </div>
+                </div>
             </div>
         </section>
         <aside class="message-box rounded"></aside>
