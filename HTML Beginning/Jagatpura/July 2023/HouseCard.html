@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>House Card</title>
+
+
+    <style>
+        body {
+            height: 100vh;
+            margin: 0px;
+        }
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+
+
+            width: 350px;
+            overflow: hidden;
+        }
+
+        .card-img {
+            height: 170px;
+        }
+
+        .img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .border {
+            border: 1px solid black;
+        }
+
+        .rounded {
+            border-radius: 10px;
+        }
+
+        .px-1 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .py-1 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .mx-1 {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .my-1 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            line-height: 1.5rem;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .jc-between {
+            justify-content: space-between;
+        }
+
+        .shadow {
+            box-shadow: 2px 2px 10px 2px;
+        }
+
+        .circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 3px solid dodgerblue;
+        }
+    </style>
+</head>
+
+<body class="flex-center">
+
+    <div class="card rounded shadow">
+
+        <div class="card-img ">
+            <img src="./house image 2.jpg"
+                 alt="house card"
+                 class="img">
+        </div>
+        <div class="card-description  my-1 mx-1">
+            <span>HAUNTED HOUSE 10Y OLD</span> <br>
+            <span>Rs: 1,20,99,999 ONLY</span> <br>
+            <span>303 Bhooto ki ghati</span>
+        </div>
+        <hr>
+        <div class="card-details flex jc-between my-1 mx-1">
+            <span>3 Bathroom</span>
+            <span>2 Bedroom</span>
+        </div>
+        <hr>
+        <div class="card-retailer my-1 mx-1">
+            <span>RETAILER</span> <br>
+            <div class="my-1 flex">
+                <div class="circle"></div>
+                <div class="mx-1">
+                    <span>+91-987654326</span> <br>
+                    <span>Mohit</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
