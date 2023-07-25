@@ -11,6 +11,10 @@
 
 
     <style>
+        body {
+            margin: 0px;
+        }
+
         .d-flex {
             display: flex;
         }
@@ -129,8 +133,12 @@
             border-radius: 10px;
         }
 
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
         .navigation {
-            flex: 1;
+            flex: .7;
             border: 1px solid black;
             display: flex;
             flex-direction: column;
@@ -144,7 +152,7 @@
         }
 
         .message-box {
-            flex: 2;
+            flex: 2.3;
             border: 1px solid black;
         }
 
@@ -162,10 +170,12 @@
         .project-cards-container {
             border: 1px solid black;
             padding: 10px;
+            height: 82%;
+            overflow: auto;
         }
 
         .card {
-            width: 300px;
+            width: 270px;
             height: auto;
             padding: 10px;
             border-radius: 8px;
@@ -177,6 +187,28 @@
             color: white;
             padding: 6px 10px;
             border-radius: 15px;
+        }
+
+        .message-card {
+            border: 1px solid lightgrey;
+            border-radius: 8px;
+            box-shadow: 1px 1px 5px 1px #7f7d7d;
+        }
+
+        .avatar-48 {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+
+            overflow: hidden;
+            box-shadow: 0px 0px 3px 3px rgb(64, 64, 87);
+        }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
     </style>
 </head>
@@ -241,7 +273,263 @@
                 </div>
             </div>
 
-            <div class="project-cards-container">
+            <div class="project-cards-container d-flex gap-2 flex-wrap">
+                <div class="card">
+
+                    <div class="card-header d-flex jc-between">
+                        <span class="fw-600">25 August, 2020</span>
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="title text-center my-2">
+                            <span class="fs-large fw-600">Web Designing</span> <br>
+                            <span class="fw-600">Prototype</span>
+                        </div>
+
+                        <div class="progress">
+                            Progress <br>
+                            <progress max="100"
+                                      value="70"
+                                      class="w-100"></progress>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="card-footer d-flex jc-between al-center">
+                        <div class="f-left fs-large d-flex gap-1">
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-plus-circle"></i>
+                        </div>
+                        <span class="f-right btn">x days left</span>
+                    </div>
+                </div>
+
+                <div class="card">
+
+                    <div class="card-header d-flex jc-between">
+                        <span class="fw-600">25 August, 2020</span>
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="title text-center my-2">
+                            <span class="fs-large fw-600">Web Designing</span> <br>
+                            <span class="fw-600">Prototype</span>
+                        </div>
+
+                        <div class="progress">
+                            Progress <br>
+                            <progress max="100"
+                                      value="70"
+                                      class="w-100"></progress>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="card-footer d-flex jc-between al-center">
+                        <div class="f-left fs-large d-flex gap-1">
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-plus-circle"></i>
+                        </div>
+                        <span class="f-right btn">x days left</span>
+                    </div>
+                </div>
+
+                <div class="card">
+
+                    <div class="card-header d-flex jc-between">
+                        <span class="fw-600">25 August, 2020</span>
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="title text-center my-2">
+                            <span class="fs-large fw-600">Web Designing</span> <br>
+                            <span class="fw-600">Prototype</span>
+                        </div>
+
+                        <div class="progress">
+                            Progress <br>
+                            <progress max="100"
+                                      value="70"
+                                      class="w-100"></progress>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="card-footer d-flex jc-between al-center">
+                        <div class="f-left fs-large d-flex gap-1">
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-plus-circle"></i>
+                        </div>
+                        <span class="f-right btn">x days left</span>
+                    </div>
+                </div>
+
+                <div class="card">
+
+                    <div class="card-header d-flex jc-between">
+                        <span class="fw-600">25 August, 2020</span>
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="title text-center my-2">
+                            <span class="fs-large fw-600">Web Designing</span> <br>
+                            <span class="fw-600">Prototype</span>
+                        </div>
+
+                        <div class="progress">
+                            Progress <br>
+                            <progress max="100"
+                                      value="70"
+                                      class="w-100"></progress>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="card-footer d-flex jc-between al-center">
+                        <div class="f-left fs-large d-flex gap-1">
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-plus-circle"></i>
+                        </div>
+                        <span class="f-right btn">x days left</span>
+                    </div>
+                </div>
+
+                <div class="card">
+
+                    <div class="card-header d-flex jc-between">
+                        <span class="fw-600">25 August, 2020</span>
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="title text-center my-2">
+                            <span class="fs-large fw-600">Web Designing</span> <br>
+                            <span class="fw-600">Prototype</span>
+                        </div>
+
+                        <div class="progress">
+                            Progress <br>
+                            <progress max="100"
+                                      value="70"
+                                      class="w-100"></progress>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="card-footer d-flex jc-between al-center">
+                        <div class="f-left fs-large d-flex gap-1">
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-plus-circle"></i>
+                        </div>
+                        <span class="f-right btn">x days left</span>
+                    </div>
+                </div>
+
+                <div class="card">
+
+                    <div class="card-header d-flex jc-between">
+                        <span class="fw-600">25 August, 2020</span>
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="title text-center my-2">
+                            <span class="fs-large fw-600">Web Designing</span> <br>
+                            <span class="fw-600">Prototype</span>
+                        </div>
+
+                        <div class="progress">
+                            Progress <br>
+                            <progress max="100"
+                                      value="70"
+                                      class="w-100"></progress>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="card-footer d-flex jc-between al-center">
+                        <div class="f-left fs-large d-flex gap-1">
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-plus-circle"></i>
+                        </div>
+                        <span class="f-right btn">x days left</span>
+                    </div>
+                </div>
+
+                <div class="card">
+
+                    <div class="card-header d-flex jc-between">
+                        <span class="fw-600">25 August, 2020</span>
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="title text-center my-2">
+                            <span class="fs-large fw-600">Web Designing</span> <br>
+                            <span class="fw-600">Prototype</span>
+                        </div>
+
+                        <div class="progress">
+                            Progress <br>
+                            <progress max="100"
+                                      value="70"
+                                      class="w-100"></progress>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="card-footer d-flex jc-between al-center">
+                        <div class="f-left fs-large d-flex gap-1">
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-plus-circle"></i>
+                        </div>
+                        <span class="f-right btn">x days left</span>
+                    </div>
+                </div>
+
+                <div class="card">
+
+                    <div class="card-header d-flex jc-between">
+                        <span class="fw-600">25 August, 2020</span>
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="title text-center my-2">
+                            <span class="fs-large fw-600">Web Designing</span> <br>
+                            <span class="fw-600">Prototype</span>
+                        </div>
+
+                        <div class="progress">
+                            Progress <br>
+                            <progress max="100"
+                                      value="70"
+                                      class="w-100"></progress>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="card-footer d-flex jc-between al-center">
+                        <div class="f-left fs-large d-flex gap-1">
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-plus-circle"></i>
+                        </div>
+                        <span class="f-right btn">x days left</span>
+                    </div>
+                </div>
+
                 <div class="card">
 
                     <div class="card-header d-flex jc-between">
@@ -275,7 +563,49 @@
                 </div>
             </div>
         </section>
-        <aside class="message-box rounded"></aside>
+        <aside class="message-box rounded p-1">
+
+            <div class="">
+                <h3>Messages</h3>
+            </div>
+
+            <div class="message-cards rounded">
+
+                <div class="message-card p-1">
+                    <div class="message-card-header d-flex al-center gap-2 jc-between">
+                        <div class="d-flex al-center gap-2">
+                            <div class="avatar-48">
+                                <img src="./wc.jpg"
+                                     alt="witcher"
+                                     class="avatar-img">
+                            </div>
+                            <span>Geralt of Rivia</span>
+                        </div>
+
+                        <div>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="message-card-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui necessitatibus
+                        id dolor beatae facere officiis, blanditiis ratione odit veritatis ipsa?
+                    </div>
+                    <hr>
+                    <div class="message-card-footer d-flex jc-between al-center">
+                        <div class="d-flex gap-2">
+                            <i class="bi bi-hand-thumbs-up-fill"></i>
+                            <i class="bi bi-chat-left"></i>
+                        </div>
+                        <div>
+                            August, 25
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </aside>
     </section>
 
 </body>
