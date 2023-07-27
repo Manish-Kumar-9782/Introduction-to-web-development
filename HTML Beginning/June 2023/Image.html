@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+
+<!-- 
+
+    To insert an image we need img element
+
+    <img> :
+    it does not have any closing tag. so it does not contain any content.
+    Note: all the information is given by attribute to img element.
+
+    src: file relative address or file absolute address.
+    alt: 
+
+    absolute path/address: 
+        G:\WorkData\Programming\Web Development\Introduction-to-web-development\HTML Beginning\June 2023\wc.jpg
+
+    relative path/address:     
+        wc.jpg   : current working directory
+        548302.jpg
+        June 2023\wc.jpg  : forward directory
+        ../wc.jpg : backward directory
+ -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Foreground Image</title>
+</head>
+
+<body>
+
+    <!-- All images are placed with relative directory path. -->
+
+    <!-- image in current directory -->
+    <img src="wc.jpg"
+         alt="current directory image">
+
+
+    <!-- image in backward directory -->
+    <img src="../548302.jpg"
+         alt="backward directory image">
+
+
+    <!-- image in forward directory -->
+    <img src="./images/gradient-background1.jpg"
+         alt="forward directory image">
+</body>
+
+</html>
