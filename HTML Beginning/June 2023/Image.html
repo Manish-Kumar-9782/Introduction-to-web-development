@@ -28,23 +28,70 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <title>Foreground Image</title>
+
+    <style>
+        .img-box {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border: 1px solid red;
+            object-position: top right;
+        }
+
+        .circle-image-box {
+            border-radius: 50%;
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- circle-image-box:
+        
+        to create a circular image box we need to have both height and width same size.
+        and border-radius at 50%;
+    
+    -->
+
     <!-- All images are placed with relative directory path. -->
 
     <!-- image in current directory -->
+    <h2>Image with current directory</h2>
     <img src="wc.jpg"
          alt="current directory image">
 
 
     <!-- image in backward directory -->
+    <h2>image in backward directory</h2>
     <img src="../548302.jpg"
+         alt="backward directory image"
+         width="400px"
+         height="400px">
+
+    <!-- Note: if we specify both dimension height and width then our image might distort. in this case
+        to avoid the reduction in the image quality we should avoid to use both the dimension. -->
+
+    <!-- Note: removing the height -->
+    <h2>Note: removing the height</h2>
+    <img src="../548302.jpg"
+         alt="backward directory image"
+         width="400px">
+
+    <!-- if we want to maintain the both dimension then we need to use object properties on the image element.  -->
+    <h2>Image with contained inside a fixed size box</h2>
+    <img src="../548302.jpg"
+         class="img-box"
          alt="backward directory image">
 
 
+    <!-- Circular Image -->
+    <h2>Image in circular box</h2>
+    <img src="../548302.jpg"
+         class="img-box circle-image-box"
+         alt="backward directory image">
+
     <!-- image in forward directory -->
+    <h2>other image with forward directory</h2>
     <img src="./images/gradient-background1.jpg"
          alt="forward directory image">
 </body>
