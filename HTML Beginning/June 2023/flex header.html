@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Flex Header</title>
+
+    <style>
+        .header {
+            border: 1px solid black;
+            height: 60px;
+            background-color: lightcoral;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .jc-between {
+            justify-content: space-between;
+        }
+
+        ul.d-flex {
+            list-style-type: none;
+        }
+
+        .gap {
+            gap: 20px;
+        }
+
+        /*ul.d-flex li {
+            border: 1px solid black;
+            margin-right: 30px;
+        }*/
+    </style>
+</head>
+
+<body>
+
+    <header class="header d-flex jc-between">
+        <!-- left portion -->
+        <div id="left-div">
+            <h1>Pc Hardware</h1>
+        </div>
+
+        <!-- right portion -->
+        <ul id="right-div"
+            class="d-flex gap">
+            <li>HOME</li>
+            <li>CONTACT</li>
+            <li>ABOUT</li>
+        </ul>
+    </header>
+
+</body>
+
+</html>
