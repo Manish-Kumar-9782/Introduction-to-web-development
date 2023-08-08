@@ -11,6 +11,7 @@ let imagePaths = ['G:\\WorkData\\Programming\\Web Development\\Introduction-to-w
 // fisrt we will load the images slides
 
 imagePaths.forEach((img, index) => {
+
     let imgBox = document.createElement("div");
     let imgElement = document.createElement("img");
     imgElement.setAttribute("src", img);

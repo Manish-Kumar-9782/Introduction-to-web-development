@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+      <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+      <title>Cards</title>
+
+      <style>
+            * {
+                  box-sizing: border-box;
+            }
+
+            body {
+                  margin: 0px;
+                  height: 100vh;
+            }
+
+            .container {
+                  border: 2px solid black;
+                  height: 100px;
+                  display: flex;
+                  gap: 30px;
+                  justify-content: center;
+                  align-items: center;
+                  height: 100%;
+                  background-image: url(./background.jpg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+            }
+
+            .card {
+                  width: 350px;
+                  height: 450px;
+                  border-radius: 10px;
+                  overflow: hidden;
+                  box-shadow: 3px 3px 10px 30px rgba(0, 0, 0, 0.285);
+                  transition: transform .3s ease-in-out;
+                  position: relative;
+            }
+
+            .card:hover {
+                  transform: scale(1.2);
+            }
+
+            .card-img {
+                  height: 100%;
+                  width: 100%;
+                  object-fit: cover;
+                  object-position: center;
+
+            }
+
+            .absolute {
+                  color: #ccc;
+                  position: absolute;
+                  bottom: 0px;
+                  background-color: rgba(21, 12, 12, 0.358);
+                  padding: 10px;
+                  backdrop-filter: blur(2px);
+            }
+
+            .card:hover>.absolute {
+                  background-color: rgba(0, 0, 0, 0.6);
+            }
+      </style>
+</head>
+
+<body>
+
+      <div class="container">
+
+            <div class="card">
+                  <img src="./card1.jpg"
+                       class="card-img"
+                       alt="">
+                  <div class="absolute">
+                        <h3>Horizon Down Eagle</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, unde
+                              deleniti dignissimos qui facilis rem dolor? Illum eum quis sint ipsa
+                              dignissimos, expedita quasi ipsum commodi debitis explicabo saepe
+                              totam neque et vel temporibus provident excepturi omnis nam tempora
+                              vero!</p>
+                  </div>
+            </div>
+            <div class="card">
+                  <img src="./card2.jpg"
+                       class="card-img"
+                       alt="">
+                  <div class="absolute">
+                        <h3>Horizon Down Eagle</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, unde
+                              deleniti dignissimos qui facilis rem dolor? Illum eum quis sint ipsa
+                              dignissimos, expedita quasi ipsum commodi debitis explicabo saepe
+                              totam neque et vel temporibus provident excepturi omnis nam tempora
+                              vero!</p>
+                  </div>
+            </div>
+            <div class="card">
+                  <img src="./card3.jpg"
+                       class="card-img"
+                       alt="">
+                  <div class="absolute">
+                        <h3>Horizon Down Eagle</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, unde
+                              deleniti dignissimos qui facilis rem dolor? Illum eum quis sint ipsa
+                              dignissimos, expedita quasi ipsum commodi debitis explicabo saepe
+                              totam neque et vel temporibus provident excepturi omnis nam tempora
+                              vero!</p>
+                  </div>
+            </div>
+
+      </div>
+
+
+</body>
+
+</html>

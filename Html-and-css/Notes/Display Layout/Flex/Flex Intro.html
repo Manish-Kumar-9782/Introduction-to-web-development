@@ -7,15 +7,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <base href="../../../../">
+
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/Notes.css">
     <link rel="stylesheet" href="styles/Notes2.css">
-    <link rel="stylesheet" href="styles/Note.css">
-    <link rel="stylesheet" href="styles/Notes2.css">
-    <link rel="stylesheet" href="styles/Notes2.css">
+    <style>
+        body {
+            background-color: white;
+        }
+
+        .container {
+            border: 5px solid goldenrod;
+        }
+
+        .box {
+            background-color: purple;
+            color: whitesmoke;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
     <title>Flex - Flex Introduction</title>
 </head>
 
 <body>
 
+    <header>
+        <h1 class="heading-1">FlexBox Layout</h1>
+        <p>Flexbox is one-dimensional layout method for arranging items in rows or columns. Items
+            flex (expand) to fill additional space or shrink to fit into smaller spaces. In this
+            section we will learn how to use FlexBox to design our Web Pages.</p>
+
+        <p class="py-1"><b class="hlight">Prerequisites</b>:</p>
+        <ul class="py-1">
+            <li>HTML Basic Elements</li>
+            <li>CSS Box Model</li>
+        </ul>
+
+    </header>
+
+    <div class="px-2 br-round">
+        <h2 class="heading-2">Why we nee Flexbox ?</h2>
+        <p>In Older version of CSS there were only reliable cross-browser compatible tools available
+            <i class="hlight">floats</i> and <i class="hlight">positioning</i>. These tools are good
+            for rigid kind of layout and they does not work on the mobile, tablet or different kind
+            of screen devices.
+        </p>
+
+        <p>We cannot achieve easily or impossible to achieve the simple layout design given below by
+            using the <i class="hlight">floats</i> and <i class="hlight">positioning</i>
+            layout system.</p>
+
+        <ul>
+            <li>Vertical centering a block of content inside its parent.</li>
+            <li>Making all the children of container take up an equal amount of the available
+                width/height, regardless (not considering) of how much width/height is available.
+            </li>
+            <li>Making all columns in a multiple-column layout adopt the smae height even if they
+                contain a different amount of content.</li>
+        </ul>
+
+        <p>The above problem of layout design can be handled by flexbox very easily.</p>
+
+        <h3 class="heading-2">Specifying what elements to lay out as flexible boxes</h3>
+
+        <p>To Work with the Flexbox layout first we need to identify, which elements are to be
+            arranged as flexible boxes. For that, we will set a special value of <span
+                class="prprty">display</span> on the parent element of the elements we want to
+            arranged.</p>
+
+        <p class="mark px-1">Suppose, that we have three element, inside a parent element (most
+            likely
+            <code class="tag hlight">div</code> element)
+        </p>
+
+        <div class="container">
+            <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+                impedit.</p>
+            <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+                impedit. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Facere, labore?</p>
+            <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+                impedit. Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Doloribus dolorum labore veniam
+                debitis necessitatibus consequatur sint molestias magnam numquam consectetur.</p>
+        </div>
+
+        <p class="mark px-1">Now, we want to make these three <i class="hlight">purple elements</i>
+            as the flexible items,
+            so they are arranged (laid out) according to the available space in a given
+            direction/layout.
+        </p>
+
+        <!-- ---------------------------------------- -->
+
+        <div class="container flex-row">
+            <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+                impedit.</p>
+            <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+                impedit. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Facere, labore?</p>
+            <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+                impedit. Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Doloribus dolorum labore veniam
+                debitis necessitatibus consequatur sint molestias magnam numquam consectetur.</p>
+        </div>
+
+        <!-- -------------------------------------------- -->
+
+        <p class="mark px-1">As we can see that after applying the <span
+                class="prprty">display:flex</span> on the parent element of these three <i
+                class="hlight">purple elements</i>, they are arranged in a row acquiring the width
+            according the their content size considering the <code class="prprty">width</code> and
+            <code class="prprty">height</code> of the parent element.
+        </p>
+
+        <p>This kind of arrangement is very frustrating/tedious task. which is very difficult or
+            lengthy to achieve with <i class="hlight">floats</i> or <i
+                class="hlight">positioning</i> layout designing system. To solve this kind of layout
+            design problem we will use the flexbox layout system.</p>
+
+        <p class="Note"> In above case, the parent element <i class="hlight">(golden border
+                element)</i> becomes the <span class="hlight">flex-container</span> and the three
+            child elements (<i class="hlight">purple elements</i>) become flex items.</p>
+
+        <p><b class="hlight">Note:</b> if we set <span class="prprty">height:auto;</span> and <span
+                class="prprty">width:small-value</span> like <span class="hlight">600px</span> of
+            the <span class="hlight">flex-container</span> element, then the height of
+            <span class="hlight">flex-items</span> will be remain equal and their width will try
+            to adjust according to the remaining width inside the <span
+                class="hlight">flex-container</span>, as given below result.
+        </p>
+        <!-- -------------------------------------------- -->
+        <div class="container flex-row" style="width: 600px;">
+            <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+                impedit.</p>
+            <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+                impedit. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Facere, labore?</p>
+            <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+                impedit. Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Doloribus dolorum labore veniam
+                debitis necessitatibus consequatur sint molestias magnam numquam consectetur.</p>
+        </div>
+        <!-- -------------------------------------------- -->
+
+    </div>
 
 </body>
 

@@ -1,0 +1,53 @@
+.contact-block {
+    background-color: var(--color-blue-2);
+    height: 500px;
+    color: whitesmoke;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.form-block {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.form-table {
+    border-spacing: 20px 40px;
+
+}
+
+.form-table td {
+    text-align: left;
+}
+
+.form-table label {
+    display: block;
+}
+
+.submit-button {
+    width: 100px;
+    height: 50px;
+    margin-left: 50px;
+}
+
+.input-group {
+    flex: 1;
+}
+
+
+.input-group input {
+    width: 100%;
+}
+
+.form-input {
+    width: 400px;
+    font-size: 1.5rem;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    outline: 0px;
+    text-align: left;
+    border-width: 0px 0px 1px 0px;
+}

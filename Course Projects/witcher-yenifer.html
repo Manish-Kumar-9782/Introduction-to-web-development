@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Witcher Yenifer</title>
+
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            width: 370px;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 6px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .card-img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .card::after {
+            content: "";
+            background-image: linear-gradient(0deg, #292929 20%, #292929f1 60%, transparent);
+            bottom: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .card-details {
+            position: absolute;
+            bottom: 0%;
+            z-index: 1;
+            color: whitesmoke;
+            padding: 10px;
+            transition: bottom 0.4s ease-in-out;
+            /* background-color: rgba(113, 37, 37, 0.458); */
+        }
+
+        .card:hover::after {
+            background-image: linear-gradient(0deg, #292929f1 60%, transparent);
+            backdrop-filter: blur(4px);
+        }
+
+        .card:hover .card-details {
+            bottom: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img src="./yenifer.jpg"
+             class="card-img"
+             alt="">
+        <div class="card-details">
+            <h2>Yennefer of Vengerberg</h2>
+            <p>Yennefer of Vengerberg, born on Belleteyn in 1173, was a sorceress who lived in
+                Vengerberg, the capital city of Aedirn. She was Geralt of Rivia's true love and a
+                mother figure to Ciri, whom she viewed like a daughter to the point that she did
+                everything she could to rescue the girl and keep her from harm.</p>
+        </div>
+    </div>
+</body>
+
+</html>
