@@ -4,12 +4,13 @@
     color: whitesmoke;
     padding: 50px 20px;
     text-align: center;
+    width: 80%;
 }
 
-.form-block {
+/* .form-block {
     display: flex;
     justify-content: center;
-}
+} */
 
 
 
@@ -41,7 +42,7 @@
     width: 100%;
 }
 
-.form-input {
+/* .form-input {
     width: 400px;
     font-size: 1.5rem;
     padding: 10px;
@@ -50,4 +51,4 @@
     outline: 0px;
     text-align: left;
     border-width: 0px 0px 1px 0px;
-}
+} */
