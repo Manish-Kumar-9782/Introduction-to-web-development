@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+
+    position: relative | absolute | sticky |fixed | static;
+
+    left, top, right, bottom;
+    z-index;
+
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+
+
+    <style>
+        .container {
+            background-color: brown;
+            color: white;
+            padding: 30px;
+        }
+
+        .box1 {
+            border: 3px solid green;
+            padding: 30px;
+
+        }
+
+        .box2 {
+            border: 3px solid yellow;
+            padding: 30px;
+            position: relative;
+            top: 200px;
+            left: 100px;
+            background-color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="box1">hello this is h1 (item 1)</h1>
+        <h2 class="box2">hello this is h2 (item 2)</h2>
+        <h1 class="box1">hello this is h1 (item 3)</h1>
+    </div>
+
+</body>
+
+</html>
