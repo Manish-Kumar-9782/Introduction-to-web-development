@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Position Blocks</title>
+
+    <style>
+        .block {
+            height: 400px;
+            border: 1px solid gray;
+            justify-content: space-evenly;
+            padding: 50px 30px;
+        }
+
+        .violet {
+            background-color: violet;
+        }
+
+        .coral {
+            background-color: lightcoral;
+            position: relative;
+        }
+
+        .card {
+            background-color: lightgray;
+            border-radius: 8px;
+            width: 300px;
+            height: 400px;
+        }
+
+        .cut {
+            text-decoration: line-through;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .position-relative {
+            position: relative;
+        }
+
+        .floating-block {
+            background-color: whitesmoke;
+            padding: 50px 20px;
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            text-align: center;
+        }
+
+        .floating-bar {
+            background-color: whitesmoke;
+            border: 2px solid black;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 50%;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="block violet">
+
+    </div>
+
+    <div class="block d-flex coral position-relative">
+        <div class="floating-block">
+            <h3>Developing Innovative Strategies</h3>
+            <h1>ACHIEVING GROWTH</h1>
+            <button>Book A Consultation</button>
+        </div>
+
+        <!-- <div class="floating-bar"></div> -->
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+
+</body>
+
+</html>
