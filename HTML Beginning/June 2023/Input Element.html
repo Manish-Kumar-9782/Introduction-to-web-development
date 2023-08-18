@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<!-- 
+
+    html elements
+        - form element
+        - label element
+        - input element
+        - select element
+        - option element
+        - textarea element
+ -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Input Elements</title>
+
+    <style>
+        body {
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-block {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .input-block {
+            margin: 10px 5px;
+            padding: 10px 5px;
+            border: 1px solid lightgrey;
+        }
+
+        .input-block label {
+            display: block;
+            font-size: 1.5rem;
+        }
+
+        .input-block input {
+            padding: 6px;
+            font-size: 1.3rem;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .iradio-choice {
+            display: flex;
+            gap: 20px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <form action=""
+          class="form-block">
+
+        <div class="input-block">
+            <label for="first-name">First Name</label>
+            <input id="first-name"
+                   type="text"
+                   name="firstname">
+        </div>
+
+        <div class="input-block">
+            <label for="last-name">Last Name</label>
+            <input id="last-name"
+                   type="text"
+                   name="lastname">
+        </div>
+
+
+        <div class="input-block">
+            <label for="dob">Date of Birth</label>
+            <input id="dob"
+                   type="date"
+                   name="dob">
+        </div>
+
+        <div class="iradio-choice">
+            Gender:
+            <div class="inline-block">
+                <label for="gender-male">Male</label>
+                <input id="gender-male"
+                       type="radio"
+                       name="gender">
+            </div>
+
+            <div class="inline-block">
+                <label for="gender-female">Female</label>
+                <input id="gender-female"
+                       type="radio"
+                       name="gender">
+            </div>
+        </div>
+
+        <div class="input-block">
+            <input type="submit">
+        </div>
+    </form>
+
+</body>
+
+</html>
