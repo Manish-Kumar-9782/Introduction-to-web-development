@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<!-- 
+
+    box model:
+        content-box : (default) height width -> only applies on the content.    
+            padding and border will take extra space. 
+        border-box
+		
+	property name to change the box model => box-sizing: content-box | border-box;
+ -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+            basic: id, class, tagName
+
+            selector {
+                property1: value1;
+                property2: value2;
+            }
+        */
+
+        .content-box {
+            border: 100px solid blue;
+            padding: 100px;
+            height: 100px;
+            width: 500px;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+            border: 100px solid blue;
+            padding: 100px;
+            height: 100px;
+            width: 500px;
+            /*border, padding content*/
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- content-box -->
+    <h1 class="content-box">content-box</h1>
+
+
+    <h1 class="border-box">border-box</h1>
+</body>
+
+</html>
