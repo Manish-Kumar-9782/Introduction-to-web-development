@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Table Decoration</title>
+
+    <style>
+        table {
+            padding: 10px;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            /*border-collapse: collapse;*/
+            /*border-color: whitesmoke;*/
+            border-spacing: 3px;
+        }
+
+        th {
+            background-color: rgb(19, 19, 34);
+            color: whitesmoke;
+            padding: 10px 15px;
+        }
+
+        td {
+            background-color: rgba(19, 19, 34, 0.499);
+            color: rgb(231, 231, 231);
+            padding: 8px;
+        }
+
+
+        #table2 {
+            border: 1px solid black;
+            border-collapse: collapse;
+            border-color: whitesmoke;
+            border-spacing: 3px;
+            /* will not be applied*/
+        }
+
+
+        #table2 th,
+        #table2 td {
+            padding: 8px;
+            height: 100px;
+            border-color: whitesmoke;
+            border-width: 2px;
+        }
+
+        #table2 td {
+            background-color: rgb(72, 63, 48);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        #table2 th {
+            background-color: rgb(57, 43, 71);
+            width: 250px;
+            text-align: right;
+            vertical-align: bottom;
+            border-bottom-style: groove;
+            border-bottom-width: 6px;
+            border-bottom-color: rgb(27, 36, 45);
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Subject</th>
+                <th>Pages</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Learn HTML</td>
+                <td>Anil Kumar</td>
+                <td>Web Designing</td>
+                <td>300</td>
+                <td>124</td>
+            </tr>
+
+            <tr>
+                <td>Learn CSS</td>
+                <td>Manish Verma</td>
+                <td>Web Designing</td>
+                <td>430</td>
+                <td>324</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <br><br><br>
+    <!-- another table -->
+    <table id="table2">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Subject</th>
+                <th>Pages</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Learn HTML</td>
+                <td>Anil Kumar</td>
+                <td>Web Designing</td>
+                <td>300</td>
+                <td>124</td>
+            </tr>
+
+            <tr>
+                <td>Learn CSS</td>
+                <td>Manish Verma</td>
+                <td>Web Designing</td>
+                <td>430</td>
+                <td>324</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>
