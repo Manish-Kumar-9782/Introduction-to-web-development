@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Col & Row Span Table</title>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Name</th>
+                <th rowspan="2">Age</th>
+                <th rowspan="2">Height</th>
+                <th rowspan="2">BloodGroup</th>
+            </tr>
+
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Sachin</td>
+                <td>Chaudhary</td>
+                <td>23</td>
+                <td>5.6</td>
+                <td>B-</td>
+            </tr>
+
+            <tr>
+                <td>Karan</td>
+                <td>Singh</td>
+                <td>20</td>
+                <td>5.7</td>
+                <td>B+</td>
+            </tr>
+
+            <tr>
+                <td>Kushal</td>
+                <td>Jayment</td>
+                <td>18</td>
+                <td>5.5</td>
+                <td>O+</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
