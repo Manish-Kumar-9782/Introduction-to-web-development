@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Flex Intro</title>
+
+    <style>
+        .flex {
+            display: flex;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .justify-start {
+            justify-content: flex-start;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-end {
+            justify-content: flex-end;
+        }
+
+        .container {
+            border: 2px solid black;
+            width: 700px;
+            height: 400px;
+        }
+
+        .flex-item {
+            border: 3px solid blue;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex container">
+
+        <div>
+            <h1 class="flex-item">item 1</h1>
+        </div>
+        <div>
+            <h1 class="flex-item">item 2</h1>
+        </div>
+        <div>
+            <h1 class="flex-item">item 3</h1>
+        </div>
+    </div>
+
+    <br><br>
+    <!-- ======================================= -->
+    <div class="flex-column container">
+
+        <div>
+            <h1 class="flex-item">item 1</h1>
+        </div>
+        <div>
+            <h1 class="flex-item">item 2</h1>
+        </div>
+        <div>
+            <h1 class="flex-item">item 3</h1>
+        </div>
+    </div>
+
+
+    <br><br>
+    <!-- ======================================= -->
+    <div class="flex container justify-center">
+
+        <div>
+            <h1 class="flex-item">item 1</h1>
+        </div>
+        <div>
+            <h1 class="flex-item">item 2</h1>
+        </div>
+
+    </div>
+
+    <br><br>
+    <!-- ======================================= -->
+    <div class="flex  justify-end">
+
+        <div>
+            <h1 class="flex-item">item 1</h1>
+        </div>
+        <div>
+            <h1 class="flex-item">item 2</h1>
+        </div>
+
+    </div>
+</body>
+
+</html>
