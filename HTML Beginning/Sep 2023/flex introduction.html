@@ -29,16 +29,33 @@
             justify-content: flex-end;
         }
 
+        .justify-space-between {
+            justify-content: space-between;
+        }
+
+        .justify-space-around {
+            justify-content: space-around;
+        }
+
+        .justify-space-evenly {
+            justify-content: space-evenly;
+        }
+
         .container {
-            border: 2px solid black;
+            border: 5px solid red;
             width: 700px;
             height: 400px;
+
         }
 
         .flex-item {
             border: 3px solid blue;
             width: 100px;
             height: 100px;
+        }
+
+        .align-end {
+            align-items: flex-end;
         }
     </style>
 </head>
@@ -98,6 +115,62 @@
         </div>
 
     </div>
+
+
+    <br><br>
+    <h2>Align Items</h2>
+    <!-- ======================================= -->
+    <div class="container flex justify-end align-end">
+
+        <div>
+            <h1 class="flex-item">item 1</h1>
+        </div>
+        <div>
+            <h1 class="flex-item">item 2</h1>
+        </div>
+
+    </div>
+
+    <br><br>
+    <hr>
+
+    <h1>Space between</h1>
+    <div class="container flex justify-space-between">
+
+        <div>
+            <h1 class="flex-item">item 1</h1>
+        </div>
+        <div>
+            <h1 class="flex-item">item 2</h1>
+        </div>
+
+    </div>
+
+    <h1>Space around</h1>
+    <div class="container flex justify-space-around">
+
+        <div>
+            <h1 class="flex-item">item 1</h1>
+        </div>
+        <div>
+            <h1 class="flex-item">item 2</h1>
+        </div>
+
+    </div>
+
+    <h1>Space evenly</h1>
+    <div class="container flex justify-space-evenly">
+
+        <div>
+            <h1 class="flex-item">item 1</h1>
+        </div>
+        <div>
+            <h1 class="flex-item">item 2</h1>
+        </div>
+
+    </div>
+
+
 </body>
 
 </html>
