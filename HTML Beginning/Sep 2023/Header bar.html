@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Header Bar</title>
+
+    <style>
+        .flex {
+            display: flex;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .justify-start {
+            justify-content: flex-start;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-end {
+            justify-content: flex-end;
+        }
+
+        .justify-space-between {
+            justify-content: space-between;
+        }
+
+        .justify-space-around {
+            justify-content: space-around;
+        }
+
+        .justify-space-evenly {
+            justify-content: space-evenly;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .align-end {
+            align-items: flex-end;
+        }
+
+        .header * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .header {
+            background-color: rgb(117, 85, 148);
+            padding: 10px;
+        }
+
+        .box {
+
+            padding: 2px;
+        }
+
+        ul.flex {
+            list-style-type: none;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        ul.flex li {
+            margin-left: 20px;
+        }
+
+        ul.flex li:first-child {
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header flex justify-space-between align-center">
+
+        <div class="box">
+            <h1>FlexBox</h1>
+        </div>
+
+        <ul class="box flex align-center">
+            <li>home</li>
+            <li>about</li>
+            <li>contact</li>
+        </ul>
+    </header>
+</body>
+
+</html>
