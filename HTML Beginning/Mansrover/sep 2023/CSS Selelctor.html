@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<!-- 
+    CSS Selector:
+        Base : id, class, tagName.
+
+        children: parentSelector id|class|tagName
+        
+        multiple_selection: Selector1, Selector2, Selector3 
+ -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+
+    <style>
+        div {
+            border: 4px solid purple;
+            padding: 10px;
+        }
+
+        li {
+            border: 2px solid green;
+            padding: 8px;
+        }
+
+        .box1 {
+            background-color: #9D76C1;
+            width: 700px;
+        }
+
+        .box2 {
+            background-color: #8ECDDD;
+            width: 500px;
+            margin: 20px 0px;
+        }
+
+        .round-shape {
+            padding: 6px;
+            border-radius: 10px;
+            margin: 8px;
+        }
+
+        #mybox1 {
+            border: 30px groove purple;
+        }
+
+        #mybox2 {
+            border: 20px groove peru;
+        }
+
+        /* parent-selector children-selector{
+            // properties
+        } */
+
+        #mybox2 li {
+            margin: 10px;
+            background-color: brown;
+            color: white;
+        }
+
+        .shadow-box {
+            background-color: white;
+            border-color: gray;
+            box-shadow: 1px 1px 10px 5px;
+            padding: 10px;
+        }
+
+        .shadow-box .success {
+            background-color: rgba(73, 193, 73, 0.751);
+            color: green;
+        }
+
+        .shadow-box .danger {
+            background-color: rgba(180, 54, 54, 0.763);
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>This is CSS Selector</h1>
+
+    <div id="mybox1"
+         class="box1">
+        <h1 class="box2 round-shape">Random data 1</h1>
+        <ul>
+            <li class="round-shape">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Cupiditate, possimus!</li>
+            <li class="round-shape">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate fugit dolor
+                officia praesentium perspiciatis dolores.</li>
+            <li class="round-shape">Lorem, ipsum.</li>
+            <li class="round-shape">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque dolores debitis
+                inventore corrupti velit consectetur nostrum iste unde consequuntur? Est ad ratione,
+                officia repellat fugit mollitia deleniti asperiores, molestias consequatur
+                voluptates accusantium blanditiis maxime.</li>
+        </ul>
+    </div>
+
+
+    <div id="mybox2"
+         class="box2">
+        <h1>Random data 2</h1>
+        <ul class="shadow-box">
+            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, possimus!
+            </li>
+            <li style="background-color: rgba(154, 59, 59, 0.685); color:red;"
+                class="danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+                fugit dolor
+                officia praesentium perspiciatis dolores.</li>
+            <li>Lorem, ipsum.</li>
+            <li class="success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                dolores
+                debitis
+                inventore corrupti velit consectetur nostrum iste unde consequuntur? Est ad
+                ratione,
+                officia repellat fugit mollitia deleniti asperiores, molestias consequatur
+                voluptates accusantium blanditiis maxime.</li>
+        </ul>
+    </div>
+
+    <div class="box2">
+        <h1>Random data 3</h1>
+        <ul class="shadow-box">
+            <li class="success">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Cupiditate, possimus!</li>
+            <li class="danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+                fugit dolor
+                officia praesentium perspiciatis dolores.</li>
+            <li>Lorem, ipsum.</li>
+            <li class="success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                dolores debitis
+                inventore corrupti velit consectetur nostrum iste unde consequuntur? Est ad ratione,
+                officia repellat fugit mollitia deleniti asperiores, molestias consequatur
+                voluptates accusantium blanditiis maxime.</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
