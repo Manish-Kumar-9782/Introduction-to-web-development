@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>W3-School Header</title>
+
+    <link rel="stylesheet"
+          href="./flex-style.css">
+    <style>
+        /* #04AA6D */
+        .logo {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            line-height: 0.1rem;
+        }
+
+        .sup {
+            vertical-align: super;
+        }
+
+        .pair {
+            background-color: #66af94a2;
+            border-radius: 20px;
+        }
+
+        .pair * {
+            display: inline-block;
+            padding: 8px 10px;
+            color: white;
+        }
+
+        .pair-left {
+
+            background-color: #04AA6D;
+            border-radius: 20px;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 1px 1px 10px 2px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="flex justify-space-between align-center">
+        <div class="flex align-center">
+            <div class="logo">
+                <h1>W<span class="sup">3</span></h1> <br>
+                school
+            </div>
+            <ul class="flex">
+                <li>Tutorials</li>
+                <li>Exercise</li>
+                <li>Get Certificate</li>
+                <li>Services</li>
+            </ul>
+        </div>
+
+        <ul class="flex align-center">
+            <li>Spaces</li>
+            <li>Certificates</li>
+            <li>
+                <div class="pair">
+                    <span class="pair-left">Sign Up</span>
+                    <span class="pair-right">Log in</span>
+                </div>
+            </li>
+        </ul>
+    </header>
+</body>
+
+</html>
