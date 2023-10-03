@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout Page</title>
+    <style>
+        .text-center {
+            text-align: center;
+        }
+
+        .header {
+            background-color: rgb(41, 41, 116);
+            color: whitesmoke;
+            padding: 20px;
+        }
+
+        .navbar {
+            background-color: lightpink;
+            padding: 10px 20px;
+        }
+
+        .navbar * {
+            margin: 0;
+        }
+
+        .fs-2 {
+            font-size: 2rem;
+        }
+
+        .tag {
+            padding: 3px 2px;
+            background-color: rgba(144, 238, 144, 0.534);
+            color: rgb(143, 250, 143);
+            border-radius: 6px;
+        }
+
+        .tag::after {
+            content: ">";
+        }
+
+        .tag::before {
+            content: "<";
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        ul.flex,
+        ul.flex-column {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.flex li {
+            margin-left: 20px;
+        }
+
+        .nav-item {
+            border: 3px solid lightcoral;
+            padding: 4px;
+            border-radius: 5px;
+        }
+
+        .nav-item:hover {
+            background-color: lightcoral;
+            color: whitesmoke;
+            border: 3px groove lightcoral;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header class="header">
+        <div class="text-center">
+            <h1>HTML Semantic Element Layout</h1>
+            <code class="fs-2 tag">&lt;header&gt;</code>
+        </div>
+        <p>HTML has several semantic elements that define the different parts of a web page.</p>
+        <p>Here we will see some them:
+            <code class="tag">header</code>,
+            <code class="tag">nav</code>,
+            <code class="tag">section</code>,
+            <code class="tag">article</code>,
+            <code class="tag">aside</code>,
+            <code class="tag">footer</code>,
+            <code class="tag">details</code>,
+            <code class="tag">summary</code>.
+        </p>
+    </header>
+
+    <nav class="navbar flex align-center">
+        <h2>Navbar Items: </h2>
+        <ul class="flex">
+            <li class="nav-item">Google</li>
+            <li class="nav-item">Facebook</li>
+            <li class="nav-item">Instagram</li>
+            <li class="nav-item">Twitter</li>
+        </ul>
+    </nav>
+</body>
+
+</html>
