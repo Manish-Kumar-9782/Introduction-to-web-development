@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Flex Semantic Layout</title>
+    <link rel="stylesheet"
+          href="flex-style.css">
+
+    <style>
+        header {
+            background-color: rgb(35, 35, 126);
+            color: whitesmoke;
+            padding: 10px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .tag {
+            background-color: rgba(32, 178, 171, 0.534);
+            color: rgb(112, 231, 225);
+            padding: 3px 1px;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        .fs-large {
+            font-size: 2rem;
+        }
+
+        .tag::before {
+            content: "<";
+        }
+
+        .tag::after {
+            content: ">";
+        }
+
+        nav {
+            background-color: bisque;
+            padding: 10px;
+        }
+
+        .nav-item {
+            border: 3px solid lightslategray;
+            padding: 3px;
+            border-radius: 5px;
+        }
+
+        .nav-item:hover {
+            border: 3px groove lightslategray;
+            background-color: lightslategrey;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+
+        aside {
+            border: 1px solid black;
+            flex: 1;
+        }
+
+        main {
+            border: 1px solid black;
+            flex: 5;
+        }
+
+        .side-item {
+            background-color: rgba(137, 43, 226, 0.575);
+            color: whitesmoke;
+            padding: 10px;
+            margin: 10px auto;
+            width: 80%;
+        }
+
+        .side-item:hover {
+            background-color: rgba(29, 17, 41, 0.26);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="text-center">
+            <h1>HTML Semantic Element Layout</h1>
+            <code class="tag fs-large">&lt;header&gt;</code>
+        </div>
+
+        <p>HTML has several semantic elements that define the different parts of a web page.</p>
+        <p>Here we will see some them:
+            <code class="tag">header</code>,
+            <code class="tag">nav</code>,
+            <code class="tag">section</code>,
+            <code class="tag">article</code>,
+            <code class="tag">aside</code>,
+            <code class="tag">footer</code>,
+            <code class="tag">details</code>,
+            <code class="tag">summary</code>.
+        </p>
+    </header>
+
+    <nav class="flex align-center">
+        <h1>NavBar: </h1>
+        <ul class="flex">
+            <li class="nav-item">Google</li>
+            <li class="nav-item">Facebook</li>
+            <li class="nav-item">Instagram</li>
+            <li class="nav-item">Twitter</li>
+        </ul>
+    </nav>
+
+    <section class="flex">
+        <aside class="text-center">
+            <h1>Side bar</h1>
+
+            <ul class="flex-column">
+
+                <li class="side-item">header</li>
+                <li class="side-item">footer</li>
+                <li class="side-item">nav</li>
+                <li class="side-item">section</li>
+                <li class="side-item">article</li>
+                <li class="side-item">main</li>
+
+            </ul>
+        </aside>
+        <main></main>
+    </section>
+
+</body>
+
+</html>
