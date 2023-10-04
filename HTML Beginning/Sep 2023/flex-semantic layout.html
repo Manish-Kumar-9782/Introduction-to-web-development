@@ -59,12 +59,11 @@
         }
 
         aside {
-            border: 1px solid black;
             flex: 1;
+            background-color: #D988B9;
         }
 
         main {
-            border: 1px solid black;
             flex: 5;
         }
 
@@ -79,6 +78,32 @@
         .side-item:hover {
             background-color: rgba(29, 17, 41, 0.26);
             cursor: pointer;
+        }
+
+        footer {
+            background-color: rgb(35, 35, 126);
+            padding: 20px;
+            font-size: 1.5rem;
+            color: whitesmoke;
+        }
+
+        .p-2 {
+            padding: 20px;
+        }
+
+
+        .li-heading {
+            list-style-type: none;
+            background-color: cadetblue;
+            padding: 10px;
+        }
+
+        .li-heading li {
+            margin-top: 20px;
+        }
+
+        svg {
+            fill: white;
         }
     </style>
 </head>
@@ -129,9 +154,113 @@
 
             </ul>
         </aside>
-        <main></main>
-    </section>
+        <main>
 
+            <section class="p-2">
+                <h3>Layout Elements</h3>
+                <ul class="li-heading">
+                    <li><code class="tag">header</code> :- Defines a header for a document or a
+                        section</li>
+                    <li><code class="tag">nav</code> :- Defines a set of navigation links</li>
+                    <li><code class="tag">section</code> :- Defines a section in a document.</li>
+                    <li><code class="tag">article</code> :- Defines an independent, self-contained
+                        content.</li>
+                    <li><code class="tag">aside</code> :- Defines content aside from the content
+                        (like a sidebar)</li>
+                    <li><code class="tag">footer</code> :- Defines a footer for a document or
+                        section</li>
+                    <li><code class="tag">details</code> :- Defines additional details that the user
+                        can open and close on demand.</li>
+                </ul>
+
+                <h3>HTML Layout Techniques</h3>
+                There are four different Techniques to create multicolumn layouts. Each techinque
+                has its pros and cons.
+
+            </section>
+
+            <section class="p-2">
+
+                <ul class="li-heading">
+                    <li>CSS Framework</li>
+                    <li>CSS float property</li>
+                    <li>CSS flexbox</li>
+                    <li>CSS grid</li>
+                    <li>CSS Framework</li>
+                </ul>
+
+                <p>
+                    We have multiple css framework to create fast layout like Bootstrap, we.css,
+                    react
+                    etc.
+                </p>
+
+                <h1>CSS Float Layout</h1>
+                <p>
+                    It is common to do entire web layouts using the css float property. Float is
+                    easy to
+                    learn, we just need to remember hot the float and clear properties work.
+                    Disadvantage: Floating elements are tied to the document flow, which may harm
+                    the
+                    flexibility
+                </p>.
+
+                <h1>CSS Flexbox Layout</h1>
+                <p>
+                    Use of flexbox ensures that elements behae predictably when the page layout must
+                    accommodate different screen sizes and different display devices.
+                </p>
+
+                <h1>CSS Grid Layout</h1>
+                <p>
+                    The CSS Grid Layout Module offers a grid-based layout system, with rows and
+                    columns,
+                    making it easier to design web pages without having to use floats and
+                    positioning.
+                </p>
+            </section>
+
+        </main>
+    </section>
+    <footer class="text-center">
+        <section class="flex justify-space-between align-center">
+            <div>
+                <span>Privacy Policy</span>
+                <span>|</span>
+                <span>Terms of use</span>
+            </div>
+            <div class="align-center">
+                <svg preserveAspectRatio="xMidYMid meet"
+                     data-bbox="0 -0.005 210.89 82.054"
+                     viewBox="0 -0.005 210.89 82.054"
+                     xmlns="http://www.w3.org/2000/svg"
+                     data-type="shape"
+                     role="img"
+                     aria-label="Wix logo"
+                     width="82px"
+                     style="color:white">
+                    <g>
+                        <path
+                              d="M120.66 1.53c-4.18 2.19-5.74 5.89-5.74 16.1a16.53 16.53 0 0 1 5.25-3.18 21.84 21.84 0 0 0 5.37-2.92c3.54-2.58 4.09-5.91 4.09-11.53 0 0-5.76-.15-9 1.53">
+                        </path>
+                        <path
+                              d="M95.87 3.93a15.92 15.92 0 0 0-4.4 7.79L80.19 55.43 70.8 19.66c-.91-3.81-2.56-8.51-5.17-11.69-3.32-4.05-10.07-4.3-10.78-4.3s-7.48.25-10.8 4.3c-2.6 3.18-4.25 7.88-5.16 11.69L29.5 55.44 18.22 11.73a16 16 0 0 0-4.4-7.8C8.29-.94 0 .1 0 .1l21.61 81.69s7.13.51 10.7-1.31c4.68-2.38 6.91-4.23 9.75-15.34 2.53-9.91 9.59-39 10.26-41.09.32-1 .74-3.48 2.54-3.48s2.21 2.45 2.53 3.48c.65 2.07 7.73 31.18 10.26 41.09 2.84 11.11 5.06 13 9.75 15.34 3.57 1.82 10.69 1.31 10.69 1.31L109.71.1s-8.31-1-13.84 3.83">
+                        </path>
+                        <path
+                              d="M129.43 13.56a13.28 13.28 0 0 1-4.43 3.8c-2 1.1-3.87 1.85-5.9 2.83-3.4 1.63-4.32 3.45-4.32 6.22v55.26s5.43.69 9-1.12c4.57-2.33 5.62-4.58 5.66-14.71V16.51z">
+                        </path>
+                        <path
+                              d="M183.48 41.14L210.89.37s-11.57-2-17.3 3.24a65.43 65.43 0 0 0-7.76 9.34l-10.09 14.54a2.25 2.25 0 0 1-4.3 0L161.35 13a64.3 64.3 0 0 0-7.77-9.34c-5.73-5.21-17.3-3.24-17.3-3.24l27.42 40.77-27.35 40.65s12.06 1.53 17.78-3.69a54.08 54.08 0 0 0 7.22-8.76l10.09-14.54a2.25 2.25 0 0 1 4.3 0l10.09 14.53a61.49 61.49 0 0 0 7.42 8.77c5.73 5.22 17.57 3.69 17.57 3.69z">
+                        </path>
+                    </g>
+                </svg>
+                <span>|</span>
+                <span>
+                    This website was designed with Wix</span>
+            </div>
+            <div>© 2006 - 2023 Wix.com, Inc</div>
+        </section>
+    </footer>
 </body>
 
 </html>
