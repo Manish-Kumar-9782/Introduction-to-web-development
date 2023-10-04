@@ -81,6 +81,38 @@
             border: 3px groove lightcoral;
             cursor: pointer;
         }
+
+        aside {
+
+            padding: 20px;
+            flex: 1;
+            background-color: cadetblue;
+        }
+
+        main {
+
+            padding: 20px;
+            flex: 6;
+        }
+
+        .aside-list li {
+            background-color: rgb(20, 70, 65);
+            margin: 10px;
+            padding: 10px;
+            color: whitesmoke;
+        }
+
+        .aside-list li:hover {
+            cursor: pointer;
+            background-color: rgb(20, 70, 65, 0.5);
+        }
+
+        footer {
+            background-color: rgb(41, 41, 116);
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -114,6 +146,32 @@
             <li class="nav-item">Twitter</li>
         </ul>
     </nav>
+
+    <section class="flex">
+
+        <aside class="text-center">
+            <h1>Aside Bar</h1>
+            <ul class="flex-column aside-list">
+                <li>header</li>
+                <li>footer</li>
+                <li>nav</li>
+                <li>section</li>
+                <li>article</li>
+                <li>main</li>
+                <li>details</li>
+                <li>summary</li>
+            </ul>
+        </aside>
+
+        <main>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure explicabo placeat
+            laboriosam voluptatum libero qui illum tempora assumenda. Nihil, autem!
+        </main>
+    </section>
+
+    <footer>
+        <h1>Footer</h1>
+    </footer>
 </body>
 
 </html>
