@@ -9,11 +9,26 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+    </style>
+    <!-- 
+    #c77dea
+    #613db0
+ -->
+    <style>
         body {
             margin: 0;
-            border: 10px groove goldenrod;
+
             box-sizing: border-box;
             height: 100vh;
+            font-family: 'Poppins', 'Roboto', sans-serif;
+            font-size: .9rem;
+        }
+
+        .card {
+            width: 500px;
+            background: linear-gradient(115deg, #c77dea, #613db0);
+            border-radius: 15px;
         }
 
         .flex {
@@ -63,12 +78,7 @@
             margin-top: 10px;
         }
 
-        .card {
-            width: 450px;
-            height: 350px;
-            background-color: rgb(160, 77, 180);
-            border-radius: 15px;
-        }
+
 
         .hlight {
             color: rgb(58, 174, 241);
@@ -86,12 +96,70 @@
             border-radius: 50%;
         }
 
-        .fs-large {
-            font-size: 1.3rem;
+        .fs-4 {
+            font-size: 1.5rem;
+        }
+
+        .fs-1 {
+            font-size: .9rem;
+        }
+
+        .fs-2 {
+            font-size: 1rem;
+        }
+
+        .fs-3 {
+            font-size: 1.2rem;
         }
 
         .text-gray-700 {
-            color: rgb(170, 170, 170);
+            color: #4a5568;
+        }
+
+        .text-gray-600 {
+            color: #718096;
+        }
+
+        .text-gray-900 {
+            color: #1a202c;
+        }
+
+        .fw-800 {
+            font-weight: 800;
+        }
+
+        .fw-bold {
+            font-weight: bold;
+        }
+
+        .fw-600 {
+            font-weight: 600;
+        }
+
+        .text-light {
+            color: whitesmoke;
+        }
+
+        .rocket-button {
+            --height: 50px;
+            box-sizing: border-box;
+            padding: 8px 12px;
+            background-color: white;
+            width: fit-content;
+            height: var(--height);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: calc(var(--height)/2);
+            color: #613db0c0;
+
+        }
+
+        .rocket-circle {
+            border-radius: 50%;
+            height: 36px;
+            width: 36px;
+            background: linear-gradient(145deg, #c87dea5e, #613db052);
         }
     </style>
 
@@ -106,15 +174,15 @@
                          class="profile-img"
                          alt="Profile Image">
                     <div>
-                        <span>@_TechInnovation IT</span> <br>
-                        <span>@_TechInnovation IT .</span>
-                        <span class="hlight">Follow</span>
+                        <span class="fw-800">@_TechInnovation IT</span> <br>
+                        <span class="fw-600 text-gray-600">@_TechInnovation IT .</span>
+                        <span class="hlight fw-600">Follow</span>
                     </div>
                 </div>
-                <i class="bi bi-twitter hlight fs-large"></i>
+                <i class="bi bi-twitter hlight fs-4"></i>
             </div>
             <div class="card-content my-10">
-                Hello, i am a student at <span class="hlight fs-large">@_TechInnovation</span>
+                Hello, i am a student at <span class="hlight fs-2 fw-600">@_TechInnovation</span>
                 Institute of IT. 🏯
             </div>
             <div class="card-datetime text-gray-700 flex justify-between">
@@ -139,6 +207,15 @@
                     <span>Copy Link</span>
                 </div>
             </div>
+        </div>
+        <p class="text-light fs-3">Confidence and Hard work is the best medicine to kill the disease
+            called failure. It will make you successful person.</p>
+
+        <div class="flex align-center col-gap-1 rocket-button fs-3">
+            <div class="rocket-circle flex justify-center align-center">
+                <i class="bi bi-rocket"></i>
+            </div>
+            <span class="fw-800">Learn More <i class="bi bi-arrow-right"></i></span>
         </div>
     </div>
 </body>
