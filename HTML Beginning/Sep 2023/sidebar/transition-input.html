@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Transition Demo 2</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .header {
+            padding: 10px;
+            font-size: 1.6rem;
+            background-color: #ccc;
+        }
+
+        .hide {
+            appearance: none;
+            display: none;
+        }
+
+        .button {
+            width: 32px;
+            height: 32px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button:hover {
+            cursor: pointer;
+            background-color: lightgrey;
+        }
+
+        .button:active {
+            background-color: #ccff;
+            box-shadow: inset 1px 1px 10px 1px;
+        }
+
+        .container {
+            height: 100px;
+            width: 700px;
+            border: 1px solid black;
+        }
+
+        .container-2 {
+            height: 700px;
+            width: 100px;
+            border: 1px solid black;
+        }
+
+        .box {
+            background-color: green;
+            width: 0%;
+            height: 100%;
+            transition: width 0.2s ease-in-out;
+        }
+
+        input#toggle:checked+.container>.box {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <label for="toggle">
+            <div class="button">
+                <i class="bi bi-list"></i>
+            </div>
+        </label>
+    </header>
+
+    <input type="checkbox"
+           id="toggle"
+           class="hide">
+    <div class="container">
+
+        <div class="box"></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Transition Demo</title>
+
+    <style>
+        .container {
+            height: 100px;
+            width: 700px;
+            border: 1px solid black;
+        }
+
+        .container-2 {
+            height: 700px;
+            width: 100px;
+            border: 1px solid black;
+        }
+
+        .box {
+            background-color: green;
+            width: 0%;
+            height: 100%;
+            transition: width 0.2s ease-in-out;
+        }
+
+        .container:hover>.box {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box"></div>
+    </div>
+
+</body>
+
+</html>
