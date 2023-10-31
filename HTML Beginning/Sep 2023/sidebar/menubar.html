@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Menu bar</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .flex {
+            display: flex;
+        }
+
+        ul.flex {
+            list-style-type: none;
+            background-color: blueviolet;
+            color: white;
+            column-gap: 10px;
+        }
+
+        ul.flex li {
+            padding: 8px;
+            position: relative;
+        }
+
+        ul.flex li:hover {
+            background-color: gray;
+            color: black;
+            cursor: pointer;
+        }
+
+        .menu-list {
+            position: absolute;
+            background-color: blue;
+            color: white;
+            padding: 0;
+            overflow: hidden;
+            width: 0;
+            max-width: 250px;
+            top: 100%;
+            left: 0%;
+            list-style-type: none;
+
+
+            transition: width 0.01s;
+        }
+
+        ul.flex li:hover .menu-list {
+            width: 150px;
+            transition: width 0.3s ease-in;
+        }
+
+        ul.flex li:hover .button {
+            display: inline-block;
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Menu</h2>
+        <nav>
+            <ul class="flex">
+                <li>
+                    <span>Home</span>
+                    <i class="bi bi-caret-right-fill button"></i>
+                    <ul class="menu-list">
+                        <li>item 1</li>
+                        <li>item 2 Lorem ipsum, </li>
+                        <li>item 3</li>
+                        <li>item 4</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <span>About</span>
+                    <ul class="menu-list">
+                        <li>item 1</li>
+                        <li>item 2 Lorem ipsum, </li>
+                        <li>item 3</li>
+                        <li>item 4</li>
+                    </ul>
+                </li>
+                <li>
+                    <span>Contact</span>
+                    <ul class="menu-list">
+                        <li>item 1</li>
+                        <li>item 2 Lorem ipsum, </li>
+                        <li>item 3</li>
+                        <li>item 4</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+</body>
+
+</html>
