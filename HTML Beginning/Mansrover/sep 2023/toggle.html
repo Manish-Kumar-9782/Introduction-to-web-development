@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+            height: 100vh;
+        }
+
+        .button {
+            border: 2px groove dodgerblue;
+            background-color: rgba(30, 143, 255, 0.336);
+            width: 400px;
+            border-radius: 50px;
+            padding: 1px;
+
+        }
+
+        .pin {
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            background-color: red;
+            border-radius: 50%;
+            position: relative;
+            left: 0%;
+            transition: left 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+
+        /*
+        step 1:
+          .button:hover {
+            background-color: lightgrey;
+        }
+
+        .button:hover .pin {
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: rgb(58, 58, 58);
+        }
+      */
+
+        /*
+        step 2:
+         input#toggle-button:checked+.pin {
+            background-color: lightgrey;
+        }
+
+        input#toggle-button:checked+.pin {
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: rgb(58, 58, 58);
+        }
+       */
+
+        /* step 3: */
+
+
+        input#toggle-button:checked+label.pin-box div.pin {
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input id="toggle-button"
+           type="checkbox"
+           hidden>
+
+    <label for="toggle-button"
+           class="pin-box">
+        <div class="button">
+            <div class="pin"></div>
+        </div>
+    </label>
+
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Flex house card</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        body {
+            height: 100vh;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .card {
+            box-shadow: 1px 1px 10px 2px;
+            width: 330px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .img {
+            width: 100%;
+            height: 180px;
+
+        }
+
+        .img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .p-1 {
+            padding: 13px;
+        }
+
+        .fs-1 {
+            font-size: .9rem;
+        }
+
+        .fs-2 {
+            font-size: 1rem;
+        }
+
+        .fs-3 {
+            font-size: 1.6rem;
+        }
+
+        .text-gray-700 {
+            color: #4a5568;
+        }
+
+        .text-gray-600 {
+            color: #718096;
+        }
+
+        .text-gray-900 {
+            color: #1a202c;
+        }
+
+        .fw-800 {
+            font-weight: 800;
+        }
+
+        .fw-bold {
+            font-weight: bold;
+        }
+
+        .fw-600 {
+            font-weight: 600;
+        }
+
+        .description {
+            line-height: 1.6rem;
+        }
+
+        .profile-image {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+
+        hr {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body class="flex justify-center align-center">
+
+    <div class="card">
+
+        <div class="img">
+            <img src="./house image 2.jpg"
+                 alt="house image">
+        </div>
+        <div class="description p-1">
+            <span class="fs-2 text-gray-700 fw-600">HAUNTED HOUSE: 10Y OLD</span> <br>
+            <span class="fs-3 text-gray-900 ">Rs: 1,20,99,999/- ONLY</span> <br>
+            <span class="fs-1 text-gray-600 fw-600">303 bhoot bangala</span>
+
+        </div>
+        <hr>
+        <div class="details flex justify-between p-1">
+            <div><span><b>2</b> Bathroom</span></div>
+            <div><span><b>3</b> Bedroom</span></div>
+        </div>
+        <hr>
+        <div class="retailer p-1 ">
+            <span class="fs-1 text-gray-700 fw-bold">RETAILER</span> <br>
+
+            <div class="flex align-center"
+                 style="column-gap: 10px;">
+                <img src="./wc.jpg"
+                     class="profile-image"
+                     alt="retailer profile image">
+                <div>
+                    <span class="fw-bold">Witcher : Geralt Of Rivia</span> <br>
+                    <span class="fw-600 text-gray-600">+91-9874563210</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
