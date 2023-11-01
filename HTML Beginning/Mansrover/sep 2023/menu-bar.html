@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Menu Bar</title>
+    <link rel="stylesheet"
+          href="style.css">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .header {
+            background-color: #ccc;
+            padding: 0px 20px;
+            margin-top: 10px;
+        }
+
+        ul.flex {
+            list-style-type: none;
+        }
+
+        ul.flex>li {
+            padding: 10px;
+            background-color: #ccc;
+        }
+
+        ul.flex>.menu-item:hover {
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        ul.flex>.menu-item:hover ul.menu-list {
+            display: block;
+        }
+
+        .menu-list {
+            list-style-type: none;
+            background-color: goldenrod;
+            padding: 2px;
+            display: none;
+            position: absolute;
+            width: 150px;
+            left: 0%;
+            top: 100%;
+            z-index: 100;
+        }
+
+        .menu-item {
+            position: relative;
+
+        }
+
+        .menu-list li {
+            background-color: transparent;
+            padding: 8px;
+        }
+
+        .menu-list li:hover {
+            background-color: rgba(133, 99, 12, 0.541);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header flex gap-3 align-center">
+        <h2>Menu bar</h2>
+
+        <ul class="flex gap-2">
+            <li class="menu-item">
+                <span>Home</span>
+                <ul class="menu-list">
+                    <li>Learn HTML</li>
+                    <li>Learn CSS</li>
+                    <li>Learn JavaScript</li>
+                    <li>Learn React</li>
+                </ul>
+            </li>
+            <li class="menu-item">Page</li>
+            <li class="menu-item">Contact</li>
+        </ul>
+    </header>
+</body>
+
+</html>
