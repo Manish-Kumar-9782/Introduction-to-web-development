@@ -2,6 +2,11 @@
     display: flex;
 }
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 .justify-between {
     justify-content: space-between;
 }
@@ -48,7 +53,26 @@
     padding-right: 30px;
 }
 
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
 
+.w-25 {
+    width: 25%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
 
 .m-1 {
     margin: 10px;
@@ -110,4 +134,12 @@
 
 .fs-6 {
     font-size: 3rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-start {
+    text-align: start;
 }

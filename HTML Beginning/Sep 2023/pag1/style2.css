@@ -26,12 +26,24 @@ ul.flex {
     background-size: cover;
 }
 
+
+.bg-image-2 {
+    background-image: url("img 2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .article-card {
     width: 300px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: .8rem;
     line-height: 1.7rem;
+}
+
+.bg-light {
+    background-color: #ccc;
 }
 
 .title {
@@ -64,4 +76,41 @@ section {
     bottom: 100%;
     transform: translateX(-50%);
     box-sizing: border-box;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+
+}
+
+.logo svg {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+
+}
+
+
+.info-card {
+
+    flex: 1;
+    text-align: center;
+    padding: 2rem;
+}
+
+
+ul.flex-column {
+    list-style-type: none;
+    padding: 0px;
+}
+
+ul.flex-column li {
+    margin: 10px;
+}
+
+
+footer {
+    background-color: var(--color1);
+    color: white;
 }
