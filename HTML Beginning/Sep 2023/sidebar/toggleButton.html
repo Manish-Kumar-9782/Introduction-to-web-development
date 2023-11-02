@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button</title>
+
+    <style>
+        body {
+            --toggle-button-height: 100px;
+            --toggle-button-border: #343434;
+            --toggle-bg: #DDDDDD;
+            --toggle-pin-on-bg: #03C988;
+            --toggle-pin-off-bg: #E94560;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .toggle-button {
+            width: 500px;
+            height: var(--toggle-button-height);
+            border-radius: calc(var(--toggle-button-height)/2);
+            border: 1px solid var(--toggle-button-border);
+            background-color: var(--toggle-bg);
+            padding: 1px;
+            transition:
+                background-color 0.5s ease-in-out;
+        }
+
+        .toggle-pin {
+            width: var(--toggle-button-height);
+            height: var(--toggle-button-height);
+            background-color: var(--toggle-pin-off-bg);
+            border-radius: 50%;
+            left: 0%;
+            position: relative;
+            transition: left 0.5s ease-in-out,
+                transform 0.5s ease-in-out,
+                background-color 0.5s ease-in-out;
+        }
+
+
+        .toggle-button:hover {
+            background-color: #343434;
+        }
+
+        .toggle-button:hover .toggle-pin {
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: var(--toggle-pin-on-bg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="toggle-button">
+        <div class="toggle-pin"></div>
+    </div>
+
+</body>
+
+</html>
