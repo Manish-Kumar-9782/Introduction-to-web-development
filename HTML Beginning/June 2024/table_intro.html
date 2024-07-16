@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Table Intro</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            height: 100vh;
+            --header: #2D82B5;
+            --cell-1: #88cdf6;
+            --cell-2: #bce6ff;
+            --border: #98ccea;
+            --text-color: #366d8e;
+        }
+
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            width: 100px;
+            /*height: 50px;*/
+            /*text-align: right;*/
+            /*vertical-align: bottom;*/
+        }
+
+
+        th {
+            border: 1px solid black;
+            background-color: var(--header);
+            border-color: var(--border);
+            color: var(--cell-2);
+        }
+
+        td {
+            border: 1px solid var(--border);
+            color: var(--text-color);
+        }
+
+        tr:nth-of-type(odd) {
+            background-color: var(--cell-1);
+        }
+
+        tr:nth-of-type(even) {
+            background-color: var(--cell-2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+        table:
+            thead : table heading
+            tbody: table content
+            tr: table row
+            td: table data
+            th: table header
+
+    -->
+
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Height</th>
+                <th>BloodGroup</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Kavita</td>
+                <td>20</td>
+                <td>5.3</td>
+                <td>B+</td>
+            </tr>
+
+            <tr>
+                <td>Antima</td>
+                <td>21</td>
+                <td>5.2</td>
+                <td>A+</td>
+            </tr>
+            <tr>
+                <td>Vishal</td>
+                <td>22</td>
+                <td>5.9</td>
+                <td>AB+</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>
