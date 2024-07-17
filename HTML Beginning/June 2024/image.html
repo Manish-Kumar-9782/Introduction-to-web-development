@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Image Intro</title>
+
+    <style>
+        .circle {
+            border-radius: 50%;
+            /*To create a circular effect
+                1. border-radius must be 50%;
+                2. both height and width must be equal.
+            */
+        }
+
+        .circle_x {
+            --size: 100px;
+            height: var(--size);
+            width: var(--size);
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- img element is a void/empty element -->
+    <img src="./img1.jpg"
+         alt="image 1"
+         width="500px"
+         height="300px">
+
+    <!-- img from internet -->
+
+    <img src="https://img.freepik.com/free-photo/adorable-illustration-kittens-playing-forest-generative-ai_260559-483.jpg?t=st=1721190454~exp=1721194054~hmac=c5399300b50ae32083670b37e925cc29f80e13438a580d4a744a49f063dae936&w=740"
+         alt="cartoon image"
+         width="100px">
+
+
+    <div>
+        <img class="circle"
+             src="https://img.freepik.com/free-photo/adorable-illustration-kittens-playing-forest-generative-ai_260559-483.jpg?t=st=1721190454~exp=1721194054~hmac=c5399300b50ae32083670b37e925cc29f80e13438a580d4a744a49f063dae936&w=740"
+             alt="cartoon image"
+             width="300px"
+             height="300px">
+    </div>
+
+    <div>
+        <img class="circle_x"
+             src="./436171.jpg"
+             alt="crt img">
+    </div>
+
+</body>
+
+</html>

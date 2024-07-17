@@ -15,15 +15,22 @@
             margin: 0;
             height: 100vh;
             --header: #2D82B5;
+            --header-2: #A0937D;
             --cell-1: #88cdf6;
             --cell-2: #bce6ff;
+            --cell-3: #E7D4B5;
+            --cell-4: #F6E6CB;
+
             --border: #98ccea;
+            --border-2: #c8bdab;
             --text-color: #366d8e;
+            --text-color-2: #366d8e;
         }
 
         table {
             border: 1px solid black;
             border-collapse: collapse;
+            margin: 20px;
         }
 
         th,
@@ -36,24 +43,44 @@
         }
 
 
-        th {
+        #table1 th {
             border: 1px solid black;
             background-color: var(--header);
             border-color: var(--border);
             color: var(--cell-2);
         }
 
-        td {
+        #table2 th {
+            border: 1px solid black;
+            background-color: var(--header-2);
+            border-color: var(--border-2);
+            color: var(--cell-4);
+        }
+
+        #table1 td {
             border: 1px solid var(--border);
             color: var(--text-color);
         }
 
-        tr:nth-of-type(odd) {
+        #table2 td {
+            border: 1px solid var(--border-2);
+            color: var(--text-color);
+        }
+
+        #table1 tr:nth-of-type(odd) {
             background-color: var(--cell-1);
         }
 
-        tr:nth-of-type(even) {
+        #table2 tr:nth-of-type(odd) {
+            background-color: var(--cell-3);
+        }
+
+        #table1 tr:nth-of-type(even) {
             background-color: var(--cell-2);
+        }
+
+        #table2 tr:nth-of-type(even) {
+            background-color: var(--cell-4);
         }
     </style>
 </head>
@@ -71,7 +98,7 @@
     -->
 
 
-    <table>
+    <table id="table1">
 
         <thead>
             <tr>
@@ -108,6 +135,44 @@
         </tbody>
     </table>
 
+
+
+    <table id="table2">
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Height</th>
+                <th>BloodGroup</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Kavita</td>
+                <td>20</td>
+                <td>5.3</td>
+                <td>B+</td>
+            </tr>
+
+            <tr>
+                <td>Antima</td>
+                <td>21</td>
+                <td>5.2</td>
+                <td>A+</td>
+            </tr>
+            <tr>
+                <td>Vishal</td>
+                <td>22</td>
+                <td>5.9</td>
+                <td>AB+</td>
+            </tr>
+
+
+        </tbody>
+    </table>
 </body>
 
 </html>
