@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>background image</title>
+
+    <style>
+        .img-box {
+            width: 100%;
+            height: 40%;
+
+        }
+
+        .img1 {
+            background-image: url("./img2.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img2 {
+            background-image: url("./produt_img1.jpg");
+            background-size: contain;
+            background-position: center;
+        }
+
+        .img3 {
+            background-image: url("./OIP.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            border: 1px solid rgb(167, 164, 164);
+            width: 400px;
+            height: 600px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="img-box img1"></div>
+    </div>
+
+    <div class="container">
+        <div class="img-box img2"></div>
+    </div>
+
+    <div class="container">
+        <div class="img-box img3"></div>
+    </div>
+
+
+</body>
+
+</html>
