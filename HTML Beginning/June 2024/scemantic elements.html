@@ -24,10 +24,54 @@
         }
 
         main {
-            background-color: rgb(184, 184, 184);
+
             width: 500px;
-            border: 2px solid green;
             padding: 10px;
+            margin: 10px;
+        }
+
+        .flex-container {
+            display: flex;
+            background-color: cadetblue;
+        }
+
+        .aside {
+            min-width: 200px;
+            max-width: 300px;
+            width: 20%;
+        }
+
+
+        aside ul {
+            list-style-type: none;
+            padding: 10px;
+            text-align: center;
+        }
+
+        aside ul li {
+
+            padding: 7px;
+            background-color: rgb(36, 103, 105);
+            margin: 10px 0px;
+            color: whitesmoke;
+        }
+
+        .main {
+            width: 80%;
+        }
+
+        main section {
+
+            background-color: aliceblue;
+            border: 0px;
+            padding: 10px;
+            margin: 10px 0px;
+        }
+
+        main section article {
+            background-color: rgb(123, 203, 206);
+            padding: 10px;
+            margin: 10px;
         }
     </style>
 </head>
@@ -71,85 +115,104 @@
         </nav>
     </header>
 
+    <div class="flex-container">
+        <aside class="border-box aside">
 
-    <aside class="border-box">
+            <h3>Semantic Elements</h3>
 
-        <h3>Semantic Elements</h3>
+            <ul>
+                <li>header</li>
+                <li>footer</li>
+                <li>nav</li>
+                <li>main</li>
+                <li>section</li>
+                <li>article</li>
+                <li>aside</li>
+                <li>address</li>
+                <li>summary</li>
+                <li>details</li>
+            </ul>
 
-        <ul>
-            <li>header</li>
-            <li>footer</li>
-            <li>nav</li>
-            <li>main</li>
-            <li>section</li>
-            <li>article</li>
-            <li>aside</li>
-            <li>address</li>
-            <li>summary</li>
-            <li>details</li>
-        </ul>
-
-    </aside>
-
-
-    <main>
-
-        <section class="border-box">
-
-            <article class="border-box">
-                <h3>Katrina Kaif-Vicky Kaushal are inseparable at Bad Newz premiere, netizens call
-                    them ‘match made in heaven’.</h3>
-                <p>Katrina Kaif, who flew out of India after attending Anant Ambani and Radhika
-                    Merchant’s wedding festivities over the past weekend, returned to Mumbai just in
-                    time to attend the premiere of her husband, actor Vicky Kaushal’s Bad Newz. The
-                    film, also starring Triptii Dimri and Ammy Virk, is directed by
-                    actor-turned-filmmaker Anand Tiwari, and was released in cinemas today, July 18.
-                </p>
-            </article>
-
-            <article class="border-box">
-                <h3>Bad Newz movie review: Triptii Dimri holds her own against a delightful Vicky
-                    Kaushal</h3>
-                <p>The good news: the first half, silly and sparkly, is altogether fun. The bad
-                    newz: the second half, taken over by sighs and moans, is a mood kill. Overall,
-                    mixed bag.
-
-                    It’s hard to think of anyone other than Ranveer Singh as the quintessential Wast
-                    Dalhi boy, bread pakode ki kasam, which he colonised in Band Baaja Baraat and
-                    Rocky Aur Rani Ki Prem Kahaani. In Anand Tiwari’s Bad Newz, rajma gets pride of
-                    place, and quite rightly, because as a character says, ‘Punjabiyon ke liye rajma
-                    khana nahin, emotion hai’. Spot on.</p>
-            </article>
-
-        </section>
+        </aside>
 
 
-        <section class="border-box">
+        <main class="main">
 
-            <article class="border-box">
-                <h3>Nordea Open: How 'aggressive' Rafael Nadal scripted incredible comeback vs
-                    Norrie</h3>
-                <p>Rafael Nadal said that he needed to be ‘aggressive’ at certain stages in the
-                    Nordea Open 2024 quarterfinal match against Cameron Norrie. On Thursday, Nadal,
-                    who is playing in Bastad as a wildcard, defeated his fifth seeded opponent 6-4,
-                    6-4 and made his way through to the semi-final of the clay-court tournament
-                    where he will lock horns with Argentina’s Mariano Navone.</p>
-            </article>
+            <section class="">
 
-            <article class="border-box">
-                <h3>SL vs IND: Shubman Gill is the future of Indian cricket! But is vice-captaincy
-                    warranted?</h3>
-                <p>Shubman Gill is the future of Indian cricket! Let's start by having not doubts
-                    about this fact. Starting off with an impressive showing in the U-19 World Cup
-                    in 2018, Gill emerged as the standout from that crop of talent. His success
-                    story would continue in 2023, as the young star started to draw comparisons with
-                    the great Virat Kohli and for good reason.</p>
-            </article>
+                <article class="">
+                    <h3>Katrina Kaif-Vicky Kaushal are inseparable at Bad Newz premiere, netizens
+                        call
+                        them ‘match made in heaven’.</h3>
+                    <p>Katrina Kaif, who flew out of India after attending Anant Ambani and Radhika
+                        Merchant’s wedding festivities over the past weekend, returned to Mumbai
+                        just in
+                        time to attend the premiere of her husband, actor Vicky Kaushal’s Bad Newz.
+                        The
+                        film, also starring Triptii Dimri and Ammy Virk, is directed by
+                        actor-turned-filmmaker Anand Tiwari, and was released in cinemas today, July
+                        18.
+                    </p>
+                </article>
 
-        </section>
+                <article class="">
+                    <h3>Bad Newz movie review: Triptii Dimri holds her own against a delightful
+                        Vicky
+                        Kaushal</h3>
+                    <p>The good news: the first half, silly and sparkly, is altogether fun. The bad
+                        newz: the second half, taken over by sighs and moans, is a mood kill.
+                        Overall,
+                        mixed bag.
+
+                        It’s hard to think of anyone other than Ranveer Singh as the quintessential
+                        Wast
+                        Dalhi boy, bread pakode ki kasam, which he colonised in Band Baaja Baraat
+                        and
+                        Rocky Aur Rani Ki Prem Kahaani. In Anand Tiwari’s Bad Newz, rajma gets pride
+                        of
+                        place, and quite rightly, because as a character says, ‘Punjabiyon ke liye
+                        rajma
+                        khana nahin, emotion hai’. Spot on.</p>
+                </article>
+
+            </section>
 
 
-    </main>
+            <section class="">
+
+                <article class="">
+                    <h3>Nordea Open: How 'aggressive' Rafael Nadal scripted incredible comeback vs
+                        Norrie</h3>
+                    <p>Rafael Nadal said that he needed to be ‘aggressive’ at certain stages in the
+                        Nordea Open 2024 quarterfinal match against Cameron Norrie. On Thursday,
+                        Nadal,
+                        who is playing in Bastad as a wildcard, defeated his fifth seeded opponent
+                        6-4,
+                        6-4 and made his way through to the semi-final of the clay-court tournament
+                        where he will lock horns with Argentina’s Mariano Navone.</p>
+                </article>
+
+                <article class="">
+                    <h3>SL vs IND: Shubman Gill is the future of Indian cricket! But is
+                        vice-captaincy
+                        warranted?</h3>
+                    <p>Shubman Gill is the future of Indian cricket! Let's start by having not
+                        doubts
+                        about this fact. Starting off with an impressive showing in the U-19 World
+                        Cup
+                        in 2018, Gill emerged as the standout from that crop of talent. His success
+                        story would continue in 2023, as the young star started to draw comparisons
+                        with
+                        the great Virat Kohli and for good reason.</p>
+                </article>
+
+            </section>
+
+
+        </main>
+    </div>
+
+
 
 
     <div class="border-box">
