@@ -16,8 +16,9 @@
 
         .card {
             width: 300px;
-            height: 300px;
+            /* height: 300px; */
             padding: 10px;
+            border-radius: 8px;
         }
 
         .d-flex {
@@ -28,6 +29,10 @@
             justify-content: space-between;
         }
 
+        .al-center {
+            align-items: center;
+        }
+
         .title {
             text-align: center;
             margin: 25px 0px;
@@ -35,6 +40,18 @@
 
         .title-heading {
             font-size: 2rem;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        .user-icon {
+            font-size: 28px;
+        }
+
+        .footer {
+            margin: 10px 0px;
         }
 
         .title-subheading {}
@@ -50,35 +67,49 @@
 
 <body>
     <div class="border card">
-        <div class="border d-flex jc-between"
-             style="height: 10%;">
+        <div class="d-flex jc-between">
 
             <span>29 July 2024</span>
             <i class="bi bi-three-dots-vertical"></i>
 
         </div>
 
-        <div class="border"
-             style="height: 70%;">
+        <div class="">
 
             <div class="title">
                 <span class="title-heading">Web Design</span> <br>
                 <span>FlipKart</span>
             </div>
 
-            <div class="progress"></div>
+            <div class="progress">
+                <span>Progress</span> <br>
+
+                <!-- 
+                value: how progress is done
+                    max: maximum value of progress.
+                    
+                    default: max: 1.0
+                    value: unknown
+                 -->
+                <progress class="w-100"
+                          value="0.7"
+                          max="1.0"></progress>
+            </div>
 
         </div>
-        <div class="border"
-             style="height: 20%;"></div>
+        <div class="d-flex jc-between al-center footer">
+
+            <div>
+                <i class="bi bi-person-circle user-icon"></i>
+                <i class="bi bi-person-circle user-icon"></i>
+                <i class="bi bi-person-circle user-icon"></i>
+            </div>
+
+
+            <span>3 Days Left</span>
+
+        </div>
     </div>
-
-
-    <p>
-        Lorem ipsum, dolor sit amet <span>consectetur adipisicing elit</span>. Quasi molestias totam
-        omnis
-        blanditiis repudiandae delectus vero accusamus distinctio, laborum dolorem.
-    </p>
 
 </body>
 
