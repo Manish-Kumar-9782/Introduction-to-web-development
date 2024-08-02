@@ -18,7 +18,10 @@
             width: 300px;
             /* height: 300px; */
             padding: 10px;
-            border-radius: 8px;
+            /* border-radius: 8px; */
+            background-color: #f0f0f3;
+            box-shadow: 10px 10px 30px #aeaec0, -10px -10px 30px #fff;
+            color: #9c9c9c;
         }
 
         .d-flex {
@@ -38,10 +41,6 @@
             margin: 25px 0px;
         }
 
-        .title-heading {
-            font-size: 2rem;
-        }
-
         .w-100 {
             width: 100%;
         }
@@ -54,7 +53,43 @@
             margin: 10px 0px;
         }
 
-        .title-subheading {}
+        .title-heading {
+            font-size: 2rem;
+            color: #112d60ab;
+        }
+
+        .title-subheading {
+            color: #647b87;
+        }
+
+
+        .info {
+            background-color: #3b4558;
+            padding: 6px;
+            border-radius: 8px;
+        }
+
+        .text-color {
+            color: #3b4558;
+        }
+
+        /* Applying some color styling and centering*/
+
+        body {
+
+            /* first applying flex and setting body child element to center of the body
+
+            Note1: since height of body is not equal to viewport. so we need to set height as 100vh;
+
+            Note2: since body contains some margin so our web page will have scroll bar un-necessary. for that we need to reset margin to 0px.
+            */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0px;
+        }
     </style>
 
 </head>
@@ -66,7 +101,7 @@
 -->
 
 <body>
-    <div class="border card">
+    <div class="card">
         <div class="d-flex jc-between">
 
             <span>29 July 2024</span>
@@ -78,7 +113,7 @@
 
             <div class="title">
                 <span class="title-heading">Web Design</span> <br>
-                <span>FlipKart</span>
+                <span class="title-subheading">FlipKart</span>
             </div>
 
             <div class="progress">
@@ -99,14 +134,14 @@
         </div>
         <div class="d-flex jc-between al-center footer">
 
-            <div>
+            <div class="text-color">
                 <i class="bi bi-person-circle user-icon"></i>
                 <i class="bi bi-person-circle user-icon"></i>
                 <i class="bi bi-person-circle user-icon"></i>
             </div>
 
 
-            <span>3 Days Left</span>
+            <span class="info">3 Days Left</span>
 
         </div>
     </div>
