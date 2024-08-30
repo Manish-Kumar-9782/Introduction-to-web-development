@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+
+        .fit-cover {
+            object-fit: cover;
+        }
+
+        .fit-contain {
+            object-fit: contain;
+        }
+
+        .fit-fill {
+            object-fit: fill;
+        }
+    </style>
+    <title>Images</title>
+</head>
+
+<body>
+
+
+    <!-- 
+        src: for image address
+        address type : relative and absolute.
+
+        absolute: G:\WorkData\Programming\Web Development\Introduction-to-web-development\HTML Beginning\sep 2024\img1.jpg
+
+        relative path: img1.jpg
+     -->
+    <img src="./img1.jpg"
+         alt="this my laptop"
+         width="300"
+         height="300">
+
+    <img src="./img1.jpg"
+         alt="this my laptop"
+         width="300">
+
+    <!-- if image is not available -->
+    <img src="./img1.jp"
+         alt="this my laptop"
+         width="300">
+
+
+    <!-- circular image
+        set image height and width same
+        set border-radius to half of the image size (50%)
+    -->
+
+    <h5>Circular image</h5>
+
+    <img class="circle"
+         src="./img1.jpg"
+         alt="this my laptop">
+
+    <h5>fit circular image by cover</h5>
+
+    <img class="circle fit-cover"
+         src="./img1.jpg"
+         alt="this my laptop">
+
+
+    <h5>fit circular image by contain</h5>
+
+    <img class="circle fit-contain"
+         src="./img1.jpg"
+         alt="this my laptop">
+
+
+    <h5>fit circular image by fill</h5>
+
+    <img class="circle fit-fill"
+         src="./img1.jpg"
+         alt="this my laptop">
+
+
+    <h4>Goto Google</h4>
+
+    <a href="https://www.google.com">
+        <img class="circle fit-cover"
+             src="./google-logo.png"
+             alt="this my laptop">
+
+    </a>
+
+</body>
+
+</html>
