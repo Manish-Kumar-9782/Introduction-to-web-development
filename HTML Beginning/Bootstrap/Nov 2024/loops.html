@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+
+<body>
+
+    <!-- 
+        for(initialization; condition; increment/decrement){
+            // statements
+        }
+    -->
+
+    <script>
+        let numbers = [10, 220, 389, 44, 45];  // array of numbers
+
+        for (let i = 0; i < 5; i++) {
+            console.log(i)
+        }
+
+
+        // for loop for array.
+        console.log("length of array: ", numbers.length);
+
+        for (let i = 0; i < numbers.length; i++) {
+            console.log(numbers[i])
+        }
+
+        /*
+        for (let i = 0; i < 5; i++) {
+
+            console.log("i--->", i)
+
+        for (let j = 0; j < 5; j++) {
+            console.log("j--->", j)
+        }
+
+        }
+        */
+
+
+        let star_pattern = ""
+        // outer loop for controlling the number of rows to draw
+        for (let i = 0; i < 5; i++) {
+
+            // inner loop for drawing the single row with n number of columns
+            // or n number of stars.
+            for (let j = 0; j <= i; j++) {
+                star_pattern += "*" // add a star in current row
+            }
+
+            star_pattern += "\n"; // add new line to star pattern
+        }
+
+        document.write(star_pattern.replaceAll("\n", "<br>"))
+        console.log(star_pattern)
+
+
+        // While loop
+
+        /*
+            while(condition){
+                // code to be executed
+            }
+        */
+
+        let i = 1
+        let j = 0
+
+        /*
+
+        while (i < 50) {
+
+            console.log(i)
+
+            if (i % 7 == 0) {
+                i += 3
+            }
+
+            if (j >= 100) {
+                console.log("process has been reached to it's limit")
+                break;// break the loop
+            }
+
+            i++; j++;
+        }
+
+        */
+
+        i = 100
+        j = 0
+        while (i < 50) {
+            console.log("inside while loop", i)
+
+            if (i % 7 == 0) {
+                i += 3
+            }
+
+            if (j >= 100) {
+                console.log("process has been reached to it's limit")
+                break;// break the loop
+            }
+
+            i++; j++;
+        }
+
+        //   i = 100
+        // j = 0
+        do {
+            console.log("Inside do-while loop", i)
+
+            if (i % 7 == 0) {
+                i += 3
+            }
+
+            if (j >= 100) {
+                console.log("process has been reached to it's limit")
+                break;// break the loop
+            }
+
+            i++; j++;
+        }
+        while (i < 50)
+        console.log("program ended...")
+
+    </script>
+
+</body>
+
+</html>

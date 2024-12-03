@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+              crossorigin="anonymous"></script>
+      <title>Layout</title>
+
+
+      <style>
+            .flex-1 {
+                  flex: 1;
+            }
+
+            .box {
+                  height: 100px;
+                  border: 2px solid black;
+            }
+
+            .box-1 {
+                  background-color: rgba(102, 16, 242, 0.15);
+                  border: 3px solid rgba(102, 16, 242, 0.90);
+            }
+      </style>
+</head>
+
+<body>
+      <div class="box d-flex">
+            <h1 class="border border-5 flex-grow-1 border-success">Hello World</h1>
+            <h1 class="border border-5 border-primary">Hello World</h1>
+            <h1 class="border border-5 border-primary">Hello World</h1>
+      </div>
+
+      <div class="box-1 p-1 d-flex mb-3">
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="ms-auto box-1 p-2">Flex item</div>
+      </div>
+
+      <div class="box-1 p-1 d-flex mb-3">
+            <div class="me-auto box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+      </div>
+
+      <div class="box-1 p-1 d-flex mb-3">
+            <div class="box-1 p-2">Flex item</div>
+            <div class="ms-auto box-1 p-2">Flex item</div>
+            <div class="ms-auto box-1 p-2">Flex item</div>
+      </div>
+
+
+      <div class="box-1 p-1 d-flex flex-wrap mb-3">
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+      </div>
+
+      <div class="box-1 p-1 d-flex flex-wrap mb-3 align-content-evenly"
+           style="height:500px">
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+            <div class="box-1 p-2">Flex item</div>
+      </div>
+
+</body>
+
+</html>

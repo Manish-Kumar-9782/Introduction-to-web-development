@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport"
+             content="width=device-width, initial-scale=1.0">
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+             rel="stylesheet"
+             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+             crossorigin="anonymous">
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+               integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+               crossorigin="anonymous"></script>
+       <title>Document</title>
+</head>
+
+<body>
+
+       <div class="d-flex justify-cotent-center align-items-center">
+
+              <div class="container w-25 border border-2 p-3  rounded">
+                     <form action="#">
+                            <div class="mb-4">
+                                   <label for="email"
+                                          class="form-label">Email Id</label>
+                                   <input type="text"
+                                          class="form-control">
+                                   <span class="form-text">Enter your email address.</span>
+                            </div>
+
+                            <div class="mb-4">
+                                   <label for="password"
+                                          class="form-label">Password</label>
+                                   <input type="password"
+                                          class="form-control">
+                                   <span class="form-text">Enter your password. password starts from
+                                          emp id.</span>
+                            </div>
+
+
+                            <!-- Form control Select options -->
+                            <div class="mb-4">
+                                   <select id="Ice Creams"
+                                           class="form-select w-50">
+                                          <option selected
+                                                  value=""
+                                                  disabled>Select Ice Cream</option>
+                                          <option value="Mango">Mango Cream</option>
+                                          <option value="Butter scotch">Butter Scotch</option>
+                                          <option value="Choco bar">Choco Bar</option>
+                                          <option value="Vanila">Vanila</option>
+                                          <option value="Vanila">Vanila</option>
+                                          <option value="Vanila">Vanila</option>
+                                          <option value="Vanila">Vanila</option>
+                                          <option value="Vanila">Vanila</option>
+                                          <option value="Vanila">Vanila</option>
+                                   </select>
+
+                            </div>
+
+
+                            <!-- Gender -->
+                            <div class="mb-4">
+                                   <span>Gender:</span>
+                                   <div class="d-inline-block ms-3">
+                                          <input id="gender-male"
+                                                 type="radio"
+                                                 class="form-check-input"
+                                                 name="gender">
+                                          <label for="gender-male"
+                                                 class="form-check-label">Male</label>
+                                   </div>
+                                   <div class="d-inline-block ms-3">
+                                          <input id="gender-female"
+                                                 type="radio"
+                                                 class="form-check-input"
+                                                 name="gender">
+                                          <label for="gender-female"
+                                                 class="form-check-label">Female</label>
+                                   </div>
+                            </div>
+
+
+                            <div class="mb-4">
+
+                                   <div class="form-check form-switch">
+                                          <input type="checkbox"
+                                                 class="form-check-input">
+                                          <label for="age"
+                                                 class="form-check-label">Are You Above 18?</label>
+                                   </div>
+
+                            </div>
+
+
+
+                            <!-- Current Course-->
+
+                            <div class="mb-4">
+                                   <span
+                                         class="d-block mb-2 border border-2 border-top-0 border-start-0 border-end-0 ">Select
+                                          one of the
+                                          course:</span>
+                                   <div class="form-check">
+                                          <input type="radio"
+                                                 class="form-check-input"
+                                                 id="c/c++"
+                                                 name="course">
+                                          <label for="c/c++"
+                                                 class="form-check-label">C/C++ Programming</label>
+                                   </div>
+
+                                   <div class="form-check">
+                                          <input type="radio"
+                                                 class="form-check-input"
+                                                 id="java"
+                                                 name="course">
+                                          <label for="java"
+                                                 class="form-check-label">Java Programming</label>
+                                   </div>
+
+                                   <div class="form-check">
+                                          <input type="radio"
+                                                 class="form-check-input"
+                                                 id="react"
+                                                 name="course">
+                                          <label for="react"
+                                                 class="form-check-label">React</label>
+                                   </div>
+
+                                   <div class="form-check">
+                                          <input type="radio"
+                                                 class="form-check-input"
+                                                 id="web-dev"
+                                                 name="course">
+                                          <label for="web-dev"
+                                                 class="form-check-label">Full Stack Web
+                                                 Development</label>
+                                   </div>
+
+                            </div>
+
+                            <!-- checkbox as toggle button  -->
+
+                            <div class="mb-4">
+                                   <input type="checkbox"
+                                          class="btn-check"
+                                          id="btn-check">
+                                   <label class="btn btn-primary"
+                                          for="btn-check">Click Me!</label>
+                            </div>
+
+                            <div class="mb-4">
+                                   <div class="d-inline mb-2">
+                                          <input type="radio"
+                                                 class="btn-check"
+                                                 id="opt1"
+                                                 name="options">
+                                          <label class="btn btn-primary"
+                                                 for="opt1">Smash Me!</label>
+                                   </div>
+                                   <div class="d-inline mb-2">
+                                          <input type="radio"
+                                                 class="btn-check"
+                                                 id="opt2"
+                                                 name="options">
+                                          <label class="btn btn-primary"
+                                                 for="opt2">Click Me!</label>
+                                   </div>
+                            </div>
+
+                            <div class="mb-4">
+                                   <div class="d-inline mb-2">
+                                          <input type="radio"
+                                                 class="btn-check"
+                                                 id="opt12"
+                                                 name="options2">
+                                          <label class="btn btn-outline-success"
+                                                 for="opt12">Smash Me!</label>
+                                   </div>
+                                   <div class="d-inline mb-2">
+                                          <input type="radio"
+                                                 class="btn-check"
+                                                 id="opt22"
+                                                 name="options2">
+                                          <label class="btn btn-outline-primary"
+                                                 for="opt22">Click Me!</label>
+                                   </div>
+                            </div>
+
+
+                            <div class="mb-4">
+                                   <input type="checkbox"
+                                          class="form-check-input">
+                                   <label for=""
+                                          class="form-check-label">Confirm Information</label>
+                            </div>
+
+                            <input type="submit"
+                                   value="Submit"
+                                   class="btn btn-success w-100">
+
+                     </form>
+              </div>
+
+
+              <div class="container w-75 border border-2 p-3  rounded">
+                     <h1>Input Groups</h1>
+
+                     <div class="input-group">
+                            <span class="input-group-text">UserName@</span>
+                            <input type="text"
+                                   class="form-control">
+                     </div>
+
+                     <span>multi inputs</span>
+                     <div class="input-group">
+                            <span class="input-group-text">First Name & Second Name</span>
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="first name">
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="second name">
+                     </div>
+
+                     <br>
+                     <span>Login To Faltu.com</span>
+                     <div class="input-group">
+
+                            <input type="email"
+                                   class="form-control"
+                                   placeholder="email address">
+                            <span class="input-group-text">@faltu.com</span>
+                     </div>
+
+                     <br>
+                     <!-- checkbox as input-group -->
+                     <span>Check box in input groups</span>
+                     <div class="input-group">
+                            <div class="input-group-text">
+                                   <input type="checkbox">
+                            </div>
+                            <input type="text"
+                                   class="form-control">
+                     </div>
+
+
+                     <br>
+                     <!-- button addon in input groups -->
+                     <span>Button addon in input groups</span>
+                     <div class="input-group">
+                            <button type="button"
+                                    class="btn btn-outline-primary">Button 1</button>
+                            <input type="text"
+                                   class="form-control">
+                     </div>
+
+                     <br>
+                     <span>Search Button</span>
+                     <div class="input-group">
+                            <input type="search"
+                                   class="form-control">
+                            <button type="button"
+                                    class="btn btn-outline-primary">Search</button>
+                     </div>
+
+                     <br>
+                     <span>File Upload</span>
+                     <div class="input-group">
+                            <span class="input-group-text">Upload</span>
+                            <input type="file"
+                                   name="upload"
+                                   id="upload"
+                                   class="form-control">
+                     </div>
+
+
+                     <div class="form-floating mb-3 mt-4">
+                            <input type="email"
+                                   class="form-control is-invalid valid"
+                                   id="floatingInput"
+                                   placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+
+                     </div>
+
+
+
+                     <form class="row g-3 border border-dark border-3 p-5 rounded rounded-4 mt-5">
+
+
+                            <div class="col-md-6">
+                                   <label for="inputEmail4"
+                                          class="form-label">Email</label>
+                                   <input type="email"
+                                          class="form-control"
+                                          id="inputEmail4">
+                            </div>
+                            <div class="col-md-6">
+                                   <label for="inputPassword4"
+                                          class="form-label">Password</label>
+                                   <input type="password"
+                                          class="form-control"
+                                          id="inputPassword4">
+                            </div>
+
+                            <!-- ----------------------------- -->
+
+
+                            <div class="col-12">
+                                   <label for="inputAddress"
+                                          class="form-label">Address</label>
+                                   <input type="text"
+                                          class="form-control"
+                                          id="inputAddress"
+                                          placeholder="1234 Main St">
+                            </div>
+
+
+                            <div class="col-12">
+                                   <label for="inputAddress2"
+                                          class="form-label">Address 2</label>
+                                   <input type="text"
+                                          class="form-control"
+                                          id="inputAddress2"
+                                          placeholder="Apartment, studio, or floor">
+                            </div>
+
+
+                            <div class="col-md-6">
+                                   <label for="inputCity"
+                                          class="form-label">City</label>
+                                   <input type="text"
+                                          class="form-control"
+                                          id="inputCity">
+                            </div>
+                            <div class="col-md-4">
+                                   <label for="inputState"
+                                          class="form-label">State</label>
+                                   <select id="inputState"
+                                           class="form-select">
+                                          <option selected>Choose...</option>
+                                          <option>...</option>
+                                   </select>
+                            </div>
+                            <div class="col-md-2">
+                                   <label for="inputZip"
+                                          class="form-label">Zip</label>
+                                   <input type="text"
+                                          class="form-control"
+                                          id="inputZip">
+                            </div>
+
+
+                            <!-- ------------------- -->
+                            <div class="col-12">
+                                   <div class="form-check">
+                                          <input class="form-check-input"
+                                                 type="checkbox"
+                                                 id="gridCheck">
+                                          <label class="form-check-label"
+                                                 for="gridCheck">
+                                                 Check me out
+                                          </label>
+                                   </div>
+                            </div>
+                            <div class="col-12">
+                                   <button type="submit"
+                                           class="btn btn-primary">Sign in</button>
+                            </div>
+                     </form>
+              </div>
+       </div>
+
+</body>
+
+</html>

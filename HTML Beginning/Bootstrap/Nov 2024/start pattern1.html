@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Star pattern</title>
+</head>
+
+<body>
+    <script>
+        let star_pattern = ""
+        let current_spaces = 5;
+        // outer loop for controlling the number of rows to draw
+        for (let i = 1; i <= 5; i++) {
+            // inner loop for drawing the single row with n number of columns
+            // or n number of stars.
+            for (let j = 1; j <= 5; j++) {
+
+                if (j <= current_spaces - i) {
+                    star_pattern += " "
+                }
+                else {
+                    star_pattern += "*" // add a star in current row
+                }
+            }
+            star_pattern += "\n"; // add new line to star pattern
+        }
+
+        document.write(star_pattern.replaceAll("\n", "<br>").replaceAll(" ", "_"))
+        console.log(star_pattern)
+    </script>
+
+    <p></p>
+</body>
+
+</html>

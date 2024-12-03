@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Input Event</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container border border-3 shadow w-50 rounded rounded-3 p-3 mt-5">
+        <h1 class="text-center">Item list</h1>
+        <div class="input-group">
+            <input id="list-input"
+                   type="text"
+                   class="form-control">
+            <button id="list-input-save-button"
+                    class="btn btn-outline-secondary"
+                    type="button">save</button>
+        </div>
+
+
+        <hr>
+        <ol id="mylist"
+            class="list-group">
+
+        </ol>
+
+
+        <script>
+            const listInput = document.getElementById("list-input")
+            const inputButton = document.getElementById("list-input-save-button")
+            const myList = document.getElementById("mylist")
+
+            let currentListIndex = 1;
+
+            function createListItem(parent, textContent) {
+                // create list item
+                const li = document.createElement("li")
+                li.textContent = textContent // assign some text to list item
+
+                if (currentListIndex % 2 == 0) {
+                    li.style.color = "blue";
+                }
+                else {
+                    li.style.color = "green";
+                }
+
+                currentListIndex++;
+                // assign a parent to list item
+                parent.appendChild(li)
+            }
+
+            inputButton.onclick = (e) => {
+                // first get the input text
+                //console.log(`'${listInput.value}'`)
+                createListItem(myList, listInput.value.trim())
+                // after resetting the input value
+                listInput.value = ""
+            }
+
+
+            // Create a list item with input text on press Enter
+            listInput.onkeypress = (e) => {
+                //console.log(listInput.value)
+                if (e.key === "Enter" && e.code === "Enter") {
+                    createListItem(myList, listInput.value.trim())
+                    listInput.value = ""
+                }
+            }
+
+        </script>
+    </div>
+
+</body>
+
+</html>

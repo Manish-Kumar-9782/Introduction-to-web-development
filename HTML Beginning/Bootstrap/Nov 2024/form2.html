@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div
+         class="container border border-2 border-dark p-5 d-flex justify-content-center align-items-center ">
+
+
+        <div class="form-container w-50">
+
+            <div class="mb-4">
+                <label for="email"
+                       class="form-label">Email Address</label>
+                <input id="email"
+                       type="text"
+                       class="form-control"
+                       placeholder="example123@gmail.com">
+                <span class="form-text">Enter your gmail address.</span>
+            </div>
+
+
+            <div class="mb-4">
+
+                <label for="password"
+                       class="form-label">Password</label>
+                <input id="password"
+                       type="password"
+                       class="form-control">
+            </div>
+
+            <!-- Ice Cream Selection -->
+
+            <select class="mb-4 form-select w-50"
+                    name="ice-cream"
+                    id="ice-cream">
+                <option selected
+                        disabled
+                        value="#">Select Ice Cream</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="Mango Cream">Mango Cream</option>
+                <option value="Choco Bar">Choco Bar</option>
+                <option value="Butter Scotch">Butter Scotch</option>
+            </select>
+
+
+            <div class="mb-4">
+                <span class="d-inline-block me-3">Gender: </span>
+
+                <input type="radio"
+                       checked
+                       class="form-check-input"
+                       name="gender"
+                       id="gender-male">
+                <label for="gender-male"
+                       class="form-check-label ms-1 me-4">Male</label>
+
+                <input type="radio"
+                       class="form-check-input"
+                       name="gender"
+                       id="gender-female">
+                <label for="gender-female"
+                       class="form-check-label ms-1">Female</label>
+
+            </div>
+
+            <div class="mb-4 form-check form-switch">
+                <input id="isConfirmed"
+                       type="checkbox"
+                       class="form-check-input">
+                <label for="isConfirmed"
+                       class="form-check-label">Information Confirmation</label>
+            </div>
+
+
+            <div class="mb-4">
+                <input id="isConfirmed"
+                       type="checkbox"
+                       class="form-check-input">
+                <label for="isConfirmed"
+                       class="form-check-label">Information Confirmation</label>
+            </div>
+
+
+            <input type="submit"
+                   class="btn btn-success w-100"
+                   value="Submit">
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

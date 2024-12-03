@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Function</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+            Named function:
+
+            function functionName(parameters) {
+                // function body
+            }
+        */
+
+        function starPattern1() {
+            let starPatternString = ""
+
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < i; j++) {
+                    starPatternString += "*"
+                }
+                starPatternString += "\n";
+            }
+
+            return starPatternString
+        }
+
+        let p1 = starPattern1()
+
+        console.log(p1)
+
+
+        //======================================= //
+
+        // function with some parameter
+        // startPattern2
+
+        console.log("----------------------")
+
+        function starPattern2(pchar = "=", newline = '\n') {
+            let starPatternString = ""
+
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < i; j++) {
+                    starPatternString += pchar
+                }
+                starPatternString += newline;
+            }
+
+            return starPatternString
+        }
+
+        p1 = starPattern2("🐻")
+        let p2 = starPattern2("🐻", "<br>")
+
+        document.write(p2)
+        console.log(p1)
+    </script>
+
+
+</body>
+
+</html>

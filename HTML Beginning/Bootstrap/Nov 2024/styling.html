@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Element styling</title>
+</head>
+
+<body>
+
+    <h1 id="h1">Good Morning</h1>
+
+
+    <ul id="mylist">
+        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, eveniet.</li>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+    </ul>
+
+    <script>
+        let h1 = document.getElementById("h1");
+        let mylist = document.getElementById("mylist")
+
+        h1.style.color = "red";
+
+        let a = mylist.children
+
+        for (let i = 0; i < a.length; i++) {
+            if (i % 2 == 0) {
+                a[i].style.color = "blue";
+            }
+            else {
+                a[i].style.color = "green";
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

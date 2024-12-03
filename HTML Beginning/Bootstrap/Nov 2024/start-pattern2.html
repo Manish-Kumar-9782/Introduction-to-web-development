@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Star Pattern</title>
+</head>
+
+<body>
+
+    <script>
+
+        function starPattern2(nrows = 5, pchar = "=", newline = '\n') {
+            let starPatternString = ""
+            for (let i = 0; i < nrows; i++) {
+
+                let xi = i
+                // her xi show that how many stars we need to print in the current row
+                if (i < nrows / 2) {
+                    xi = i
+                }
+                else {
+                    xi = nrows - i
+                }
+
+                for (let j = 0; j < xi; j++) {
+                    starPatternString += pchar
+                }
+                starPatternString += newline;
+            }
+
+            return starPatternString
+        }
+
+        p1 = starPattern2(20, "🐻")
+        let p2 = starPattern2(20, "🐻", "<br>")
+
+        //document.write(p2)
+        //console.log(p1)
+
+
+        function diamondPattern(nrows = 5, pchar = "*", newline = '\n') {
+            let starPatternString = ""
+            let space = nrows / 2
+
+            for (let i = 0; i <= nrows; i++) {
+
+                let row_length = 0
+                // her xi show that how many stars we need to print in the current row
+
+                if (i < nrows / 2) {
+                    row_length = (2 * i + 1) + space
+                }
+                else {
+                    row_length = (2 * (nrows - i) + 1) + space
+                }
+
+                for (let j = 0; j <= row_length; j++) {
+
+                    if (j <= space) {
+                        starPatternString += " "
+                    }
+                    else {
+                        starPatternString += pchar
+                    }
+                }
+                starPatternString += newline;
+
+                if (i < (nrows / 2)) {
+                    space--;
+                }
+                else {
+                    space++;
+                }
+            }
+
+            return starPatternString
+        }
+        p1 = diamondPattern()
+        console.log(p1)
+    </script>
+
+</body>
+
+</html>
