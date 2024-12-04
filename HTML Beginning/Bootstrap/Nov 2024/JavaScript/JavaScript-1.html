@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Js Intro</title>
+</head>
+
+<body>
+    <script>
+        // variable keywords: let, var, const
+
+        let x = 10;
+
+        x = 34
+        console.log(x * 29)
+
+        const y = 30;
+        //y = 49;
+
+        var xy = 440;
+
+        xy = 59;
+
+        console.log(xy)
+
+        let z;
+
+        console.log(z)
+
+        /*
+            data: string, number, boolean, null, undefined, object, array.
+
+            logical operator: &&, ||, !
+        */
+
+
+        const otp = 3421;
+        const password = "123";
+
+        let user_otp = prompt("One Time Password")
+        let user_password = prompt("Password");
+
+        if (user_otp == otp && user_password == password) {
+            console.log("Login Success")
+        }
+        else {
+            console.log("Login Failed...")
+        }
+
+
+
+
+        let signal = "red"
+
+        if (signal == "green") {
+            console.log("Signal is green, go ahead")
+        }
+        else if (signal == "yellow") {
+            console.log("Signal is yellow, be careful")
+        }
+        else if (signal == "red") {
+            console.log("Signal is red, stop")
+        }
+        else {
+            console.log("Invalid signal")
+        }
+
+
+
+        let signal_x = "green"
+
+        switch (signal_x) {
+            case "green":
+                console.log("Signal is green, go ahead")
+                break;
+
+            case "yellow":
+                console.log("Signal is yellow, be careful")
+                break;
+
+            case "red":
+                console.log("Signal is red, stop")
+                break;
+
+            default:
+                console.log("Invalid signal")
+
+        }
+
+
+        // for loop syntax
+
+        /*
+            for(initialization; condition; increment/decrement) {
+                // statement
+            }
+        */
+
+    </script>
+
+
+</body>
+
+</html>

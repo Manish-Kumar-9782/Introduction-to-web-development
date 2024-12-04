@@ -1,0 +1,59 @@
+// arrow function
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Basic arrow function
+        const add = (a, b) => a + b;
+        console.log(add(2, 3)); // Output: 5
+    </script>
+
+
+    <script>
+        // Arrow function with explicit Return
+        const multiply = (a, b) => {
+            const result = a * b;
+            return result;
+        };
+        console.log(multiply(4, 5)); // Output: 20
+    </script>
+
+
+    <script>
+        // Single parameter (Parentheses Optional)
+        const square = x => x * x;
+        console.log(square(6)); // Output: 36
+    </script>
+
+    <script>
+        // No Parameters (Empty Parentheses Required)
+        const greet = () => 'Hello, World!';
+        console.log(greet()); // Output: Hello, World!
+    </script>
+
+    <script>
+        // Returning an object 
+        const createPerson = (name, age) => ({ name: name, age: age });
+        console.log(createPerson('Alice', 30)); // Output: { name: 'Alice', age: 30 }
+    </script>
+
+    <script>
+
+        // returning arrow functions as callback function
+        const numbers = [1, 2, 3, 4];
+        const doubled = numbers.map(num => num * 2);
+        console.log(doubled); // Output: [2, 4, 6, 8]
+    </script>
+</body>
+
+</html>

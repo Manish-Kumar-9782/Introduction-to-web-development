@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dom Introduction</title>
+</head>
+
+<body>
+
+    <div id="myDiv">This is a div with an ID.</div>
+    <p class="myClass">This is a paragraph with a class name.</p>
+    <p class="myClass">This is another paragraph with the same class name.</p>
+    <span>This is a span element.</span>
+    <button id="myButton">Click me!</button>
+
+
+    <!-- 
+        Access HTML element using javascript by id, class, tag name, etc.
+        
+        By id: document.getElementById('id-name')
+        By class: document.getElementsByClassName('class-name')
+        By tag name: document.getElementsByTagName('tag-name')
+    -->
+
+
+    <!-- Script to access element by ID -->
+    <script>
+        // Accessing an element by ID
+        // el : a single HTML element Object
+        const el = document.getElementById('myDiv');
+        console.log("Element by ID: ")
+        console.log('content of element by id:', el.textContent);
+        // Output: This is a div with an ID.
+
+    </script>
+
+
+    <!-- Script to access elements by class name -->
+    <script>
+        // Accessing elements by class name
+        const els = document.getElementsByClassName('myClass');
+        // els : elements collection 
+        console.log("Elements Accessed by className: ", els)
+
+    </script>
+
+
+
+    <!-- Script to access elements by tag name -->
+    <script>
+        // Accessing elements by tag name
+        const els2 = document.getElementsByTagName('p');
+        // els : elements collection
+        console.log("Elements Accessed by TagName: ", els2)
+    </script>
+
+</body>
+
+</html>

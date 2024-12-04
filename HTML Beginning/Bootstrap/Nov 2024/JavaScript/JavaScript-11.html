@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Editing HTML Content Example</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <p>This is a <strong>paragraph</strong> inside a div.</p>
+    </div>
+
+
+
+    <!-- ======================================================================== -->
+
+    <button id="btn1">Edit using innerText</button>
+    <script>
+        // Function to change content using innerText
+        function changeContentByInnerText() {
+            // Step 1: Select the div element
+            var el = document.getElementById('container');
+
+            // Step 2: Set the new visible text
+            // Change the visible text content, innerText will ignore HTML tags
+            var newText = "This is the new <em>visible</em> text using innerText.";
+            el.innerText = newText; // Step 3: Update the element's innerText
+            // Note: HTML tags will not be rendered, only the text will be shown
+        }
+
+        // Adding event listeners to buttons
+        var btn1 = document.getElementById('btn1');
+        btn1.addEventListener('click', changeContentByInnerText); // Pass the function as a callback
+
+
+    </script>
+
+
+    <button id="btn2">Edit using innerHTML</button>
+
+    <script>
+        // Function to change content using innerHTML
+        function changeContentByInnerHTML() {
+            // Step 1: Select the div element
+            var el = document.getElementById('container');
+
+            // Step 2: Set the new HTML content
+            // Change the HTML content, innerHTML will render HTML tags
+            var newHTML = "This is the new <em>HTML</em> content using innerHTML.";
+            el.innerHTML = newHTML; // Step 3: Update the element's innerHTML
+            // Note: HTML tags will be rendered, and the text will be styled accordingly
+        }
+
+        var btn2 = document.getElementById('btn2');
+        btn2.addEventListener('click', changeContentByInnerHTML); // Pass the function as a callback
+
+    </script>
+
+
+    <button id="btn3">Edit using textContent</button>
+    <script>
+        // Function to change content using textContent
+        function changeContentByTextContent() {
+            // Step 1: Select the div element
+            var el = document.getElementById('container');
+
+            // Step 2: Set the new text content
+            // Change the text content, textContent will ignore HTML tags
+            var newTextContent = "This is the new text <em>content</em> using textContent.";
+            el.textContent = newTextContent; // Step 3: Update the element's textContent
+            // Note: Any HTML tags will be treated as plain text and will not be rendered
+        }
+
+        var btn3 = document.getElementById('btn3');
+        btn3.addEventListener('click', changeContentByTextContent); // Pass the function as a callback
+    </script>
+
+
+</body>
+
+</html>

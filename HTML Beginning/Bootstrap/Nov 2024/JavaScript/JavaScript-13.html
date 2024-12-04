@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Simple Todo List</title>
+</head>
+
+<body>
+
+    <input type="text"
+           id="inputField"
+           placeholder="Enter a list item">
+    <button id="addButton">Add Item</button>
+    <ul id="myList"></ul>
+
+    <script>
+        // Get references to the button, input, and list container
+        const addButton = document.getElementById('addButton');
+        const inputField = document.getElementById('inputField');
+        const listContainer = document.getElementById('myList');
+
+        // Add an event listener to the button
+        addButton.addEventListener('click', () => {
+            // Get the input value using the value property of input Element
+            const userInput = inputField.value;
+
+            // Create a new list item element
+            const newItem = document.createElement('li');
+
+            // Set the text content of the new item to the user input
+            newItem.innerText = userInput;
+
+            // Append the new item to the list container
+            listContainer.appendChild(newItem);
+
+            // Clear the input field
+            inputField.value = '';
+        });
+    </script>
+
+
+    <script>
+        // Add an event listener/handler to the input field
+        inputField.addEventListener('keypress', (event) => {
+            // Check if the Enter key is pressed
+            if (event.key === 'Enter') {
+                // Get the input value
+                const userInput = inputField.value;
+
+                // Create a new list item element
+                const newItem = document.createElement('li');
+
+                // Set the text content of the new item to the user input
+                newItem.innerText = userInput;
+
+                // Append the new item to the list container
+                listContainer.appendChild(newItem);
+
+                // Clear the input field
+                inputField.value = '';
+            }
+        });
+    </script>
+
+
+    <script>
+        // Add an event listener to the list container
+        listContainer.addEventListener('click', (event) => {
+            // Check if the clicked element is a list item
+            if (event.target.tagName === 'LI') {
+                // Get the text content of the clicked list item
+                const itemText = event.target.textContent;
+
+                // Create a new input element
+                const inputElement = document.createElement('input');
+
+                // Set the value of the input element to the item text
+                inputElement.value = itemText;
+
+                // Replace the list item with the input element
+                event.target.replaceWith(inputElement);
+
+                // Focus on the input element
+                inputElement.focus();
+            }
+        });
+
+
+    </script>
+
+
+    <script>
+        listContainer.addEventListener('focus', (event) => {
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Handling Examples</title>
+</head>
+
+<body>
+
+    <h2>Event Handling Examples</h2>
+
+
+    <!-- ============================================================================== -->
+    <!-- Button for onclick attribute example -->
+    <button id="btn1"
+            onclick="handleClickAttribute()">Click Me (onclick attribute)</button>
+    <p id="p1"></p>
+
+    <script>
+        // Example using the onclick attribute
+        function handleClickAttribute() {
+            alert("clicked on btn1")
+
+            // Step 1: Get the output paragraph
+            var p1 = document.getElementById('p1');
+            // Step 2: Change the text of the output paragraph
+            p1.innerText = "You clicked the button btn1 using onclick attribute!";
+        }
+    </script>
+    <!-- ============================================================================== -->
+
+
+    <!-- ============================================================================== -->
+    <!-- Button for onclick property example -->
+    <button id="btn2">Click Me (onclick property)</button>
+    <p id="p2"></p>
+
+    <script>
+        // Example using the onclick property
+        // Step 1: Select the button element
+        var btn2 = document.getElementById('btn2');
+
+        // Step 2: Define the function to be called when the button is clicked
+        btn2.onclick = function () {
+            alert("clicked on btn2")
+
+            // Step 3: Get the output paragraph
+            var p2 = document.getElementById('p2');
+            // Step 4: Change the text of the output paragraph
+            p2.innerText = "You clicked the button btn2 using onclick property!";
+        };
+    </script>
+    <!-- ============================================================================== -->
+
+
+
+    <!-- ============================================================================== -->
+    <!-- Button for addEventListener example -->
+    <button id="btn3">Click Me (addEventListener)</button>
+    <p id="p3"></p>
+    <script>
+        // Example using addEventListener
+        // Step 1: Select the button element
+        var btn3 = document.getElementById('btn3');
+
+        // Step 2: Define the function to be called when the button is clicked
+        function handleClickListener() {
+            alert("clicked on btn3")
+
+            // Step 3: Get the output paragraph
+            var p3 = document.getElementById('p3');
+            // Step 4: Change the text of the output paragraph
+            p3.innerText = "You clicked the button btn3 using addEventListener!";
+        }
+
+        // Step 5: Add the event listener to the button
+        btn3.addEventListener('click', handleClickListener);
+    </script>
+    <!-- ============================================================================== -->
+
+</body>
+
+</html>

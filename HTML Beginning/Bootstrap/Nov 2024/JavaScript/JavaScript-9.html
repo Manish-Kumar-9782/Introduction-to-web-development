@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, content="
+          width=device-width,
+          initial-scale=1.0">
+    <title>Editing HTML Content Example</title>
+</head>
+
+<body>
+
+    <div id="innerTextDiv">
+        This is the original text in the innerText div.
+    </div>
+
+    <div id="innerHTMLDiv">
+        This is the original text in the innerHTML div.
+    </div>
+
+    <div id="textContentDiv">
+        This is the original text in the textContent div.
+    </div>
+
+    <script>
+        // Step 1: Select the div elements
+        var innerTextDiv = document.getElementById('innerTextDiv');
+        var innerHTMLDiv = document.getElementById('innerHTMLDiv');
+        var textContentDiv = document.getElementById('textContentDiv');
+    </script>
+
+
+    <script>
+        // Step 2: Change content using innerText
+        var newInnerText = "This is the new <em>visible</em> text using innerText.";
+        innerTextDiv.innerText = newInnerText; // Update the innerText of the first div
+
+    </script>
+
+    <script>
+        // Step 3: Change content using innerHTML
+        var newInnerHTML = "This is the new <strong>HTML</strong> content using innerHTML.";
+        innerHTMLDiv.innerHTML = newInnerHTML; // Update the innerHTML of the second div
+    </script>
+
+    <script>
+        // Step 4: Change content using textContent
+        var newTextContent = "This is the new text <em>content</em> using textContent.";
+        textContentDiv.textContent = newTextContent; // Update the textContent of the third div
+    </script>
+
+</body>
+
+</html>
